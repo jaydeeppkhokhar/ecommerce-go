@@ -22,9 +22,9 @@ class ThemeOptionSeeder extends ThemeSeeder
         $this->uploadFiles('shapes', 'main');
 
         return [
-            'site_name' => 'Shofy',
-            'site_title' => 'Shofy - Multipurpose eCommerce Laravel Script',
-            'seo_description' => 'Shofy is a powerful tool eCommerce Laravel script for creating a professional and visually appealing online store.',
+            'site_name' => 'Sweetlux',
+            'site_title' => 'Sweetlux - Feel your perfect fit',
+            'seo_description' => 'Soft. Seamless. Invisible. — Lightweight, smooth, and second-skin soft. Perfectly invisible under clothes, giving you flawless confidence all day long.',
             'copyright' => '© %Y All Rights Reserved.',
             'tp_primary_font' => 'Roboto',
             'primary_color' => '#0C55AA',

@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Skenējiet QR kodu, lai izsekotu sūtījumu',
     ],
     'customer_confirmed_delivery_at' => 'Klients apstiprināja piegādi',
+    'no_shipping_methods_available' => 'Nav pieejamu piegādes metožu!',
 ];

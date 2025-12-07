@@ -5,11 +5,14 @@ namespace Botble\Ecommerce\Forms\Settings;
 use Botble\Base\Forms\FieldOptions\NumberFieldOption;
 use Botble\Base\Forms\FieldOptions\OnOffFieldOption;
 use Botble\Base\Forms\FieldOptions\RadioFieldOption;
+use Botble\Base\Forms\FieldOptions\SelectFieldOption;
+use Botble\Base\Forms\Fields\MultiCheckListField;
 use Botble\Base\Forms\Fields\NumberField;
 use Botble\Base\Forms\Fields\OnOffCheckboxField;
 use Botble\Base\Forms\Fields\RadioField;
 use Botble\Ecommerce\Facades\EcommerceHelper;
 use Botble\Ecommerce\Http\Requests\Settings\ShoppingSettingRequest;
+use Botble\Payment\Enums\PaymentMethodEnum;
 use Botble\Setting\Forms\SettingForm;
 
 class ShoppingSettingForm extends SettingForm
@@ -17,6 +20,14 @@ class ShoppingSettingForm extends SettingForm
     public function setup(): void
     {
         parent::setup();
+
+        $paymentMethods = [];
+
+        if (is_plugin_active('payment')) {
+            $paymentMethods = array_filter(PaymentMethodEnum::labels(), function ($key) {
+                return get_payment_setting('status', $key) == 1;
+            }, ARRAY_FILTER_USE_KEY);
+        }
 
         $this
             ->setSectionTitle(trans('plugins/ecommerce::setting.shopping.name'))
@@ -70,6 +81,24 @@ class ShoppingSettingForm extends SettingForm
                     ->value($paymentProofEnabled = EcommerceHelper::isPaymentProofEnabled())
             )
             ->addOpenCollapsible('payment_proof_enabled', '1', $paymentProofEnabled == '1')
+            ->when($paymentMethods, function (ShoppingSettingForm $form) use ($paymentMethods): void {
+                $selectedPaymentProofPaymentMethods = array_keys($paymentMethods);
+
+                if (get_ecommerce_setting('payment_proof_payment_methods')) {
+                    $selectedPaymentProofPaymentMethods = json_decode((string) get_ecommerce_setting('payment_proof_payment_methods'), true);
+                }
+
+                $form
+                    ->add(
+                        'payment_proof_payment_methods[]',
+                        MultiCheckListField::class,
+                        SelectFieldOption::make()
+                            ->label(trans('plugins/ecommerce::setting.shopping.form.payment_proof_payment_methods'))
+                            ->helperText(trans('plugins/ecommerce::setting.shopping.form.payment_proof_payment_methods_helper'))
+                            ->choices($paymentMethods)
+                            ->selected($selectedPaymentProofPaymentMethods)
+                    );
+            })
             ->add(
                 'guest_payment_proof_enabled',
                 OnOffCheckboxField::class,

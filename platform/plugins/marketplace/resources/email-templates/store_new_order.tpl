@@ -19,8 +19,12 @@
             </tr>
             <tr>
                 <td class="bb-content">
-                    <div>{{ 'plugins/marketplace::marketplace.email_templates.dear_vendor' | trans({'vendor_name': store_name}) }}</div>
-                    <div>{{ 'plugins/marketplace::marketplace.email_templates.store_new_order_message' | trans({'site_title': site_title}) }}</div>
+                    {% if store_name %}
+                        <div>{{ 'plugins/marketplace::marketplace.email_templates.dear_vendor' | trans({'vendor_name': store_name}) }}</div>
+                    {% endif %}
+                    {% if site_title %}
+                        <div>{{ 'plugins/marketplace::marketplace.email_templates.store_new_order_message' | trans({'site_title': site_title}) }}</div>
+                    {% endif %}
                 </td>
             </tr>
             <tr>

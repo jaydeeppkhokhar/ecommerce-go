@@ -69,4 +69,7 @@ return [
             'trans' => 'Có thể để trống hoặc là một chuỗi có độ dài tối đa :max ký tự nếu được cung cấp.',
         ],
     ],
+    'download_locale' => 'Tải xuống ngôn ngữ',
+    'import_available_locale_confirmation' => 'Tải xuống ngôn ngữ từ GitHub',
+    'import_available_locale_confirmation_content' => 'Bạn có chắc chắn muốn tải xuống ngôn ngữ này không? Nó sẽ được tải xuống vào :lang_path, bạn có thể xóa nó sau nếu muốn.',
 ];

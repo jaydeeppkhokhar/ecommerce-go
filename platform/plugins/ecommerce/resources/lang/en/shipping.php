@@ -101,6 +101,7 @@ return [
     'update_shipping_status_success' => 'Update shipping status successfully!',
     'update_cod_status_success' => 'Updated COD status of shipping successfully!',
     'updated_cod_status_by' => 'Updated COD status to :status . Updated by: %user_name%',
+    'saved_shipping_settings_success' => 'Saved shipping settings successfully!',
     'all' => 'All',
     'all_countries' => 'All countries',
     'error_when_adding_new_region' => 'There is an error when adding new region!',
@@ -126,6 +127,9 @@ return [
     'add_note' => 'Add note...',
     'view_order' => 'View Order :order_id',
     'rule' => [
+        'types' => [
+            'unavailable' => 'Unavailable',
+        ],
         'enum_types' => [
             'based_on_weight' => 'Based on order\'s total weight (:unit)',
             'based_on_price' => 'Based on order\'s total amount',
@@ -193,4 +197,5 @@ return [
         'scan_qr_code' => 'Scan QR code to track your shipment',
     ],
     'customer_confirmed_delivery_at' => 'Customer confirmed delivery at',
+    'no_shipping_methods_available' => 'No shipping methods available!',
 ];

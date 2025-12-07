@@ -9,7 +9,8 @@
             <li>{{ trans('packages/theme::theme.settings.website_tracking.gtm.ga4_step_2') }}</li>
             <li>
                 {{ trans('packages/theme::theme.settings.website_tracking.gtm.ga4_step_3') }}<br>
-                <small class="text-muted">{{ trans('packages/theme::theme.settings.website_tracking.gtm.ga4_example') }} <code>G-ABCDE12345</code></small>
+                <small class="text-muted">{{ trans('packages/theme::theme.settings.website_tracking.gtm.ga4_example') }}
+                    <code>G-ABCDE12345</code></small>
             </li>
             <li>{{ trans('packages/theme::theme.settings.website_tracking.gtm.ga4_step_4') }}</li>
             <li>{{ trans('packages/theme::theme.settings.website_tracking.gtm.ga4_step_5') }}</li>

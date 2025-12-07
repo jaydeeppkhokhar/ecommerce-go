@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Nevažeći format Google AdSense Client ID. Trebao bi biti u formatu: ca-pub-XXXXXXXXXXXXXXXX (gdje je X znamenka).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Slika za tablet',
+    'tablet_image_helper' => 'Za uređaje sa širinom od 768px do 1200px, ako je prazno, koristit će se slika s desktopa.',
+    'mobile_image' => 'Mobilna slika',
+    'mobile_image_helper' => 'Za uređaje sa širinom manjom od 768px, ako je prazno, koristit će se slika s tableta.',
 ];

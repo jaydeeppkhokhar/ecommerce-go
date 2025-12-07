@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'אפשר ללקוחות להעלות אישור תשלום עבור ההזמנות שלהם. זה שימושי לשיטות תשלום ידניות.',
             'enable_guest_payment_proof' => 'אפשר ללקוחות אורחים להעלות אישור תשלום',
             'enable_guest_payment_proof_helper' => 'כאשר מופעל, לקוחות אורחים יכולים להעלות אישור תשלום באמצעות אסימון ההזמנה שלהם מבלי להתחבר. הם יקבלו את קישור ההעלאה במייל אישור ההזמנה שלהם.',
+            'payment_proof_payment_methods' => 'שיטות תשלום הדורשות הוכחת תשלום',
+            'payment_proof_payment_methods_helper' => 'בחר אילו שיטות תשלום צריכות לאפשר ללקוחות להעלות הוכחת תשלום. משמש בדרך כלל לשיטות תשלום ידניות כמו תשלום במזומן בעת המסירה והעברה בנקאית.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'הצג شريط התקדמות עם "X נמכרו מתוך Y" כדי ליצור דחיפות ולעודד רכישות מהירות במהلך מבצעי חטף.',
     ],
     'payment_method_cod_minimum_amount' => 'סכום הזמנה מינימלי - :currency (אופציונלי)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'סכום הזמנה מינימלי - :currency (אופציونלי)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'הצג מידע בנقאי בדף הצלחת التشلום?',
     'invoice_templates' => 'תבניות חשבונית',
 ];

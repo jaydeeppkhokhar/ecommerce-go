@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'name' => 'Widgets',
+    'name' => 'Widgets (componentes)',
     'description' => 'Gerencie os widgets do seu sistema',
     'create' => 'Novo widget',
     'edit' => 'Editar widget',
@@ -32,7 +32,6 @@ return [
     'drag_widget_to_sidebar' => 'Arraste e solte widgets nesta área.',
     'widget_areas' => 'Áreas de Widget',
     'manage_widgets' => 'Gerenciar Widgets',
-
     'cache_suggestion' => [
         'title' => 'Sugestão de desempenho',
         'description' => 'Você pode melhorar o desempenho do seu site ativando o cache de widget.',
@@ -40,9 +39,15 @@ return [
         'enable_button' => 'Ativar cache de widget',
         'dismiss_button' => 'Dispensar por uma semana',
     ],
-
     'widget_site_copyright' => 'Direitos autorais do site',
     'widget_site_copyright_description' => 'Texto de direitos autorais no rodapé inferior.',
     'widget_site_copyright_helper' => 'Vá para :link para alterar o texto de direitos autorais.',
     'theme_options' => 'Opções do tema',
+    'form' => [
+        'enable_caching' => 'Ativar cache',
+        'yes' => 'Sim',
+        'no' => 'Não',
+        'cache_helper' => 'Quando ativado, o conteúdo deste widget é armazenado em cache para melhorar o desempenho. Desative para conteúdos dinâmicos que mudam com frequência.',
+        'cache_warning' => 'Devido a problemas de interface, o cache deste widget foi desativado via código. O widget não será armazenado em cache mesmo que a opção esteja ativa.',
+    ],
 ];

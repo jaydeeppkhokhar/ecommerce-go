@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Salli asiakkaiden ladata maksutodistus tilauksistaan. Tämä on hyödyllinen manuaalisille maksutavoille.',
             'enable_guest_payment_proof' => 'Salli vierasasiakkaiden ladata maksutodistus',
             'enable_guest_payment_proof_helper' => 'Kun tämä on käytössä, vierasasiakkaat voivat ladata maksutodistuksen käyttäen tilaustunnustaan kirjautumatta sisään. He saavat lataamislinkin tilausvahvistussähköpostissaan.',
+            'payment_proof_payment_methods' => 'Maksutavat, jotka edellyttävät maksutodistusta',
+            'payment_proof_payment_methods_helper' => 'Valitse, mitkä maksutavat sallivat asiakkaiden ladata maksutodistuksen. Tyypillisesti käytetään manuaalisiin maksutapoihin, kuten postiennakko ja pankkisiirto.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Näytä edistymispalkki "X myyty Y:stä" luodaksesi kiireellisyyden tunteen ja kannustaaksesi nopeisiin ostoihin salamakauppojen aikana.',
     ],
     'payment_method_cod_minimum_amount' => 'Tilauksen vähimmäissumma - :currency (Valinnainen)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Tilauksen vähimmäissumma - :currency (Valinnainen)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Näytä pankkitiedot tilauksen onnistunut-sivulla?',
     'invoice_templates' => 'Laskupohjat',
 ];

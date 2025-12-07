@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Lista produse',
         'cart' => 'Coș',
     ],
+    'purchased' => 'a achiziționat',
+    'verified' => 'Verificat',
+    'quick_view' => 'Vizualizare rapidă',
 ];

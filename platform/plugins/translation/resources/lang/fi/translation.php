@@ -69,4 +69,7 @@ return [
             'trans' => 'Voi olla tyhjä tai merkkijono, jonka maksimipituus on :max merkkiä, jos annettu.',
         ],
     ],
+    'download_locale' => 'Lataa kieli',
+    'import_available_locale_confirmation' => 'Lataa kieli GitHubista',
+    'import_available_locale_confirmation_content' => 'Haluatko varmasti ladata tämän kielen? Se ladataan kohteeseen :lang_path, voit poistaa sen myöhemmin halutessasi.',
 ];

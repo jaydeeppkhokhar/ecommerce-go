@@ -5,8 +5,12 @@ return [
     'create' => 'Nowe FAQ',
     'question' => 'Pytanie',
     'answer' => 'Odpowiedź',
+    'question_placeholder' => 'Wprowadź swoje pytanie...',
+    'answer_placeholder' => 'Wprowadź swoją odpowiedź...',
     'category' => 'Kategoria',
     'faq_schema_config' => 'Konfiguracja schematu FAQ (:link)',
+    'faq_schema_config_description' => 'Ta konfiguracja rejestruje dane strukturalne FAQ tylko w celach SEO. Nie będzie wyświetlana w treści motywu front-end. Schemat jest osadzony w kodzie źródłowym strony i można go zobaczyć za pomocą "Wyświetl źródło" lub przetestować za pomocą narzędzia testowania wyników rozszerzonych Google.',
+    'schema_testing_tool' => 'Testuj za pomocą Google Rich Results Test',
     'learn_more' => 'Dowiedz się więcej',
     'settings' => [
         'title' => 'Najczęściej zadawane pytania',

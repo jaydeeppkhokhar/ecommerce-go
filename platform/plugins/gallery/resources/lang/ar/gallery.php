@@ -18,4 +18,8 @@ return [
     'limit_display' => 'عرض عدد الحد',
     'edit_this_gallery' => 'تحرير هذا المعرض',
     'galleries_page' => 'صفحة المعارض',
+    'by_name' => 'بواسطة :name',
+    'title' => 'عنوان',
+    'limit' => 'حد',
+    'limit_helper' => 'عدد المعارض التي سيتم عرضها. ',
 ];

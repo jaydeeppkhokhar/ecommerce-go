@@ -23,7 +23,6 @@ return [
         'activated' => '已激活',
         'locked' => '已锁定',
     ],
-    'email_verified' => '邮箱已验证？',
     'verify_email' => [
         'confirm_heading' => '验证邮箱确认',
         'confirm_description' => '您确定要验证此客户的邮箱吗？',
@@ -31,7 +30,6 @@ return [
         'approve_here' => '点击这里',
         'confirm_button' => '验证',
     ],
-    'email_already_verified' => '邮箱已验证。',
     'verification_email_sent' => '验证邮件发送成功！',
     'resend_verification_email' => '重新发送验证邮件',
     'resend_verification_email_confirmation' => '您确定要重新发送验证邮件给此客户吗？',

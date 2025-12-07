@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktivoitu',
         'locked' => 'Lukittu',
     ],
-    'email_verified' => 'Sähköposti vahvistettu?',
     'verify_email' => [
         'confirm_heading' => 'Vahvista sähköpostivahvistus',
         'confirm_description' => 'Oletko varma, että haluat vahvistaa tämän asiakkaan sähköpostin?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'klikkaa tästä',
         'confirm_button' => 'Vahvista',
     ],
-    'email_already_verified' => 'Sähköposti on jo vahvistettu.',
     'verification_email_sent' => 'Vahvistussähköposti lähetetty onnistuneesti!',
     'resend_verification_email' => 'Lähetä vahvistussähköposti uudelleen',
     'resend_verification_email_confirmation' => 'Oletko varma, että haluat lähettää vahvistussähköpostin uudelleen tälle asiakkaalle?',

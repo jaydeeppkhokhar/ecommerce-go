@@ -269,7 +269,7 @@ class SiteMapManager
         $currentYear = (int) date('Y');
         for ($year = $currentYear - $yearsBack; $year <= $currentYear + 1; $year++) {
             for ($month = 1; $month <= 12; $month++) {
-                $formattedMonth = str_pad($month, 2, '0', STR_PAD_LEFT);
+                $formattedMonth = str_pad((string) $month, 2, '0', STR_PAD_LEFT);
                 $baseKey = "{$prefix}-{$year}-{$formattedMonth}";
                 $this->registerKey($baseKey);
 

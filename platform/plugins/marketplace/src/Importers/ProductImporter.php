@@ -8,6 +8,7 @@ use Botble\Ecommerce\Importers\ProductImporter as BaseProductImporter;
 use Botble\Ecommerce\Models\Customer;
 use Botble\Ecommerce\Models\Product;
 use Botble\Marketplace\Facades\MarketplaceHelper;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 
 class ProductImporter extends BaseProductImporter
@@ -35,6 +36,23 @@ class ProductImporter extends BaseProductImporter
     public function getExportUrl(): ?string
     {
         return route('marketplace.vendor.export.products.index');
+    }
+
+    protected function getProductQuery(): Builder
+    {
+        $customer = auth('customer')->user();
+
+        $query = parent::getProductQuery()
+            ->where('created_by_id', $customer?->getKey())
+            ->where('created_by_type', Customer::class);
+
+        if ($customer && $customer->store?->id) {
+            $query->where('store_id', $customer->store->id);
+        } else {
+            $query->where('id', 0);
+        }
+
+        return $query;
     }
 
     protected function assignProductData(Request $request, Product $product): Product

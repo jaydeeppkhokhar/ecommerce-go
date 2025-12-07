@@ -49,7 +49,7 @@ class PublicController extends BaseController
 
         return $this
             ->httpResponse()
-            ->setMessage(__('Subscribe to newsletter successfully!'));
+            ->setMessage(trans('plugins/newsletter::newsletter.subscribe_success'));
     }
 
     public function getUnsubscribe(int|string $id, Request $request)
@@ -74,14 +74,14 @@ class PublicController extends BaseController
             return $this
                 ->httpResponse()
                 ->setNextUrl(BaseHelper::getHomepageUrl())
-                ->setMessage(__('Unsubscribe to newsletter successfully'));
+                ->setMessage(trans('plugins/newsletter::newsletter.unsubscribe_success'));
         }
 
         return $this
             ->httpResponse()
             ->setError()
             ->setNextUrl(BaseHelper::getHomepageUrl())
-            ->setMessage(__('Your email does not exist in the system or you have unsubscribed already!'));
+            ->setMessage(trans('plugins/newsletter::newsletter.email_not_exist_or_unsubscribed'));
     }
 
     public function ajaxLoadPopup()
@@ -93,9 +93,9 @@ class PublicController extends BaseController
                 'email',
                 EmailField::class,
                 EmailFieldOption::make()
-                    ->label(__('Email Address'))
+                    ->label(trans('plugins/newsletter::newsletter.email_address'))
                     ->maxLength(-1)
-                    ->placeholder(__('Enter Your Email'))
+                    ->placeholder(trans('plugins/newsletter::newsletter.enter_your_email'))
                     ->required()
             )
             ->addAfter(
@@ -103,7 +103,7 @@ class PublicController extends BaseController
                 'dont_show_again',
                 CheckboxField::class,
                 CheckboxFieldOption::make()
-                    ->label(__("Don't show this popup again"))
+                    ->label(trans('plugins/newsletter::newsletter.dont_show_popup_again'))
                     ->value(false)
             );
 

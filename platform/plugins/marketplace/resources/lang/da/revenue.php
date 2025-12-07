@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Indtægter',
     'edit' => 'Opdater tegnebogssaldo',
     'view_store' => 'Se butik ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Tilføj/Træk beløb fra sælger',
     'statements' => 'Kontoudtog',
     'products' => 'Produkter',
+    'items_earning_sales' => 'Varer indtjening salg: :amount',
 ];

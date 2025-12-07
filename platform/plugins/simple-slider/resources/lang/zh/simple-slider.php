@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => '添加一个简单的滑块',
     'select_slider' => '选择一个滑块',
     'shortcode' => '短代码',
+    'tablet_image' => '平板电脑图像',
+    'tablet_image_helper' => '对于宽度从 768px 到 1200px 的设备，如果为空，将使用桌面上的图像。',
+    'mobile_image' => '手机图片',
+    'mobile_image_helper' => '对于宽度小于 768px 的设备，如果为空，将使用平板电脑中的图像。',
 ];

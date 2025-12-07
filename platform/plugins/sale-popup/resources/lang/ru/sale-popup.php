@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Список товаров',
         'cart' => 'Корзина',
     ],
+    'purchased' => 'купил',
+    'verified' => 'Проверено',
+    'quick_view' => 'Быстрый просмотр',
 ];

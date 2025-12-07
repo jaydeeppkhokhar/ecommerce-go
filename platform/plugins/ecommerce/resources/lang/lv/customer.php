@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktivizēts',
         'locked' => 'Bloķēts',
     ],
-    'email_verified' => 'E-pasts verificēts?',
     'verify_email' => [
         'confirm_heading' => 'E-pasta verificēšanas apstiprinājums',
         'confirm_description' => 'Vai tiešām vēlaties verificēt šā klienta e-pastu?',

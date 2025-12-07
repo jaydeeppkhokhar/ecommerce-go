@@ -10,5 +10,4 @@ return [
     'country' => 'País',
     'select_country' => 'Selecionar país...',
     'city' => 'Cidade',
-    'edit' => 'Editar cidade',
 ];

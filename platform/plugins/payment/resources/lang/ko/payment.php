@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => '처리 수수료 유형 (선택 사항)',
     'fee_type_helper' => '결제 수수료 계산 방법을 선택하세요: 고정 금액 또는 주문 총액의 백분율. 고정 금액을 선택하면 기본 통화(:currency)를 기준으로 합니다.',
+    'payment_created' => ':channel를 통해 결제 #:charge_id를 생성했습니다 :time : :amount',
+    'processing_please_wait' => '처리 중입니다. 잠시 기다려 주세요...',
+    'error' => '오류',
+    'checkout' => '결제',
+    'show_full_json' => '전체 JSON 표시',
+    'full_log_data' => '전체 로그 데이터',
+    'currency_not_supported' => ':name는 :currency를 지원하지 않습니다. :name에서 지원하는 통화 목록: :currencies.',
+    'please_switch_currency' => '지원되는 통화로 전환하십시오',
+    'payment_with' => ':paymentType로 결제',
 ];

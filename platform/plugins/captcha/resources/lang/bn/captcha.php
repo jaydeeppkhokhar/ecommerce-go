@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'অ্যাডমিন লগইন ফর্ম',
     'admin_forgot_password_form' => 'অ্যাডমিন পাসওয়ার্ড ভুলে গেছেন ফর্ম',
     'admin_reset_password_form' => 'অ্যাডমিন পাসওয়ার্ড রিসেট ফর্ম',
+    'captcha' => 'ক্যাপচা',
+    'math_captcha' => 'ম্যাথ ক্যাপচা',
+    'math_question' => 'অনুগ্রহ করে নিম্নলিখিত গণিত ফাংশনটি সমাধান করুন: :label = ?',
+    'captcha_verification_failed' => 'ক্যাপচা যাচাইকরণ ব্যর্থ হয়েছে!',
+    'math_captcha_verification_failed' => 'গণিত ক্যাপচা যাচাইকরণ ব্যর্থ হয়েছে!',
 ];

@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Paskelbti paketų išteklius',
         'clean_up' => 'Išvalyti sistemos atnaujinimo failus',
         'done' => 'Sistema sėkmingai atnaujinta',
-
+        'unknown' => 'Nežinomas žingsnis',
         'messages' => [
             'download' => 'Atsiunčiami atnaujinimo failai...',
             'update_files' => 'Atnaujinami sistemos failai...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Valomi sistemos atnaujinimo failai...',
             'done' => 'Atlikta! Jūsų naršyklė bus atnaujinta per 30 sekundžių.',
         ],
-
         'failed_messages' => [
             'download' => 'Nepavyko atsisiųsti atnaujinimo failų',
             'update_files' => 'Nepavyko atnaujinti sistemos failų',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Nepavyko paskelbti paketų išteklių',
             'clean_up' => 'Nepavyko išvalyti sistemos atnaujinimo failų',
         ],
-
         'success_messages' => [
             'download' => 'Atnaujinimo failai sėkmingai atsisiųsti.',
             'update_files' => 'Sistemos failai sėkmingai atnaujinti.',

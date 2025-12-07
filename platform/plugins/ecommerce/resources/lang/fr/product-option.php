@@ -2,12 +2,12 @@
 
 return [
     'name' => 'Options de produits',
-    'options' => 'Options',
+    'options' => 'Options disponibles',
     'create' => 'Nouvelle option',
     'edit' => 'Modifier l\'option :name',
     'required' => 'Est requis ?',
     'option_value' => 'Valeur d\'option',
-    'option_type' => 'Type',
+    'option_type' => 'Type d\'option',
     'label' => 'Étiquette',
     'price' => 'Prix',
     'price_type' => 'Type de prix',
@@ -22,7 +22,7 @@ return [
     'please_select_option' => 'Veuillez sélectionner une option',
     'add_to_cart_value_required' => 'L\'option :value est requise',
     'option_value_attribute' => 'valeur :item de :value_key sur l\'option #:option_key',
-    'option_name_attribute' => 'Option :key',
+    'option_name_attribute' => 'Nom de l\'option :key',
     'option_type_attribute' => 'Type de l\'option :key',
     'option_value_name_attribute' => 'Valeurs de l\'option :key',
     'please_choose_option_type' => 'Veuillez choisir le type d\'option !',

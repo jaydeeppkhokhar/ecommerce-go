@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => '無效的 Google AdSense 用戶端 ID 格式。它應該採用以下格式：ca-pub-XXXXXXXXXXXXXXXX（其中 X 是數字）。',
         ],
     ],
+    'banner' => '橫幅',
+    'tablet_image' => '平板圖像',
+    'tablet_image_helper' => '適用於寬度從 768px 到 1200px 的設備，如果為空，將使用桌面的圖像。',
+    'mobile_image' => '移動圖像',
+    'mobile_image_helper' => '適用於寬度小於 768px 的設備，如果為空，將使用平板的圖像。',
 ];

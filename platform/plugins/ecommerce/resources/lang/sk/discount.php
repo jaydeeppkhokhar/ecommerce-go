@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Tento kupón sa nedá použiť, pretože váš košík obsahuje položky v bleskovej zľave (:product_name). Ceny bleskových zľav sa nedajú kombinovať so zľavovými kupónmi.',
     'coupon_applied_successfully' => 'Výborne! Kód kupónu ":code" bol použitý. Ušetrili ste na tejto objednávke!',
     'coupon_removed_successfully' => 'Kód kupónu bol odstránený z vašej objednávky.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kódy kupónov (:count)',
+    'left_quantity' => 'Zostáva :left',
+    'apply' => 'Použiť',
+    'remove' => 'Odstrániť',
+    'select_coupon' => 'Vybrať kupón',
+    'you_have_coupon_code' => 'Máte kód kupónu?',
+    'close' => 'Zavrieť',
+    'coupon_code_label' => 'Kód kupónu: :code',
+    'enter_coupon_code_placeholder' => 'Zadajte kód kupónu...',
 ];

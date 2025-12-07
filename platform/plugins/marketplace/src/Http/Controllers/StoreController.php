@@ -8,6 +8,7 @@ use Botble\Base\Facades\EmailHandler;
 use Botble\Base\Facades\MetaBox;
 use Botble\Base\Http\Actions\DeleteResourceAction;
 use Botble\Base\Supports\Breadcrumb;
+use Botble\Language\Facades\Language;
 use Botble\Marketplace\Facades\MarketplaceHelper;
 use Botble\Marketplace\Forms\PayoutInformationForm;
 use Botble\Marketplace\Forms\StoreForm;
@@ -221,6 +222,17 @@ class StoreController extends BaseController
         if ($store->email || $store->customer->email) {
             $unverifiedBy = Auth::user();
 
+            $contactUrl = url('contact');
+
+            // Add locale prefix if language plugin is active
+            if (is_plugin_active('language') && $store->customer) {
+                $locale = $store->customer->getMetadata('locale', true);
+
+                if ($locale) {
+                    $contactUrl = Language::getLocalizedURL($locale, $contactUrl);
+                }
+            }
+
             EmailHandler::setModule(MARKETPLACE_MODULE_SCREEN_NAME)
                 ->setVariableValues([
                     'store_name' => $store->name,
@@ -230,6 +242,7 @@ class StoreController extends BaseController
                     'unverified_by' => $unverifiedBy->name,
                     'unverified_at' => Carbon::now()->format('Y-m-d H:i:s'),
                     'verification_note' => $store->verification_note ?: '',
+                    'contact_url' => $contactUrl,
                 ])
                 ->sendUsingTemplate('store-unverified', $store->email ?: $store->customer->email);
         }

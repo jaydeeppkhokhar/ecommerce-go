@@ -7,9 +7,12 @@ return [
     'menu_name' => 'Категорії',
     'none' => 'Немає',
     'total_posts' => 'Всього постів: :total',
-    'table_view_info' => 'For easier bulk management of categories, you can also',
-    'manage_as_table' => 'manage categories as a table',
-    'parent' => 'Parent Category',
-    'order' => 'Order',
-    'is_default' => 'Is Default',
+    'table_view_info' => 'Для спрощення масового керування категоріями ви також можете',
+    'manage_as_table' => 'керувати категоріями як таблицею',
+    'parent' => 'Батьківська категорія',
+    'order' => 'Порядок',
+    'is_default' => 'За замовчуванням',
+    'intro' => [
+        'description' => 'Організуйте свої записи в блозі за категоріями для кращого управління контентом.',
+    ],
 ];

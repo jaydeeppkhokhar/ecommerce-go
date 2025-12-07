@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => '메뉴 항목을 드래그 앤 드롭하여 순서를 변경하거나 하위 메뉴로 중첩할 수 있습니다.',
     'widget_custom_menu' => '사용자 정의 메뉴',
     'widget_custom_menu_description' => '위젯 영역에 사용자 정의 메뉴를 추가합니다.',
+    'select_menu' => '메뉴 선택',
 ];

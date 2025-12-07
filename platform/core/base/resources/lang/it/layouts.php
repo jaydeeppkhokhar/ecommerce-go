@@ -9,9 +9,8 @@ return [
     'setting_general' => 'Generale',
     'setting_email' => 'Email',
     'system_information' => 'Informazioni di sistema',
-
     'theme' => 'Tema',
-    'copyright' => 'Copyright :year © :company. Versione :version',
+    'copyright' => 'Diritti d\'autore :year © :company. Versione :version',
     'profile' => 'Profilo',
     'logout' => 'Esci',
     'no_search_result' => 'Nessun risultato trovato, riprova con parole chiave diverse.',

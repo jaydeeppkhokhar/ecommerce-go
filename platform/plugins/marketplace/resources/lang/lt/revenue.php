@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Pajamos',
     'edit' => 'Atnaujinti piniginės balansą',
     'view_store' => 'Peržiūrėti parduotuvę ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Pridėti/Atimti pardavėjo sumą',
     'statements' => 'Ataskaitos',
     'products' => 'Prekės',
+    'items_earning_sales' => 'Prekių pajamų pardavimai: :amount',
 ];

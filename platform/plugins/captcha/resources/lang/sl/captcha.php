@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Obrazec za prijavo skrbnika',
     'admin_forgot_password_form' => 'Obrazec pozabljenega gesla skrbnika',
     'admin_reset_password_form' => 'Obrazec za ponastavitev gesla skrbnika',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Math Captcha',
+    'math_question' => 'Prosimo, rešite naslednjo matematično funkcijo: :label = ?',
+    'captcha_verification_failed' => 'Preverjanje Captcha ni uspelo!',
+    'math_captcha_verification_failed' => 'Math Captcha preverjanje ni uspelo!',
 ];

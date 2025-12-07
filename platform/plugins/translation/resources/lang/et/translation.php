@@ -69,4 +69,7 @@ return [
             'trans' => 'Võib olla tühi või string maksimaalse pikkusega :max tähemärki, kui on esitatud.',
         ],
     ],
+    'download_locale' => 'Laadi alla keel',
+    'import_available_locale_confirmation' => 'Laadi alla keel GitHubist',
+    'import_available_locale_confirmation_content' => 'Kas soovite selle keele alla laadida? See laaditakse alla asukohta :lang_path, saate selle hiljem kustutada, kui soovite.',
 ];

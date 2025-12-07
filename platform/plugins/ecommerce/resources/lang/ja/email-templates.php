@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'ご注文ありがとうございます！',
     'customer_new_order_greeting' => ':customer_name 様',
     'customer_new_order_message' => '商品をご購入いただき、ありがとうございます。お電話番号 <strong>:customer_phone</strong> にて注文確認のご連絡をさせていただきます！',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => '配送方法',
     'customer_new_order_order_number' => '注文番号',
     'customer_new_order_payment_method' => '支払い方法',
-
-    // Admin New Order Email
     'admin_new_order_title' => ':site_title で新しい注文を受信しました',
     'admin_new_order_greeting' => '管理者様',
     'admin_new_order_message' => ':customer_name 様から新しい注文が正常に行われました',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => '配送方法',
     'admin_new_order_payment_method' => '支払い方法',
     'admin_new_order_view_order' => '注文詳細を確認',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'ご注文が確認されました！',
     'order_confirm_greeting' => ':customer_name 様',
     'order_confirm_message' => 'ご注文が確認されました。商品をご購入いただき、ありがとうございます！',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'メモ',
     'order_confirm_shipping_method' => '配送方法',
     'order_confirm_payment_method' => '支払い方法',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'ご注文がキャンセルされました',
     'customer_cancel_order_greeting' => ':customer_name 様',
     'customer_cancel_order_message' => 'ご注文 <strong>:order_id</strong> は、お客様のご依頼により :cancellation_reason の理由でキャンセルされ、お支払いもキャンセルされました。',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => '住所',
     'customer_cancel_order_products' => 'ご注文内容:',
     'customer_cancel_order_note' => 'メモ',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'ご注文がキャンセルされました',
     'admin_cancel_order_greeting' => ':customer_name 様',
-    'admin_cancel_order_message' => 'ご注文 #:order_id は弊社スタッフによってキャンセルされました。',
+    'admin_cancel_order_message' => 'ご注文 :order_id は弊社スタッフによってキャンセルされました。',
     'admin_cancel_order_order_cancelled' => 'ご注文がキャンセルされました！',
     'admin_cancel_order_reason' => 'キャンセル理由: :cancellation_reason',
     'admin_cancel_order_customer_info' => '顧客情報',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => '注文詳細:',
     'admin_cancel_order_note' => 'メモ',
     'admin_cancel_order_order_summary' => '注文概要',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => '注文 #:order_id が顧客によってキャンセルされました',
+    'order_cancellation_to_admin_title' => '注文 :order_id が顧客によってキャンセルされました',
     'order_cancellation_to_admin_greeting' => '管理者様',
-    'order_cancellation_to_admin_message' => ':customer_name 様が注文 <strong>#:order_id</strong> をキャンセルしました。理由: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name 様が注文 <strong>:order_id</strong> をキャンセルしました。理由: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => '顧客情報',
     'order_cancellation_to_admin_name' => '氏名',
     'order_cancellation_to_admin_phone' => '電話番号',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'メモ',
     'order_cancellation_to_admin_view_order' => '注文詳細を確認',
     'order_cancellation_to_admin_order_summary' => '注文概要',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'ご注文商品を配送中です',
     'customer_delivery_order_greeting' => ':customer_name 様',
     'customer_delivery_order_message' => 'ご注文商品を配送中です。商品をご購入いただき、ありがとうございます！',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => '追跡ID',
     'customer_delivery_order_tracking_link' => '追跡リンク',
     'customer_delivery_order_track_shipment' => '配送状況を追跡',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'ご注文商品が配送完了しました',
     'customer_order_delivered_greeting' => ':customer_name 様',
     'customer_order_delivered_message' => 'ご注文商品が配送完了しました。商品をご購入いただき、ありがとうございます！',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => '追跡ID',
     'customer_order_delivered_tracking_link' => '追跡リンク',
     'customer_order_delivered_track_shipment' => '追跡詳細を確認',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => '注文 #:order_id のお支払いが確認されました',
+    'order_confirm_payment_title' => '注文 :order_id のお支払いが確認されました',
     'order_confirm_payment_greeting' => ':customer_name 様',
     'order_confirm_payment_message' => 'お支払いが確認されました。商品をご購入いただき、ありがとうございます！',
     'order_confirm_payment_order_number' => '注文番号',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'お支払いありがとうございます。ご注文はまもなく処理されます。',
     'order_confirm_payment_order_summary' => '注文概要',
     'order_confirm_payment_shipping_method' => '配送方法',
-
-    // Order Recovery Email
     'order_recover_title' => '未完了のご注文があります',
     'order_recover_greeting' => ':customer_name 様',
     'order_recover_message' => '未完了のご注文があることを確認いたしました。ご購入を完了されませんか？',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'ご注文を完了する',
     'order_recover_order_summary' => '注文概要',
     'order_recover_note' => 'メモ',
-
-    // Welcome Email
     'welcome_greeting' => ':customer_name 様、ご参加いただき、ありがとうございます！',
     'welcome_message' => ':site_title へようこそ！',
     'welcome_register_success' => '<strong>:site_title</strong> にアカウントを正常に登録されました。',
     'welcome_explore' => 'サポートが必要でしたら、お気軽にこのメールに返信してください！',
     'welcome_visit_shop' => 'お買い物を始める！',
-
-    // Confirm Email
     'confirm_email_title' => 'メール認証',
     'confirm_email_greeting' => ':customer_name 様、ご参加いただき、ありがとうございます！',
     'confirm_email_message' => '以下のボタンをクリックしてメールアドレスを確認してください。',
     'confirm_email_instruction' => 'このウェブサイトにアクセスするためにメールアドレスを認証してください。以下のボタンをクリックしてメールを認証してください。',
     'confirm_email_button' => 'メールアドレスを確認',
     'confirm_email_trouble' => '「メールアドレスを確認」ボタンのクリックに問題がある場合は、以下のURLをコピーしてウェブブラウザに貼り付けてください: <a href=":verify_link">:verify_link</a>',
-
-    // Password Reminder Email
     'password_reminder_title' => 'パスワードをリセット',
     'password_reminder_greeting' => ':customer_name 様',
     'password_reminder_message' => 'パスワードのリセットをリクエストされました。',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'パスワードをリセット',
     'password_reminder_ignore' => 'パスワードリセットをリクエストしていない場合は、このメールを無視してください。',
     'password_reminder_trouble_clicking' => '「パスワードをリセット」ボタンのクリックに問題がある場合は、以下のURLをコピーしてウェブブラウザに貼り付けてください: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => '返品リクエストを受け付けました',
     'order_return_request_greeting' => ':customer_name 様',
-    'order_return_request_message' => '注文 #:order_id の返品リクエストを受け付けました。',
+    'order_return_request_message' => '注文 :order_id の返品リクエストを受け付けました。',
     'order_return_request_reason' => '返品理由',
     'order_return_request_items' => '返品商品',
     'order_return_request_process' => 'リクエストを処理し、まもなくご連絡いたします。',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => '返品理由',
     'order_return_request_order_summary' => '注文概要',
     'order_return_request_note' => 'メモ',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => '注文返品状況の更新',
     'order_return_status_updated_greeting' => ':customer_name 様',
     'order_return_status_updated_message' => '注文 :order_id の返品リクエストの状況が更新されたことをお知らせいたします。',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'モデレーターのメモ: ":description"',
     'order_return_status_updated_questions' => 'この更新についてご質問やご不明な点がございましたら、お気軽にカスタマーサポートチームにお問い合わせください。',
     'order_return_status_updated_view_details' => '返品詳細を確認',
-
-    // Review Products Email
     'review_products_title' => '最近のご購入をレビュー',
     'review_products_greeting' => ':customer_name 様',
-    'review_products_message' => 'ご注文 #:order_id が完了しました。ご感想をお聞かせください！',
+    'review_products_message' => 'ご注文 :order_id が完了しました。ご感想をお聞かせください！',
     'review_products_instruction' => 'ご購入いただいた商品についてレビューをお願いいたします:',
     'review_products_button' => '商品をレビュー',
     'review_products_thank_you' => 'ご購入ありがとうございます！',
     'review_products_products' => 'レビュー対象商品',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'デジタル商品の準備ができました',
     'download_digital_products_greeting' => ':customer_name 様',
     'download_digital_products_message' => 'ご購入ありがとうございます！デジタル商品のダウンロード準備ができました。',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'すべてのファイルをダウンロード',
     'download_digital_products_external_link_downloads' => '外部ファイルをダウンロード',
     'download_digital_products_payment_method' => '支払い方法',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'ライセンスコード',
     'digital_product_license_codes_greeting' => ':customer_name 様',
     'digital_product_license_codes_message' => 'ご購入ありがとうございます！ライセンスコードをお送りします:',
     'digital_product_license_codes_thanks' => 'デジタル商品をご購入いただき、ありがとうございます。',
-    'digital_product_license_codes_below' => '以下は、ご購入いただいた商品のライセンスコードです:',
     'digital_product_license_codes_product' => '商品',
     'digital_product_license_codes_license' => 'ライセンスコード',
     'digital_product_license_codes_order_summary' => 'ご注文内容:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => '各ライセンスコードは固有で、1回のみ使用可能です',
     'digital_product_license_codes_note_3' => 'ライセンスコードを他の人と共有しないでください',
     'digital_product_license_codes_note_4' => 'ライセンスコードに問題がある場合は、サポートチームにお問い合わせください',
-
-    // Product File Updated Email
     'product_file_updated_title' => '商品ファイルが更新されました',
     'product_file_updated_greeting' => ':customer_name 様、こんにちは！',
     'product_file_updated_message' => '商品 <a href=":product_link"><strong>:product_name</strong></a> のファイルが更新されました。',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'アカウントから更新されたファイルをダウンロードできます。',
     'product_file_updated_order_number' => '注文番号',
     'product_file_updated_download' => '更新されたファイルをダウンロード',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'お支払いを受け取りました',
     'invoice_payment_created_greeting' => ':customer_name 様',
     'invoice_payment_created_message' => ':site_title のお支払いを正常に受け取りました。ありがとうございます！',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => '請求書コード #:invoice_code で <a href=":invoice_link">:invoice_link</a> からオンラインで請求書を確認できます',
     'invoice_payment_created_invoice_message' => '請求書コードは #:invoice_code です',
     'invoice_payment_created_view_online' => '請求書をオンラインで確認',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => ':customer_name 様',
     'customer_deletion_request_confirmation_message' => 'アカウント削除のリクエストを受け付けました。',
     'customer_deletion_request_confirmation_warning' => 'この操作は元に戻すことができません。すべてのデータが完全に削除されることにご注意ください。',
     'customer_deletion_request_confirmation_button' => '削除を確認',
     'customer_deletion_request_confirmation_cancel' => 'このリクエストに心当たりがない場合は、このメールを無視してください。',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => ':customer_name 様',
     'customer_deletion_request_completed_message' => 'リクエストに応じてアカウントが正常に削除されました。',
     'customer_deletion_request_completed_thank_you' => 'ご利用いただき、ありがとうございました。',
     'customer_deletion_request_completed_goodbye' => '将来再びお会いできることを願っております。',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => '管理者様、こんにちは',
     'payment_proof_upload_notification_message' => '顧客 :customer_name 様（メール: <a href="mailto::customer_email">:customer_email</a>）が注文ID :order_id の支払い証明をアップロードしました。',
     'payment_proof_upload_notification_view_details' => '支払い詳細は<a href=":payment_link">こちら</a>、注文詳細は<a href=":order_link">こちら</a>で確認できます。',

@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Tillåt kunder att ladda upp betalningsbevis för sina beställningar. Detta är användbart för manuella betalningsmetoder.',
             'enable_guest_payment_proof' => 'Tillåt gästkunder att ladda upp betalningsbevis',
             'enable_guest_payment_proof_helper' => 'När aktiverat kan gästkunder ladda upp betalningsbevis med sin beställningstoken utan att logga in. De kommer att få uppladdningslänken i sitt orderbekräftelsemeddelande.',
+            'payment_proof_payment_methods' => 'Betalningsmetoder som kräver betalningsbevis',
+            'payment_proof_payment_methods_helper' => 'Välj vilka betalningsmetoder som ska tillåta kunder att ladda upp betalningsbevis. Används vanligtvis för manuella betalningsmetoder som postförskott och banköverföring.',
         ],
     ],
     'checkout' => [
@@ -463,7 +465,14 @@ return [
         'show_sale_count_left_description' => 'Visa en förloppsstapel med "X sålt av Y" för att skapa brådska och uppmuntra snabba köp under blixtreor.',
     ],
     'payment_method_cod_minimum_amount' => 'Minsta orderbelopp - :currency (Valfritt)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Minsta orderbelopp - :currency (Valfritt)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Visa bankinformation på kassans framgångssida?',
     'invoice_templates' => 'Fakturamallar',
 ];

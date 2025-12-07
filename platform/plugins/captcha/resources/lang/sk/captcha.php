@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Prihlasovací formulár správcu',
     'admin_forgot_password_form' => 'Formulár zabudnutého hesla správcu',
     'admin_reset_password_form' => 'Formulár obnovenia hesla správcu',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matematická captcha',
+    'math_question' => 'Vyriešte nasledujúcu matematickú funkciu: :label = ?',
+    'captcha_verification_failed' => 'Overenie captcha zlyhalo!',
+    'math_captcha_verification_failed' => 'Overenie matematického captcha zlyhalo!',
 ];

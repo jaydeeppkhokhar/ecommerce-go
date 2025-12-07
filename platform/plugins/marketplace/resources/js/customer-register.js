@@ -50,31 +50,38 @@ $(() => {
     })
 
     if ($('.become-vendor-form').length) {
-        const certificateDropzone = new Dropzone('#certificate-dropzone', {
-            url: '#',
-            autoProcessQueue: false,
-            paramName: 'certificate_file',
-            maxFiles: 1,
-            acceptedFiles: '.pdf,.jpg,.jpeg,.png,.webp',
-            addRemoveLinks: true,
-            dictDefaultMessage: $('#certificate-dropzone').data('placeholder'),
-            maxfilesexceeded: function(file) {
-                this.removeFile(file)
-            },
-        })
+        let certificateDropzone = null
+        let governmentIdDropzone = null
 
-        const governmentIdDropzone = new Dropzone('#government-id-dropzone', {
-            url: '#',
-            autoProcessQueue: false,
-            paramName: 'government_id_file',
-            maxFiles: 1,
-            acceptedFiles: '.pdf,.jpg,.jpeg,.png,.webp',
-            addRemoveLinks: true,
-            dictDefaultMessage: $('#government-id-dropzone').data('placeholder'),
-            maxfilesexceeded: function(file) {
-                this.removeFile(file)
-            },
-        })
+        if ($('#certificate-dropzone').length) {
+            certificateDropzone = new Dropzone('#certificate-dropzone', {
+                url: '#',
+                autoProcessQueue: false,
+                paramName: 'certificate_file',
+                maxFiles: 1,
+                acceptedFiles: '.pdf,.jpg,.jpeg,.png,.webp',
+                addRemoveLinks: true,
+                dictDefaultMessage: $('#certificate-dropzone').data('placeholder'),
+                maxfilesexceeded: function(file) {
+                    this.removeFile(file)
+                },
+            })
+        }
+
+        if ($('#government-id-dropzone').length) {
+            governmentIdDropzone = new Dropzone('#government-id-dropzone', {
+                url: '#',
+                autoProcessQueue: false,
+                paramName: 'government_id_file',
+                maxFiles: 1,
+                acceptedFiles: '.pdf,.jpg,.jpeg,.png,.webp',
+                addRemoveLinks: true,
+                dictDefaultMessage: $('#government-id-dropzone').data('placeholder'),
+                maxfilesexceeded: function(file) {
+                    this.removeFile(file)
+                },
+            })
+        }
 
         $('form.become-vendor-form').on('submit', function(e) {
             e.preventDefault()
@@ -82,11 +89,11 @@ $(() => {
             const form = $(e.currentTarget)
             const formData = new FormData(form.get(0))
 
-            if (certificateDropzone.getQueuedFiles().length > 0) {
+            if (certificateDropzone && certificateDropzone.getQueuedFiles().length > 0) {
                 formData.append('certificate_file', certificateDropzone.getQueuedFiles()[0])
             }
 
-            if (governmentIdDropzone.getQueuedFiles().length > 0) {
+            if (governmentIdDropzone && governmentIdDropzone.getQueuedFiles().length > 0) {
                 formData.append('government_id_file', governmentIdDropzone.getQueuedFiles()[0])
             }
 

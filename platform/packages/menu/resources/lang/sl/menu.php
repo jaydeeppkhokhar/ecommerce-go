@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Preuredite elemente menija s povlečenjem in spustom, da spremenite njihov vrstni red ali jih vgnezdite kot podmenije.',
     'widget_custom_menu' => 'Meni po meri',
     'widget_custom_menu_description' => 'Dodajte meni po meri v območje pripomočkov.',
+    'select_menu' => 'Izberite meni',
 ];

@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Analytics beépülő modul hiba: Harmadik féltől származó könyvtárak hiányoznak. Futtassa a "composer update" parancsot a telepítésükhöz.',
     'browser' => 'Böngésző',
     'url' => 'URL',
+    'credential_invalid' => 'This credential is invalid Google Analytics credentials.',
+    'file_not_valid_json' => 'This file is not a valid JSON file.',
+    'no_results_found' => 'No results found',
+    'upload_service_account_json' => 'Upload Service Account JSON File',
 ];

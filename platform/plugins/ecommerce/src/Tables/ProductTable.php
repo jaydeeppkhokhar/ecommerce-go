@@ -165,42 +165,7 @@ class ProductTable extends TableAbstract
                 return BaseHelper::clean($item->stock_status_html);
             })
             ->filter(function ($query) {
-                $keyword = request()->input('search.value');
-                if ($keyword) {
-                    $keyword = '%' . $keyword . '%';
-
-                    $query
-                        ->where(function ($query) use ($keyword): void {
-                            $query
-                                ->where('ec_products.name', 'LIKE', $keyword)
-                                ->where('is_variation', 0);
-                        })
-                        ->orWhere(function ($query) use ($keyword): void {
-                            $query
-                                ->where('is_variation', 0)
-                                ->where(function ($query) use ($keyword): void {
-                                    $query
-                                        ->orWhere('ec_products.sku', 'LIKE', $keyword)
-                                        ->orWhere('ec_products.created_at', 'LIKE', $keyword)
-                                        ->when(
-                                            in_array('sku', EcommerceHelper::getProductsSearchBy()),
-                                            function ($query) use ($keyword): void {
-                                                $query
-                                                    ->orWhereHas(
-                                                        'variations.product',
-                                                        function ($query) use ($keyword): void {
-                                                            $query->where('sku', 'LIKE', $keyword);
-                                                        }
-                                                    );
-                                            }
-                                        );
-                                });
-                        });
-
-                    return $query;
-                }
-
-                return $query;
+                return $query->searchByKeyword(request()->input('search.value'));
             });
 
         return $this->toJson($data);

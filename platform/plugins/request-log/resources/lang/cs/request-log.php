@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Vymazat staré protokoly požadavků',
     'clear_old_data_helper' => 'Automaticky smazat staré protokoly požadavků, které jsou starší než vybrané období, aby byla databáze udržována čistá a optimalizovaná.',
     'cronjob_warning' => 'Pro použití této funkce musíte nastavit cron úlohu podle tohoto odkazu: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Nebyly nalezeny žádné výsledky',
+    'no_request_errors_message' => 'Zdá se, že zde nejsou žádné chyby požadavku.',
 ];

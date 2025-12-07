@@ -45,4 +45,6 @@ return [
     'admin' => 'অ্যাডমিন',
     'register_an_account' => 'একটি অ্যাকাউন্ট',
     'activity_has_been_deleted' => 'কার্যকলাপ মুছে ফেলা হয়েছে',
+    'no_results_found' => 'No results found',
+    'no_activities_here' => 'It looks as through there are no activities here.',
 ];

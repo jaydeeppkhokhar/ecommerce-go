@@ -17,6 +17,7 @@ return [
     'compatible_version' => 'Kompatibel mit Ihrer Version',
     'incompatible_version' => 'Mit Ihrer Version unvereinbar',
     'install_now' => 'Jetzt installieren',
+    'buy_now' => 'Jetzt kaufen',
     'remove' => 'Entfernen',
     'detail' => 'Details',
     'activate' => 'Aktivieren',
@@ -36,5 +37,5 @@ return [
     'unzip_success' => 'Download -Datei extrahiert',
     'install_success' => 'Das Plugin erfolgreich installiert!',
     'update_success' => 'Das Plugin erfolgreich aktualisiert!',
-    'minimum_core_version_error' => 'Cannot install this plugin. Minimum core version is :version.',
+    'minimum_core_version_error' => 'Dieses Plugin kann nicht installiert werden. Mindestkernversion ist :version.',
 ];

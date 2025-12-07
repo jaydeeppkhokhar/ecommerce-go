@@ -14,6 +14,7 @@ return [
         'publish_packages_assets' => 'Publicar activos de paquetes',
         'clean_up' => 'Limpiar los archivos de actualización del sistema',
         'done' => 'El sistema se ha actualizado correctamente',
+        'unknown' => 'Paso desconocido',
         'messages' => [
             'download' => 'Descargando archivos de actualización...',
             'update_files' => 'Actualizando archivos del sistema...',

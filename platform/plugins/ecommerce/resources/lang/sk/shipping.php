@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Naskenujte QR kód na sledovanie vašej zásielky',
     ],
     'customer_confirmed_delivery_at' => 'Zákazník potvrdil doručenie o',
+    'no_shipping_methods_available' => 'Žiadne spôsoby doručenia nie sú k dispozícii!',
 ];

@@ -722,6 +722,9 @@ class EcommerceHelper
         $mandatoryFields = array_keys($this->getMandatoryFieldsAtCheckout());
         $nullableFields = array_diff($mandatoryFields, $availableMandatoryFields);
 
+        $hiddenFields = $this->getHiddenFieldsAtCheckout();
+        $nullableFields = array_unique(array_merge($nullableFields, $hiddenFields));
+
         if ($nullableFields) {
             foreach ($nullableFields as $key) {
                 $key = $prefix . $key;
@@ -846,9 +849,11 @@ class EcommerceHelper
                 }
             } else {
                 $defaultVariation = $product->defaultVariation;
-                $selectedAttrs = $defaultVariation->productAttributes;
+                $selectedAttrs = $defaultVariation->relationLoaded('productAttributes')
+                    ? $defaultVariation->productAttributes
+                    : $defaultVariation->productAttributes()->get();
 
-                if ($defaultVariation && $defaultVariation->product && $defaultVariation->product->isOutOfStock()) {
+                if ($defaultVariation->product && $defaultVariation->product->isOutOfStock()) {
                     $product->loadMissing(['variations.product']);
 
                     $availableVariation = $product->variations
@@ -858,7 +863,9 @@ class EcommerceHelper
                         ->first();
 
                     if ($availableVariation) {
-                        $selectedAttrs = $availableVariation->productAttributes;
+                        $selectedAttrs = $availableVariation->relationLoaded('productAttributes')
+                            ? $availableVariation->productAttributes
+                            : $availableVariation->productAttributes()->get();
                     }
                 }
             }
@@ -1256,8 +1263,11 @@ class EcommerceHelper
         return apply_filters('ecommerce_product_eager_loading_relations', [
             'slugable',
             'defaultVariation',
+            'defaultVariation.product',
             'productCollections',
             'productLabels',
+            'variations',
+            'variations.product',
         ]);
     }
 
@@ -1940,6 +1950,27 @@ class EcommerceHelper
         return $this->isPaymentProofEnabled() && (bool) get_ecommerce_setting('guest_payment_proof_enabled', true);
     }
 
+    public function isPaymentProofEnabledForPaymentMethod(?string $paymentMethod): bool
+    {
+        if (! $paymentMethod || ! $this->isPaymentProofEnabled()) {
+            return false;
+        }
+
+        $enabledMethods = get_ecommerce_setting('payment_proof_payment_methods');
+
+        if (! $enabledMethods) {
+            return true;
+        }
+
+        $enabledMethods = json_decode($enabledMethods, true);
+
+        if (empty($enabledMethods)) {
+            return true;
+        }
+
+        return in_array($paymentMethod, $enabledMethods);
+    }
+
     public function hasAnyProductFilters(): bool
     {
         return $this->isEnabledFilterProductsByCategories() ||
@@ -1951,6 +1982,6 @@ class EcommerceHelper
 
     public function getAssetVersion(): string
     {
-        return '3.10.11';
+        return '3.11.2';
     }
 }

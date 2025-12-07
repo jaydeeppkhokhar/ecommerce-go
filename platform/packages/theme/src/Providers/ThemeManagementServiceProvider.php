@@ -97,7 +97,7 @@ class ThemeManagementServiceProvider extends ServiceProvider
             $link = view('packages/theme::guideline-link', [
                 'html' => $html,
                 'editLink' => $editLink,
-                'editLabel' => __('Edit this widget'),
+                'editLabel' => trans('packages/theme::theme.widgets.edit_this_widget'),
             ])->render();
 
             return ThemeSupport::insertBlockAfterTopHtmlTags($link, $html);

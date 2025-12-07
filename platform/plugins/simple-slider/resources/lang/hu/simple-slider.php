@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Egyszerű csúszka hozzáadása',
     'select_slider' => 'Válasszon csúszkát',
     'shortcode' => 'Rövid kód',
+    'tablet_image' => 'Tablet kép',
+    'tablet_image_helper' => 'A 768 képpont és 1200 képpont közötti szélességű eszközök esetén, ha üres, a rendszer az asztali képet használja.',
+    'mobile_image' => 'Mobil kép',
+    'mobile_image_helper' => 'A 768 képpontnál kisebb szélességű eszközök esetén, ha üres, a táblagép képét használja a rendszer.',
 ];

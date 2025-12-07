@@ -86,6 +86,11 @@ class Customer extends BaseModel implements
         return $this->orders()->whereNotNull('completed_at');
     }
 
+    public function finishedOrders(): HasMany
+    {
+        return $this->orders()->where('is_finished', true);
+    }
+
     public function addresses(): HasMany
     {
         return $this

@@ -69,4 +69,7 @@ return [
             'trans' => 'สามารถเว้นว่างหรือเป็นสตริงที่มีความยาวสูงสุด :max อักขระหากระบุ',
         ],
     ],
+    'download_locale' => 'ดาวน์โหลดภาษา',
+    'import_available_locale_confirmation' => 'ดาวน์โหลดภาษาจาก GitHub',
+    'import_available_locale_confirmation_content' => 'คุณแน่ใจหรือไม่ว่าต้องการดาวน์โหลดภาษานี้ มันจะถูกดาวน์โหลดไปที่ :lang_path คุณสามารถลบมันทีหลังได้ถ้าต้องการ',
 ];

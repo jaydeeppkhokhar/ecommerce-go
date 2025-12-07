@@ -49,4 +49,5 @@ return [
     'user_management' => 'Gestion des utilisateurs',
     'super_user_management' => 'Gestion des super-utilisateurs',
     'action_unauthorized' => 'Cette action n\'est pas autorisée.',
+    'role_permission_description' => 'View and update your roles and permissions',
 ];

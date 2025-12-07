@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Zmień kolejność elementów menu, przeciągając i upuszczając je, aby zmienić ich kolejność lub zagnieździć jako podmenu.',
     'widget_custom_menu' => 'Menu niestandardowe',
     'widget_custom_menu_description' => 'Dodaj niestandardowe menu do obszaru widżetów.',
+    'select_menu' => 'Wybierz menu',
 ];

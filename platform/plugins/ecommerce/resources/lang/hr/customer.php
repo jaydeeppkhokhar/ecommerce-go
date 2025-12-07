@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktiviran',
         'locked' => 'Zaključan',
     ],
-    'email_verified' => 'E-pošta potvrđena?',
     'verify_email' => [
         'confirm_heading' => 'Potvrda verifikacije e-pošte',
         'confirm_description' => 'Jeste li sigurni da želite potvrditi e-poštu ovog kupca?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'kliknite ovdje',
         'confirm_button' => 'Potvrdi',
     ],
-    'email_already_verified' => 'E-pošta je već potvrđena.',
     'verification_email_sent' => 'Email za verifikaciju je uspješno poslan!',
     'resend_verification_email' => 'Ponovno pošalji email za verifikaciju',
     'resend_verification_email_confirmation' => 'Jeste li sigurni da želite ponovno poslati email za verifikaciju ovom kupcu?',

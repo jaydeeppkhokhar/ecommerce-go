@@ -12,7 +12,6 @@ return [
             'city' => 'Mesto',
         ],
     ],
-    'import_type' => 'Vrsta uvoza',
     'export' => [
         'total' => 'Skupaj lokacij',
         'total_countries' => 'Skupaj držav',

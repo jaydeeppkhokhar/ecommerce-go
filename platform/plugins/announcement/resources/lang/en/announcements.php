@@ -53,6 +53,7 @@ return [
     'lazy_loading' => 'Lazy loading',
     'lazy_loading_description' => 'Enable this option to improve page loading speed',
     'hide_on_mobile' => 'Hide on mobile',
+    'dismiss' => 'Dismiss',
 
     // Placeholders and help texts
     'name_placeholder' => 'Enter announcement name',

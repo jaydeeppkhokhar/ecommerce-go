@@ -51,6 +51,9 @@ return [
     'hide_languages' => 'Dilleri gizle',
     'hide_languages_description' => 'Belirli dillerdeki içerikleri ziyaretçilerden ve arama motorlarından tamamen gizleyebilirsiniz, ancak yine de kendiniz görüntüleyebilirsiniz. Bu, devam eden çevirileri incelemenize olanak tanır.',
     'hide_languages_helper_display_hidden' => '{0} Şu anda tüm diller görüntüleniyor.|{1} :dil şu anda ziyaretçilerden gizli.|[2, Inf] :dil şu anda ziyaretçilerden gizli.',
+    'hide_languages_helper_display_hidden_zero' => 'Şu anda tüm diller görüntüleniyor.',
+    'hide_languages_helper_display_hidden_singular' => ':dil şu anda ziyaretçilerden gizli.',
+    'hide_languages_helper_display_hidden_plural' => ':dil şu anda ziyaretçilerden gizli.',
     'show_all' => 'Tümünü göster',
     'change_language' => 'Dil',
     'select_flag' => 'Bir bayrak seçin...',
@@ -64,5 +67,4 @@ return [
     'default_language_warning' => 'You should set the default language only once during the initial setup and avoid changing it later.',
     'default_language_warning_details' => 'Changing the default language does not automatically update your existing content — all previously entered data remains tied to the original default language.',
     'default_language_warning_action' => 'If you decide to change the default language, you will need to manually update your site content to match the new default language, as it won\'t be updated automatically.',
-    'language_show_default_item_if_current_version_not_existed' => 'Mevcut dilde mevcut değilse, öğeyi varsayılan dilde göster',
 ];

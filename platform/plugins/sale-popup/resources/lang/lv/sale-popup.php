@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Produktu saraksts',
         'cart' => 'Grozs',
     ],
+    'purchased' => 'iegādājās',
+    'verified' => 'Pārbaudīts',
+    'quick_view' => 'Ātrais skats',
 ];

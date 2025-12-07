@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Přihlašovací formulář správce',
     'admin_forgot_password_form' => 'Formulář zapomenutého hesla správce',
     'admin_reset_password_form' => 'Formulář pro obnovení hesla správce',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matematická captcha',
+    'math_question' => 'Vyřešte prosím následující matematickou funkci: :label = ?',
+    'captcha_verification_failed' => 'Ověření captcha se nezdařilo!',
+    'math_captcha_verification_failed' => 'Ověření matematického captcha se nezdařilo!',
 ];

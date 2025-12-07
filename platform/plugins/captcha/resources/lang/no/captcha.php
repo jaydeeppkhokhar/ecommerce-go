@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Administrator påloggingsskjema',
     'admin_forgot_password_form' => 'Administrator glemt passord-skjema',
     'admin_reset_password_form' => 'Administrator tilbakestill passord-skjema',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Math Captcha',
+    'math_question' => 'Vennligst løs følgende matematiske funksjon: PLASSHOLDER0 = ?',
+    'captcha_verification_failed' => 'Captcha-verifisering mislyktes!',
+    'math_captcha_verification_failed' => 'Math Captcha-verifisering mislyktes!',
 ];

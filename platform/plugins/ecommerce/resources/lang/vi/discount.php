@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Mã giảm giá này không thể áp dụng vì giỏ hàng của bạn có sản phẩm flash sale (:product_name). Giá flash sale không thể kết hợp với giảm giá từ mã coupon.',
     'coupon_applied_successfully' => 'Tuyệt vời! Mã giảm giá ":code" đã được áp dụng. Bạn đã tiết kiệm tiền cho đơn hàng này!',
     'coupon_removed_successfully' => 'Mã giảm giá đã được xóa khỏi đơn hàng của bạn.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Mã giảm giá (:count)',
+    'left_quantity' => 'Còn lại :left',
+    'apply' => 'Áp dụng',
+    'remove' => 'Xóa',
+    'select_coupon' => 'Chọn mã giảm giá',
+    'you_have_coupon_code' => 'Bạn có mã giảm giá?',
+    'close' => 'Đóng',
+    'coupon_code_label' => 'Mã giảm giá: :code',
+    'enter_coupon_code_placeholder' => 'Nhập mã giảm giá...',
 ];

@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Neplatný formát Google AdSense Client ID. Měl by být ve formátu: ca-pub-XXXXXXXXXXXXXXXX (kde X je číslice).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Obrázek pro tablet',
+    'tablet_image_helper' => 'Pro zařízení se šířkou od 768px do 1200px, pokud je prázdné, použije se obrázek z desktopu.',
+    'mobile_image' => 'Obrázek pro mobil',
+    'mobile_image_helper' => 'Pro zařízení se šířkou menší než 768px, pokud je prázdné, použije se obrázek z tabletu.',
 ];

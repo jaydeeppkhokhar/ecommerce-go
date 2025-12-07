@@ -23,7 +23,6 @@ return [
         'activated' => 'Activated',
         'locked' => 'Locked',
     ],
-    'email_verified' => 'Email verified?',
     'verify_email' => [
         'confirm_heading' => 'Verify email confirmation',
         'confirm_description' => 'Are you sure you want to verify email this customer?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'click here',
         'confirm_button' => 'Verify',
     ],
-    'email_already_verified' => 'Email is already verified.',
     'verification_email_sent' => 'Verification email has been sent successfully!',
     'resend_verification_email' => 'Resend verification email',
     'resend_verification_email_confirmation' => 'Are you sure you want to resend the verification email to this customer?',

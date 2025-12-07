@@ -101,6 +101,7 @@ return [
     'update_shipping_status_success' => 'Status do envio atualizado com sucesso!',
     'update_cod_status_success' => 'Status PAD do envio atualizado com sucesso!',
     'updated_cod_status_by' => 'Status PAD atualizado para :status. Atualizado por: %user_name%',
+    'saved_shipping_settings_success' => 'Configurações de envio salvas com sucesso!',
     'all' => 'Todos',
     'all_countries' => 'Todos os países',
     'error_when_adding_new_region' => 'Ocorreu um erro ao adicionar nova região!',
@@ -126,6 +127,9 @@ return [
     'add_note' => 'Adicionar observação...',
     'view_order' => 'Ver Pedido :order_id',
     'rule' => [
+        'types' => [
+            'unavailable' => 'Indisponível',
+        ],
         'enum_types' => [
             'based_on_weight' => 'Baseado no peso total do pedido (:unit)',
             'based_on_price' => 'Baseado no valor total do pedido',
@@ -193,4 +197,5 @@ return [
         'scan_qr_code' => 'Escaneie o código QR para rastrear seu envio',
     ],
     'customer_confirmed_delivery_at' => 'Cliente confirmou entrega em',
+    'no_shipping_methods_available' => 'Nenhum método de envio disponível!',
 ];

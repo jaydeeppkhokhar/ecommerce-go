@@ -64,6 +64,13 @@
                 </div>
             @endforeach
 
+            @if ($order->description)
+                <div class="mt-3">
+                    <h6 class="mb-1">{{ __('Order note') }}</h6>
+                    <p class="mb-0">{{ $order->description }}</p>
+                </div>
+            @endif
+
             @if (!empty($isShowTotalInfo))
                 @include('plugins/ecommerce::orders.thank-you.total-info', compact('order'))
             @endif

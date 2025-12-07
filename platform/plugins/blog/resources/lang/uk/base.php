@@ -14,12 +14,12 @@ return [
     'settings' => [
         'title' => 'Блог',
         'description' => 'Перегляд та оновлення налаштувань блогу',
-        'enable_blog_post_schema' => 'Увімкнути схему постів блогу?',
+        'enable_blog_post_schema' => 'Увімкнути схему постів блогу',
         'enable_blog_post_schema_description' => 'Дізнайтеся більше: https://schema.org/Article',
         'schema_type' => 'Тип схеми',
 
     ],
-    'blog_posts' => 'Blog posts',
-    'blog_categories' => 'Blog categories',
-    'blog_tags' => 'Blog tags',
+    'blog_posts' => 'Пости блогу',
+    'blog_categories' => 'Категорії блогу',
+    'blog_tags' => 'Теги блогу',
 ];

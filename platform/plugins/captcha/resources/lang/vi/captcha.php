@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Biểu mẫu đăng nhập quản trị viên',
     'admin_forgot_password_form' => 'Biểu mẫu quên mật khẩu quản trị viên',
     'admin_reset_password_form' => 'Biểu mẫu đặt lại mật khẩu quản trị viên',
+    'captcha' => 'hình ảnh xác thực',
+    'math_captcha' => 'Captcha toán học',
+    'math_question' => 'Hãy giải hàm toán học sau: :label = ?',
+    'captcha_verification_failed' => 'Xác minh hình ảnh xác thực không thành công!',
+    'math_captcha_verification_failed' => 'Xác minh hình ảnh xác thực toán học không thành công!',
 ];

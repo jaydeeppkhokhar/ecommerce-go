@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Rearanjați elementele meniului prin tragere și plasare pentru a le schimba ordinea sau pentru a le organiza ca submeniuri.',
     'widget_custom_menu' => 'Meniu personalizat',
     'widget_custom_menu_description' => 'Adăugați un meniu personalizat în zona de widget-uri.',
+    'select_menu' => 'Selectează meniul',
 ];

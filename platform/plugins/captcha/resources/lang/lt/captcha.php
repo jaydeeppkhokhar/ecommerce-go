@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Administratoriaus prisijungimo forma',
     'admin_forgot_password_form' => 'Administratoriaus pamiršto slaptažodžio forma',
     'admin_reset_password_form' => 'Administratoriaus slaptažodžio atkūrimo forma',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matematika Captcha',
+    'math_question' => 'Išspręskite šią matematinę funkciją: :label = ?',
+    'captcha_verification_failed' => 'Nepavyko patvirtinti „Captcha“!',
+    'math_captcha_verification_failed' => 'Matematikos „Captcha“ patvirtinimas nepavyko!',
 ];

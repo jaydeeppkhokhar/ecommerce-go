@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Ajouter un curseur simple',
     'select_slider' => 'Sélectionner un curseur',
     'shortcode' => 'Code court',
+    'tablet_image' => 'Image de la tablette',
+    'tablet_image_helper' => 'Pour les appareils d\'une largeur de 768 px à 1 200 px, s\'ils sont vides, utiliseront l\'image du bureau.',
+    'mobile_image' => 'Images mobiles',
+    'mobile_image_helper' => 'Pour les appareils d\'une largeur inférieure à 768 pixels, s\'ils sont vides, ils utiliseront l\'image de la tablette.',
 ];

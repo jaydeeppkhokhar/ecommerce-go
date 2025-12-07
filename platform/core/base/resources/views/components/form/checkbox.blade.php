@@ -7,7 +7,7 @@
     'helperText' => null,
     'inline' => false,
     'single' => false,
-    'marginZero' => false
+    'marginZero' => false,
 ])
 
 @php
@@ -35,7 +35,7 @@
         @checked($name ? old($name, $checked) : $checked)
     >
 
-    @if($label || $slot->isNotEmpty())
+    @if ($label || $slot->isNotEmpty())
         <span class="form-check-label">
             {!! $label ? BaseHelper::clean($label) : $slot !!}
         </span>

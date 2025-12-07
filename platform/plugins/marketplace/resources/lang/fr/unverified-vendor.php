@@ -1,18 +1,29 @@
 <?php
 
 return [
-    'name' => 'Unverified vendors',
-    'verify' => 'Verify vendor ":name"',
+    'name' => 'Vendeurs non vérifiés',
+    'verify' => 'Vérifier le vendeur « :name »',
     'forms' => [
         'email' => 'E-mail',
+        'store_name' => 'Nom du magasin',
+        'store_phone' => 'Téléphone du magasin',
+        'vendor_phone' => 'Téléphone du vendeur',
+        'verify_vendor' => 'Vérifier le vendeur',
+        'registered_at' => 'Inscrit le',
+        'certificate' => 'Certificat',
+        'government_id' => 'Pièce d\'identité',
     ],
-    'approve' => 'Approve',
-    'approve_vendor_confirmation' => 'Approve vendor confirmation',
-    'approve_vendor_confirmation_description' => 'Are you sure you really want to approve :vendor for selling on this site?',
-    'vendor_approval_notification' => 'Do you want to approve this vendor for selling on this site? :approve_link',
+    'view_certificate' => 'Voir le certificat',
+    'view_government_id' => 'Voir la pièce d\'identité',
+    'approve' => 'Approuver le vendeur',
+    'reject' => 'Rejeter',
+    'approve_vendor_confirmation' => 'Confirmation d\'approbation du vendeur',
+    'approve_vendor_confirmation_description' => 'Êtes-vous sûr de vouloir vraiment approuver :vendor pour vendre sur ce site ?',
+    'reject_vendor_confirmation' => 'Confirmation de rejet du vendeur',
+    'reject_vendor_confirmation_description' => 'Êtes-vous sûr de vouloir vraiment rejeter :vendor pour vendre sur ce site ?',
     'new_vendor_notifications' => [
         'new_vendor' => 'Nouveau vendeur',
         'view' => 'Voir',
-        'description' => ':customer has registered but not verified.',
+        'description' => ':customer s\'est inscrit mais n\'a pas été vérifié.',
     ],
 ];

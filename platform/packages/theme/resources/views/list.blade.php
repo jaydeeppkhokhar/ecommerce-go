@@ -11,30 +11,44 @@
                         </div>
                     @endif
 
-                    <div class="img-responsive img-responsive-4x3 card-img-top border-bottom" style="background-image: url('{{ Theme::getThemeScreenshot($key) }}')"></div>
+                    <div
+                        class="img-responsive img-responsive-4x3 card-img-top border-bottom"
+                        style="background-image: url('{{ Theme::getThemeScreenshot($key) }}')"
+                    ></div>
 
                     <x-core::card.body>
-                        <h4 class="card-title text-truncate mb-2" title="{{ $theme['name'] }}">
+                        <h4
+                            class="card-title text-truncate mb-2"
+                            title="{{ $theme['name'] }}"
+                        >
                             {{ $theme['name'] }}
                         </h4>
-                        @if (! empty($theme['description']))
-                            <p class="text-secondary text-truncate" title="{{ $theme['description'] }}">
+                        @if (!empty($theme['description']))
+                            <p
+                                class="text-secondary text-truncate"
+                                title="{{ $theme['description'] }}"
+                            >
                                 {{ $theme['description'] }}
                             </p>
                         @endif
 
                         <div class="row g-1 g-lg-0">
-                            @if (! empty($theme['author']))
+                            @if (!empty($theme['author']))
                                 <div class="col-12 col-lg">
                                     {{ trans('packages/theme::theme.author') }}:
-                                    @if (! empty($theme['url']))
-                                        <a href="{{ $theme['url'] }}" target="_blank" class="fw-bold" rel="nofollow,noindex">{{ $theme['author'] }}</a>
+                                    @if (!empty($theme['url']))
+                                        <a
+                                            href="{{ $theme['url'] }}"
+                                            target="_blank"
+                                            class="fw-bold"
+                                            rel="nofollow,noindex"
+                                        >{{ $theme['author'] }}</a>
                                     @else
                                         <strong>{{ $theme['author'] }}</strong>
                                     @endif
                                 </div>
                             @endif
-                            @if (! empty($theme['version']))
+                            @if (!empty($theme['version']))
                                 <div class="col-12 col-lg-auto">
                                     {{ trans('packages/theme::theme.version') }}:
                                     <strong>{{ $theme['version'] }}</strong>

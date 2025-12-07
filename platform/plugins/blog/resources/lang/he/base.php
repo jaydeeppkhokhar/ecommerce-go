@@ -11,11 +11,6 @@ return [
     'short_code_description' => 'הוסף פוסטים לבלוג',
     'number_posts_per_page_in_category' => 'מספר פוסטים בעמוד בקטגוריה',
     'number_posts_per_page_in_tag' => 'מספר פוסטים בעמוד בתגית',
-    'title' => 'בלוג',
-    'description' => 'צפה ועדכן הגדרות בלוג',
-    'enable_blog_post_schema' => 'הפעל Schema עבור פוסטים בבלוג',
-    'enable_blog_post_schema_description' => 'למד עוד: https://schema.org/Article',
-    'schema_type' => 'סוג Schema',
     'blog_posts' => 'פוסטים בבלוג',
     'blog_categories' => 'קטגוריות בלוג',
     'blog_tags' => 'תגיות בלוג',
@@ -25,6 +20,5 @@ return [
         'enable_blog_post_schema' => 'הפעל Schema עבור פוסטים בבלוג',
         'enable_blog_post_schema_description' => 'למד עוד: https://schema.org/Article',
         'schema_type' => 'סוג Schema',
-
     ],
 ];

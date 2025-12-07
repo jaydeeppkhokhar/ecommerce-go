@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Форма входа администратора',
     'admin_forgot_password_form' => 'Форма восстановления пароля администратора',
     'admin_reset_password_form' => 'Форма сброса пароля администратора',
+    'captcha' => 'Капча',
+    'math_captcha' => 'Математическая капча',
+    'math_question' => 'Решите следующую математическую функцию: :label = ?',
+    'captcha_verification_failed' => 'Проверка капчи не удалась!',
+    'math_captcha_verification_failed' => 'Проверка математического капчи не удалась!',
 ];

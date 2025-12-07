@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Mga Kita',
     'edit' => 'I-update ang balanse ng wallet',
     'view_store' => 'Tingnan ang tindahan ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Magdagdag/Magbawas ng halaga ng vendor',
     'statements' => 'Mga Pahayag',
     'products' => 'Mga Produkto',
+    'items_earning_sales' => 'Mga Benta ng Kita ng mga Item: :amount',
 ];

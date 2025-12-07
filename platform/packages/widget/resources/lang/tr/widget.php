@@ -37,8 +37,6 @@ return [
         'enable_button' => 'Widget önbelleğini etkinleştir',
         'dismiss_button' => 'Bir hafta boyunca yoksay',
     ],
-    'instruction' => 'Bir widget\'ı etkinleştirmek için onu bir kenar çubuğuna sürükleyin veya üzerine tıklayın. Bir widget\'ı devre dışı bırakmak ve ayarlarını silmek için geri sürükleyin.',
-
     'widget_site_copyright' => 'Site Telif Hakkı',
     'widget_site_copyright_description' => 'Alt bilgide telif hakkı metni.',
     'widget_site_copyright_helper' => 'Telif hakkı metnini değiştirmek için :link adresine gidin.',

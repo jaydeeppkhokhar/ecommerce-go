@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Invalid Google AdSense Client ID format. It should be in the format: ca-pub-XXXXXXXXXXXXXXXX (where X is a digit).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Tablet Image',
+    'tablet_image_helper' => 'For devices with width from 768px to 1200px, if empty, will use the image from the desktop.',
+    'mobile_image' => 'Mobile Image',
+    'mobile_image_helper' => 'For devices with width less than 768px, if empty, will use the image from the tablet.',
 ];

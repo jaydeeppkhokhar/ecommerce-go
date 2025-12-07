@@ -69,9 +69,7 @@ return [
             'trans' => 'Boş olabilir veya sağlandığında maksimum :max karakter uzunluğunda bir dize olabilir.',
         ],
     ],
-    'choose_group_msg' => 'Grup çevirilerini görüntülemek için bir grup seçin. Hiçbir grup görünmüyorsa, çevirileri içe aktardığınızdan emin olun.',
-    'choose_a_group' => 'Grup Seç',
-    'confirm_publish_group' => '":group" çeviri grubunu yayınlamak istediğinizden emin misiniz? Bu, mevcut dil dosyalarının üzerine yazacaktır.',
-    'import_done' => ':counter girdi için içe aktarma tamamlandı ve işlendi! Grupları yenilemek için bu sayfayı yeniden yükleyin!',
-    'translations_description' => 'Sistemdeki tüm kelimeleri çevir.',
+    'download_locale' => 'Dili indir',
+    'import_available_locale_confirmation' => 'GitHub\'dan dili indir',
+    'import_available_locale_confirmation_content' => 'Bu dili indirmek istediğinizden emin misiniz? :lang_path konumuna indirilecek, isterseniz daha sonra silebilirsiniz.',
 ];

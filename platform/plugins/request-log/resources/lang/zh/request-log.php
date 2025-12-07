@@ -13,4 +13,6 @@ return [
     'clear_old_data' => '清除旧的请求日志',
     'clear_old_data_helper' => '自动删除早于所选时间段的旧请求日志，以保持数据库清洁和优化。',
     'cronjob_warning' => '要使用此功能，您需要通过以下链接设置 cron 作业：<a href=":link" target="_blank">:link</a>。',
+    'no_results_found' => '没有找到结果',
+    'no_request_errors_message' => '看起来这里没有请求错误。',
 ];

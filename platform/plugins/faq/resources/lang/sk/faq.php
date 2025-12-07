@@ -5,8 +5,12 @@ return [
     'create' => 'Nová často kladená otázka',
     'question' => 'Otázka',
     'answer' => 'Odpoveď',
+    'question_placeholder' => 'Zadajte svoju otázku...',
+    'answer_placeholder' => 'Zadajte svoju odpoveď...',
     'category' => 'Kategória',
     'faq_schema_config' => 'Konfigurácia schémy často kladených otázok (:link)',
+    'faq_schema_config_description' => 'Táto konfigurácia registruje štruktúrované údaje často kladených otázok iba na účely SEO. Nebude sa zobrazovať v obsahu frontend témy. Schéma je vložená v zdrojovom kóde stránky a možno ju zobraziť pomocou "Zobraziť zdroj" alebo otestovať pomocou nástroja Google Rich Results Test.',
+    'schema_testing_tool' => 'Testovať s Google Rich Results Test',
     'learn_more' => 'Zistiť viac',
     'settings' => [
         'title' => 'Často kladené otázky',

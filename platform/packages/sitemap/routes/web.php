@@ -28,6 +28,12 @@ AdminHelper::registerRoutes(function (): void {
                 'uses' => 'SitemapSettingController@createKeyFile',
                 'permission' => 'sitemap.settings',
             ]);
+
+            Route::post('submit-sitemap', [
+                'as' => 'settings.submit-sitemap',
+                'uses' => 'SitemapSettingController@submitSitemap',
+                'permission' => 'sitemap.settings',
+            ]);
         });
     });
 });

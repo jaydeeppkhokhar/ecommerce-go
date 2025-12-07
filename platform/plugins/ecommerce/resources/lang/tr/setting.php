@@ -185,6 +185,8 @@ return [
             'enable_payment_proof_helper' => 'Müşterilerin siparişleri için ödeme kanıtı yüklemesine izin ver. Bu, manuel ödeme yöntemleri için kullanışlıdır.',
             'enable_guest_payment_proof' => 'Misafir müşterilerin ödeme kanıtı yüklemesine izin ver',
             'enable_guest_payment_proof_helper' => 'Etkinleştirildiğinde, misafir müşteriler giriş yapmadan sipariş belirteci kullanarak ödeme kanıtı yükleyebilir. Sipariş onay e-postalarında yükleme bağlantısını alacaklardır.',
+            'payment_proof_payment_methods' => 'Ödeme kanıtı gerektiren ödeme yöntemleri',
+            'payment_proof_payment_methods_helper' => 'Müşterilerin ödeme kanıtı yüklemesine izin verilmesi gereken ödeme yöntemlerini seçin. Genellikle kapıda ödeme ve banka havalesi gibi manuel ödeme yöntemleri için kullanılır.',
         ],
     ],
     'checkout' => [
@@ -311,7 +313,7 @@ return [
         'form' => [
             'enable_customer_registration' => 'Müşteri kaydını etkinleştir',
             'enable_customer_registration_helper' => 'Devre dışı bırakılırsa, müşteriler yeni hesap kaydettiremeyecek. Mevcut müşteriler hala giriş yapabilir.',
-            'verify_customer_email' => "Müşterinin e-postasını doğrula",
+            'verify_customer_email' => 'Müşterinin e-postasını doğrula',
             'verify_customer_email_helper' => "Etkinleştirildiğinde, müşterinin e-postasına bir doğrulama bağlantısı gönderilecek, müşterilerin giriş yapabilmeleri için bu bağlantıya tıklayarak e-postalarını doğrulamaları gerekecek. E-posta doğrulaması göndermek için Yönetici -> Ayarlar -> E-posta'da e-posta yapılandırması gerekir.",
             'verification_expire_minutes' => 'Doğrulama bağlantısı geçerlilik süresi',
             'verification_expire_minutes_helper' => 'E-posta doğrulama bağlantısının geçerli olacağı dakika cinsinden süre. Varsayılan 60 dakikadır (1 saat). Maksimum 10080 dakikadır (7 gün).',
@@ -462,7 +464,14 @@ return [
         'show_sale_count_left_description' => 'Flaş satışlar sırasında aciliyet yaratmak ve hızlı satın alımları teşvik etmek için "Y\'den X satıldı" şeklinde bir ilerleme çubuğu göster.',
     ],
     'payment_method_cod_minimum_amount' => 'Minimum sipariş tutarı - :currency (İsteğe bağlı)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Minimum sipariş tutarı - :currency (İsteğe bağlı)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Ödeme başarı sayfasında banka bilgilerini görüntüle?',
     'invoice_templates' => 'Fatura şablonları',
 ];

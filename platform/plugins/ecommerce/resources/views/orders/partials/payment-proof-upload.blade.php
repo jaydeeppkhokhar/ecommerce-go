@@ -1,29 +1,24 @@
 @php
-    // Get the first order to work with for payment proof
     $order = null;
     if (isset($orders) && $orders instanceof \Illuminate\Support\Collection) {
         $order = $orders->where('is_finished', true)->first();
         if (!$order) {
             $order = $orders->first();
         }
-    } elseif (isset($order) && $order instanceof \Botble\Ecommerce\Models\Order) {
-        // Order is already available
     }
 @endphp
 
-@if (EcommerceHelper::isPaymentProofEnabled() && $order)
+@if ($order && $order->isPaymentProofEnabled())
     @php
-        // Determine if user is logged in as customer
         $isCustomer = auth('customer')->check();
         $guestProofEnabled = EcommerceHelper::isGuestPaymentProofEnabled();
-        
-        // Use token-based routes for guests (if enabled), customer routes for logged-in users
-        $uploadRoute = $isCustomer 
-            ? route('customer.orders.upload-proof', $order) 
+
+        $uploadRoute = $isCustomer
+            ? route('customer.orders.upload-proof', $order)
             : ($guestProofEnabled ? route('public.orders.upload-proof-guest', $order->token) : null);
-            
-        $downloadRoute = $isCustomer 
-            ? route('customer.orders.download-proof', $order) 
+
+        $downloadRoute = $isCustomer
+            ? route('customer.orders.download-proof', $order)
             : ($guestProofEnabled ? route('public.orders.download-proof-guest', $order->token) : null);
     @endphp
 
@@ -51,12 +46,24 @@
                                     </div>
                                     <p class="payment-proof-upload__replace-text">{{ __('Or you can upload a new one, the old one will be replaced.') }}</p>
                                 @endif
-                                <div class="payment-proof-upload__upload-form d-block d-sm-flex">
-                                    <input type="file" name="file" id="file" class="form-control">
-                                    <button type="submit" class="btn payment-checkout-btn mt-2 mt-sm-0">
-                                        <x-core::icon name="ti ti-upload" />
-                                        {{ __('Upload') }}
-                                    </button>
+                                <div class="payment-proof-upload__upload-form">
+                                    <div class="bb-file-upload-wrapper">
+                                        <input type="file" name="file" id="payment-proof-file-guest" class="bb-file-input" accept=".jpg,.jpeg,.png,.pdf">
+                                        <label for="payment-proof-file-guest" class="bb-file-label">
+                                            <div class="bb-file-icon">
+                                                <x-core::icon name="ti ti-cloud-upload" />
+                                            </div>
+                                            <div class="bb-file-text">
+                                                <span class="bb-file-placeholder">{{ trans('plugins/ecommerce::customer-dashboard.choose_file') }}</span>
+                                                <span class="bb-file-name"></span>
+                                            </div>
+                                            <span class="bb-file-button">{{ trans('plugins/ecommerce::customer-dashboard.browse') }}</span>
+                                        </label>
+                                        <button type="submit" class="btn payment-checkout-btn bb-upload-submit">
+                                            <x-core::icon name="ti ti-upload" />
+                                            {{ trans('plugins/ecommerce::customer-dashboard.upload') }}
+                                        </button>
+                                    </div>
                                 </div>
                                 <small class="payment-proof-upload__help-text">{{ __('You can upload the following file types: jpg, jpeg, png, pdf and max file size is 2MB.') }}</small>
                             </x-core::form>

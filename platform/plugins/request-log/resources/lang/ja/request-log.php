@@ -13,4 +13,6 @@ return [
     'clear_old_data' => '古いリクエストログをクリア',
     'clear_old_data_helper' => '選択した期間より古いリクエストログを自動的に削除して、データベースをクリーンで最適化された状態に保ちます。',
     'cronjob_warning' => 'この機能を使用するには、次のリンクに従ってcronジョブを設定する必要があります：<a href=":link" target="_blank">:link</a>。',
+    'no_results_found' => '結果が見つかりませんでした',
+    'no_request_errors_message' => 'ここにはリクエストエラーはないようです。',
 ];

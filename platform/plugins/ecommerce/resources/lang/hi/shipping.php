@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'अपनी शिपमेंट को ट्रैक करने के लिए QR कोड स्कैन करें',
     ],
     'customer_confirmed_delivery_at' => 'ग्राहक ने डिलीवरी कन्फर्म की',
+    'no_shipping_methods_available' => 'कोई शिपिंग विधि उपलब्ध नहीं है!',
 ];

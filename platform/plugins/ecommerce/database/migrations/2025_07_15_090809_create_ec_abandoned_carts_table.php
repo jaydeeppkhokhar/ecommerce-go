@@ -14,7 +14,7 @@ return new class () extends Migration {
 
         Schema::create('ec_abandoned_carts', function (Blueprint $table): void {
             $table->id();
-            $table->unsignedBigInteger('customer_id')->nullable()->index();
+            $table->foreignId('customer_id')->nullable()->index();
             $table->string('session_id')->nullable()->index();
             $table->json('cart_data');
             $table->decimal('total_amount', 15, 2)->default(0);
@@ -27,7 +27,7 @@ return new class () extends Migration {
             $table->integer('reminders_sent')->default(0);
             $table->boolean('is_recovered')->default(false);
             $table->timestamp('recovered_at')->nullable();
-            $table->unsignedBigInteger('recovered_order_id')->nullable()->index();
+            $table->foreignId('recovered_order_id')->nullable()->index();
             $table->timestamps();
 
             $table->index(['abandoned_at', 'is_recovered']);

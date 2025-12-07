@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatické generování',
         'automatic_generation_desc' => 'Aktualizuje se automaticky při změnách obsahu',
         'automatic_update_note' => 'Mapa stránek se automaticky aktualizuje při každém vytvoření, úpravě nebo odstranění obsahu na vašich stránkách.',
+        'submit_sitemap' => 'Odeslat sitemapu do IndexNow',
+        'submitting_sitemap' => 'Odesílání...',
+        'sitemap_submitted_successfully' => 'Sitemap byla úspěšně odeslána vyhledávačům!',
+        'sitemap_submission_failed' => 'Nepodařilo se odeslat sitemapu všem vyhledávačům.',
+        'sitemap_submission_partial' => 'Sitemap byla odeslána s některými chybami.',
+        'submit_sitemap_error' => 'Nepodařilo se odeslat sitemapu. Zkuste to prosím znovu.',
+        'indexnow_disabled' => 'IndexNow není povolen. Nejprve jej prosím povolte.',
+        'indexnow_no_api_key' => 'Nebyl nalezen žádný klíč API. Nejprve prosím vygenerujte klíč API.',
     ],
 ];

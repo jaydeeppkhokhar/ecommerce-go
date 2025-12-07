@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Matagumpay ang order!',
     'customer_new_order_greeting' => 'Mahal na :customer_name,',
     'customer_new_order_message' => 'Salamat sa pagbili ng aming mga produkto, makikipag-ugnayan kami sa iyo sa pamamagitan ng telepono <strong>:customer_phone</strong> upang kumpirmahin ang order!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Paraan ng Paghahatid',
     'customer_new_order_order_number' => 'Numero ng order',
     'customer_new_order_payment_method' => 'Paraan ng Pagbabayad',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Nakatanggap ka ng bagong order mula sa :site_title',
     'admin_new_order_greeting' => 'Kumusta Admin,',
     'admin_new_order_message' => 'Ang isang bagong order ay matagumpay na inilagay ni :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Paraan ng paghahatid',
     'admin_new_order_payment_method' => 'Paraan ng pagbabayad',
     'admin_new_order_view_order' => 'Tingnan ang detalye ng order',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Nakumpirma ang order!',
     'order_confirm_greeting' => 'Kumusta :customer_name,',
     'order_confirm_message' => 'Ang iyong order ay nakumpirma. Salamat sa pagbili ng aming mga produkto!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Nota',
     'order_confirm_shipping_method' => 'Paraan ng paghahatid',
     'order_confirm_payment_method' => 'Paraan ng pagbabayad',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Ang iyong order ay kinansela',
     'customer_cancel_order_greeting' => 'Mahal na :customer_name,',
     'customer_cancel_order_message' => 'Ang iyong order <strong>:order_id</strong> ay kinansela ayon sa iyong kahilingan dahil sa dahilang :cancellation_reason at ang iyong bayad ay kinansela rin.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Address',
     'customer_cancel_order_products' => 'Narito ang iyong inorder:',
     'customer_cancel_order_note' => 'Nota',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Kinansela ang order',
     'admin_cancel_order_greeting' => 'Kumusta :customer_name,',
-    'admin_cancel_order_message' => 'Ang iyong order #:order_id ay kinansela ng aming staff.',
+    'admin_cancel_order_message' => 'Ang iyong order :order_id ay kinansela ng aming staff.',
     'admin_cancel_order_order_cancelled' => 'Ang order ay kinansela!',
     'admin_cancel_order_reason' => 'Dahilan ng pagkansela: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Impormasyon ng customer',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Detalye ng order:',
     'admin_cancel_order_note' => 'Nota',
     'admin_cancel_order_order_summary' => 'Buod ng Order',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Kinansela ng customer ang order #:order_id',
+    'order_cancellation_to_admin_title' => 'Kinansela ng customer ang order :order_id',
     'order_cancellation_to_admin_greeting' => 'Kumusta Admin,',
-    'order_cancellation_to_admin_message' => 'Kinansela ni :customer_name ang order <strong>#:order_id</strong>. Dahilan: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => 'Kinansela ni :customer_name ang order <strong>:order_id</strong>. Dahilan: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Impormasyon ng customer',
     'order_cancellation_to_admin_name' => 'Pangalan',
     'order_cancellation_to_admin_phone' => 'Telepono',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Nota',
     'order_cancellation_to_admin_view_order' => 'Tingnan ang detalye ng order',
     'order_cancellation_to_admin_order_summary' => 'Buod ng Order',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Ang iyong order ay ihinahatid na',
     'customer_delivery_order_greeting' => 'Kumusta :customer_name,',
     'customer_delivery_order_message' => 'Ang iyong order ay ihinahatid na. Salamat sa pagbili ng aming mga produkto!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Tracking ID',
     'customer_delivery_order_tracking_link' => 'Tracking Link',
     'customer_delivery_order_track_shipment' => 'Subaybayan ang Iyong Shipment',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Ang iyong order ay naihatid na',
     'customer_order_delivered_greeting' => 'Kumusta :customer_name,',
     'customer_order_delivered_message' => 'Ang iyong order ay naihatid na. Salamat sa pagbili ng aming mga produkto!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Tracking ID',
     'customer_order_delivered_tracking_link' => 'Tracking Link',
     'customer_order_delivered_track_shipment' => 'Tingnan ang Mga Detalye ng Pagsubaybay',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Nakumpirma ang bayad para sa order #:order_id',
+    'order_confirm_payment_title' => 'Nakumpirma ang bayad para sa order :order_id',
     'order_confirm_payment_greeting' => 'Kumusta :customer_name,',
     'order_confirm_payment_message' => 'Ang iyong bayad ay nakumpirma. Salamat sa pagbili ng aming mga produkto!',
     'order_confirm_payment_order_number' => 'Numero ng order',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Salamat sa iyong bayad. Ang iyong order ay ipoproseso na.',
     'order_confirm_payment_order_summary' => 'Buod ng Order',
     'order_confirm_payment_shipping_method' => 'Paraan ng paghahatid',
-
-    // Order Recovery Email
     'order_recover_title' => 'Mayroon kang hindi kumpletong order',
     'order_recover_greeting' => 'Kumusta :customer_name,',
     'order_recover_message' => 'Napansin namin na mayroon kang hindi kumpletong order. Gusto mo bang kumpletuhin ang iyong pagbili?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Kumpletuhin ang Iyong Order',
     'order_recover_order_summary' => 'Buod ng Order',
     'order_recover_note' => 'Nota',
-
-    // Welcome Email
     'welcome_greeting' => 'Natutuwa kaming mayroon ka rito, :customer_name!',
     'welcome_message' => 'Maligayang pagdating sa :site_title!',
     'welcome_register_success' => 'Matagumpay mong narehistro ang isang account sa <strong>:site_title</strong>.',
     'welcome_explore' => 'Kung kailangan mo ng tulong, huwag mag-atubiling tumugon sa email na ito!',
     'welcome_visit_shop' => 'Magsimulang bumili!',
-
-    // Confirm Email
     'confirm_email_title' => 'I-verify ang Email',
     'confirm_email_greeting' => 'Natutuwa kaming mayroon ka rito, :customer_name!',
     'confirm_email_message' => 'Mangyaring kumpirmahin ang iyong email address sa pamamagitan ng pag-click sa button sa ibaba.',
     'confirm_email_instruction' => 'Mangyaring i-verify ang iyong email address upang ma-access ang website na ito. Mag-click sa button sa ibaba upang i-verify ang iyong email.',
     'confirm_email_button' => 'Kumpirmahin ang iyong email address',
     'confirm_email_trouble' => 'Kung may problema kang i-click ang button na "Kumpirmahin ang iyong email address", kopyahin at i-paste ang URL sa ibaba sa iyong web browser: <a href=":verify_link">:verify_link</a> at i-paste ito sa iyong browser.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'I-reset ang iyong password',
     'password_reminder_greeting' => 'Kumusta :customer_name,',
     'password_reminder_message' => 'Humiling ka na i-reset ang iyong password.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'I-reset ang Password',
     'password_reminder_ignore' => 'Kung hindi ka humiling ng pag-reset ng password, mangyaring huwag pansinin ang email na ito.',
     'password_reminder_trouble_clicking' => 'Kung may problema kang i-click ang button na "I-reset ang Password", kopyahin at i-paste ang URL sa ibaba sa iyong web browser: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Natanggap ang kahilingan sa pagbabalik',
     'order_return_request_greeting' => 'Kumusta :customer_name,',
-    'order_return_request_message' => 'Natanggap namin ang iyong kahilingan sa pagbabalik para sa order #:order_id.',
+    'order_return_request_message' => 'Natanggap namin ang iyong kahilingan sa pagbabalik para sa order :order_id.',
     'order_return_request_reason' => 'Dahilan ng pagbabalik',
     'order_return_request_items' => 'Mga item na ibabalik',
     'order_return_request_process' => 'Ipoproseso namin ang iyong kahilingan at makikipag-ugnayan sa iyo sa lalong madaling panahon.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Dahilan ng Pagbabalik',
     'order_return_request_order_summary' => 'Buod ng Order',
     'order_return_request_note' => 'Nota',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Update sa katayuan ng pagbabalik ng order',
     'order_return_status_updated_greeting' => 'Mahal na :customer_name,',
     'order_return_status_updated_message' => 'Nais naming ipaalam sa iyo na ang katayuan ng iyong kahilingan sa pagbabalik para sa order :order_id ay na-update.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Nota ng moderator: " :description ".',
     'order_return_status_updated_questions' => 'Kung mayroon kang mga katanungan o alalahanin tungkol sa update na ito, huwag mag-atubiling makipag-ugnayan sa aming koponan ng customer support.',
     'order_return_status_updated_view_details' => 'Tingnan ang mga detalye ng pagbabalik',
-
-    // Review Products Email
     'review_products_title' => 'I-review ang iyong kamakailang pagbili',
     'review_products_greeting' => 'Kumusta :customer_name,',
-    'review_products_message' => 'Ang iyong order #:order_id ay natapos na. Gustuhin naming marinig ang iyong feedback!',
+    'review_products_message' => 'Ang iyong order :order_id ay natapos na. Gustuhin naming marinig ang iyong feedback!',
     'review_products_instruction' => 'Mangyaring maglaan ng sandali upang i-review ang mga produktong iyong binili:',
     'review_products_button' => 'I-review ang mga Produkto',
     'review_products_thank_you' => 'Salamat sa iyong pagbili!',
     'review_products_products' => 'Mga Produktong I-re-review',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Ang iyong mga digital na produkto ay handa na',
     'download_digital_products_greeting' => 'Kumusta :customer_name,',
     'download_digital_products_message' => 'Salamat sa iyong pagbili! Ang iyong mga digital na produkto ay handa nang i-download.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'I-download ang Lahat ng mga File',
     'download_digital_products_external_link_downloads' => 'I-download ang Mga External na File',
     'download_digital_products_payment_method' => 'Paraan ng Pagbabayad',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Ang Iyong mga License Code',
     'digital_product_license_codes_greeting' => 'Mahal na :customer_name,',
     'digital_product_license_codes_message' => 'Salamat sa iyong pagbili! Narito ang iyong mga license code:',
     'digital_product_license_codes_thanks' => 'Salamat sa pagbili ng aming mga digital na produkto.',
-    'digital_product_license_codes_below' => 'Nasa ibaba ang iyong mga license code para sa mga produktong iyong binili:',
     'digital_product_license_codes_product' => 'Produkto',
     'digital_product_license_codes_license' => 'License Code',
     'digital_product_license_codes_order_summary' => 'Narito ang iyong inorder:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Ang bawat license code ay natatangi at maaari lamang gamitin nang isang beses',
     'digital_product_license_codes_note_3' => 'Huwag ibahagi ang iyong mga license code sa iba',
     'digital_product_license_codes_note_4' => 'Kung mayroon kang mga isyu sa iyong mga license code, mangyaring makipag-ugnayan sa aming koponan ng suporta',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Na-update ang mga File ng Produkto',
     'product_file_updated_greeting' => 'Kumusta, :customer_name!',
     'product_file_updated_message' => 'Ang mga file para sa produktong <a href=":product_link"><strong>:product_name</strong></a> ay na-update.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Maaari mong i-download ang mga na-update na file mula sa iyong account.',
     'product_file_updated_order_number' => 'Numero ng order',
     'product_file_updated_download' => 'I-download ang mga Na-update na File',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Natanggap ang bayad',
     'invoice_payment_created_greeting' => 'Kumusta :customer_name,',
     'invoice_payment_created_message' => 'Matagumpay naming natanggap ang iyong bayad para sa :site_title. Salamat!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Maaari mong tingnan ang iyong invoice online sa <a href=":invoice_link">:invoice_link</a> na may invoice code #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Ang iyong invoice code ay #:invoice_code',
     'invoice_payment_created_view_online' => 'Tingnan ang Invoice Online',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Kumusta :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Natanggap namin ang iyong kahilingan na tanggalin ang iyong account.',
     'customer_deletion_request_confirmation_warning' => 'Pakitandaan na ang aksyon na ito ay hindi maaaring ibalik. Ang lahat ng iyong data ay permanenteng tatanggalin.',
     'customer_deletion_request_confirmation_button' => 'Kumpirmahin ang Pagtanggal',
     'customer_deletion_request_confirmation_cancel' => 'Kung hindi mo hiniling ito, mangyaring huwag pansinin ang email na ito.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Kumusta :customer_name,',
     'customer_deletion_request_completed_message' => 'Ang iyong account ay matagumpay nang tinanggal ayon sa kahilingan.',
     'customer_deletion_request_completed_thank_you' => 'Salamat sa pagiging kasama namin.',
     'customer_deletion_request_completed_goodbye' => 'Umaasa kaming makita ka muli sa hinaharap.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Kumusta Admin,',
     'payment_proof_upload_notification_message' => 'Ang customer na si :customer_name (Email: <a href="mailto::customer_email">:customer_email</a>) ay nag-upload ng patunay ng bayad para sa kanilang order na may ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'Maaari mong tingnan ang mga detalye ng bayad <a href=":payment_link">dito</a> at ang mga detalye ng order <a href=":order_link">dito</a>.',

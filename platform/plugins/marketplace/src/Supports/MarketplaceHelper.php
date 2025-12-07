@@ -51,7 +51,7 @@ class MarketplaceHelper
 
     public function getAssetVersion(): string
     {
-        return '2.1.7';
+        return '2.2.1';
     }
 
     public function hideStorePhoneNumber(): bool
@@ -262,18 +262,11 @@ class MarketplaceHelper
         return (bool) $this->getSetting('enable_vendor_categories_filter', true);
     }
 
-    /**
-     * Get categories for a specific vendor/store
-     *
-     * @param string|int $storeId
-     * @return SupportCollection
-     */
     public function getCategoriesForVendor(string|int $storeId): SupportCollection
     {
         $cacheKey = 'marketplace_store_categories_' . $storeId;
 
         return Cache::remember($cacheKey, 3600, function () use ($storeId) {
-            // Optimized query using a single query with subquery
             $categoryIds = DB::table('ec_product_category_product')
                 ->whereIn('product_id', function ($query) use ($storeId): void {
                     $query->select('id')
@@ -289,12 +282,9 @@ class MarketplaceHelper
                 return collect();
             }
 
-            // Get categories with their parents in a single query using recursive CTE (if supported)
-            // or fallback to the iterative approach
             $allCategoryIds = collect($categoryIds);
             $parentIds = $categoryIds;
 
-            // Iteratively get all parent categories
             while ($parentIds->isNotEmpty()) {
                 $parentIds = ProductCategory::query()
                     ->whereIn('id', $parentIds)
@@ -308,7 +298,6 @@ class MarketplaceHelper
                 }
             }
 
-            // Get all categories in a single query
             $categories = ProductCategory::query()
                 ->whereIn('id', $allCategoryIds)
                 ->wherePublished()
@@ -317,7 +306,6 @@ class MarketplaceHelper
                 ->orderBy('order')
                 ->get();
 
-            // Transform categories to include URL
             return $categories->map(function ($category) {
                 $category->url = $category->slugable ? route('public.single', $category->slugable->key) : '#';
 

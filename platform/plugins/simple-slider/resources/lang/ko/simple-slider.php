@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => '간단한 슬라이더 추가',
     'select_slider' => '슬라이더 선택',
     'shortcode' => '단축코드',
+    'tablet_image' => '태블릿 이미지',
+    'tablet_image_helper' => '너비가 768px에서 1200px 사이인 장치의 경우 비어 있으면 바탕 화면의 이미지를 사용합니다.',
+    'mobile_image' => '모바일 이미지',
+    'mobile_image_helper' => '너비가 768px 미만인 장치의 경우 비어 있으면 태블릿의 이미지를 사용합니다.',
 ];

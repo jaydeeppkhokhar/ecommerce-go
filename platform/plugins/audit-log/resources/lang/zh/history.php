@@ -45,4 +45,6 @@ return [
     'admin' => '管理员',
     'register_an_account' => '帐户',
     'activity_has_been_deleted' => '活动已被删除',
+    'no_results_found' => '未找到结果',
+    'no_activities_here' => '这里似乎没有活动。',
 ];

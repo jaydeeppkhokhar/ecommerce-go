@@ -24,7 +24,7 @@ class AddressController extends BaseController
 
         $request->merge([
             'customer_id' => $request->input('customer_id'),
-            'is_default' => $request->input('is_default', 0),
+            'is_default' => $request->boolean('is_default', 0),
         ]);
 
         Address::query()->create($request->input());
@@ -50,7 +50,7 @@ class AddressController extends BaseController
 
         $request->merge([
             'customer_id' => $request->input('customer_id'),
-            'is_default' => $request->input('is_default', 0),
+            'is_default' => $request->boolean('is_default', 0),
         ]);
 
         $address->fill($request->input());

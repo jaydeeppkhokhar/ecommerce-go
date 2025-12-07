@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Udgiv pakkeaktiver',
         'clean_up' => 'Ryd op i systemopdateringsfiler',
         'done' => 'System opdateret',
-
+        'unknown' => 'Ukendt trin',
         'messages' => [
             'download' => 'Downloader opdateringsfiler...',
             'update_files' => 'Opdaterer systemfiler...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Rydder op i systemopdateringsfiler...',
             'done' => 'Færdig! Din browser vil blive genindlæst om 30 sekunder.',
         ],
-
         'failed_messages' => [
             'download' => 'Kunne ikke downloade opdateringsfiler',
             'update_files' => 'Kunne ikke opdatere systemfiler',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Kunne ikke udgive pakkeaktiver',
             'clean_up' => 'Kunne ikke rydde op i systemopdateringsfiler',
         ],
-
         'success_messages' => [
             'download' => 'Opdateringsfiler downloadet.',
             'update_files' => 'Systemfiler opdateret.',

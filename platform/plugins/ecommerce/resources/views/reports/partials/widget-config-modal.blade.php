@@ -176,7 +176,7 @@ $(document).ready(function() {
             error: function(xhr) {
                 console.error('Failed to load widget configuration:', xhr);
                 $('#widget-categories').html('<div class="text-center p-4 text-danger">{{ trans("plugins/ecommerce::reports.failed_to_load_configuration") }}</div>');
-                Botble.showError('{{ trans("core/base::forms.load_error") }}');
+                Botble.showError('{{ trans("plugins/ecommerce::ecommerce.forms.load_error") }}');
             }
         });
     }
@@ -280,7 +280,7 @@ $(document).ready(function() {
                 }, 1000);
             },
             error: function(xhr) {
-                Botble.showError(xhr.responseJSON?.message || '{{ trans("core/base::forms.save_error") }}');
+                Botble.showError(xhr.responseJSON?.message || '{{ trans("plugins/ecommerce::ecommerce.forms.save_error") }}');
             },
             complete: function() {
                 $button.prop('disabled', false).html(originalText);

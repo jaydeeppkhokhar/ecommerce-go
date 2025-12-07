@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'name' => 'Cities',
-    'description' => 'Manage location cities',
-    'create' => 'New city',
-    'state' => 'State',
-    'select_state' => 'Select state...',
-    'select_city' => 'Select city...',
-    'country' => 'Country',
-    'select_country' => 'Select country...',
-    'city' => 'City',
-    'zip_code' => 'Zip code',
-    'zip_code_helper' => 'The basic format for a zip code is five digits. For example, in the United States, 00501 is an example of a unique ZIP Code for the Internal Revenue Service in Holtsville, New York.',
+    'name' => 'Градове',
+    'description' => 'Управление на градове',
+    'create' => 'Нов град',
+    'state' => 'Щат',
+    'select_state' => 'Изберете щат...',
+    'select_city' => 'Изберете град...',
+    'country' => 'Държава',
+    'select_country' => 'Изберете държава...',
+    'city' => 'Град',
+    'zip_code' => 'Пощенски код',
+    'zip_code_helper' => 'Основният формат за пощенски код е пет цифри. Например, в Съединените щати, 00501 е пример за уникален пощенски код за Службата за вътрешни приходи в Холтсвил, Ню Йорк.',
 ];

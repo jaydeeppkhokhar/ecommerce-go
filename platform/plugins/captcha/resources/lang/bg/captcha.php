@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Формуляр за вход на администратор',
     'admin_forgot_password_form' => 'Формуляр за забравена парола на администратор',
     'admin_reset_password_form' => 'Формуляр за нулиране на парола на администратор',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Математически Captcha',
+    'math_question' => 'Моля, решете следната математическа функция: :label = ?',
+    'captcha_verification_failed' => 'Неуспешна проверка на Captcha!',
+    'math_captcha_verification_failed' => 'Неуспешна проверка на математическия Captcha!',
 ];

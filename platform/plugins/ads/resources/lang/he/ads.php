@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'פורמט מזהה לקוח של Google AdSense לא חוקי. זה צריך להיות בפורמט: ca-pub-XXXXXXXXXXXXXXXX (כאשר X הוא ספרה).',
         ],
     ],
+    'banner' => 'באנר',
+    'tablet_image' => 'תמונת טאבלט',
+    'tablet_image_helper' => 'עבור מכשירים ברוחב של 768px עד 1200px, אם ריק, תמונת שולחן העבודה תשמש.',
+    'mobile_image' => 'תמונת מובייל',
+    'mobile_image_helper' => 'עבור מכשירים ברוחב פחות מ-768px, אם ריק, תמונת הטאבלט תשמש.',
 ];

@@ -10,7 +10,7 @@ return [
     'setting_email' => '電子メール',
     'system_information' => 'システム情報',
     'theme' => 'テーマ',
-    'copyright' => 'Copyright :year © :company. Version :version',
+    'copyright' => '著作権 :year © :company. バージョン :version',
     'profile' => 'プロフィール',
     'logout' => 'ログアウト',
     'no_search_result' => '結果が見つかりませんでした。別のキーワードで試してください。',
@@ -18,7 +18,7 @@ return [
     'search' => '検索',
     'add_new' => '新規追加',
     'n_a' => '該当なし',
-    'page_loaded_in_time' => 'Page loaded in :time seconds',
+    'page_loaded_in_time' => 'ページは :time 秒で読み込まれました',
     'view_website' => 'ウェブサイトを見る',
     'tools' => 'ツール',
 ];

@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Bestelling succesvol!',
     'customer_new_order_greeting' => 'Beste :customer_name,',
     'customer_new_order_message' => 'Bedankt voor het kopen van onze producten, we nemen contact met u op via telefoon <strong>:customer_phone</strong> om de bestelling te bevestigen!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Verzendmethode',
     'customer_new_order_order_number' => 'Bestellingnummer',
     'customer_new_order_payment_method' => 'Betaalmethode',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'U heeft een nieuwe bestelling ontvangen van :site_title',
     'admin_new_order_greeting' => 'Hallo Beheerder,',
     'admin_new_order_message' => 'Een nieuwe bestelling is succesvol geplaatst door :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Verzendmethode',
     'admin_new_order_payment_method' => 'Betaalmethode',
     'admin_new_order_view_order' => 'Bestelling details bekijken',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Bestelling bevestigd!',
     'order_confirm_greeting' => 'Hallo :customer_name,',
     'order_confirm_message' => 'Uw bestelling is bevestigd. Bedankt voor het kopen van onze producten!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Notitie',
     'order_confirm_shipping_method' => 'Verzendmethode',
     'order_confirm_payment_method' => 'Betaalmethode',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Uw bestelling is geannuleerd',
     'customer_cancel_order_greeting' => 'Beste :customer_name,',
     'customer_cancel_order_message' => 'Uw bestelling <strong>:order_id</strong> is geannuleerd zoals u verzocht heeft vanwege reden :cancellation_reason en uw betaling is ook geannuleerd.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Adres',
     'customer_cancel_order_products' => 'Dit is wat u heeft besteld:',
     'customer_cancel_order_note' => 'Notitie',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Bestelling geannuleerd',
     'admin_cancel_order_greeting' => 'Hallo :customer_name,',
-    'admin_cancel_order_message' => 'Uw bestelling #:order_id is geannuleerd door ons personeel.',
+    'admin_cancel_order_message' => 'Uw bestelling :order_id is geannuleerd door ons personeel.',
     'admin_cancel_order_order_cancelled' => 'Bestelling is geannuleerd!',
     'admin_cancel_order_reason' => 'Reden voor annulering: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Klant informatie',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Bestelling details:',
     'admin_cancel_order_note' => 'Notitie',
     'admin_cancel_order_order_summary' => 'Bestelling Samenvatting',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Bestelling #:order_id geannuleerd door klant',
+    'order_cancellation_to_admin_title' => 'Bestelling :order_id geannuleerd door klant',
     'order_cancellation_to_admin_greeting' => 'Hallo Beheerder,',
-    'order_cancellation_to_admin_message' => ':customer_name heeft bestelling <strong>#:order_id</strong> geannuleerd. Reden: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name heeft bestelling <strong>:order_id</strong> geannuleerd. Reden: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Klant informatie',
     'order_cancellation_to_admin_name' => 'Naam',
     'order_cancellation_to_admin_phone' => 'Telefoon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Notitie',
     'order_cancellation_to_admin_view_order' => 'Bestelling details bekijken',
     'order_cancellation_to_admin_order_summary' => 'Bestelling Samenvatting',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Uw bestelling is onderweg',
     'customer_delivery_order_greeting' => 'Hallo :customer_name,',
     'customer_delivery_order_message' => 'Uw bestelling is onderweg. Bedankt voor het kopen van onze producten!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Track & Trace ID',
     'customer_delivery_order_tracking_link' => 'Track & Trace Link',
     'customer_delivery_order_track_shipment' => 'Volg Uw Zending',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Uw bestelling is bezorgd',
     'customer_order_delivered_greeting' => 'Hallo :customer_name,',
     'customer_order_delivered_message' => 'Uw bestelling is bezorgd. Bedankt voor het kopen van onze producten!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Track & Trace ID',
     'customer_order_delivered_tracking_link' => 'Track & Trace Link',
     'customer_order_delivered_track_shipment' => 'Track & Trace Details Bekijken',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Betaling bevestigd voor bestelling #:order_id',
+    'order_confirm_payment_title' => 'Betaling bevestigd voor bestelling :order_id',
     'order_confirm_payment_greeting' => 'Hallo :customer_name,',
     'order_confirm_payment_message' => 'Uw betaling is bevestigd. Bedankt voor het kopen van onze producten!',
     'order_confirm_payment_order_number' => 'Bestellingnummer',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Bedankt voor uw betaling. Uw bestelling wordt binnenkort verwerkt.',
     'order_confirm_payment_order_summary' => 'Bestelling Samenvatting',
     'order_confirm_payment_shipping_method' => 'Verzendmethode',
-
-    // Order Recovery Email
     'order_recover_title' => 'U heeft een onvolledige bestelling',
     'order_recover_greeting' => 'Hallo :customer_name,',
     'order_recover_message' => 'We merkten op dat u een onvolledige bestelling heeft. Wilt u uw aankoop voltooien?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Voltooi Uw Bestelling',
     'order_recover_order_summary' => 'Bestelling Samenvatting',
     'order_recover_note' => 'Notitie',
-
-    // Welcome Email
     'welcome_greeting' => 'We zijn blij dat u hier bent, :customer_name!',
     'welcome_message' => 'Welkom bij :site_title!',
     'welcome_register_success' => 'U heeft succesvol een account geregistreerd bij <strong>:site_title</strong>.',
     'welcome_explore' => 'Als u hulp nodig heeft, aarzel dan niet om te reageren op deze e-mail!',
     'welcome_visit_shop' => 'Begin met kopen!',
-
-    // Confirm Email
     'confirm_email_title' => 'E-mail Verifiëren',
     'confirm_email_greeting' => 'We zijn blij dat u hier bent, :customer_name!',
     'confirm_email_message' => 'Bevestig alstublieft uw e-mailadres door op de knop hieronder te klikken.',
     'confirm_email_instruction' => 'Verifieer alstublieft uw e-mailadres om toegang te krijgen tot deze website. Klik op de knop hieronder om uw e-mail te verifiëren.',
     'confirm_email_button' => 'Bevestig uw e-mailadres',
     'confirm_email_trouble' => 'Als u problemen heeft met het klikken op de "Bevestig uw e-mailadres" knop, kopieer en plak dan de URL hieronder in uw webbrowser: <a href=":verify_link">:verify_link</a> en plak het in uw browser.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Reset uw wachtwoord',
     'password_reminder_greeting' => 'Hallo :customer_name,',
     'password_reminder_message' => 'U heeft verzocht om uw wachtwoord te resetten.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Wachtwoord Resetten',
     'password_reminder_ignore' => 'Als u geen wachtwoord reset heeft aangevraagd, negeer dan deze e-mail.',
     'password_reminder_trouble_clicking' => 'Als u problemen heeft met het klikken op de "Wachtwoord Resetten" knop, kopieer en plak dan de URL hieronder in uw webbrowser: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Retourverzoek ontvangen',
     'order_return_request_greeting' => 'Hallo :customer_name,',
-    'order_return_request_message' => 'We hebben uw retourverzoek ontvangen voor bestelling #:order_id.',
+    'order_return_request_message' => 'We hebben uw retourverzoek ontvangen voor bestelling :order_id.',
     'order_return_request_reason' => 'Reden voor retour',
     'order_return_request_items' => 'Items om te retourneren',
     'order_return_request_process' => 'We zullen uw verzoek verwerken en spoedig contact met u opnemen.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Retour Reden',
     'order_return_request_order_summary' => 'Bestelling Samenvatting',
     'order_return_request_note' => 'Notitie',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Bestelling retour status update',
     'order_return_status_updated_greeting' => 'Beste :customer_name,',
     'order_return_status_updated_message' => 'We wilden u informeren dat de status van uw retourverzoek voor bestelling :order_id is bijgewerkt.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Moderator notitie: " :description ".',
     'order_return_status_updated_questions' => 'Als u vragen of zorgen heeft betreffende deze update, aarzel dan niet om contact op te nemen met ons klantenservice team.',
     'order_return_status_updated_view_details' => 'Retour details bekijken',
-
-    // Review Products Email
     'review_products_title' => 'Beoordeel uw recente aankoop',
     'review_products_greeting' => 'Hallo :customer_name,',
-    'review_products_message' => 'Uw bestelling #:order_id is voltooid. We horen graag uw feedback!',
+    'review_products_message' => 'Uw bestelling :order_id is voltooid. We horen graag uw feedback!',
     'review_products_instruction' => 'Neem alstublieft een moment om de producten die u heeft gekocht te beoordelen:',
     'review_products_button' => 'Producten Beoordelen',
     'review_products_thank_you' => 'Bedankt voor uw aankoop!',
     'review_products_products' => 'Producten om te Beoordelen',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Uw digitale producten zijn klaar',
     'download_digital_products_greeting' => 'Hallo :customer_name,',
     'download_digital_products_message' => 'Bedankt voor uw aankoop! Uw digitale producten zijn klaar voor download.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Alle Bestanden Downloaden',
     'download_digital_products_external_link_downloads' => 'Externe Bestanden Downloaden',
     'download_digital_products_payment_method' => 'Betaalmethode',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Uw Licentiecodes',
     'digital_product_license_codes_greeting' => 'Beste :customer_name,',
     'digital_product_license_codes_message' => 'Bedankt voor uw aankoop! Hier zijn uw licentiecodes:',
     'digital_product_license_codes_thanks' => 'Bedankt voor het kopen van onze digitale producten.',
-    'digital_product_license_codes_below' => 'Hieronder staan uw licentiecodes voor de producten die u heeft gekocht:',
     'digital_product_license_codes_product' => 'Product',
     'digital_product_license_codes_license' => 'Licentiecode',
     'digital_product_license_codes_order_summary' => 'Dit is wat u heeft besteld:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Elke licentiecode is uniek en kan slechts eenmaal gebruikt worden',
     'digital_product_license_codes_note_3' => 'Deel uw licentiecodes niet met anderen',
     'digital_product_license_codes_note_4' => 'Als u problemen heeft met uw licentiecodes, neem dan contact op met ons ondersteuningsteam',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Product Bestanden Bijgewerkt',
     'product_file_updated_greeting' => 'Hallo, :customer_name!',
     'product_file_updated_message' => 'De bestanden voor het product <a href=":product_link"><strong>:product_name</strong></a> zijn bijgewerkt.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'U kunt de bijgewerkte bestanden downloaden vanuit uw account.',
     'product_file_updated_order_number' => 'Bestellingnummer',
     'product_file_updated_download' => 'Bijgewerkte Bestanden Downloaden',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Betaling ontvangen',
     'invoice_payment_created_greeting' => 'Hallo :customer_name,',
     'invoice_payment_created_message' => 'We hebben uw betaling voor :site_title succesvol ontvangen. Bedankt!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'U kunt uw factuur online bekijken op <a href=":invoice_link">:invoice_link</a> met factuurcode #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Uw factuurcode is #:invoice_code',
     'invoice_payment_created_view_online' => 'Factuur Online Bekijken',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Hallo :customer_name,',
     'customer_deletion_request_confirmation_message' => 'We hebben uw verzoek ontvangen om uw account te verwijderen.',
     'customer_deletion_request_confirmation_warning' => 'Let op dat deze actie niet ongedaan gemaakt kan worden. Al uw gegevens worden permanent verwijderd.',
     'customer_deletion_request_confirmation_button' => 'Verwijdering Bevestigen',
     'customer_deletion_request_confirmation_cancel' => 'Als u dit niet heeft aangevraagd, negeer dan deze e-mail.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Hallo :customer_name,',
     'customer_deletion_request_completed_message' => 'Uw account is succesvol verwijderd zoals aangevraagd.',
     'customer_deletion_request_completed_thank_you' => 'Bedankt dat u bij ons was.',
     'customer_deletion_request_completed_goodbye' => 'We hopen u in de toekomst weer te zien.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Hallo Beheerder,',
     'payment_proof_upload_notification_message' => 'De klant :customer_name (E-mail: <a href="mailto::customer_email">:customer_email</a>) heeft een betaalbewijs geüpload voor hun bestelling met ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'U kunt de betaaldetails <a href=":payment_link">hier</a> bekijken en de bestellingdetails <a href=":order_link">hier</a>.',

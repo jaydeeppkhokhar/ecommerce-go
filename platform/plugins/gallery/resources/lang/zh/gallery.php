@@ -18,4 +18,8 @@ return [
     'limit_display' => '限制数量显示',
     'edit_this_gallery' => '编辑此画廊',
     'galleries_page' => '画廊页面',
+    'by_name' => '通过占位符0',
+    'title' => '标题',
+    'limit' => '限制',
+    'limit_helper' => '要展示的画廊数量。',
 ];

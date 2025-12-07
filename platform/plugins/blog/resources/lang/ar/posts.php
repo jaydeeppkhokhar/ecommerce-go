@@ -22,7 +22,6 @@ return [
     'edit_this_post' => 'تعديل هذه المشاركة',
     'no_new_post_now' => 'لا توجد مشاركة جديدة الآن!',
     'menu_name' => 'المشاركات',
-    'widget_posts_recent' => 'المشاركات الأخيرة',
     'categories' => 'التصنيفات',
     'category' => 'التصنيف',
     'author' => 'المؤلف',

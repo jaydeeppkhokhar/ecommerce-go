@@ -12,7 +12,6 @@ return [
             'city' => 'Град',
         ],
     ],
-    'import_type' => 'Тип увоза',
     'export' => [
         'total' => 'Укупно локација',
         'total_countries' => 'Укупно држава',

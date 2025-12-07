@@ -33,7 +33,7 @@
                             {!! EcommerceHelper::jsAttributes('add-to-cart-in-form', $product) !!}
                         >
                             <x-core::icon name="ti ti-shopping-cart"/>
-                            {{ __('Add To Cart') }}
+                            {{ trans('plugins/ecommerce::ecommerce.add_to_cart') }}
                         </button>
                     </div>
                 @endif
@@ -42,7 +42,7 @@
     </x-core::form>
 
     <a href="{{ $product->url }}" class="btn-link mt-3 d-inline-flex align-items-center gap-1">
-        {{ __('View full details') }}
+        {{ trans('plugins/ecommerce::ecommerce.view_full_details') }}
         <x-core::icon name="ti ti-arrow-right" />
     </a>
 </div>

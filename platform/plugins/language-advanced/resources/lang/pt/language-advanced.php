@@ -16,7 +16,7 @@ return [
         ],
     ],
     'export' => [
-        'total' => 'Total',
+        'total' => 'Total de registos',
     ],
     'import_model_translations' => 'Traduções de :model',
     'export_model_translations' => 'Traduções de :model',

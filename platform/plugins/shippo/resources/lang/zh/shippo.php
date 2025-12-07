@@ -59,4 +59,22 @@ return [
     'webhooks' => '网络钩子？',
     'cache_response' => '缓存响应？',
     'not_available_in_cod_payment_method' => '如果选择的支付方式是货到付款，则不会显示Shippo选项！',
+    'not_available_cod' => '货到付款选项不可用。',
+    'log_files' => '日志文件',
+    'status' => [
+        'shipping_label_created' => '运输标签已创建',
+        'in_transit' => '运输中',
+        'delivered' => '已送达',
+        'returned_to_sender' => '退回发件人',
+        'exception' => '异常',
+    ],
+    'content_type' => [
+        'merchandise' => '商品',
+        'documents' => '文件',
+        'gift' => '礼物',
+        'returned_goods' => '退货',
+        'humanitarian_donation' => '人道主义捐赠',
+        'other' => '其他',
+    ],
+    'address_incomplete' => '地址似乎不完整',
 ];

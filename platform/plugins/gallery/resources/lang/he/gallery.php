@@ -18,4 +18,8 @@ return [
     'limit_display' => 'הגבל מספר תצוגה',
     'edit_this_gallery' => 'ערוך גלריה זו',
     'galleries_page' => 'עמוד גלריות',
+    'by_name' => 'מאת :name',
+    'title' => 'כּוֹתֶרֶת',
+    'limit' => 'לְהַגבִּיל',
+    'limit_helper' => 'מספר הגלריות להצגה. ',
 ];

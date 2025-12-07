@@ -5,8 +5,12 @@ return [
     'create' => 'Soalan Lazim baharu',
     'question' => 'Soalan',
     'answer' => 'Jawapan',
+    'question_placeholder' => 'Masukkan soalan anda...',
+    'answer_placeholder' => 'Masukkan jawapan anda...',
     'category' => 'Kategori',
     'faq_schema_config' => 'Konfigurasi skema Soalan Lazim (:link)',
+    'faq_schema_config_description' => 'Konfigurasi ini hanya mendaftarkan data berstruktur Soalan Lazim untuk tujuan SEO. Ia tidak akan dipaparkan dalam kandungan tema frontend. Skema tertanam dalam kod sumber halaman dan boleh dilihat menggunakan "Lihat Sumber" atau diuji dengan alat Google Rich Results Test.',
+    'schema_testing_tool' => 'Uji dengan Google Rich Results Test',
     'learn_more' => 'Ketahui lebih lanjut',
     'settings' => [
         'title' => 'Soalan Lazim',

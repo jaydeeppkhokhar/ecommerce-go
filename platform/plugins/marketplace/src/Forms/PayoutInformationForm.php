@@ -27,7 +27,7 @@ class PayoutInformationForm extends FormAbstract
             ->setValidatorClass(PayoutInformationSettingRequest::class)
             ->contentOnly()
             ->add('payout_payment_method', SelectField::class, [
-                'label' => __('Payment Method'),
+                'label' => trans('plugins/marketplace::marketplace.payment_method'),
                 'selected' => $customer->vendorInfo->payout_payment_method,
                 'choices' => Arr::pluck($payoutMethodsEnabled, 'label', 'key'),
                 'attr' => [
@@ -60,6 +60,6 @@ class PayoutInformationForm extends FormAbstract
             ]);
         }
 
-        $this->addSubmitButton(__('Save settings'));
+        $this->addSubmitButton(trans('plugins/marketplace::marketplace.save_settings'));
     }
 }

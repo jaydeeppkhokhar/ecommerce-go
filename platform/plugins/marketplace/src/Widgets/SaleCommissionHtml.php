@@ -28,6 +28,9 @@ class SaleCommissionHtml extends Html
                     ->whereNull('type')
                     ->orWhere('type', RevenueTypeEnum::ADD_AMOUNT);
             })
+            ->whereHas('order', function (Builder $query): void {
+                $query->where('is_finished', true);
+            })
             ->groupBy('date')
             ->get();
 

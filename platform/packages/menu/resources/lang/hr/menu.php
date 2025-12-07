@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Promijenite raspored stavki izbornika povlačenjem i ispuštanjem kako biste promijenili njihov redoslijed ili ih ugniježdili kao podizbornik.',
     'widget_custom_menu' => 'Prilagođeni izbornik',
     'widget_custom_menu_description' => 'Dodajte prilagođeni izbornik u područje widgeta.',
+    'select_menu' => 'Odaberi izbornik',
 ];

@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Analytics 플러그인 오류: 타사 라이브러리가 누락되었습니다. "composer update"를 실행하여 설치하세요.',
     'browser' => '브라우저',
     'url' => 'URL',
+    'credential_invalid' => '이 자격 증명은 유효한 Google Analytics 자격 증명이 아닙니다.',
+    'file_not_valid_json' => '이 파일은 유효한 JSON 파일이 아닙니다.',
+    'no_results_found' => '결과를 찾을 수 없습니다',
+    'upload_service_account_json' => '서비스 계정 JSON 파일 업로드',
 ];

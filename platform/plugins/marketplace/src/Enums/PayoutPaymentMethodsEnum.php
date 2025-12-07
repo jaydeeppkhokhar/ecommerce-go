@@ -49,28 +49,28 @@ class PayoutPaymentMethodsEnum extends Enum
                 'label' => self::BANK_TRANSFER()->label(),
                 'fields' => [
                     'name' => [
-                        'title' => __('Bank Name'),
+                        'title' => trans('plugins/marketplace::marketplace.bank_name'),
                         'rules' => 'max:120',
                     ],
                     'code' => [
-                        'title' => __('Bank Code/IFSC'),
+                        'title' => trans('plugins/marketplace::marketplace.bank_code_ifsc'),
                         'rules' => 'max:120',
                     ],
                     'full_name' => [
-                        'title' => __('Account Holder Name'),
+                        'title' => trans('plugins/marketplace::marketplace.account_holder_name'),
                         'rules' => 'max:120',
                     ],
                     'number' => [
-                        'title' => __('Account Number'),
+                        'title' => trans('plugins/marketplace::marketplace.account_number'),
                         'rules' => 'max:50',
                     ],
                     'upi_id' => [
-                        'title' => __('UPI ID'),
+                        'title' => trans('plugins/marketplace::marketplace.upi_id'),
                         'rules' => 'max:120',
-                        'helper_text' => __('It is optional. If you have UPI ID, you can provide it here. Learn more: https://support.google.com/pay/india/answer/10331134?hl=en'),
+                        'helper_text' => trans('plugins/marketplace::marketplace.upi_id_helper'),
                     ],
                     'description' => [
-                        'title' => __('Description'),
+                        'title' => trans('plugins/marketplace::marketplace.description'),
                         'rules' => 'max:500',
                     ],
                 ],
@@ -81,7 +81,7 @@ class PayoutPaymentMethodsEnum extends Enum
                 'label' => self::PAYPAL()->label(),
                 'fields' => [
                     'paypal_id' => [
-                        'title' => __('PayPal ID'),
+                        'title' => trans('plugins/marketplace::marketplace.paypal_id'),
                         'rules' => 'max:120',
                     ],
                 ],
@@ -92,16 +92,16 @@ class PayoutPaymentMethodsEnum extends Enum
                 'label' => self::CASH()->label(),
                 'fields' => [
                     'pickup_location' => [
-                        'title' => __('Pickup Location'),
+                        'title' => trans('plugins/marketplace::marketplace.pickup_location'),
                         'rules' => 'max:500',
-                        'helper_text' => __('Where would you like to collect your cash payout?'),
+                        'helper_text' => trans('plugins/marketplace::marketplace.pickup_location_helper'),
                     ],
                     'contact_name' => [
-                        'title' => __('Contact Name'),
+                        'title' => trans('plugins/marketplace::marketplace.contact_name'),
                         'rules' => 'max:120',
                     ],
                     'contact_phone' => [
-                        'title' => __('Contact Phone'),
+                        'title' => trans('plugins/marketplace::marketplace.contact_phone'),
                         'rules' => 'max:20',
                     ],
                 ],
@@ -151,14 +151,14 @@ class PayoutPaymentMethodsEnum extends Enum
         $attributes = [];
         if ($prefix) {
             $prefix = rtrim($prefix, '.');
-            $attributes[$prefix] = __('Payout info');
+            $attributes[$prefix] = trans('plugins/marketplace::marketplace.payout_info');
             $prefix = $prefix . '.';
         }
 
         foreach (static::payoutMethodsEnabled() as $method) {
             $attributes[$prefix . $method['key']] = $method['label'];
             foreach ($method['fields'] as $key => $field) {
-                $attributes[$prefix . $method['key'] . '.' . $key] = __('Payout info') . ' (' . Arr::get($field, 'title') . ')';
+                $attributes[$prefix . $method['key'] . '.' . $key] = trans('plugins/marketplace::marketplace.payout_info') . ' (' . Arr::get($field, 'title') . ')';
             }
         }
 

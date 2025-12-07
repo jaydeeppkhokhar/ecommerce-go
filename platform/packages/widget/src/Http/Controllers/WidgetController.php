@@ -31,7 +31,7 @@ class WidgetController extends BaseController
 
         RenderingWidgetSettings::dispatch();
 
-        $widgets = Widget::query()->where('theme', Widget::getThemeName())->get();
+        $widgets = Widget::query()->where('theme', Widget::getThemeName())->orderBy('position')->get();
 
         $groups = WidgetGroup::getGroups();
         foreach ($widgets as $widget) {
@@ -79,7 +79,7 @@ class WidgetController extends BaseController
             $widgetAreas = Widget::query()->where([
                 'sidebar_id' => $sidebarId,
                 'theme' => $themeName,
-            ])->get();
+            ])->orderBy('position')->get();
 
             return $this
                 ->httpResponse()
@@ -110,7 +110,7 @@ class WidgetController extends BaseController
             $widgetAreas = Widget::query()->where([
                 'sidebar_id' => $sidebarId,
                 'theme' => $themeName,
-            ])->get();
+            ])->orderBy('position')->get();
 
             return $this
                 ->httpResponse()

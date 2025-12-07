@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Sipariş başarılı!',
     'customer_new_order_greeting' => 'Sayın :customer_name,',
     'customer_new_order_message' => 'Ürünlerimizi satın aldığınız için teşekkür ederiz, siparişi onaylamak için sizi <strong>:customer_phone</strong> telefonunuzdan arayacağız!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Kargo Yöntemi',
     'customer_new_order_order_number' => 'Sipariş numarası',
     'customer_new_order_payment_method' => 'Ödeme Yöntemi',
-
-    // Admin New Order Email
     'admin_new_order_title' => ':site_title\'den yeni bir sipariş aldınız',
     'admin_new_order_greeting' => 'Merhaba Yönetici,',
     'admin_new_order_message' => ':customer_name tarafından başarıyla yeni bir sipariş verildi',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Kargo yöntemi',
     'admin_new_order_payment_method' => 'Ödeme yöntemi',
     'admin_new_order_view_order' => 'Sipariş detayını görüntüle',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Sipariş onaylandı!',
     'order_confirm_greeting' => 'Merhaba :customer_name,',
     'order_confirm_message' => 'Siparişiniz onaylandı. Ürünlerimizi satın aldığınız için teşekkür ederiz!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Not',
     'order_confirm_shipping_method' => 'Kargo yöntemi',
     'order_confirm_payment_method' => 'Ödeme yöntemi',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Siparişiniz iptal edildi',
     'customer_cancel_order_greeting' => 'Sayın :customer_name,',
     'customer_cancel_order_message' => '<strong>:order_id</strong> siparişiniz :cancellation_reason sebebi ile talep ettiğiniz gibi iptal edildi ve ödemeniz de iptal edildi.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Adres',
     'customer_cancel_order_products' => 'Sipariş verdiğiniz ürünler:',
     'customer_cancel_order_note' => 'Not',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Sipariş iptal edildi',
     'admin_cancel_order_greeting' => 'Merhaba :customer_name,',
-    'admin_cancel_order_message' => '#:order_id siparişiniz personelimiz tarafından iptal edildi.',
+    'admin_cancel_order_message' => ':order_id siparişiniz personelimiz tarafından iptal edildi.',
     'admin_cancel_order_order_cancelled' => 'Sipariş iptal edildi!',
     'admin_cancel_order_reason' => 'İptal sebebi: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Müşteri bilgileri',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Sipariş detayı:',
     'admin_cancel_order_note' => 'Not',
     'admin_cancel_order_order_summary' => 'Sipariş Özeti',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => '#:order_id siparişi müşteri tarafından iptal edildi',
+    'order_cancellation_to_admin_title' => ':order_id siparişi müşteri tarafından iptal edildi',
     'order_cancellation_to_admin_greeting' => 'Merhaba Yönetici,',
-    'order_cancellation_to_admin_message' => ':customer_name <strong>#:order_id</strong> siparişini iptal etti. Sebep: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name <strong>:order_id</strong> siparişini iptal etti. Sebep: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Müşteri bilgileri',
     'order_cancellation_to_admin_name' => 'Ad',
     'order_cancellation_to_admin_phone' => 'Telefon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Not',
     'order_cancellation_to_admin_view_order' => 'Sipariş detayını görüntüle',
     'order_cancellation_to_admin_order_summary' => 'Sipariş Özeti',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Siparişiniz yolda',
     'customer_delivery_order_greeting' => 'Merhaba :customer_name,',
     'customer_delivery_order_message' => 'Siparişiniz yolda. Ürünlerimizi satın aldığınız için teşekkür ederiz!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Takip ID',
     'customer_delivery_order_tracking_link' => 'Takip Bağlantısı',
     'customer_delivery_order_track_shipment' => 'Kargonuzu Takip Edin',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Siparişiniz teslim edildi',
     'customer_order_delivered_greeting' => 'Merhaba :customer_name,',
     'customer_order_delivered_message' => 'Siparişiniz teslim edildi. Ürünlerimizi satın aldığınız için teşekkür ederiz!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Takip ID',
     'customer_order_delivered_tracking_link' => 'Takip Bağlantısı',
     'customer_order_delivered_track_shipment' => 'Takip Detaylarını Görüntüle',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => '#:order_id siparişi için ödeme onaylandı',
+    'order_confirm_payment_title' => ':order_id siparişi için ödeme onaylandı',
     'order_confirm_payment_greeting' => 'Merhaba :customer_name,',
     'order_confirm_payment_message' => 'Ödemeniz onaylandı. Ürünlerimizi satın aldığınız için teşekkür ederiz!',
     'order_confirm_payment_order_number' => 'Sipariş numarası',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Ödemeniz için teşekkür ederiz. Siparişiniz yakında işleme alınacaktır.',
     'order_confirm_payment_order_summary' => 'Sipariş Özeti',
     'order_confirm_payment_shipping_method' => 'Kargo yöntemi',
-
-    // Order Recovery Email
     'order_recover_title' => 'Tamamlanmamış siparişiniz var',
     'order_recover_greeting' => 'Merhaba :customer_name,',
     'order_recover_message' => 'Tamamlanmamış bir siparişiniz olduğunu fark ettik. Satın alma işleminizi tamamlamak ister misiniz?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Siparişinizi Tamamlayın',
     'order_recover_order_summary' => 'Sipariş Özeti',
     'order_recover_note' => 'Not',
-
-    // Welcome Email
     'welcome_greeting' => 'Burada olmanıza sevindik, :customer_name!',
     'welcome_message' => ':site_title\'e hoş geldiniz!',
     'welcome_register_success' => '<strong>:site_title</strong>\'de başarıyla hesap oluşturdunuz.',
     'welcome_explore' => 'Herhangi bir yardıma ihtiyacınız olursa, bu e-postayı yanıtlamaktan çekinmeyin!',
     'welcome_visit_shop' => 'Alışverişe başlayın!',
-
-    // Confirm Email
     'confirm_email_title' => 'E-postayı Doğrula',
     'confirm_email_greeting' => 'Burada olmanıza sevindik, :customer_name!',
     'confirm_email_message' => 'Lütfen aşağıdaki butona tıklayarak e-posta adresinizi onaylayın.',
     'confirm_email_instruction' => 'Bu web sitesine erişmek için lütfen e-posta adresinizi doğrulayın. E-postanızı doğrulamak için aşağıdaki butona tıklayın.',
     'confirm_email_button' => 'E-posta adresinizi onaylayın',
     'confirm_email_trouble' => '"E-posta adresinizi onaylayın" butonuna tıklamada sorun yaşıyorsanız, aşağıdaki URL\'yi kopyalayıp web tarayıcınıza yapıştırın: <a href=":verify_link">:verify_link</a> ve tarayıcınıza yapıştırın.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Şifrenizi sıfırlayın',
     'password_reminder_greeting' => 'Merhaba :customer_name,',
     'password_reminder_message' => 'Şifrenizi sıfırlama talebinde bulundunuz.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Şifreyi Sıfırla',
     'password_reminder_ignore' => 'Şifre sıfırlama talebinde bulunmadıysanız, lütfen bu e-postayı göz ardı edin.',
     'password_reminder_trouble_clicking' => '"Şifreyi Sıfırla" butonuna tıklamada sorun yaşıyorsanız, aşağıdaki URL\'yi kopyalayıp web tarayıcınıza yapıştırın: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'İade talebi alındı',
     'order_return_request_greeting' => 'Merhaba :customer_name,',
-    'order_return_request_message' => '#:order_id siparişi için iade talebinizi aldık.',
+    'order_return_request_message' => ':order_id siparişi için iade talebinizi aldık.',
     'order_return_request_reason' => 'İade sebebi',
     'order_return_request_items' => 'İade edilecek ürünler',
     'order_return_request_process' => 'Talebinizi işleme alacağız ve yakında sizinle iletişime geçeceğiz.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'İade Sebebi',
     'order_return_request_order_summary' => 'Sipariş Özeti',
     'order_return_request_note' => 'Not',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Sipariş iade durumu güncellendi',
     'order_return_status_updated_greeting' => 'Sayın :customer_name,',
     'order_return_status_updated_message' => ':order_id siparişi için iade talebinizin durumunun güncellendiğini bildirmek istiyoruz.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Moderatör notu: " :description ".',
     'order_return_status_updated_questions' => 'Bu güncelleme ile ilgili herhangi bir sorunuz veya endişeniz varsa, lütfen müşteri destek ekibimizle iletişime geçmekten çekinmeyin.',
     'order_return_status_updated_view_details' => 'İade detaylarını görüntüle',
-
-    // Review Products Email
     'review_products_title' => 'Son satın alımınızı değerlendirin',
     'review_products_greeting' => 'Merhaba :customer_name,',
-    'review_products_message' => '#:order_id siparişiniz tamamlandı. Geri bildiriminizi duymak isteriz!',
+    'review_products_message' => ':order_id siparişiniz tamamlandı. Geri bildiriminizi duymak isteriz!',
     'review_products_instruction' => 'Lütfen satın aldığınız ürünleri değerlendirmek için bir dakikanızı ayırın:',
     'review_products_button' => 'Ürünleri Değerlendir',
     'review_products_thank_you' => 'Satın alımınız için teşekkür ederiz!',
     'review_products_products' => 'Değerlendirilecek Ürünler',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Dijital ürünleriniz hazır',
     'download_digital_products_greeting' => 'Merhaba :customer_name,',
     'download_digital_products_message' => 'Satın alımınız için teşekkür ederiz! Dijital ürünleriniz indirmeye hazır.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Tüm Dosyaları İndir',
     'download_digital_products_external_link_downloads' => 'Harici Dosyaları İndir',
     'download_digital_products_payment_method' => 'Ödeme Yöntemi',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Lisans Kodlarınız',
     'digital_product_license_codes_greeting' => 'Sayın :customer_name,',
     'digital_product_license_codes_message' => 'Satın alımınız için teşekkür ederiz! İşte lisans kodlarınız:',
     'digital_product_license_codes_thanks' => 'Dijital ürünlerimizi satın aldığınız için teşekkür ederiz.',
-    'digital_product_license_codes_below' => 'Satın aldığınız ürünler için lisans kodlarınız aşağıdadır:',
     'digital_product_license_codes_product' => 'Ürün',
     'digital_product_license_codes_license' => 'Lisans Kodu',
     'digital_product_license_codes_order_summary' => 'Sipariş verdiğiniz ürünler:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Her lisans kodu benzersizdir ve sadece bir kez kullanılabilir',
     'digital_product_license_codes_note_3' => 'Lisans kodlarınızı başkalarıyla paylaşmayın',
     'digital_product_license_codes_note_4' => 'Lisans kodlarınızla ilgili herhangi bir sorun yaşarsanız, lütfen destek ekibimizle iletişime geçin',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Ürün Dosyaları Güncellendi',
     'product_file_updated_greeting' => 'Merhaba, :customer_name!',
     'product_file_updated_message' => '<a href=":product_link"><strong>:product_name</strong></a> ürününün dosyaları güncellendi.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Güncellenen dosyaları hesabınızdan indirebilirsiniz.',
     'product_file_updated_order_number' => 'Sipariş numarası',
     'product_file_updated_download' => 'Güncellenen Dosyaları İndir',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Ödeme alındı',
     'invoice_payment_created_greeting' => 'Merhaba :customer_name,',
     'invoice_payment_created_message' => ':site_title için ödemenizi başarıyla aldık. Teşekkür ederiz!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Faturanızı <a href=":invoice_link">:invoice_link</a> adresinde #:invoice_code fatura kodu ile çevrimiçi olarak görüntüleyebilirsiniz',
     'invoice_payment_created_invoice_message' => 'Fatura kodunuz #:invoice_code',
     'invoice_payment_created_view_online' => 'Faturayı Çevrimiçi Görüntüle',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Merhaba :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Hesabınızı silme talebinizi aldık.',
     'customer_deletion_request_confirmation_warning' => 'Lütfen bu işlemin geri alınamayacağını unutmayın. Tüm verileriniz kalıcı olarak silinecektir.',
     'customer_deletion_request_confirmation_button' => 'Silmeyi Onayla',
     'customer_deletion_request_confirmation_cancel' => 'Bu talebi siz yapmadıysanız, lütfen bu e-postayı göz ardı edin.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Merhaba :customer_name,',
     'customer_deletion_request_completed_message' => 'Hesabınız talep ettiğiniz gibi başarıyla silindi.',
     'customer_deletion_request_completed_thank_you' => 'Bizimle olduğunuz için teşekkür ederiz.',
     'customer_deletion_request_completed_goodbye' => 'Gelecekte tekrar görüşmeyi umuyoruz.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Merhaba Yönetici,',
     'payment_proof_upload_notification_message' => ':customer_name müşterisi (E-posta: <a href="mailto::customer_email">:customer_email</a>) :order_id ID\'li siparişi için ödeme kanıtı yükledi.',
     'payment_proof_upload_notification_view_details' => 'Ödeme detaylarını <a href=":payment_link">buradan</a> ve sipariş detaylarını <a href=":order_link">buradan</a> görüntüleyebilirsiniz.',

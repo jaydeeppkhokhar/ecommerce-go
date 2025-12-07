@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Списък с продукти',
         'cart' => 'Количка',
     ],
+    'purchased' => 'закупи',
+    'verified' => 'Потвърден',
+    'quick_view' => 'Бърз преглед',
 ];

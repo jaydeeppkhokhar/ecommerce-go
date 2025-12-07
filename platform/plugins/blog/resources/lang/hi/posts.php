@@ -23,7 +23,6 @@ return [
     'edit_this_post' => 'इस पोस्ट को संपादित करें',
     'no_new_post_now' => 'अभी कोई नई पोस्ट नहीं है!',
     'menu_name' => 'पोस्ट',
-    'widget_posts_recent' => 'हाल की पोस्ट',
     'categories' => 'श्रेणियाँ',
     'category' => 'श्रेणी',
     'author' => 'लेखक',

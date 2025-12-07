@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Ayusin muli ang mga item ng menu sa pamamagitan ng pag-drag at pag-drop upang baguhin ang kanilang pagkakasunud-sunod o i-nest bilang mga submenu.',
     'widget_custom_menu' => 'Customized na Menu',
     'widget_custom_menu_description' => 'Magdagdag ng customized na menu sa iyong widget area.',
+    'select_menu' => 'Pumili ng menu',
 ];

@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Rendezze át a menüelemeket húzással és ejtéssel a sorrendjük megváltoztatásához vagy almenükként való beágyazásához.',
     'widget_custom_menu' => 'Egyéni menü',
     'widget_custom_menu_description' => 'Adjon hozzá egyéni menüt a widget területéhez.',
+    'select_menu' => 'Menü kiválasztása',
 ];

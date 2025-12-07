@@ -23,7 +23,6 @@ return [
         'activated' => 'مفعل',
         'locked' => 'مقفل',
     ],
-    'email_verified' => 'البريد الإلكتروني مُتحقق؟',
     'verify_email' => [
         'confirm_heading' => 'تأكيد التحقق من البريد الإلكتروني',
         'confirm_description' => 'هل أنت متأكد من أنك تريد التحقق من بريد هذا العميل الإلكتروني؟',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'انقر هنا',
         'confirm_button' => 'تحقق',
     ],
-    'email_already_verified' => 'البريد الإلكتروني مُتحقق بالفعل.',
     'verification_email_sent' => 'تم إرسال بريد التحقق بنجاح!',
     'resend_verification_email' => 'إعادة إرسال بريد التحقق',
     'resend_verification_email_confirmation' => 'هل أنت متأكد من أنك تريد إعادة إرسال بريد التحقق لهذا العميل؟',

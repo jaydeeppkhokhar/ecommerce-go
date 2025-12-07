@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Megjelenített elemek számának korlátozása',
     'edit_this_gallery' => 'Galéria szerkesztése',
     'galleries_page' => 'Galériák oldal',
+    'by_name' => 'Szerző: :name',
+    'title' => 'Cím',
+    'limit' => 'Határ',
+    'limit_helper' => 'Megjelenítendő galériák száma. ',
 ];

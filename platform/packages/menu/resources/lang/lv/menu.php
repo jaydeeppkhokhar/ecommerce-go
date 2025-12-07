@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Pārkārtojiet izvēlnes vienumus, velkot un nometot tos, lai mainītu to secību vai ievietotu tos kā apakšizvēlnes.',
     'widget_custom_menu' => 'Pielāgots izvēlne',
     'widget_custom_menu_description' => 'Pievienojiet pielāgotu izvēlni savam logrīku apgabalam.',
+    'select_menu' => 'Izvēlēties izvēlni',
 ];

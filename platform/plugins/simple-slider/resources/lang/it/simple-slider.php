@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Aggiungi uno slider semplice',
     'select_slider' => 'Seleziona uno slider',
     'shortcode' => 'Codice breve',
+    'tablet_image' => 'Immagine della tavoletta',
+    'tablet_image_helper' => 'Per i dispositivi con larghezza da 768px a 1200px, se vuoto, utilizzerà l\'immagine dal desktop.',
+    'mobile_image' => 'Immagine mobile',
+    'mobile_image_helper' => 'Per i dispositivi con larghezza inferiore a 768px, se vuoto, utilizzerà l\'immagine del tablet.',
 ];

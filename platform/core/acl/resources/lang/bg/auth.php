@@ -66,6 +66,7 @@ return [
     'languages' => 'Езици',
     'reset_password' => 'Нулиране на парола',
     'deactivated_message' => 'Вашият акаунт е деактивиран. Моля, свържете се с администратора.',
+    'password_changed_message' => 'Вашата парола е променена. Моля, влезте отново с новата си парола.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

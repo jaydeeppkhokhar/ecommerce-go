@@ -1,10 +1,10 @@
 <?php
 
 return [
-    'name' => 'States',
-    'description' => 'Manage location states',
-    'create' => 'New state',
-    'country' => 'Country',
-    'select_country' => 'Select a country...',
-    'state' => 'State',
+    'name' => 'Staten',
+    'description' => 'Beheer locatie staten',
+    'create' => 'Nieuwe staat',
+    'country' => 'Land',
+    'select_country' => 'Selecteer een land...',
+    'state' => 'Staat',
 ];

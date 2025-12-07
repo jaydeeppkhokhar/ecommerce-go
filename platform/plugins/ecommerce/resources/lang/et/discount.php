@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Seda kupongi ei saa rakendada, kuna teie ostukorv sisaldab välkmüügitooteid (:product_name). Välkmüügihindu ei saa kombineerida kupongialahindlustega.',
     'coupon_applied_successfully' => 'Suurepärane! Kupongikood ":code" on rakendatud. Säästsite selle tellimuse puhul raha!',
     'coupon_removed_successfully' => 'Kupongikood on teie tellimusest eemaldatud.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kupongikoodid (:count)',
+    'left_quantity' => 'Jäänud :left',
+    'apply' => 'Rakenda',
+    'remove' => 'Eemalda',
+    'select_coupon' => 'Vali kupong',
+    'you_have_coupon_code' => 'Kas teil on kupongikood?',
+    'close' => 'Sulge',
+    'coupon_code_label' => 'Kupongikood: :code',
+    'enter_coupon_code_placeholder' => 'Sisestage kupongikood...',
 ];

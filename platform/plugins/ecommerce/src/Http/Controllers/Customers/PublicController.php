@@ -227,7 +227,7 @@ class PublicController extends BaseController
             $model = $form->getModel();
             $request = $form->getRequest();
 
-            if ($request->input('is_default') == 1) {
+            if ($request->boolean('is_default')) {
                 Address::query()
                     ->where([
                         'is_default' => 1,
@@ -238,7 +238,7 @@ class PublicController extends BaseController
 
             $request->merge([
                 'customer_id' => auth('customer')->id(),
-                'is_default' => $request->input('is_default', 0),
+                'is_default' => $request->boolean('is_default', 0),
             ]);
 
             $model->fill($request->input());
@@ -313,7 +313,7 @@ class PublicController extends BaseController
             $model = $form->getModel();
             $request = $form->getRequest();
 
-            if ($request->input('is_default') == 1) {
+            if ($request->boolean('is_default')) {
                 Address::query()
                     ->where([
                         'is_default' => 1,
@@ -325,7 +325,7 @@ class PublicController extends BaseController
             }
 
             $request->merge([
-                'is_default' => $request->input('is_default', 0),
+                'is_default' => $request->boolean('is_default', 0),
             ]);
 
             $model->fill($request->input());

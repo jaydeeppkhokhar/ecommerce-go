@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'प्रसंस्करण शुल्क प्रकार (वैकल्पिक)',
     'fee_type_helper' => 'चुनें कि भुगतान शुल्क की गणना कैसे की जाए: एक निर्धारित राशि के रूप में या ऑर्डर कुल के प्रतिशत के रूप में। यदि आप निर्धारित राशि चुनते हैं, तो यह डिफ़ॉल्ट मुद्रा (:currency) पर आधारित होगी।',
+    'payment_created' => 'आपने :channel के माध्यम से #:charge_id भुगतान बनाया है :time : :amount',
+    'processing_please_wait' => 'प्रसंस्करण हो रहा है। कृपया प्रतीक्षा करें...',
+    'error' => 'त्रुटि',
+    'checkout' => 'चेकआउट',
+    'show_full_json' => 'पूर्ण JSON दिखाएं',
+    'full_log_data' => 'पूर्ण लॉग डेटा',
+    'currency_not_supported' => ':name :currency का समर्थन नहीं करता है। :name द्वारा समर्थित मुद्राओं की सूची: :currencies।',
+    'please_switch_currency' => 'कृपया किसी समर्थित मुद्रा में बदलें',
+    'payment_with' => ':paymentType के साथ भुगतान',
 ];

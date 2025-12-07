@@ -33,7 +33,7 @@
                                 <tbody>
                                     <tr>
                                         <td align="center" valign="top" class="lh-1">
-                                            <a href="{{ site_url }}/checkout/{{ order_token }}/recover" class="bb-btn bb-bg-blue bb-border-blue">
+                                            <a href="{{ order_recover_url }}" class="bb-btn bb-bg-blue bb-border-blue">
                                                 <span class="btn-span">{{ 'plugins/ecommerce::email-templates.order_recover_button' | trans }}</span>
                                             </a>
                                         </td>

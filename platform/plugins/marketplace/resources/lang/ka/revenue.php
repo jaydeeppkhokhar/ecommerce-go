@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'შემოსავლები',
     'edit' => 'საფულის ბალანსის განახლება',
     'view_store' => 'მაღაზიის ნახვა ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'გამყიდველის თანხის დამატება/გამოკლება',
     'statements' => 'ბარათები',
     'products' => 'პროდუქტები',
+    'items_earning_sales' => 'ნივთების გაყიდვის შემოსავალი: :amount',
 ];

@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Preusporiadajte položky ponuky pretiahnutím, aby ste zmenili ich poradie alebo ich vnorili ako podponuky.',
     'widget_custom_menu' => 'Vlastné menu',
     'widget_custom_menu_description' => 'Pridajte vlastné menu do oblasti widgetov.',
+    'select_menu' => 'Vybrať menu',
 ];

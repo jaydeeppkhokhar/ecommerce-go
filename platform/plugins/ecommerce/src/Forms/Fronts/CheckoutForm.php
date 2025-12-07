@@ -299,7 +299,7 @@ class CheckoutForm extends FormFront
                                             HtmlField::class,
                                             HtmlFieldOption::make()->content(
                                                 '<div class="alert alert-info mb-3" style="background-color: #f8f9fa; border: 1px solid #dee2e6; border-radius: 0.375rem; padding: 0.75rem 1rem; color: #6c757d; font-size: 14px; line-height: 1.5;">' .
-                                                __('By placing an order, you agree to our Terms of Service and acknowledge that you have read our Privacy Policy. Your payment will be processed securely according to our payment provider\'s privacy policy.') .
+                                                trans('plugins/ecommerce::ecommerce.checkout_acceptance_message') .
                                                 '</div>'
                                             )
                                         );

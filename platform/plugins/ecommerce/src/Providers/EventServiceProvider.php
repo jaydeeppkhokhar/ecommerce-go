@@ -24,6 +24,7 @@ use Botble\Ecommerce\Listeners\AddLanguageForVariantsListener;
 use Botble\Ecommerce\Listeners\ClearShippingRuleCache;
 use Botble\Ecommerce\Listeners\GenerateInvoiceListener;
 use Botble\Ecommerce\Listeners\GenerateLicenseCodeAfterOrderCompleted;
+use Botble\Ecommerce\Listeners\HandleDiscountUsageOnOrderCompletion;
 use Botble\Ecommerce\Listeners\MarkCartAsRecovered;
 use Botble\Ecommerce\Listeners\OrderCancelledNotification;
 use Botble\Ecommerce\Listeners\OrderCreatedNotification;
@@ -97,6 +98,7 @@ class EventServiceProvider extends ServiceProvider
             GenerateInvoiceListener::class,
             OrderCreatedNotification::class,
             MarkCartAsRecovered::class,
+            HandleDiscountUsageOnOrderCompletion::class,
         ],
         OrderCreated::class => [
             GenerateInvoiceListener::class,

@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'יצירה אוטומטית',
         'automatic_generation_desc' => 'מתעדכן אוטומטית כאשר התוכן משתנה',
         'automatic_update_note' => 'מפת האתר מתעדכנת אוטומטית בכל פעם שאתה יוצר, עורך או מוחק תוכן באתר שלך.',
+        'submit_sitemap' => 'שלח מפת אתר ל-IndexNow',
+        'submitting_sitemap' => 'שולח...',
+        'sitemap_submitted_successfully' => 'מפת האתר נשלחה בהצלחה למנועי החיפוש!',
+        'sitemap_submission_failed' => 'השליחה של מפת האתר לכל מנועי החיפוש נכשלה.',
+        'sitemap_submission_partial' => 'מפת האתר נשלחה עם כמה שגיאות.',
+        'submit_sitemap_error' => 'השליחה של מפת האתר נכשלה. נסה שוב.',
+        'indexnow_disabled' => 'IndexNow אינו פעיל. הפעל אותו תחילה.',
+        'indexnow_no_api_key' => 'לא נמצא מפתח API. צור תחילה מפתח API.',
     ],
 ];

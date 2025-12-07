@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Régi kérésnaplók törlése',
     'clear_old_data_helper' => 'Automatikusan törölje a kiválasztott időszaknál régebbi kérésnaplókat, hogy adatbázisa tiszta és optimalizált maradjon.',
     'cronjob_warning' => 'A funkció használatához be kell állítania egy cron feladatot az alábbi hivatkozás követésével: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Nincs találat',
+    'no_request_errors_message' => 'Úgy tűnik, hogy itt nincsenek kérési hibák.',
 ];

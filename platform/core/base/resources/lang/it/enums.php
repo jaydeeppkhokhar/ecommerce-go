@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Pubblica risorse pacchetti',
         'clean_up' => 'Pulisci file di aggiornamento del sistema',
         'done' => 'Sistema aggiornato con successo',
-
+        'unknown' => 'Passaggio sconosciuto',
         'messages' => [
             'download' => 'Download file di aggiornamento...',
             'update_files' => 'Aggiornamento file di sistema...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Pulizia file di aggiornamento del sistema...',
             'done' => 'Fatto! Il browser verrà aggiornato tra 30 secondi.',
         ],
-
         'failed_messages' => [
             'download' => 'Impossibile scaricare i file di aggiornamento',
             'update_files' => 'Impossibile aggiornare i file di sistema',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Impossibile pubblicare le risorse dei pacchetti',
             'clean_up' => 'Impossibile pulire i file di aggiornamento del sistema',
         ],
-
         'success_messages' => [
             'download' => 'File di aggiornamento scaricati con successo.',
             'update_files' => 'File di sistema aggiornati con successo.',

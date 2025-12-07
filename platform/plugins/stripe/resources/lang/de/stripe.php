@@ -14,4 +14,7 @@ return [
         'step_4_label' => 'Kopieren Sie das Geheimnis der Unterzeichnung',
         'step_4_description' => 'Kopieren Sie den Wert "Secret" im Abschnitt "Webhook Details" und fügen Sie ihn in das Feld "Stripe Webhook Secret" im Abschnitt "Streifen" der Registerkarte "Zahlung" auf der Seite "Einstellungen" ein.',
     ],
+    'no_payment_charge' => 'Keine Zahlungsgebühr. Bitte versuchen Sie es erneut!',
+    'payment_failed' => 'Zahlung fehlgeschlagen!',
+    'payment_type' => 'Zahlungsart',
 ];

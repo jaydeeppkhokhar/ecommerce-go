@@ -17,7 +17,7 @@ return [
         'date_time' => '当前日期时间',
         'date_year' => '当前年份',
         'html_attributes' => 'HTML属性',
-        'body_attributes' => 'Body属性',
+        'body_attributes' => '正文属性',
         'settings' => '设置值',
         'email_css' => '电子邮件CSS',
         'variable' => '变量',

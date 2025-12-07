@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Jenis yuran pemprosesan (Pilihan)',
     'fee_type_helper' => 'Pilih bagaimana yuran pembayaran harus dikira: sebagai jumlah tetap atau peratusan daripada jumlah pesanan. Jika anda memilih jumlah tetap, ia akan berdasarkan mata wang lalai (:currency).',
+    'payment_created' => 'Anda telah membuat pembayaran #:charge_id melalui :channel :time : :amount',
+    'processing_please_wait' => 'Memproses. Sila tunggu...',
+    'error' => 'Ralat',
+    'checkout' => 'Daftar Keluar',
+    'show_full_json' => 'Tunjukkan JSON Penuh',
+    'full_log_data' => 'Data Log Lengkap',
+    'currency_not_supported' => ':name tidak menyokong :currency. Senarai mata wang yang disokong oleh :name: :currencies.',
+    'please_switch_currency' => 'Sila tukar kepada mana-mana mata wang yang disokong',
+    'payment_with' => 'Pembayaran dengan :paymentType',
 ];

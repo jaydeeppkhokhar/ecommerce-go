@@ -21,5 +21,4 @@ return [
     'page_loaded_in_time' => 'Sayfa yüklendi :time saniye',
     'view_website' => 'Web sitesini görüntüle',
     'tools' => 'Aletler',
-    'page_loaded_time' => 'Sayfa şu sürede yüklendi',
 ];

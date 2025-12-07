@@ -8,14 +8,14 @@ return [
     'form' => [
         'name' => 'Nom',
         'name_placeholder' => 'Nom de la marque (Maximum 255 caractères)',
-        'description' => 'Description',
-        'description_placeholder' => 'Description courte de la marque (Maximum 400 caractères)',
+        'description' => 'Description détaillée',
+        'description_placeholder' => 'Brève présentation de la marque (maximum 400 caractères)',
         'website' => 'Site web',
         'website_placeholder' => 'Ex: https://exemple.com',
-        'logo' => 'Logo',
+        'logo' => 'Logo de la marque',
         'is_featured' => 'Est mis en avant',
     ],
-    'logo' => 'Logo',
+    'logo' => 'Logo de la marque',
     'website' => 'Site web',
     'notices' => [
         'no_select' => 'Veuillez sélectionner au moins un enregistrement pour effectuer cette action !',

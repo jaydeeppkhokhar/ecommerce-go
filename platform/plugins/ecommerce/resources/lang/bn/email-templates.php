@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'অর্ডার সফল!',
     'customer_new_order_greeting' => 'প্রিয় :customer_name,',
     'customer_new_order_message' => 'আমাদের পণ্য ক্রয় করার জন্য আপনাকে ধন্যবাদ, আমরা অর্ডার নিশ্চিত করতে <strong>:customer_phone</strong> ফোনে আপনার সাথে যোগাযোগ করব!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'শিপিং পদ্ধতি',
     'customer_new_order_order_number' => 'অর্ডার নম্বর',
     'customer_new_order_payment_method' => 'পেমেন্ট পদ্ধতি',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'আপনি :site_title থেকে একটি নতুন অর্ডার পেয়েছেন',
     'admin_new_order_greeting' => 'হাই এডমিন,',
     'admin_new_order_message' => ':customer_name দ্বারা একটি নতুন অর্ডার সফলভাবে দেওয়া হয়েছে',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'শিপিং পদ্ধতি',
     'admin_new_order_payment_method' => 'পেমেন্ট পদ্ধতি',
     'admin_new_order_view_order' => 'অর্ডার বিবরণ দেখুন',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'অর্ডার নিশ্চিত!',
     'order_confirm_greeting' => 'হাই :customer_name,',
     'order_confirm_message' => 'আপনার অর্ডার নিশ্চিত করা হয়েছে। আমাদের পণ্য ক্রয় করার জন্য আপনাকে ধন্যবাদ!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'নোট',
     'order_confirm_shipping_method' => 'শিপিং পদ্ধতি',
     'order_confirm_payment_method' => 'পেমেন্ট পদ্ধতি',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'আপনার অর্ডার বাতিল করা হয়েছে',
     'customer_cancel_order_greeting' => 'প্রিয় :customer_name,',
     'customer_cancel_order_message' => 'আপনার অনুরোধ অনুযায়ী আপনার অর্ডার <strong>:order_id</strong> :cancellation_reason কারণে বাতিল করা হয়েছে এবং আপনার পেমেন্টও বাতিল করা হয়েছে।',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'ঠিকানা',
     'customer_cancel_order_products' => 'আপনি যা অর্ডার করেছিলেন:',
     'customer_cancel_order_note' => 'নোট',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'অর্ডার বাতিল',
     'admin_cancel_order_greeting' => 'হাই :customer_name,',
-    'admin_cancel_order_message' => 'আপনার অর্ডার #:order_id আমাদের স্টাফ দ্বারা বাতিল করা হয়েছে।',
+    'admin_cancel_order_message' => 'আপনার অর্ডার :order_id আমাদের স্টাফ দ্বারা বাতিল করা হয়েছে।',
     'admin_cancel_order_order_cancelled' => 'অর্ডার বাতিল করা হয়েছে!',
     'admin_cancel_order_reason' => 'বাতিলের কারণ: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'গ্রাহক তথ্য',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'অর্ডার বিবরণ:',
     'admin_cancel_order_note' => 'নোট',
     'admin_cancel_order_order_summary' => 'অর্ডার সারসংক্ষেপ',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'গ্রাহক দ্বারা অর্ডার #:order_id বাতিল করা হয়েছে',
+    'order_cancellation_to_admin_title' => 'গ্রাহক দ্বারা অর্ডার :order_id বাতিল করা হয়েছে',
     'order_cancellation_to_admin_greeting' => 'হাই এডমিন,',
-    'order_cancellation_to_admin_message' => ':customer_name অর্ডার <strong>#:order_id</strong> বাতিল করেছেন। কারণ: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name অর্ডার <strong>:order_id</strong> বাতিল করেছেন। কারণ: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'গ্রাহক তথ্য',
     'order_cancellation_to_admin_name' => 'নাম',
     'order_cancellation_to_admin_phone' => 'ফোন',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'নোট',
     'order_cancellation_to_admin_view_order' => 'অর্ডার বিবরণ দেখুন',
     'order_cancellation_to_admin_order_summary' => 'অর্ডার সারসংক্ষেপ',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'আপনার অর্ডার পথে আছে',
     'customer_delivery_order_greeting' => 'হাই :customer_name,',
     'customer_delivery_order_message' => 'আপনার অর্ডার পথে আছে। আমাদের পণ্য ক্রয় করার জন্য আপনাকে ধন্যবাদ!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'ট্র্যাকিং আইডি',
     'customer_delivery_order_tracking_link' => 'ট্র্যাকিং লিংক',
     'customer_delivery_order_track_shipment' => 'আপনার শিপমেন্ট ট্র্যাক করুন',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'আপনার অর্ডার ডেলিভার হয়েছে',
     'customer_order_delivered_greeting' => 'হাই :customer_name,',
     'customer_order_delivered_message' => 'আপনার অর্ডার ডেলিভার হয়েছে। আমাদের পণ্য ক্রয় করার জন্য আপনাকে ধন্যবাদ!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'ট্র্যাকিং আইডি',
     'customer_order_delivered_tracking_link' => 'ট্র্যাকিং লিংক',
     'customer_order_delivered_track_shipment' => 'ট্র্যাকিং বিবরণ দেখুন',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'অর্ডার #:order_id এর জন্য পেমেন্ট নিশ্চিত করা হয়েছে',
+    'order_confirm_payment_title' => 'অর্ডার :order_id এর জন্য পেমেন্ট নিশ্চিত করা হয়েছে',
     'order_confirm_payment_greeting' => 'হাই :customer_name,',
     'order_confirm_payment_message' => 'আপনার পেমেন্ট নিশ্চিত করা হয়েছে। আমাদের পণ্য ক্রয় করার জন্য আপনাকে ধন্যবাদ!',
     'order_confirm_payment_order_number' => 'অর্ডার নম্বর',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'আপনার পেমেন্টের জন্য ধন্যবাদ। আপনার অর্ডার শীঘ্রই প্রসেস করা হবে।',
     'order_confirm_payment_order_summary' => 'অর্ডার সারসংক্ষেপ',
     'order_confirm_payment_shipping_method' => 'শিপিং পদ্ধতি',
-
-    // Order Recovery Email
     'order_recover_title' => 'আপনার একটি অসম্পূর্ণ অর্ডার আছে',
     'order_recover_greeting' => 'হাই :customer_name,',
     'order_recover_message' => 'আমরা দেখেছি আপনার একটি অসম্পূর্ণ অর্ডার আছে। আপনি কি আপনার ক্রয় সম্পন্ন করতে চান?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'আপনার অর্ডার সম্পন্ন করুন',
     'order_recover_order_summary' => 'অর্ডার সারসংক্ষেপ',
     'order_recover_note' => 'নোট',
-
-    // Welcome Email
     'welcome_greeting' => 'এখানে আপনাকে পেয়ে আমরা আনন্দিত, :customer_name!',
     'welcome_message' => ':site_title-এ স্বাগতম!',
     'welcome_register_success' => 'আপনি সফলভাবে <strong>:site_title</strong>-এ একটি অ্যাকাউন্ট নিবন্ধন করেছেন।',
     'welcome_explore' => 'আপনার কোন সাহায্যের প্রয়োজন হলে, এই ইমেলে উত্তর দিতে দ্বিধা করবেন না!',
     'welcome_visit_shop' => 'কেনাকাটা শুরু করুন!',
-
-    // Confirm Email
     'confirm_email_title' => 'ইমেল যাচাই করুন',
     'confirm_email_greeting' => 'এখানে আপনাকে পেয়ে আমরা আনন্দিত, :customer_name!',
     'confirm_email_message' => 'নিচের বাটনে ক্লিক করে আপনার ইমেল ঠিকানা নিশ্চিত করুন।',
     'confirm_email_instruction' => 'এই ওয়েবসাইট অ্যাক্সেস করতে আপনার ইমেল ঠিকানা যাচাই করুন। আপনার ইমেল যাচাই করতে নিচের বাটনে ক্লিক করুন।',
     'confirm_email_button' => 'আপনার ইমেল ঠিকানা নিশ্চিত করুন',
     'confirm_email_trouble' => 'যদি আপনার "আপনার ইমেল ঠিকানা নিশ্চিত করুন" বাটনে ক্লিক করতে সমস্যা হয়, তাহলে নিচের URL কপি করে আপনার ওয়েব ব্রাউজারে পেস্ট করুন: <a href=":verify_link">:verify_link</a>।',
-
-    // Password Reminder Email
     'password_reminder_title' => 'আপনার পাসওয়ার্ড রিসেট করুন',
     'password_reminder_greeting' => 'হাই :customer_name,',
     'password_reminder_message' => 'আপনি আপনার পাসওয়ার্ড রিসেট করার অনুরোধ করেছেন।',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'পাসওয়ার্ড রিসেট করুন',
     'password_reminder_ignore' => 'আপনি যদি পাসওয়ার্ড রিসেটের অনুরোধ না করে থাকেন, তাহলে এই ইমেলটি উপেক্ষা করুন।',
     'password_reminder_trouble_clicking' => 'যদি আপনার "পাসওয়ার্ড রিসেট করুন" বাটনে ক্লিক করতে সমস্যা হয়, তাহলে নিচের URL কপি করে আপনার ওয়েব ব্রাউজারে পেস্ট করুন: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'রিটার্ন অনুরোধ পাওয়া গেছে',
     'order_return_request_greeting' => 'হাই :customer_name,',
-    'order_return_request_message' => 'অর্ডার #:order_id এর জন্য আমরা আপনার রিটার্ন অনুরোধ পেয়েছি।',
+    'order_return_request_message' => 'অর্ডার :order_id এর জন্য আমরা আপনার রিটার্ন অনুরোধ পেয়েছি।',
     'order_return_request_reason' => 'রিটার্নের কারণ',
     'order_return_request_items' => 'যে আইটেমগুলি রিটার্ন করা হবে',
     'order_return_request_process' => 'আমরা আপনার অনুরোধ প্রসেস করব এবং শীঘ্রই আপনার সাথে যোগাযোগ করব।',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'রিটার্নের কারণ',
     'order_return_request_order_summary' => 'অর্ডার সারসংক্ষেপ',
     'order_return_request_note' => 'নোট',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'অর্ডার রিটার্ন স্ট্যাটাস আপডেট',
     'order_return_status_updated_greeting' => 'প্রিয় :customer_name,',
     'order_return_status_updated_message' => 'আমরা আপনাকে জানাতে চাই যে অর্ডার :order_id এর জন্য আপনার রিটার্ন অনুরোধের স্ট্যাটাস আপডেট করা হয়েছে।',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'মডারেটরের নোট: " :description "।',
     'order_return_status_updated_questions' => 'এই আপডেট সম্পর্কে আপনার কোন প্রশ্ন বা সমস্যা থাকলে আমাদের কাস্টমার সাপোর্ট টিমের সাথে যোগাযোগ করতে দ্বিধা করবেন না।',
     'order_return_status_updated_view_details' => 'রিটার্ন বিবরণ দেখুন',
-
-    // Review Products Email
     'review_products_title' => 'আপনার সাম্প্রতিক ক্রয় পর্যালোচনা করুন',
     'review_products_greeting' => 'হাই :customer_name,',
-    'review_products_message' => 'আপনার অর্ডার #:order_id সম্পন্ন হয়েছে। আমরা আপনার মতামত শুনতে চাই!',
+    'review_products_message' => 'আপনার অর্ডার :order_id সম্পন্ন হয়েছে। আমরা আপনার মতামত শুনতে চাই!',
     'review_products_instruction' => 'আপনি যে পণ্যগুলি কিনেছেন সেগুলি পর্যালোচনা করতে কিছু সময় নিন:',
     'review_products_button' => 'পণ্য পর্যালোচনা করুন',
     'review_products_thank_you' => 'আপনার ক্রয়ের জন্য ধন্যবাদ!',
     'review_products_products' => 'পর্যালোচনা করার জন্য পণ্য',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'আপনার ডিজিটাল পণ্য প্রস্তুত',
     'download_digital_products_greeting' => 'হাই :customer_name,',
     'download_digital_products_message' => 'আপনার ক্রয়ের জন্য ধন্যবাদ! আপনার ডিজিটাল পণ্য ডাউনলোডের জন্য প্রস্তুত।',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'সব ফাইল ডাউনলোড করুন',
     'download_digital_products_external_link_downloads' => 'বাহ্যিক ফাইল ডাউনলোড করুন',
     'download_digital_products_payment_method' => 'পেমেন্ট পদ্ধতি',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'আপনার লাইসেন্স কোড',
     'digital_product_license_codes_greeting' => 'প্রিয় :customer_name,',
     'digital_product_license_codes_message' => 'আপনার ক্রয়ের জন্য ধন্যবাদ! এখানে আপনার লাইসেন্স কোড:',
     'digital_product_license_codes_thanks' => 'আমাদের ডিজিটাল পণ্য ক্রয় করার জন্য ধন্যবাদ।',
-    'digital_product_license_codes_below' => 'নিচে আপনি যে পণ্যগুলি কিনেছেন সেগুলির জন্য আপনার লাইসেন্স কোড রয়েছে:',
     'digital_product_license_codes_product' => 'পণ্য',
     'digital_product_license_codes_license' => 'লাইসেন্স কোড',
     'digital_product_license_codes_order_summary' => 'আপনি যা অর্ডার করেছেন:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'প্রতিটি লাইসেন্স কোড অনন্য এবং শুধুমাত্র একবার ব্যবহার করা যায়',
     'digital_product_license_codes_note_3' => 'আপনার লাইসেন্স কোড অন্যদের সাথে শেয়ার করবেন না',
     'digital_product_license_codes_note_4' => 'আপনার লাইসেন্স কোডের সাথে কোন সমস্যা হলে আমাদের সাপোর্ট টিমের সাথে যোগাযোগ করুন',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'পণ্য ফাইল আপডেট হয়েছে',
     'product_file_updated_greeting' => 'হ্যালো, :customer_name!',
     'product_file_updated_message' => 'পণ্য <a href=":product_link"><strong>:product_name</strong></a> এর জন্য ফাইল আপডেট করা হয়েছে।',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'আপনি আপনার অ্যাকাউন্ট থেকে আপডেট করা ফাইল ডাউনলোড করতে পারেন।',
     'product_file_updated_order_number' => 'অর্ডার নম্বর',
     'product_file_updated_download' => 'আপডেট করা ফাইল ডাউনলোড করুন',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'পেমেন্ট পাওয়া গেছে',
     'invoice_payment_created_greeting' => 'হাই :customer_name,',
     'invoice_payment_created_message' => ':site_title এর জন্য আমরা আপনার পেমেন্ট সফলভাবে পেয়েছি। ধন্যবাদ!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'আপনি <a href=":invoice_link">:invoice_link</a> এ ইনভয়েস কোড #:invoice_code সহ আপনার ইনভয়েস অনলাইনে দেখতে পারেন',
     'invoice_payment_created_invoice_message' => 'আপনার ইনভয়েস কোড হল #:invoice_code',
     'invoice_payment_created_view_online' => 'অনলাইনে ইনভয়েস দেখুন',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'হাই :customer_name,',
     'customer_deletion_request_confirmation_message' => 'আপনার অ্যাকাউন্ট মুছে ফেলার অনুরোধ আমরা পেয়েছি।',
     'customer_deletion_request_confirmation_warning' => 'দয়া করে মনে রাখবেন যে এই কাজটি পূর্বাবস্থায় ফেরানো যাবে না। আপনার সমস্ত ডেটা স্থায়ীভাবে মুছে ফেলা হবে।',
     'customer_deletion_request_confirmation_button' => 'মুছে ফেলা নিশ্চিত করুন',
     'customer_deletion_request_confirmation_cancel' => 'আপনি যদি এটির অনুরোধ না করে থাকেন, তাহলে এই ইমেলটি উপেক্ষা করুন।',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'হাই :customer_name,',
     'customer_deletion_request_completed_message' => 'আপনার অনুরোধ অনুযায়ী আপনার অ্যাকাউন্ট সফলভাবে মুছে ফেলা হয়েছে।',
     'customer_deletion_request_completed_thank_you' => 'আমাদের সাথে থাকার জন্য আপনাকে ধন্যবাদ।',
     'customer_deletion_request_completed_goodbye' => 'আমরা আশা করি ভবিষ্যতে আবার আপনাকে দেখতে পাব।',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'হ্যালো এডমিন,',
     'payment_proof_upload_notification_message' => 'গ্রাহক :customer_name (ইমেল: <a href="mailto::customer_email">:customer_email</a>) তাদের অর্ডার আইডি :order_id এর জন্য একটি পেমেন্ট প্রুফ আপলোড করেছেন।',
     'payment_proof_upload_notification_view_details' => 'আপনি পেমেন্টের বিবরণ <a href=":payment_link">এখানে</a> এবং অর্ডারের বিবরণ <a href=":order_link">এখানে</a> দেখতে পারেন।',

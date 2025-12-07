@@ -6,7 +6,6 @@ use Botble\ACL\Models\User;
 use Botble\Base\Events\UpdatedContentEvent;
 use Botble\Base\Facades\Assets;
 use Botble\Base\Facades\BaseHelper;
-use Botble\Base\Facades\EmailHandler;
 use Botble\Base\Http\Actions\DeleteResourceAction;
 use Botble\Base\Supports\Breadcrumb;
 use Botble\Ecommerce\Cart\CartItem;
@@ -644,11 +643,16 @@ class OrderController extends BaseController
             Arr::set($metadata, 'refunds', $refunds);
 
             $payment->metadata = $metadata;
+
+            if (isset($refundData['refunded_amount_in_currency'])) {
+                $refundAmount = $refundData['refunded_amount_in_currency'];
+            }
         }
 
         $payment->refunded_amount += $refundAmount;
 
-        if ($payment->refunded_amount == $payment->amount) {
+        $tolerance = max(0.01, $payment->amount * 0.01);
+        if (abs($payment->refunded_amount - $payment->amount) <= $tolerance) {
             $payment->status = PaymentStatusEnum::REFUNDED;
         }
 
@@ -686,6 +690,7 @@ class OrderController extends BaseController
                 'extras' => json_encode([
                     'amount' => $refundAmount,
                     'method' => $payment->payment_channel ?? PaymentMethodEnum::COD,
+                    'refund_note' => $request->input('refund_note'),
                 ]),
             ]);
         }
@@ -926,12 +931,9 @@ class OrderController extends BaseController
         }
 
         try {
-            $mailer = EmailHandler::setModule(ECOMMERCE_MODULE_SCREEN_NAME);
-
             $order->dont_show_order_info_in_product_list = true;
-            OrderHelper::setEmailVariables($order);
 
-            $mailer->sendUsingTemplate('order_recover', $email);
+            OrderHelper::sendOrderEmail($order, 'order_recover', $email);
 
             return $this
                 ->httpResponse()->setMessage(trans('plugins/ecommerce::order.sent_email_incomplete_order_success'));
@@ -966,9 +968,8 @@ class OrderController extends BaseController
             'variationInfo.configurableProduct',
             'variationProductAttributes',
         ];
-        if (is_plugin_active('marketplace')) {
-            $with = array_merge($with, ['store', 'variationInfo.configurableProduct.store']);
-        }
+
+        $with = apply_filters('ecommerce_order_product_relations', $with);
 
         $inputProducts = collect($request->input('products'));
         if ($productIds = $inputProducts->pluck('id')->all()) {
@@ -1066,13 +1067,7 @@ class OrderController extends BaseController
                 }
             }
 
-            if (is_plugin_active('marketplace')) {
-                $store = $product->original_product->store;
-                if ($store->id) {
-                    $productName .= ' (' . $store->name . ')';
-                }
-                $stores[] = $store;
-            }
+            $productName = apply_filters('ecommerce_order_product_name', $productName, $product, $stores);
 
             $parentProduct = $product->original_product;
 
@@ -1117,11 +1112,10 @@ class OrderController extends BaseController
             }
         }
 
-        if (is_plugin_active('marketplace')) {
-            if (count(array_unique(array_filter($stores->pluck('id')->all()))) > 1) {
-                $isError = true;
-                $message[] = trans('plugins/marketplace::order.products_are_from_different_vendors');
-            }
+        $validationResult = apply_filters('ecommerce_order_validate_products', ['isError' => false, 'message' => null], $stores);
+        if ($validationResult['isError']) {
+            $isError = true;
+            $message[] = $validationResult['message'];
         }
 
         $subAmount = Cart::rawSubTotalByItems($cartItems);
@@ -1144,14 +1138,7 @@ class OrderController extends BaseController
         if ($isAvailableShipping) {
             $origin = EcommerceHelper::getOriginAddress();
 
-            if (is_plugin_active('marketplace')) {
-                if ($stores->count() && ($store = $stores->first()) && $store->id) {
-                    $origin = Arr::only($store->toArray(), $addressKeys);
-                    if (! EcommerceHelper::isUsingInMultipleCountries()) {
-                        $origin['country'] = EcommerceHelper::getFirstCountryId();
-                    }
-                }
-            }
+            $origin = apply_filters('ecommerce_order_shipping_origin_address', $origin, $stores, $addressKeys);
 
             $items = [];
             foreach ($productItems as $product) {

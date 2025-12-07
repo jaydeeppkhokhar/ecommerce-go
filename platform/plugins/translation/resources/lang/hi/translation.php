@@ -69,4 +69,7 @@ return [
             'trans' => 'खाली हो सकता है या यदि प्रदान किया गया है तो अधिकतम :max वर्णों की लंबाई वाली स्ट्रिंग हो सकती है।',
         ],
     ],
+    'download_locale' => 'भाषा डाउनलोड करें',
+    'import_available_locale_confirmation' => 'GitHub से भाषा डाउनलोड करें',
+    'import_available_locale_confirmation_content' => 'क्या आप वाकई इस भाषा को डाउनलोड करना चाहते हैं? यह :lang_path में डाउनलोड हो जाएगी, आप चाहें तो इसे बाद में हटा सकते हैं।',
 ];

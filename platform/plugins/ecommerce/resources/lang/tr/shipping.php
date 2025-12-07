@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Kargonuzu takip etmek için QR kodu tarayın',
     ],
     'customer_confirmed_delivery_at' => 'Müşteri teslimatı onayladığı tarih',
+    'no_shipping_methods_available' => 'Kullanılabilir kargo yöntemi yok!',
 ];

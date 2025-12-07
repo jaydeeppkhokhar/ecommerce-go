@@ -6,6 +6,7 @@ use Botble\Ecommerce\Models\Order;
 use Botble\Ecommerce\Models\Product;
 use Botble\Ecommerce\Models\ProductCategory;
 use Illuminate\Support\Facades\Log;
+use Throwable;
 
 class FacebookPixelEnhanced
 {
@@ -13,10 +14,31 @@ class FacebookPixelEnhanced
     protected bool $debugMode = false;
     protected ?string $pixelId = null;
 
+    protected array $noOffsetCurrencies = [
+        'BIF', 'CLP', 'DJF', 'GNF', 'JPY', 'KMF', 'KRW',
+        'MGA', 'PYG', 'RWF', 'UGX', 'VND', 'VUV', 'XAF',
+        'XOF', 'XPF',
+    ];
+
     public function __construct()
     {
         $this->debugMode = (bool) get_ecommerce_setting('facebook_pixel_debug_mode', false);
         $this->pixelId = get_ecommerce_setting('facebook_pixel_id');
+    }
+
+    protected function formatValueForFacebook(?float $value, ?string $currency = null): float
+    {
+        if ($value === null) {
+            return 0.0;
+        }
+
+        $currencyCode = $currency ?: get_application_currency()->title;
+
+        if (in_array(strtoupper($currencyCode), $this->noOffsetCurrencies)) {
+            return round($value, 0);
+        }
+
+        return round($value, 2);
     }
 
     public function isEnabled(): bool
@@ -30,13 +52,15 @@ class FacebookPixelEnhanced
             return $this;
         }
 
+        $currency = get_application_currency()->title;
+
         $this->pushEvent('ViewContent', [
             'content_ids' => [$product->id],
             'content_name' => $product->name,
             'content_type' => 'product',
             'content_category' => $product->categories->first()?->name,
-            'value' => $product->price,
-            'currency' => get_application_currency()->title,
+            'value' => $this->formatValueForFacebook($product->price, $currency),
+            'currency' => $currency,
         ]);
 
         return $this;
@@ -85,13 +109,16 @@ class FacebookPixelEnhanced
             return $this;
         }
 
+        $currency = get_application_currency()->title;
+        $totalValue = $value ?: (($product->price ?? 0.0) * $quantity);
+
         $this->pushEvent('AddToCart', [
             'content_ids' => [$product->id],
             'content_name' => $product->name,
             'content_type' => 'product',
             'contents' => [['id' => $product->id, 'quantity' => $quantity]],
-            'value' => $value ?: ($product->price * $quantity),
-            'currency' => get_application_currency()->title,
+            'value' => $this->formatValueForFacebook($totalValue, $currency),
+            'currency' => $currency,
         ]);
 
         return $this;
@@ -103,12 +130,14 @@ class FacebookPixelEnhanced
             return $this;
         }
 
+        $currency = get_application_currency()->title;
+
         $this->pushEvent('AddToWishlist', [
             'content_ids' => [$product->id],
             'content_name' => $product->name,
             'content_type' => 'product',
-            'value' => $product->price,
-            'currency' => get_application_currency()->title,
+            'value' => $this->formatValueForFacebook($product->price, $currency),
+            'currency' => $currency,
         ]);
 
         return $this;
@@ -124,12 +153,14 @@ class FacebookPixelEnhanced
             return ['id' => $item['id'] ?? $item->id, 'quantity' => $item['quantity'] ?? $item->quantity ?? 1];
         })->toArray();
 
+        $currency = get_application_currency()->title;
+
         $this->pushEvent('InitiateCheckout', [
             'content_ids' => collect($items)->pluck('id')->toArray(),
             'contents' => $contents,
             'content_type' => 'product',
-            'value' => $value,
-            'currency' => get_application_currency()->title,
+            'value' => $this->formatValueForFacebook($value, $currency),
+            'currency' => $currency,
             'num_items' => $numItems ?: count($items),
         ]);
 
@@ -142,9 +173,11 @@ class FacebookPixelEnhanced
             return $this;
         }
 
+        $currency = get_application_currency()->title;
+
         $data = [
-            'value' => $value,
-            'currency' => get_application_currency()->title,
+            'value' => $this->formatValueForFacebook($value, $currency),
+            'currency' => $currency,
         ];
 
         if ($paymentMethod) {
@@ -166,12 +199,14 @@ class FacebookPixelEnhanced
             return ['id' => $product->product_id, 'quantity' => $product->qty];
         })->toArray();
 
+        $currency = get_application_currency()->title;
+
         $this->pushEvent('Purchase', [
             'content_ids' => $order->products->pluck('product_id')->toArray(),
             'contents' => $contents,
             'content_type' => 'product',
-            'value' => $order->amount,
-            'currency' => get_application_currency()->title,
+            'value' => $this->formatValueForFacebook($order->amount, $currency),
+            'currency' => $currency,
             'num_items' => $order->products->count(),
             'order_id' => $order->code,
         ]);
@@ -185,10 +220,12 @@ class FacebookPixelEnhanced
             return $this;
         }
 
+        $currency = get_application_currency()->title;
+
         $data = [
             'status' => 'completed',
-            'value' => 0,
-            'currency' => get_application_currency()->title,
+            'value' => $this->formatValueForFacebook(0, $currency),
+            'currency' => $currency,
         ];
 
         if ($registrationMethod) {
@@ -209,8 +246,9 @@ class FacebookPixelEnhanced
         $data = [];
 
         if ($value) {
-            $data['value'] = $value;
-            $data['currency'] = get_application_currency()->title;
+            $currency = get_application_currency()->title;
+            $data['value'] = $this->formatValueForFacebook($value, $currency);
+            $data['currency'] = $currency;
         }
 
         $this->pushEvent('Lead', $data);
@@ -232,15 +270,11 @@ class FacebookPixelEnhanced
     protected function pushEvent(string $eventName, array $parameters = []): void
     {
         try {
-            if ($this->debugMode) {
-                Log::info("Facebook Pixel Event: {$eventName}", $parameters);
-            }
-
             $this->events[] = [
                 'event' => $eventName,
                 'parameters' => $parameters,
             ];
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             if ($this->debugMode) {
                 Log::error("Facebook Pixel Error: {$e->getMessage()}");
             }
@@ -291,7 +325,7 @@ class FacebookPixelEnhanced
         fbq('track', 'PageView');
         </script>
         <noscript>
-            <img height="1" width="1" style="display:none" 
+            <img height="1" width="1" style="display:none"
                 src="https://www.facebook.com/tr?id={$this->pixelId}&ev=PageView&noscript=1"/>
         </noscript>
         <!-- End Meta Pixel Code -->
@@ -304,7 +338,7 @@ class FacebookPixelEnhanced
         <script>
             window.fbPixelDebugMode = true;
             console.log('%c Facebook Pixel Debug Mode Enabled ', 'background: #1877F2; color: white; padding: 2px 5px; border-radius: 3px;');
-            
+
             (function() {
                 var originalFbq = window.fbq;
                 window.fbq = function() {
@@ -315,7 +349,7 @@ class FacebookPixelEnhanced
                         return originalFbq.apply(this, arguments);
                     }
                 };
-                
+
                 window.addEventListener('load', function() {
                     setTimeout(function() {
                         if (window.fbq && window.fbq.loaded) {

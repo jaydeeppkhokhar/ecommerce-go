@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Adăugați un cursor simplu',
     'select_slider' => 'Selectați un cursor',
     'shortcode' => 'Cod scurt',
+    'tablet_image' => 'Imaginea tabletei',
+    'tablet_image_helper' => 'Pentru dispozitivele cu lățime de la 768px la 1200px, dacă este goală, se va folosi imaginea de pe desktop.',
+    'mobile_image' => 'Imagine mobilă',
+    'mobile_image_helper' => 'Pentru dispozitivele cu lățimea mai mică de 768px, dacă sunt goale, se va folosi imaginea de pe tabletă.',
 ];

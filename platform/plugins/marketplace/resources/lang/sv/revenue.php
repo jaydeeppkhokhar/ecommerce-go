@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Intäkter',
     'edit' => 'Uppdatera plånbokssaldo',
     'view_store' => 'Visa butik ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Lägg till/Dra av belopp från säljare',
     'statements' => 'Utdrag',
     'products' => 'Produkter',
+    'items_earning_sales' => 'Artiklar intäktsförsäljning: :amount',
 ];

@@ -69,14 +69,9 @@ return [
         'dear_admin' => '親愛的管理員,',
         'hello' => '您好,',
         'happy_selling' => '祝您銷售順利!',
-        'thank_you_understanding' => '感謝您的理解。',
         'email_sent_by_team' => '此電郵由 {{ site_title }} 團隊發送。',
-
-        // Contact Store
         'contact_store_sent_from' => '此電郵由 :customer_name (:customer_email) 透過您在 :site_title 的個人資料聯絡表格發送。',
         'contact_store_reply_instruction' => '您可以直接回覆此電郵來回應 :customer_name (:customer_email)。',
-
-        // Vendor Account Status
         'vendor_account_blocked_message' => '您在 {{ site_title }} 的賣家帳戶已於 :block_date <strong>被封鎖</strong>。',
         'vendor_account_blocked_reason' => '封鎖原因: :block_reason',
         'vendor_account_blocked_contact_support' => '如您認為這是錯誤或有任何疑問,請聯絡我們的支援團隊。',
@@ -87,8 +82,6 @@ return [
         'vendor_account_approved_message' => '您的帳戶已獲批准在我們的網站 <a href=":site_url">:site_url</a> 上銷售。',
         'vendor_account_rejected_title' => '賣家帳戶已拒絕',
         'vendor_account_rejected_message' => '很遺憾通知您,您的帳戶未獲批准在我們的網站 <a href=":site_url">:site_url</a> 上銷售。',
-
-        // Store New Order
         'store_new_order_title' => '訂單成功!',
         'store_new_order_message' => '您在 :site_title 收到新訂單!',
         'customer_information' => '顧客資料',
@@ -101,14 +94,10 @@ return [
         'order_date' => '訂單日期',
         'shipping_method' => '送貨方式',
         'payment_method' => '付款方式',
-
-        // Product Approval
         'product_approved_title' => '產品已批准',
         'product_approved_message' => '您的產品已獲批准在我們的網站 <a href=":site_url">:site_url</a> 上銷售。',
         'pending_product_approval_title' => '待批核產品',
         'pending_product_approval_message' => ':store_name 建立的新產品 <a href=":product_url">:product_name</a> 正在等待批准。',
-
-        // Verify Vendor
         'verify_vendor_title' => '驗證賣家',
         'verify_vendor_message' => '您在 :site_title 有新賣家需要驗證!',
         'vendor_information' => '賣家資料',
@@ -116,17 +105,11 @@ return [
         'field_store_name' => '商店名稱',
         'field_store_phone' => '商店電話號碼',
         'visit_store_button' => '造訪商店',
-
-        // Withdrawal
         'withdrawal_approved_title' => '提款已批准',
         'withdrawal_approved_message' => '您的提款申請已獲批准,我們將很快把 <strong>:withdrawal_amount</strong> 轉帳到您的銀行帳戶。',
-
-        // Order Cancellation
         'order_cancellation_title' => '顧客已取消訂單 :order_id',
         'order_cancellation_message' => '顧客 :customer_name 已取消訂單 <strong>:order_id</strong>,原因是 :cancellation_reason。',
         'order_items_header' => '以下是您訂購的商品:',
-
-        // Welcome Vendor
         'welcome_vendor_title' => '歡迎賣家',
         'welcome_vendor_greeting' => '我們非常高興歡迎您來到 :store_name!',
         'welcome_vendor_registration_complete' => '您的賣家註冊已成功完成,您現在已成為我們充滿活力的賣家社群的一員。',
@@ -136,8 +119,6 @@ return [
         'welcome_vendor_support' => '如果您有任何疑問或需要協助,我們的支援團隊隨時為您提供協助。歡迎隨時聯絡我們!',
         'login_vendor_account_button' => '登入您的賣家帳戶',
         'welcome_vendor_closing' => '我們期待看到您的商店在 :site_title 蓬勃發展!',
-
-        // Store Verification
         'store_verified_title' => '商店驗證已批准',
         'store_verified_message' => '恭喜!您的商店已在 <strong>:site_title</strong> 成功通過驗證。此驗證徽章將有助於建立顧客對您的信任。',
         'dear_store_owner' => '親愛的 :store_name 擁有者,',
@@ -148,8 +129,6 @@ return [
         'higher_visibility_benefit' => '在搜尋結果中獲得更高的曝光率',
         'visit_your_store' => '造訪您的商店',
         'congratulations_verified' => '恭喜您獲得驗證!',
-
-        // Store Unverification
         'store_unverified_title' => '商店驗證狀態已更改',
         'store_unverified_message' => '很遺憾通知您,您在 <strong>:site_title</strong> 的商店驗證狀態已更改。',
         'unverification_details' => '狀態更改詳情',
@@ -235,7 +214,6 @@ return [
     'store_url' => '商店網址',
     'product_name' => '產品名稱',
     'product_url' => '產品網址',
-    'withdrawal_amount' => '提款金額',
     'helpers' => [
         'store_status' => '如果您將狀態更改為":status"以外的狀態,此商店的帳戶也會更改為":customer"',
     ],
@@ -291,7 +269,6 @@ return [
     'documents' => '文件',
     'store_products' => '商店產品',
     'store_orders' => '商店訂單',
-    'total_revenue' => '總收入',
     'total_earnings' => '總收益',
     'withdrawals' => '提款',
     'pending_withdrawals' => '待處理的提款',
@@ -300,4 +277,42 @@ return [
     'products_count' => '產品',
     'store_status' => '商店狀態',
     'verified' => '已驗證',
+    'dashboard' => '儀表板',
+    'products' => '產品',
+    'orders' => '訂單',
+    'coupons' => '優惠券',
+    'revenues' => '收入',
+    'messages' => '訊息',
+    'reviews' => '評價',
+    'vendor_dashboard' => '賣家儀表板',
+    'become_a_vendor' => '成為賣家',
+    'product_specification' => '產品規格',
+    'register_as' => '註冊為',
+    'register' => '註冊',
+    'i_am_customer' => '我是顧客',
+    'i_am_vendor' => '我是賣家',
+    'i_agree_to_terms' => '我同意:link',
+    'i_agree_to_terms_simple' => '我同意條款和條件',
+    'terms_and_privacy_policy' => '條款和隱私政策',
+    'language' => '語言',
+    'save_settings' => '儲存設定',
+    'payout_info' => '付款資訊',
+    'payment_method' => '付款方式',
+    'bank_name' => '銀行名稱',
+    'earnings' => '收益',
+    'quick_actions' => '快速動作',
+    'store_performance' => '商店表現',
+    'conversion_rate' => '轉換率',
+    'congratulations_vendor' => '恭喜！您的賣家註冊成功！',
+    'wait_for_approval' => '等待批准',
+    'recent_orders' => '最近訂單',
+    'customer_reviews' => '顧客評價',
+    'top_selling_products' => '暢銷產品',
+    'inventory_status' => '庫存狀態',
+    'in_stock' => '有貨',
+    'low_stock' => '庫存不足',
+    'out_of_stock' => '缺貨',
+    'add_new_product' => '新增產品',
+    'total_revenue' => '總收入',
+    'withdrawal_amount' => '提款金額',
 ];

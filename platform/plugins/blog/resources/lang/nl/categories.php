@@ -1,16 +1,18 @@
 <?php
 
 return [
-    'create' => 'Maak nieuwe categorie',
-    'edit' => 'Bewerk categorie',
+    'create' => 'Maak een nieuwe categorie',
     'menu' => 'Categorieën',
-    'edit_this_category' => 'Bewerk deze categorie',
+    'edit_this_category' => 'Deze categorie bewerken',
     'menu_name' => 'Categorieën',
     'none' => 'Geen',
-    'total_posts' => 'Aantal berichten: :total',
-    'table_view_info' => 'For easier bulk management of categories, you can also',
-    'manage_as_table' => 'manage categories as a table',
-    'parent' => 'Parent Category',
-    'order' => 'Order',
-    'is_default' => 'Is Default',
+    'total_posts' => 'Totaal berichten: :total',
+    'table_view_info' => 'Voor eenvoudiger bulkbeheer van categorieën kunt u ook',
+    'manage_as_table' => 'categorieën als tabel beheren',
+    'parent' => 'Bovenliggende categorie',
+    'order' => 'Volgorde',
+    'is_default' => 'Is standaard',
+    'intro' => [
+        'description' => 'Organiseer uw blogposts in categorieën voor beter contentbeheer.',
+    ],
 ];

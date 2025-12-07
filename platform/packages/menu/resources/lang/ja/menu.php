@@ -33,4 +33,5 @@ return [
     'main_navigation' => 'メインナビゲーション',
     'widget_custom_menu' => 'カスタムメニュー',
     'widget_custom_menu_description' => 'ウィジェットエリアにカスタムメニューを追加します。',
+    'select_menu' => 'メニューを選択',
 ];

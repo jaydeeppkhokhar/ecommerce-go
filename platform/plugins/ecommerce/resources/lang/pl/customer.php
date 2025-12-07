@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktywowany',
         'locked' => 'Zablokowany',
     ],
-    'email_verified' => 'E-mail zweryfikowany?',
     'verify_email' => [
         'confirm_heading' => 'Potwierdzenie weryfikacji e-mail',
         'confirm_description' => 'Czy na pewno chcesz zweryfikować e-mail tego klienta?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'kliknij tutaj',
         'confirm_button' => 'Zweryfikuj',
     ],
-    'email_already_verified' => 'E-mail jest już zweryfikowany.',
     'verification_email_sent' => 'E-mail weryfikacyjny został wysłany pomyślnie!',
     'resend_verification_email' => 'Wyślij ponownie e-mail weryfikacyjny',
     'resend_verification_email_confirmation' => 'Czy na pewno chcesz wysłać ponownie e-mail weryfikacyjny do tego klienta?',

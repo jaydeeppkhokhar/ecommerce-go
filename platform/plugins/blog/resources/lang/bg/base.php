@@ -15,7 +15,7 @@ return [
         'title' => 'Блог',
         'description' => 'Преглед и актуализиране на настройките на блога',
         'enable_blog_post_schema' => 'Активиране на Schema за блог публикации',
-        'enable_blog_post_schema_description' => 'Learn more: https://schema.org/Article',
+        'enable_blog_post_schema_description' => 'Научете повече: https://schema.org/Article',
         'schema_type' => 'Тип Schema',
 
     ],

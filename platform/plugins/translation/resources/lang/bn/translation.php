@@ -69,4 +69,7 @@ return [
             'trans' => 'খালি হতে পারে বা সরবরাহ করা হলে সর্বাধিক :max অক্ষরের একটি স্ট্রিং হতে পারে।',
         ],
     ],
+    'download_locale' => 'ভাষা ডাউনলোড করুন',
+    'import_available_locale_confirmation' => 'GitHub থেকে ভাষা ডাউনলোড করুন',
+    'import_available_locale_confirmation_content' => 'আপনি কি সত্যিই এই ভাষা ডাউনলোড করতে চান? এটি :lang_path এ ডাউনলোড হবে, আপনি চাইলে পরে এটি মুছে ফেলতে পারেন।',
 ];

@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Obrazac za prijavu administratora',
     'admin_forgot_password_form' => 'Obrazac zaboravljene lozinke administratora',
     'admin_reset_password_form' => 'Obrazac za ponovno postavljanje lozinke administratora',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matematička Captcha',
+    'math_question' => 'Molimo riješite sljedeću matematičku funkciju: :label = ?',
+    'captcha_verification_failed' => 'Captcha provjera nije uspjela!',
+    'math_captcha_verification_failed' => 'Matematička Captcha provjera nije uspjela!',
 ];

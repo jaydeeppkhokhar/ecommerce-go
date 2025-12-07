@@ -69,4 +69,7 @@ return [
             'trans' => 'Kan være tom eller en streng med maksimal lengde på :max tegn hvis oppgitt.',
         ],
     ],
+    'download_locale' => 'Last ned språk',
+    'import_available_locale_confirmation' => 'Last ned språk fra GitHub',
+    'import_available_locale_confirmation_content' => 'Er du sikker på at du vil laste ned dette språket? Det vil bli lastet ned til :lang_path, du kan slette det senere hvis du vil.',
 ];

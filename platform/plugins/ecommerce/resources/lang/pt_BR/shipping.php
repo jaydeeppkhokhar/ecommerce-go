@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Escaneie o código QR para rastrear seu envio',
     ],
     'customer_confirmed_delivery_at' => 'Cliente confirmou a entrega em',
+    'no_shipping_methods_available' => 'Nenhum método de envio disponível!',
 ];

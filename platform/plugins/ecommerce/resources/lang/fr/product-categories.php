@@ -17,7 +17,7 @@ return [
     'edit_this_category' => 'Modifier cette catégorie',
     'export' => [
         'description' => 'Exporter les catégories de produits vers un fichier Excel/CSV.',
-        'total' => 'Total',
+        'total' => 'Total cumulé',
     ],
     'import' => [
         'description' => 'Importer les catégories de produits depuis un fichier Excel/CSV.',
@@ -25,6 +25,6 @@ return [
     'table_view_info' => 'Pour une gestion en lot plus facile des catégories, vous pouvez également',
     'manage_as_table' => 'gérer les catégories sous forme de tableau',
     'parent' => 'Catégorie parente',
-    'image' => 'Image',
+    'image' => 'Illustration',
     'product_category_translations' => 'Traductions des catégories de produits',
 ];

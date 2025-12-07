@@ -1,15 +1,16 @@
 @extends(EcommerceHelper::viewPath('customers.master'))
 
-@section('title', __('Address books'))
+@section('title', trans('plugins/ecommerce::customer-dashboard.address_books'))
 
 @section('content')
-    @if($addresses->isNotEmpty())
-        <div class="dashboard-address">
+    <div class="bb-customer-content-wrapper">
+        @if($addresses->isNotEmpty())
+            <div class="dashboard-address">
             <!-- Page Header -->
             <div class="d-flex flex-column flex-sm-row justify-content-between align-items-start align-items-sm-center gap-3 mb-4">
                 <div>
-                    <h2 class="h5 mb-1">{{ __('Your Addresses') }}</h2>
-                    <p class="text-muted small mb-0">{{ __('Manage your shipping and billing addresses') }}</p>
+                    <h2 class="h5 mb-1">{{ trans('plugins/ecommerce::customer-dashboard.your_addresses') }}</h2>
+                    <p class="text-muted small mb-0">{{ trans('plugins/ecommerce::customer-dashboard.manage_shipping_billing_addresses') }}</p>
                 </div>
             </div>
 
@@ -29,24 +30,25 @@
                         <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
                             <x-core::icon name="ti ti-map-pin-plus" class="text-primary" />
                         </div>
-                        <h5 class="card-title h6 mb-2">{{ __('Need another address?') }}</h5>
+                        <h5 class="card-title h6 mb-2">{{ trans('plugins/ecommerce::customer-dashboard.need_another_address') }}</h5>
                         <p class="card-text text-muted small mb-3">
-                            {{ __('Add multiple addresses for different shipping locations or billing purposes.') }}
+                            {{ trans('plugins/ecommerce::customer-dashboard.add_multiple_addresses_description') }}
                         </p>
                         <a href="{{ route('customer.address.create') }}" class="btn btn-outline-primary btn-sm">
                             <x-core::icon name="ti ti-plus" class="me-1" />
-                            {{ __('Add Another Address') }}
+                            {{ trans('plugins/ecommerce::customer-dashboard.add_another_address') }}
                         </a>
                     </div>
                 </div>
             @endif
-        </div>
-    @else
-        @include(EcommerceHelper::viewPath('customers.partials.empty-state'), [
-            'title' => __('No addresses yet!'),
-            'subtitle' => __('Add your first shipping or billing address to get started.'),
-            'actionUrl' => route('customer.address.create'),
-            'actionLabel' => __('Add Your First Address'),
-        ])
-    @endif
+            </div>
+        @else
+            @include(EcommerceHelper::viewPath('customers.partials.empty-state'), [
+                'title' => trans('plugins/ecommerce::customer-dashboard.no_addresses_yet'),
+                'subtitle' => trans('plugins/ecommerce::customer-dashboard.add_first_address_description'),
+                'actionUrl' => route('customer.address.create'),
+                'actionLabel' => trans('plugins/ecommerce::customer-dashboard.add_your_first_address'),
+            ])
+        @endif
+    </div>
 @endsection

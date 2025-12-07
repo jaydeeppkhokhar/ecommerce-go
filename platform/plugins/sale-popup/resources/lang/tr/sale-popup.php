@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Ürün listesi',
         'cart' => 'Sepet',
     ],
+    'purchased' => 'satın aldı',
+    'verified' => 'Doğrulandı',
+    'quick_view' => 'Hızlı görüntüleme',
 ];

@@ -16,7 +16,7 @@ return [
         ],
     ],
     'export' => [
-        'total' => 'Total',
+        'total' => 'I alt',
     ],
     'import_model_translations' => ':model oversættelser',
     'export_model_translations' => ':model oversættelser',

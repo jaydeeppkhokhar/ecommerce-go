@@ -10,11 +10,17 @@ if (! function_exists('is_added_to_wishlist')) {
             return false;
         }
 
-        return auth('customer')
-            ->user()
-            ->wishlist()
-            ->where('product_id', $productId)
-            ->exists();
+        static $wishlistProductIds = null;
+
+        if ($wishlistProductIds === null) {
+            $wishlistProductIds = auth('customer')
+                ->user()
+                ->wishlist()
+                ->pluck('product_id')
+                ->all();
+        }
+
+        return in_array($productId, $wishlistProductIds, true);
     }
 }
 

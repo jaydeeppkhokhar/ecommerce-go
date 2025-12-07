@@ -13,4 +13,6 @@ return [
     'clear_old_data' => '清除舊的請求日誌',
     'clear_old_data_helper' => '自動刪除早於所選時段的舊請求日誌，以保持資料庫清潔和優化。',
     'cronjob_warning' => '要使用此功能，您需要按照此連結設定 cron 工作：<a href=":link" target="_blank">:link</a>。',
+    'no_results_found' => '沒有找到結果',
+    'no_request_errors_message' => '看起來這裡沒有請求錯誤。',
 ];

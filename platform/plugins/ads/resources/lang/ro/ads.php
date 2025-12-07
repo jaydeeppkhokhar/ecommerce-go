@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Format ID client Google AdSense invalid. Ar trebui să fie în formatul: ca-pub-XXXXXXXXXXXXXXXX (unde X este o cifră).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Imagine tabletă',
+    'tablet_image_helper' => 'Pentru dispozitive cu lățime de la 768px la 1200px, dacă este gol, va fi folosită imaginea de pe desktop.',
+    'mobile_image' => 'Imagine mobilă',
+    'mobile_image_helper' => 'Pentru dispozitive cu lățime mai mică de 768px, dacă este gol, va fi folosită imaginea de pe tabletă.',
 ];

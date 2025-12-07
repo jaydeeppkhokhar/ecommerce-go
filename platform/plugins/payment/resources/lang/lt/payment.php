@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Apdorojimo mokesčio tipas (Neprivaloma)',
     'fee_type_helper' => 'Pasirinkite, kaip turi būti apskaičiuotas mokėjimo mokestis: kaip fiksuota suma arba užsakymo visumos procentas. Jei pasirinksite fiksuotą sumą, ji bus pagrįsta numatytąja valiuta (:currency).',
+    'payment_created' => 'Sukūrėte mokėjimą #:charge_id per :channel :time : :amount',
+    'processing_please_wait' => 'Apdorojama. Prašome palaukti...',
+    'error' => 'Klaida',
+    'checkout' => 'Atsiskaitymas',
+    'show_full_json' => 'Rodyti visą JSON',
+    'full_log_data' => 'Pilni žurnalo duomenys',
+    'currency_not_supported' => ':name nepalaiko :currency. :name palaikomų valiutų sąrašas: :currencies.',
+    'please_switch_currency' => 'Perjunkite į bet kurią palaikomą valiutą',
+    'payment_with' => 'Mokėjimas su :paymentType',
 ];

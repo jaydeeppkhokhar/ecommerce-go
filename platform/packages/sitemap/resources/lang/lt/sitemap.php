@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatinis generavimas',
         'automatic_generation_desc' => 'Automatiškai atnaujinama, kai keičiasi turinys',
         'automatic_update_note' => 'Svetainės struktūra automatiškai atnaujinama kiekvieną kartą, kai kuriate, redaguojate ar ištrintumėte turinį savo svetainėje.',
+        'submit_sitemap' => 'Pateikti svetainės schemą IndexNow',
+        'submitting_sitemap' => 'Pateikiama...',
+        'sitemap_submitted_successfully' => 'Svetainės schema sėkmingai pateikta paieškos sistemoms!',
+        'sitemap_submission_failed' => 'Nepavyko pateikti svetainės schemos visoms paieškos sistemoms.',
+        'sitemap_submission_partial' => 'Svetainės schema pateikta su keliomis klaidomis.',
+        'submit_sitemap_error' => 'Nepavyko pateikti svetainės schemos. Bandykite dar kartą.',
+        'indexnow_disabled' => 'IndexNow nėra įjungtas. Įjunkite jį pirmiausia.',
+        'indexnow_no_api_key' => 'API raktas nerastas. Pirmiausia sugeneruokite API raktą.',
     ],
 ];

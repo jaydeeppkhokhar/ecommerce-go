@@ -1,13 +1,15 @@
 <?php
 
 return [
-    'name' => 'Cities',
+    'name' => 'Villes',
     'description' => 'Gérer les villes de localisation',
-    'create' => 'New city',
-    'state' => 'State',
-    'select_state' => 'Select state...',
-    'select_city' => 'Select city...',
-    'country' => 'Country',
-    'select_country' => 'Select country...',
-    'city' => 'City',
+    'create' => 'Nouvelle ville',
+    'state' => 'État',
+    'select_state' => 'Sélectionnez un état...',
+    'select_city' => 'Sélectionnez une ville...',
+    'country' => 'Pays',
+    'select_country' => 'Sélectionnez un pays...',
+    'city' => 'Ville',
+    'zip_code' => 'Code postal',
+    'zip_code_helper' => 'Le format de base d\'un code postal est de cinq chiffres. Par exemple, aux États-Unis, 00501 est un exemple de code postal unique pour l\'Internal Revenue Service à Holtsville, New York.',
 ];

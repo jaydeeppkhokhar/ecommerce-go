@@ -14,6 +14,7 @@ return [
         'publish_packages_assets' => '發佈套件資產',
         'clean_up' => '清理系統更新文件',
         'done' => '系統已成功更新',
+        'unknown' => '未知步驟',
         'messages' => [
             'download' => '下載更新文件...',
             'update_files' => '更新系統文件...',

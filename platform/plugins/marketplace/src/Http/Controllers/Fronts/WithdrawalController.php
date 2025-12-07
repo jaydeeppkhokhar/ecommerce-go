@@ -22,7 +22,7 @@ class WithdrawalController extends BaseController
 {
     public function index(VendorWithdrawalTable $table)
     {
-        $this->pageTitle(__('Withdrawals'));
+        $this->pageTitle(trans('plugins/marketplace::withdrawal.name'));
 
         return $table->renderTable();
     }
@@ -49,10 +49,10 @@ class WithdrawalController extends BaseController
                 ->httpResponse()
                 ->setError()
                 ->setNextUrl(route('marketplace.vendor.withdrawals.index'))
-                ->setMessage(__('Insufficient balance or no bank information'));
+                ->setMessage(trans('plugins/marketplace::withdrawal.insufficient_balance_or_no_bank_info'));
         }
 
-        $this->pageTitle(__('Withdrawal request'));
+        $this->pageTitle(trans('plugins/marketplace::withdrawal.withdrawal_request'));
 
         return VendorWithdrawalForm::create()->renderForm();
     }
@@ -74,7 +74,7 @@ class WithdrawalController extends BaseController
             return $this
                 ->httpResponse()
                 ->setError()
-                ->setMessage(__('The total amount (including fee) exceeds your current balance'));
+                ->setMessage(trans('plugins/marketplace::withdrawal.total_amount_exceeds_balance'));
         }
 
         try {
@@ -141,7 +141,7 @@ class WithdrawalController extends BaseController
             ])
             ->firstOrFail();
 
-        $this->pageTitle(__('Update withdrawal request #:id', ['id' => $id]));
+        $this->pageTitle(trans('plugins/marketplace::withdrawal.update_withdrawal_request', ['id' => $id]));
 
         return VendorWithdrawalForm::createFromModel($withdrawal)
             ->setUrl(route('marketplace.vendor.withdrawals.edit', $withdrawal->getKey()))
@@ -191,7 +191,7 @@ class WithdrawalController extends BaseController
             ->where('customer_id', auth('customer')->id())
             ->firstOrFail();
 
-        $this->pageTitle(__('View withdrawal request #:id', ['id' => $id]));
+        $this->pageTitle(trans('plugins/marketplace::withdrawal.view_withdrawal_request', ['id' => $id]));
 
         return VendorWithdrawalForm::createFromModel($withdrawal)
             ->setUrl(route('marketplace.vendor.withdrawals.edit', $withdrawal->getKey()))

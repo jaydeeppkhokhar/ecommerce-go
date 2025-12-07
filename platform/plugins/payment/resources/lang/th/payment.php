@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'ประเภทค่าธรรมเนียมการประมวลผล (ไม่บังคับ)',
     'fee_type_helper' => 'เลือกวิธีการคำนวณค่าธรรมเนียมการชำระเงิน: เป็นจำนวนคงที่หรือเปอร์เซ็นต์ของยอดคำสั่งซื้อทั้งหมด หากคุณเลือกจำนวนคงที่ จะใช้สกุลเงินเริ่มต้น (:currency)',
+    'payment_created' => 'คุณได้สร้างการชำระเงิน #:charge_id ผ่าน :channel :time : :amount',
+    'processing_please_wait' => 'กำลังประมวลผล กรุณารอสักครู่...',
+    'error' => 'ข้อผิดพลาด',
+    'checkout' => 'ชำระเงิน',
+    'show_full_json' => 'แสดง JSON ฉบับเต็ม',
+    'full_log_data' => 'ข้อมูลบันทึกฉบับเต็ม',
+    'currency_not_supported' => ':name ไม่รองรับ :currency รายการสกุลเงินที่รองรับโดย :name: :currencies',
+    'please_switch_currency' => 'โปรดเปลี่ยนเป็นสกุลเงินที่รองรับ',
+    'payment_with' => 'ชำระเงินด้วย :paymentType',
 ];

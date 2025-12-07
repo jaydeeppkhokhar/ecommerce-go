@@ -51,14 +51,24 @@
 
     <div class="row">
         <div class="col-md-3">
-            <label for="start_date" class="form-label">{{ trans('plugins/blog::posts.export.start_date') }}</label>
+            <label
+                for="start_date"
+                class="form-label"
+            >{{ trans('plugins/blog::posts.export.start_date') }}</label>
 
-            {!! Form::datePicker('start_date', null, ['placeholder' => trans('plugins/blog::posts.export.start_date_placeholder')]) !!}
+            {!! Form::datePicker('start_date', null, [
+                'placeholder' => trans('plugins/blog::posts.export.start_date_placeholder'),
+            ]) !!}
         </div>
         <div class="col-md-3">
-            <label for="end_date" class="form-label">{{ trans('plugins/blog::posts.export.end_date') }}</label>
+            <label
+                for="end_date"
+                class="form-label"
+            >{{ trans('plugins/blog::posts.export.end_date') }}</label>
 
-            {!! Form::datePicker('end_date', null, ['placeholder' => trans('plugins/blog::posts.export.end_date_placeholder')]) !!}
+            {!! Form::datePicker('end_date', null, [
+                'placeholder' => trans('plugins/blog::posts.export.end_date_placeholder'),
+            ]) !!}
         </div>
     </div>
 @stop

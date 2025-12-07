@@ -24,7 +24,7 @@ return [
     'to' => 'în',
     'no_other_languages' => 'Nicio altă limbă de tradus!',
     'edit' => 'Editați',
-    'locale' => 'Locale',
+    'locale' => 'Localitate',
     'locale_placeholder' => 'Ex: en',
     'name' => 'Nume',
     'default_locale' => 'Locale implicită?',
@@ -69,4 +69,7 @@ return [
             'trans' => 'Poate fi gol sau un șir cu o lungime maximă de :max caractere dacă este furnizat.',
         ],
     ],
+    'download_locale' => 'Descărcați limba',
+    'import_available_locale_confirmation' => 'Descărcați limba de pe GitHub',
+    'import_available_locale_confirmation_content' => 'Sigur doriți să descărcați această limbă? Va fi descărcată în :lang_path, o puteți șterge mai târziu dacă doriți.',
 ];

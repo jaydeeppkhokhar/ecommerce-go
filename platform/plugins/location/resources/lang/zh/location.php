@@ -12,7 +12,6 @@ return [
             'city' => '城市',
         ],
     ],
-    'import_type' => '导入类型',
     'export' => [
         'total' => '总位置',
         'total_countries' => '总国家数',

@@ -32,7 +32,7 @@ return [
     'confirm_empty_logs_msg' => 'هل تريد حقاً إفراغ السجلات؟',
     'clear_old_data' => 'مسح سجلات التدقيق القديمة',
     'clear_old_data_helper' => 'حذف سجلات التدقيق القديمة التي تزيد عن الفترة المحددة تلقائياً للحفاظ على قاعدة البيانات نظيفة ومحسّنة.',
-    'cronjob_warning' => 'لاستخدام هذه الميزة، تحتاج إلى إعداد مهمة cron باتباع هذا الرابط: <a href=":link" target="_blank">:link</a>.',
+    'cronjob_warning' => 'لاستخدام هذه الميزة، تحتاج إلى إعداد مهمة cron باتباع هذا الرابط: <a href=\":link\" target=\"_blank\">:link</a>.',
     'customer' => 'العميل',
     'registered' => 'مسجل',
     'to_the_admin_panel' => 'إلى لوحة الإدارة',
@@ -44,4 +44,7 @@ return [
     'admin' => 'المسؤول',
     'register_an_account' => 'حساب',
     'activity_has_been_deleted' => 'تم حذف النشاط',
+    'no_results_found' => 'لم يتم العثور على نتائج',
+    'no_activities_here' => 'يبدو أنه لا توجد أنشطة هنا.',
+    'to the customer portal' => 'إلى بوابة العملاء',
 ];

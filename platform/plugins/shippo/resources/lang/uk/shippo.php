@@ -59,4 +59,22 @@ return [
     'webhooks' => 'Вебхуки?',
     'cache_response' => 'Кешування відповіді?',
     'not_available_in_cod_payment_method' => 'Опції Shippo не будуть відображатися, якщо вибрано метод оплати COD!',
+    'not_available_cod' => 'Недоступно при оплаті при отриманні.',
+    'log_files' => 'Файли журналів',
+    'status' => [
+        'shipping_label_created' => 'Етикетка доставки створена',
+        'in_transit' => 'У дорозі',
+        'delivered' => 'Доставлено',
+        'returned_to_sender' => 'Повернуто відправнику',
+        'exception' => 'Виняток',
+    ],
+    'content_type' => [
+        'merchandise' => 'Товар',
+        'documents' => 'Документи',
+        'gift' => 'Подарунок',
+        'returned_goods' => 'Повернені товари',
+        'humanitarian_donation' => 'Гуманітарна допомога',
+        'other' => 'Інше',
+    ],
+    'address_incomplete' => 'Адреса здається неповною',
 ];

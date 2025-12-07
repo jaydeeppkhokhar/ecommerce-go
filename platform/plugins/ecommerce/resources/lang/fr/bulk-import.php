@@ -43,7 +43,7 @@ return [
         'name' => 'Type d\'importation',
         'all' => 'Tout',
         'products' => 'Produits',
-        'variations' => 'Variations',
+        'variations' => 'Variantes',
     ],
     'import_products' => 'Importer des produits',
     'update_existing_products' => 'Mettre à jour les produits existants',

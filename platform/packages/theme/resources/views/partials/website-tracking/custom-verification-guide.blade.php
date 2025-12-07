@@ -36,7 +36,9 @@
                 </li>
                 <li>
                     <strong>{{ trans('packages/theme::theme.settings.website_tracking.custom.issue_missing_tags') }}</strong>
-                    {!! BaseHelper::clean(trans('packages/theme::theme.settings.website_tracking.custom.issue_missing_tags_solution')) !!}
+                    {!! BaseHelper::clean(
+                        trans('packages/theme::theme.settings.website_tracking.custom.issue_missing_tags_solution'),
+                    ) !!}
                 </li>
                 <li>
                     <strong>{{ trans('packages/theme::theme.settings.website_tracking.custom.issue_incomplete_code') }}</strong>

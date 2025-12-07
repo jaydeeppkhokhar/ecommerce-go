@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Аутоматско генерисање',
         'automatic_generation_desc' => 'Аутоматски се ажурира када се садржај промени',
         'automatic_update_note' => 'Мапа сајта се аутоматски ажурира сваки пут када креирате, уређујете или бришете садржај на вашем веб сајту.',
+        'submit_sitemap' => 'Пошаљи мапу сајта у IndexNow',
+        'submitting_sitemap' => 'Слање...',
+        'sitemap_submitted_successfully' => 'Мапа сајта је успешно послата претраживачима!',
+        'sitemap_submission_failed' => 'Није успело слање мапе сајта свим претраживачима.',
+        'sitemap_submission_partial' => 'Мапа сајта је послата са неким грешкама.',
+        'submit_sitemap_error' => 'Слање мапе сајта није успело. Покушајте поново.',
+        'indexnow_disabled' => 'IndexNow није омогућен. Омогућите га најпре.',
+        'indexnow_no_api_key' => 'API кључ није пронађен. Прво генеришите API кључ.',
     ],
 ];

@@ -183,6 +183,7 @@ return [
                 'order_note' => 'plugins/ecommerce::ecommerce.order_note',
                 'order_id' => 'plugins/ecommerce::ecommerce.order_id',
                 'order_token' => 'plugins/ecommerce::ecommerce.order_token',
+                'order_recover_url' => 'plugins/ecommerce::ecommerce.order_recover_url',
             ],
         ],
         'order-return-request' => [
@@ -222,6 +223,7 @@ return [
             'variables' => [
                 'customer_name' => 'plugins/ecommerce::ecommerce.customer_name',
                 'product_review_list' => 'plugins/ecommerce::ecommerce.product_review_list',
+                'order_id' => 'plugins/ecommerce::ecommerce.order_id',
             ],
         ],
         'download_digital_products' => [

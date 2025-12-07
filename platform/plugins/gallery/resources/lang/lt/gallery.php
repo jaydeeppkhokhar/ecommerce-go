@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Riboti rodomų skaičių',
     'edit_this_gallery' => 'Redaguoti šią galeriją',
     'galleries_page' => 'Galerijų puslapis',
+    'by_name' => 'Pagal :name',
+    'title' => 'Pavadinimas',
+    'limit' => 'Riba',
+    'limit_helper' => 'Galerijų, kurias reikia rodyti, skaičius. ',
 ];

@@ -75,5 +75,13 @@ return [
         'automatic_generation' => '자동 생성',
         'automatic_generation_desc' => '콘텐츠가 변경되면 자동으로 업데이트됨',
         'automatic_update_note' => '웹사이트에서 콘텐츠를 생성, 편집 또는 삭제할 때마다 사이트맵이 자동으로 업데이트됩니다.',
+        'submit_sitemap' => '사이트맵을 IndexNow에 제출',
+        'submitting_sitemap' => '제출 중...',
+        'sitemap_submitted_successfully' => '사이트맵이 검색 엔진에 성공적으로 제출되었습니다!',
+        'sitemap_submission_failed' => '모든 검색 엔진에 사이트맵을 제출하지 못했습니다.',
+        'sitemap_submission_partial' => '사이트맵이 일부 오류와 함께 제출되었습니다.',
+        'submit_sitemap_error' => '사이트맵 제출에 실패했습니다. 다시 시도해 주세요.',
+        'indexnow_disabled' => 'IndexNow가 활성화되어 있지 않습니다. 먼저 활성화해 주세요.',
+        'indexnow_no_api_key' => 'API 키를 찾을 수 없습니다. 먼저 API 키를 생성해 주세요.',
     ],
 ];

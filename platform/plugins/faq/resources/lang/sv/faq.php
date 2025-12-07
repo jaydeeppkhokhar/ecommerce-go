@@ -5,8 +5,12 @@ return [
     'create' => 'Ny FAQ',
     'question' => 'Fråga',
     'answer' => 'Svar',
+    'question_placeholder' => 'Ange din fråga...',
+    'answer_placeholder' => 'Ange ditt svar...',
     'category' => 'Kategori',
     'faq_schema_config' => 'FAQ-schemakonfiguration (:link)',
+    'faq_schema_config_description' => 'Denna konfiguration registrerar endast FAQ-strukturerad data för SEO-ändamål. Den kommer inte att visas i frontend-temats innehåll. Schemat är inbäddat i sidans källkod och kan visas med "Visa källa" eller testas med Googles Rich Results Test-verktyg.',
+    'schema_testing_tool' => 'Testa med Google Rich Results Test',
     'learn_more' => 'Läs mer',
     'settings' => [
         'title' => 'Vanliga frågor',

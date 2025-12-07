@@ -89,7 +89,7 @@ class ProductVariation extends BaseModel
             'ec_product_variation_items',
             'variation_id',
             'attribute_id'
-        );
+        )->using(ProductVariationItem::class);
     }
 
     public function productVariationItems(): HasMany
@@ -147,6 +147,12 @@ class ProductVariation extends BaseModel
             $attributes = [0];
         }
 
+        $quotedAttributes = array_map(function ($attr) {
+            return is_numeric($attr) ? $attr : "'{$attr}'";
+        }, $attributes);
+
+        $quotedProductId = is_numeric($configurableProductId) ? $configurableProductId : "'{$configurableProductId}'";
+
         $items = ProductVariationItem::query()
             ->join(
                 'ec_product_variations',
@@ -160,8 +166,8 @@ class ProductVariation extends BaseModel
                     SELECT ec_product_variation_items.id
                     FROM ec_product_variation_items
                     JOIN ec_product_variations ON ec_product_variations.id = ec_product_variation_items.variation_id
-                    WHERE ec_product_variations.configurable_product_id = ' . $configurableProductId . '
-                    AND ec_product_variation_items.attribute_id NOT IN (' . implode(',', $attributes) . ')
+                    WHERE ec_product_variations.configurable_product_id = ' . $quotedProductId . '
+                    AND ec_product_variation_items.attribute_id NOT IN (' . implode(',', $quotedAttributes) . ')
                 )
             '
             )

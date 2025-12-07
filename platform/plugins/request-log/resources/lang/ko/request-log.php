@@ -13,4 +13,6 @@ return [
     'clear_old_data' => '오래된 요청 로그 지우기',
     'clear_old_data_helper' => '선택한 기간보다 오래된 요청 로그를 자동으로 삭제하여 데이터베이스를 깨끗하고 최적화된 상태로 유지합니다.',
     'cronjob_warning' => '이 기능을 사용하려면 다음 링크를 따라 cron 작업을 설정해야 합니다: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => '검색결과가 없습니다',
+    'no_request_errors_message' => '여기에는 요청 오류가 없는 것 같습니다.',
 ];

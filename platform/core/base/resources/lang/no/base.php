@@ -52,7 +52,7 @@ return [
     'close' => 'Lukk',
     'panel' => [
         'others' => 'Andre',
-        'system' => 'System',
+        'system' => 'Systemet',
         'platform_administration' => 'Plattformadministrasjon',
         'manage_description' => 'Administrer :name',
     ],

@@ -8,8 +8,12 @@ use Illuminate\Database\Migrations\Migration;
 return new class () extends Migration {
     public function up(): void
     {
-        $this->fixOrderTaxCalculations();
-        $this->fixInvoiceTaxCalculations();
+        try {
+            $this->fixOrderTaxCalculations();
+            $this->fixInvoiceTaxCalculations();
+        } catch (Throwable) {
+            // Do nothing
+        }
     }
 
     protected function fixOrderTaxCalculations(): void

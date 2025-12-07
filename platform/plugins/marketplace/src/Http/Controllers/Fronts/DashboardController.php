@@ -41,7 +41,7 @@ class DashboardController extends BaseController
 
     public function index(Request $request)
     {
-        $this->pageTitle(__('Dashboard'));
+        $this->pageTitle(trans('plugins/marketplace::marketplace.dashboard'));
 
         Assets::addScriptsDirectly([
                 'vendor/core/plugins/ecommerce/libraries/daterangepicker/daterangepicker.js',

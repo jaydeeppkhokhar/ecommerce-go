@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Danh sách sản phẩm',
         'cart' => 'Giỏ hàng',
     ],
+    'purchased' => 'đã mua',
+    'verified' => 'Đã xác minh',
+    'quick_view' => 'Xem nhanh',
 ];

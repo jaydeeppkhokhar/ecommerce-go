@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatisk generering',
         'automatic_generation_desc' => 'Uppdateras automatiskt när innehållet ändras',
         'automatic_update_note' => 'Webbplatskartan uppdateras automatiskt varje gång du skapar, redigerar eller raderar innehåll på din webbplats.',
+        'submit_sitemap' => 'Skicka sitemap till IndexNow',
+        'submitting_sitemap' => 'Skickar...',
+        'sitemap_submitted_successfully' => 'Sitemap skickades till sökmotorerna!',
+        'sitemap_submission_failed' => 'Det gick inte att skicka sitemap till alla sökmotorer.',
+        'sitemap_submission_partial' => 'Sitemap skickades med vissa fel.',
+        'submit_sitemap_error' => 'Det gick inte att skicka sitemap. Försök igen.',
+        'indexnow_disabled' => 'IndexNow är inte aktiverat. Aktivera det först.',
+        'indexnow_no_api_key' => 'Ingen API-nyckel hittades. Generera en API-nyckel först.',
     ],
 ];

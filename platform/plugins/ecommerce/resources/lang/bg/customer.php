@@ -23,7 +23,6 @@ return [
         'activated' => 'Активиран',
         'locked' => 'Заключен',
     ],
-    'email_verified' => 'Имейлът потвърден?',
     'verify_email' => [
         'confirm_heading' => 'Потвърждение за верификация на имейл',
         'confirm_description' => 'Сигурни ли сте, че искате да потвърдите имейла на този клиент?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'кликнете тук',
         'confirm_button' => 'Потвърди',
     ],
-    'email_already_verified' => 'Имейлът вече е потвърден.',
     'verification_email_sent' => 'Имейлът за потвърждение е изпратен успешно!',
     'resend_verification_email' => 'Изпрати отново имейл за потвърждение',
     'resend_verification_email_confirmation' => 'Сигурни ли сте, че искате да изпратите отново имейл за потвърждение на този клиент?',

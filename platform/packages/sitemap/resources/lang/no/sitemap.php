@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatisk generering',
         'automatic_generation_desc' => 'Oppdateres automatisk når innholdet endres',
         'automatic_update_note' => 'Nettstedskartet oppdateres automatisk hver gang du oppretter, redigerer eller sletter innhold på nettstedet ditt.',
+        'submit_sitemap' => 'Send sitemap til IndexNow',
+        'submitting_sitemap' => 'Sender...',
+        'sitemap_submitted_successfully' => 'Sitemap ble sendt til søkemotorene!',
+        'sitemap_submission_failed' => 'Kunne ikke sende sitemap til alle søkemotorer.',
+        'sitemap_submission_partial' => 'Sitemap ble sendt med noen feil.',
+        'submit_sitemap_error' => 'Kunne ikke sende sitemap. Prøv igjen.',
+        'indexnow_disabled' => 'IndexNow er ikke aktivert. Aktiver det først.',
+        'indexnow_no_api_key' => 'Fant ingen API-nøkkel. Generer en API-nøkkel først.',
     ],
 ];

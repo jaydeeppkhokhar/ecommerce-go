@@ -24,6 +24,7 @@ class PayPalPayoutServiceProvider extends ServiceProvider
 
         $this->setNamespace('plugins/paypal-payout')
             ->loadAndPublishViews()
+            ->loadAndPublishTranslations()
             ->publishAssets()
             ->loadRoutes();
 
@@ -48,7 +49,7 @@ class PayPalPayoutServiceProvider extends ServiceProvider
                     $form
                         ->add('payout-form', 'html', [
                             'html' => view('plugins/paypal-payout::payout-form', compact('data'))->render(),
-                            'label' => __('PayPal automatically payout'),
+                            'label' => trans('plugins/paypal-payout::paypal-payout.automatically_payout'),
                         ]);
                 }
 

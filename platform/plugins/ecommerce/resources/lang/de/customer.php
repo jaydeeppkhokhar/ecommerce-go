@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktiviert',
         'locked' => 'Gesperrt',
     ],
-    'email_verified' => 'E-Mail bestätigt?',
     'verify_email' => [
         'confirm_heading' => 'E-Mail-Bestätigung verifizieren',
         'confirm_description' => 'Sind Sie sicher, dass Sie die E-Mail dieses Kunden verifizieren möchten?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'hier klicken',
         'confirm_button' => 'Verifizieren',
     ],
-    'email_already_verified' => 'E-Mail ist bereits verifiziert.',
     'verification_email_sent' => 'Bestätigungs-E-Mail wurde erfolgreich gesendet!',
     'resend_verification_email' => 'Bestätigungs-E-Mail erneut senden',
     'resend_verification_email_confirmation' => 'Sind Sie sicher, dass Sie die Bestätigungs-E-Mail an diesen Kunden erneut senden möchten?',

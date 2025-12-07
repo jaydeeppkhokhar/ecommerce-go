@@ -23,7 +23,7 @@ return [
     'translate_from' => 'Terjemahkan dari',
     'to' => 'ke',
     'no_other_languages' => 'Tidak ada bahasa lain untuk diterjemahkan!',
-    'edit' => 'Edit',
+    'edit' => 'Sunting',
     'locale' => 'Lokal',
     'locale_placeholder' => 'Ex: en',
     'name' => 'Nama',
@@ -69,4 +69,7 @@ return [
             'trans' => 'Dapat kosong atau string dengan panjang maksimum :max karakter jika disediakan.',
         ],
     ],
+    'download_locale' => 'Unduh bahasa',
+    'import_available_locale_confirmation' => 'Unduh bahasa dari GitHub',
+    'import_available_locale_confirmation_content' => 'Apakah Anda yakin ingin mengunduh bahasa ini? Ini akan diunduh ke :lang_path, Anda dapat menghapusnya nanti jika Anda mau.',
 ];

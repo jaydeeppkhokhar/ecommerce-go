@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Behandlingsavgiftstyp (Valfritt)',
     'fee_type_helper' => 'Välj hur betalningsavgiften ska beräknas: som ett fast belopp eller en procentandel av den totala beställningen. Om du väljer ett fast belopp kommer det att baseras på standardvalutan (:currency).',
+    'payment_created' => 'Du har skapat en betalning #:charge_id via :channel :time : :amount',
+    'processing_please_wait' => 'Bearbetar. Vänligen vänta...',
+    'error' => 'Fel',
+    'checkout' => 'Kassa',
+    'show_full_json' => 'Visa fullständig JSON',
+    'full_log_data' => 'Fullständiga loggdata',
+    'currency_not_supported' => ':name stöder inte :currency. Lista över valutor som stöds av :name: :currencies.',
+    'please_switch_currency' => 'Vänligen byt till en valuta som stöds',
+    'payment_with' => 'Betalning med :paymentType',
 ];

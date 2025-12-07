@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automātiska ģenerēšana',
         'automatic_generation_desc' => 'Automātiski atjauninās, kad mainās saturs',
         'automatic_update_note' => 'Vietnes karte automātiski atjauninās katru reizi, kad izveidojat, rediģējat vai dzēšat saturu savā vietnē.',
+        'submit_sitemap' => 'Iesniegt vietnes karti IndexNow',
+        'submitting_sitemap' => 'Tiek iesniegts...',
+        'sitemap_submitted_successfully' => 'Vietnes karte veiksmīgi iesniegta meklētājprogrammām!',
+        'sitemap_submission_failed' => 'Neizdevās iesniegt vietnes karti visām meklētājprogrammām.',
+        'sitemap_submission_partial' => 'Vietnes karte iesniegta ar dažām kļūdām.',
+        'submit_sitemap_error' => 'Neizdevās iesniegt vietnes karti. Lūdzu, mēģiniet vēlreiz.',
+        'indexnow_disabled' => 'IndexNow nav aktivizēts. Lūdzu, aktivizējiet to vispirms.',
+        'indexnow_no_api_key' => 'API atslēga netika atrasta. Lūdzu, vispirms ģenerējiet API atslēgu.',
     ],
 ];

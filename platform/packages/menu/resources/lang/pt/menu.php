@@ -33,4 +33,8 @@ return [
     'main_navigation' => 'Navegação Principal',
     'widget_custom_menu' => 'Menu personalizado',
     'widget_custom_menu_description' => 'Adicione um menu personalizado à sua área de widgets.',
+    'select_menu' => 'Selecionar menu',
+    'drag_drop_info' => 'Reorganize os itens do menu arrastando e largando para alterar a ordem ou criar submenus.',
+    'icon_image' => 'Imagem do ícone',
+    'icon_image_helper' => 'Substitui o ícone em fonte caso exista.',
 ];

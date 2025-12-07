@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'রাজস্ব',
     'edit' => 'ওয়ালেট ব্যালেন্স আপডেট করুন',
     'view_store' => 'স্টোর ":store" দেখুন',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'বিক্রেতার পরিমাণ যোগ/বিয়োগ করুন',
     'statements' => 'বিবৃতিসমূহ',
     'products' => 'পণ্যসমূহ',
+    'items_earning_sales' => 'আইটেম আয় বিক্রয়: :amount',
 ];

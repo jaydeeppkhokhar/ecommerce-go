@@ -26,5 +26,4 @@ return [
         'view' => 'Переглянути',
         'description' => ':customer зареєстрований, але не підтверджений.',
     ],
-    'vendor_approval_notification' => 'Ви хочете затвердити цього постачальника для продажу на цьому сайті? :approve_link',
 ];

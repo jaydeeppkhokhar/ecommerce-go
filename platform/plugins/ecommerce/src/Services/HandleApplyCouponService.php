@@ -299,7 +299,7 @@ class HandleApplyCouponService
         ];
     }
 
-    protected function getCouponDiscountAmount(Discount|Model $discount, array $cartData = [], array $sessionData = []): array
+    public function getCouponDiscountAmount(Discount|Model $discount, array $cartData = [], array $sessionData = []): array
     {
         /**
          * @var Discount $discount

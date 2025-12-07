@@ -52,7 +52,7 @@ class VendorInfo extends BaseModel
                 $totalRevenueOriginal != $totalRevenue
             ) {
                 if ($vendorInfo->isCheckSignature() && ! $vendorInfo->checkSignature()) {
-                    throw new Exception(__('Invalid signature of vendor info'));
+                    throw new Exception(trans('plugins/marketplace::marketplace.invalid_signature'));
                 }
 
                 $vendorInfo->signature = Hash::make($vendorInfo->getSignatureKey(true));

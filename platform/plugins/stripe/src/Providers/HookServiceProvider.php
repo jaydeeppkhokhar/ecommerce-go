@@ -142,8 +142,8 @@ class HookServiceProvider extends ServiceProvider
 
         if (! in_array($paymentData['currency'], $supportedCurrencies)) {
             $data['error'] = true;
-            $data['message'] = __(
-                ":name doesn't support :currency. List of currencies supported by :name: :currencies.",
+            $data['message'] = trans(
+                'plugins/payment::payment.currency_not_supported',
                 [
                     'name' => 'Stripe',
                     'currency' => $paymentData['currency'],

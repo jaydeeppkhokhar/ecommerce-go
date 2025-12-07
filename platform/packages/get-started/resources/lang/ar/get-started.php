@@ -10,7 +10,7 @@ return [
     'fonts' => 'الخطوط',
     'primary_color' => 'لون أصلي',
     'primary_font' => 'الخط الأساسي',
-    'setup_wizard_button' => ':link to finish Quick setup Wizard!',
+    'setup_wizard_button' => ':link لإنهاء معالج الإعداد السريع!',
     'click_here' => 'انقر هنا',
     'site_title' => 'عنوان الموقع',
     'identify' => 'تعريف',

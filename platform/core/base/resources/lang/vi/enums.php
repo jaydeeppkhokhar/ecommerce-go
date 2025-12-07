@@ -14,6 +14,7 @@ return [
         'publish_packages_assets' => 'Xuất bản nội dung gói',
         'clean_up' => 'Dọn dẹp các tập tin cập nhật hệ thống',
         'done' => 'Hệ thống được cập nhật thành công',
+        'unknown' => 'Bước không xác định',
         'messages' => [
             'download' => 'Đang tải xuống các tập tin cập nhật...',
             'update_files' => 'Đang cập nhật tập tin hệ thống...',

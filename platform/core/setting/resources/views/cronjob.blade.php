@@ -60,13 +60,14 @@
             </ol>
 
             <p class="border-top pt-4 text-sm mt-2">
-                {!! BaseHelper::clean(trans('core/setting::setting.cronjob.setup.learn_more', [
+                {!! BaseHelper::clean(
+                    trans('core/setting::setting.cronjob.setup.learn_more', [
                         'documentation' => sprintf(
                             '<a href="https://laravel.com/docs/10.x/scheduling" target="_blank" class="hover:underline text-primary-500">%s</a>',
-                            trans('core/setting::setting.cronjob.setup.documentation')
-                        )
-                    ]))
-                !!}
+                            trans('core/setting::setting.cronjob.setup.documentation'),
+                        ),
+                    ]),
+                ) !!}
             </p>
         </div>
     </x-core-setting::section>

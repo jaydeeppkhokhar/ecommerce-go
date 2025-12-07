@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'This coupon cannot be applied because your cart contains flash sale items (:product_name). Flash sale prices cannot be combined with coupon discounts.',
     'coupon_applied_successfully' => 'Great! Coupon code ":code" has been applied. You saved money on this order!',
     'coupon_removed_successfully' => 'The coupon code has been removed from your order.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Coupon codes (:count)',
+    'left_quantity' => 'Left :left',
+    'apply' => 'Apply',
+    'remove' => 'Remove',
+    'select_coupon' => 'Select Coupon',
+    'you_have_coupon_code' => 'You have a coupon code?',
+    'close' => 'Close',
+    'coupon_code_label' => 'Coupon code: :code',
+    'enter_coupon_code_placeholder' => 'Enter coupon code...',
 ];

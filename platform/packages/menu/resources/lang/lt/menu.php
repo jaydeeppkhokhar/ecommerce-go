@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Pertvarkyti meniu elementus vilkdami ir numesdami juos, kad pakeistumėte jų tvarką arba įdėtumėte kaip submeniu.',
     'widget_custom_menu' => 'Pasirinktinis meniu',
     'widget_custom_menu_description' => 'Pridėkite pasirinktinį meniu prie savo valdiklių srities.',
+    'select_menu' => 'Pasirinkti meniu',
 ];

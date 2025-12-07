@@ -36,12 +36,12 @@ class LanguageSettingForm extends FormAbstract
                         'locale',
                         SelectField::class,
                         SelectFieldOption::make()
-                            ->label(__('Language'))
+                            ->label(trans('plugins/marketplace::marketplace.language'))
                             ->choices($languages)
                             ->selected($form->getModel()->getMetaData('locale', 'true') ?: App::getLocale())
                             ->metadata()
                     );
             })
-            ->addSubmitButton(__('Save settings'));
+            ->addSubmitButton(trans('plugins/marketplace::marketplace.save_settings'));
     }
 }

@@ -14,4 +14,7 @@ return [
         'step_4_label' => 'Скопіюйте секретний ключ підпису',
         'step_4_description' => 'Скопіюйте значення "Signing Secret" з розділу "Webhook Details" і вставте його в поле "Stripe Webhook Secret" у розділі "Stripe" вкладки "Оплата" на сторінці "Налаштування".',
     ],
+    'no_payment_charge' => 'Немає плати за платіж. Будь ласка, спробуйте ще раз!',
+    'payment_failed' => 'Платіж не вдався!',
+    'payment_type' => 'Тип Платежу',
 ];

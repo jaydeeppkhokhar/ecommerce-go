@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Terméklista',
         'cart' => 'Kosár',
     ],
+    'purchased' => 'vásárolt',
+    'verified' => 'Ellenőrzött',
+    'quick_view' => 'Gyors megtekintés',
 ];

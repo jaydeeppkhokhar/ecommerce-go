@@ -20,7 +20,7 @@ return [
         'body_attributes' => 'Atributos del cuerpo',
         'settings' => 'Valores de configuración',
         'email_css' => 'Correo electrónico CSS',
-        'variable' => 'Variable',
+        'variable' => 'Variable (sustitución)',
         'preview' => 'Vista previa',
         'icon_variables' => 'Variables de iconos',
         'usage' => 'Uso:',

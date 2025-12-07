@@ -63,6 +63,6 @@ return [
     'bulk_changes' => 'Массовые изменения',
     'submit' => 'Представить',
     'please_select_record' => 'Пожалуйста, выберите хотя бы одну запись для выполнения этого действия!',
-    'checkbox' => 'Checkbox',
-    'toggle_columns' => 'Toggle Columns',
+    'checkbox' => 'Флажок',
+    'toggle_columns' => 'Переключить столбцы',
 ];

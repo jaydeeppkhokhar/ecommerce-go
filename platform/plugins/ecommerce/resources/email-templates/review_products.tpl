@@ -20,7 +20,7 @@
             <tr>
                 <td class="bb-content">
                     <p>{{ 'plugins/ecommerce::email-templates.review_products_greeting' | trans({'customer_name': customer_name}) }}</p>
-                    <div>{{ 'plugins/ecommerce::email-templates.review_products_message' | trans }}</div>
+                    <div>{{ 'plugins/ecommerce::email-templates.review_products_message' | trans({'order_id': order_id}) }}</div>
                 </td>
             </tr>
             <tr>

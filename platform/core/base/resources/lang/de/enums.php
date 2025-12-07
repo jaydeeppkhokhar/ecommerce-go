@@ -14,6 +14,7 @@ return [
         'publish_packages_assets' => 'Veröffentlichung von Vermögenswerten veröffentlichen',
         'clean_up' => 'Säuberungsdateien aufräumen',
         'done' => 'System erfolgreich aktualisiert',
+        'unknown' => 'Unbekannter Schritt',
         'messages' => [
             'download' => 'Update -Dateien herunterladen ...',
             'update_files' => 'Systemdateien aktualisieren ...',

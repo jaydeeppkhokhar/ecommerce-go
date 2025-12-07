@@ -2,21 +2,21 @@
 
 return [
     'form' => [
-        'name' => 'Name',
-        'name_placeholder' => 'Tag\'s name (maximum 120 characters)',
-        'description' => 'Description',
-        'description_placeholder' => 'Short description for tag (maximum 400 characters)',
-        'categories' => 'Categories',
+        'name' => 'নাম',
+        'name_placeholder' => 'ট্যাগের নাম (সর্বোচ্চ 120 অক্ষর)',
+        'description' => 'বিবরণ',
+        'description_placeholder' => 'ট্যাগের জন্য সংক্ষিপ্ত বিবরণ (সর্বোচ্চ 400 অক্ষর)',
+        'categories' => 'বিভাগ',
 
     ],
     'notices' => [
-        'no_select' => 'Please select at least one tag to proceed',
+        'no_select' => 'এগিয়ে যেতে অন্তত একটি ট্যাগ নির্বাচন করুন',
 
     ],
-    'create' => 'Create a new tag',
-    'cannot_delete' => 'Tag could not be deleted',
-    'deleted' => 'Tag deleted',
-    'menu' => 'Tags',
-    'edit_this_tag' => 'Edit this tag',
-    'menu_name' => 'Tags',
+    'create' => 'একটি নতুন ট্যাগ তৈরি করুন',
+    'cannot_delete' => 'ট্যাগ মুছে ফেলা যায়নি',
+    'deleted' => 'ট্যাগ মুছে ফেলা হয়েছে',
+    'menu' => 'ট্যাগ',
+    'edit_this_tag' => 'এই ট্যাগটি সম্পাদনা করুন',
+    'menu_name' => 'ট্যাগ',
 ];

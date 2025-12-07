@@ -165,7 +165,7 @@ class HookServiceProvider extends ServiceProvider
 
         if (! $data['charge_id']) {
             $data['error'] = true;
-            $data['message'] = __('Payment failed!');
+            $data['message'] = trans('plugins/razorpay::razorpay.payment_failed');
         }
 
         $amount = (int) round($paymentData['amount'] * 100);

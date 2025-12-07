@@ -6,10 +6,10 @@
                 <div class="d-flex justify-content-between align-items-start">
                     <div>
                         <h3 class="bb-customer-card-title h5 mb-1">
-                            {{ __('Return Request Details') }}
+                            {{ trans('plugins/ecommerce::ecommerce.return_request_details') }}
                         </h3>
                         <p class="text-muted small mb-0">
-                            {{ __('Request #:code', ['code' => $orderReturn->code]) }}
+                            {{ trans('plugins/ecommerce::order.request_code', ['code' => $orderReturn->code]) }}
                         </p>
                     </div>
                     <div class="bb-customer-card-status">
@@ -25,7 +25,7 @@
                             <div class="info-item mb-3">
                                 <span class="label">
                                     <x-core::icon name="ti ti-hash" class="me-1" />
-                                    {{ __('Request Number') }}
+                                    {{ trans('plugins/ecommerce::ecommerce.request_number') }}
                                 </span>
                                 <span class="value fw-semibold">{{ $orderReturn->code }}</span>
                             </div>
@@ -33,7 +33,7 @@
                             <div class="info-item mb-3">
                                 <span class="label">
                                     <x-core::icon name="ti ti-shopping-cart" class="me-1" />
-                                    {{ __('Original Order') }}
+                                    {{ trans('plugins/ecommerce::order.original_order') }}
                                 </span>
                                 <span class="value">
                                     <a href="{{ route('customer.orders.view', $orderReturn->order_id) }}"
@@ -47,7 +47,7 @@
                                 <div class="info-item mb-3">
                                     <span class="label">
                                         <x-core::icon name="ti ti-message-circle" class="me-1" />
-                                        {{ __("Moderator's Note") }}
+                                        {{ trans('plugins/ecommerce::ecommerce.moderators_note') }}
                                     </span>
                                     <span class="value">{{ $orderReturn->latestHistory->reason }}</span>
                                 </div>
@@ -60,7 +60,7 @@
                             <div class="info-item mb-3">
                                 <span class="label">
                                     <x-core::icon name="ti ti-calendar" class="me-1" />
-                                    {{ __('Request Date') }}
+                                    {{ trans('plugins/ecommerce::ecommerce.request_date') }}
                                 </span>
                                 <span class="value">{{ $orderReturn->created_at->translatedFormat('M d, Y \a\t g:i A') }}</span>
                             </div>
@@ -69,7 +69,7 @@
                                 <div class="info-item mb-3">
                                     <span class="label">
                                         <x-core::icon name="ti ti-clock" class="me-1" />
-                                        {{ __('Last Update') }}
+                                        {{ trans('plugins/ecommerce::ecommerce.last_update') }}
                                     </span>
                                     <span class="value">{{ $orderReturn->latestHistory->created_at->translatedFormat('M d, Y \a\t g:i A') }}</span>
                                 </div>
@@ -79,7 +79,7 @@
                                 <div class="info-item mb-3">
                                     <span class="label">
                                         <x-core::icon name="ti ti-info-circle" class="me-1" />
-                                        {{ __('Return Reason') }}
+                                        {{ trans('plugins/ecommerce::order.return_reason') }}
                                     </span>
                                     <span class="value">{{ $orderReturn->reason->label() }}</span>
                                 </div>
@@ -95,7 +95,7 @@
             <div class="bb-customer-card-header">
                 <h4 class="bb-customer-card-title h5 mb-0">
                     <x-core::icon name="ti ti-package" class="me-2" />
-                    {{ __('Return Items') }}
+                    {{ trans('plugins/ecommerce::ecommerce.return_items') }}
                 </h4>
             </div>
 
@@ -131,7 +131,7 @@
                                                             <div class="return-item-sku mb-1">
                                                                 <small class="text-muted">
                                                                     <x-core::icon name="ti ti-barcode" class="me-1" />
-                                                                    {{ __('SKU') }}: {{ $sku }}
+                                                                    {{ trans('plugins/ecommerce::products.sku') }}: {{ $sku }}
                                                                 </small>
                                                             </div>
                                                         @endif
@@ -151,7 +151,7 @@
                                                             <div class="info-item text-center">
                                                                 <span class="label">
                                                                     <x-core::icon name="ti ti-package" class="me-1" />
-                                                                    {{ __('Quantity') }}
+                                                                    {{ trans('plugins/ecommerce::products.quantity') }}
                                                                 </span>
                                                                 <span class="value fw-semibold text-primary">{{ number_format($item->qty) }}</span>
                                                             </div>
@@ -160,7 +160,7 @@
                                                             <div class="info-item text-center">
                                                                 <span class="label">
                                                                     <x-core::icon name="ti ti-currency-dollar" class="me-1" />
-                                                                    {{ __('Refund Amount') }}
+                                                                    {{ trans('plugins/ecommerce::order.refund_amount') }}
                                                                 </span>
                                                                 <span class="value fw-semibold text-success">{{ format_price($item->refund_amount) }}</span>
                                                             </div>
@@ -170,7 +170,7 @@
                                                                 <div class="info-item text-center">
                                                                     <span class="label">
                                                                         <x-core::icon name="ti ti-info-circle" class="me-1" />
-                                                                        {{ __('Return Reason') }}
+                                                                        {{ trans('plugins/ecommerce::order.return_reason') }}
                                                                     </span>
                                                                     <span class="value">
                                                                         <span class="badge bg-warning">{{ $item->reason->label() }}</span>
@@ -200,14 +200,14 @@
                 </div>
             </div>
             <div class="bb-empty-content">
-                <h3 class="bb-empty-title h5 mb-2 text-danger">{{ __('Order Return Request not found!') }}</h3>
+                <h3 class="bb-empty-title h5 mb-2 text-danger">{{ trans('plugins/ecommerce::order.order_return_request_not_found') }}</h3>
                 <p class="bb-empty-subtitle text-muted mb-4">
-                    {{ __('The return request you are looking for does not exist or has been removed.') }}
+                    {{ trans('plugins/ecommerce::ecommerce.the_return_request_you_are_looking_for_does_not_ex') }}
                 </p>
                 <div class="bb-empty-action">
                     <a href="{{ route('customer.order_returns.index') }}" class="btn btn-primary">
                         <x-core::icon name="ti ti-arrow-left" class="me-1" />
-                        {{ __('Back to Return Requests') }}
+                        {{ trans('plugins/ecommerce::ecommerce.back_to_return_requests') }}
                     </a>
                 </div>
             </div>

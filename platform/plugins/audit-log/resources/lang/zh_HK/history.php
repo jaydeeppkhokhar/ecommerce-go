@@ -45,4 +45,6 @@ return [
     'admin' => '管理員',
     'register_an_account' => '帳戶',
     'activity_has_been_deleted' => '活動已被刪除',
+    'no_results_found' => 'No results found',
+    'no_activities_here' => 'It looks as through there are no activities here.',
 ];

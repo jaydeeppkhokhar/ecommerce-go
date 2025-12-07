@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Skannaa QR-koodi seurataksesi lähetystäsi',
     ],
     'customer_confirmed_delivery_at' => 'Asiakas vahvisti toimituksen hetkellä',
+    'no_shipping_methods_available' => 'Ei toimitustapoja saatavilla!',
 ];

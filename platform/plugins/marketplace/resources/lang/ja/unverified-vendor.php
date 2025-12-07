@@ -18,12 +18,12 @@ return [
     'approve' => '承認する',
     'reject' => '拒否する',
     'approve_vendor_confirmation' => 'ベンダーの確認を承認する',
-    'approve_vendor_confirmation_description' => 'Are you sure you really want to approve :vendor for selling on this site?',
+    'approve_vendor_confirmation_description' => 'このサイトで販売するために :vendor を本当に承認しますか？',
     'reject_vendor_confirmation' => 'ベンダーの確認を拒否する',
     'reject_vendor_confirmation_description' => 'Are you sure you really want to reject :vendor for selling on this site?',
     'new_vendor_notifications' => [
         'new_vendor' => '新しいベンダー',
         'view' => 'ビュー',
-        'description' => ':customer has registered but not verified.',
+        'description' => ':customer は登録されましたが、確認されていません。',
     ],
 ];

@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alternatīvais teksts',
 
     'folder_created' => 'Mape veiksmīgi izveidota!',
+    'folder_exists' => 'Mape :folder jau eksistē!',
+    'directory_must_empty' => 'Direktorijam jābūt tukšam, lai to izdzēstu!',
     'gallery' => 'Mediju galerija',
 
     'trash_error' => 'Kļūda dzēšot atlasītos vienumus',

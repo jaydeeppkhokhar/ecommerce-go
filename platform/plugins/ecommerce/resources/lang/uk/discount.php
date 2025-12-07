@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Цей промокод не можна застосувати, оскільки ваш кошик містить товари з блискавичного розпродажу (:product_name). Ціни блискавичного розпродажу не можна поєднувати зі знижками за промокодом.',
     'coupon_applied_successfully' => 'Чудово! Промокод ":code" застосовано. Ви заощадили гроші на цьому замовленні!',
     'coupon_removed_successfully' => 'Промокод видалено з вашого замовлення.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Промокоди (:count)',
+    'left_quantity' => 'Залишилось :left',
+    'apply' => 'Застосувати',
+    'remove' => 'Видалити',
+    'select_coupon' => 'Вибрати купон',
+    'you_have_coupon_code' => 'У вас є промокод?',
+    'close' => 'Закрити',
+    'coupon_code_label' => 'Промокод: :code',
+    'enter_coupon_code_placeholder' => 'Введіть промокод...',
 ];

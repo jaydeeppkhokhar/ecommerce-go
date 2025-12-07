@@ -10,7 +10,7 @@
         @if (EcommerceHelper::isReviewEnabled() && (!EcommerceHelper::hideRatingWhenNoReviews() || $store->reviews->count() > 0))
             <div class="d-flex align-items-center gap-1 bb-store-item-rating">
                 @include(EcommerceHelper::viewPath('includes.rating-star'), ['avg' => $store->reviews()->avg('star')])
-                <a href="{{ $store->url }}" class="small">{{ __('(:count reviews)', ['count' => number_format($store->reviews->count())]) }}</a>
+                <a href="{{ $store->url }}" class="small">{{ trans('plugins/ecommerce::review.count_reviews', ['count' => number_format($store->reviews->count())]) }}</a>
             </div>
         @endif
 
@@ -45,7 +45,7 @@
         <div class="bb-store-item-action">
             <a href="{{ $store->url }}" class="btn btn-primary">
                 <x-core::icon name="ti ti-building-store" />
-                {{ __('Visit Store') }}
+                {{ trans('plugins/marketplace::store.visit_store') }}
             </a>
         </div>
     </div>

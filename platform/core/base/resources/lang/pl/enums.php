@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Opublikuj zasoby pakietów',
         'clean_up' => 'Wyczyść pliki aktualizacji systemu',
         'done' => 'System zaktualizowany pomyślnie',
-
+        'unknown' => 'Nieznany krok',
         'messages' => [
             'download' => 'Pobieranie plików aktualizacji...',
             'update_files' => 'Aktualizowanie plików systemowych...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Czyszczenie plików aktualizacji systemu...',
             'done' => 'Gotowe! Twoja przeglądarka zostanie odświeżona za 30 sekund.',
         ],
-
         'failed_messages' => [
             'download' => 'Nie można pobrać plików aktualizacji',
             'update_files' => 'Nie można zaktualizować plików systemowych',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Nie można opublikować zasobów pakietów',
             'clean_up' => 'Nie można wyczyścić plików aktualizacji systemu',
         ],
-
         'success_messages' => [
             'download' => 'Pobrano pliki aktualizacji pomyślnie.',
             'update_files' => 'Zaktualizowano pliki systemowe pomyślnie.',

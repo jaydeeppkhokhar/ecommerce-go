@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Tekst alternatywny',
 
     'folder_created' => 'Folder został utworzony pomyślnie!',
+    'folder_exists' => 'Folder :folder już istnieje!',
+    'directory_must_empty' => 'Katalog musi być pusty, aby go usunąć!',
     'gallery' => 'Galeria multimediów',
 
     'trash_error' => 'Błąd podczas usuwania wybranych elementów',

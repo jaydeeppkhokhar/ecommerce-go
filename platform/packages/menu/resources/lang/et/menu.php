@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Korraldage menüü üksusi lohistades ja kukutades, et muuta nende järjekorda või pesastada neid alammenüüdena.',
     'widget_custom_menu' => 'Kohandatud menüü',
     'widget_custom_menu_description' => 'Lisa oma vidina alale kohandatud menüü.',
+    'select_menu' => 'Vali menüü',
 ];

@@ -17,7 +17,10 @@ class OrderCreatedEmailNotification
     {
         $storeIds = [];
         $order = $event->order;
-        $order->loadMissing(['products', 'products.product']);
+        $order->loadMissing([
+            'products',
+            'products.product',
+        ]);
 
         foreach ($order->products as $orderProduct) {
             $product = $orderProduct->product;

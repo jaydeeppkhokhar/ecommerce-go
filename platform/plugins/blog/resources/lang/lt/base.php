@@ -11,11 +11,6 @@ return [
     'short_code_description' => 'Pridėti tinklaraščio įrašus',
     'number_posts_per_page_in_category' => 'Įrašų skaičius puslapyje kategorijoje',
     'number_posts_per_page_in_tag' => 'Įrašų skaičius puslapyje žymėje',
-    'title' => 'Tinklaraštis',
-    'description' => 'Peržiūrėti ir atnaujinti tinklaraščio nustatymus',
-    'enable_blog_post_schema' => 'Įjungti Schema tinklaraščio įrašams',
-    'enable_blog_post_schema_description' => 'Sužinokite daugiau: https://schema.org/Article',
-    'schema_type' => 'Schema tipas',
     'blog_posts' => 'Tinklaraščio įrašai',
     'blog_categories' => 'Tinklaraščio kategorijos',
     'blog_tags' => 'Tinklaraščio žymės',
@@ -25,6 +20,5 @@ return [
         'enable_blog_post_schema' => 'Įjungti Schema tinklaraščio įrašams',
         'enable_blog_post_schema_description' => 'Sužinokite daugiau: https://schema.org/Article',
         'schema_type' => 'Schema tipas',
-
     ],
 ];

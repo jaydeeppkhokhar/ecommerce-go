@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'अमान्य Google AdSense क्लाइंट ID प्रारूप। यह प्रारूप में होना चाहिए: ca-pub-XXXXXXXXXXXXXXXX (जहां X एक अंक है)।',
         ],
     ],
+    'banner' => 'बैनर',
+    'tablet_image' => 'टैबलेट छवि',
+    'tablet_image_helper' => '768px से 1200px चौड़ाई वाले डिवाइस के लिए, यदि खाली है, तो डेस्कटॉप से छवि का उपयोग किया जाएगा।',
+    'mobile_image' => 'मोबाइल छवि',
+    'mobile_image_helper' => '768px से कम चौड़ाई वाले डिवाइस के लिए, यदि खाली है, तो टैबलेट से छवि का उपयोग किया जाएगा।',
 ];

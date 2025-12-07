@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Formulario de inicio de sesión de administrador',
     'admin_forgot_password_form' => 'Formulario de contraseña olvidada de administrador',
     'admin_reset_password_form' => 'Formulario de restablecimiento de contraseña de administrador',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Captcha de Matemáticas',
+    'math_question' => 'Resuelva la siguiente función matemática: :label =?',
+    'captcha_verification_failed' => '¡Error en la verificación del captcha!',
+    'math_captcha_verification_failed' => '¡Falló la verificación del Captcha matemático!',
 ];

@@ -24,6 +24,7 @@ class AdminAppearanceRequest extends Request
             'admin_appearance_locale' => ['sometimes', 'required', Rule::in(array_keys(AdminHelper::getAdminLocales()))],
             'admin_appearance_locale_direction' => ['required', 'in:ltr,rtl'],
             'rich_editor' => ['required', Rule::in(array_keys(BaseHelper::availableRichEditors()))],
+            'enable_page_visual_builder' => ['nullable', 'bool'],
             'admin_appearance_layout' => ['required', 'string', Rule::in(array_keys(AdminAppearance::getLayouts()))],
             'admin_appearance_show_menu_item_icon' => ['nullable', 'bool'],
             'admin_appearance_container_width' => ['required', 'string', Rule::in(array_keys(AdminAppearance::getContainerWidths()))],

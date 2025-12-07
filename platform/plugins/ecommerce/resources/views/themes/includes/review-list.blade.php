@@ -21,17 +21,17 @@
                 </div>
                 @if ($isCurrentCustomerReview)
                     <span class="badge bg-primary">
-                        {{ __('Your Review') }}
+                        {{ trans('plugins/ecommerce::review.your_review') }}
                     </span>
                 @endif
                 <time class="text-muted small" datetime="{{ $review->created_at->translatedFormat('Y-m-d\TH:i:sP') }}">
                     {{ $review->created_at->diffForHumans() }}
                 </time>
                 @if ($review->order_created_at)
-                    <div class="small text-muted">{{ __('✅ Purchased :time', ['time' => $review->order_created_at->diffForHumans()]) }}</div>
+                    <div class="small text-muted">{{ trans('plugins/ecommerce::review.purchased_at_time', ['time' => $review->order_created_at->diffForHumans()]) }}</div>
                 @endif
                 @if (! $review->is_approved)
-                    <div class="small text-warning">{{ __('Waiting for approval') }}</div>
+                    <div class="small text-warning">{{ trans('plugins/ecommerce::review.waiting_for_approval') }}</div>
                 @endif
 
                 @if ($isCurrentCustomerReview)
@@ -40,8 +40,8 @@
                             href="javascript:void(0)"
                             class="text-danger delete-review-btn p-1"
                             data-review-id="{{ $review->id }}"
-                            data-confirm-message="{{ __('Are you sure you want to delete your review?') }}"
-                            title="{{ __('Delete your review') }}"
+                            data-confirm-message="{{ trans('plugins/ecommerce::review.are_you_sure_you_want_to_delete_your_review') }}"
+                            title="{{ trans('plugins/ecommerce::review.delete_your_review') }}"
                         >
                             <x-core::icon name="ti ti-trash" />
                         </a>
@@ -82,7 +82,7 @@
                                 {{ $review->reply->user->name }}
                             </div>
                             <span class="badge bg-primary">
-                                {{ __('Admin') }}
+                                {{ trans('plugins/ecommerce::ecommerce.admin') }}
                             </span>
                             <time class="text-muted small" datetime="{{ $review->reply->created_at->translatedFormat('Y-m-d\TH:i:sP') }}">
                                 {{ $review->reply->created_at->diffForHumans() }}

@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alt text',
 
     'folder_created' => 'Matagumpay na ginawa ang folder!',
+    'folder_exists' => 'Ang folder na :folder ay umiiral na!',
+    'directory_must_empty' => 'Ang direktoryo ay dapat na walang laman upang mabura!',
     'gallery' => 'Media gallery',
 
     'trash_error' => 'Error sa pagtanggal ng mga napiling item',

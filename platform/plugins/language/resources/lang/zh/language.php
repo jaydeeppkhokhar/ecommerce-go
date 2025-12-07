@@ -51,6 +51,9 @@ return [
     'hide_languages' => '隐藏语言',
     'hide_languages_description' => '您可以完全隐藏特定语言的内容，以便访客和搜索引擎无法看到，但您仍然可以查看。这允许您审查正在进行的翻译。',
     'hide_languages_helper_display_hidden' => '{0} 所有语言当前都显示。|{1} :language 当前对访客隐藏。|[2, Inf] :language 当前对访客隐藏。',
+    'hide_languages_helper_display_hidden_zero' => '所有语言当前都显示。',
+    'hide_languages_helper_display_hidden_singular' => ':language 当前对访客隐藏。',
+    'hide_languages_helper_display_hidden_plural' => ':language 当前对访客隐藏。',
     'show_all' => '显示全部',
     'change_language' => '语言',
     'select_flag' => '选择一个旗帜...',
@@ -61,5 +64,7 @@ return [
     'setup_site_language' => '要设置网站语言，请访问 :link 页面。或者访问 :appearance_link 设置管理员语言。',
     'no_languages' => '您的网站中没有语言！',
     'update' => '更新',
-    'language_show_default_item_if_current_version_not_existed' => '如果当前语言中不存在该项目，则以默认语言显示该项目',
+    'default_language_warning' => '您应该只在初始设置期间设置一次默认语言，并避免稍后更改。',
+    'default_language_warning_details' => '更改默认语言不会自动更新您的现有内容——所有先前输入的数据仍与原始默认语言绑定。',
+    'default_language_warning_action' => '如果您决定更改默认语言，则需要手动更新网站内容以匹配新的默认语言，因为它不会自动更新。',
 ];

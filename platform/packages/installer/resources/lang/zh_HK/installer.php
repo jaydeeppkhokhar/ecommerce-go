@@ -3,9 +3,6 @@
 return [
     'title' => '安裝',
     'next' => '下一步',
-    'back' => '上一頁',
-    'finish' => '安裝',
-    'installation' => '安裝',
     'forms' => [
         'errorTitle' => '發生了以下錯誤：',
     ],
@@ -17,7 +14,6 @@ return [
     ],
     'requirements' => [
         'title' => '伺服器要求',
-        'next' => '檢查權限',
     ],
     'permissions' => [
         'next' => '配置環境',
@@ -28,17 +24,11 @@ return [
             'form' => [
                 'name_required' => '需要環境名稱。',
                 'app_name_label' => '網站標題',
-                'app_name_placeholder' => '網站標題',
                 'app_url_label' => '網址',
-                'app_url_placeholder' => '網址',
                 'db_connection_label' => '數據庫連接',
                 'db_connection_label_mysql' => 'MySQL',
-                'db_connection_label_sqlite' => 'SQLite',
-                'db_connection_label_pgsql' => 'PostgreSQL',
                 'db_host_label' => '數據庫主機',
-                'db_host_placeholder' => '數據庫主機',
                 'db_port_label' => '數據庫端口',
-                'db_port_placeholder' => '數據庫端口',
                 'db_name_label' => '數據庫名稱',
                 'db_name_placeholder' => '數據庫名稱',
                 'db_username_label' => '數據庫用戶名',
@@ -79,13 +69,11 @@ return [
         'title' => '啟用許可證',
         'skip' => '暫時跳過',
     ],
-    'install' => '安裝',
     'final' => [
         'pageTitle' => '安裝完成',
         'title' => '完成',
         'message' => '應用程式已成功安裝。',
         'exit' => '去管理儀表板',
     ],
-    'install_success' => '安裝成功！',
     'install_step_title' => '安裝 - 步驟 :step: :title',
 ];

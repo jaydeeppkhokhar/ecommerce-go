@@ -7,7 +7,7 @@ return [
         <br/><br/> Ang Math Captcha ay nagbibigay-daan sa iyo na gumamit ng mga simpleng problema sa matematika upang subukan ang mga user ng site upang patunayan ang kanilang pagkakakilanlang tao.',
         'panel_description' => 'Tingnan at i-update ang reCAPTCHA at Math CAPTCHA.',
         'recaptcha_site_key' => 'reCAPTCHA Site Key',
-        'recaptcha_secret' => 'reCAPTCHA Secret',
+        'recaptcha_secret' => 'reCAPTCHA Lihim na Susi',
         'enable_recaptcha' => 'Paganahin ang reCAPTCHA',
         'recaptcha_score' => 'Puntos',
         'recaptcha_credential_helper' => 'Kunin ang iyong mga Google reCAPTCHA credentials :link.',
@@ -22,7 +22,7 @@ return [
         'enable_for_form' => 'Paganahin para sa :form',
     ],
     'numbers' => [
-        '0' => 'Zero',
+        '0' => 'Sero',
         '1' => 'Isa',
         '2' => 'Dalawa',
         '3' => 'Tatlo',
@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Form ng pag-login ng admin',
     'admin_forgot_password_form' => 'Form ng nakalimutang password ng admin',
     'admin_reset_password_form' => 'Form ng pag-reset ng password ng admin',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Math Captcha',
+    'math_question' => 'Mangyaring lutasin ang sumusunod na pagpapaandar sa matematika: Placeholder0 =?',
+    'captcha_verification_failed' => 'Nabigo ang Verification ng CAPTCHA!',
+    'math_captcha_verification_failed' => 'Nabigo ang pag -verify ng Math Captcha!',
 ];

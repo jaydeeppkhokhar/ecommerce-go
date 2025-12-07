@@ -66,6 +66,7 @@ return [
     'languages' => 'Mga Wika',
     'reset_password' => 'I-reset ang Kontrasenyas',
     'deactivated_message' => 'Ang iyong account ay na-deactivate. Mangyaring makipag-ugnayan sa administrator.',
+    'password_changed_message' => 'Nabago na ang iyong password. Mangyaring mag-login muli gamit ang iyong bagong password.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

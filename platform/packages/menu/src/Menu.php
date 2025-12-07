@@ -12,8 +12,8 @@ use Botble\Base\Forms\FieldOptions\TextFieldOption;
 use Botble\Base\Forms\Fields\ColorField;
 use Botble\Base\Forms\Fields\CoreIconField;
 use Botble\Base\Forms\Fields\TextField;
-use Botble\Base\Forms\FormAbstract;
 use Botble\Base\Models\BaseModel;
+use Botble\Base\Supports\MetadataCache;
 use Botble\Base\Supports\RepositoryHelper;
 use Botble\Menu\Forms\MenuNodeForm;
 use Botble\Menu\Http\Requests\MenuRequest;
@@ -236,11 +236,42 @@ class Menu
 
         $result = RepositoryHelper::applyBeforeExecuteQuery($items, new MenuModel())->get();
 
+        $this->preloadMenuNodeMetadata($result);
+
         if ($cacheEnabled) {
             $this->cache->put($cacheKey, $result);
         }
 
         return $result;
+    }
+
+    protected function preloadMenuNodeMetadata(Collection $menus): void
+    {
+        $menuNodes = collect();
+
+        foreach ($menus as $menu) {
+            if ($menu->relationLoaded('menuNodes')) {
+                $menuNodes = $menuNodes->merge($menu->menuNodes);
+
+                foreach ($menu->menuNodes as $node) {
+                    if ($node->relationLoaded('child')) {
+                        $menuNodes = $menuNodes->merge($node->child);
+                    }
+                }
+            }
+        }
+
+        if ($menuNodes->isEmpty()) {
+            return;
+        }
+
+        $metadataKeys = apply_filters('menu_metadata_keys_to_preload', []);
+
+        if (empty($metadataKeys)) {
+            return;
+        }
+
+        MetadataCache::preloadForModels($menuNodes->all(), $metadataKeys);
     }
 
     public function generateMenu(array $args = []): ?string
@@ -424,56 +455,58 @@ class Menu
 
     public function useMenuItemIconImage(): void
     {
-        FormAbstract::beforeRendering(function (FormAbstract $form): FormAbstract {
+        MenuNodeForm::beforeRendering(function (MenuNodeForm $form): MenuNodeForm {
+            /**
+             * @var MenuNode $model
+             */
             $model = $form->getModel();
 
-            if ($model instanceof MenuNode) {
-                $form
-                    ->modify(
-                        'icon_font',
-                        CoreIconField::class,
-                        CoreIconFieldOption::make()
-                    )
-                    ->addAfter('icon_font', 'icon_image', 'mediaImage', [
-                        'label' => __('Icon image'),
-                        'attr' => [
-                            'data-update' => 'icon_image',
-                        ],
-                        'value' => $model->icon_image ?: $model->getMetaData('icon_image', true),
-                        'help_block' => [
-                            'text' => __('It will replace Icon Font if it is present.'),
-                        ],
-                        'wrapper' => [
-                            'style' => 'display: block;',
-                        ],
-                    ]);
-            }
+            $form
+                ->modify(
+                    'icon_font',
+                    CoreIconField::class,
+                    CoreIconFieldOption::make()
+                )
+                ->addAfter('icon_font', 'icon_image', 'mediaImage', [
+                    'label' => trans('packages/menu::menu.icon_image'),
+                    'attr' => [
+                        'data-update' => 'icon_image',
+                    ],
+                    'value' => $model->icon_image ?: $model->getMetaData('icon_image', true),
+                    'help_block' => [
+                        'text' => trans('packages/menu::menu.icon_image_helper'),
+                    ],
+                    'wrapper' => [
+                        'style' => 'display: block;',
+                    ],
+                ]);
 
             return $form;
         }, 124);
 
-        FormAbstract::beforeSaving(function (FormAbstract $form): void {
+        MenuNodeForm::beforeSaving(function (MenuNodeForm $form): void {
+            /**
+             * @var MenuNode $model
+             */
             $model = $form->getModel();
 
-            if ($model instanceof MenuNode) {
-                $request = $form->getRequest();
+            $request = $form->getRequest();
 
-                if ($request->has('data.icon_image')) {
-                    if ($iconImage = $request->input('data.icon_image')) {
-                        MetaBox::saveMetaBoxData($model, 'icon_image', $iconImage);
-                    } else {
-                        MetaBox::deleteMetaData($model, 'icon_image');
-                    }
-
-                    return;
+            if ($request->has('data.icon_image')) {
+                if ($iconImage = $request->input('data.icon_image')) {
+                    MetaBox::saveMetaBoxData($model, 'icon_image', $iconImage);
+                } else {
+                    MetaBox::deleteMetaData($model, 'icon_image');
                 }
 
-                if ($menuNodes = $request->input('menu_nodes')) {
-                    $menuNodes = json_decode($menuNodes, true);
+                return;
+            }
 
-                    if ($menuNodes) {
-                        $this->saveMenuNodeImages($menuNodes, $model);
-                    }
+            if ($menuNodes = $request->input('menu_nodes')) {
+                $menuNodes = json_decode($menuNodes, true);
+
+                if ($menuNodes) {
+                    $this->saveMenuNodeImages($menuNodes, $model);
                 }
             }
         }, 170);
@@ -534,7 +567,7 @@ class Menu
             return $form;
         });
 
-        MenuNodeForm::beforeSaving(function (FormAbstract $form) {
+        MenuNodeForm::beforeSaving(function (MenuNodeForm $form) {
             $model = $form->getModel();
 
             if ($model instanceof MenuNode) {

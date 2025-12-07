@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Objednávka úspěšná!',
     'customer_new_order_greeting' => 'Vážený/á :customer_name,',
     'customer_new_order_message' => 'Děkujeme vám za nákup našich produktů, budeme vás kontaktovat na telefonu <strong>:customer_phone</strong> pro potvrzení objednávky!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Způsob dopravy',
     'customer_new_order_order_number' => 'Číslo objednávky',
     'customer_new_order_payment_method' => 'Způsob platby',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Obdrželi jste novou objednávku z :site_title',
     'admin_new_order_greeting' => 'Ahoj administrátore,',
     'admin_new_order_message' => 'Nová objednávka byla úspěšně zadána zákazníkem :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Způsob dopravy',
     'admin_new_order_payment_method' => 'Způsob platby',
     'admin_new_order_view_order' => 'Zobrazit detail objednávky',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Objednávka potvrzena!',
     'order_confirm_greeting' => 'Ahoj :customer_name,',
     'order_confirm_message' => 'Vaše objednávka byla potvrzena. Děkujeme vám za nákup našich produktů!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Poznámka',
     'order_confirm_shipping_method' => 'Způsob dopravy',
     'order_confirm_payment_method' => 'Způsob platby',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Vaše objednávka byla zrušena',
     'customer_cancel_order_greeting' => 'Vážený/á :customer_name,',
     'customer_cancel_order_message' => 'Vaše objednávka <strong>:order_id</strong> byla zrušena na vaši žádost z důvodu :cancellation_reason a vaše platba byla také zrušena.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Adresa',
     'customer_cancel_order_products' => 'Zde je to, co jste objednali:',
     'customer_cancel_order_note' => 'Poznámka',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Objednávka zrušena',
     'admin_cancel_order_greeting' => 'Ahoj :customer_name,',
-    'admin_cancel_order_message' => 'Vaše objednávka #:order_id byla zrušena naším personálem.',
+    'admin_cancel_order_message' => 'Vaše objednávka :order_id byla zrušena naším personálem.',
     'admin_cancel_order_order_cancelled' => 'Objednávka byla zrušena!',
     'admin_cancel_order_reason' => 'Důvod zrušení: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Informace o zákazníkovi',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Detail objednávky:',
     'admin_cancel_order_note' => 'Poznámka',
     'admin_cancel_order_order_summary' => 'Souhrn objednávky',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Objednávka #:order_id zrušena zákazníkem',
+    'order_cancellation_to_admin_title' => 'Objednávka :order_id zrušena zákazníkem',
     'order_cancellation_to_admin_greeting' => 'Ahoj administrátore,',
-    'order_cancellation_to_admin_message' => ':customer_name zrušil objednávku <strong>#:order_id</strong>. Důvod: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name zrušil objednávku <strong>:order_id</strong>. Důvod: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Informace o zákazníkovi',
     'order_cancellation_to_admin_name' => 'Jméno',
     'order_cancellation_to_admin_phone' => 'Telefon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Poznámka',
     'order_cancellation_to_admin_view_order' => 'Zobrazit detail objednávky',
     'order_cancellation_to_admin_order_summary' => 'Souhrn objednávky',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Vaše objednávka je na cestě',
     'customer_delivery_order_greeting' => 'Ahoj :customer_name,',
     'customer_delivery_order_message' => 'Vaše objednávka je na cestě. Děkujeme vám za nákup našich produktů!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'ID sledování',
     'customer_delivery_order_tracking_link' => 'Odkaz pro sledování',
     'customer_delivery_order_track_shipment' => 'Sledujte vaši zásilku',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Vaše objednávka byla doručena',
     'customer_order_delivered_greeting' => 'Ahoj :customer_name,',
     'customer_order_delivered_message' => 'Vaše objednávka byla doručena. Děkujeme vám za nákup našich produktů!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'ID sledování',
     'customer_order_delivered_tracking_link' => 'Odkaz pro sledování',
     'customer_order_delivered_track_shipment' => 'Zobrazit detaily sledování',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Platba potvrzena pro objednávku #:order_id',
+    'order_confirm_payment_title' => 'Platba potvrzena pro objednávku :order_id',
     'order_confirm_payment_greeting' => 'Ahoj :customer_name,',
     'order_confirm_payment_message' => 'Vaše platba byla potvrzena. Děkujeme vám za nákup našich produktů!',
     'order_confirm_payment_order_number' => 'Číslo objednávky',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Děkujeme za vaši platbu. Vaše objednávka bude brzy zpracována.',
     'order_confirm_payment_order_summary' => 'Souhrn objednávky',
     'order_confirm_payment_shipping_method' => 'Způsob dopravy',
-
-    // Order Recovery Email
     'order_recover_title' => 'Máte nedokončenou objednávku',
     'order_recover_greeting' => 'Ahoj :customer_name,',
     'order_recover_message' => 'Všimli jsme si, že máte nedokončenou objednávku. Chcete dokončit nákup?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Dokončit objednávku',
     'order_recover_order_summary' => 'Souhrn objednávky',
     'order_recover_note' => 'Poznámka',
-
-    // Welcome Email
     'welcome_greeting' => 'Jsme rádi, že jste zde, :customer_name!',
     'welcome_message' => 'Vítejte na :site_title!',
     'welcome_register_success' => 'Úspěšně jste si zaregistrovali účet na <strong>:site_title</strong>.',
     'welcome_explore' => 'Pokud potřebujete pomoc, neváhejte odpovědět na tento e-mail!',
     'welcome_visit_shop' => 'Začít nakupovat!',
-
-    // Confirm Email
     'confirm_email_title' => 'Ověřit e-mail',
     'confirm_email_greeting' => 'Jsme rádi, že jste zde, :customer_name!',
     'confirm_email_message' => 'Potvrďte prosím svou e-mailovou adresu kliknutím na tlačítko níže.',
     'confirm_email_instruction' => 'Pro přístup na tyto webové stránky prosím ověřte svou e-mailovou adresu. Klikněte na tlačítko níže pro ověření vašeho e-mailu.',
     'confirm_email_button' => 'Potvrdit e-mailovou adresu',
     'confirm_email_trouble' => 'Pokud máte problémy s kliknutím na tlačítko "Potvrdit e-mailovou adresu", zkopírujte a vložte níže uvedenou URL do vašeho webového prohlížeče: <a href=":verify_link">:verify_link</a> a vložte ji do prohlížeče.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Obnovit heslo',
     'password_reminder_greeting' => 'Ahoj :customer_name,',
     'password_reminder_message' => 'Požádali jste o obnovení hesla.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Obnovit heslo',
     'password_reminder_ignore' => 'Pokud jste o obnovení hesla nežádali, ignorujte prosím tento e-mail.',
     'password_reminder_trouble_clicking' => 'Pokud máte problémy s kliknutím na tlačítko "Obnovit heslo", zkopírujte a vložte níže uvedenou URL do vašeho webového prohlížeče: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Žádost o vrácení přijata',
     'order_return_request_greeting' => 'Ahoj :customer_name,',
-    'order_return_request_message' => 'Obdrželi jsme vaši žádost o vrácení objednávky #:order_id.',
+    'order_return_request_message' => 'Obdrželi jsme vaši žádost o vrácení objednávky :order_id.',
     'order_return_request_reason' => 'Důvod vrácení',
     'order_return_request_items' => 'Položky k vrácení',
     'order_return_request_process' => 'Zpracujeme vaši žádost a brzy vás budeme kontaktovat.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Důvod vrácení',
     'order_return_request_order_summary' => 'Souhrn objednávky',
     'order_return_request_note' => 'Poznámka',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Aktualizace stavu vrácení objednávky',
     'order_return_status_updated_greeting' => 'Vážený/á :customer_name,',
     'order_return_status_updated_message' => 'Chtěli jsme vás informovat, že stav vaší žádosti o vrácení objednávky :order_id byl aktualizován.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Poznámka moderátora: " :description ".',
     'order_return_status_updated_questions' => 'Pokud máte nějaké otázky nebo obavy ohledně této aktualizace, neváhejte kontaktovat náš tým zákaznické podpory.',
     'order_return_status_updated_view_details' => 'Zobrazit detaily vrácení',
-
-    // Review Products Email
     'review_products_title' => 'Ohodnoťte váš nedávný nákup',
     'review_products_greeting' => 'Ahoj :customer_name,',
-    'review_products_message' => 'Vaše objednávka #:order_id byla dokončena. Rádi bychom slyšeli vaši zpětnou vazbu!',
+    'review_products_message' => 'Vaše objednávka :order_id byla dokončena. Rádi bychom slyšeli vaši zpětnou vazbu!',
     'review_products_instruction' => 'Věnujte prosím chvilku hodnocení produktů, které jste si zakoupili:',
     'review_products_button' => 'Hodnotit produkty',
     'review_products_thank_you' => 'Děkujeme za váš nákup!',
     'review_products_products' => 'Produkty k hodnocení',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Vaše digitální produkty jsou připraveny',
     'download_digital_products_greeting' => 'Ahoj :customer_name,',
     'download_digital_products_message' => 'Děkujeme za váš nákup! Vaše digitální produkty jsou připraveny ke stažení.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Stáhnout všechny soubory',
     'download_digital_products_external_link_downloads' => 'Stáhnout externí soubory',
     'download_digital_products_payment_method' => 'Způsob platby',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Vaše licenční kódy',
     'digital_product_license_codes_greeting' => 'Vážený/á :customer_name,',
     'digital_product_license_codes_message' => 'Děkujeme za váš nákup! Zde jsou vaše licenční kódy:',
     'digital_product_license_codes_thanks' => 'Děkujeme za nákup našich digitálních produktů.',
-    'digital_product_license_codes_below' => 'Níže jsou vaše licenční kódy pro produkty, které jste si zakoupili:',
     'digital_product_license_codes_product' => 'Produkt',
     'digital_product_license_codes_license' => 'Licenční kód',
     'digital_product_license_codes_order_summary' => 'Zde je to, co jste objednali:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Každý licenční kód je jedinečný a lze jej použít pouze jednou',
     'digital_product_license_codes_note_3' => 'Nesdílejte vaše licenční kódy s ostatními',
     'digital_product_license_codes_note_4' => 'Pokud máte problemy s vašimi licenčními kódy, kontaktujte prosím náš tým podpory',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Soubory produktu aktualizovány',
     'product_file_updated_greeting' => 'Ahoj, :customer_name!',
     'product_file_updated_message' => 'Soubory pro produkt <a href=":product_link"><strong>:product_name</strong></a> byly aktualizovány.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Aktualizované soubory si můžete stáhnout ze svého účtu.',
     'product_file_updated_order_number' => 'Číslo objednávky',
     'product_file_updated_download' => 'Stáhnout aktualizované soubory',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Platba přijata',
     'invoice_payment_created_greeting' => 'Ahoj :customer_name,',
     'invoice_payment_created_message' => 'Úspěšně jsme obdrželi vaši platbu pro :site_title. Děkujeme!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Svou fakturu si můžete zobrazit online na <a href=":invoice_link">:invoice_link</a> s kódem faktury #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Váš kód faktury je #:invoice_code',
     'invoice_payment_created_view_online' => 'Zobrazit fakturu online',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Ahoj :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Obdrželi jsme vaši žádost o smazání účtu.',
     'customer_deletion_request_confirmation_warning' => 'Upozorňujeme, že tuto akci nelze vrátit zpět. Všechna vaše data budou trvale smazána.',
     'customer_deletion_request_confirmation_button' => 'Potvrdit smazání',
     'customer_deletion_request_confirmation_cancel' => 'Pokud jste o toto nežádali, ignorujte prosím tento e-mail.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Ahoj :customer_name,',
     'customer_deletion_request_completed_message' => 'Váš účet byl úspěšně smazán podle vaší žádosti.',
     'customer_deletion_request_completed_thank_you' => 'Děkujeme, že jste byli s námi.',
     'customer_deletion_request_completed_goodbye' => 'Doufáme, že vás uvidíme znovu v budoucnosti.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Ahoj administrátore,',
     'payment_proof_upload_notification_message' => 'Zákazník :customer_name (E-mail: <a href="mailto::customer_email">:customer_email</a>) nahrál doklad o platbě pro svou objednávku s ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'Detaily platby si můžete zobrazit <a href=":payment_link">zde</a> a detaily objednávky <a href=":order_link">zde</a>.',

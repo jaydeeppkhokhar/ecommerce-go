@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Листа производа',
         'cart' => 'Корпа',
     ],
+    'purchased' => 'купио',
+    'verified' => 'Верификовано',
+    'quick_view' => 'Брзи преглед',
 ];

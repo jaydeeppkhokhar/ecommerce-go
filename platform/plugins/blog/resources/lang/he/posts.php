@@ -23,7 +23,6 @@ return [
     'edit_this_post' => 'ערוך פוסט זה',
     'no_new_post_now' => 'אין פוסטים חדשים כעת!',
     'menu_name' => 'פוסטים',
-    'widget_posts_recent' => 'פוסטים אחרונים',
     'categories' => 'קטגוריות',
     'category' => 'קטגוריה',
     'author' => 'מחבר',

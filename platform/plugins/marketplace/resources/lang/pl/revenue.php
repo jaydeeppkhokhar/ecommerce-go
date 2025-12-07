@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Przychody',
     'edit' => 'Zaktualizuj saldo portfela',
     'view_store' => 'Zobacz sklep ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Dodaj/Odejmij kwotę sprzedawcy',
     'statements' => 'Wyciągi',
     'products' => 'Produkty',
+    'items_earning_sales' => 'Sprzedaż zarobków pozycji: :amount',
 ];

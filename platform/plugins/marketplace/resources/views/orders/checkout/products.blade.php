@@ -1,5 +1,5 @@
 <div class="bg-light py-2">
-    <p class="font-weight-bold mb-0">{{ __('Product(s)') }}:</p>
+    <p class="font-weight-bold mb-0">{{ trans('plugins/ecommerce::order.products') }}:</p>
 </div>
 
 <div class="checkout-products-marketplace shipping-method-wrapper">
@@ -43,9 +43,9 @@
                             @include(EcommerceHelper::viewPath('includes.rating-star'), ['avg' => $store->reviews()->avg('star')])
                             <span class="small text-muted">
                                 @if (($reviewsCount = $store->reviews()->count()) === 1)
-                                    ({{ __('1 Review') }})
+                                    ({{ trans('plugins/ecommerce::review.1_review') }})
                                 @else
-                                    ({{ __(':count Reviews', ['count' => number_format($reviewsCount)]) }})
+                                    ({{ trans('plugins/ecommerce::review.count_reviews', ['count' => number_format($reviewsCount)]) }})
                                 @endif
                             </span>
                         </div>
@@ -67,7 +67,7 @@
                 <div class="shipping-method-wrapper py-3" @style(['display: none' => (bool) get_ecommerce_setting('disable_shipping_options', false)])>
                     @if (!empty($shipping))
                         <div class="payment-checkout-form">
-                            <h6>{{ __('Shipping method') }}:</h6>
+                            <h6>{{ trans('plugins/ecommerce::shipping.shipping_method') }}:</h6>
 
                             <input
                                 name="shipping_option[{{ $storeId }}]"
@@ -97,7 +97,7 @@
                             </div>
                         </div>
                     @else
-                        <p>{{ __('No shipping methods available!') }}</p>
+                        <p>{{ trans('plugins/ecommerce::shipping.no_shipping_methods_available') }}</p>
                     @endif
 
                     <div class="payment-info-loading loading-spinner" style="display: none;"></div>
@@ -109,7 +109,7 @@
                 <div class="p-3">
                     <div class="row">
                         <div class="col-6">
-                            <p>{{ __('Subtotal') }}:</p>
+                            <p>{{ trans('plugins/ecommerce::order.sub_amount') }}:</p>
                         </div>
                         <div class="col-6 text-end">
                             <p class="price-text sub-total-text text-end">
@@ -119,7 +119,7 @@
                     @if (EcommerceHelper::isTaxEnabled())
                         <div class="row">
                             <div class="col-6">
-                                <p>{{ __('Tax') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.tax') }}:</p>
                             </div>
                             <div class="col-6 text-end">
                                 <p class="price-text tax-price-text">
@@ -131,7 +131,7 @@
                     @if ($couponDiscountAmount)
                         <div class="row">
                             <div class="col-6">
-                                <p>{{ __('Discount amount') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.discount') }}:</p>
                             </div>
                             <div class="col-6 text-end">
                                 <p class="price-text coupon-price-text">{{ format_price($couponDiscountAmount) }}</p>
@@ -142,7 +142,7 @@
                     @if ($isAvailableShipping && MarketplaceHelper::isChargeShippingPerVendor())
                         <div class="row">
                             <div class="col-6">
-                                <p>{{ __('Shipping fee') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.shipping_fee') }}:</p>
                             </div>
                             <div class="col-6 text-end">
                                 <p class="price-text">
@@ -150,7 +150,7 @@
                                         <span class="font-italic" style="text-decoration-line: line-through;">
                                             {{ format_price(Arr::get($shippingCurrent, 'price')) }}
                                         </span>
-                                        <span class="font-weight-bold">{{ __('Free shipping') }}</span>
+                                        <span class="font-weight-bold">{{ trans('plugins/ecommerce::order.free_shipping') }}</span>
                                     @else
                                         <span class="font-weight-bold">
                                             {{ format_price(Arr::get($shippingCurrent, 'price')) }}
@@ -162,7 +162,7 @@
                     @endif
                     <div class="row">
                         <div class="col-6">
-                            <p>{{ __('Total') }}:</p>
+                            <p>{{ trans('plugins/ecommerce::order.total') }}:</p>
                         </div>
                         <div class="col-6 float-end">
                             <p class="total-text raw-total-text mb-0" data-price="{{ $rawTotal }}">

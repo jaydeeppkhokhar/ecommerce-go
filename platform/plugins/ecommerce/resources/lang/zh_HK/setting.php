@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => '允許顧客為其訂單上傳付款證明。這對手動付款方式很有用。',
             'enable_guest_payment_proof' => '允許訪客顧客上傳付款證明',
             'enable_guest_payment_proof_helper' => '啟用後,訪客顧客可以使用其訂單令牌上傳付款證明,而無需登入。他們將在訂單確認電子郵件中收到上傳連結。',
+            'payment_proof_payment_methods' => '需要付款證明的付款方式',
+            'payment_proof_payment_methods_helper' => '選擇哪些付款方式應允許客戶上傳付款證明。通常用於貨到付款和銀行轉賬等手動付款方式。',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => '顯示帶有「已售出 X 個,共 Y 個」的進度條,以在限時搶購期間營造緊迫感並鼓勵快速購買。',
     ],
     'payment_method_cod_minimum_amount' => '最低訂單金額 - :currency(選填)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => '最低訂單金額 - :currency(選填)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => '在結帳成功頁面顯示銀行資訊?',
     'invoice_templates' => '發票範本',
 ];

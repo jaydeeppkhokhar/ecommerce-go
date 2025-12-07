@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Senarai produk',
         'cart' => 'Troli',
     ],
+    'purchased' => 'membeli',
+    'verified' => 'Disahkan',
+    'quick_view' => 'Paparan pantas',
 ];

@@ -66,6 +66,7 @@ return [
     'languages' => 'Kalbos',
     'reset_password' => 'Atkurti slaptažodį',
     'deactivated_message' => 'Jūsų paskyra buvo išjungta. Prašome susisiekti su administratoriumi.',
+    'password_changed_message' => 'Jūsų slaptažodis pakeistas. Prisijunkite iš naujo su nauju slaptažodžiu.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

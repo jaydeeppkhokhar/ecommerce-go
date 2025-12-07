@@ -509,7 +509,8 @@ class CartController extends BaseApiController
         $content = $cart->content();
         $rawSubTotal = $cart->rawSubTotal();
         $rawTotal = $cart->rawTotal();
-        $rawTaxTotal = $cart->rawTax();
+        $totalDiscountAmount = $promotionDiscountAmount + $couponDiscountAmount;
+        $rawTaxTotal = $cart->rawTax($totalDiscountAmount);
         $countCart = $cart->count();
 
         if (is_plugin_active('marketplace')) {
@@ -532,10 +533,7 @@ class CartController extends BaseApiController
             }
         }
 
-        $orderTotal = $rawTotal - $promotionDiscountAmount - $couponDiscountAmount;
-        if ($orderTotal < 0) {
-            $orderTotal = 0;
-        }
+        $orderTotal = max($rawTotal - $totalDiscountAmount, 0);
 
         $cartData = [
             'cart_items' => CartItemResource::collection($content),

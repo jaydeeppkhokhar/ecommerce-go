@@ -39,4 +39,7 @@ return [
         'product_listing' => 'قائمة المنتجات',
         'cart' => 'سلة التسوق',
     ],
+    'purchased' => 'اشترى',
+    'verified' => 'موثق',
+    'quick_view' => 'عرض سريع',
 ];

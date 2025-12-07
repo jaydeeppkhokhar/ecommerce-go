@@ -66,6 +66,7 @@ return [
     'languages' => 'Jazyky',
     'reset_password' => 'Obnovit heslo',
     'deactivated_message' => 'Váš účet byl deaktivován. Kontaktujte prosím správce.',
+    'password_changed_message' => 'Vaše heslo bylo změněno. Přihlaste se prosím znovu pomocí nového hesla.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

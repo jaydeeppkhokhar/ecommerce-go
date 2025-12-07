@@ -85,21 +85,21 @@ class Shippo
         $this->currency = get_application_currency()->title;
 
         $this->statuses = [
-            'PRE_TRANSIT' => __('Shipping Label Created'),
-            'TRANSIT' => __('In Transit'),
-            'DELIVERED' => __('Delivered'),
-            'RETURNED' => __('Returned to Sender'),
-            'FAILURE' => __('Exception'),
-            'UNKNOWN' => __('Shipping Label Created'),
+            'PRE_TRANSIT' => trans('plugins/shippo::shippo.status.shipping_label_created'),
+            'TRANSIT' => trans('plugins/shippo::shippo.status.in_transit'),
+            'DELIVERED' => trans('plugins/shippo::shippo.status.delivered'),
+            'RETURNED' => trans('plugins/shippo::shippo.status.returned_to_sender'),
+            'FAILURE' => trans('plugins/shippo::shippo.status.exception'),
+            'UNKNOWN' => trans('plugins/shippo::shippo.status.shipping_label_created'),
         ];
 
         $this->contentTypes = [
-            'MERCHANDISE' => __('Merchandise'),
-            'DOCUMENTS' => __('Documents'),
-            'GIFT' => __('Gift'),
-            'RETURN_MERCHANDISE' => __('Returned Goods'),
-            'HUMANITARIAN_DONATION' => __('Humanitarian Donation'),
-            'OTHER' => __('Other'),
+            'MERCHANDISE' => trans('plugins/shippo::shippo.content_type.merchandise'),
+            'DOCUMENTS' => trans('plugins/shippo::shippo.content_type.documents'),
+            'GIFT' => trans('plugins/shippo::shippo.content_type.gift'),
+            'RETURN_MERCHANDISE' => trans('plugins/shippo::shippo.content_type.returned_goods'),
+            'HUMANITARIAN_DONATION' => trans('plugins/shippo::shippo.content_type.humanitarian_donation'),
+            'OTHER' => trans('plugins/shippo::shippo.content_type.other'),
         ];
 
         $this->insurance = false;
@@ -189,7 +189,7 @@ class Shippo
             if ($rates = Arr::get($suggestResponse, 'shipment.rates', [])) {
                 foreach ($rates as &$rate) {
                     $rate['disabled'] = true;
-                    $rate['error_message'] = __('Not available in COD payment option.');
+                    $rate['error_message'] = trans('plugins/shippo::shippo.not_available_cod');
                 }
 
                 Arr::set($newResponse, 'shipment.rates', $rates);
@@ -754,7 +754,7 @@ class Shippo
 
         if ($addressTo = Arr::get($response, 'address_to')) {
             if ($this->validateAddress && empty($addressTo['is_complete'])) {
-                $validationErrors['destination'][] = __('Address appears to be incomplete');
+                $validationErrors['destination'][] = trans('plugins/shippo::shippo.address_incomplete');
 
                 $this->log([__LINE__, 'Address is incomplete']);
             }

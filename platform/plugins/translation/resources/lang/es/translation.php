@@ -69,9 +69,7 @@ return [
             'trans' => 'Can be empty or a string with a maximum length of :max characters if provided.',
         ],
     ],
-    'translations_description' => 'Traduce todas las palabras del sistema.',
-    'import_done' => 'Importación terminada, procesado: :counter ¡Vuelve a cargar esta página para actualizar los grupos!',
-    'confirm_publish_group' => '¿Realmente desea eliminar esta configuración regional? ¡Eliminará todos los archivos/carpetas que se alojan en /resources/lang!',
-    'choose_group_msg' => 'Elija un grupo para mostrar las traducciones. Si no hay grupos visibles, asegúrese de haber importado las traducciones.',
-    'choose_a_group' => 'Elige un grupo',
+    'download_locale' => 'Descargar idioma',
+    'import_available_locale_confirmation' => 'Descargar idioma desde GitHub',
+    'import_available_locale_confirmation_content' => '¿Está seguro de que desea descargar este idioma? Se descargará en :lang_path, puede eliminarlo más tarde si lo desea.',
 ];

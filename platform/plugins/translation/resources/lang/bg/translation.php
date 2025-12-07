@@ -69,4 +69,7 @@ return [
             'trans' => 'Може да бъде празно или низ с максимална дължина от :max символа, ако е предоставено.',
         ],
     ],
+    'download_locale' => 'Изтегляне на езика',
+    'import_available_locale_confirmation' => 'Изтеглете езика от GitHub',
+    'import_available_locale_confirmation_content' => 'Наистина ли искате да изтеглите този език? Той ще бъде изтеглен в :lang_path, можете да го изтриете по-късно, ако искате.',
 ];

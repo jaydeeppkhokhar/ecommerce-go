@@ -1,6 +1,6 @@
 @if (count($widgetAreas))
     @foreach ($widgetAreas as $item)
-        @continue(! class_exists($item->widget_id))
+        @continue(!class_exists($item->widget_id))
 
         @php
             $widget = new $item->widget_id();
@@ -24,7 +24,10 @@
                             <h5 class="mb-0 fw-semibold">{{ $widget->getName() }}</h5>
                         </div>
                         <div class="ms-auto">
-                            <button class="btn btn-sm btn-ghost-secondary p-1" type="button">
+                            <button
+                                class="btn btn-sm btn-ghost-secondary p-1"
+                                type="button"
+                            >
                                 <x-core::icon
                                     size="sm"
                                     name="ti ti-chevron-down"
@@ -33,7 +36,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="widget-content border-top-0" style="display: none;">
+                <div
+                    class="widget-content border-top-0"
+                    style="display: none;"
+                >
                     <div class="card-body">
                         <form method="post">
                             <input
@@ -50,7 +56,11 @@
                                     size="sm"
                                     class="widget-control-delete"
                                 >
-                                    <x-core::icon name="ti ti-trash" size="sm" class="me-1" />
+                                    <x-core::icon
+                                        name="ti ti-trash"
+                                        size="sm"
+                                        class="me-1"
+                                    />
                                     {{ trans('packages/widget::widget.delete') }}
                                 </x-core::button>
 
@@ -60,7 +70,11 @@
                                     size="sm"
                                     class="widget-save"
                                 >
-                                    <x-core::icon name="ti ti-device-floppy" size="sm" class="me-1" />
+                                    <x-core::icon
+                                        name="ti ti-device-floppy"
+                                        size="sm"
+                                        class="me-1"
+                                    />
                                     {{ trans('core/base::forms.save_and_continue') }}
                                 </x-core::button>
                             </div>
@@ -75,7 +89,11 @@
         <div class="card border-2 border-dashed bg-light">
             <div class="card-body text-center py-4">
                 <div class="mb-2">
-                    <x-core::icon name="ti ti-drag-drop-2" size="lg" class="text-muted" />
+                    <x-core::icon
+                        name="ti ti-drag-drop-2"
+                        size="lg"
+                        class="text-muted"
+                    />
                 </div>
                 <p class="text-muted mb-0">{{ trans('packages/widget::widget.drag_widget_to_sidebar') }}</p>
             </div>

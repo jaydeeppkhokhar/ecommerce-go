@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Ovaj kupon ne može biti primenjen jer vaša korpa sadrži artikle sa brze rasprodaje (:product_name). Cene brze rasprodaje ne mogu biti kombinovane sa popustima kupona.',
     'coupon_applied_successfully' => 'Odlično! Kod kupona ":code" je primenjen. Uštedeli ste novac na ovoj porudžbini!',
     'coupon_removed_successfully' => 'Kod kupona je uklonjen sa vaše porudžbine.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kodovi kupona (:count)',
+    'left_quantity' => 'Preostalo :left',
+    'apply' => 'Primeni',
+    'remove' => 'Ukloni',
+    'select_coupon' => 'Izaberi kupon',
+    'you_have_coupon_code' => 'Imate li kod kupona?',
+    'close' => 'Zatvori',
+    'coupon_code_label' => 'Kod kupona: :code',
+    'enter_coupon_code_placeholder' => 'Unesite kod kupona...',
 ];

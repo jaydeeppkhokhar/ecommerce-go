@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Lisää yksinkertainen liukusäädin',
     'select_slider' => 'Valitse liukusäädin',
     'shortcode' => 'Lyhytkoodi',
+    'tablet_image' => 'Tabletin kuva',
+    'tablet_image_helper' => 'Laitteissa, joiden leveys on 768–1200 pikseliä, käyttää työpöydän kuvaa, jos se on tyhjä.',
+    'mobile_image' => 'Mobiilikuva',
+    'mobile_image_helper' => 'Laitteissa, joiden leveys on alle 768 pikseliä, käytetään tabletin kuvaa, jos se on tyhjä.',
 ];

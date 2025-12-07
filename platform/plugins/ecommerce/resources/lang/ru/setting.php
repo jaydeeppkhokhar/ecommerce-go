@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Разрешить клиентам загружать подтверждение платежа для своих заказов. Это полезно для ручных методов оплаты.',
             'enable_guest_payment_proof' => 'Разрешить гостевым клиентам загружать подтверждение платежа',
             'enable_guest_payment_proof_helper' => 'Когда включено, гостевые клиенты могут загружать подтверждение платежа, используя свой токен заказа без входа в систему. Они получат ссылку для загрузки в письме с подтверждением заказа.',
+            'payment_proof_payment_methods' => 'Способы оплаты, требующие подтверждения платежа',
+            'payment_proof_payment_methods_helper' => 'Выберите, какие способы оплаты должны позволять клиентам загружать подтверждение платежа. Обычно используется для ручных способов оплаты, таких как наложенный платеж и банковский перевод.',
         ],
     ],
     'checkout' => [
@@ -485,7 +487,14 @@ return [
         'show_sale_count_left_description' => 'Показывать прогресс-бар с "X продано из Y" для создания срочности и стимулирования быстрых покупок во время скидок-молний.',
     ],
     'payment_method_cod_minimum_amount' => 'Минимальная сумма заказа - :currency (необязательно)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Минимальная сумма заказа - :currency (необязательно)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Отображать банковскую информацию на странице успешного оформления заказа?',
     'invoice_templates' => 'Шаблоны счетов',
 ];

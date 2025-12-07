@@ -45,4 +45,6 @@ return [
     'admin' => 'व्यवस्थापक',
     'register_an_account' => 'एक खाता',
     'activity_has_been_deleted' => 'गतिविधि हटा दी गई है',
+    'no_results_found' => 'No results found',
+    'no_activities_here' => 'It looks as through there are no activities here.',
 ];

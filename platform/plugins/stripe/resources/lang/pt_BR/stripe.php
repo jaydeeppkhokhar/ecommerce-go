@@ -14,4 +14,7 @@ return [
         'step_4_label' => 'Copiar segredo de assinatura',
         'step_4_description' => 'Copie o valor "Signing Secret" da seção "Detalhes do Webhook" e cole-o no campo "Stripe Webhook Secret" na seção "Stripe" da guia "Pagamento" na página "Configurações".',
     ],
+    'no_payment_charge' => 'Sem cobrança de pagamento. Por favor, tente novamente!',
+    'payment_failed' => 'Pagamento falhou!',
+    'payment_type' => 'Tipo de Pagamento',
 ];

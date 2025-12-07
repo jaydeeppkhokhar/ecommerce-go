@@ -3,7 +3,7 @@
 return [
     'id' => 'ID',
     'name' => 'Tên',
-    'slug' => 'Slug',
+    'slug' => 'Đường dẫn',
     'title' => 'Tiêu đề',
     'order_by' => 'Thứ tự',
     'order' => 'Thứ tự',

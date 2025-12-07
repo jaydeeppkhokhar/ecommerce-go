@@ -5,8 +5,12 @@ return [
     'create' => 'Uus KKK',
     'question' => 'Küsimus',
     'answer' => 'Vastus',
+    'question_placeholder' => 'Sisestage oma küsimus...',
+    'answer_placeholder' => 'Sisestage oma vastus...',
     'category' => 'Kategooria',
     'faq_schema_config' => 'KKK skeemi konfiguratsioon (:link)',
+    'faq_schema_config_description' => 'See konfiguratsioon registreerib ainult KKK struktureeritud andmeid SEO eesmärkidel. Seda ei kuvata esiliidese teema sisus. Skeem on manustatud lehe lähtekoodis ja seda saab vaadata kasutades "Vaata lähtekoodi" või testida Google Rich Results Test tööriistaga.',
+    'schema_testing_tool' => 'Testige Google Rich Results Testiga',
     'learn_more' => 'Loe rohkem',
     'settings' => [
         'title' => 'KKK',

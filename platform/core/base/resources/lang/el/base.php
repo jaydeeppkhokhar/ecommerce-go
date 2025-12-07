@@ -19,7 +19,7 @@ return [
         'html_attributes' => 'Χαρακτηριστικά HTML',
         'body_attributes' => 'Χαρακτηριστικά Body',
         'settings' => 'Τιμές Ρυθμίσεων',
-        'email_css' => 'Email CSS',
+        'email_css' => 'CSS ηλεκτρονικού ταχυδρομείου',
         'variable' => 'Μεταβλητή',
         'preview' => 'Προεπισκόπηση',
         'icon_variables' => 'Μεταβλητές εικονιδίων',

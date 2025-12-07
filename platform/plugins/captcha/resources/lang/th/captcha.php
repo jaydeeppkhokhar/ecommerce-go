@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'แบบฟอร์มเข้าสู่ระบบผู้ดูแล',
     'admin_forgot_password_form' => 'แบบฟอร์มลืมรหัสผ่านผู้ดูแล',
     'admin_reset_password_form' => 'แบบฟอร์มรีเซ็ตรหัสผ่านผู้ดูแล',
+    'captcha' => 'แคปช่า',
+    'math_captcha' => 'คณิตศาสตร์แคปช่า',
+    'math_question' => 'โปรดแก้ฟังก์ชันทางคณิตศาสตร์ต่อไปนี้: :label = ?',
+    'captcha_verification_failed' => 'การยืนยันแคปต์ชาล้มเหลว!',
+    'math_captcha_verification_failed' => 'การยืนยัน Captcha ทางคณิตศาสตร์ล้มเหลว!',
 ];

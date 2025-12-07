@@ -97,6 +97,16 @@
         margin-inline-start: unset;
         margin-inline-end: -30px;
     }
+
+    .tp-postbox-details-main-wrapper {
+        padding-right: 0;
+        padding-left: 100px;
+    }
+
+    .ck-content ul {
+        padding-left: 0;
+        padding-right: 20px;
+    }
 }
 
 @media (max-width: 575px) {

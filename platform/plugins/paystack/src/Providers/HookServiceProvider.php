@@ -126,8 +126,8 @@ class HookServiceProvider extends ServiceProvider
 
         if (! in_array($paymentData['currency'], $supportedCurrencies)) {
             $data['error'] = true;
-            $data['message'] = __(
-                ":name doesn't support :currency. List of currencies supported by :name: :currencies.",
+            $data['message'] = trans(
+                'plugins/payment::payment.currency_not_supported',
                 [
                     'name' => 'Paystack',
                     'currency' => $paymentData['currency'],
@@ -167,7 +167,7 @@ class HookServiceProvider extends ServiceProvider
             }
 
             $data['error'] = true;
-            $data['message'] = __('Payment failed!');
+            $data['message'] = trans('plugins/paystack::paystack.payment_failed');
         } catch (Throwable $exception) {
             $data['error'] = true;
             $data['message'] = json_encode($exception->getMessage());

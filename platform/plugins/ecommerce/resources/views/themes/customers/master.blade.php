@@ -11,7 +11,7 @@
                             </div>
                             <div>
                                 <div class="fw-semibold small">{{ $customer->name }}</div>
-                                <div class="text-muted" style="font-size: 0.75rem;">{{ __('Account Dashboard') }}</div>
+                                <div class="text-muted" style="font-size: 0.75rem;">{{ trans('plugins/ecommerce::customer-dashboard.account_dashboard') }}</div>
                             </div>
                         @endif
                     </div>
@@ -100,7 +100,7 @@
     <!-- Mobile Sidebar Offcanvas -->
     <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="customerSidebar" aria-labelledby="customerSidebarLabel">
         <div class="offcanvas-header border-bottom">
-            <h5 class="offcanvas-title" id="customerSidebarLabel">{{ __('Account Menu') }}</h5>
+            <h5 class="offcanvas-title" id="customerSidebarLabel">{{ trans('plugins/ecommerce::customer-dashboard.account_menu') }}</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body p-0">

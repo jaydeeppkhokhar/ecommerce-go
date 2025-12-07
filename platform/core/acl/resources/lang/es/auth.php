@@ -65,6 +65,8 @@ return [
     'sign_in_below' => 'Iniciar sesión',
     'languages' => 'Idiomas',
     'reset_password' => 'Restablecer la contraseña',
+    'deactivated_message' => 'Tu cuenta ha sido desactivada. Por favor, contacta al administrador.',
+    'password_changed_message' => 'Tu contraseña ha sido cambiada. Por favor, inicia sesión nuevamente con tu nueva contraseña.',
     'settings' => [
         'email' => [
             'description' => 'Configuración de correo ACL',

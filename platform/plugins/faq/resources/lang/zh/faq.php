@@ -5,8 +5,12 @@ return [
     'create' => '新常见问题',
     'question' => '问题',
     'answer' => '回答',
+    'question_placeholder' => '输入您的问题...',
+    'answer_placeholder' => '输入您的答案...',
     'category' => '类别',
     'faq_schema_config' => '常见问题架构配置 (:link)',
+    'faq_schema_config_description' => '此配置仅用于注册FAQ结构化数据以用于SEO目的。它不会显示在前端主题内容中。该架构嵌入在页面源代码中，可以使用"查看源代码"查看或使用Google的富媒体搜索结果测试工具进行测试。',
+    'schema_testing_tool' => '使用Google富媒体搜索结果测试',
     'learn_more' => '了解更多',
     'settings' => [
         'title' => '常见问题',

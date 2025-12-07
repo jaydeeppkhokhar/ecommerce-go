@@ -11,11 +11,6 @@ return [
     'short_code_description' => 'Додај објаве блога',
     'number_posts_per_page_in_category' => 'Број објава по страници у категорији',
     'number_posts_per_page_in_tag' => 'Број објава по страници у ознаци',
-    'title' => 'Блог',
-    'description' => 'Преглед и ажурирање подешавања блога',
-    'enable_blog_post_schema' => 'Омогући Schema за објаве блога',
-    'enable_blog_post_schema_description' => 'Сазнајте више: https://schema.org/Article',
-    'schema_type' => 'Тип Schema',
     'blog_posts' => 'Објаве блога',
     'blog_categories' => 'Категорије блога',
     'blog_tags' => 'Ознаке блога',
@@ -25,6 +20,5 @@ return [
         'enable_blog_post_schema' => 'Омогући Schema за објаве блога',
         'enable_blog_post_schema_description' => 'Сазнајте више: https://schema.org/Article',
         'schema_type' => 'Тип Schema',
-
     ],
 ];

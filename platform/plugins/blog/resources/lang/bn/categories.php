@@ -1,15 +1,18 @@
 <?php
 
 return [
-    'create' => 'Create a new category',
-    'menu' => 'Categories',
-    'edit_this_category' => 'Edit this category',
-    'menu_name' => 'Categories',
-    'none' => 'None',
-    'total_posts' => 'Total posts: :total',
-    'table_view_info' => 'For easier bulk management of categories, you can also',
-    'manage_as_table' => 'manage categories as a table',
-    'parent' => 'Parent Category',
-    'order' => 'Order',
-    'is_default' => 'Is Default',
+    'create' => 'একটি নতুন বিভাগ তৈরি করুন',
+    'menu' => 'বিভাগ',
+    'edit_this_category' => 'এই বিভাগটি সম্পাদনা করুন',
+    'menu_name' => 'বিভাগ',
+    'none' => 'কোনটিই নয়',
+    'total_posts' => 'মোট পোস্ট: :total',
+    'table_view_info' => 'বিভাগগুলির সহজ বাল্ক পরিচালনার জন্য, আপনি এছাড়াও করতে পারেন',
+    'manage_as_table' => 'টেবিল হিসাবে বিভাগ পরিচালনা করুন',
+    'parent' => 'প্যারেন্ট বিভাগ',
+    'order' => 'ক্রম',
+    'is_default' => 'ডিফল্ট',
+    'intro' => [
+        'description' => 'ভাল কন্টেন্ট ব্যবস্থাপনার জন্য আপনার ব্লগ পোস্টগুলি বিভাগে সংগঠিত করুন।',
+    ],
 ];

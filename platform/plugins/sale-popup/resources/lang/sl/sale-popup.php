@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Seznam izdelkov',
         'cart' => 'Košarica',
     ],
+    'purchased' => 'kupil',
+    'verified' => 'Preverjeno',
+    'quick_view' => 'Hiter ogled',
 ];

@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Denna kupong kan inte tillämpas eftersom din varukorg innehåller blixtreaartiklar (:product_name). Blixtreapriser kan inte kombineras med kupongrabatter.',
     'coupon_applied_successfully' => 'Bra! Kupongkod ":code" har tillämpats. Du sparade pengar på denna beställning!',
     'coupon_removed_successfully' => 'Kupongkoden har tagits bort från din beställning.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kupongkoder (:count)',
+    'left_quantity' => 'Kvar :left',
+    'apply' => 'Tillämpa',
+    'remove' => 'Ta bort',
+    'select_coupon' => 'Välj kupong',
+    'you_have_coupon_code' => 'Har du en kupongkod?',
+    'close' => 'Stäng',
+    'coupon_code_label' => 'Kupongkod: :code',
+    'enter_coupon_code_placeholder' => 'Ange kupongkod...',
 ];

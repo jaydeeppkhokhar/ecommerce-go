@@ -7,6 +7,7 @@ class Ecommerce {
 
     constructor() {
         this.initClipboard()
+        this.initFileUpload()
 
         $(document)
             .on('click', '[data-bb-toggle="toggle-product-categories-tree"]', (e) => {
@@ -43,7 +44,7 @@ class Ecommerce {
 
                 const currentFilterState = {}
                 for (const [key, value] of currentUrlParams.entries()) {
-                    if (key !== 'page' && key !== '_') {
+                    if (key !== 'page' && key !== '_' && value) {
                         if (!currentFilterState[key]) {
                             currentFilterState[key] = []
                         }
@@ -335,6 +336,16 @@ class Ecommerce {
                     data = { _method: 'DELETE' }
                 }
 
+                const $form = currentTarget.closest('form')
+
+                if ($form.length) {
+                    const csrfToken = $form.find('input[name="_token"]').val()
+
+                    if (csrfToken && csrfToken !== '') {
+                        data['_token'] = csrfToken
+                    }
+                }
+
                 $.ajax({
                     url,
                     method: 'POST',
@@ -384,12 +395,24 @@ class Ecommerce {
                 const currentTarget = $(e.currentTarget)
                 const table = currentTarget.closest('table')
 
+                let data = {
+                    _method: 'DELETE',
+                }
+
+                const $form = currentTarget.closest('form')
+
+                if ($form.length) {
+                    const csrfToken = $form.find('input[name="_token"]').val()
+
+                    if (csrfToken && csrfToken !== '') {
+                        data['_token'] = csrfToken
+                    }
+                }
+
                 $.ajax({
                     url: currentTarget.data('url'),
                     method: 'POST',
-                    data: {
-                        _method: 'DELETE',
-                    },
+                    data: data,
                     success: ({ error, message, data }) => {
                         if (error) {
                             Theme.showError(message)
@@ -427,9 +450,22 @@ class Ecommerce {
 
                 const url = currentTarget.data('url')
 
+                let data = {}
+
+                const $form = currentTarget.closest('form')
+
+                if ($form.length) {
+                    const csrfToken = $form.find('input[name="_token"]').val()
+
+                    if (csrfToken && csrfToken !== '') {
+                        data['_token'] = csrfToken
+                    }
+                }
+
                 $.ajax({
                     url,
                     method: 'POST',
+                    data: data,
                     beforeSend: () => currentTarget.addClass('btn-loading'),
                     success: ({ error, message, data }) => {
                         if (error) {
@@ -462,10 +498,24 @@ class Ecommerce {
 
                 const currentTarget = $(e.currentTarget)
 
+                let data = {
+                    _method: 'DELETE',
+                }
+
+                const $form = currentTarget.closest('form')
+
+                if ($form.length) {
+                    const csrfToken = $form.find('input[name="_token"]').val()
+
+                    if (csrfToken && csrfToken !== '') {
+                        data['_token'] = csrfToken
+                    }
+                }
+
                 $.ajax({
                     url: currentTarget.data('url'),
                     method: 'POST',
-                    data: { _method: 'DELETE' },
+                    data: data,
                     beforeSend: () => currentTarget.addClass('btn-loading'),
                     success: ({ error, message, data }) => {
                         if (error) {
@@ -510,6 +560,16 @@ class Ecommerce {
 
                 if (quantity) {
                     data.qty = quantity.val()
+                }
+
+                const $form = currentTarget.closest('form')
+
+                if ($form.length) {
+                    const csrfToken = $form.find('input[name="_token"]').val()
+
+                    if (csrfToken && csrfToken !== '') {
+                        data['_token'] = csrfToken
+                    }
                 }
 
                 $.ajax({
@@ -895,12 +955,17 @@ class Ecommerce {
 
                 videoElement.play()
 
-                $button.closest('.bb-product-video').addClass('video-playing')
+                $button.closest('.bb-product-video').addClass('bb-product-video-playing')
 
                 videoElement.addEventListener('ended', () => {
-                    $button.closest('.bb-product-video').removeClass('video-playing')
+                    $button.closest('.bb-product-video').removeClass('bb-product-video-playing')
                     videoElement.currentTime = 0;
                     videoElement.pause();
+                });
+
+                videoElement.addEventListener('pause', () => {
+                    if (videoElement.ended) return;
+                    $button.closest('.bb-product-video').removeClass('bb-product-video-playing')
                 });
             })
 
@@ -1086,10 +1151,6 @@ class Ecommerce {
         let seenParams = {}
 
         formData.forEach((item) => {
-            if (!item.value) {
-                return
-            }
-
             if (item.name.includes('attributes[')) {
                 if (item.value) {
                     data.push(item)
@@ -1099,11 +1160,15 @@ class Ecommerce {
                 if (!groupedData[baseName]) {
                     groupedData[baseName] = new Set()
                 }
-                groupedData[baseName].add(item.value)
+                if (item.value) {
+                    groupedData[baseName].add(item.value)
+                }
             } else {
                 if (!seenParams[item.name]) {
                     seenParams[item.name] = true
-                    data.push(item)
+                    if (item.value) {
+                        data.push(item)
+                    }
                 }
             }
         })
@@ -1651,6 +1716,24 @@ class Ecommerce {
                 Theme.lazyLoadInstance.update()
             }
         }
+    }
+
+    initFileUpload() {
+        $(document).on('change', '.bb-file-input', (e) => {
+            const input = e.target
+            const label = $(input).siblings('.bb-file-label')
+            const fileName = label.find('.bb-file-name')
+            const placeholder = label.find('.bb-file-placeholder')
+
+            if (input.files && input.files.length > 0) {
+                const file = input.files[0]
+                fileName.text(file.name)
+                label.addClass('has-file')
+            } else {
+                fileName.text('')
+                label.removeClass('has-file')
+            }
+        })
     }
 
     initClipboard() {

@@ -9,7 +9,6 @@ return [
     'dashboard' => 'დეშბორდი',
     'home' => 'მთავარი',
     'no_search_result' => 'ვერაფერი მოიძებნა',
-    'page_loaded_time' => 'გვერდი ჩაიტვირთა',
     'platform_admin' => 'მართვა',
     'search' => 'ძიება',
     'setting_email' => 'ელ. ფოსტა',

@@ -11,7 +11,9 @@ return [
     'error' => 'خطأ!',
     'success' => 'نجاح!',
     'info' => 'معلومات!',
-    'enum' => [
-        'validate_message' => 'The :attribute value you have entered is invalid.',
-    ],
+    'enum' =>
+        [
+            'validate_message' => 'قيمة :attribute التي أدخلتها غير صالحة.',
+        ],
+    'delete_failed_message' => 'فشل الحذف، العنصر غير موجود.',
 ];

@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'อนุญาตให้ลูกค้าอัปโหลดหลักฐานการชำระเงินสำหรับคำสั่งซื้อของพวกเขา มีประโยชน์สำหรับวิธีการชำระเงินแบบกำหนดเอง',
             'enable_guest_payment_proof' => 'อนุญาตให้ลูกค้าแขกอัปโหลดหลักฐานการชำระเงิน',
             'enable_guest_payment_proof_helper' => 'เมื่อเปิดใช้งาน ลูกค้าแขกสามารถอัปโหลดหลักฐานการชำระเงินโดยใช้โทเค็นคำสั่งซื้อของพวกเขาโดยไม่ต้องเข้าสู่ระบบ พวกเขาจะได้รับลิงก์อัปโหลดในอีเมลยืนยันคำสั่งซื้อ',
+            'payment_proof_payment_methods' => 'วิธีการชำระเงินที่ต้องการหลักฐานการชำระเงิน',
+            'payment_proof_payment_methods_helper' => 'เลือกวิธีการชำระเงินที่ควรอนุญาตให้ลูกค้าอัปโหลดหลักฐานการชำระเงิน โดยทั่วไปใช้สำหรับวิธีการชำระเงินด้วยตนเอง เช่น เก็บเงินปลายทาง และการโอนเงินผ่านธนาคาร',
         ],
     ],
     'checkout' => [
@@ -463,7 +465,14 @@ return [
         'show_sale_count_left_description' => 'แสดงแถบความคืบหน้าพร้อม "X ขายหมดจาก Y" เพื่อสร้างความเร่งด่วนและส่งเสริมการซื้ออย่างรวดเร็วระหว่างการขายแฟลช',
     ],
     'payment_method_cod_minimum_amount' => 'จำนวนเงินคำสั่งซื้อขั้นต่ำ - :currency (ไม่บังคับ)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'จำนวนเงินคำสั่งซื้อขั้นต่ำ - :currency (ไม่บังคับ)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'แสดงข้อมูลธนาคารในหน้าชำระเงินสำเร็จ?',
     'invoice_templates' => 'เทมเพลตใบแจ้งหนี้',
 ];

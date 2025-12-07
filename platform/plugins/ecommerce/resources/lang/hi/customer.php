@@ -23,7 +23,6 @@ return [
         'activated' => 'सक्रिय',
         'locked' => 'लॉक',
     ],
-    'email_verified' => 'ईमेल सत्यापित?',
     'verify_email' => [
         'confirm_heading' => 'ईमेल सत्यापन पुष्टि',
         'confirm_description' => 'क्या आप वाकई इस ग्राहक का ईमेल सत्यापित करना चाहते हैं?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'यहां क्लिक करें',
         'confirm_button' => 'सत्यापित करें',
     ],
-    'email_already_verified' => 'ईमेल पहले से ही सत्यापित है।',
     'verification_email_sent' => 'सत्यापन ईमेल सफलतापूर्वक भेजा गया!',
     'resend_verification_email' => 'सत्यापन ईमेल पुनः भेजें',
     'resend_verification_email_confirmation' => 'क्या आप वाकई इस ग्राहक को सत्यापन ईमेल पुनः भेजना चाहते हैं?',

@@ -43,4 +43,5 @@ return [
     'copied' => '复制',
     'copy' => '复制',
     'clear' => '清除',
+    'something_went_wrong' => '出现了问题。',
 ];

@@ -5,7 +5,7 @@ return [
     'shipping_method_in' => 'طريقة الشحن لطلب المتجر ":name" غير صالحة.',
     'shipping_option_required' => 'مطلوب خيار الشحن لطلب المتجر ":name".',
     'refund' => [
-        'insufficient_balance' => 'Balance of vendor is not enough to refund order, balance: :balance',
+        'insufficient_balance' => 'رصيد البائع غير كافٍ لاسترداد الطلب، الرصيد: :balance',
         'description' => 'تم رد المبلغ من الطلب #:order',
     ],
     'products_are_from_different_vendors' => 'لا يمكن إنشاء الطلب! المنتجات من بائعين مختلفين.',

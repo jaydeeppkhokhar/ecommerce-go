@@ -69,4 +69,7 @@ return [
             'trans' => 'Može biti prazno ili niz s maksimalnom duljinom od :max znakova ako je navedeno.',
         ],
     ],
+    'download_locale' => 'Preuzmi jezik',
+    'import_available_locale_confirmation' => 'Preuzmi jezik s GitHuba',
+    'import_available_locale_confirmation_content' => 'Jeste li sigurni da želite preuzeti ovaj jezik? Bit će preuzet u :lang_path, možete ga kasnije izbrisati ako želite.',
 ];

@@ -71,7 +71,7 @@
             </tr>
             <tr>
                 <td class="bb-content bb-text-center">
-                    <a href="{{ site_url }}/contact" class="bb-btn bb-bg-blue">
+                    <a href="{{ contact_url }}" class="bb-btn bb-bg-blue">
                         <span class="bb-btn-text">{{ 'plugins/marketplace::marketplace.email_templates.contact_support' | trans }}</span>
                     </a>
                 </td>

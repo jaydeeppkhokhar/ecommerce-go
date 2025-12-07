@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'סוג עמלת עיבוד (אופציונלי)',
     'fee_type_helper' => 'בחר כיצד יש לחשב את עמלת התשלום: כסכום קבוע או כאחוז מהסכום הכולל של ההזמנה. אם תבחר סכום קבוע, הוא יתבסס על מטבע ברירת המחדל (:currency).',
+    'payment_created' => 'יצרת תשלום #:charge_id דרך :channel :time : :amount',
+    'processing_please_wait' => 'מעבד. אנא המתן...',
+    'error' => 'שגיאה',
+    'checkout' => 'תשלום',
+    'show_full_json' => 'הצג JSON מלא',
+    'full_log_data' => 'נתוני יומן מלאים',
+    'currency_not_supported' => ':name אינו תומך ב-:currency. רשימת מטבעות הנתמכים על ידי :name: :currencies.',
+    'please_switch_currency' => 'אנא החלף למטבע נתמך',
+    'payment_with' => 'תשלום באמצעות :paymentType',
 ];

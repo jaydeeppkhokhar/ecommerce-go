@@ -17,7 +17,11 @@
             </div>
         </div>
 
-        <x-core::alert type="info" class="mb-4" :icon="false">
+        <x-core::alert
+            type="info"
+            class="mb-4"
+            :icon="false"
+        >
             <div class="d-flex">
                 <div class="me-2">
                     <x-core::icon name="ti ti-info-circle" />
@@ -33,7 +37,10 @@
                 <x-core::card class="h-100">
                     <x-core::card.header>
                         <x-core::card.title class="d-flex align-items-center">
-                            <x-core::icon name="ti ti-layout-grid" class="me-2" />
+                            <x-core::icon
+                                name="ti ti-layout-grid"
+                                class="me-2"
+                            />
                             {{ trans('packages/widget::widget.available') }}
                         </x-core::card.title>
                     </x-core::card.header>
@@ -47,7 +54,10 @@
                                     data-id="{{ $widget->getId() }}"
                                     class="col widget-item list-unstyled"
                                 >
-                                    <form method="post" class="h-100">
+                                    <form
+                                        method="post"
+                                        class="h-100"
+                                    >
                                         <input
                                             name="id"
                                             type="hidden"
@@ -57,10 +67,16 @@
                                             <div class="card-body p-3 widget-draggable-handler">
                                                 <div class="d-flex align-items-start justify-content-between">
                                                     <div class="flex-grow-1 overflow-hidden">
-                                                        <h5 class="card-title mb-1 text-primary text-truncate" title="{{ $name = $widget->getName() }}">
+                                                        <h5
+                                                            class="card-title mb-1 text-primary text-truncate"
+                                                            title="{{ $name = $widget->getName() }}"
+                                                        >
                                                             {{ $name }}
                                                         </h5>
-                                                        <p class="text-muted small mb-0 text-truncate" title="{{ $description = $widget->getDescription() }}">
+                                                        <p
+                                                            class="text-muted small mb-0 text-truncate"
+                                                            title="{{ $description = $widget->getDescription() }}"
+                                                        >
                                                             {{ $description }}
                                                         </p>
                                                     </div>
@@ -89,7 +105,10 @@
                 <x-core::card>
                     <x-core::card.header>
                         <x-core::card.title class="d-flex align-items-center">
-                            <x-core::icon name="ti ti-layout-sidebar-right" class="me-2" />
+                            <x-core::icon
+                                name="ti ti-layout-sidebar-right"
+                                class="me-2"
+                            />
                             {{ trans('packages/widget::widget.widget_areas') }}
                         </x-core::card.title>
                     </x-core::card.header>
@@ -105,10 +124,14 @@
                                         <div class="card-header bg-light border-bottom py-3 widget-draggable-handler">
                                             <div>
                                                 <h4 class="card-title mb-1 d-flex align-items-center">
-                                                    <x-core::icon name="ti ti-layout-dashboard" size="sm" class="me-2 text-primary" />
+                                                    <x-core::icon
+                                                        name="ti ti-layout-dashboard"
+                                                        size="sm"
+                                                        class="me-2 text-primary"
+                                                    />
                                                     {{ $group->getName() }}
                                                 </h4>
-                                                @if($group->getDescription())
+                                                @if ($group->getDescription())
                                                     <p class="text-muted small mb-0">{{ $group->getDescription() }}</p>
                                                 @endif
                                             </div>

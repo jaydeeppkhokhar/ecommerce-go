@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alternativni tekst',
 
     'folder_created' => 'Fascikla je uspešno napravljena!',
+    'folder_exists' => 'Фолдер :folder већ постоји!',
+    'directory_must_empty' => 'Директоријум мора бити празан да би се обрисао!',
     'gallery' => 'Galerija medija',
 
     'trash_error' => 'Greška pri brisanju izabranih stavki',

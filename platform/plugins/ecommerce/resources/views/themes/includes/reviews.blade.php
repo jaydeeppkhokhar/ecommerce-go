@@ -17,7 +17,7 @@
             @if ($showAvgRating)
                 <div class="col-12 col-md-4">
                     <div class="product-review-number">
-                        <h3 class="product-review-number-title">{{ __('Customer reviews') }}</h3>
+                        <h3 class="product-review-number-title">{{ trans('plugins/ecommerce::review.customer_reviews') }}</h3>
 
                         <div class="product-review-summary">
                             <div class="product-review-summary-value">
@@ -29,9 +29,9 @@
                                 @include(EcommerceHelper::viewPath('includes.rating-star'), ['avg' => $product->reviews_avg, 'size' => 80])
                                 <p>
                                     @if ($product->reviews_count === 1)
-                                        ({{ __('1 Review') }})
+                                        ({{ trans('plugins/ecommerce::review.1_review') }})
                                     @else
-                                        ({{ __(':count Reviews', ['count' => number_format($product->reviews_count)]) }})
+                                        ({{ trans('plugins/ecommerce::review.count_reviews', ['count' => number_format($product->reviews_count)]) }})
                                     @endif
                                 </p>
                             </div>
@@ -45,13 +45,13 @@
                                         data-star="{{ $item['star'] }}"
                                         role="button"
                                         tabindex="0"
-                                        title="{{ __('Filter by :star star reviews', ['star' => $item['star']]) }}"
+                                        title="{{ trans('plugins/ecommerce::review.filter_by_star_reviews', ['star' => $item['star']]) }}"
                                      @endif>
                                     <span class="product-review-progress-bar-title">
                                         @if($item['star'] == 1)
-                                            {{ __(':number Star', ['number' => $item['star']]) }}
+                                            {{ trans('plugins/ecommerce::review.number_star_singular', ['number' => $item['star']]) }}
                                         @else
-                                            {{ __(':number Stars', ['number' => $item['star']]) }}
+                                            {{ trans('plugins/ecommerce::review.number_stars_plural', ['number' => $item['star']]) }}
                                         @endif
                                     </span>
                                     <div class="progress product-review-progress-bar-value">
@@ -79,7 +79,7 @@
 
         @if (EcommerceHelper::isCustomerReviewImageUploadEnabled() && get_ecommerce_setting('display_uploaded_customer_review_images_list', true) && ($reviewImagesCount = count($product->review_images)) > 0)
             <div class="review-images-container">
-                <h4 class="mb-3">{{ __('Images from customer (:count)', ['count' => number_format($reviewImagesCount)]) }}</h4>
+                <h4 class="mb-3">{{ trans('plugins/ecommerce::review.images_from_customer', ['count' => number_format($reviewImagesCount)]) }}</h4>
 
                 <div class="row g-1 review-images">
                     @foreach ($product->review_images as $image)
@@ -88,7 +88,7 @@
                             @if ($loop->iteration === 12)
                                 <div class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-75 rounded"></div>
                                 <div class="position-absolute top-50 start-50 translate-middle text-white">
-                                    <span class="badge bg-dark">+{{ __(':count more', ['count' => number_format($reviewImagesCount - 12)]) }}</span>
+                                    <span class="badge bg-dark">+{{ trans('plugins/ecommerce::review.count_more', ['count' => number_format($reviewImagesCount - 12)]) }}</span>
                                 </div>
                             @endif
                         </a>
@@ -99,26 +99,26 @@
 
         @if ($product->reviews->isNotEmpty())
             <div class="position-relative review-list-container" data-ajax-url="{{ route('public.ajax.reviews', $product->id) }}">
-                <h4 class="mb-3">{{ __(':total review(s) for ":product"', ['total' => number_format($product->reviews_count), 'product' => $product->name]) }}</h4>
+                <h4 class="mb-3">{{ trans('plugins/ecommerce::review.total_reviews_for_product', ['total' => number_format($product->reviews_count), 'product' => $product->name]) }}</h4>
 
                 <div class="d-flex align-items-center justify-content-between mb-4 product-review-controls">
                     <div class="d-flex gap-2 review-control-buttons">
-                        <button type="button" class="btn review-control-btn" data-bb-toggle="review-search-toggle" title="{{ __('Search reviews') }}">
+                        <button type="button" class="btn review-control-btn" data-bb-toggle="review-search-toggle" title="{{ trans('plugins/ecommerce::review.search_reviews') }}">
                             <x-core::icon name="ti ti-search" class="me-1" />
-                            {{ __('Search') }}
+                            {{ trans('plugins/ecommerce::ecommerce.search') }}
                         </button>
-                        <button type="button" class="btn review-control-btn" data-bb-toggle="review-filter-toggle" title="{{ __('Filter by stars') }}">
+                        <button type="button" class="btn review-control-btn" data-bb-toggle="review-filter-toggle" title="{{ trans('plugins/ecommerce::review.filter_by_stars') }}">
                             <x-core::icon name="ti ti-filter" class="me-1" />
-                            {{ __('Filter') }}
+                            {{ trans('plugins/ecommerce::ecommerce.filter') }}
                         </button>
-                        <button type="button" class="btn review-control-btn" data-bb-toggle="review-sort-toggle" title="{{ __('Sort reviews') }}">
+                        <button type="button" class="btn review-control-btn" data-bb-toggle="review-sort-toggle" title="{{ trans('plugins/ecommerce::review.sort_reviews') }}">
                             <x-core::icon name="ti ti-sort-ascending" class="me-1" />
-                            {{ __('Sort') }}
+                            {{ trans('plugins/ecommerce::ecommerce.sort') }}
                         </button>
                     </div>
-                    <button type="button" class="btn review-clear-btn d-none" data-bb-toggle="review-clear-filters" title="{{ __('Clear all filters') }}">
+                    <button type="button" class="btn review-clear-btn d-none" data-bb-toggle="review-clear-filters" title="{{ trans('plugins/ecommerce::ecommerce.clear_all_filters') }}">
                         <x-core::icon name="ti ti-x" class="me-1" />
-                        {{ __('Clear') }}
+                        {{ trans('plugins/ecommerce::ecommerce.clear') }}
                     </button>
                 </div>
 
@@ -127,7 +127,7 @@
                         <input
                             type="search"
                             class="form-control review-search-input"
-                            placeholder="{{ __('Search reviews...') }}"
+                            placeholder="{{ trans('plugins/ecommerce::review.search_reviews_1') }}"
                             data-bb-toggle="review-search"
                         >
                         <div class="position-absolute top-50 end-0 translate-middle-y pe-3">
@@ -138,28 +138,28 @@
 
                 <div class="review-filter-container d-none mb-3">
                     <select class="form-select review-star-filter" data-bb-toggle="review-star-filter">
-                        <option value="">{{ __('All Stars') }}</option>
-                        <option value="5">{{ __('5 Stars') }}</option>
-                        <option value="4">{{ __('4 Stars') }}</option>
-                        <option value="3">{{ __('3 Stars') }}</option>
-                        <option value="2">{{ __('2 Stars') }}</option>
-                        <option value="1">{{ __('1 Star') }}</option>
+                        <option value="">{{ trans('plugins/ecommerce::review.all_stars') }}</option>
+                        <option value="5">{{ trans('plugins/ecommerce::review.5_stars') }}</option>
+                        <option value="4">{{ trans('plugins/ecommerce::review.4_stars') }}</option>
+                        <option value="3">{{ trans('plugins/ecommerce::review.3_stars') }}</option>
+                        <option value="2">{{ trans('plugins/ecommerce::review.2_stars') }}</option>
+                        <option value="1">{{ trans('plugins/ecommerce::review.1_star') }}</option>
                     </select>
                 </div>
 
                 <div class="review-sort-container d-none mb-3">
                     <select class="form-select review-sort-select" data-bb-toggle="review-sort">
-                        <option value="newest">{{ __('Newest') }}</option>
-                        <option value="oldest">{{ __('Oldest') }}</option>
-                        <option value="highest_rating">{{ __('Highest Rating') }}</option>
-                        <option value="lowest_rating">{{ __('Lowest Rating') }}</option>
+                        <option value="newest">{{ trans('plugins/ecommerce::ecommerce.newest') }}</option>
+                        <option value="oldest">{{ trans('plugins/ecommerce::ecommerce.oldest') }}</option>
+                        <option value="highest_rating">{{ trans('plugins/ecommerce::review.highest_rating') }}</option>
+                        <option value="lowest_rating">{{ trans('plugins/ecommerce::review.lowest_rating') }}</option>
                     </select>
                 </div>
 
                 <div class="review-list"></div>
             </div>
         @else
-            <p class="text-muted text-center">{{ __('Looks like there are no reviews yet.') }} </p>
+            <p class="text-muted text-center">{{ trans('plugins/ecommerce::review.looks_like_there_are_no_reviews_yet') }} </p>
         @endif
     </div>
 @endif

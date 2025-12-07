@@ -63,7 +63,7 @@ class InvoiceHelper
             'payment_fee' => $order->payment_fee,
             'discount_amount' => $order->discount_amount ?: 0,
             'sub_total' => $order->sub_total,
-            'amount' => $order->amount,
+            'amount' => max($order->amount, 0),
             'shipping_method' => $order->shipping_method,
             'shipping_option' => $order->shipping_option,
             'coupon_code' => $order->coupon_code,

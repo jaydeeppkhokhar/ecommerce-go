@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'এই কুপন প্রয়োগ করা যাবে না কারণ আপনার কার্টে ফ্ল্যাশ সেল আইটেম রয়েছে (:product_name)। ফ্ল্যাশ সেল মূল্য কুপন ছাড়ের সাথে একত্রিত করা যাবে না।',
     'coupon_applied_successfully' => 'দুর্দান্ত! কুপন কোড ":code" প্রয়োগ করা হয়েছে। আপনি এই অর্ডারে টাকা সাশ্রয় করেছেন!',
     'coupon_removed_successfully' => 'কুপন কোডটি আপনার অর্ডার থেকে সরানো হয়েছে।',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'কুপন কোড (:count)',
+    'left_quantity' => 'বাকি :left',
+    'apply' => 'প্রয়োগ করুন',
+    'remove' => 'সরান',
+    'select_coupon' => 'কুপন নির্বাচন করুন',
+    'you_have_coupon_code' => 'আপনার কি একটি কুপন কোড আছে?',
+    'close' => 'বন্ধ করুন',
+    'coupon_code_label' => 'কুপন কোড: :code',
+    'enter_coupon_code_placeholder' => 'কুপন কোড লিখুন...',
 ];

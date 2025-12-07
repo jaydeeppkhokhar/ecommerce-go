@@ -2,6 +2,7 @@
 
 namespace Botble\Marketplace\Providers;
 
+use Botble\ACL\Models\User;
 use Botble\Base\Contracts\BaseModel;
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Facades\AdminHelper;
@@ -29,6 +30,7 @@ use Botble\Ecommerce\Models\Customer;
 use Botble\Ecommerce\Models\Discount;
 use Botble\Ecommerce\Models\Invoice;
 use Botble\Ecommerce\Models\Order;
+use Botble\Ecommerce\Models\OrderProduct;
 use Botble\Ecommerce\Models\Product;
 use Botble\Ecommerce\Models\Shipment;
 use Botble\Ecommerce\Tables\CustomerTable;
@@ -62,6 +64,7 @@ use Illuminate\Database\Eloquent\Builder as EloquentBuilder;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
@@ -78,6 +81,14 @@ class HookServiceProvider extends ServiceProvider
     {
         $this->app->booted(function (): void {
             FormFrontManager::register(ContactStoreForm::class, ContactStoreRequest::class);
+
+            add_filter('ecommerce_order_product_relations', [$this, 'addStoreRelations'], 120);
+            add_filter('ecommerce_order_product_name', [$this, 'appendStoreToProductName'], 120, 3);
+            add_filter('ecommerce_order_validate_products', [$this, 'validateDifferentStores'], 120, 2);
+            add_filter('ecommerce_order_shipping_origin_address', [$this, 'setStoreAsOriginAddress'], 120, 3);
+            add_filter('ecommerce_order_detail_extra_info', [$this, 'addStoreInfoToOrderDetail'], 120, 2);
+            add_filter('ecommerce_order_product_item_extra_info_after', [$this, 'addStoreInfoToOrderProductItem'], 120, 3);
+            add_filter('ecommerce_order_table_filters', [$this, 'addStoreFilterToOrderTable'], 120, 2);
 
             add_filter(BASE_FILTER_AFTER_FORM_CREATED, [$this, 'registerAdditionalData'], 128, 2);
 
@@ -104,7 +115,11 @@ class HookServiceProvider extends ServiceProvider
                         'title' => trans('plugins/marketplace::store.forms.store'),
                         'type' => 'select-search',
                         'validate' => 'required|string',
-                        'callback' => fn () => Store::query()->pluck('name', 'id')->all(),
+                        'callback' => fn () => cache()->remember(
+                            'marketplace_stores_for_filter',
+                            Carbon::now()->addMinutes(15),
+                            fn () => Store::query()->pluck('name', 'id')->all()
+                        ),
                     ];
                 }
 
@@ -191,17 +206,17 @@ class HookServiceProvider extends ServiceProvider
 
                 add_filter('ecommerce_customer_registration_form_validation_attributes', function (array $attributes): array {
                     return $attributes + [
-                        'shop_name' => __('Shop Name'),
-                        'shop_phone' => __('Shop Phone'),
-                        'shop_url' => __('Shop URL'),
+                        'shop_name' => trans('plugins/marketplace::store.shop_name'),
+                        'shop_phone' => trans('plugins/marketplace::store.shop_phone'),
+                        'shop_url' => trans('plugins/marketplace::store.shop_url'),
                     ];
                 }, 45);
 
                 add_filter('ecommerce_customer_registration_form_validation_messages', function (array $attributes): array {
                     return $attributes + [
-                        'shop_name.required_if' => __('Shop Name is required.'),
-                        'shop_phone.required_if' => __('Shop Phone is required.'),
-                        'shop_url.required_if' => __('Shop URL is required.'),
+                        'shop_name.required_if' => trans('plugins/marketplace::store.shop_name_required'),
+                        'shop_phone.required_if' => trans('plugins/marketplace::store.shop_phone_required'),
+                        'shop_url.required_if' => trans('plugins/marketplace::store.shop_url_required'),
                     ];
                 }, 45);
 
@@ -211,7 +226,7 @@ class HookServiceProvider extends ServiceProvider
 
                         if ($existing) {
                             throw ValidationException::withMessages([
-                                'shop_url' => __('Shop URL is existing. Please choose another one!'),
+                                'shop_url' => trans('plugins/marketplace::marketplace.shop_url_exists'),
                             ]);
                         }
                     }
@@ -302,8 +317,8 @@ class HookServiceProvider extends ServiceProvider
                         'is_vendor',
                         RadioField::class,
                         RadioFieldOption::make()
-                            ->label(__('Register as'))
-                            ->choices([0 => __('I am a customer'), 1 => __('I am a vendor')])
+                            ->label(trans('plugins/marketplace::marketplace.register_as'))
+                            ->choices([0 => trans('plugins/marketplace::marketplace.i_am_customer'), 1 => trans('plugins/marketplace::marketplace.i_am_vendor')])
                             ->defaultValue(0)
                     )
                     ->addAfter(
@@ -317,16 +332,16 @@ class HookServiceProvider extends ServiceProvider
                         'shop_name',
                         TextField::class,
                         TextFieldOption::make()
-                            ->label(__('Shop Name'))
-                            ->placeholder(__('Ex: My Shop'))
+                            ->label(trans('plugins/marketplace::store.shop_name'))
+                            ->placeholder(trans('plugins/marketplace::store.ex_my_shop'))
                     )
                     ->addAfter(
                         'shop_name',
                         'shop_url',
                         TextField::class,
                         TextFieldOption::make()
-                            ->label(__('Shop URL'))
-                            ->placeholder(__('Store URL'))
+                            ->label(trans('plugins/marketplace::store.shop_url'))
+                            ->placeholder(trans('plugins/marketplace::store.store_url'))
                             ->attributes([
                                 'data-url' => route('public.ajax.check-store-url'),
                                 'style' => 'direction: ltr; text-align: left;',
@@ -339,7 +354,7 @@ class HookServiceProvider extends ServiceProvider
                                 )
                             )
                             ->append('</div>')
-                            ->helperText(__('plugins/marketplace::store.forms.shop_url_helper'))
+                            ->helperText(trans('plugins/marketplace::store.forms.shop_url_helper'))
                             ->required(),
                     )
                     ->addAfter(
@@ -347,8 +362,8 @@ class HookServiceProvider extends ServiceProvider
                         'shop_phone',
                         'tel',
                         TextFieldOption::make()
-                            ->label(__('Phone Number'))
-                            ->placeholder(__('Ex: 0943243332'))
+                            ->label(trans('plugins/marketplace::store.forms.phone'))
+                            ->placeholder(trans('plugins/marketplace::store.ex_phone'))
                     )
                     ->addAfter('shop_phone', 'closeVendorWrapper', HtmlField::class, ['html' => '</div>']);
             });
@@ -400,13 +415,13 @@ class HookServiceProvider extends ServiceProvider
         add_action('ecommerce_before_add_to_cart', function (Product $originalProduct): void {
             (new CartValidateSameStore())->handle(
                 $originalProduct,
-                __('You can only add products from the same store to the cart.')
+                trans('plugins/marketplace::marketplace.only_add_products_from_same_store')
             );
         }, 999);
 
         add_action('ecommerce_post_checkout', function (): void {
             (new CartValidateSameStore())->handle(
-                errorMessage: __('Checkout is only available for products from one store at a time. Please remove items from other stores before proceeding.')
+                errorMessage: trans('plugins/marketplace::marketplace.checkout_only_one_store')
             );
         }, 999);
 
@@ -585,10 +600,10 @@ class HookServiceProvider extends ServiceProvider
                     [
                         'id' => 'marketplace_stores_seo_title',
                         'type' => 'text',
-                        'label' => __('Stores listing page SEO title'),
+                        'label' => trans('plugins/marketplace::marketplace.stores_seo_title'),
                         'attributes' => [
                             'name' => 'marketplace_stores_seo_title',
-                            'value' => __('Stores'),
+                            'value' => trans('plugins/marketplace::marketplace.stores'),
                             'options' => [
                                 'class' => 'form-control',
                             ],
@@ -597,7 +612,7 @@ class HookServiceProvider extends ServiceProvider
                     [
                         'id' => 'marketplace_stores_seo_description',
                         'type' => 'textarea',
-                        'label' => __('Stores listing page SEO description'),
+                        'label' => trans('plugins/marketplace::marketplace.stores_seo_description'),
                         'attributes' => [
                             'name' => 'marketplace_stores_seo_description',
                             'value' => null,
@@ -606,7 +621,7 @@ class HookServiceProvider extends ServiceProvider
                                 'rows' => 3,
                             ],
                         ],
-                        'helper' => __('Leave it empty to use the default description.'),
+                        'helper' => trans('plugins/marketplace::marketplace.leave_empty_for_default'),
                     ],
                 ],
             ]);
@@ -615,7 +630,11 @@ class HookServiceProvider extends ServiceProvider
     public function registerAdditionalData(FormAbstract $form, array|Model|string|null $data): FormAbstract
     {
         if ($data instanceof Product && request()->segment(1) === BaseHelper::getAdminPrefix()) {
-            $stores = Store::query()->pluck('name', 'id')->all();
+            $stores = cache()->remember(
+                'marketplace_stores_for_filter',
+                Carbon::now()->addMinutes(15),
+                fn () => Store::query()->pluck('name', 'id')->all()
+            );
 
             $form
                 ->when($stores, function (FormAbstract $form) use ($stores): void {
@@ -695,7 +714,6 @@ class HookServiceProvider extends ServiceProvider
                 $object->is_vendor = $request->input('is_vendor');
             }
 
-            // Create vendor info
             if ($object->is_vendor && ! $object->vendorInfo->id) {
                 VendorInfo::query()->create(['customer_id' => $object->id]);
             }
@@ -805,19 +823,9 @@ class HookServiceProvider extends ServiceProvider
                                     ->whereHas('store', function ($subQuery) use ($keyword) {
                                         return $subQuery->where('name', 'LIKE', $keyword);
                                     })
-                                    ->orWhereHas('address', function ($subQuery) use ($keyword) {
-                                        return $subQuery
-                                            ->where('name', 'LIKE', $keyword)
-                                            ->orWhere('email', 'LIKE', $keyword)
-                                            ->orWhere('phone', 'LIKE', $keyword);
-                                    })
-                                    ->orWhereHas('user', function ($subQuery) use ($keyword) {
-                                        return $subQuery
-                                            ->where('name', 'LIKE', $keyword)
-                                            ->orWhere('email', 'LIKE', $keyword)
-                                            ->orWhere('phone', 'LIKE', $keyword);
-                                    })
-                                    ->orWhere('code', 'LIKE', $keyword);
+                                    ->orWhere(function ($subQuery) use ($keyword): void {
+                                        $subQuery->searchByKeyword(trim($keyword, '%'));
+                                    });
                             })
                             ->where('is_finished', ! $table instanceof OrderIncompleteTable);
                     }
@@ -843,38 +851,17 @@ class HookServiceProvider extends ServiceProvider
                     if ($keyword) {
                         $keyword = '%' . $keyword . '%';
 
-                        $query
-                            ->where(function ($query) use ($keyword): void {
-                                $query
-                                    ->where('ec_products.name', 'LIKE', $keyword)
-                                    ->where('is_variation', 0);
-                            })
-                            ->orWhere(function ($query) use ($keyword): void {
-                                $query
-                                    ->where('is_variation', 0)
-                                    ->where(function ($query) use ($keyword): void {
-                                        $query
-                                            ->orWhere('ec_products.sku', 'LIKE', $keyword)
-                                            ->orWhere('ec_products.created_at', 'LIKE', $keyword)
-                                            ->orWhereHas('store', function ($subQuery) use ($keyword) {
-                                                return $subQuery->where('name', 'LIKE', $keyword);
-                                            })
-                                            ->when(
-                                                in_array('sku', EcommerceHelper::getProductsSearchBy()),
-                                                function ($query) use ($keyword): void {
-                                                    $query
-                                                        ->orWhereHas(
-                                                            'variations.product',
-                                                            function ($query) use ($keyword): void {
-                                                                $query->where('sku', 'LIKE', $keyword);
-                                                            }
-                                                        );
-                                                }
-                                            );
-                                    });
-                            });
-
-                        return $query;
+                        return $query->where(function ($query) use ($keyword): void {
+                            $query
+                                ->searchByKeyword(trim($keyword, '%'))
+                                ->orWhere(function ($subQuery) use ($keyword): void {
+                                    $subQuery
+                                        ->where('is_variation', 0)
+                                        ->whereHas('store', function ($storeQuery) use ($keyword) {
+                                            return $storeQuery->where('name', 'LIKE', $keyword);
+                                        });
+                                });
+                        });
                     }
 
                     return $query;
@@ -981,59 +968,81 @@ class HookServiceProvider extends ServiceProvider
             return $data;
         }
 
-        $countUnverifiedVendors = 0;
+        /**
+         * @var User $user
+         */
+        $user = Auth::user();
 
-        if (Auth::user()->hasPermission('marketplace.unverified-vendor.index') &&
+        $cacheKey = 'marketplace_menu_counts_' . Auth::id();
+
+        $counts = cache()->remember($cacheKey, Carbon::now()->addMinutes(5), function () use ($user): array {
+            $counts = [];
+
+            if ($user->hasPermission('marketplace.unverified-vendor.index') &&
+                MarketplaceHelper::getSetting('verify_vendor', 1)
+            ) {
+                $counts['unverified_vendors'] = Customer::query()
+                    ->where('is_vendor', true)
+                    ->whereNull('vendor_verified_at')
+                    ->count();
+            }
+
+            if ($user->hasPermission('marketplace.withdrawal.index')) {
+                $counts['pending_withdrawals'] = Withdrawal::query()
+                    ->where('status', 'IN', [WithdrawalStatusEnum::PENDING, WithdrawalStatusEnum::PROCESSING])
+                    ->count();
+            }
+
+            if ($user->hasPermission('products.index')) {
+                $counts['pending_products'] = Product::query()
+                    ->where('status', BaseStatusEnum::PENDING)
+                    ->where('created_by_type', Customer::class)
+                    ->where('created_by_id', '!=', 0)
+                    ->where('is_variation', 0)
+                    ->count();
+
+                $counts['pending_orders'] = Order::query()
+                    ->wherePublished()
+                    ->where('is_finished', 1)
+                    ->count();
+            }
+
+            return $counts;
+        });
+
+        $countUnverifiedVendors = $counts['unverified_vendors'] ?? 0;
+        $countPendingWithdrawals = $counts['pending_withdrawals'] ?? 0;
+        $countPendingProducts = $counts['pending_products'] ?? 0;
+        $pendingOrders = $counts['pending_orders'] ?? 0;
+
+        if ($user->hasPermission('marketplace.unverified-vendor.index') &&
             MarketplaceHelper::getSetting('verify_vendor', 1)
         ) {
-            $countUnverifiedVendors = Customer::query()
-                ->where('is_vendor', true)
-                ->whereNull('vendor_verified_at')
-                ->count();
-
             $data[] = [
                 'key' => 'unverified-vendors',
                 'value' => $countUnverifiedVendors,
             ];
         }
 
-        $countPendingWithdrawals = 0;
-
-        if (Auth::user()->hasPermission('marketplace.withdrawal.index')) {
-            $countPendingWithdrawals = Withdrawal::query()
-                ->where('status', 'IN', [WithdrawalStatusEnum::PENDING, WithdrawalStatusEnum::PROCESSING])
-                ->count();
-
+        if ($user->hasPermission('marketplace.withdrawal.index')) {
             $data[] = [
                 'key' => 'pending-withdrawals',
                 'value' => $countPendingWithdrawals,
             ];
         }
 
-        if (Auth::user()->hasAnyPermission(['marketplace.withdrawal.index', 'marketplace.unverified-vendor.index'])) {
+        if ($user->hasAnyPermission(['marketplace.withdrawal.index', 'marketplace.unverified-vendor.index'])) {
             $data[] = [
                 'key' => 'marketplace-notifications-count',
                 'value' => $countUnverifiedVendors + $countPendingWithdrawals,
             ];
         }
 
-        if (Auth::user()->hasPermission('products.index')) {
-            $countPendingProducts = Product::query()
-                ->where('status', BaseStatusEnum::PENDING)
-                ->where('created_by_type', Customer::class)
-                ->where('created_by_id', '!=', 0)
-                ->where('is_variation', 0)
-                ->count();
-
+        if ($user->hasPermission('products.index')) {
             $data[] = [
                 'key' => 'pending-products',
                 'value' => $countPendingProducts,
             ];
-
-            $pendingOrders = Order::query()
-                ->wherePublished()
-                ->where('is_finished', 1)
-                ->count();
 
             $data[] = [
                 'key' => 'ecommerce-count',
@@ -1104,5 +1113,66 @@ class HookServiceProvider extends ServiceProvider
         }
 
         return $row;
+    }
+
+    public function addStoreRelations(array $with): array
+    {
+        return array_merge($with, ['store', 'variationInfo.configurableProduct.store']);
+    }
+
+    public function appendStoreToProductName(string $productName, $product, $stores)
+    {
+        $store = $product->original_product->store;
+        if ($store && $store->id) {
+            $productName .= ' (' . $store->name . ')';
+            $stores->push($store);
+        }
+
+        return $productName;
+    }
+
+    public function validateDifferentStores(array $result, $stores): array
+    {
+        if ($stores->count() && count(array_unique(array_filter($stores->pluck('id')->all()))) > 1) {
+            return [
+                'isError' => true,
+                'message' => trans('plugins/marketplace::order.products_are_from_different_vendors'),
+            ];
+        }
+
+        return $result;
+    }
+
+    public function setStoreAsOriginAddress(array $origin, $stores, array $addressKeys): array
+    {
+        if ($stores->count() && ($store = $stores->first()) && $store->id) {
+            $origin = Arr::only($store->toArray(), $addressKeys);
+            if (! EcommerceHelper::isUsingInMultipleCountries()) {
+                $origin['country'] = EcommerceHelper::getFirstCountryId();
+            }
+        }
+
+        return $origin;
+    }
+
+    public function addStoreInfoToOrderDetail(string $html, Order $order): string
+    {
+        return $html . view('plugins/marketplace::orders.store-info', compact('order'))->render();
+    }
+
+    public function addStoreInfoToOrderProductItem(string $html, OrderProduct $orderProduct, Order $order): string
+    {
+        return $html . view('plugins/marketplace::orders.product-item-store-info', compact('order'))->render();
+    }
+
+    public function addStoreFilterToOrderTable(array $filters, $table): array
+    {
+        $filters['store_id'] = [
+            'title' => trans('plugins/marketplace::store.forms.store'),
+            'type' => 'select-search',
+            'choices' => [-1 => Theme::getSiteTitle()] + DB::table('mp_stores')->pluck('name', 'id')->all(),
+        ];
+
+        return $filters;
     }
 }

@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Apstrādes maksas tips (Neobligāti)',
     'fee_type_helper' => 'Izvēlieties, kā aprēķināt maksājuma maksu: kā fiksētu summu vai procentu no pasūtījuma kopsummas. Ja izvēlaties fiksētu summu, tā būs balstīta uz noklusējuma valūtu (:currency).',
+    'payment_created' => 'Jūs izveidojāt maksājumu #:charge_id caur :channel :time : :amount',
+    'processing_please_wait' => 'Apstrādā. Lūdzu, uzgaidiet...',
+    'error' => 'Kļūda',
+    'checkout' => 'Norēķins',
+    'show_full_json' => 'Rādīt pilnu JSON',
+    'full_log_data' => 'Pilnīgi žurnāla dati',
+    'currency_not_supported' => ':name neatbalsta :currency. :name atbalstīto valūtu saraksts: :currencies.',
+    'please_switch_currency' => 'Lūdzu, pārslēdzieties uz jebkuru atbalstītu valūtu',
+    'payment_with' => 'Maksājums ar :paymentType',
 ];

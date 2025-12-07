@@ -30,4 +30,11 @@ return [
     'badge_color' => 'Couleur de l\'insigne',
     'widget_custom_menu' => 'Menu personnalisé',
     'widget_custom_menu_description' => 'Ajoutez un menu personnalisé à votre zone de widgets.',
+    'select_menu' => 'Sélectionner le menu',
+    'items' => 'Items',
+    'locations' => 'Locations',
+    'main_navigation' => 'Main Navigation',
+    'drag_drop_info' => 'Rearrange menu items by dragging and dropping them to change their order or nest them as submenus.',
+    'icon_image' => 'Icon image',
+    'icon_image_helper' => 'It will replace Icon Font if it is present.',
 ];

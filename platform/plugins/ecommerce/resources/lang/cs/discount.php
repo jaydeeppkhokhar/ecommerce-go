@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Tento kupón nelze uplatnit, protože váš košík obsahuje položky z výprodeje (:product_name). Ceny výprodeje nelze kombinovat se slevami z kupónů.',
     'coupon_applied_successfully' => 'Skvělé! Slevový kód ":code" byl uplatněn. Ušetřili jste peníze na této objednávce!',
     'coupon_removed_successfully' => 'Slevový kód byl odebrán z vaší objednávky.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Slevové kódy (:count)',
+    'left_quantity' => 'Zbývá :left',
+    'apply' => 'Uplatnit',
+    'remove' => 'Odebrat',
+    'select_coupon' => 'Vybrat kupón',
+    'you_have_coupon_code' => 'Máte slevový kód?',
+    'close' => 'Zavřít',
+    'coupon_code_label' => 'Slevový kód: :code',
+    'enter_coupon_code_placeholder' => 'Zadejte slevový kód...',
 ];

@@ -1,23 +1,9 @@
 <?php
 
 return [
-    'title' => '이커머스 설정',
-    'description' => '이커머스 설정 보기 및 업데이트',
     'general' => [
         'name' => '일반 설정',
         'description' => '일반 이커머스 설정',
-        'enable_cart' => '장바구니 활성화?',
-        'enable_wishlist' => '위시리스트 활성화?',
-        'enable_compare' => '제품 비교 활성화?',
-        'enable_review' => '제품 리뷰 활성화?',
-        'enable_quick_buy_button' => '빠른 구매 버튼 활성화?',
-        'currency' => '통화',
-        'store_name' => '매장 이름',
-        'store_phone' => '매장 전화번호',
-        'store_address' => '매장 주소',
-        'store_state_or_province' => '매장 시/도',
-        'store_city' => '매장 도시',
-        'store_country' => '매장 국가',
     ],
     'currency' => [
         'name' => '통화',
@@ -58,52 +44,26 @@ return [
     'checkout' => [
         'name' => '결제 설정',
         'description' => '결제 프로세스 설정',
-        'enable_guest_checkout' => '게스트 결제 허용?',
-        'show_checkout_address_form' => '결제 시 주소 양식 표시?',
-        'enable_city_in_checkout_address_form' => '결제 주소 양식에서 도시 활성화?',
-        'enable_zipcode_in_checkout_address_form' => '결제 주소 양식에서 우편번호 활성화?',
     ],
     'product' => [
         'name' => '제품 설정',
         'description' => '제품 관련 설정',
-        'how_to_display_product_variation_images' => '제품 변형 이미지 표시 방법',
-        'only_variation_images' => '변형 이미지만',
-        'variation_images_and_main_product_images' => '변형 이미지 및 메인 제품 이미지',
-        'show_product_sku' => '제품 SKU 표시?',
-        'show_product_weight' => '제품 무게 표시?',
-        'show_product_dimensions' => '제품 치수 표시?',
-        'show_number_of_products' => '제품 수량 표시?',
-        'show_out_of_stock_products' => '품절 제품 표시?',
     ],
     'shopping' => [
         'name' => '쇼핑 설정',
         'description' => '쇼핑 경험 설정',
-        'cart_destroy_on_logout' => '로그아웃 시 장바구니 삭제?',
-        'enable_login_in_checkout_page' => '결제 페이지에서 로그인 활성화?',
-        'recently_viewed' => [
-            'enable' => '최근 본 제품 활성화?',
-            'max' => '최근 본 제품 최대 개수',
-            'max_helper' => '최근 본 제품의 최대 개수입니다. 기본값은 8입니다.',
+        'form' => [
+            'payment_proof_payment_methods' => '결제 증명이 필요한 결제 방법',
+            'payment_proof_payment_methods_helper' => '고객이 결제 증명을 업로드할 수 있도록 허용할 결제 방법을 선택하십시오. 일반적으로 착불 및 은행 송금과 같은 수동 결제 방법에 사용됩니다.',
         ],
+        'recently_viewed' => [],
     ],
     'invoice' => [
         'name' => '송장 설정',
         'description' => '송장 관련 설정',
-        'company_name' => '회사명',
-        'company_address' => '회사 주소',
-        'company_email' => '회사 이메일',
-        'company_phone' => '회사 전화번호',
-        'company_logo' => '회사 로고',
-        'company_tax_id' => '회사 사업자등록번호',
-        'invoice_code_prefix' => '송장 코드 접두사',
     ],
     'return' => [
         'name' => '반품 설정',
         'description' => '제품 반품 관련 설정',
-        'enable_order_return' => '주문 반품 활성화?',
-        'allow_partial_return' => '부분 반품 허용?',
-        'returnable_days' => '반품 가능 일수',
-        'returnable_days_helper' => '주문 완료 후 반품 가능한 일수입니다. 0으로 설정하면 제한이 없습니다.',
     ],
-    // 기본 설정에 필요한 핵심 번역만 포함
 ];

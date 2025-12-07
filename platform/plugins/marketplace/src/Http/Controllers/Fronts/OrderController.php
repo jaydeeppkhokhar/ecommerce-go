@@ -28,7 +28,7 @@ class OrderController extends BaseController
 {
     public function index(OrderTable $table)
     {
-        $this->pageTitle(__('Orders'));
+        $this->pageTitle(trans('plugins/ecommerce::order.name'));
 
         return $table->renderTable();
     }
@@ -211,7 +211,7 @@ class OrderController extends BaseController
 
         return $this
             ->httpResponse()
-            ->setMessage(trans('plugins/ecommerce::order.customer.messages.cancel_success'));
+            ->setMessage(trans('plugins/ecommerce::order.customer_messages.cancel_success'));
     }
 
     public function downloadProof(Order $order)
@@ -224,7 +224,7 @@ class OrderController extends BaseController
             return $this
                 ->httpResponse()
                 ->setError()
-                ->setMessage(__('File not found!'));
+                ->setMessage(trans('plugins/marketplace::marketplace.notices.file_not_found'));
         }
 
         return $storage->download($order->proof_file);

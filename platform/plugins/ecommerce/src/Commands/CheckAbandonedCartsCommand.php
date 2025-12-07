@@ -4,13 +4,14 @@ namespace Botble\Ecommerce\Commands;
 
 use Botble\Ecommerce\Events\AbandonedCartReminderEvent;
 use Botble\Ecommerce\Services\AbandonedCartService;
+use Exception;
 use Illuminate\Console\Command;
 
 class CheckAbandonedCartsCommand extends Command
 {
-    protected $signature = 'cms:check-abandoned-carts 
+    protected $signature = 'cms:check-abandoned-carts
                             {--hours=1 : Hours after which a cart is considered abandoned}
-                            {--cleanup : Clean up old abandoned carts}
+                            {--cleanup=* : Clean up old abandoned carts}
                             {--cleanup-days=30 : Days to keep abandoned carts}';
 
     protected $description = 'Check for abandoned carts and send reminders';
@@ -48,7 +49,7 @@ class CheckAbandonedCartsCommand extends Command
                 event(new AbandonedCartReminderEvent($abandonedCart));
                 $abandonedCart->incrementRemindersSent();
                 $this->info("Sent reminder for cart {$abandonedCart->id} to {$abandonedCart->email}");
-            } catch (\Exception $e) {
+            } catch (Exception $e) {
                 $this->error("Failed to send reminder for cart {$abandonedCart->id}: {$e->getMessage()}");
             }
         }

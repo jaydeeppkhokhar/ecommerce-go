@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Permetti ai clienti di caricare la prova di pagamento per i loro ordini. Questo è utile per metodi di pagamento manuali.',
             'enable_guest_payment_proof' => 'Permetti ai clienti ospiti di caricare prova pagamento',
             'enable_guest_payment_proof_helper' => 'Quando abilitato, i clienti ospiti possono caricare la prova di pagamento usando il loro token ordine senza effettuare l\'accesso. Riceveranno il link di caricamento nella loro email di conferma ordine.',
+            'payment_proof_payment_methods' => 'Metodi di pagamento che richiedono la prova di pagamento',
+            'payment_proof_payment_methods_helper' => 'Seleziona quali metodi di pagamento devono consentire ai clienti di caricare la prova di pagamento. Tipicamente utilizzato per metodi di pagamento manuali come contrassegno e bonifico bancario.',
         ],
     ],
     'checkout' => [
@@ -334,7 +336,7 @@ return [
         'form' => [
             'enable_customer_registration' => 'Abilita registrazione cliente',
             'enable_customer_registration_helper' => 'Se disabilitato, i clienti non potranno registrare nuovi account. I clienti esistenti possono ancora accedere.',
-            'verify_customer_email' => "Verifica email del cliente",
+            'verify_customer_email' => 'Verifica email del cliente',
             'verify_customer_email_helper' => "Quando è abilitato, un link di verifica sarà inviato all'email del cliente, i clienti devono cliccare su questo link per verificare la loro email prima di poter accedere. È necessario configurare l'email in Admin -> Impostazioni -> Email per inviare la verifica email.",
             'verification_expire_minutes' => 'Tempo di scadenza link verifica',
             'verification_expire_minutes_helper' => 'Il tempo in minuti in cui il link di verifica email sarà valido. Predefinito è 60 minuti (1 ora). Massimo è 10080 minuti (7 giorni).',
@@ -485,7 +487,14 @@ return [
         'show_sale_count_left_description' => 'Mostra una barra di progresso con "X venduti su Y" per creare urgenza e incoraggiare acquisti rapidi durante le vendite flash.',
     ],
     'payment_method_cod_minimum_amount' => 'Importo minimo ordine - :currency (Opzionale)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Importo minimo ordine - :currency (Opzionale)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Visualizza info banca nella pagina successo checkout?',
     'invoice_templates' => 'Template fatture',
 ];

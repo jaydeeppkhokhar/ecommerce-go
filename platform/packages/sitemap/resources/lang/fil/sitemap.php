@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Awtomatikong Pagbuo',
         'automatic_generation_desc' => 'Awtomatikong naa-update kapag may nagbabago sa content',
         'automatic_update_note' => 'Awtomatikong naa-update ang sitemap tuwing lumilikha, nag-e-edit, o nagde-delete ka ng content sa iyong website.',
+        'submit_sitemap' => 'Ipasa ang sitemap sa IndexNow',
+        'submitting_sitemap' => 'Nagpapasa...',
+        'sitemap_submitted_successfully' => 'Matagumpay na naipasa ang sitemap sa mga search engine!',
+        'sitemap_submission_failed' => 'Nabigong ipasa ang sitemap sa lahat ng search engine.',
+        'sitemap_submission_partial' => 'Naipasa ang sitemap ngunit may ilang error.',
+        'submit_sitemap_error' => 'Nabigong ipasa ang sitemap. Pakisubukang muli.',
+        'indexnow_disabled' => 'Hindi naka-enable ang IndexNow. Pakienable muna ito.',
+        'indexnow_no_api_key' => 'Walang nahanap na API key. Mangyaring gumawa muna ng API key.',
     ],
 ];

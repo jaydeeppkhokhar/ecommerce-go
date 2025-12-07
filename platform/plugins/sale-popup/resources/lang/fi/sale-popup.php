@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Tuoteluettelo',
         'cart' => 'Ostoskori',
     ],
+    'purchased' => 'osti',
+    'verified' => 'Vahvistettu',
+    'quick_view' => 'Pikakatselu',
 ];

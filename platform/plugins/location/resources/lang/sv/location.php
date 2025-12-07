@@ -12,7 +12,6 @@ return [
             'city' => 'Stad',
         ],
     ],
-    'import_type' => 'Importtyp',
     'export' => [
         'total' => 'Totalt antal platser',
         'total_countries' => 'Totalt antal länder',

@@ -39,4 +39,7 @@ return [
         'product_listing' => '產品列表',
         'cart' => '購物車',
     ],
+    'purchased' => '購買了',
+    'verified' => '已驗證',
+    'quick_view' => '快速檢視',
 ];

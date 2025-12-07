@@ -69,4 +69,7 @@ return [
             'trans' => 'Môže byť prázdne alebo reťazec s maximálnou dĺžkou :max znakov, ak je uvedený.',
         ],
     ],
+    'download_locale' => 'Stiahnuť jazyk',
+    'import_available_locale_confirmation' => 'Stiahnuť jazyk z GitHubu',
+    'import_available_locale_confirmation_content' => 'Naozaj chcete stiahnuť tento jazyk? Bude stiahnutý do :lang_path, neskôr ho môžete odstrániť, ak budete chcieť.',
 ];

@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Atļaut klientiem augšupielādēt maksājuma apstiprinājumu saviem pasūtījumiem. Tas ir noderīgi manuālām maksājuma metodēm.',
             'enable_guest_payment_proof' => 'Atļaut viesa klientiem augšupielādēt maksājuma apstiprinājumu',
             'enable_guest_payment_proof_helper' => 'Kad iespējots, viesa klienti var augšupielādēt maksājuma apstiprinājumu, izmantojot savu pasūtījuma marķieri bez pieteikšanās. Viņi saņems augšupielādes saiti savā pasūtījuma apstiprinājuma e-pastā.',
+            'payment_proof_payment_methods' => 'Maksājuma metodes, kas prasa maksājuma pierādījumu',
+            'payment_proof_payment_methods_helper' => 'Izvēlieties, kurām maksājuma metodēm jāļauj klientiem augšupielādēt maksājuma pierādījumu. Parasti izmanto manuālām maksājumu metodēm, piemēram, piegādes maksājumam un bankas pārskaitījumam.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Rādīt progresa joslu ar "X pārdots no Y", lai radītu steidzamību un veicinātu ātrus pirkumus zibens akciju laikā.',
     ],
     'payment_method_cod_minimum_amount' => 'Minimālā pasūtījuma summa - :currency (Neobligāti)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Minimālā pasūtījuma summa - :currency (Neobligāti)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Parādīt bankas informāciju norēķinu veiksmīgajā lapā?',
     'invoice_templates' => 'Rēķinu veidnes',
 ];

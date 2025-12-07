@@ -167,6 +167,7 @@ class LocationExporter extends Exporter
                     break;
                 }
 
+                /** @var State $state */
                 foreach ($states as $state) {
                     $locations->push($this->formatStateRowSimple($state));
                 }
@@ -209,6 +210,7 @@ class LocationExporter extends Exporter
                     break;
                 }
 
+                /** @var City $city */
                 foreach ($cities as $city) {
                     $locations->push($this->formatCityRowSimple($city));
                 }
@@ -478,7 +480,7 @@ class LocationExporter extends Exporter
             'slug' => $state->slug ?: Str::slug($state->name),
             'abbreviation' => $state->abbreviation,
             'state' => '',
-            'country' => $state->country?->name ?? '',
+            'country' => $state->country->name ?? '',
             'import_type' => 'state',
             'status' => $state->status,
             'order' => $state->order ?: 0,
@@ -511,8 +513,8 @@ class LocationExporter extends Exporter
             'name' => $city->name,
             'slug' => $city->slug ?: Str::slug($city->name),
             'abbreviation' => '',
-            'state' => $city->state?->name ?? '',
-            'country' => $city->country?->name ?? '',
+            'state' => $city->state->name ?? '',
+            'country' => $city->country->name ?? '',
             'import_type' => 'city',
             'status' => $city->status,
             'order' => $city->order ?: 0,
@@ -537,7 +539,7 @@ class LocationExporter extends Exporter
                     ->where('lang_code', $properties['lang_code'])
                     ->first();
 
-                $data['name_' . $properties['lang_code']] = $translation?->name ?? $model->name;
+                $data['name_' . $properties['lang_code']] = $translation->name ?? $model->name;
             }
         }
 
@@ -668,6 +670,7 @@ class LocationExporter extends Exporter
                     break;
                 }
 
+                /** @var State $state */
                 foreach ($states as $state) {
                     yield $this->formatStateRowSimple($state);
                 }
@@ -706,6 +709,7 @@ class LocationExporter extends Exporter
                     break;
                 }
 
+                /** @var City $city */
                 foreach ($cities as $city) {
                     yield $this->formatCityRowSimple($city);
                 }

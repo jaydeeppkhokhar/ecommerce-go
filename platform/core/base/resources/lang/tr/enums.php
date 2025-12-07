@@ -14,6 +14,7 @@ return [
         'publish_packages_assets' => 'Paket varlıklarını yayınla',
         'clean_up' => 'Sistem güncelleme dosyalarını temizle',
         'done' => 'Sistem başarıyla güncellendi',
+        'unknown' => 'Bilinmeyen adım',
         'messages' => [
             'download' => 'Güncelleme dosyaları indiriliyor...',
             'update_files' => 'Sistem dosyaları güncelleniyor...',

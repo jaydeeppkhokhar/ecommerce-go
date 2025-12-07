@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Publiser pakkeressurser',
         'clean_up' => 'Rydd opp i systemoppdateringsfiler',
         'done' => 'System oppdatert',
-
+        'unknown' => 'Ukjent trinn',
         'messages' => [
             'download' => 'Laster ned oppdateringsfiler...',
             'update_files' => 'Oppdaterer systemfiler...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Rydder opp i systemoppdateringsfiler...',
             'done' => 'Ferdig! Nettleseren din vil bli oppdatert om 30 sekunder.',
         ],
-
         'failed_messages' => [
             'download' => 'Kunne ikke laste ned oppdateringsfiler',
             'update_files' => 'Kunne ikke oppdatere systemfiler',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Kunne ikke publisere pakkeressurser',
             'clean_up' => 'Kunne ikke rydde opp i systemoppdateringsfiler',
         ],
-
         'success_messages' => [
             'download' => 'Lastet ned oppdateringsfiler.',
             'update_files' => 'Oppdaterte systemfiler.',

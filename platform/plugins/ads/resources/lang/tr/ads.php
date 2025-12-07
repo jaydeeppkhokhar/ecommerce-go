@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Geçersiz Google AdSense Müşteri ID formatı. Şu formatta olmalıdır: ca-pub-XXXXXXXXXXXXXXXX (X bir rakamdır).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Tablet Görseli',
+    'tablet_image_helper' => '768px ile 1200px arasında genişliğe sahip cihazlar için, boşsa masaüstünden görsel kullanılır.',
+    'mobile_image' => 'Mobil Görsel',
+    'mobile_image_helper' => '768px\'den daha az genişliğe sahip cihazlar için, boşsa tabletten görsel kullanılır.',
 ];

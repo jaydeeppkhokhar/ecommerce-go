@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Einnahmen',
     'edit' => 'Wallet-Saldo aktualisieren',
     'view_store' => 'Shop ":store" anzeigen',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Betrag des Verkäufers hinzufügen/abziehen',
     'statements' => 'Auszüge',
     'products' => 'Produkte',
+    'items_earning_sales' => 'Artikelverkäufe mit Einnahmen: :amount',
 ];

@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Nuskaitykite QR kodą, kad sektumėte savo siuntą',
     ],
     'customer_confirmed_delivery_at' => 'Klientas patvirtino pristatymą ties',
+    'no_shipping_methods_available' => 'Nėra prieinamų pristatymo būdų!',
 ];

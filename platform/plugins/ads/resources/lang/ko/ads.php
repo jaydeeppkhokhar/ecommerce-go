@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => '잘못된 Google AdSense 클라이언트 ID 형식입니다. 형식은 다음과 같아야 합니다: ca-pub-XXXXXXXXXXXXXXXX(X는 숫자).',
         ],
     ],
+    'banner' => '배너',
+    'tablet_image' => '태블릿 이미지',
+    'tablet_image_helper' => '768px에서 1200px 너비의 기기용, 비어 있으면 데스크톱 이미지가 사용됩니다.',
+    'mobile_image' => '모바일 이미지',
+    'mobile_image_helper' => '768px 미만 너비의 기기용, 비어 있으면 태블릿 이미지가 사용됩니다.',
 ];

@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Ошибка плагина Analytics: Отсутствуют сторонние библиотеки. Пожалуйста, выполните "composer update" для их установки.',
     'browser' => 'Браузер',
     'url' => 'URL',
+    'credential_invalid' => 'Эти учетные данные не являются действительными учетными данными Google Analytics.',
+    'file_not_valid_json' => 'Этот файл не является действительным файлом JSON.',
+    'no_results_found' => 'Результаты не найдены',
+    'upload_service_account_json' => 'Загрузить JSON-файл сервисного аккаунта',
 ];

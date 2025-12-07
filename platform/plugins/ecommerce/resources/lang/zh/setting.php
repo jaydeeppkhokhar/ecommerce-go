@@ -60,6 +60,9 @@ return [
             'enable_order_tracking' => '启用订单跟踪',
             'enable_quick_buy_button' => '启用快速购买按钮',
             'enable_order_auto_confirmed' => '自动确认订单',
+
+            'payment_proof_payment_methods' => '需要付款证明的付款方式',
+            'payment_proof_payment_methods_helper' => '选择哪些付款方式应允许客户上传付款证明。通常用于货到付款和银行转账等手动付款方式。',
         ],
     ],
     'checkout' => [
@@ -148,7 +151,14 @@ return [
         ],
     ],
     'payment_method_cod_minimum_amount' => '最小订单金额 - :currency（可选）',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => '最小订单金额 - :currency（可选）',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => '在结账成功页面显示银行信息？',
     'invoice_templates' => '发票模板',
 ];

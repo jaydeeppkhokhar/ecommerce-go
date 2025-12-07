@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Vrsta provizije za obdelavo (Neobvezno)',
     'fee_type_helper' => 'Izberite, kako naj bo provizija za plačilo izračunana: kot fiksni znesek ali odstotek skupnega naročila. Če izberete fiksni znesek, bo temeljil na privzeti valuti (:currency).',
+    'payment_created' => 'Ustvarili ste plačilo #:charge_id preko :channel :time : :amount',
+    'processing_please_wait' => 'Obdelava. Prosimo, počakajte...',
+    'error' => 'Napaka',
+    'checkout' => 'Blagajna',
+    'show_full_json' => 'Prikaži celoten JSON',
+    'full_log_data' => 'Polni podatki dnevnika',
+    'currency_not_supported' => ':name ne podpira :currency. Seznam valut, ki jih podpira :name: :currencies.',
+    'please_switch_currency' => 'Prosimo, preklopite na katero koli podprto valuto',
+    'payment_with' => 'Plačilo z :paymentType',
 ];

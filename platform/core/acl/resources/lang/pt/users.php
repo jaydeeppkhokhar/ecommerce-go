@@ -65,4 +65,11 @@ return [
     'no_role_assigned' => 'Nenhuma função atribuída',
     'view_user_profile' => 'Ver o perfil do usuário',
     'update_preferences_success' => 'Atualize as preferências com sucesso!',
+    'phone' => 'Telefone',
+    'phone_placeholder' => 'Introduza o telefone',
+    'username_placeholder' => 'Introduza o nome de utilizador',
+    'first_name_placeholder' => 'Introduza o primeiro nome',
+    'last_name_placeholder' => 'Introduza o apelido',
+    'password_placeholder' => 'Introduza a palavra-passe',
+    'password_confirmation_placeholder' => 'Introduza novamente a palavra-passe',
 ];

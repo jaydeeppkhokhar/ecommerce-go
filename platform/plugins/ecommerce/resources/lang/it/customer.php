@@ -23,7 +23,6 @@ return [
         'activated' => 'Attivato',
         'locked' => 'Bloccato',
     ],
-    'email_verified' => 'Email verificata?',
     'verify_email' => [
         'confirm_heading' => 'Verifica conferma email',
         'confirm_description' => 'Sei sicuro di voler verificare l\'email di questo cliente?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'clicca qui',
         'confirm_button' => 'Verifica',
     ],
-    'email_already_verified' => 'L\'email è già verificata.',
     'verification_email_sent' => 'Email di verifica inviata con successo!',
     'resend_verification_email' => 'Reinvia email di verifica',
     'resend_verification_email_confirmation' => 'Sei sicuro di voler rinviare l\'email di verifica a questo cliente?',

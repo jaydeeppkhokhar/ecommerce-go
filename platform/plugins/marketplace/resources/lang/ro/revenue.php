@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Venituri',
     'edit' => 'Actualizare sold portofel',
     'view_store' => 'Vezi magazin ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Adăugare/Scădere sumă vânzător',
     'statements' => 'Extrase',
     'products' => 'Produse',
+    'items_earning_sales' => 'Vânzări venituri articole: :amount',
 ];

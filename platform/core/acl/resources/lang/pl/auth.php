@@ -66,6 +66,7 @@ return [
     'languages' => 'Języki',
     'reset_password' => 'Zresetuj hasło',
     'deactivated_message' => 'Twoje konto zostało dezaktywowane. Skontaktuj się z administratorem.',
+    'password_changed_message' => 'Twoje hasło zostało zmienione. Zaloguj się ponownie, używając nowego hasła.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

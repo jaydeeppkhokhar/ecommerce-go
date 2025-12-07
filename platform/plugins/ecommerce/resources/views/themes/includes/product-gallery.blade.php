@@ -6,8 +6,8 @@
     Theme::asset()->container('footer')->add('lightgallery-js', 'vendor/core/plugins/ecommerce/libraries/lightgallery/js/lightgallery.min.js', ['jquery'], version: $version);
     Theme::asset()->container('footer')->add('slick-js', 'vendor/core/plugins/ecommerce/libraries/slick/slick.min.js', ['jquery'], version: $version);
 
-    $galleryStyle = theme_option('ecommerce_product_gallery_image_style', 'vertical');
-    $videoPosition = theme_option('ecommerce_product_gallery_video_position', 'bottom');
+    $galleryStyle = theme_option('ecommerce_product_gallery_image_style') ?: ($galleryStyle ?? 'vertical');
+    $videoPosition = theme_option('ecommerce_product_gallery_video_position') ?: ($videoPosition ?? 'bottom');
 @endphp
 
 <div class="bb-product-gallery-wrapper">

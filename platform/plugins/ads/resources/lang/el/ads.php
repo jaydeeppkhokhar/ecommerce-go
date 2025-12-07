@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Μη έγκυρη μορφή Google AdSense Client ID. Πρέπει να είναι στη μορφή: ca-pub-XXXXXXXXXXXXXXXX (όπου X είναι ψηφίο).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Εικόνα Tablet',
+    'tablet_image_helper' => 'Για συσκευές με πλάτος από 768px έως 1200px, εάν είναι κενό, θα χρησιμοποιηθεί η εικόνα από την επιφάνεια εργασίας.',
+    'mobile_image' => 'Εικόνα κινητού',
+    'mobile_image_helper' => 'Για συσκευές με πλάτος μικρότερο από 768px, εάν είναι κενό, θα χρησιμοποιηθεί η εικόνα από το tablet.',
 ];

@@ -13,11 +13,10 @@ return [
     ],
     'approve' => 'Onaylamak',
     'approve_vendor_confirmation' => 'Satıcı onayını onayla',
-    'approve_vendor_confirmation_description' => 'Are you sure you really want to approve :vendor for selling on this site?',
-    'vendor_approval_notification' => 'Do you want to approve this vendor for selling on this site? :approve_link',
+    'approve_vendor_confirmation_description' => ':vendor\'u bu sitede satış yapmak için onaylamak istediğinizden emin misiniz?',
     'new_vendor_notifications' => [
         'new_vendor' => 'Yeni satıcı',
         'view' => 'Görüş',
-        'description' => ':customer has registered but not verified.',
+        'description' => ':customer kayıt oldu ancak doğrulanmadı.',
     ],
 ];

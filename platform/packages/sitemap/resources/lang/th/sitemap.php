@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'การสร้างอัตโนมัติ',
         'automatic_generation_desc' => 'อัปเดตโดยอัตโนมัติเมื่อเนื้อหาเปลี่ยนแปลง',
         'automatic_update_note' => 'แผนผังเว็บไซต์จะอัปเดตโดยอัตโนมัติทุกครั้งที่คุณสร้าง แก้ไข หรือลบเนื้อหาบนเว็บไซต์ของคุณ',
+        'submit_sitemap' => 'ส่งแผนผังเว็บไซต์ไปยัง IndexNow',
+        'submitting_sitemap' => 'กำลังส่ง...',
+        'sitemap_submitted_successfully' => 'ส่งแผนผังเว็บไซต์ไปยังเครื่องมือค้นหาเรียบร้อยแล้ว!',
+        'sitemap_submission_failed' => 'ไม่สามารถส่งแผนผังเว็บไซต์ไปยังเครื่องมือค้นหาทั้งหมดได้.',
+        'sitemap_submission_partial' => 'ส่งแผนผังเว็บไซต์พร้อมกับบางข้อผิดพลาด.',
+        'submit_sitemap_error' => 'ส่งแผนผังเว็บไซต์ไม่สำเร็จ โปรดลองอีกครั้ง.',
+        'indexnow_disabled' => 'IndexNow ยังไม่ได้เปิดใช้งาน กรุณาเปิดใช้งานก่อน.',
+        'indexnow_no_api_key' => 'ไม่พบคีย์ API กรุณาสร้างคีย์ API ก่อน.',
     ],
 ];

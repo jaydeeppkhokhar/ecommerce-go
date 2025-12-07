@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Publicēt pakotņu resursus',
         'clean_up' => 'Notīrīt sistēmas atjauninājuma failus',
         'done' => 'Sistēma veiksmīgi atjaunināta',
-
+        'unknown' => 'Nezināms solis',
         'messages' => [
             'download' => 'Lejupielādē atjauninājuma failus...',
             'update_files' => 'Atjaunina sistēmas failus...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Notīra sistēmas atjauninājuma failus...',
             'done' => 'Pabeigts! Jūsu pārlūkprogramma tiks atsvaidzināta pēc 30 sekundēm.',
         ],
-
         'failed_messages' => [
             'download' => 'Neizdevās lejupielādēt atjauninājuma failus',
             'update_files' => 'Neizdevās atjaunināt sistēmas failus',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Neizdevās publicēt pakotņu resursus',
             'clean_up' => 'Neizdevās notīrīt sistēmas atjauninājuma failus',
         ],
-
         'success_messages' => [
             'download' => 'Atjauninājuma faili veiksmīgi lejupielādēti.',
             'update_files' => 'Sistēmas faili veiksmīgi atjaunināti.',

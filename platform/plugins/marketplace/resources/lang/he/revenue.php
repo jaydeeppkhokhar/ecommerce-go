@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'הכנסות',
     'edit' => 'עדכן יתרת ארנק',
     'view_store' => 'הצג חנות ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'הוסף/הפחת סכום של ספק',
     'statements' => 'דוחות',
     'products' => 'מוצרים',
+    'items_earning_sales' => 'מכירות רווחים של פריטים: :amount',
 ];

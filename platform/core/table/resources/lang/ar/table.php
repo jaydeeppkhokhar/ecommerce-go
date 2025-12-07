@@ -42,4 +42,6 @@ return [
     'search' => 'يبحث...',
     'copied' => 'نسخ',
     'copy' => 'ينسخ',
+    'clear' => 'مسح',
+    'something_went_wrong' => 'حدث خطأ ما.',
 ];

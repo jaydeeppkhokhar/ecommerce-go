@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Otomatik Üretim',
         'automatic_generation_desc' => 'İçerik değiştiğinde otomatik olarak güncellenir',
         'automatic_update_note' => 'Site haritası, web sitenizde içerik oluşturduğunuzda, düzenlediğinizde veya sildiğinizde otomatik olarak güncellenir.',
+        'submit_sitemap' => 'Site haritasını IndexNow\'a gönder',
+        'submitting_sitemap' => 'Gönderiliyor...',
+        'sitemap_submitted_successfully' => 'Site haritası arama motorlarına başarıyla gönderildi!',
+        'sitemap_submission_failed' => 'Site haritası tüm arama motorlarına gönderilemedi.',
+        'sitemap_submission_partial' => 'Site haritası bazı hatalarla gönderildi.',
+        'submit_sitemap_error' => 'Site haritası gönderilemedi. Lütfen tekrar deneyin.',
+        'indexnow_disabled' => 'IndexNow etkin değil. Lütfen önce etkinleştirin.',
+        'indexnow_no_api_key' => 'API anahtarı bulunamadı. Lütfen önce bir API anahtarı oluşturun.',
     ],
 ];

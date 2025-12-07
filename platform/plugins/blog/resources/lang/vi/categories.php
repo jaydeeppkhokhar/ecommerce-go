@@ -12,4 +12,7 @@ return [
     'parent' => 'Danh mục cha',
     'order' => 'Thứ tự',
     'is_default' => 'Mặc định',
+    'intro' => [
+        'description' => 'Sắp xếp bài đăng blog của bạn thành các danh mục để quản lý nội dung tốt hơn.',
+    ],
 ];

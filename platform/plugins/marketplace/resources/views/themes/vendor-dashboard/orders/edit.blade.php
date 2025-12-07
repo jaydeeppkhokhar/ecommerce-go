@@ -117,7 +117,7 @@
                     </x-core::card.header>
 
                     <x-core::card.body>
-                        <ul class="steps steps-vertical" id="order-history-wrapper">
+                        <ul class="steps steps-vertical border-0 p-0 m-0" id="order-history-wrapper">
                             @foreach ($order->histories()->orderByDesc('id')->get() as $history)
                                 <li @class(['step-item', 'user-action' => $history->user_id])>
                                     <div class="h4 m-0">
@@ -210,6 +210,16 @@
                                                             {{ BaseHelper::formatDateTime($history->created_at) }}
                                                         </x-core::table.body.cell>
                                                     </x-core::table.body.row>
+                                                    @if (Arr::get($history->extras, 'refund_note'))
+                                                        <x-core::table.body.row>
+                                                            <x-core::table.body.cell>
+                                                                {{ trans('plugins/ecommerce::order.refund_reason') }}
+                                                            </x-core::table.body.cell>
+                                                            <x-core::table.body.cell>
+                                                                {{ Arr::get($history->extras, 'refund_note') }}
+                                                            </x-core::table.body.cell>
+                                                        </x-core::table.body.row>
+                                                    @endif
                                                 </x-core::table.body>
                                             </x-core::table>
                                         </div>

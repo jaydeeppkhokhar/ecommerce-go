@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Скануйте QR-код для відстеження вашого відправлення',
     ],
     'customer_confirmed_delivery_at' => 'Клієнт підтвердив доставку о',
+    'no_shipping_methods_available' => 'Немає доступних способів доставки!',
 ];

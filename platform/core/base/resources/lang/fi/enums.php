@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Julkaise pakettien resurssit',
         'clean_up' => 'Siivoa järjestelmän päivitystiedostot',
         'done' => 'Järjestelmä päivitetty onnistuneesti',
-
+        'unknown' => 'Tuntematon vaihe',
         'messages' => [
             'download' => 'Ladataan päivitystiedostoja...',
             'update_files' => 'Päivitetään järjestelmätiedostoja...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Siivotaan järjestelmän päivitystiedostoja...',
             'done' => 'Valmis! Selaimesi päivitetään 30 sekunnin kuluttua.',
         ],
-
         'failed_messages' => [
             'download' => 'Päivitystiedostojen lataus epäonnistui',
             'update_files' => 'Järjestelmätiedostojen päivitys epäonnistui',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Pakettien resurssien julkaisu epäonnistui',
             'clean_up' => 'Järjestelmän päivitystiedostojen siivous epäonnistui',
         ],
-
         'success_messages' => [
             'download' => 'Päivitystiedostot ladattu onnistuneesti.',
             'update_files' => 'Järjestelmätiedostot päivitetty onnistuneesti.',

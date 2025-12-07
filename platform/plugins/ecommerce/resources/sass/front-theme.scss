@@ -1,3 +1,5 @@
+@use 'file-upload';
+
 :root {
     --bs-font-sans-serif: var(--primary-font), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     --bs-primary: var(--primary-color);
@@ -553,6 +555,25 @@ body,
     .select--arrow {
         .form-control.is-valid {
             background-image: none;
+        }
+    }
+
+    .phone-input-wrapper {
+        position: relative;
+
+        label {
+            font-size: 12px;
+            top: -7px;
+            inset-inline-start: 10px;
+            background: #ffffff;
+            padding: 0 5px;
+            color: #6b7078;
+            position: absolute;
+            transition: 0.2s ease all;
+            -moz-transition: 0.2s ease all;
+            -webkit-transition: 0.2s ease all;
+            pointer-events: none;
+            z-index: 1;
         }
     }
 }

@@ -12,4 +12,7 @@ return [
     'parent' => 'Kategori Induk',
     'order' => 'Susunan',
     'is_default' => 'Adalah Lalai',
+    'intro' => [
+        'description' => 'Susun catatan blog anda ke dalam kategori untuk pengurusan kandungan yang lebih baik.',
+    ],
 ];

@@ -45,4 +45,6 @@ return [
     'admin' => 'yönetici',
     'register_an_account' => 'hesap',
     'activity_has_been_deleted' => 'Etkinlik silindi',
+    'no_results_found' => 'Sonuç bulunamadı',
+    'no_activities_here' => 'Burada herhangi bir aktivite yok gibi görünüyor.',
 ];

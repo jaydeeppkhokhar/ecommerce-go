@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Inkomsten',
     'edit' => 'Portemonnee saldo bijwerken',
     'view_store' => 'Bekijk winkel ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Bedrag van verkoper toevoegen/aftrekken',
     'statements' => 'Afschriften',
     'products' => 'Producten',
+    'items_earning_sales' => 'Items omzet verkopen: :amount',
 ];

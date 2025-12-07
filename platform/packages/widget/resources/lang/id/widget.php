@@ -28,6 +28,13 @@ return [
     'save_success' => 'Widget berhasil disimpan!',
     'delete_success' => 'Widget berhasil dihapus!',
     'primary_sidebar_name' => 'Sidebar utama',
+    'form' => [
+        'enable_caching' => 'Aktifkan caching',
+        'yes' => 'Ya',
+        'no' => 'Tidak',
+        'cache_helper' => 'Jika diaktifkan, konten widget ini akan di-cache untuk meningkatkan performa. Nonaktifkan untuk konten dinamis yang sering berubah.',
+        'cache_warning' => 'Karena masalah antarmuka, cache untuk widget ini dinonaktifkan melalui kode. Widget ini tidak akan di-cache meskipun caching diaktifkan.',
+    ],
     'primary_sidebar_description' => 'Bagian sidebar utama',
     'drag_widget_to_sidebar' => 'Seret dan lepas widget ke area ini.',
     'widget_areas' => 'Area Widget',

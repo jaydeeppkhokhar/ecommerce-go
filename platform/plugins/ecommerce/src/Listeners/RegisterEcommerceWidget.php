@@ -82,14 +82,16 @@ class RegisterEcommerceWidget
         $userId = Auth::id();
         $settingKey = "ecommerce_report_widgets_user_{$userId}";
 
-        $userPreferences = setting($settingKey, []);
+        $userPreferences = setting($settingKey);
 
-        // If no preferences set, show all widgets by default
+        if (is_string($userPreferences)) {
+            $userPreferences = json_decode($userPreferences, true) ?: [];
+        }
+
         if (empty($userPreferences)) {
             return $allWidgets;
         }
 
-        // Filter widgets based on user preferences
         return array_filter($allWidgets, function ($widget) use ($userPreferences) {
             return in_array($widget, $userPreferences);
         });

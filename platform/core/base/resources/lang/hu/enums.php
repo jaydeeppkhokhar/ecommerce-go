@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Csomag eszközök közzététele',
         'clean_up' => 'Rendszer frissítési fájlok tisztítása',
         'done' => 'Rendszer sikeresen frissítve',
-
+        'unknown' => 'Ismeretlen lépés',
         'messages' => [
             'download' => 'Frissítési fájlok letöltése...',
             'update_files' => 'Rendszer fájlok frissítése...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Rendszer frissítési fájlok tisztítása...',
             'done' => 'Kész! A böngésző 30 másodpercen belül frissülni fog.',
         ],
-
         'failed_messages' => [
             'download' => 'Nem sikerült letölteni a frissítési fájlokat',
             'update_files' => 'Nem sikerült frissíteni a rendszer fájlokat',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Nem sikerült közzétenni a csomag eszközöket',
             'clean_up' => 'Nem sikerült tisztítani a rendszer frissítési fájlokat',
         ],
-
         'success_messages' => [
             'download' => 'Frissítési fájlok sikeresen letöltve.',
             'update_files' => 'Rendszer fájlok sikeresen frissítve.',

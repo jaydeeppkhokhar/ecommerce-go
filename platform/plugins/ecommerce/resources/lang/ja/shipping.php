@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'QRコードをスキャンして出荷を追跡',
     ],
     'customer_confirmed_delivery_at' => '顧客が配送確認した日時',
+    'no_shipping_methods_available' => '利用可能な配送方法がありません！',
 ];

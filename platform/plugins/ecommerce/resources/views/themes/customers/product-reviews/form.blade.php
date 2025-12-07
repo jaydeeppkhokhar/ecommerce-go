@@ -14,7 +14,7 @@
         </h2>
 
         <div class="d-flex align-items-center mb-3">
-            <label class="form-label mb-0 required" for="rating">{{ __('Your rating:') }}</label>
+            <label class="form-label mb-0 required" for="rating">{{ trans('plugins/ecommerce::customer-dashboard.your_rating') }}</label>
             <div class="form-rating-stars ms-2">
                 @for ($i = 5; $i >= 1; $i--)
                     <input
@@ -36,30 +36,30 @@
     <div class="row">
         <div class="col-12 mb-3">
             <x-core::form.label for="txt-comment" class="required">
-                {{ __('Review') }}
+                {{ trans('plugins/ecommerce::customer-dashboard.review') }}
             </x-core::form.label>
             <x-core::form.textarea
                 id="txt-comment"
                 name="comment"
                 :required="true"
                 rows="5"
-                :placeholder="__('Write your review')"
+                :placeholder="trans('plugins/ecommerce::customer-dashboard.write_your_review')"
                 aria-describedby="review-help"
             />
             <x-core::form.helper-text id="review-help">
-                {{ __('Share your experience with this product to help other customers.') }}
+                {{ trans('plugins/ecommerce::customer-dashboard.share_experience_help_others') }}
             </x-core::form.helper-text>
         </div>
         @if (EcommerceHelper::isCustomerReviewImageUploadEnabled())
             <div class="col-12 mb-3">
                 <x-core::form.label class="mb-2">
-                    {{ __('Photos') }} <span class="text-muted">({{ __('Optional') }})</span>
+                    {{ trans('plugins/ecommerce::customer-dashboard.photos') }} <span class="text-muted">({{ trans('plugins/ecommerce::customer-dashboard.optional') }})</span>
                 </x-core::form.label>
 
                 <x-core::custom-template id="ecommerce-review-image-template">
                     <span class="ecommerce-image-viewer__item" data-id="__id__">
-                        <img src="{{ RvMedia::getDefaultImage() }}" alt="{{ __('Preview') }}" class="img-responsive d-block">
-                        <span class="ecommerce-image-viewer__icon-remove image-viewer__icon-remove" title="{{ __('Remove image') }}">
+                        <img src="{{ RvMedia::getDefaultImage() }}" alt="{{ trans('plugins/ecommerce::customer-dashboard.preview') }}" class="img-responsive d-block">
+                        <span class="ecommerce-image-viewer__icon-remove image-viewer__icon-remove" title="{{ trans('plugins/ecommerce::customer-dashboard.remove_image') }}">
                             <x-core::icon name="ti ti-x" class="ecommerce-icon" />
                         </span>
                     </span>
@@ -71,7 +71,7 @@
                             <div class="d-table">
                                 <div class="ecommerce-image-upload__uploader border border-2 border-dashed rounded p-4 text-center">
                                     <x-core::icon name="ti ti-photo-plus" class="ecommerce-icon ecommerce-image-upload__icon mb-2 text-muted" style="font-size: 2rem;" />
-                                    <div class="ecommerce-image-upload__text fw-medium mb-1">{{ __('Upload photos') }}</div>
+                                    <div class="ecommerce-image-upload__text fw-medium mb-1">{{ trans('plugins/ecommerce::customer-dashboard.upload_photos') }}</div>
                                     <input
                                         class="ecommerce-image-upload__file-input"
                                         name="images[]"
@@ -81,7 +81,7 @@
                                         type="file"
                                         accept="image/png,image/jpeg,image/jpg"
                                         multiple="multiple"
-                                        aria-label="{{ __('Upload review photos') }}"
+                                        aria-label="{{ trans('plugins/ecommerce::customer-dashboard.upload_review_photos') }}"
                                     >
                                 </div>
                             </div>
@@ -90,7 +90,7 @@
                 </div>
 
                 <x-core::form.helper-text class="mt-2">
-                    {{ __('You can upload up to :total photos, each photo maximum size is :max kilobytes', [
+                    {{ trans('plugins/ecommerce::customer-dashboard.upload_photos_limit', [
                         'total' => EcommerceHelper::reviewMaxFileNumber(),
                         'max' => EcommerceHelper::reviewMaxFileSize(true),
                     ]) }}
@@ -107,12 +107,12 @@
                 type="submit"
             >
                 <x-core::icon name="ti ti-send" />
-                <span>{{ __('Submit Review') }}</span>
+                <span>{{ trans('plugins/ecommerce::customer-dashboard.submit_review') }}</span>
             </button>
 
             <div class="text-muted small mt-2 mt-sm-0">
                 <x-core::icon name="ti ti-info-circle" class="me-1" />
-                {{ __('Your email address will not be published. Required fields are marked *') }}
+                {{ trans('plugins/ecommerce::customer-dashboard.email_not_published') }}
             </div>
         </div>
     </div>

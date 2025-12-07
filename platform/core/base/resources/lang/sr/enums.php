@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Objavite resurse paketa',
         'clean_up' => 'Očistite fajlove sistemskog ažuriranja',
         'done' => 'Sistem uspešno ažuriran',
-
+        'unknown' => 'Непознат корак',
         'messages' => [
             'download' => 'Preuzimanje fajlova ažuriranja...',
             'update_files' => 'Ažuriranje sistemskih fajlova...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Čišćenje fajlova sistemskog ažuriranja...',
             'done' => 'Gotovo! Vaš pretraživač će biti osvežen za 30 sekundi.',
         ],
-
         'failed_messages' => [
             'download' => 'Nije moguće preuzeti fajlove ažuriranja',
             'update_files' => 'Nije moguće ažurirati sistemske fajlove',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Nije moguće objaviti resurse paketa',
             'clean_up' => 'Nije moguće očistiti fajlove sistemskog ažuriranja',
         ],
-
         'success_messages' => [
             'download' => 'Fajlovi ažuriranja uspešno preuzeti.',
             'update_files' => 'Sistemski fajlovi uspešno ažurirani.',

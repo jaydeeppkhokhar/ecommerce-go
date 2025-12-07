@@ -5,7 +5,7 @@
     'url' => null,
     'description' => null,
     'status' => get_payment_setting('status', $id),
-    'defaultDescriptionValue' => __('Payment with :paymentType', ['paymentType' => $name]),
+    'defaultDescriptionValue' => trans('plugins/payment::payment.payment_with', ['paymentType' => $name]),
 ])
 
 @php

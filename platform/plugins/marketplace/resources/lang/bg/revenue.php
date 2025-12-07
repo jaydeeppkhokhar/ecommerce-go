@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Приходи',
     'edit' => 'Актуализирайте баланса на портфейла',
     'view_store' => 'Преглед на магазин ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Добавете/Извадете сума на търговеца',
     'statements' => 'Извлечения',
     'products' => 'Продукти',
+    'items_earning_sales' => 'Продажби с печалби от артикули: :amount',
 ];

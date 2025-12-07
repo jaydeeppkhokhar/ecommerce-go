@@ -23,7 +23,6 @@ return [
     'edit_this_post' => 'Muuda seda postitust',
     'no_new_post_now' => 'Praegu pole uusi postitusi!',
     'menu_name' => 'Postitused',
-    'widget_posts_recent' => 'Viimased postitused',
     'categories' => 'Kategooriad',
     'category' => 'Kategooria',
     'author' => 'Autor',

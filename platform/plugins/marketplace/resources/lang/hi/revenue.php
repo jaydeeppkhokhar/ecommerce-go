@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'राजस्व',
     'edit' => 'वालेट शेष अपडेट करें',
     'view_store' => 'स्टोर ":store" देखें',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'विक्रेता की राशि जोड़ें/घटाएं',
     'statements' => 'विवरण',
     'products' => 'उत्पाद',
+    'items_earning_sales' => 'आइटम कमाई बिक्री: :amount',
 ];

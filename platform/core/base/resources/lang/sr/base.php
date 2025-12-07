@@ -19,7 +19,7 @@ return [
         'html_attributes' => 'HTML atributi',
         'body_attributes' => 'Body atributi',
         'settings' => 'Vrednosti podešavanja',
-        'email_css' => 'Email CSS',
+        'email_css' => 'CSS e-pošte',
         'variable' => 'Promenljiva',
         'preview' => 'Pregled',
         'icon_variables' => 'Promenljive ikona',

@@ -5,8 +5,8 @@
         </div>
         <div class="product-rating-text ms-2 fs-6">
             <a href="{{ $product->url }}#product-review" data-bb-toggle="scroll-to-review" class="text-decoration-none">
-                <span class="d-none d-sm-block">{{ __('(:count reviews)', ['count' => number_format($product->reviews_count)]) }}</span>
-                <span class="d-block d-sm-none">{{ __('(:count)', ['count' => number_format($product->reviews_count)]) }}</span>
+                <span class="d-none d-sm-block">{{ trans('plugins/ecommerce::review.count_reviews_with_parentheses', ['count' => number_format($product->reviews_count)]) }}</span>
+                <span class="d-block d-sm-none">{{ trans('plugins/ecommerce::review.count_only', ['count' => number_format($product->reviews_count)]) }}</span>
             </a>
         </div>
     </div>

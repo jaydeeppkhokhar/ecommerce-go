@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Šis kuponas negali būti pritaikytas, nes jūsų krepšelyje yra žaibo išpardavimo prekių (:product_name). Žaibo išpardavimo kainos negali būti derinamos su kuponų nuolaidomis.',
     'coupon_applied_successfully' => 'Puiku! Kupono kodas ":code" pritaikytas. Sutaupėte pinigų šiam užsakymui!',
     'coupon_removed_successfully' => 'Kupono kodas pašalintas iš jūsų užsakymo.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kuponų kodai (:count)',
+    'left_quantity' => 'Liko :left',
+    'apply' => 'Taikyti',
+    'remove' => 'Pašalinti',
+    'select_coupon' => 'Pasirinkti kuponą',
+    'you_have_coupon_code' => 'Turite kupono kodą?',
+    'close' => 'Uždaryti',
+    'coupon_code_label' => 'Kupono kodas: :code',
+    'enter_coupon_code_placeholder' => 'Įveskite kupono kodą...',
 ];

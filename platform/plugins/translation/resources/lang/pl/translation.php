@@ -69,4 +69,7 @@ return [
             'trans' => 'Może być puste lub ciąg o maksymalnej długości :max znaków, jeśli podano.',
         ],
     ],
+    'download_locale' => 'Pobierz język',
+    'import_available_locale_confirmation' => 'Pobierz język z GitHuba',
+    'import_available_locale_confirmation_content' => 'Czy na pewno chcesz pobrać ten język? Zostanie pobrany do :lang_path, możesz go później usunąć, jeśli chcesz.',
 ];

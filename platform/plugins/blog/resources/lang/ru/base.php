@@ -19,7 +19,7 @@ return [
         'title' => 'Блог',
 
     ],
-    'blog_posts' => 'Blog posts',
-    'blog_categories' => 'Blog categories',
-    'blog_tags' => 'Blog tags',
+    'blog_posts' => 'Записи блога',
+    'blog_categories' => 'Категории блога',
+    'blog_tags' => 'Теги блога',
 ];

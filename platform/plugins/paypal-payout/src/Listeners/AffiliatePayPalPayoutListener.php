@@ -36,8 +36,8 @@ class AffiliatePayPalPayoutListener
                 '{
                 "sender_batch_header":
                 {
-                  "email_subject": "' . __('You have money!') . '",
-                  "email_message": "' . __('You received a payment. Thanks for being an affiliate on our site!') . '"
+                  "email_subject": "' . trans('plugins/paypal-payout::paypal-payout.you_have_money') . '",
+                  "email_message": "' . trans('plugins/paypal-payout::paypal-payout.received_payment_affiliate') . '"
                 },
                 "items": [
                 {

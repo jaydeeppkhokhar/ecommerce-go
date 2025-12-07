@@ -53,6 +53,7 @@ return [
     'lazy_loading' => 'Tải chậm',
     'lazy_loading_description' => 'Bật tùy chọn này để cải thiện tốc độ tải trang',
     'hide_on_mobile' => 'Ẩn trên thiết bị di động',
+    'dismiss' => 'Đóng',
 
     // Placeholders and help texts
     'name_placeholder' => 'Nhập tên thông báo',

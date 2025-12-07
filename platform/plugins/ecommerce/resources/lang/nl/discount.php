@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Deze coupon kan niet toegepast worden omdat uw winkelwagen flash sale items bevat (:product_name). Flash sale prijzen kunnen niet gecombineerd worden met couponkortingen.',
     'coupon_applied_successfully' => 'Geweldig! Couponcode ":code" is toegepast. U heeft geld bespaard op deze bestelling!',
     'coupon_removed_successfully' => 'De couponcode is verwijderd van uw bestelling.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Couponcodes (:count)',
+    'left_quantity' => 'Nog :left',
+    'apply' => 'Toepassen',
+    'remove' => 'Verwijderen',
+    'select_coupon' => 'Selecteer coupon',
+    'you_have_coupon_code' => 'Heeft u een couponcode?',
+    'close' => 'Sluiten',
+    'coupon_code_label' => 'Couponcode: :code',
+    'enter_coupon_code_placeholder' => 'Voer couponcode in...',
 ];

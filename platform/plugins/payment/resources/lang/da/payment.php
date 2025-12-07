@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Behandlingsgebyrtype (valgfrit)',
     'fee_type_helper' => 'Vælg, hvordan betalingsgebyret skal beregnes: som et fast beløb eller en procentdel af den samlede ordre. Hvis du vælger et fast beløb, vil det være baseret på standardvalutaen (:currency).',
+    'payment_created' => 'Du har oprettet en betaling #:charge_id via :channel :time : :amount',
+    'processing_please_wait' => 'Behandler. Vent venligst...',
+    'error' => 'Fejl',
+    'checkout' => 'Betaling',
+    'show_full_json' => 'Vis fuld JSON',
+    'full_log_data' => 'Fulde logdata',
+    'currency_not_supported' => ':name understøtter ikke :currency. Liste over valutaer understøttet af :name: :currencies.',
+    'please_switch_currency' => 'Skift venligst til en understøttet valuta',
+    'payment_with' => 'Betaling med :paymentType',
 ];

@@ -17,7 +17,7 @@
                 name="options[{{ $option->id }}][values]"
                 {{ $option->required ? 'required' : '' }}
             >
-                <option value="">{{ __('Select an option') }}</option>
+                <option value="">{{ trans('plugins/ecommerce::ecommerce.select_an_option') }}</option>
                 @foreach ($option->values as $value)
                     @php
                         $price = 0;

@@ -7,39 +7,39 @@
                     <div class="row">
                         <div @class(['col-12' => ! $order->address->name, 'col-md-6' => $order->address->name])>
                             <div class="bb-order-info-section">
-                                <h5 class="bb-section-title mb-3">{{ __('Order Information') }}</h5>
+                                <h5 class="bb-section-title mb-3">{{ trans('plugins/ecommerce::order.order_information') }}</h5>
                                 <div class="bb-order-info-list">
                                     <div class="bb-order-info-item">
-                                        <span class="label">{{ __('Order number') }}:</span>
+                                        <span class="label">{{ trans('plugins/ecommerce::order.order_number_1') }}:</span>
                                         <span class="value fw-bold">{{ $order->code }}</span>
                                     </div>
                                     <div class="bb-order-info-item">
-                                        <span class="label">{{ __('Time') }}:</span>
+                                        <span class="label">{{ trans('plugins/ecommerce::ecommerce.time') }}:</span>
                                         <span class="value">{{ $order->created_at->translatedFormat('d M Y H:i:s') }}</span>
                                     </div>
                                     <div class="bb-order-info-item">
-                                        <span class="label">{{ __('Order status') }}:</span>
-                                        <span class="value">{{ $order->status->label() }}</span>
+                                        <span class="label">{{ trans('plugins/ecommerce::order.order_status') }}:</span>
+                                        <span class="value">{!! BaseHelper::clean($order->status->toHtml()) !!}</span>
                                     </div>
                                     @if($order->cancellation_reason)
                                         <div class="bb-order-info-item">
-                                            <span class="label">{{ __('Cancellation Reason') }}:</span>
+                                            <span class="label">{{ trans('plugins/ecommerce::order.cancellation_reason') }}:</span>
                                             <span class="value text-warning">{{ $order->cancellation_reason_message }}</span>
                                         </div>
                                     @endif
                                     @if (is_plugin_active('payment') && $order->payment->id)
                                         <div class="bb-order-info-item">
-                                            <span class="label">{{ __('Payment method') }}:</span>
+                                            <span class="label">{{ trans('plugins/ecommerce::order.payment_method') }}:</span>
                                             <span class="value">{{ $order->payment->payment_channel->label() }}</span>
                                         </div>
                                         <div class="bb-order-info-item">
-                                            <span class="label">{{ __('Payment status') }}:</span>
-                                            <span class="value">{{ $order->payment->status->label() }}</span>
+                                            <span class="label">{{ trans('plugins/ecommerce::order.payment_status_1') }}:</span>
+                                            <span class="value">{!! BaseHelper::clean($order->payment->status->toHtml()) !!}</span>
                                         </div>
                                     @endif
                                     @if ($order->description)
                                         <div class="bb-order-info-item">
-                                            <span class="label">{{ __('Note') }}:</span>
+                                            <span class="label">{{ trans('plugins/ecommerce::ecommerce.note') }}:</span>
                                             <span class="value text-warning fst-italic">{{ $order->description }}</span>
                                         </div>
                                     @endif
@@ -49,18 +49,18 @@
                         @if ($order->address->name)
                             <div class="col-md-6">
                                 <div class="bb-order-address-section">
-                                    <h5 class="bb-section-title mb-3">{{ __('Shipping Address') }}</h5>
+                                    <h5 class="bb-section-title mb-3">{{ trans('plugins/ecommerce::order.shipping_address') }}</h5>
                                     <div class="bb-order-info-list">
                                         <div class="bb-order-info-item">
-                                            <span class="label">{{ __('Full Name') }}:</span>
+                                            <span class="label">{{ trans('plugins/ecommerce::ecommerce.full_name') }}:</span>
                                             <span class="value">{{ $order->address->name }}</span>
                                         </div>
                                         <div class="bb-order-info-item">
-                                            <span class="label">{{ __('Phone') }}:</span>
+                                            <span class="label">{{ trans('plugins/ecommerce::ecommerce.phone') }}:</span>
                                             <span class="value">{{ $order->address->phone }}</span>
                                         </div>
                                         <div class="bb-order-info-item">
-                                            <span class="label">{{ __('Address') }}:</span>
+                                            <span class="label">{{ trans('plugins/ecommerce::ecommerce.address') }}:</span>
                                             <span class="value">{{ $order->address->full_address }}</span>
                                         </div>
                                     </div>
@@ -75,7 +75,7 @@
         <!-- Products Section -->
         <div class="card mb-4">
             <div class="card-body">
-                <h5 class="bb-section-title mb-3">{{ __('Products') }}</h5>
+                <h5 class="bb-section-title mb-3">{{ trans('plugins/ecommerce::products.products') }}</h5>
                 <div class="bb-order-products">
                     <div class="bb-order-product-cards mb-3">
                         @foreach ($order->products as $orderProduct)
@@ -149,8 +149,8 @@
                                                     <div class="d-flex align-items-center gap-2">
                                                         <x-core::icon name="ti ti-key" class="text-primary" />
                                                         <span class="fw-semibold">
-                                                            {{ $hasMultipleCodes 
-                                                                ? trans('plugins/ecommerce::products.license_codes.codes') . ' (' . count($licenseCodes) . ')' 
+                                                            {{ $hasMultipleCodes
+                                                                ? trans('plugins/ecommerce::products.license_codes.codes') . ' (' . count($licenseCodes) . ')'
                                                                 : trans('plugins/ecommerce::products.license_codes.code') }}:
                                                         </span>
                                                     </div>
@@ -165,7 +165,7 @@
                                                                                 class="btn btn-sm btn-outline-secondary ms-2"
                                                                                 onclick="navigator.clipboard.writeText('{{ $code }}'); this.innerHTML='<i class=\'ti ti-check\'></i> Copied!'; setTimeout(() => this.innerHTML='<i class=\'ti ti-copy\'></i> Copy', 2000)">
                                                                             <x-core::icon name="ti ti-copy" />
-                                                                            {{ __('Copy') }}
+                                                                            {{ trans('plugins/ecommerce::ecommerce.copy') }}
                                                                         </button>
                                                                     </div>
                                                                 @endforeach
@@ -176,7 +176,7 @@
                                                                     class="btn btn-sm btn-outline-secondary ms-2"
                                                                     onclick="navigator.clipboard.writeText('{{ $licenseCodes[0] ?? $orderProduct->license_code }}'); this.innerHTML='<i class=\'ti ti-check\'></i> Copied!'; setTimeout(() => this.innerHTML='<i class=\'ti ti-copy\'></i> Copy', 2000)">
                                                                 <x-core::icon name="ti ti-copy" />
-                                                                {{ __('Copy') }}
+                                                                {{ trans('plugins/ecommerce::ecommerce.copy') }}
                                                             </button>
                                                         @endif
                                                     </div>
@@ -185,7 +185,7 @@
 
                                             @if (is_plugin_active('marketplace') && ($product = $orderProduct->product) && $product->original_product->store?->id)
                                                 <div class="bb-order-product-card-vendor">
-                                                    <small>{{ __('Sold by') }}: <a
+                                                    <small>{{ trans('plugins/ecommerce::ecommerce.sold_by') }}: <a
                                                             href="{{ $product->original_product->store->url }}"
                                                             class="text-primary">{{ $product->original_product->store->name }}</a>
                                                     </small>
@@ -196,15 +196,15 @@
                                     <div class="bb-order-product-card-info">
                                         <div class="bb-order-product-card-price">
                                             <div class="bb-order-product-card-price-item">
-                                                <span class="label">{{ __('Price') }}:</span>
+                                                <span class="label">{{ trans('plugins/ecommerce::products.price') }}:</span>
                                                 <span class="value">{{ $orderProduct->amount_format }}</span>
                                             </div>
                                             <div class="bb-order-product-card-price-item">
-                                                <span class="label">{{ __('Quantity') }}:</span>
+                                                <span class="label">{{ trans('plugins/ecommerce::products.quantity') }}:</span>
                                                 <span class="value">{{ $orderProduct->qty }}</span>
                                             </div>
                                             <div class="bb-order-product-card-price-item total">
-                                                <span class="label">{{ __('Total') }}:</span>
+                                                <span class="label">{{ trans('plugins/ecommerce::ecommerce.total') }}:</span>
                                                 <span class="value">{{ $orderProduct->total_format }}</span>
                                             </div>
                                         </div>
@@ -217,20 +217,20 @@
                     <div class="bb-order-totals">
                         @if (EcommerceHelper::isTaxEnabled() && (float)$order->tax_amount)
                             <div class="bb-order-total-item">
-                                <span class="label">{{ __('Tax') }}:</span>
+                                <span class="label">{{ trans('plugins/ecommerce::ecommerce.tax') }}:</span>
                                 <span class="value">{{ format_price($order->tax_amount) }}</span>
                             </div>
                         @endif
 
                         @if ((float)$order->discount_amount)
                             <div class="bb-order-total-item">
-                                <span class="label">{{ __('Discount') }}:</span>
+                                <span class="label">{{ trans('plugins/ecommerce::ecommerce.discount') }}:</span>
                                 <span class="value">
                                     {{ format_price($order->discount_amount) }}
                                     @if ($order->discount_amount)
                                         @if ($order->coupon_code)
                                             <span class="small">
-                                                ({!! BaseHelper::html(__('Coupon code: ":code"', ['code' => Html::tag('strong', $order->coupon_code)->toHtml()])) !!})
+                                                ({!! BaseHelper::html(trans('plugins/ecommerce::ecommerce.coupon_code_with_code', ['code' => Html::tag('strong', $order->coupon_code)->toHtml()])) !!})
                                             </span>
                                         @elseif ($order->discount_description)
                                             <span class="small">({{ $order->discount_description }})</span>
@@ -242,13 +242,13 @@
 
                         @if ((float)$order->shipping_amount && EcommerceHelper::countDigitalProducts($order->products) != $order->products->count())
                             <div class="bb-order-total-item">
-                                <span class="label">{{ __('Shipping fee') }}:</span>
+                                <span class="label">{{ trans('plugins/ecommerce::order.shipping_fee') }}:</span>
                                 <span class="value">{{ format_price($order->shipping_amount) }}</span>
                             </div>
                         @endif
 
                         <div class="bb-order-total-item grand-total">
-                            <span class="label">{{ __('Total Amount') }}:</span>
+                            <span class="label">{{ trans('plugins/ecommerce::ecommerce.total_amount') }}:</span>
                             <span class="value">{{ format_price($order->amount) }}</span>
                         </div>
                     </div>
@@ -260,31 +260,31 @@
         @if (! EcommerceHelper::isDisabledPhysicalProduct() && $order->shipment->id)
             <div class="card mb-4">
                 <div class="card-body">
-                    <h5 class="bb-section-title mb-3">{{ __('Shipping Information') }}</h5>
+                    <h5 class="bb-section-title mb-3">{{ trans('plugins/ecommerce::order.shipping_information') }}</h5>
                     <div class="bb-order-shipping">
                         <div class="bb-order-info-list">
                             <div class="bb-order-info-item">
-                                <span class="label">{{ __('Shipping Status') }}:</span>
+                                <span class="label">{{ trans('plugins/ecommerce::order.shipping_status') }}:</span>
                                 <span class="value">{!! BaseHelper::clean($order->shipment->status->toHtml()) !!}</span>
                             </div>
 
                             @if ($order->shipment->shipping_company_name)
                                 <div class="bb-order-info-item">
-                                    <span class="label">{{ __('Shipping Company Name') }}:</span>
+                                    <span class="label">{{ trans('plugins/ecommerce::order.shipping_company_name') }}:</span>
                                     <span class="value">{{ $order->shipment->shipping_company_name }}</span>
                                 </div>
                             @endif
 
                             @if ($order->shipment->tracking_id)
                                 <div class="bb-order-info-item">
-                                    <span class="label">{{ __('Tracking ID') }}:</span>
+                                    <span class="label">{{ trans('plugins/ecommerce::order.tracking_id') }}:</span>
                                     <span class="value">{{ $order->shipment->tracking_id }}</span>
                                 </div>
                             @endif
 
                             @if ($order->shipment->tracking_link)
                                 <div class="bb-order-info-item">
-                                    <span class="label">{{ __('Tracking Link') }}:</span>
+                                    <span class="label">{{ trans('plugins/ecommerce::order.tracking_link') }}:</span>
                                     <span class="value">
                                         <a href="{{ $order->shipment->tracking_link }}" target="_blank">{{ $order->shipment->tracking_link }}</a>
                                     </span>
@@ -293,21 +293,21 @@
 
                             @if ($order->shipment->note)
                                 <div class="bb-order-info-item">
-                                    <span class="label">{{ __('Delivery Notes') }}:</span>
+                                    <span class="label">{{ trans('plugins/ecommerce::order.delivery_notes') }}:</span>
                                     <span class="value">{{ $order->shipment->note }}</span>
                                 </div>
                             @endif
 
                             @if ($order->shipment->estimate_date_shipped)
                                 <div class="bb-order-info-item">
-                                    <span class="label">{{ __('Estimate Date Shipped') }}:</span>
+                                    <span class="label">{{ trans('plugins/ecommerce::ecommerce.estimate_date_shipped') }}:</span>
                                     <span class="value">{{ $order->shipment->estimate_date_shipped }}</span>
                                 </div>
                             @endif
 
                             @if ($order->shipment->date_shipped)
                                 <div class="bb-order-info-item">
-                                    <span class="label">{{ __('Date Shipped') }}:</span>
+                                    <span class="label">{{ trans('plugins/ecommerce::ecommerce.date_shipped') }}:</span>
                                     <span class="value">{{ $order->shipment->date_shipped }}</span>
                                 </div>
                             @endif
@@ -327,7 +327,7 @@
                 <path d="M12 16h.01"></path>
             </svg>
 
-            {{ __('The order could not be found. Please try again or contact us if you need assistance.') }}
+            {{ trans('plugins/ecommerce::order.the_order_could_not_be_found_please_try_again_or_c') }}
         </div>
     </div>
 @endif

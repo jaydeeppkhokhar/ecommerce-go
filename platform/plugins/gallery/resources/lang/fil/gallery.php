@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Limitahan ang bilang ng ipinapakita',
     'edit_this_gallery' => 'I-edit ang gallery na ito',
     'galleries_page' => 'Pahina ng mga gallery',
+    'by_name' => 'Sa pamamagitan ng placeholder0',
+    'title' => 'Pamagat',
+    'limit' => 'Limitahan',
+    'limit_helper' => 'Bilang ng mga gallery upang ipakita. ',
 ];

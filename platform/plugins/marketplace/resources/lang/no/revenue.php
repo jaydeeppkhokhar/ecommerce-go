@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Inntekter',
     'edit' => 'Oppdater lommeboksaldo',
     'view_store' => 'Se butikk ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Legg til/trekk fra beløp for leverandør',
     'statements' => 'Kontoutskrifter',
     'products' => 'Produkter',
+    'items_earning_sales' => 'Varer inntjeningssalg: :amount',
 ];

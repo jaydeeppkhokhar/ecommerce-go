@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => '장바구니에 플래시 세일 상품(:product_name)이 포함되어 있어 이 쿠폰을 적용할 수 없습니다. 플래시 세일 가격은 쿠폰 할인과 함께 사용할 수 없습니다.',
     'coupon_applied_successfully' => '훌륭합니다! 쿠폰 코드 ":code"가 적용되었습니다. 이 주문에서 비용을 절약하셨습니다!',
     'coupon_removed_successfully' => '쿠폰 코드가 주문에서 제거되었습니다.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => '쿠폰 코드 (:count)',
+    'left_quantity' => '남은 수량 :left',
+    'apply' => '적용',
+    'remove' => '제거',
+    'select_coupon' => '쿠폰 선택',
+    'you_have_coupon_code' => '쿠폰 코드가 있으신가요?',
+    'close' => '닫기',
+    'coupon_code_label' => '쿠폰 코드: :code',
+    'enter_coupon_code_placeholder' => '쿠폰 코드를 입력하세요...',
 ];

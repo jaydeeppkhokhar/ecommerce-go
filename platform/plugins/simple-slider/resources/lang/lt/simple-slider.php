@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Pridėti paprastą slankiklį',
     'select_slider' => 'Pasirinkite slankiklį',
     'shortcode' => 'Trumpasis kodas',
+    'tablet_image' => 'Planšetinio kompiuterio vaizdas',
+    'tablet_image_helper' => 'Įrenginiams, kurių plotis nuo 768 iki 1200 piks., jei jis tuščias, bus naudojamas darbalaukio vaizdas.',
+    'mobile_image' => 'Mobilusis vaizdas',
+    'mobile_image_helper' => 'Įrenginiams, kurių plotis mažesnis nei 768 piks., jei tuščias, bus naudojamas planšetinio kompiuterio vaizdas.',
 ];

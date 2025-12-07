@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'ეს კუპონი ვერ გამოიყენება, რადგან თქვენს კალათაში არის ფლეშ-გაყიდვის პროდუქტები (:product_name). ფლეშ-გაყიდვის ფასები ვერ გაერთიანდება საკუპონო ფასდაკლებებთან.',
     'coupon_applied_successfully' => 'შესანიშნავი! საკუპონო კოდი ":code" გამოყენებულია. თქვენ დაზოგეთ ფული ამ შეკვეთაზე!',
     'coupon_removed_successfully' => 'საკუპონო კოდი წაიშალა თქვენი შეკვეთიდან.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'საკუპონო კოდები (:count)',
+    'left_quantity' => 'დარჩა :left',
+    'apply' => 'გამოყენება',
+    'remove' => 'წაშლა',
+    'select_coupon' => 'კუპონის არჩევა',
+    'you_have_coupon_code' => 'გაქვთ საკუპონო კოდი?',
+    'close' => 'დახურვა',
+    'coupon_code_label' => 'საკუპონო კოდი: :code',
+    'enter_coupon_code_placeholder' => 'შეიყვანეთ საკუპონო კოდი...',
 ];

@@ -10,7 +10,7 @@ class BrandRequest extends Request
     {
         return [
             'brands' => ['nullable', 'array'],
-            'brands.*' => ['nullable', 'exists:ec_product_brands,id'],
+            'brands.*' => ['nullable', 'exists:ec_brands,id'],
             'is_featured' => ['nullable', 'boolean'],
         ];
     }

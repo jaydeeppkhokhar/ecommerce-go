@@ -5,8 +5,12 @@ return [
     'create' => 'Jauns BUJ',
     'question' => 'Jautājums',
     'answer' => 'Atbilde',
+    'question_placeholder' => 'Ievadiet savu jautājumu...',
+    'answer_placeholder' => 'Ievadiet savu atbildi...',
     'category' => 'Kategorija',
     'faq_schema_config' => 'BUJ shēmas konfigurācija (:link)',
+    'faq_schema_config_description' => 'Šī konfigurācija reģistrē tikai BUJ strukturētos datus SEO nolūkiem. Tā netiks parādīta frontend tēmas saturā. Shēma ir iegulta lapas pirmkodā un to var apskatīt, izmantojot "Skatīt pirmkodu" vai pārbaudīt ar Google Rich Results Test rīku.',
+    'schema_testing_tool' => 'Pārbaudiet ar Google Rich Results Test',
     'learn_more' => 'Uzzināt vairāk',
     'settings' => [
         'title' => 'BUJ',

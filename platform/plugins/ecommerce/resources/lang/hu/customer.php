@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktiválva',
         'locked' => 'Zárolva',
     ],
-    'email_verified' => 'E-mail megerősítve?',
     'verify_email' => [
         'confirm_heading' => 'E-mail ellenőrzés megerősítése',
         'confirm_description' => 'Biztosan megerősíti ennek a vásárlónak az e-mail címét?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'kattintson ide',
         'confirm_button' => 'Ellenőrzés',
     ],
-    'email_already_verified' => 'Az e-mail már ellenőrizve van.',
     'verification_email_sent' => 'Az ellenőrző e-mail sikeresen elküldve!',
     'resend_verification_email' => 'Ellenőrző e-mail újraküldése',
     'resend_verification_email_confirmation' => 'Biztosan újraküldi az ellenőrző e-mailt ennek a vásárlónak?',

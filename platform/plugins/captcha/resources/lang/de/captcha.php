@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Administrator-Anmeldeformular',
     'admin_forgot_password_form' => 'Administrator-Passwort-vergessen-Formular',
     'admin_reset_password_form' => 'Administrator-Passwort-zurücksetzen-Formular',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Mathe-Captcha',
+    'math_question' => 'Bitte lösen Sie die folgende mathematische Funktion: :label = ?',
+    'captcha_verification_failed' => 'Captcha-Verifizierung fehlgeschlagen!',
+    'math_captcha_verification_failed' => 'Mathe-Captcha-Überprüfung fehlgeschlagen!',
 ];

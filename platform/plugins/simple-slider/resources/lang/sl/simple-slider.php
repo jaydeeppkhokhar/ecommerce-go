@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Dodaj preprost drsnik',
     'select_slider' => 'Izberite drsnik',
     'shortcode' => 'Kratka koda',
+    'tablet_image' => 'Slika tabličnega računalnika',
+    'tablet_image_helper' => 'Za naprave s širino od 768px do 1200px, če je prazno, bo uporabljena slika z namizja.',
+    'mobile_image' => 'Mobilna slika',
+    'mobile_image_helper' => 'Za naprave s širino, manjšo od 768 slikovnih pik, bo, če je prazno, uporabljena slika iz tablice.',
 ];

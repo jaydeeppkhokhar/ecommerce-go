@@ -1,9 +1,15 @@
 @php
+    use Botble\Ecommerce\Facades\FlashSale;
+
     Theme::set('breadcrumbStyle', 'without-title');
     Theme::layout('full-width');
     Theme::asset()->container('footer')->usePath()->add('waypoints', 'plugins/waypoints/jquery.waypoints.min.js');
 
-    $flashSale = $product->latestFlashSales()->first();
+    $flashSale = null;
+
+    if (FlashSale::isEnabled()) {
+        $flashSale = FlashSale::getFlashSaleForProduct($product);
+    }
 
     Theme::set('pageTitle', $product->name);
 @endphp

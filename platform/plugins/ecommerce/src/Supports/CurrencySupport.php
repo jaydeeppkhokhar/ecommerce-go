@@ -7,6 +7,7 @@ use Botble\Ecommerce\Models\Currency;
 use Botble\Ecommerce\Services\ExchangeRates\ExchangeRateInterface;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
 use Locale;
 use Throwable;
 
@@ -15,6 +16,8 @@ class CurrencySupport
     protected ?Currency $currency = null;
 
     protected ?Currency $defaultCurrency = null;
+
+    protected ?Currency $forcedCurrency = null;
 
     protected Collection|array $currencies = [];
 
@@ -29,8 +32,27 @@ class CurrencySupport
         session(['currency' => $currency->title]);
     }
 
+    public function forceCurrentCurrency(Currency $currency): void
+    {
+        $this->forcedCurrency = $currency;
+    }
+
+    public function getForcedCurrency(): ?Currency
+    {
+        return $this->forcedCurrency;
+    }
+
+    public function clearForcedCurrency(): void
+    {
+        $this->forcedCurrency = null;
+    }
+
     public function getApplicationCurrency(): ?Currency
     {
+        if ($this->forcedCurrency) {
+            return $this->forcedCurrency;
+        }
+
         $currency = $this->currency;
 
         if (! empty($currency)) {
@@ -101,10 +123,10 @@ class CurrencySupport
             $this->currencies = collect();
         }
 
-        if ($this->currencies->count() == 0) {
-            $this->currencies = Currency::query()
-                ->oldest('order')
-                ->get();
+        if ($this->currencies->isEmpty()) {
+            $this->currencies = Cache::remember('currencies', 3600, function () {
+                return Currency::query()->oldest('order')->get();
+            });
         }
 
         return $this->currencies;

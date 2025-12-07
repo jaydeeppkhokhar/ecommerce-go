@@ -20,6 +20,7 @@ class MollieServiceProvider extends ServiceProvider implements DeferrableProvide
             ->loadHelpers()
             ->loadRoutes()
             ->loadAndPublishViews()
+            ->loadAndPublishTranslations()
             ->publishAssets();
 
         $this->app->booted(function (): void {

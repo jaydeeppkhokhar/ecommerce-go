@@ -36,7 +36,7 @@ class Tags extends AbstractWidget
                 'number_display',
                 NumberField::class,
                 NumberFieldOption::make()
-                    ->label(__('Number tags to display'))
+                    ->label(trans('plugins/blog::base.number_tags_to_display'))
             );
     }
 

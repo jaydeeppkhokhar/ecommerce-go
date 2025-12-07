@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'รายได้',
     'edit' => 'อัปเดตยอดเงินกระเป๋าเงิน',
     'view_store' => 'ดูร้านค้า ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'เพิ่ม/หักจำนวนเงินของผู้ขาย',
     'statements' => 'รายงาน',
     'products' => 'สินค้า',
+    'items_earning_sales' => 'ยอดขายรายได้สินค้า: :amount',
 ];

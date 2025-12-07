@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Lehetővé teszi az ügyfeleknek, hogy feltöltsenek fizetési igazolást a rendeléseikhez. Ez hasznos manuális fizetési módokhoz.',
             'enable_guest_payment_proof' => 'Vendég ügyfelek számára a fizetési igazolás feltöltésének engedélyezése',
             'enable_guest_payment_proof_helper' => 'Ha engedélyezve van, a vendég ügyfelek feltölthetnek fizetési igazolást a rendelési tokenük használatával bejelentkezés nélkül. A feltöltési linket megkapják a rendelés megerősítő e-mailben.',
+            'payment_proof_payment_methods' => 'Fizetési módok, amelyek fizetési igazolást igényelnek',
+            'payment_proof_payment_methods_helper' => 'Válassza ki, mely fizetési módok esetén tölthetnek fel az ügyfelek fizetési igazolást. Általában kézi fizetési módokhoz használják, mint például utánvét és banki átutalás.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Folyamatjelző megjelenítése "X eladva Y-ból" szöveggel a sürgősség érzésének felkeltéséhez és a gyors vásárlások ösztönzéséhez a villámakciók során.',
     ],
     'payment_method_cod_minimum_amount' => 'Minimális rendelési összeg - :currency (opcionális)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Minimális rendelési összeg - :currency (opcionális)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Banki információk megjelenítése a sikeres fizetési oldalon?',
     'invoice_templates' => 'Számla sablonok',
 ];

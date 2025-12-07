@@ -34,6 +34,13 @@ class ShortcodeController extends BaseController
             $compiler = shortcode()->getCompiler();
             $attributes = $compiler->getAttributes(html_entity_decode($code));
             $content = $compiler->getContent();
+        } else {
+            // Get attributes from request (for Visual Builder)
+            $attributes = $request->except(['_token', 'key', 'code']);
+            if (isset($attributes['content'])) {
+                $content = $attributes['content'];
+                unset($attributes['content']);
+            }
         }
 
         if ($data instanceof Closure || is_callable($data)) {

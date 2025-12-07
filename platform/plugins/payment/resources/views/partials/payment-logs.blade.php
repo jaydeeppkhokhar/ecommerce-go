@@ -190,13 +190,13 @@
                                         <div class="mt-3 text-center">
                                             <button type="button" class="btn btn-sm btn-ghost-secondary" onclick="this.style.display='none'; document.getElementById('log-full-{{ $index }}').style.display='block';">
                                                 <x-core::icon name="ti ti-code-plus" class="me-1" />
-                                                {{ __('Show Full JSON') }}
+                                                {{ trans('plugins/payment::payment.show_full_json') }}
                                             </button>
                                         </div>
                                         <div id="log-full-{{ $index }}" style="display: none;" class="mt-3">
                                             <div class="card card-sm">
                                                 <div class="card-header">
-                                                    <h5 class="card-title mb-0">{{ __('Full Log Data') }}</h5>
+                                                    <h5 class="card-title mb-0">{{ trans('plugins/payment::payment.full_log_data') }}</h5>
                                                     <div class="card-actions">
                                                         <button type="button" class="btn btn-sm btn-ghost-secondary" onclick="copyToClipboard(event, 'log-json-{{ $index }}')">
                                                             <x-core::icon name="ti ti-copy" />

@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Omarranger menupunkter ved at trække og slippe dem for at ændre deres rækkefølge eller indlejre dem som undermenuer.',
     'widget_custom_menu' => 'Brugerdefineret menu',
     'widget_custom_menu_description' => 'Tilføj en brugerdefineret menu til dit widgetområde.',
+    'select_menu' => 'Vælg menu',
 ];

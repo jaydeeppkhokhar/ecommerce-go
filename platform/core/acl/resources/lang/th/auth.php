@@ -66,6 +66,7 @@ return [
     'languages' => 'ภาษา',
     'reset_password' => 'รีเซ็ตรหัสผ่าน',
     'deactivated_message' => 'บัญชีของคุณถูกปิดใช้งาน โปรดติดต่อผู้ดูแลระบบ',
+    'password_changed_message' => 'รหัสผ่านของคุณถูกเปลี่ยนแล้ว โปรดเข้าสู่ระบบอีกครั้งด้วยรหัสผ่านใหม่ของคุณ',
     'settings' => [
         'email' => [
             'title' => 'ACL',

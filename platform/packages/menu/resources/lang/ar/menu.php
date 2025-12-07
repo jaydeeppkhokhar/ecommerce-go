@@ -3,7 +3,7 @@
 return [
     'name' => 'القوائم',
     'description' => 'إدارة قوائم النظام الخاص بك',
-    'key_name' => 'Menu name (key: :key)',
+    'key_name' => 'اسم القائمة (المفتاح: :key)',
     'basic_info' => 'معلومات اساسية',
     'add_to_menu' => 'أضف إلى القائمة',
     'custom_link' => 'رابط مخصص',
@@ -28,7 +28,13 @@ return [
     'menu_id' => 'معرف القائمة',
     'badge_text' => 'نص الشارة',
     'badge_color' => 'لون الشارة',
-    'edit' => 'Edit menu',
     'widget_custom_menu' => 'قائمة مخصصة',
     'widget_custom_menu_description' => 'إضافة قائمة مخصصة إلى منطقة الأدوات الخاصة بك.',
+    'select_menu' => 'اختر القائمة',
+    'items' => 'العناصر',
+    'locations' => 'المواقع',
+    'main_navigation' => 'القائمة الرئيسية',
+    'drag_drop_info' => 'أعد ترتيب عناصر القائمة بالسحب والإفلات لتغيير ترتيبها أو جعلها قوائم فرعية.',
+    'icon_image' => 'صورة الأيقونة',
+    'icon_image_helper' => 'ستقوم هذه الصورة باستبدال أيقونة الخط إن وُجدت.',
 ];

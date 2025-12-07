@@ -21,7 +21,7 @@ class SslCommerzPaymentMethodForm extends PaymentMethodForm
         $this
             ->paymentId(SSLCOMMERZ_PAYMENT_METHOD_NAME)
             ->paymentName('SslCommerz')
-            ->paymentDescription(__('Customer can buy product and pay directly using Visa, Credit card via :name', ['name' => 'SslCommerz']))
+            ->paymentDescription(trans('plugins/sslcommerz::sslcommerz.payment_description', ['name' => 'SslCommerz']))
             ->paymentLogo(url('vendor/core/plugins/sslcommerz/images/sslcommerz.png'))
             ->paymentFeeField(SSLCOMMERZ_PAYMENT_METHOD_NAME)
             ->paymentUrl('https://sslcommerz.com')
@@ -30,7 +30,7 @@ class SslCommerzPaymentMethodForm extends PaymentMethodForm
                 sprintf('payment_%s_store_id', SSLCOMMERZ_PAYMENT_METHOD_NAME),
                 TextField::class,
                 TextFieldOption::make()
-                    ->label(__('Store ID'))
+                    ->label(trans('plugins/sslcommerz::sslcommerz.store_id'))
                     ->value(BaseHelper::hasDemoModeEnabled() ? '*******************************' : get_payment_setting('store_id', SSLCOMMERZ_PAYMENT_METHOD_NAME))
                     ->attributes(['data-counter' => 400])
             )
@@ -38,7 +38,7 @@ class SslCommerzPaymentMethodForm extends PaymentMethodForm
                 sprintf('payment_%s_store_password', SSLCOMMERZ_PAYMENT_METHOD_NAME),
                 'password',
                 TextFieldOption::make()
-                    ->label(__('Store Password (API/Secret key)'))
+                    ->label(trans('plugins/sslcommerz::sslcommerz.store_password'))
                     ->value(BaseHelper::hasDemoModeEnabled() ? '*******************************' : get_payment_setting('store_password', SSLCOMMERZ_PAYMENT_METHOD_NAME))
             )
             ->add(

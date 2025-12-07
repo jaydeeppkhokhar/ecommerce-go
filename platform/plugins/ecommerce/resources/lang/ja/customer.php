@@ -23,7 +23,6 @@ return [
         'activated' => '有効',
         'locked' => 'ロック済み',
     ],
-    'email_verified' => 'メール認証済み？',
     'verify_email' => [
         'confirm_heading' => 'メール認証の確認',
         'confirm_description' => 'この顧客のメールを認証してもよろしいですか？',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'こちらをクリック',
         'confirm_button' => '認証',
     ],
-    'email_already_verified' => 'メールは既に認証済みです。',
     'verification_email_sent' => '認証メールが正常に送信されました！',
     'resend_verification_email' => '認証メールを再送信',
     'resend_verification_email_confirmation' => 'この顧客に認証メールを再送信してもよろしいですか？',

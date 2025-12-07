@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Позволете на клиентите да качват доказателство за плащане за техните поръчки. Това е полезно за методи за ръчно плащане.',
             'enable_guest_payment_proof' => 'Позволи на клиенти гости да качват доказателство за плащане',
             'enable_guest_payment_proof_helper' => 'Когато е активирано, клиенти гости могат да качват доказателство за плащане, използвайки техния токен за поръчка без да влизат. Те ще получат връзката за качване в имейла за потвърждение на поръчката.',
+            'payment_proof_payment_methods' => 'Методи на плащане, изискващи доказателство за плащане',
+            'payment_proof_payment_methods_helper' => 'Изберете кои методи на плащане трябва да позволяват на клиентите да качват доказателство за плащане. Обикновено се използва за ръчни методи на плащане като наложен платеж и банков превод.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Показване на лента за напредък с "X продадени от Y", за да създадете спешност и да насърчите бързите покупки по време на светкавични разпродажби.',
     ],
     'payment_method_cod_minimum_amount' => 'Минимална сума на поръчка - :currency (По избор)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Минимална сума на поръчка - :currency (По избор)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Показване на банкова информация на страницата за успешно плащане?',
     'invoice_templates' => 'Шаблони за фактури',
 ];

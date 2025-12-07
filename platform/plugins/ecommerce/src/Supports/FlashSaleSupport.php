@@ -7,6 +7,7 @@ use Botble\Base\Forms\Fields\OnOffCheckboxField;
 use Botble\Base\Rules\OnOffRule;
 use Botble\Ecommerce\Forms\Settings\FlashSaleSettingForm;
 use Botble\Ecommerce\Http\Requests\Settings\FlashSaleSettingRequest;
+use Botble\Ecommerce\Models\FlashSale;
 use Botble\Ecommerce\Models\Product;
 use Botble\Ecommerce\Repositories\Interfaces\FlashSaleInterface;
 use Botble\Support\Http\Requests\Request;
@@ -35,6 +36,34 @@ class FlashSaleSupport
             foreach ($flashSale->products as $flashSaleProduct) {
                 if ($productId == $flashSaleProduct->id) {
                     return $flashSaleProduct;
+                }
+            }
+        }
+
+        return null;
+    }
+
+    public function getFlashSaleForProduct(Product $product): ?FlashSale
+    {
+        if (! $this->flashSales) {
+            $this->getAvailableFlashSales();
+        }
+
+        if (! $product->getKey()) {
+            return null;
+        }
+
+        $productId = $product->id;
+        if ($product->is_variation) {
+            $productId = $product->original_product->id;
+        }
+
+        foreach ($this->flashSales as $flashSale) {
+            foreach ($flashSale->products as $flashSaleProduct) {
+                if ($productId == $flashSaleProduct->id) {
+                    $flashSale->setRelation('pivot', $flashSaleProduct->pivot);
+
+                    return $flashSale;
                 }
             }
         }

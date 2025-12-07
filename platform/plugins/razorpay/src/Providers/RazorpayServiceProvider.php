@@ -19,6 +19,7 @@ class RazorpayServiceProvider extends ServiceProvider implements DeferrableProvi
         $this->setNamespace('plugins/razorpay')
             ->loadHelpers()
             ->loadAndPublishViews()
+            ->loadAndPublishTranslations()
             ->publishAssets()
             ->loadRoutes();
 

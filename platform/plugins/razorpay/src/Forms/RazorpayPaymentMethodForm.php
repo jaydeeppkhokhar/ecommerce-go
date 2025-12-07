@@ -21,7 +21,7 @@ class RazorpayPaymentMethodForm extends PaymentMethodForm
         $this
             ->paymentId(RAZORPAY_PAYMENT_METHOD_NAME)
             ->paymentName('Razorpay')
-            ->paymentDescription(__('Customer can buy product and pay directly using Visa, Credit card via :name', ['name' => 'Razorpay']))
+            ->paymentDescription(trans('plugins/razorpay::razorpay.payment_description', ['name' => 'Razorpay']))
             ->paymentLogo(url('vendor/core/plugins/razorpay/images/razorpay.svg'))
             ->paymentFeeField(RAZORPAY_PAYMENT_METHOD_NAME)
             ->paymentUrl('https://razorpay.com')
@@ -30,21 +30,21 @@ class RazorpayPaymentMethodForm extends PaymentMethodForm
                 sprintf('payment_%s_key', RAZORPAY_PAYMENT_METHOD_NAME),
                 TextField::class,
                 TextFieldOption::make()
-                    ->label(__('Key'))
+                    ->label(trans('plugins/razorpay::razorpay.key'))
                     ->value(BaseHelper::hasDemoModeEnabled() ? '*******************************' : get_payment_setting('key', RAZORPAY_PAYMENT_METHOD_NAME))
             )
             ->add(
                 sprintf('payment_%s_secret', RAZORPAY_PAYMENT_METHOD_NAME),
                 'password',
                 TextFieldOption::make()
-                    ->label(__('Secret'))
+                    ->label(trans('plugins/razorpay::razorpay.secret'))
                     ->value(BaseHelper::hasDemoModeEnabled() ? '*******************************' : get_payment_setting('secret', RAZORPAY_PAYMENT_METHOD_NAME))
             )
             ->add(
                 'payment_' . RAZORPAY_PAYMENT_METHOD_NAME . '_payment_type',
                 SelectField::class,
                 SelectFieldOption::make()
-                    ->label(__('Payment Type'))
+                    ->label(trans('plugins/razorpay::razorpay.payment_type'))
                     ->choices([
                         'hosted_checkout' => 'Hosted Checkout',
                         'website_embedded' => 'Website Embedded',
@@ -59,8 +59,8 @@ class RazorpayPaymentMethodForm extends PaymentMethodForm
                 sprintf('payment_%s_webhook_secret', RAZORPAY_PAYMENT_METHOD_NAME),
                 TextField::class,
                 TextFieldOption::make()
-                    ->label(__('Webhook Secret'))
-                    ->helperText(__('Get webhook secret key from your Razorpay dashboard to verify webhook requests'))
+                    ->label(trans('plugins/razorpay::razorpay.webhook_secret'))
+                    ->helperText(trans('plugins/razorpay::razorpay.webhook_secret_helper'))
                     ->value(BaseHelper::hasDemoModeEnabled() ? '*******************************' : get_payment_setting('webhook_secret', RAZORPAY_PAYMENT_METHOD_NAME))
             )
             ->addAvailableCountriesField(RAZORPAY_PAYMENT_METHOD_NAME);

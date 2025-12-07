@@ -32,7 +32,7 @@ return [
     'locations' => 'Konumlar',
     'main_navigation' => 'Ana Gezinme',
     'drag_drop_info' => 'Menü öğelerini sürükleyip bırakarak sıralarını değiştirebilir veya alt menüler halinde iç içe yerleştirebilirsiniz.',
-    'edit' => 'Düzenle Menüsü',
     'widget_custom_menu' => 'Özel Menü',
     'widget_custom_menu_description' => 'Widget alanınıza özel bir menü ekleyin.',
+    'select_menu' => 'Menü seç',
 ];

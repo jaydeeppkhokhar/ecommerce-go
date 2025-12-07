@@ -265,10 +265,13 @@ trait HasProductSeeder
                              * @var Collection $attributes
                              */
                             $attributes = $productAttributeSet->attributes;
-                            ProductVariationItem::query()->create([
-                                'attribute_id' => $attributes->random()->id,
-                                'variation_id' => $productVariation->id,
-                            ]);
+
+                            if ($attributes->isNotEmpty()) {
+                                ProductVariationItem::query()->create([
+                                    'attribute_id' => $attributes->random()->id,
+                                    'variation_id' => $productVariation->id,
+                                ]);
+                            }
                         }
                     );
                 }

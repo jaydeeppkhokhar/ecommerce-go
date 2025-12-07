@@ -7,5 +7,4 @@ return [
     'country' => 'País',
     'select_country' => 'Selecionar um país',
     'state' => 'Estado',
-    'edit' => 'Editar estado',
 ];

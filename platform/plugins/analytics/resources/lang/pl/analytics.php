@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Błąd wtyczki Analytics: Brakujące biblioteki stron trzecich. Uruchom "composer update", aby je zainstalować.',
     'browser' => 'Przeglądarka',
     'url' => 'URL',
+    'credential_invalid' => 'To poświadczenie nie jest prawidłowym poświadczeniem Google Analytics.',
+    'file_not_valid_json' => 'Ten plik nie jest prawidłowym plikiem JSON.',
+    'no_results_found' => 'Nie znaleziono wyników',
+    'upload_service_account_json' => 'Prześlij plik JSON konta usługi',
 ];

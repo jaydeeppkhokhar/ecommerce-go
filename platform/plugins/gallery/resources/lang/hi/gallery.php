@@ -18,4 +18,8 @@ return [
     'limit_display' => 'प्रदर्शन संख्या सीमित करें',
     'edit_this_gallery' => 'इस गैलरी को संपादित करें',
     'galleries_page' => 'गैलरी पृष्ठ',
+    'by_name' => ':name द्वारा',
+    'title' => 'शीर्षक',
+    'limit' => 'आप LIMIT',
+    'limit_helper' => 'दिखाने के लिए दीर्घाओं की संख्या. ',
 ];

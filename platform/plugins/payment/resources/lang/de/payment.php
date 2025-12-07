@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Bearbeitungsgebührtyp (Optional)',
     'fee_type_helper' => 'Wählen Sie aus, wie die Zahlungsgebühr berechnet werden soll: als fester Betrag oder als Prozentsatz der Gesamtbestellung. Wenn Sie einen festen Betrag wählen, basiert dieser auf der Standardwährung (:currency).',
+    'payment_created' => 'Sie haben eine Zahlung #:charge_id über :channel :time erstellt: :amount',
+    'processing_please_wait' => 'Wird verarbeitet. Bitte warten...',
+    'error' => 'Fehler',
+    'checkout' => 'Kasse',
+    'show_full_json' => 'Vollständiges JSON anzeigen',
+    'full_log_data' => 'Vollständige Protokolldaten',
+    'currency_not_supported' => ':name unterstützt :currency nicht. Liste der von :name unterstützten Währungen: :currencies.',
+    'please_switch_currency' => 'Bitte wechseln Sie zu einer unterstützten Währung',
+    'payment_with' => 'Zahlung mit :paymentType',
 ];

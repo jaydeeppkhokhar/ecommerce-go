@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'QR 코드를 스캔하여 배송을 추적하세요',
     ],
     'customer_confirmed_delivery_at' => '고객이 배송을 확인한 시간',
+    'no_shipping_methods_available' => '사용 가능한 배송 방법이 없습니다!',
 ];

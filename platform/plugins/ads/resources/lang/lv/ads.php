@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Nederīgs Google AdSense klienta ID formāts. Tam jābūt formātā: ca-pub-XXXXXXXXXXXXXXXX (kur X ir cipars).',
         ],
     ],
+    'banner' => 'Baneris',
+    'tablet_image' => 'Planšetdatora attēls',
+    'tablet_image_helper' => 'Ierīcēm ar platumu no 768px līdz 1200px, ja tukšs, tiks izmantots attēls no darbvirsmas.',
+    'mobile_image' => 'Mobilā attēls',
+    'mobile_image_helper' => 'Ierīcēm ar platumu mazāku par 768px, ja tukšs, tiks izmantots attēls no planšetdatora.',
 ];

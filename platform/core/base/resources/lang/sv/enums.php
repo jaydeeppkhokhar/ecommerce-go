@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Publicera pakettillgångar',
         'clean_up' => 'Rensa systemuppdateringsfiler',
         'done' => 'Systemet uppdaterat',
-
+        'unknown' => 'Okänt steg',
         'messages' => [
             'download' => 'Laddar ner uppdateringsfiler...',
             'update_files' => 'Uppdaterar systemfiler...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Rensar systemuppdateringsfiler...',
             'done' => 'Klart! Din webbläsare kommer att uppdateras om 30 sekunder.',
         ],
-
         'failed_messages' => [
             'download' => 'Kunde inte ladda ner uppdateringsfiler',
             'update_files' => 'Kunde inte uppdatera systemfiler',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Kunde inte publicera pakettillgångar',
             'clean_up' => 'Kunde inte rensa systemuppdateringsfiler',
         ],
-
         'success_messages' => [
             'download' => 'Uppdateringsfiler nedladdade.',
             'update_files' => 'Systemfiler uppdaterade.',

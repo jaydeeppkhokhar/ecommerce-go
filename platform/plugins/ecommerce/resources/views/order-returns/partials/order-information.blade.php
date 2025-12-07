@@ -205,7 +205,7 @@
     </x-core::card.header>
 
     <x-core::card.body>
-        <ul class="steps steps-vertical">
+        <ul class="steps steps-vertical border-0 p-0 m-0">
             @foreach($returnRequest->histories as $history)
                 <li @class(['step-item', 'user-action' => $loop->first])>
                     <div class="h4 m-0">{{ $history->description }}</div>

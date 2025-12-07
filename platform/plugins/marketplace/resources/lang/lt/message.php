@@ -3,4 +3,5 @@
 return [
     'name' => 'Žinutės',
     'viewing_message' => 'Peržiūrima žinutė #:id',
+    'sent_at' => 'Išsiųsta',
 ];

@@ -70,7 +70,6 @@ return [
     'settings' => 'პარამეტრები',
     'service_registration' => 'რეგისტრირებულია :name-ით',
     'saved_payment_settings_success' => 'გადახდის მეთოდი შეინახა წარმატებით',
-    'saved_payment_method_success' => 'გადახდის მეთოდი შეინახა წარმატებით',
     'refunds' => [
         'update_time' => 'დროის განახლება',
         'total_refunded_amount' => 'დაბრუნებული ჯამი',
@@ -82,4 +81,13 @@ return [
         'create_time' => 'გატარება',
     ],
     'payment_pending' => 'ვაკანსიების შეკვეთა მიღებულია და მუშავდება. ინვოისი და დაამატებითი ინფორმაცია გამოგზავნილია ელ. ფოსტაზე.',
+    'payment_created' => 'თქვენ შექმენით გადახდა #:charge_id :channel-ის საშუალებით :time : :amount',
+    'processing_please_wait' => 'მუშავდება. გთხოვთ დაელოდოთ...',
+    'error' => 'შეცდომა',
+    'checkout' => 'გადახდა',
+    'show_full_json' => 'სრული JSON-ის ჩვენება',
+    'full_log_data' => 'სრული ჟურნალის მონაცემები',
+    'currency_not_supported' => ':name არ უჭერს მხარს :currency-ს. :name-ის მიერ მხარდაჭერილი ვალუტების სია: :currencies.',
+    'please_switch_currency' => 'გთხოვთ გადაერთოთ ნებისმიერ მხარდაჭერილ ვალუტაზე',
+    'payment_with' => 'გადახდა :paymentType-ით',
 ];

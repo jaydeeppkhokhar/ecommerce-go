@@ -1,6 +1,6 @@
 <div class="row mb-3 mt-5 g-2">
     <x-core::stat-widget.item
-        label="{{ __('Orders') }}"
+        label="{{ trans('plugins/marketplace::marketplace.orders') }}"
         :value="$data['orders']->count()"
         icon="ti ti-shopping-cart"
         color="primary"
@@ -9,7 +9,7 @@
     />
 
     <x-core::stat-widget.item
-        label="{{ __('Revenue') }}"
+        label="{{ trans('plugins/marketplace::marketplace.revenues') }}"
         :value="format_price($data['revenue']['amount'])"
         icon="ti ti-cash"
         color="success"
@@ -18,7 +18,7 @@
     />
 
     <x-core::stat-widget.item
-        label="{{ __('Products') }}"
+        label="{{ trans('plugins/marketplace::marketplace.products') }}"
         :value="$totalProducts"
         icon="ti ti-package"
         color="info"
@@ -27,7 +27,7 @@
     />
 
     <x-core::stat-widget.item
-        label="{{ __('Earnings') }}"
+        label="{{ trans('plugins/marketplace::marketplace.earnings') }}"
         :value="format_price($data['revenue']['sub_amount'] - $data['revenue']['fee'])"
         icon="ti ti-wallet"
         color="warning"
@@ -42,7 +42,7 @@
             <x-core::card.header>
                 <x-core::card.title>
                     <x-core::icon name="ti ti-bolt" />
-                    {{ __('Quick Actions') }}
+                    {{ trans('plugins/marketplace::marketplace.quick_actions') }}
                 </x-core::card.title>
             </x-core::card.header>
             <x-core::card.body>
@@ -50,29 +50,29 @@
                     <div class="col-6">
                         <a href="{{ route('marketplace.vendor.products.create') }}" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-1">
                             <x-core::icon name="ti ti-plus" />
-                            <span class="d-none d-sm-inline">{{ __('Add Product') }}</span>
-                            <span class="d-inline d-sm-none">{{ __('Product') }}</span>
+                            <span class="d-none d-sm-inline">{{ trans('plugins/marketplace::marketplace.add_product') }}</span>
+                            <span class="d-inline d-sm-none">{{ trans('plugins/marketplace::marketplace.product') }}</span>
                         </a>
                     </div>
                     <div class="col-6">
                         <a href="{{ route('marketplace.vendor.discounts.create') }}" class="btn btn-outline-info w-100 d-flex align-items-center justify-content-center gap-1">
                             <x-core::icon name="ti ti-discount-2" />
-                            <span class="d-none d-sm-inline">{{ __('Create Discount') }}</span>
-                            <span class="d-inline d-sm-none">{{ __('Discount') }}</span>
+                            <span class="d-none d-sm-inline">{{ trans('plugins/marketplace::marketplace.create_discount') }}</span>
+                            <span class="d-inline d-sm-none">{{ trans('plugins/ecommerce::discount.name') }}</span>
                         </a>
                     </div>
                     <div class="col-6 mt-2">
                         <a href="{{ route('marketplace.vendor.settings') }}" class="btn btn-outline-warning w-100 d-flex align-items-center justify-content-center gap-1">
                             <x-core::icon name="ti ti-settings" />
-                            <span class="d-none d-sm-inline">{{ __('Store Settings') }}</span>
-                            <span class="d-inline d-sm-none">{{ __('Settings') }}</span>
+                            <span class="d-none d-sm-inline">{{ trans('plugins/marketplace::marketplace.store_settings') }}</span>
+                            <span class="d-inline d-sm-none">{{ trans('plugins/marketplace::marketplace.settings.title') }}</span>
                         </a>
                     </div>
                     <div class="col-6 mt-2">
                         <a href="{{ route('marketplace.vendor.withdrawals.create') }}" class="btn btn-outline-success w-100 d-flex align-items-center justify-content-center gap-1">
                             <x-core::icon name="ti ti-cash-banknote" />
-                            <span class="d-none d-sm-inline">{{ __('Withdrawal') }}</span>
-                            <span class="d-inline d-sm-none">{{ __('Withdraw') }}</span>
+                            <span class="d-none d-sm-inline">{{ trans('plugins/marketplace::marketplace.withdrawals') }}</span>
+                            <span class="d-inline d-sm-none">{{ trans('plugins/marketplace::marketplace.withdraw') }}</span>
                         </a>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
             <x-core::card.header>
                 <x-core::card.title>
                     <x-core::icon name="ti ti-building-store" />
-                    {{ __('Store Performance') }}
+                    {{ trans('plugins/marketplace::marketplace.store_performance') }}
                 </x-core::card.title>
             </x-core::card.header>
             <x-core::card.body>
@@ -93,7 +93,7 @@
                     <x-core::datagrid.item class="col-6 mb-2">
                         <x-slot:title>
                             <x-core::icon name="ti ti-shopping-cart-check" />
-                            {{ __('Conversion Rate') }}
+                            {{ trans('plugins/marketplace::marketplace.conversion_rate') }}
                         </x-slot:title>
                         {{ $totalOrders ? number_format(($totalOrders / max(1, $totalProducts)) * 100, 1) . '%' : '0%' }}
                     </x-core::datagrid.item>
@@ -101,7 +101,7 @@
                     <x-core::datagrid.item class="col-6 mb-2">
                         <x-slot:title>
                             <x-core::icon name="ti ti-receipt" />
-                            {{ __('Avg. Order Value') }}
+                            {{ trans('plugins/marketplace::marketplace.avg_order_value') }}
                         </x-slot:title>
                         {{ $totalOrders ? format_price($data['revenue']['amount'] / max(1, $totalOrders)) : format_price(0) }}
                     </x-core::datagrid.item>
@@ -109,7 +109,7 @@
                     <x-core::datagrid.item class="col-6">
                         <x-slot:title>
                             <x-core::icon name="ti ti-truck-delivery" />
-                            {{ __('Fulfillment Rate') }}
+                            {{ trans('plugins/marketplace::marketplace.fulfillment_rate') }}
                         </x-slot:title>
                         {{ $totalOrders ? '100%' : '0%' }}
                     </x-core::datagrid.item>
@@ -117,9 +117,9 @@
                     <x-core::datagrid.item class="col-6">
                         <x-slot:title>
                             <x-core::icon name="ti ti-eye" />
-                            {{ __('Store Visibility') }}
+                            {{ trans('plugins/marketplace::marketplace.store_visibility') }}
                         </x-slot:title>
-                        <span class="badge text-bg-success text-white">{{ __('Active') }}</span>
+                        <span class="badge text-bg-success text-white">{{ trans('plugins/marketplace::marketplace.active') }}</span>
                     </x-core::datagrid.item>
                 </div>
             </x-core::card.body>
@@ -158,11 +158,11 @@
                     >
                         <use xlink:href="#check-circle-fill" />
                     </svg>
-                    {{ __('Congratulations on being a vendor at :site_title', ['site_title' => Theme::getSiteTitle()]) }}
+                    {{ trans('plugins/marketplace::marketplace.congratulations_vendor', ['site_title' => Theme::getSiteTitle()]) }}
                 </h4>
-                <p>{{ __('Attract your customers with the best products.') }}</p>
+                <p>{{ trans('plugins/marketplace::marketplace.attract_customers_message') }}</p>
                 <hr>
-                <p class="mb-0">{!! BaseHelper::clean(__('Create a new product <a href=":url">here</a>', ['url' => route('marketplace.vendor.products.create')])) !!}</p>
+                <p class="mb-0">{!! BaseHelper::clean(trans('plugins/marketplace::marketplace.create_new_product_here', ['url' => route('marketplace.vendor.products.create')])) !!}</p>
             </div>
         </div>
     </div>
@@ -197,10 +197,10 @@
                     >
                         <use xlink:href="#info-fill" />
                     </svg>
-                    {{ __('You have :total product(s) but no orders yet', ['total' => $totalProducts]) }}
+                    {{ trans('plugins/marketplace::marketplace.no_orders_yet_message', ['total' => $totalProducts]) }}
                 </h4>
                 <hr>
-                <p class="mb-0">{!! BaseHelper::clean(__('View your store <a href=":url">here</a>', ['url' => $user->store->url])) !!}</p>
+                <p class="mb-0">{!! BaseHelper::clean(trans('plugins/marketplace::marketplace.view_your_store_here', ['url' => $user->store->url])) !!}</p>
             </div>
         </div>
     </div>
@@ -212,11 +212,11 @@
                     <div>
                         <x-core::card.title>
                             <x-core::icon name="ti ti-chart-line" />
-                            {{ __('Sales Reports') }}
+                            {{ trans('plugins/marketplace::marketplace.sales_reports') }}
                         </x-core::card.title>
                         <x-core::card.subtitle>
                             <a href="{{ route('marketplace.vendor.revenues.index') }}">
-                                {{ __('Revenues in :label', ['label' => $data['predefinedRange']]) }}
+                                {{ trans('plugins/marketplace::marketplace.revenues_in_label', ['label' => $data['predefinedRange']]) }}
                                 <x-core::icon name="ti ti-arrow-right" />
                             </a>
                         </x-core::card.subtitle>
@@ -240,18 +240,18 @@
                     <div>
                         <x-core::card.title>
                             <x-core::icon name="ti ti-coin" />
-                            {{ __('Earnings') }}
+                            {{ trans('plugins/marketplace::marketplace.earnings') }}
                         </x-core::card.title>
-                        <x-core::card.subtitle>{{ __('Earnings in :label', ['label' => $data['predefinedRange']]) }}</x-core::card.subtitle>
+                        <x-core::card.subtitle>{{ trans('plugins/marketplace::marketplace.earnings_in_label', ['label' => $data['predefinedRange']]) }}</x-core::card.subtitle>
                     </div>
                 </x-core::card.header>
                 <x-core::card.body>
                     <div id="revenue-chart">
                         <revenue-chart
                             :data="{{ json_encode([
-                                    ['label' => __('Revenue'), 'value' => $data['revenue']['amount'], 'color' => '#80bc00'],
-                                    ['label' => __('Fees'), 'value' => $data['revenue']['fee'], 'color' => '#fcb800'],
-                                    ['label' => __('Withdrawals'), 'value' => $data['revenue']['withdrawal'], 'color' => '#fc6b00'],
+                                    ['label' => trans('plugins/marketplace::marketplace.revenues'), 'value' => $data['revenue']['amount'], 'color' => '#80bc00'],
+                                    ['label' => trans('plugins/marketplace::marketplace.fees'), 'value' => $data['revenue']['fee'], 'color' => '#fcb800'],
+                                    ['label' => trans('plugins/marketplace::marketplace.withdrawals'), 'value' => $data['revenue']['withdrawal'], 'color' => '#fc6b00'],
                                 ]) }}"
                         ></revenue-chart>
                     </div>
@@ -260,14 +260,14 @@
                         <x-core::datagrid.item class="col-6 mb-2">
                             <x-slot:title>
                                 <x-core::icon name="ti ti-wallet"></x-core::icon>
-                                {{ __('Earnings') }}
+                                {{ trans('plugins/marketplace::marketplace.earnings') }}
                             </x-slot:title>
                             {{ format_price($data['revenue']['sub_amount']) }}
                         </x-core::datagrid.item>
 
                         <x-core::datagrid.item class="col-6 mb-2">
                             <x-slot:title>
-                                {{ __('Revenue') }}
+                                {{ trans('plugins/marketplace::marketplace.revenues') }}
                             </x-slot:title>
                             {{ format_price($data['revenue']['sub_amount'] - $data['revenue']['fee']) }}
                         </x-core::datagrid.item>
@@ -276,9 +276,9 @@
                             <x-slot:title>
                                     <span
                                         data-bs-toggle="tooltip"
-                                        data-bs-original-title="{{ __('Includes Completed, Pending, and Processing statuses') }}"
+                                        data-bs-original-title="{{ trans('plugins/marketplace::marketplace.includes_order_statuses') }}"
                                     >
-                                        {{ __('Withdrawals') }}
+                                        {{ trans('plugins/marketplace::marketplace.withdrawals') }}
                                     </span>
                             </x-slot:title>
                             {{ format_price($data['revenue']['withdrawal']) }}
@@ -286,7 +286,7 @@
 
                         <x-core::datagrid.item class="col-6">
                             <x-slot:title>
-                                {{ __('Fees') }}
+                                {{ trans('plugins/marketplace::marketplace.fees') }}
                             </x-slot:title>
                             {{ format_price($data['revenue']['fee']) }}
                         </x-core::datagrid.item>
@@ -304,18 +304,18 @@
                 <x-core::card.header>
                     <x-core::card.title>
                         <x-core::icon name="ti ti-shopping-cart" />
-                        {{ __('Recent Orders') }}
+                        {{ trans('plugins/marketplace::marketplace.recent_orders') }}
                     </x-core::card.title>
                 </x-core::card.header>
 
                 <div class="table-responsive">
                     <x-core::table class="table-striped">
                         <x-core::table.header>
-                            <x-core::table.header.cell>{{ __('Order') }}</x-core::table.header.cell>
-                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ __('Date') }}</x-core::table.header.cell>
-                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ __('Customer') }}</x-core::table.header.cell>
-                            <x-core::table.header.cell>{{ __('Status') }}</x-core::table.header.cell>
-                            <x-core::table.header.cell>{{ __('Total') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell>{{ trans('plugins/ecommerce::order.order') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ trans('plugins/marketplace::marketplace.tables.date') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ trans('plugins/ecommerce::order.customer_label') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell>{{ trans('core/base::tables.status') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell>{{ trans('plugins/ecommerce::order.total') }}</x-core::table.header.cell>
                         </x-core::table.header>
                         <x-core::table.body>
                             @forelse ($data['orders'] as $order)
@@ -349,7 +349,7 @@
                             @empty
                                 <x-core::table.body.row>
                                     <x-core::table.body.cell class="text-center" colspan="5">
-                                        {{ __('No orders!') }}
+                                        {{ trans('plugins/marketplace::marketplace.no_orders') }}
                                     </x-core::table.body.cell>
                                 </x-core::table.body.row>
                             @endforelse
@@ -359,7 +359,7 @@
 
                 <x-core::card.footer>
                     <a href="{{ route('marketplace.vendor.orders.index') }}" class="d-flex align-items-center gap-1">
-                        {{ __('View Full Orders') }}
+                        {{ trans('plugins/marketplace::marketplace.view_full_orders') }}
                         <x-core::icon name="ti ti-chevron-right" />
                     </a>
                 </x-core::card.footer>
@@ -371,7 +371,7 @@
                 <x-core::card.header>
                     <x-core::card.title>
                         <x-core::icon name="ti ti-star" />
-                        {{ __('Customer Reviews') }}
+                        {{ trans('plugins/marketplace::marketplace.customer_reviews') }}
                     </x-core::card.title>
                 </x-core::card.header>
                 <x-core::card.body>
@@ -419,19 +419,19 @@
                         @else
                             <div class="text-center py-3">
                                 <x-core::icon name="ti ti-message-circle-2" style="font-size: 3rem; opacity: 0.5" class="mb-2" />
-                                <p class="text-muted">{{ __('No reviews yet') }}</p>
+                                <p class="text-muted">{{ trans('plugins/marketplace::marketplace.no_reviews_yet') }}</p>
                             </div>
                         @endif
                     @else
                         <div class="text-center py-3">
-                            <p class="text-muted">{{ __('Reviews feature requires Ecommerce plugin') }}</p>
+                            <p class="text-muted">{{ trans('plugins/marketplace::marketplace.reviews_require_ecommerce') }}</p>
                         </div>
                     @endif
                 </x-core::card.body>
                 @if (is_plugin_active('ecommerce') && $reviews->count())
                     <x-core::card.footer>
                         <a href="{{ route('marketplace.vendor.products.index') }}" class="d-flex align-items-center gap-1">
-                            {{ __('View All Products') }}
+                            {{ trans('plugins/marketplace::marketplace.view_all_products') }}
                             <x-core::icon name="ti ti-chevron-right" />
                         </a>
                     </x-core::card.footer>
@@ -446,17 +446,17 @@
                 <x-core::card.header>
                     <x-core::card.title>
                         <x-core::icon name="ti ti-trending-up" />
-                        {{ __('Top Selling Products') }}
+                        {{ trans('plugins/marketplace::marketplace.top_selling_products') }}
                     </x-core::card.title>
                 </x-core::card.header>
 
                 <div class="table-responsive">
                     <x-core::table class="table-striped">
                         <x-core::table.header>
-                            <x-core::table.header.cell>{{ __('Name') }}</x-core::table.header.cell>
-                            <x-core::table.header.cell>{{ __('Price') }}</x-core::table.header.cell>
-                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ __('Status') }}</x-core::table.header.cell>
-                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ __('Created at') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell>{{ trans('core/base::tables.name') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell>{{ trans('plugins/ecommerce::products.price') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ trans('core/base::tables.status') }}</x-core::table.header.cell>
+                            <x-core::table.header.cell class="d-none d-md-table-cell">{{ trans('core/base::tables.created_at') }}</x-core::table.header.cell>
                         </x-core::table.header>
                         <x-core::table.body>
                             @forelse ($data['products'] as $product)
@@ -490,7 +490,7 @@
                             @empty
                                 <x-core::table.body.row>
                                     <x-core::table.body.cell class="text-center" colspan="4">
-                                        {{ __('No products!') }}
+                                        {{ trans('plugins/marketplace::marketplace.no_products') }}
                                     </x-core::table.body.cell>
                                 </x-core::table.body.row>
                             @endforelse
@@ -500,7 +500,7 @@
 
                 <x-core::card.footer>
                     <a href="{{ route('marketplace.vendor.products.index') }}" class="d-flex align-items-center gap-1">
-                        {{ __('View Full Products') }}
+                        {{ trans('plugins/marketplace::marketplace.view_full_products') }}
                         <x-core::icon name="ti ti-chevron-right" />
                     </a>
                 </x-core::card.footer>
@@ -512,7 +512,7 @@
                 <x-core::card.header>
                     <x-core::card.title>
                         <x-core::icon name="ti ti-box-seam" />
-                        {{ __('Inventory Status') }}
+                        {{ trans('plugins/marketplace::marketplace.inventory_status') }}
                     </x-core::card.title>
                 </x-core::card.header>
                 <x-core::card.body>
@@ -537,11 +537,11 @@
                             </div>
                             <div class="flex-grow-1">
                                 <h5 class="mb-0">{{ $inStockProducts }}</h5>
-                                <span class="text-muted">{{ __('In Stock') }}</span>
+                                <span class="text-muted">{{ trans('plugins/marketplace::marketplace.in_stock') }}</span>
                             </div>
                             <div>
                                 <a href="{{ route('marketplace.vendor.products.index') }}" class="btn btn-sm btn-outline-success">
-                                    {{ __('View') }}
+                                    {{ trans('core/base::tables.view') }}
                                 </a>
                             </div>
                         </div>
@@ -554,11 +554,11 @@
                             </div>
                             <div class="flex-grow-1">
                                 <h5 class="mb-0">{{ $lowStockProducts }}</h5>
-                                <span class="text-muted">{{ __('Low Stock') }}</span>
+                                <span class="text-muted">{{ trans('plugins/marketplace::marketplace.low_stock') }}</span>
                             </div>
                             <div>
                                 <a href="{{ route('marketplace.vendor.products.index', ['filter_table_id' => 'table-marketplace-vendor-products', 'class' => 'Botble\Ecommerce\Models\Product', 'filter_columns' => ['quantity' => '1-5']]) }}" class="btn btn-sm btn-outline-warning">
-                                    {{ __('View') }}
+                                    {{ trans('core/base::tables.view') }}
                                 </a>
                             </div>
                         </div>
@@ -571,11 +571,11 @@
                             </div>
                             <div class="flex-grow-1">
                                 <h5 class="mb-0">{{ $outOfStockProducts }}</h5>
-                                <span class="text-muted">{{ __('Out of Stock') }}</span>
+                                <span class="text-muted">{{ trans('plugins/marketplace::marketplace.out_of_stock') }}</span>
                             </div>
                             <div>
                                 <a href="{{ route('marketplace.vendor.products.index', ['filter_table_id' => 'table-marketplace-vendor-products', 'class' => 'Botble\Ecommerce\Models\Product', 'filter_columns' => ['quantity' => '0']]) }}" class="btn btn-sm btn-outline-danger">
-                                    {{ __('View') }}
+                                    {{ trans('core/base::tables.view') }}
                                 </a>
                             </div>
                         </div>
@@ -584,7 +584,7 @@
                 <x-core::card.footer>
                     <a href="{{ route('marketplace.vendor.products.create') }}" class="d-flex align-items-center gap-1">
                         <x-core::icon name="ti ti-plus" />
-                        {{ __('Add New Product') }}
+                        {{ trans('plugins/marketplace::marketplace.add_new_product') }}
                     </a>
                 </x-core::card.footer>
             </x-core::card>

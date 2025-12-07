@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Receitas',
     'edit' => 'Atualizar saldo da carteira',
     'view_store' => 'Visualizar loja ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Adicionar/retirar valor do vendedor',
     'statements' => 'Declarações',
     'products' => 'Produtos',
+    'items_earning_sales' => 'Vendas de ganhos de itens: :amount',
 ];

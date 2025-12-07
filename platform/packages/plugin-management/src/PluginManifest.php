@@ -49,7 +49,7 @@ class PluginManifest
 
     public function generateManifest(array $data = []): bool
     {
-        if (! $data || ! is_array($data)) {
+        if (! $data) {
             $data = $this->getPluginInfo();
         }
 

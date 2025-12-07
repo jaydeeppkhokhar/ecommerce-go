@@ -106,8 +106,8 @@ class HookServiceProvider extends ServiceProvider
 
             if (! $currencyModel->query()->where('title', 'USD')->exists()) {
                 $data['error'] = true;
-                $data['message'] = __(
-                    ":name doesn't support :currency. List of currencies supported by :name: :currencies.",
+                $data['message'] = trans(
+                    'plugins/payment::payment.currency_not_supported',
                     [
                         'name' => 'PayPal',
                         'currency' => $currency,

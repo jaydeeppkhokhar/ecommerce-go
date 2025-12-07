@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatsko generiranje',
         'automatic_generation_desc' => 'Automatski se ažurira kada se sadržaj promijeni',
         'automatic_update_note' => 'Mapa web stranice automatski se ažurira svaki put kada stvorite, uredite ili izbrišete sadržaj na svojoj web stranici.',
+        'submit_sitemap' => 'Pošalji sitemap na IndexNow',
+        'submitting_sitemap' => 'Slanje...',
+        'sitemap_submitted_successfully' => 'Sitemap je uspješno poslan tražilicama!',
+        'sitemap_submission_failed' => 'Neuspjelo slanje sitemapa svim tražilicama.',
+        'sitemap_submission_partial' => 'Sitemap je poslan s nekim pogreškama.',
+        'submit_sitemap_error' => 'Slanje sitemapa nije uspjelo. Pokušajte ponovo.',
+        'indexnow_disabled' => 'IndexNow nije omogućen. Najprije ga omogućite.',
+        'indexnow_no_api_key' => 'API ključ nije pronađen. Najprije generirajte API ključ.',
     ],
 ];

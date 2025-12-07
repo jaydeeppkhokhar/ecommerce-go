@@ -23,7 +23,6 @@ return [
         'activated' => '已啟用',
         'locked' => '已鎖定',
     ],
-    'email_verified' => '電子郵件已驗證?',
     'verify_email' => [
         'confirm_heading' => '驗證電子郵件確認',
         'confirm_description' => '您確定要驗證此顧客的電子郵件嗎?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => '按此',
         'confirm_button' => '驗證',
     ],
-    'email_already_verified' => '電子郵件已經驗證。',
     'verification_email_sent' => '驗證電子郵件已成功發送!',
     'resend_verification_email' => '重新發送驗證電子郵件',
     'resend_verification_email_confirmation' => '您確定要重新發送驗證電子郵件給此顧客嗎?',

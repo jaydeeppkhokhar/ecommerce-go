@@ -66,6 +66,7 @@ return [
     'languages' => 'Ngôn ngữ',
     'reset_password' => 'Khôi phục mật khẩu',
     'deactivated_message' => 'Tài khoản của bạn đã bị vô hiệu hóa. Vui lòng liên hệ quản trị viên.',
+    'password_changed_message' => 'Mật khẩu của bạn đã được thay đổi. Vui lòng đăng nhập lại bằng mật khẩu mới.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

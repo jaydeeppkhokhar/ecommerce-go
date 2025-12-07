@@ -3,9 +3,6 @@
 return [
     'title' => 'تثبيت',
     'next' => 'الخطوة التالية',
-    'back' => 'سابق',
-    'finish' => 'ثَبَّتَ',
-    'installation' => 'تثبيت',
     'forms' => [
         'errorTitle' => 'وقعت الأخطاء التالية:',
     ],
@@ -17,7 +14,7 @@ return [
     ],
     'requirements' => [
         'title' => 'متطلبات الخادم',
-        'next' => 'تحقق من الأذونات',
+        'php_version_required' => 'مطلوب إصدار PHP :version',
     ],
     'permissions' => [
         'next' => 'تكوين البيئة',
@@ -28,17 +25,11 @@ return [
             'form' => [
                 'name_required' => 'مطلوب اسم البيئة.',
                 'app_name_label' => 'عنوان الموقع',
-                'app_name_placeholder' => 'عنوان الموقع',
                 'app_url_label' => 'عنوان URL',
-                'app_url_placeholder' => 'عنوان URL',
                 'db_connection_label' => 'اتصال قاعدة البيانات',
                 'db_connection_label_mysql' => 'ماي إس كيو إل',
-                'db_connection_label_sqlite' => 'سكليتي',
-                'db_connection_label_pgsql' => 'PostgreSQL',
                 'db_host_label' => 'مضيف قاعدة البيانات',
-                'db_host_placeholder' => 'مضيف قاعدة البيانات',
                 'db_port_label' => 'منفذ قاعدة البيانات',
-                'db_port_placeholder' => 'منفذ قاعدة البيانات',
                 'db_name_label' => 'اسم قاعدة البيانات',
                 'db_name_placeholder' => 'اسم قاعدة البيانات',
                 'db_username_label' => 'اسم مستخدم قاعدة البيانات',
@@ -51,8 +42,8 @@ return [
                 'db_host_helper' => 'إذا كنت تستخدم Laravel Sail، فما عليك سوى تغيير DB_HOST إلى DB_HOST=mysql. في بعض الاستضافة، يمكن أن يكون DB_HOST مضيفًا محليًا بدلاً من 127.0.0.1',
                 'db_connections' => [
                     'mysql' => 'ماي إس كيو إل',
-                    'sqlite' => 'سكليتي',
-                    'pgsql' => 'PostgreSQL',
+                    'sqlite' => 'سكلايت',
+                    'pgsql' => 'بوستجري',
                 ],
             ],
         ],
@@ -79,13 +70,15 @@ return [
         'title' => 'تفعيل الترخيص',
         'skip' => 'تخطي في الوقت الراهن',
     ],
-    'install' => 'ثَبَّتَ',
     'final' => [
         'pageTitle' => 'انتهى التثبيت',
         'title' => 'منتهي',
         'message' => 'تم تثبيت التطبيق بنجاح.',
         'exit' => 'انتقل إلى لوحة تحكم المشرف',
     ],
-    'install_success' => 'تم التثبيت بنجاح!',
-    'install_step_title' => 'Installation - Step :step: :title',
+    'install_step_title' => 'التثبيت - الخطوة :step: :title',
+    'theme_preset' => [
+        'title' => 'اختر إعداد القالب',
+        'message' => 'اختر إعدادًا مسبقًا للقالب لتخصيص مظهر موقعك، وسيتم استيراد بيانات تجريبية مناسبة للقالب المختار.',
+    ],
 ];

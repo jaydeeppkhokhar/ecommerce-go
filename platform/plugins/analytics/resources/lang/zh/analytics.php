@@ -30,7 +30,11 @@ return [
     'widget_analytics_browser' => '顶级浏览器',
     'widget_analytics_referrer' => '顶级推荐者',
     'widget_analytics_general' => '网站分析',
-    'missing_library_warning' => '分析插件错误：缺少第三方库。请运行“composer update”以安装它们。',
+    'missing_library_warning' => '分析插件错误：缺少第三方库。请运行"composer update"以安装它们。',
     'browser' => '浏览器',
     'url' => '网址',
+    'credential_invalid' => '此凭据不是有效的 Google Analytics 凭据。',
+    'file_not_valid_json' => '此文件不是有效的 JSON 文件。',
+    'no_results_found' => '未找到结果',
+    'upload_service_account_json' => '上传服务账户 JSON 文件',
 ];

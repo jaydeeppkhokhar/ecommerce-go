@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Doanh thu',
     'edit' => 'Cập nhật số dư ví',
     'view_store' => 'Xem cửa hàng ":store"',
     'forms' => [
@@ -11,9 +12,9 @@ return [
         'created_by' => 'Tạo bởi',
     ],
     'types' => [
-        'add-amount' => 'Thêm số tiền',
-        'subtract-amount' => 'Trừ số tiền',
-        'order-return' => 'Trả lại đơn hàng',
+        'add-amount' => 'Cộng tiền',
+        'subtract-amount' => 'Trừ tiền',
+        'order-return' => 'Hoàn hàng',
     ],
     'store_name' => 'Tên cửa hàng',
     'vendor_name' => 'Tên người bán',
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Thêm/Trừ số tiền của người bán',
     'statements' => 'Báo cáo',
     'products' => 'Sản phẩm',
+    'items_earning_sales' => 'Doanh số bán hàng thu nhập: :amount',
 ];

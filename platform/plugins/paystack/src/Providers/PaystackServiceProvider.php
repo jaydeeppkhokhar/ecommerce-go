@@ -20,6 +20,7 @@ class PaystackServiceProvider extends ServiceProvider implements DeferrableProvi
             ->loadHelpers()
             ->loadRoutes()
             ->loadAndPublishViews()
+            ->loadAndPublishTranslations()
             ->publishAssets();
 
         $this->app->register(HookServiceProvider::class);

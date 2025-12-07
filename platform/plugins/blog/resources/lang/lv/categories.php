@@ -12,4 +12,7 @@ return [
     'parent' => 'Vecākkategorija',
     'order' => 'Secība',
     'is_default' => 'Ir noklusējuma',
+    'intro' => [
+        'description' => 'Organizējiet savus emuāra ierakstus kategorijās labākai satura pārvaldībai.',
+    ],
 ];

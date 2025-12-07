@@ -129,11 +129,18 @@ class Product extends BaseModel
     protected function url(): Attribute
     {
         return Attribute::get(function (): string {
-            if (! $this->slug && $this->slugable) {
-                $this->slug = $this->slugable->key;
+            if ($this->is_variation) {
+                return '';
             }
 
-            if (! $this->slug) {
+            $slug = $this->slug;
+
+            if (! $slug && $this->slugable) {
+                $slug = $this->slugable->key;
+                $this->slug = $slug;
+            }
+
+            if (! $slug) {
                 return BaseHelper::getHomepageUrl();
             }
 
@@ -143,7 +150,7 @@ class Product extends BaseModel
 
             return apply_filters(
                 'slug_filter_url',
-                url(ltrim($prefix . '/' . $this->slug, '/')) . SlugHelper::getPublicSingleEndingURL()
+                url(ltrim($prefix . '/' . $slug, '/')) . SlugHelper::getPublicSingleEndingURL()
             );
         });
     }
@@ -189,7 +196,6 @@ class Product extends BaseModel
                 app(UpdateDefaultProductService::class)->execute($product);
             }
 
-            // Trigger quantity updated event if quantity, stock status, or storehouse management changed
             $quantityRelatedFields = ['quantity', 'stock_status', 'with_storehouse_management', 'allow_checkout_when_out_of_stock'];
             if ($product->wasChanged($quantityRelatedFields)) {
                 ProductQuantityUpdatedEvent::dispatch($product);
@@ -279,6 +285,10 @@ class Product extends BaseModel
 
     public function taxes(): BelongsToMany
     {
+        if (! $this->is_variation) {
+            return $this->belongsToMany(Tax::class, 'ec_tax_products')->with(['rules']);
+        }
+
         return $this->original_product->belongsToMany(Tax::class, 'ec_tax_products')->with(['rules']);
     }
 
@@ -594,7 +604,11 @@ class Product extends BaseModel
                 ->where('status', BaseStatusEnum::PUBLISHED);
 
             if ($taxes->isEmpty() && $defaultTaxRate = get_ecommerce_setting('default_tax_rate')) {
-                return Tax::query()->where('id', $defaultTaxRate)->value('percentage') ?: 0;
+                return cache()->remember(
+                    'default_tax_percentage_' . $defaultTaxRate,
+                    6 * 60 * 60,
+                    fn () => Tax::query()->where('id', $defaultTaxRate)->value('percentage') ?: 0
+                );
             }
 
             return $taxes->sum('percentage');
@@ -794,6 +808,46 @@ class Product extends BaseModel
             });
     }
 
+    public function scopeSearchByKeyword(Builder $query, ?string $keyword, bool $includeVariations = true): Builder
+    {
+        if (! $keyword) {
+            return $query;
+        }
+
+        $keyword = '%' . $keyword . '%';
+
+        return $query
+            ->where(function ($query) use ($keyword, $includeVariations): void {
+                $query
+                    ->where(function ($query) use ($keyword): void {
+                        $query
+                            ->where('ec_products.name', 'LIKE', $keyword)
+                            ->where('is_variation', 0);
+                    })
+                    ->orWhere(function ($query) use ($keyword, $includeVariations): void {
+                        $query
+                            ->where('is_variation', 0)
+                            ->where(function ($query) use ($keyword, $includeVariations): void {
+                                $query
+                                    ->orWhere('ec_products.sku', 'LIKE', $keyword)
+                                    ->orWhere('ec_products.created_at', 'LIKE', $keyword)
+                                    ->when(
+                                        $includeVariations && in_array('sku', EcommerceHelper::getProductsSearchBy()),
+                                        function ($query) use ($keyword): void {
+                                            $query
+                                                ->orWhereHas(
+                                                    'variations.product',
+                                                    function ($query) use ($keyword): void {
+                                                        $query->where('sku', 'LIKE', $keyword);
+                                                    }
+                                                );
+                                        }
+                                    );
+                            });
+                    });
+            });
+    }
+
     public function options(): HasMany
     {
         return $this->hasMany(Option::class)->oldest('order');
@@ -982,12 +1036,22 @@ class Product extends BaseModel
                 return null;
             }
 
-            $taxes = $this->taxes->isNotEmpty()
-                ? $this->taxes
-                : collect([(object) [
-                    'title' => get_ecommerce_setting('default_tax_rate') ? Tax::query()->find(get_ecommerce_setting('default_tax_rate'))->title : '',
-                    'percentage' => get_ecommerce_setting('default_tax_rate') ? Tax::query()->find(get_ecommerce_setting('default_tax_rate'))->percentage : 0,
-                ]]);
+            $taxes = $this->taxes;
+
+            if ($taxes->isEmpty() && $defaultTaxRate = get_ecommerce_setting('default_tax_rate')) {
+                $defaultTax = cache()->remember(
+                    'default_tax_' . $defaultTaxRate,
+                    6 * 60 * 60,
+                    fn () => Tax::query()->find($defaultTaxRate)
+                );
+
+                if ($defaultTax) {
+                    $taxes = collect([(object) [
+                        'title' => $defaultTax->title,
+                        'percentage' => $defaultTax->percentage,
+                    ]]);
+                }
+            }
 
             $taxes = $taxes->filter(fn ($tax) => $tax->percentage > 0);
 
@@ -998,9 +1062,9 @@ class Product extends BaseModel
             $taxNames = $taxes->map(fn ($tax) => $tax->title . ' ' . $tax->percentage . '%')->implode(' + ');
 
             if ($this->price_includes_tax || EcommerceHelper::isDisplayProductIncludingTaxes()) {
-                $description =  __('Including :tax', ['tax' => $taxNames]);
+                $description = __('Including :tax', ['tax' => $taxNames]);
             } else {
-                $description =__('Excluding :tax', ['tax' => $taxNames]);
+                $description = __('Excluding :tax', ['tax' => $taxNames]);
             }
 
             $description = str_replace('{{ tax_percentage }}', $this->total_taxes_percentage, $description);

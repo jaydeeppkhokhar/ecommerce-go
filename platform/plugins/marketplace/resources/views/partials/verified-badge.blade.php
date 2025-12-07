@@ -1,4 +1,4 @@
-@props(['size' => 'md', 'title' => __('Verified')])
+@props(['size' => 'md', 'title' => trans('plugins/marketplace::marketplace.verified')])
 
 @php
     $sizes = [

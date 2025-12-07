@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Permitir que clientes façam upload de comprovante de pagamento para seus pedidos. Isso é útil para métodos de pagamento manuais.',
             'enable_guest_payment_proof' => 'Permitir que clientes convidados façam upload de comprovante de pagamento',
             'enable_guest_payment_proof_helper' => 'Quando habilitado, clientes convidados podem fazer upload de comprovante de pagamento usando o token do pedido sem fazer login. Eles receberão o link de upload no e-mail de confirmação do pedido.',
+            'payment_proof_payment_methods' => 'Métodos de pagamento que requerem comprovativo de pagamento',
+            'payment_proof_payment_methods_helper' => 'Selecione quais métodos de pagamento devem permitir que os clientes carreguem o comprovativo de pagamento. Normalmente usado para métodos de pagamento manuais como contra reembolso e transferência bancária.',
         ],
     ],
     'checkout' => [
@@ -442,6 +444,8 @@ return [
             'facebook_pixel_debug_mode_helper' => 'Habilitar modo de debug para registrar eventos do Facebook Pixel no console do navegador e solucionar problemas de rastreamento',
             'enable_google_tag_manager_tracking_events' => 'Habilitar Eventos de Rastreamento do Google Tag Manager',
             'google_tag_manager_tracking_info' => 'Quando habilitado, eventos de e-commerce serão rastreados através do Google Tag Manager. Certifique-se de ter configurado o Google Tag Manager acima.',
+            'google_ads_conversion_id' => 'ID de Conversão do Google Ads',
+            'google_ads_conversion_id_helper' => 'Digite seu ID de conversão do Google Ads (formato: AW-123456789/AbC-D_efG-h1_ijk-lmN) para rastrear conversões de compra na página de agradecimento.',
         ],
         'validation' => [
             'facebook_pixel_id_format' => 'ID do Facebook Pixel deve ter 15-16 dígitos (ex: 1234567890123456)',
@@ -485,7 +489,14 @@ return [
         'show_sale_count_left_description' => 'Mostrar uma barra de progresso com "X vendidos de Y" para criar urgência e incentivar compras rápidas durante promoções relâmpago.',
     ],
     'payment_method_cod_minimum_amount' => 'Valor mínimo do pedido - :currency (Opcional)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Valor mínimo do pedido - :currency (Opcional)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Exibir informações bancárias na página de sucesso do checkout?',
     'invoice_templates' => 'Modelos de fatura',
 ];

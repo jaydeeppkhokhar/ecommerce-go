@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => '수익',
     'edit' => '지갑 잔액 업데이트',
     'view_store' => '스토어 ":store" 보기',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => '판매자 금액 추가/차감',
     'statements' => '명세서',
     'products' => '상품',
+    'items_earning_sales' => '항목 수익 판매: :amount',
 ];

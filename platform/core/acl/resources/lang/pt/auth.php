@@ -65,6 +65,8 @@ return [
     'sign_in_below' => 'Faça login abaixo',
     'languages' => 'Idiomas',
     'reset_password' => 'Redefinir senha',
+    'deactivated_message' => 'A sua conta foi desativada. Entre em contacto com o administrador.',
+    'password_changed_message' => 'A sua palavra-passe foi alterada. Por favor, faça login novamente com a sua nova palavra-passe.',
     'settings' => [
         'email' => [
             'title' => 'ACL',
@@ -74,7 +76,11 @@ return [
                     'title' => 'Redefinir senha',
                     'description' => 'Enviar e-mail ao usuário ao solicitar redefinição de senha',
                     'subject' => 'Redefinir senha',
-                    'reset_link' => 'Link para redefinir senha',
+                    'reset_link' => 'Ligação para redefinir palavra-passe',
+                    'email_title' => 'Instruções para redefinir a palavra-passe',
+                    'email_message' => 'Recebeu este e-mail porque foi feito um pedido de redefinição da palavra-passe da sua conta.',
+                    'button_text' => 'Redefinir palavra-passe',
+                    'trouble_text' => 'Se tiver problemas ao clicar em "Redefinir palavra-passe", copie e cole o URL abaixo no seu navegador: <a href=":reset_link">:reset_link</a>. Se não solicitou a redefinição, ignore esta mensagem ou contacte-nos.',
                 ],
             ],
         ],

@@ -9,8 +9,12 @@ use Illuminate\Database\Migrations\Migration;
 return new class () extends Migration {
     public function up(): void
     {
-        $this->fixOrderData();
-        $this->fixInvoiceData();
+        try {
+            $this->fixOrderData();
+            $this->fixInvoiceData();
+        } catch (Throwable) {
+            // Do nothing
+        }
     }
 
     public function down(): void

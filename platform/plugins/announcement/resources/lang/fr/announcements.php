@@ -53,6 +53,7 @@ return [
     'lazy_loading' => 'Chargement différé',
     'lazy_loading_description' => 'Activer cette option pour améliorer la vitesse de chargement de la page',
     'hide_on_mobile' => 'Masquer sur mobile',
+    'dismiss' => 'Fermer',
 
     // Placeholders and help texts
     'name_placeholder' => 'Entrez le nom de l\'annonce',

@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'ადმინისტრატორის შესვლის ფორმა',
     'admin_forgot_password_form' => 'ადმინისტრატორის დავიწყებული პაროლის ფორმა',
     'admin_reset_password_form' => 'ადმინისტრატორის პაროლის აღდგენის ფორმა',
+    'captcha' => 'კაპჩა',
+    'math_captcha' => 'მათემატიკური კაპჩა',
+    'math_question' => 'გთხოვთ ამოხსნათ შემდეგი მათემატიკური ფუნქცია: :label = ?',
+    'captcha_verification_failed' => 'Captcha-ს დადასტურება ვერ მოხერხდა!',
+    'math_captcha_verification_failed' => 'მათემატიკის Captcha-ს დადასტურება ვერ მოხერხდა!',
 ];

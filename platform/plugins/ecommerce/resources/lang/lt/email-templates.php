@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Užsakymas sėkmingas!',
     'customer_new_order_greeting' => 'Gerb. :customer_name,',
     'customer_new_order_message' => 'Dėkojame, kad įsigijote mūsų produktus, susisieksime su jumis telefonu <strong>:customer_phone</strong>, kad patvirtintume užsakymą!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Pristatymo būdas',
     'customer_new_order_order_number' => 'Užsakymo numeris',
     'customer_new_order_payment_method' => 'Mokėjimo būdas',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Gavote naują užsakymą iš :site_title',
     'admin_new_order_greeting' => 'Sveiki, Administratoriau,',
     'admin_new_order_message' => 'Naujas užsakymas buvo sėkmingai pateiktas :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Pristatymo būdas',
     'admin_new_order_payment_method' => 'Mokėjimo būdas',
     'admin_new_order_view_order' => 'Peržiūrėti užsakymo detales',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Užsakymas patvirtintas!',
     'order_confirm_greeting' => 'Sveiki, :customer_name,',
     'order_confirm_message' => 'Jūsų užsakymas buvo patvirtintas. Dėkojame, kad įsigijote mūsų produktus!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Pastaba',
     'order_confirm_shipping_method' => 'Pristatymo būdas',
     'order_confirm_payment_method' => 'Mokėjimo būdas',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Jūsų užsakymas buvo atšauktas',
     'customer_cancel_order_greeting' => 'Gerb. :customer_name,',
     'customer_cancel_order_message' => 'Jūsų užsakymas <strong>:order_id</strong> buvo atšauktas pagal jūsų prašymą dėl priežasties :cancellation_reason ir jūsų mokėjimas taip pat buvo atšauktas.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Adresas',
     'customer_cancel_order_products' => 'Štai ką užsisakėte:',
     'customer_cancel_order_note' => 'Pastaba',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Užsakymas atšauktas',
     'admin_cancel_order_greeting' => 'Sveiki, :customer_name,',
-    'admin_cancel_order_message' => 'Jūsų užsakymas #:order_id buvo atšauktas mūsų darbuotojų.',
+    'admin_cancel_order_message' => 'Jūsų užsakymas :order_id buvo atšauktas mūsų darbuotojų.',
     'admin_cancel_order_order_cancelled' => 'Užsakymas atšauktas!',
     'admin_cancel_order_reason' => 'Atšaukimo priežastis: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Kliento informacija',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Užsakymo detalės:',
     'admin_cancel_order_note' => 'Pastaba',
     'admin_cancel_order_order_summary' => 'Užsakymo santrauka',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Užsakymas #:order_id atšauktas kliento',
+    'order_cancellation_to_admin_title' => 'Užsakymas :order_id atšauktas kliento',
     'order_cancellation_to_admin_greeting' => 'Sveiki, Administratoriau,',
-    'order_cancellation_to_admin_message' => ':customer_name atšaukė užsakymą <strong>#:order_id</strong>. Priežastis: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name atšaukė užsakymą <strong>:order_id</strong>. Priežastis: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Kliento informacija',
     'order_cancellation_to_admin_name' => 'Vardas',
     'order_cancellation_to_admin_phone' => 'Telefonas',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Pastaba',
     'order_cancellation_to_admin_view_order' => 'Peržiūrėti užsakymo detales',
     'order_cancellation_to_admin_order_summary' => 'Užsakymo santrauka',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Jūsų užsakymas kelyje',
     'customer_delivery_order_greeting' => 'Sveiki, :customer_name,',
     'customer_delivery_order_message' => 'Jūsų užsakymas kelyje. Dėkojame, kad įsigijote mūsų produktus!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Sekimo ID',
     'customer_delivery_order_tracking_link' => 'Sekimo nuoroda',
     'customer_delivery_order_track_shipment' => 'Sekti siuntą',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Jūsų užsakymas pristatytas',
     'customer_order_delivered_greeting' => 'Sveiki, :customer_name,',
     'customer_order_delivered_message' => 'Jūsų užsakymas buvo pristatytas. Dėkojame, kad įsigijote mūsų produktus!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Sekimo ID',
     'customer_order_delivered_tracking_link' => 'Sekimo nuoroda',
     'customer_order_delivered_track_shipment' => 'Peržiūrėti sekimo detales',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Mokėjimas patvirtintas už užsakymą #:order_id',
+    'order_confirm_payment_title' => 'Mokėjimas patvirtintas už užsakymą :order_id',
     'order_confirm_payment_greeting' => 'Sveiki, :customer_name,',
     'order_confirm_payment_message' => 'Jūsų mokėjimas buvo patvirtintas. Dėkojame, kad įsigijote mūsų produktus!',
     'order_confirm_payment_order_number' => 'Užsakymo numeris',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Dėkojame už jūsų mokėjimą. Jūsų užsakymas bus netrukus apdorotas.',
     'order_confirm_payment_order_summary' => 'Užsakymo santrauka',
     'order_confirm_payment_shipping_method' => 'Pristatymo būdas',
-
-    // Order Recovery Email
     'order_recover_title' => 'Turite neužbaigtą užsakymą',
     'order_recover_greeting' => 'Sveiki, :customer_name,',
     'order_recover_message' => 'Pastebėjome, kad turite neužbaigtą užsakymą. Ar norėtumėte užbaigti pirkimą?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Užbaigti savo užsakymą',
     'order_recover_order_summary' => 'Užsakymo santrauka',
     'order_recover_note' => 'Pastaba',
-
-    // Welcome Email
     'welcome_greeting' => 'Džiaugiamės jus turėdami čia, :customer_name!',
     'welcome_message' => 'Sveiki atvykę į :site_title!',
     'welcome_register_success' => 'Sėkmingai užsiregistravote paskyrą <strong>:site_title</strong>.',
     'welcome_explore' => 'Jei reikia pagalbos, drąsiai atsakykite į šį el. laišką!',
     'welcome_visit_shop' => 'Pradėkite pirkti!',
-
-    // Confirm Email
     'confirm_email_title' => 'Patvirtinti el. paštą',
     'confirm_email_greeting' => 'Džiaugiamės jus turėdami čia, :customer_name!',
     'confirm_email_message' => 'Patvirtinkite savo el. pašto adresą spustelėdami žemiau esantį mygtuką.',
     'confirm_email_instruction' => 'Patvirtinkite savo el. pašto adresą, kad galėtumėte pasiekti šią svetainę. Spustelėkite žemiau esantį mygtuką, kad patvirtintumėte savo el. paštą.',
     'confirm_email_button' => 'Patvirtinti el. pašto adresą',
     'confirm_email_trouble' => 'Jei kyla problemų spustelėjus mygtuką "Patvirtinti el. pašto adresą", nukopijuokite ir įklijuokite žemiau esantį URL į savo naršyklę: <a href=":verify_link">:verify_link</a>.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Atkurti slaptažodį',
     'password_reminder_greeting' => 'Sveiki, :customer_name,',
     'password_reminder_message' => 'Paprašėte atkurti slaptažodį.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Atkurti slaptažodį',
     'password_reminder_ignore' => 'Jei neprašėte atkurti slaptažodžio, ignoruokite šį el. laišką.',
     'password_reminder_trouble_clicking' => 'Jei kyla problemų spustelėjus mygtuką "Atkurti slaptažodį", nukopijuokite ir įklijuokite žemiau esantį URL į savo naršyklę: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Grąžinimo užklausa gauta',
     'order_return_request_greeting' => 'Sveiki, :customer_name,',
-    'order_return_request_message' => 'Gavome jūsų grąžinimo užklausą užsakymui #:order_id.',
+    'order_return_request_message' => 'Gavome jūsų grąžinimo užklausą užsakymui :order_id.',
     'order_return_request_reason' => 'Grąžinimo priežastis',
     'order_return_request_items' => 'Prekės, kurios bus grąžintos',
     'order_return_request_process' => 'Apdorosime jūsų užklausą ir netrukus susisieksime su jumis.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Grąžinimo priežastis',
     'order_return_request_order_summary' => 'Užsakymo santrauka',
     'order_return_request_note' => 'Pastaba',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Užsakymo grąžinimo būsenos atnaujinimas',
     'order_return_status_updated_greeting' => 'Gerb. :customer_name,',
     'order_return_status_updated_message' => 'Norime jus informuoti, kad jūsų grąžinimo užklausos užsakymui :order_id būsena buvo atnaujinta.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Moderatoriaus pastaba: " :description ".',
     'order_return_status_updated_questions' => 'Jei turite klausimų ar abejonių dėl šio atnaujinimo, nedvejodami susisiekite su mūsų klientų aptarnavimo komanda.',
     'order_return_status_updated_view_details' => 'Peržiūrėti grąžinimo detales',
-
-    // Review Products Email
     'review_products_title' => 'Įvertinkite savo naujausią pirkimą',
     'review_products_greeting' => 'Sveiki, :customer_name,',
-    'review_products_message' => 'Jūsų užsakymas #:order_id buvo užbaigtas. Norėtume išgirsti jūsų atsiliepimą!',
+    'review_products_message' => 'Jūsų užsakymas :order_id buvo užbaigtas. Norėtume išgirsti jūsų atsiliepimą!',
     'review_products_instruction' => 'Skirkite minutėlę įvertinti produktus, kuriuos įsigijote:',
     'review_products_button' => 'Įvertinti produktus',
     'review_products_thank_you' => 'Dėkojame už jūsų pirkimą!',
     'review_products_products' => 'Produktai įvertinimui',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Jūsų skaitmeniniai produktai paruošti',
     'download_digital_products_greeting' => 'Sveiki, :customer_name,',
     'download_digital_products_message' => 'Dėkojame už pirkimą! Jūsų skaitmeniniai produktai paruošti atsisiuntimui.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Atsisiųsti visus failus',
     'download_digital_products_external_link_downloads' => 'Atsisiųsti išorinius failus',
     'download_digital_products_payment_method' => 'Mokėjimo būdas',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Jūsų licencijos kodai',
     'digital_product_license_codes_greeting' => 'Gerb. :customer_name,',
     'digital_product_license_codes_message' => 'Dėkojame už pirkimą! Čia yra jūsų licencijos kodai:',
     'digital_product_license_codes_thanks' => 'Dėkojame, kad įsigijote mūsų skaitmeninių produktų.',
-    'digital_product_license_codes_below' => 'Žemiau yra jūsų licencijos kodai produktams, kuriuos įsigijote:',
     'digital_product_license_codes_product' => 'Produktas',
     'digital_product_license_codes_license' => 'Licencijos kodas',
     'digital_product_license_codes_order_summary' => 'Štai ką užsisakėte:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Kiekvienas licencijos kodas yra unikalus ir gali būti naudojamas tik vieną kartą',
     'digital_product_license_codes_note_3' => 'Nedalinkitės savo licencijos kodais su kitais',
     'digital_product_license_codes_note_4' => 'Jei kyla problemų su licencijos kodais, susisiekite su mūsų palaikymo komanda',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Produkto failai atnaujinti',
     'product_file_updated_greeting' => 'Sveiki, :customer_name!',
     'product_file_updated_message' => 'Produkto <a href=":product_link"><strong>:product_name</strong></a> failai buvo atnaujinti.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Galite atsisiųsti atnaujintus failus iš savo paskyros.',
     'product_file_updated_order_number' => 'Užsakymo numeris',
     'product_file_updated_download' => 'Atsisiųsti atnaujintus failus',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Mokėjimas gautas',
     'invoice_payment_created_greeting' => 'Sveiki, :customer_name,',
     'invoice_payment_created_message' => 'Sėkmingai gavome jūsų mokėjimą už :site_title. Dėkojame!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Galite peržiūrėti sąskaitą internete adresu <a href=":invoice_link">:invoice_link</a> su sąskaitos kodu #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Jūsų sąskaitos kodas yra #:invoice_code',
     'invoice_payment_created_view_online' => 'Peržiūrėti sąskaitą internete',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Sveiki, :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Gavome jūsų prašymą ištrinti paskyrą.',
     'customer_deletion_request_confirmation_warning' => 'Atkreipkite dėmesį, kad šis veiksmas negali būti atšauktas. Visi jūsų duomenys bus negrįžtamai ištrinti.',
     'customer_deletion_request_confirmation_button' => 'Patvirtinti ištrynimą',
     'customer_deletion_request_confirmation_cancel' => 'Jei neprašėte to, ignoruokite šį el. laišką.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Sveiki, :customer_name,',
     'customer_deletion_request_completed_message' => 'Jūsų paskyra buvo sėkmingai ištrinta pagal prašymą.',
     'customer_deletion_request_completed_thank_you' => 'Dėkojame, kad buvote su mumis.',
     'customer_deletion_request_completed_goodbye' => 'Tikimės pamatyti jus vėl ateityje.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Sveiki, Administratoriau,',
     'payment_proof_upload_notification_message' => 'Klientas :customer_name (El. paštas: <a href="mailto::customer_email">:customer_email</a>) įkėlė mokėjimo patvirtinimą savo užsakymui su ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'Galite peržiūrėti mokėjimo detales <a href=":payment_link">čia</a> ir užsakymo detales <a href=":order_link">čia</a>.',

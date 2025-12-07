@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Ieņēmumi',
     'edit' => 'Atjaunināt maka atlikumu',
     'view_store' => 'Skatīt veikalu ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Pievienot/atņemt pārdevēja summu',
     'statements' => 'Pārskati',
     'products' => 'Produkti',
+    'items_earning_sales' => 'Preču ienākumu pārdošana: :amount',
 ];

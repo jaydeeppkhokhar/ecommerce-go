@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Pembuatan Otomatis',
         'automatic_generation_desc' => 'Diperbarui secara otomatis ketika konten berubah',
         'automatic_update_note' => 'Peta situs diperbarui secara otomatis setiap kali Anda membuat, mengedit, atau menghapus konten di situs web Anda.',
+        'submit_sitemap' => 'Kirim sitemap ke IndexNow',
+        'submitting_sitemap' => 'Mengirim...',
+        'sitemap_submitted_successfully' => 'Sitemap berhasil dikirim ke mesin pencari!',
+        'sitemap_submission_failed' => 'Gagal mengirim sitemap ke semua mesin pencari.',
+        'sitemap_submission_partial' => 'Sitemap dikirim dengan beberapa kesalahan.',
+        'submit_sitemap_error' => 'Gagal mengirim sitemap. Silakan coba lagi.',
+        'indexnow_disabled' => 'IndexNow belum diaktifkan. Silakan aktifkan terlebih dahulu.',
+        'indexnow_no_api_key' => 'Kunci API tidak ditemukan. Silakan buat kunci API terlebih dahulu.',
     ],
 ];

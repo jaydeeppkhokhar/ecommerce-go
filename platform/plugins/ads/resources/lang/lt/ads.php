@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Netinkamas Google AdSense kliento ID formatas. Jis turėtų būti tokio formato: ca-pub-XXXXXXXXXXXXXXXX (kur X yra skaitmuo).',
         ],
     ],
+    'banner' => 'Baneris',
+    'tablet_image' => 'Planšetės vaizdas',
+    'tablet_image_helper' => 'Įrenginiams, kurių plotis nuo 768 pikselių iki 1200 pikselių, jei tuščia, bus naudojamas vaizdas iš darbalaukio.',
+    'mobile_image' => 'Mobilus vaizdas',
+    'mobile_image_helper' => 'Įrenginiams, kurių plotis mažesnis nei 768 pikseliai, jei tuščia, bus naudojamas vaizdas iš planšetės.',
 ];

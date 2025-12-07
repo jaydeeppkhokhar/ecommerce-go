@@ -28,7 +28,7 @@
                                 </x-core::datagrid.item>
                             @endif
 
-                            @if ($payment->customer_id && $payment->customer && $payment->customer_type && class_exists($payment->customer_type))
+                            @if ($payment->customer_id && $payment->customer_type && $payment->customer && class_exists($payment->customer_type))
                                 <x-core::datagrid.item>
                                     <x-slot:title>{{ trans('plugins/payment::payment.payer_name') }}</x-slot:title>
                                     <div class="d-flex align-items-center">

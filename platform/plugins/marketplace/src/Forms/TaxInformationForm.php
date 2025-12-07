@@ -21,26 +21,26 @@ class TaxInformationForm extends FormAbstract
             ->setValidatorClass(TaxInformationSettingRequest::class)
             ->contentOnly()
             ->add('tax_info[business_name]', 'text', [
-                'label' => __('Business Name'),
+                'label' => trans('plugins/marketplace::marketplace.business_name'),
                 'value' => Arr::get($customer->tax_info, 'business_name'),
                 'attr' => [
-                    'placeholder' => __('Business Name'),
+                    'placeholder' => trans('plugins/marketplace::marketplace.business_name'),
                 ],
             ])
             ->add('tax_info[tax_id]', 'text', [
-                'label' => __('Tax ID'),
+                'label' => trans('plugins/marketplace::marketplace.tax_id'),
                 'value' => Arr::get($customer->tax_info, 'tax_id'),
                 'attr' => [
-                    'placeholder' => __('Tax ID'),
+                    'placeholder' => trans('plugins/marketplace::marketplace.tax_id'),
                 ],
             ])
             ->add('tax_info[address]', 'text', [
-                'label' => __('Address'),
+                'label' => trans('plugins/marketplace::marketplace.address'),
                 'value' => Arr::get($customer->tax_info, 'address'),
                 'attr' =>
-                    ['placeholder' => __('Address'),
+                    ['placeholder' => trans('plugins/marketplace::marketplace.address'),
                 ],
             ])
-            ->addSubmitButton(__('Save settings'));
+            ->addSubmitButton(trans('plugins/marketplace::marketplace.save_settings'));
     }
 }

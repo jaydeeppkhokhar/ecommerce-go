@@ -3,9 +3,6 @@
 return [
     'title' => 'Instalação',
     'next' => 'Próxima etapa',
-    'back' => 'Anterior',
-    'finish' => 'Instalar',
-    'installation' => 'Instalação',
     'forms' => [
         'errorTitle' => 'Ocorreram os seguintes erros:',
     ],
@@ -17,7 +14,7 @@ return [
     ],
     'requirements' => [
         'title' => 'Requisitos do servidor',
-        'next' => 'Verifique as permissões',
+        'php_version_required' => 'Versão PHP :version necessária',
     ],
     'permissions' => [
         'next' => 'Configurar ambiente',
@@ -28,17 +25,11 @@ return [
             'form' => [
                 'name_required' => 'É necessário um nome de ambiente.',
                 'app_name_label' => 'Título do site',
-                'app_name_placeholder' => 'Título do site',
                 'app_url_label' => 'URL',
-                'app_url_placeholder' => 'URL',
                 'db_connection_label' => 'Conexão de banco de dados',
                 'db_connection_label_mysql' => 'MySQL',
-                'db_connection_label_sqlite' => 'SQLite',
-                'db_connection_label_pgsql' => 'PostgreSQL',
                 'db_host_label' => 'Host de banco de dados',
-                'db_host_placeholder' => 'Host de banco de dados',
                 'db_port_label' => 'Porta do banco de dados',
-                'db_port_placeholder' => 'Porta do banco de dados',
                 'db_name_label' => 'Nome do banco de dados',
                 'db_name_placeholder' => 'Nome do banco de dados',
                 'db_username_label' => 'Nome de usuário do banco de dados',
@@ -79,13 +70,15 @@ return [
         'title' => 'Ativar licença',
         'skip' => 'Pular por enquanto',
     ],
-    'install' => 'Instalar',
     'final' => [
         'pageTitle' => 'Instalação concluída',
         'title' => 'Feito',
         'message' => 'O aplicativo foi instalado com sucesso.',
         'exit' => 'Vá para o painel de administração',
     ],
-    'install_success' => 'Instalado com sucesso!',
-    'install_step_title' => 'Installation - Step :step: :title',
+    'install_step_title' => 'Instalação - Passo :step: :title',
+    'theme_preset' => [
+        'title' => 'Escolha o preset do tema',
+        'message' => 'Escolha um preset de tema para personalizar a aparência do site. Esta seleção também importará dados de exemplo adaptados ao tema escolhido.',
+    ],
 ];

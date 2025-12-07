@@ -66,6 +66,7 @@ return [
     'languages' => 'भाषाएं',
     'reset_password' => 'पासवर्ड रीसेट करें',
     'deactivated_message' => 'आपका खाता निष्क्रिय कर दिया गया है। कृपया व्यवस्थापक से संपर्क करें।',
+    'password_changed_message' => 'आपका पासवर्ड बदल दिया गया है। कृपया अपने नए पासवर्ड से फिर से लॉगिन करें।',
     'settings' => [
         'email' => [
             'title' => 'ACL',

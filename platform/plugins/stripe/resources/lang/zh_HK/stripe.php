@@ -14,4 +14,7 @@ return [
         'step_4_label' => '複製簽名密鑰',
         'step_4_description' => '將「Webhook 詳情」部分的「Signing Secret」值複製，然後粘貼到「設置」頁面「付款」選項卡的「Stripe」部分的「Stripe Webhook Secret」字段中。',
     ],
+    'no_payment_charge' => '沒有付款費用。請重試！',
+    'payment_failed' => '付款失敗！',
+    'payment_type' => '付款類型',
 ];

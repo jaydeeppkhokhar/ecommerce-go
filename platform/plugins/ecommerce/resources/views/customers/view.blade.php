@@ -215,7 +215,7 @@
                             <x-core::table.header.cell></x-core::table.header.cell>
                         </x-core::table.header>
                         <x-core::table.body>
-                            @foreach($customer->orders()->latest()->limit(10)->get() as $order)
+                            @foreach($customer->finishedOrders()->latest()->limit(10)->get() as $order)
                                 <x-core::table.body.row>
                                     <x-core::table.body.cell>
                                         <a href="{{ route('orders.edit', $order->id) }}">

@@ -27,7 +27,7 @@
                     <a href="{{ $currentMainFilterUrl ?? route('public.products') }}" @class(['bb-product-filter-link', 'active' => empty($categoriesRequest)])>
                         <x-core::icon name="ti ti-chevron-left" />
 
-                        {{ __('All categories') }}
+                        {{ trans('plugins/ecommerce::products.all_categories') }}
                     </a>
                 </li>
             @endif

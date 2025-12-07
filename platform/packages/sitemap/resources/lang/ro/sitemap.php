@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Generare automată',
         'automatic_generation_desc' => 'Se actualizează automat când conținutul se modifică',
         'automatic_update_note' => 'Harta site-ului se actualizează automat ori de câte ori creați, editați sau ștergeți conținut pe site.',
+        'submit_sitemap' => 'Trimite sitemap-ul către IndexNow',
+        'submitting_sitemap' => 'Se trimite...',
+        'sitemap_submitted_successfully' => 'Sitemap-ul a fost trimis cu succes către motoarele de căutare!',
+        'sitemap_submission_failed' => 'Trimiterea sitemap-ului către toate motoarele de căutare a eșuat.',
+        'sitemap_submission_partial' => 'Sitemap-ul a fost trimis cu unele erori.',
+        'submit_sitemap_error' => 'Trimiterea sitemap-ului a eșuat. Încercați din nou.',
+        'indexnow_disabled' => 'IndexNow nu este activat. Vă rugăm să îl activați mai întâi.',
+        'indexnow_no_api_key' => 'Nu a fost găsită nicio cheie API. Generați mai întâi o cheie API.',
     ],
 ];

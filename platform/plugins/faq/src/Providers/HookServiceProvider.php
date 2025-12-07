@@ -33,7 +33,7 @@ class HookServiceProvider extends ServiceProvider
                 'faq_schema_config_wrapper',
                 trans('plugins/faq::faq.faq_schema_config', [
                     'link' => Html::link(
-                        'https://developers.google.com/search/docs/data-types/faqpage',
+                        'https://developers.google.com/search/docs/appearance/structured-data/faqpage',
                         trans('plugins/faq::faq.learn_more'),
                         ['target' => '_blank']
                     ),

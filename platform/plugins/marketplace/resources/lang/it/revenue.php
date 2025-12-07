@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Ricavi',
     'edit' => 'Aggiorna saldo portafoglio',
     'view_store' => 'Visualizza negozio ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Aggiungi/Sottrai importo del venditore',
     'statements' => 'Estratti',
     'products' => 'Prodotti',
+    'items_earning_sales' => 'Vendite di guadagno articoli: :amount',
 ];

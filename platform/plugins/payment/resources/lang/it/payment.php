@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Tipo di commissione di elaborazione (Opzionale)',
     'fee_type_helper' => 'Seleziona come calcolare la commissione di pagamento: come importo fisso o percentuale del totale dell\'ordine. Se scegli un importo fisso, sarà basato sulla valuta predefinita (:currency).',
+    'payment_created' => 'Hai creato un pagamento #:charge_id tramite :channel :time : :amount',
+    'processing_please_wait' => 'Elaborazione in corso. Attendere prego...',
+    'error' => 'Errore',
+    'checkout' => 'Checkout',
+    'show_full_json' => 'Mostra JSON completo',
+    'full_log_data' => 'Dati di log completi',
+    'currency_not_supported' => ':name non supporta :currency. Elenco delle valute supportate da :name: :currencies.',
+    'please_switch_currency' => 'Si prega di passare a una valuta supportata',
+    'payment_with' => 'Pagamento con :paymentType',
 ];

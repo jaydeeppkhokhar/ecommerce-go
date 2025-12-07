@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => '顧客が注文の支払い証明をアップロードできるようにします。手動支払い方法に便利です。',
             'enable_guest_payment_proof' => 'ゲスト顧客の支払い証明アップロードを許可',
             'enable_guest_payment_proof_helper' => '有効にした場合、ゲスト顧客はログインせずに注文トークンを使用して支払い証明をアップロードできます。注文確認メールでアップロードリンクを受け取ります。',
+            'payment_proof_payment_methods' => '支払い証明が必要な支払い方法',
+            'payment_proof_payment_methods_helper' => '顧客が支払い証明をアップロードできる支払い方法を選択します。通常、代金引換や銀行振込などの手動支払い方法に使用されます。',
         ],
     ],
     'checkout' => [
@@ -485,7 +487,14 @@ return [
         'show_sale_count_left_description' => 'フラッシュセール中に緊急性を演出し迅速な購入を促すために「Y個中X個売り切れ」のプログレスバーを表示します。',
     ],
     'payment_method_cod_minimum_amount' => '最小注文金額 - :currency（任意）',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => '最小注文金額 - :currency（任意）',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'チェックアウト成功ページで銀行情報を表示しますか？',
     'invoice_templates' => '請求書テンプレート',
 ];

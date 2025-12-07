@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatikus generálás',
         'automatic_generation_desc' => 'Automatikusan frissül, amikor a tartalom megváltozik',
         'automatic_update_note' => 'Az oldaltérkép automatikusan frissül, amikor tartalmat hoz létre, szerkeszt vagy töröl a weboldalon.',
+        'submit_sitemap' => 'Oldaltérkép beküldése az IndexNow-hoz',
+        'submitting_sitemap' => 'Beküldés...',
+        'sitemap_submitted_successfully' => 'Az oldaltérkép sikeresen elküldve a keresőmotoroknak!',
+        'sitemap_submission_failed' => 'Az oldaltérképet nem sikerült elküldeni minden keresőmotornak.',
+        'sitemap_submission_partial' => 'Az oldaltérkép néhány hibával lett elküldve.',
+        'submit_sitemap_error' => 'Az oldaltérkép beküldése nem sikerült. Kérjük, próbálja meg újra.',
+        'indexnow_disabled' => 'Az IndexNow nincs engedélyezve. Először engedélyezze.',
+        'indexnow_no_api_key' => 'Nem található API-kulcs. Kérjük, először generáljon egy API-kulcsot.',
     ],
 ];

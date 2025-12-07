@@ -66,7 +66,9 @@ class OrderReturn extends BaseModel
 
     public static function generateUniqueCode(): string
     {
-        $nextInsertId = static::query()->max('id') + 1;
+        $nextInsertId = BaseModel::determineIfUsingUuidsForId() ? static::query()->count() + 1 : static::query()->max(
+            'id'
+        ) + 1;
 
         do {
             $code = get_order_code($nextInsertId);

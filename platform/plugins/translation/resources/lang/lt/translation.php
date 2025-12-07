@@ -69,4 +69,7 @@ return [
             'trans' => 'Gali būti tuščia arba eilutė, kurios maksimalus ilgis yra :max simboliai, jei pateikta.',
         ],
     ],
+    'download_locale' => 'Atsisiųsti kalbą',
+    'import_available_locale_confirmation' => 'Atsisiųsti kalbą iš GitHub',
+    'import_available_locale_confirmation_content' => 'Ar tikrai norite atsisiųsti šią kalbą? Ji bus atsisiųsta į :lang_path, galite ją ištrinti vėliau, jei norite.',
 ];

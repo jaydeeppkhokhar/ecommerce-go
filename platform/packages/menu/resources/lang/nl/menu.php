@@ -18,7 +18,6 @@ return [
     'self_open_link' => 'Link direct openen',
     'blank_open_link' => 'Link openen in nieuw tabblad',
     'create' => 'Menu aanmaken',
-    'edit' => 'Menu bewerken',
     'menu_settings' => 'Menu-instellingen',
     'display_location' => 'Weergavelocatie',
     'title_placeholder' => 'Titel',
@@ -28,4 +27,5 @@ return [
     'menu_id' => 'Menu-ID',
     'widget_custom_menu' => 'Aangepast menu',
     'widget_custom_menu_description' => 'Voeg een aangepast menu toe aan uw widgetgebied.',
+    'select_menu' => 'Menu selecteren',
 ];

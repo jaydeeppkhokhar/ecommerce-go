@@ -19,7 +19,7 @@ return [
         'schema_type' => 'tipo de esquema',
 
     ],
-    'blog_posts' => 'Blog posts',
-    'blog_categories' => 'Blog categories',
-    'blog_tags' => 'Blog tags',
+    'blog_posts' => 'Publicaciones del blog',
+    'blog_categories' => 'Categorías del blog',
+    'blog_tags' => 'Etiquetas del blog',
 ];

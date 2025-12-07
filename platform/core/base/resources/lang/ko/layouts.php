@@ -9,9 +9,8 @@ return [
     'setting_general' => '일반',
     'setting_email' => '이메일',
     'system_information' => '시스템 정보',
-
     'theme' => '테마',
-    'copyright' => 'Copyright :year © :company. 버전 :version',
+    'copyright' => '저작권 :year © :company. 버전 :version',
     'profile' => '프로필',
     'logout' => '로그아웃',
     'no_search_result' => '결과를 찾을 수 없습니다. 다른 키워드로 시도해 주세요.',

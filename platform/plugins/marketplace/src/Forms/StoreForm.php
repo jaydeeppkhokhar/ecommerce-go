@@ -84,22 +84,22 @@ class StoreForm extends FormAbstract
                 'logo',
                 MediaImageField::class,
                 MediaImageFieldOption::make()
-                    ->label(__('Logo'))
+                    ->label(trans('plugins/marketplace::store.forms.logo'))
                     ->colspan(2)
             )
             ->add(
                 'logo_square',
                 MediaImageField::class,
                 MediaImageFieldOption::make()
-                    ->label(__('Square Logo'))
-                    ->helperText(__('This logo will be used in some special cases. Such as checkout page.'))
+                    ->label(trans('plugins/marketplace::store.forms.logo_square'))
+                    ->helperText(trans('plugins/marketplace::store.forms.logo_square_helper'))
                     ->colspan(2)
             )
             ->add(
                 'cover_image',
                 MediaImageField::class,
                 MediaImageFieldOption::make()
-                    ->label(__('Cover Image'))
+                    ->label(trans('plugins/marketplace::store.forms.cover_image'))
                     ->colspan(2)
             )
             ->add('status', SelectField::class, [

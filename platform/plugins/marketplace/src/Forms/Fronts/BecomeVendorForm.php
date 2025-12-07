@@ -6,7 +6,9 @@ use Botble\Base\Facades\Html;
 use Botble\Base\Forms\FieldOptions\ButtonFieldOption;
 use Botble\Base\Forms\FieldOptions\CheckboxFieldOption;
 use Botble\Base\Forms\FieldOptions\HtmlFieldOption;
+use Botble\Base\Forms\FieldOptions\PhoneNumberFieldOption;
 use Botble\Base\Forms\Fields\OnOffCheckboxField;
+use Botble\Base\Forms\Fields\PhoneNumberField;
 use Botble\Base\Forms\Fields\TextField;
 use Botble\Base\Forms\FormAbstract;
 use Botble\Ecommerce\Forms\Fronts\Auth\FieldOptions\TextFieldOption;
@@ -22,12 +24,16 @@ class BecomeVendorForm extends FormAbstract
             ->container('footer')
             ->add('marketplace-register', 'vendor/core/plugins/marketplace/js/customer-register.js', ['jquery']);
 
-        Theme::asset()
-            ->add('dropzone', 'vendor/core/core/base/libraries/dropzone/dropzone.css');
+        $requireDocumentsForVerification = MarketplaceHelper::getSetting('requires_vendor_documentations_verification', true);
 
-        Theme::asset()
-            ->container('footer')
-            ->add('dropzone', 'vendor/core/core/base/libraries/dropzone/dropzone.js');
+        if ($requireDocumentsForVerification) {
+            Theme::asset()
+                ->add('dropzone', 'vendor/core/core/base/libraries/dropzone/dropzone.css');
+
+            Theme::asset()
+                ->container('footer')
+                ->add('dropzone', 'vendor/core/core/base/libraries/dropzone/dropzone.js');
+        }
 
         $this
             ->contentOnly()
@@ -43,20 +49,20 @@ class BecomeVendorForm extends FormAbstract
                 'shop_name',
                 TextField::class,
                 TextFieldOption::make()
-                    ->label(__('Shop Name'))
-                    ->placeholder(__('Store Name'))
+                    ->label(trans('plugins/marketplace::store.forms.shop_name'))
+                    ->placeholder(trans('plugins/marketplace::store.forms.shop_name_placeholder'))
                     ->required(),
             )
             ->add(
                 'shop_url',
                 TextField::class,
                 TextFieldOption::make()
-                    ->label(__('Shop URL'))
-                    ->placeholder(__('Store URL'))
+                    ->label(trans('plugins/marketplace::store.forms.shop_url'))
                     ->attributes([
                         'data-url' => route('public.ajax.check-store-url'),
                         'style' => 'direction: ltr; text-align: left;',
                     ])
+                    ->placeholder(trans('plugins/marketplace::store.forms.shop_url_placeholder'))
                     ->wrapperAttributes(['class' => 'shop-url-wrapper mb-3 position-relative'])
                     ->prepend(
                         sprintf(
@@ -65,37 +71,38 @@ class BecomeVendorForm extends FormAbstract
                         )
                     )
                     ->append('</div>')
-                    ->helperText(__('plugins/marketplace::store.forms.shop_url_helper'))
+                    ->helperText(trans('plugins/marketplace::store.forms.shop_url_helper'))
                     ->required(),
             )
             ->add(
                 'shop_phone',
-                TextField::class,
-                TextFieldOption::make()
-                    ->label(__('Shop Phone'))
-                    ->placeholder(__('Ex: 0943243332'))
-                    ->required(),
+                PhoneNumberField::class,
+                PhoneNumberFieldOption::make()
+                    ->label(trans('plugins/marketplace::store.forms.shop_phone'))
+                    ->placeholder(trans('plugins/marketplace::store.forms.shop_phone_placeholder'))
+                    ->required()
+                    ->withCountryCodeSelection(),
             )
-            ->when(MarketplaceHelper::getSetting('requires_vendor_documentations_verification', true), function (): void {
+            ->when($requireDocumentsForVerification, function (): void {
                 $this
                     ->add(
                         'certificate_of_incorporation',
                         'html',
                         HtmlFieldOption::make()
-                            ->label(__('Certificate of Incorporation'))
+                            ->label(trans('plugins/marketplace::marketplace.certificate_of_incorporation'))
                             ->required()
                             ->wrapperAttributes(['class' => 'mb-3 position-relative', 'data-field-name' => 'certificate_file'])
-                            ->content('<div id="certificate-dropzone" class="dropzone" data-placeholder="' . __('Drop Certificate of Incorporation here or click to upload') . '"></div>'),
+                            ->content('<div id="certificate-dropzone" class="dropzone" data-placeholder="' . trans('plugins/marketplace::marketplace.drop_certificate_here') . '"></div>'),
                     )
                     ->add(
                         'government_id',
                         'html',
                         HtmlFieldOption::make()
-                            ->label(__('Government ID'))
+                            ->label(trans('plugins/marketplace::marketplace.government_id'))
                             ->required()
                             ->wrapperAttributes(['class' => 'mb-3 position-relative', 'data-field-name' => 'government_id_file'])
                             ->attributes(['data-placeholder' => ''])
-                            ->content('<div id="government-id-dropzone" class="dropzone" data-placeholder="' . __('Drop Government ID here or click to upload') . '"></div>'),
+                            ->content('<div id="government-id-dropzone" class="dropzone" data-placeholder="' . trans('plugins/marketplace::marketplace.drop_government_id_here') . '"></div>'),
                     );
             })
             ->add(
@@ -105,18 +112,18 @@ class BecomeVendorForm extends FormAbstract
                     ->when(
                         $privacyPolicyUrl = MarketplaceHelper::getSetting('term_and_privacy_policy_url') ?: Theme::termAndPrivacyPolicyUrl(),
                         function (CheckboxFieldOption $fieldOption, string $url): void {
-                            $fieldOption->label(__('I agree to the :link', ['link' => Html::link($url, __('Terms and Privacy Policy'), attributes: ['class' => 'text-decoration-underline', 'target' => '_blank'])]));
+                            $fieldOption->label(trans('plugins/marketplace::marketplace.i_agree_to_terms', ['link' => Html::link($url, trans('plugins/marketplace::marketplace.terms_and_privacy_policy'), attributes: ['class' => 'text-decoration-underline', 'target' => '_blank'])]));
                         }
                     )
                     ->when(! $privacyPolicyUrl, function (CheckboxFieldOption $fieldOption): void {
-                        $fieldOption->label(__('I agree to the Terms and Privacy Policy'));
+                        $fieldOption->label(trans('plugins/marketplace::marketplace.i_agree_to_terms_simple'));
                     })
             )
             ->add(
                 'submit',
                 'submit',
                 ButtonFieldOption::make()
-                    ->label(__('Register'))
+                    ->label(trans('plugins/marketplace::marketplace.register'))
                     ->cssClass('btn btn-primary')
             );
     }

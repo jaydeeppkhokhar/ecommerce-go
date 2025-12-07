@@ -40,10 +40,10 @@ return [
     'empty_trash_description' => 'Uw verzoek kan niet ongedaan worden gemaakt. Weet u zeker dat u alle items in de prullenbak wilt verwijderen?',
     'up_level' => 'Een niveau omhoog',
     'upload_progress' => 'Upload voortgang',
-
     'folder_created' => 'Map succesvol aangemaakt!',
+    'folder_exists' => 'Map :folder bestaat al!',
+    'directory_must_empty' => 'De map moet leeg zijn om te worden verwijderd!',
     'gallery' => 'Media galerij',
-
     'trash_error' => 'Fout bij verwijderen van geselecteerde item(s)',
     'trash_success' => 'Geselecteerde item(s) succesvol naar prullenbak verplaatst!',
     'restore_error' => 'Fout bij herstellen van geselecteerde item(s)',
@@ -65,10 +65,8 @@ return [
     'file_too_big' => 'Bestand te groot. Maximale upload grootte is :size bytes',
     'can_not_detect_file_type' => 'Bestandstype is niet toegestaan of kan bestandstype niet detecteren!',
     'upload_failed' => 'Het bestand is NIET volledig geüpload. De server staat een maximale upload grootte toe van :size. Controleer uw bestandsgrootte OF probeer opnieuw te uploaden in geval van netwerkfouten',
-
     'menu_name' => 'Media',
     'add' => 'Media toevoegen',
-
     'javascript' => [
         'name' => 'Naam',
         'url' => 'URL',
@@ -79,48 +77,38 @@ return [
         'updated_at' => 'Gewijzigd op',
         'nothing_selected' => 'Niets geselecteerd',
         'visit_link' => 'Link openen',
-
         'no_item' => [
             'all_media' => [
-                'icon' => 'fas fa-cloud-upload-alt',
                 'title' => 'Sleep bestanden en mappen hierheen',
                 'message' => 'Of gebruik de upload knop hierboven',
             ],
             'trash' => [
-                'icon' => 'fas fa-trash-alt',
                 'title' => 'Er is momenteel niets in uw prullenbak',
                 'message' => 'Verwijder bestanden om ze automatisch naar de prullenbak te verplaatsen. Verwijder bestanden uit de prullenbak om ze permanent te verwijderen',
             ],
             'favorites' => [
-                'icon' => 'fas fa-star',
                 'title' => 'U heeft nog niets aan uw favorieten toegevoegd',
                 'message' => 'Voeg bestanden toe aan favorieten om ze later gemakkelijk terug te vinden',
             ],
             'recent' => [
-                'icon' => 'far fa-clock',
                 'title' => 'You did not opened anything yet',
                 'message' => 'All recent files that you opened will be appeared here',
             ],
             'default' => [
-                'icon' => 'fas fa-sync',
                 'title' => 'No items',
                 'message' => 'This directory has no item',
             ],
         ],
-
         'clipboard' => [
             'success' => 'These file links has been copied to clipboard',
         ],
-
         'message' => [
             'error_header' => 'Error',
             'success_header' => 'Success',
         ],
-
         'download' => [
             'error' => 'No files selected or cannot download these files',
         ],
-
         'actions_list' => [
             'basic' => [
                 'preview' => 'Preview',

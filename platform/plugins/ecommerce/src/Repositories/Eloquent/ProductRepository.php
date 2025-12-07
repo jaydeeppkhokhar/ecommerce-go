@@ -831,7 +831,7 @@ class ProductRepository extends RepositoriesAbstract implements ProductInterface
                 'current_paged' => 1,
             ],
             'with' => EcommerceHelper::withProductEagerLoadingRelations(),
-            'order_by' => ['ec_customer_recently_viewed_products.id' => 'desc'],
+            'order_by' => ['ec_customer_recently_viewed_products.product_id' => 'desc'],
             'select' => ['ec_products.*'],
         ], $params);
 

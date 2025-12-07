@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Доходи',
     'edit' => 'Оновити баланс гаманця',
     'view_store' => 'Переглянути магазин ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Додати/Відняти суму постачальника',
     'statements' => 'Заяви',
     'products' => 'Продукти',
+    'items_earning_sales' => 'Продажі товарів з доходом: :amount',
 ];

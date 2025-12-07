@@ -17,7 +17,7 @@ return [
         'date_time' => '目前日期和時間',
         'date_year' => '目前年份',
         'html_attributes' => 'HTML 屬性',
-        'body_attributes' => 'Body 屬性',
+        'body_attributes' => '正文屬性',
         'settings' => '設定值',
         'email_css' => '電郵 CSS',
         'variable' => '變量',

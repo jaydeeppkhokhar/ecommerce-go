@@ -14,4 +14,7 @@ return [
         'description' => '按照以下步骤设置 Stripe webhook',
         'step_1_label' => '登录到 Stripe 控制面板',
     ],
+    'no_payment_charge' => '无付款费用。请重试！',
+    'payment_failed' => '付款失败！',
+    'payment_type' => '付款类型',
 ];

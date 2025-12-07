@@ -90,7 +90,7 @@
                     <div class="col-lg-6">
                         <div class="tp-cta-thumb">
                             <span class="tp-cta-thumb-mobile"></span>
-                            {{ RvMedia::image($screenshot, 'mobile-screenshot', attributes: ['loading' => 'lazy']) }}
+                            {{ RvMedia::image($screenshot, 'mobile-screenshot', attributes: ['class' => 'w-100'], lazy: false) }}
                         </div>
                         <span class="tp-cta-thumb-gradient"></span>
                     </div>

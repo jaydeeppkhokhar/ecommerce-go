@@ -123,7 +123,7 @@ class WidgetManagement {
                 let _self = $(event.currentTarget)
                 _self.closest('.widget-item').find('.widget-content').slideToggle(300)
                 if (_self.find('.ti').hasClass('ti-chevron-up')) {
-                    setTimeout(function () {
+                    setTimeout(function() {
                         _self.closest('.card').toggleClass('card-no-border-bottom-radius')
                     }, 300)
                 } else {

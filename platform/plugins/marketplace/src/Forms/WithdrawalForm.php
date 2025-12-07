@@ -61,7 +61,7 @@ class WithdrawalForm extends FormAbstract
                     'bankInfo' => $withdrawal->bank_info,
                     'taxInfo' => $withdrawal->customer->tax_info,
                     'paymentChannel' => $withdrawal->payment_channel,
-                    'title' => __('Payout account'),
+                    'title' => trans('plugins/marketplace::withdrawal.payout_account'),
                 ])->render(),
             ])
             ->add('images[]', 'mediaImages', [

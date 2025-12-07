@@ -74,7 +74,7 @@ class CustomerController extends BaseController
 
         $customer->password = null;
 
-        return CustomerForm::createFromModel($customer)->renderForm();
+        return CustomerForm::createFromModel($customer)->setValidatorClass(CustomerEditRequest::class)->renderForm();
     }
 
     public function update(Customer $customer, CustomerEditRequest $request)
@@ -245,7 +245,7 @@ class CustomerController extends BaseController
         Assets::addScriptsDirectly('vendor/core/plugins/ecommerce/js/customer.js');
 
         $totalSpent = $customer->completedOrders()->sum('amount');
-        $totalOrders = $customer->orders()->count();
+        $totalOrders = $customer->finishedOrders()->count();
         $completedOrders = $customer->completedOrders()->count();
         $totalProducts = $customer->completedOrders()
             ->withCount('products')

@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Rensa gamla förfrågningsloggar',
     'clear_old_data_helper' => 'Ta automatiskt bort gamla förfrågningsloggar som är äldre än den valda perioden för att hålla din databas ren och optimerad.',
     'cronjob_warning' => 'För att använda denna funktion måste du konfigurera ett cron-jobb genom att följa denna länk: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Inga resultat hittades',
+    'no_request_errors_message' => 'Det verkar som att det inte finns några förfrågningsfel här.',
 ];

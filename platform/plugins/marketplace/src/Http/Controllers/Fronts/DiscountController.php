@@ -19,14 +19,14 @@ class DiscountController extends BaseController
 {
     public function index(DiscountTable $table)
     {
-        $this->pageTitle(__('Coupons'));
+        $this->pageTitle(trans('plugins/ecommerce::discount.name'));
 
         return $table->renderTable();
     }
 
     public function create()
     {
-        $this->pageTitle(__('Create coupon'));
+        $this->pageTitle(trans('plugins/ecommerce::discount.create'));
 
         Assets::addStylesDirectly(['vendor/core/plugins/ecommerce/css/ecommerce.css'])
             ->addScriptsDirectly([

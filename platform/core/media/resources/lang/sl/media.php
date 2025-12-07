@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Nadomestno besedilo',
 
     'folder_created' => 'Mapa je bila uspešno ustvarjena!',
+    'folder_exists' => 'Mapa :folder že obstaja!',
+    'directory_must_empty' => 'Imenik mora biti prazen, da se lahko izbriše!',
     'gallery' => 'Galerija medijev',
 
     'trash_error' => 'Napaka pri brisanju izbranih elementov',

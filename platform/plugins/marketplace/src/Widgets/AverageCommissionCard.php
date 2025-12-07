@@ -21,6 +21,9 @@ class AverageCommissionCard extends Card
                 $query->whereNull('type')
                     ->orWhere('type', RevenueTypeEnum::ADD_AMOUNT);
             })
+            ->whereHas('order', function ($query): void {
+                $query->where('is_finished', true);
+            })
             ->select([
                 DB::raw('DATE(created_at) as date'),
                 DB::raw('AVG(CASE WHEN amount > 0 THEN fee / amount * 100 ELSE 0 END) as commission_rate'),
@@ -48,6 +51,9 @@ class AverageCommissionCard extends Card
                 $query->whereNull('type')
                     ->orWhere('type', RevenueTypeEnum::ADD_AMOUNT);
             })
+            ->whereHas('order', function ($query): void {
+                $query->where('is_finished', true);
+            })
             ->select([
                 DB::raw('SUM(fee) as total_fee'),
                 DB::raw('SUM(amount) as total_amount'),
@@ -71,6 +77,9 @@ class AverageCommissionCard extends Card
             ->where(function ($query): void {
                 $query->whereNull('type')
                     ->orWhere('type', RevenueTypeEnum::ADD_AMOUNT);
+            })
+            ->whereHas('order', function ($query): void {
+                $query->where('is_finished', true);
             })
             ->select([
                 DB::raw('SUM(fee) as total_fee'),

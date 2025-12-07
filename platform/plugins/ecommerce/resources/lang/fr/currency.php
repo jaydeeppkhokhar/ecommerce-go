@@ -18,7 +18,7 @@ return [
     'require_at_least_one_currency' => 'Le système nécessite au moins une devise !',
     'invalid_currency_name' => 'Code de devise invalide, il doit être dans :currencies.',
     'instruction' => 'Veuillez vérifier la liste des codes de devise ici : https://en.wikipedia.org/wiki/ISO_4217',
-    'code' => 'Code',
+    'code' => 'Code ISO',
     'no_api_key' => 'Pas de clé API',
     'clear_cache_rates_successfully' => 'Effacement du cache des taux de change réussi.',
     'number_format_style' => 'Format du nombre',

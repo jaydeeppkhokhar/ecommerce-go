@@ -34,6 +34,7 @@ class PageServiceProvider extends ServiceProvider
             ->loadAndPublishViews()
             ->loadAndPublishTranslations()
             ->loadRoutes()
+            ->publishAssets()
             ->loadMigrations();
 
         if (class_exists('ApiHelper')) {

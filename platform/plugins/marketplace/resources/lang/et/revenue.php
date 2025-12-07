@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Tulud',
     'edit' => 'Värskenda rahakoti saldot',
     'view_store' => 'Vaata kauplust ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Lisa/lahuta müüja summat',
     'statements' => 'Väljavõtted',
     'products' => 'Tooted',
+    'items_earning_sales' => 'Kaupade müügitulu: :amount',
 ];

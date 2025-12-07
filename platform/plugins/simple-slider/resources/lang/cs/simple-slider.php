@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Přidat jednoduchý slider',
     'select_slider' => 'Vyberte slider',
     'shortcode' => 'Zkrácený kód',
+    'tablet_image' => 'Obrázek tabletu',
+    'tablet_image_helper' => 'Pro zařízení s šířkou od 768px do 1200px, pokud je prázdné, použije obrázek z plochy.',
+    'mobile_image' => 'Mobilní obrázek',
+    'mobile_image_helper' => 'Pro zařízení s šířkou menší než 768 pixelů, pokud je prázdné, použije se obrázek z tabletu.',
 ];

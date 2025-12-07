@@ -23,7 +23,6 @@ return [
         'activated' => '활성화됨',
         'locked' => '잠김',
     ],
-    'email_verified' => '이메일 인증됨?',
     'verify_email' => [
         'confirm_heading' => '이메일 인증 확인',
         'confirm_description' => '이 고객의 이메일을 인증하시겠습니까?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => '여기를 클릭',
         'confirm_button' => '인증',
     ],
-    'email_already_verified' => '이메일이 이미 인증되었습니다.',
     'verification_email_sent' => '인증 이메일이 성공적으로 전송되었습니다!',
     'resend_verification_email' => '인증 이메일 재전송',
     'resend_verification_email_confirmation' => '이 고객에게 인증 이메일을 재전송하시겠습니까?',

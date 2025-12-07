@@ -69,4 +69,7 @@ return [
             'trans' => 'יכול להיות ריק או מחרוזת עם אורך מקסימלי של :max תווים אם מסופק.',
         ],
     ],
+    'download_locale' => 'הורד שפה',
+    'import_available_locale_confirmation' => 'הורד שפה מ-GitHub',
+    'import_available_locale_confirmation_content' => 'האם אתה בטוח שברצונך להוריד את השפה הזו? היא תורד ל-:lang_path, תוכל למחוק אותה מאוחר יותר אם תרצה.',
 ];

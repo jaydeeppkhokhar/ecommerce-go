@@ -1,7 +1,7 @@
 @if (!$order->dont_show_order_info_in_product_list)
     <a
         class="button button-blue"
-        href="{{ route('public.orders.tracking', ['order_id' => $order->code, 'email' => $order->user->email ?: $order->address->email]) }}"
+        href="{{ $order->getOrderTrackingUrl() }}"
     >{{ trans('plugins/ecommerce::email.view_order') }}</a>
     {!! trans('plugins/ecommerce::email.link_go_to_our_shop', ['link' => BaseHelper::getHomepageUrl()]) !!}
 

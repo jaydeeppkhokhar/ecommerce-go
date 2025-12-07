@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Publikovať assety balíkov',
         'clean_up' => 'Vyčistiť aktualizačné súbory systému',
         'done' => 'Systém úspešne aktualizovaný',
-
+        'unknown' => 'Neznámy krok',
         'messages' => [
             'download' => 'Sťahovanie aktualizačných súborov...',
             'update_files' => 'Aktualizácia systémových súborov...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Čistenie aktualizačných súborov systému...',
             'done' => 'Hotovo! Váš prehliadač sa obnoví o 30 sekúnd.',
         ],
-
         'failed_messages' => [
             'download' => 'Nepodarilo sa stiahnuť aktualizačné súbory',
             'update_files' => 'Nepodarilo sa aktualizovať systémové súbory',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Nepodarilo sa publikovať assety balíkov',
             'clean_up' => 'Nepodarilo sa vyčistiť aktualizačné súbory systému',
         ],
-
         'success_messages' => [
             'download' => 'Aktualizačné súbory úspešne stiahnuté.',
             'update_files' => 'Systémové súbory úspešne aktualizované.',

@@ -9,9 +9,8 @@ return [
     'setting_general' => 'Obecné',
     'setting_email' => 'E-mail',
     'system_information' => 'Informace o systému',
-
     'theme' => 'Téma',
-    'copyright' => 'Copyright :year © :company. Verze :version',
+    'copyright' => 'Autorská práva :year © :company. Verze :version',
     'profile' => 'Profil',
     'logout' => 'Odhlásit se',
     'no_search_result' => 'Nebyly nalezeny žádné výsledky, zkuste prosím jiná klíčová slova.',

@@ -3,45 +3,33 @@
 return [
     'title' => 'Installation',
     'next' => 'Nächster Schritt',
-    'back' => 'Zurück',
-    'finish' => 'Installieren',
-    'installation' => 'Installation',
     'forms' => [
         'errorTitle' => 'Folgende Fehler sind aufgetreten:',
     ],
     'welcome' => [
-        'pageTitle' => 'Installation - Schritt 1: Willkommen',
         'title' => 'Willkommen',
         'message' => 'Bevor Sie beginnen, benötigen wir einige Informationen zur Datenbank. Sie müssen die folgenden Punkte kennen, bevor Sie fortfahren.',
         'language' => 'Sprache',
         'next' => 'Los geht\'s',
     ],
     'requirements' => [
-        'pageTitle' => 'Installation - Schritt 2: Serveranforderungen',
         'title' => 'Serveranforderungen',
-        'next' => 'Berechtigungen überprüfen',
+        'php_version_required' => 'PHP-Version :version erforderlich',
     ],
     'permissions' => [
         'next' => 'Umgebung konfigurieren',
     ],
     'environment' => [
         'wizard' => [
-            'pageTitle' => 'Installation - Schritt 3: Umgebungseinstellungen',
             'title' => 'Umgebungseinstellungen',
             'form' => [
                 'name_required' => 'Ein Umgebungsname ist erforderlich.',
                 'app_name_label' => 'Seitentitel',
-                'app_name_placeholder' => 'Seitentitel',
                 'app_url_label' => 'URL',
-                'app_url_placeholder' => 'URL',
                 'db_connection_label' => 'Datenbankverbindung',
                 'db_connection_label_mysql' => 'Mysql',
-                'db_connection_label_sqlite' => 'Sqlite',
-                'db_connection_label_pgsql' => 'PostgreSQL',
                 'db_host_label' => 'Datenbankhost',
-                'db_host_placeholder' => 'Datenbankhost',
                 'db_port_label' => 'Datenbankport',
-                'db_port_placeholder' => 'Datenbankport',
                 'db_name_label' => 'Datenbankname',
                 'db_name_placeholder' => 'Datenbankname',
                 'db_username_label' => 'Datenbankbenutzername',
@@ -67,7 +55,6 @@ return [
         'message' => 'Wählen Sie ein Thema, um das Erscheinungsbild Ihrer Website zu personalisieren. Diese Auswahl importiert auch Beispieldaten, die auf das ausgewählte Thema zugeschnitten sind.',
     ],
     'createAccount' => [
-        'pageTitle' => 'Installation - Schritt 4: Konto erstellen',
         'title' => 'Konto erstellen',
         'form' => [
             'first_name' => 'Vorname',
@@ -80,17 +67,14 @@ return [
         ],
     ],
     'license' => [
-        'pageTitle' => 'Installation - Schritt 5: Lizenz aktivieren',
         'title' => 'Lizenz aktivieren',
         'skip' => 'Jetzt überspringen',
     ],
-    'install' => 'Installieren',
     'final' => [
         'pageTitle' => 'Installation abgeschlossen',
         'title' => 'Fertig',
         'message' => 'Die Anwendung wurde erfolgreich installiert.',
         'exit' => 'Zum Administrations-Dashboard gehen',
     ],
-    'install_success' => 'Erfolgreich installiert!',
     'install_step_title' => 'Installation - Step :step: :title',
 ];

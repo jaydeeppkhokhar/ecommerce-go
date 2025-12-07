@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Töötlustasu tüüp (Valikuline)',
     'fee_type_helper' => 'Valige, kuidas maksetasu arvutatakse: fikseeritud summana või tellimuse kogusumma protsendina. Kui valite fikseeritud summa, põhineb see vaikevääringusel (:currency).',
+    'payment_created' => 'Olete loonud makse #:charge_id :channel kaudu :time : :amount',
+    'processing_please_wait' => 'Töötlemine. Palun oodake...',
+    'error' => 'Viga',
+    'checkout' => 'Maksmine',
+    'show_full_json' => 'Kuva täielik JSON',
+    'full_log_data' => 'Täielikud logiandmed',
+    'currency_not_supported' => ':name ei toeta :currency. :name poolt toetatud valuutade loend: :currencies.',
+    'please_switch_currency' => 'Palun vahetage toetatud valuutale',
+    'payment_with' => 'Makse :paymentType-ga',
 ];

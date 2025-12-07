@@ -24,7 +24,6 @@ return [
     'new_vendor_notifications' => [
         'new_vendor' => 'Novo fornecedor',
         'view' => 'Visualizar',
-        'description' => ':customer has registered but not verified.',
+        'description' => ':customer foi registrado mas não verificado.',
     ],
-    'vendor_approval_notification' => 'Voçê deseja aprovar o vendedor para vender em seu site? Aprovar aqui :approve_link',
 ];

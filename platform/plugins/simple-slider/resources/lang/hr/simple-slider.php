@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Dodaj jednostavan klizač',
     'select_slider' => 'Odaberite klizač',
     'shortcode' => 'Kratka oznaka',
+    'tablet_image' => 'Slika tableta',
+    'tablet_image_helper' => 'Za uređaje širine od 768px do 1200px, ako je prazno, koristit će se slika s radne površine.',
+    'mobile_image' => 'Mobilna slika',
+    'mobile_image_helper' => 'Za uređaje širine manje od 768px, ako je prazno, koristit će se slika s tableta.',
 ];

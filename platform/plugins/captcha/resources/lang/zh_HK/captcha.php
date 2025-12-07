@@ -48,4 +48,9 @@ return [
     'admin_login_form' => '管理員登入表單',
     'admin_forgot_password_form' => '管理員忘記密碼表單',
     'admin_reset_password_form' => '管理員重置密碼表單',
+    'captcha' => '驗證碼',
+    'math_captcha' => '數學驗證碼',
+    'math_question' => '請求解以下數學函數：:label = ?',
+    'captcha_verification_failed' => '驗證碼驗證失敗！',
+    'math_captcha_verification_failed' => '數學驗證碼驗證失敗！',
 ];

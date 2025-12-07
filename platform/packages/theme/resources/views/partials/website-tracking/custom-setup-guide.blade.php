@@ -3,7 +3,8 @@
         <strong>{{ trans('packages/theme::theme.settings.website_tracking.setup_instructions') }}</strong>
     </div>
     <div class="card-body">
-        <p class="mb-2"><strong>{{ trans('packages/theme::theme.settings.website_tracking.custom.popular_services') }}</strong></p>
+        <p class="mb-2">
+            <strong>{{ trans('packages/theme::theme.settings.website_tracking.custom.popular_services') }}</strong></p>
         <ul class="mb-3">
             <li>
                 <strong>{{ trans('packages/theme::theme.settings.website_tracking.custom.matomo') }}</strong>

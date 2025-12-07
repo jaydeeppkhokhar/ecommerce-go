@@ -14,7 +14,7 @@ class MessageController extends BaseController
     {
         abort_unless(MarketplaceHelper::isEnabledMessagingSystem(), 404);
 
-        $this->pageTitle(__('Messages'));
+        $this->pageTitle(trans('plugins/marketplace::message.name'));
 
         return $messageTable->renderTable();
     }
@@ -28,7 +28,7 @@ class MessageController extends BaseController
             ->with(['store', 'customer'])
             ->findOrFail($id);
 
-        $this->pageTitle(__('Viewing message #:id', ['id' => $message->getKey()]));
+        $this->pageTitle(trans('plugins/marketplace::message.viewing_message', ['id' => $message->getKey()]));
 
         return MarketplaceHelper::view('vendor-dashboard.messages.show', compact('message'));
     }

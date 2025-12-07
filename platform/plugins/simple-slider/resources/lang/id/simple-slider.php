@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Tambahkan slider sederhana',
     'select_slider' => 'Pilih slider',
     'shortcode' => 'Kode pendek',
+    'tablet_image' => 'Gambar Tablet',
+    'tablet_image_helper' => 'Untuk perangkat dengan lebar dari 768px hingga 1200px, jika kosong, akan menggunakan gambar dari desktop.',
+    'mobile_image' => 'Gambar Seluler',
+    'mobile_image_helper' => 'Untuk perangkat dengan lebar kurang dari 768px, jika kosong, akan menggunakan gambar dari tablet.',
 ];

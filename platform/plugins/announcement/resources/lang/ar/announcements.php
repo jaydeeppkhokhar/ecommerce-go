@@ -53,6 +53,7 @@ return [
     'lazy_loading' => 'التحميل الكسول',
     'lazy_loading_description' => 'قم بتمكين هذا الخيار لتحسين سرعة تحميل الصفحة',
     'hide_on_mobile' => 'إخفاء على الهاتف المحمول',
+    'dismiss' => 'إغلاق',
 
     // Placeholders and help texts
     'name_placeholder' => 'أدخل اسم الإعلان',
@@ -66,7 +67,7 @@ return [
     'has_action_help' => 'إضافة زر دعوة للعمل إلى إعلانك',
     'action_label_placeholder' => 'مثال: اعرف المزيد، تسوق الآن',
     'action_label_help' => 'النص المعروض على زر الإجراء',
-    'action_url_placeholder' => 'https://example.com/page',
+    'action_url_placeholder' => 'https://example.com/page (رابط الإجراء)',
     'action_url_help' => 'الرابط الذي سيتم توجيه المستخدمين إليه عند النقر على زر الإجراء',
     'action_open_new_tab_help' => 'فتح رابط الإجراء في علامة تبويب متصفح جديدة',
     'is_active_help' => 'تمكين أو تعطيل هذا الإعلان دون حذفه',

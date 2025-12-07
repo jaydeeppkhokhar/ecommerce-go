@@ -2,7 +2,7 @@
 
 return [
     'settings' => [
-        'title' => 'Captcha',
+        'title' => 'كلمة التحقق',
         'description' => 'reCAPTCHA هي خدمة مجانية من Google تساعد في حماية مواقع الويب من البريد العشوائي والإساءة.
         <br/><br/> Math Captcha يسمح لك باستخدام مسائل رياضية بسيطة لاختبار مستخدمي الموقع لإثبات هويتهم البشرية.',
         'panel_description' => 'عرض وتحديث reCAPTCHA و Math CAPTCHA.',
@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'نموذج تسجيل دخول المسؤول',
     'admin_forgot_password_form' => 'نموذج نسيت كلمة المرور للمسؤول',
     'admin_reset_password_form' => 'نموذج إعادة تعيين كلمة المرور للمسؤول',
+    'captcha' => 'كلمة التحقق',
+    'math_captcha' => 'كلمة التحقق الرياضيات',
+    'math_question' => 'الرجاء حل الدالة الرياضية التالية: :label = ?',
+    'captcha_verification_failed' => 'فشل التحقق من كلمة التحقق!',
+    'math_captcha_verification_failed' => 'فشل التحقق من رمز التحقق في الرياضيات!',
 ];

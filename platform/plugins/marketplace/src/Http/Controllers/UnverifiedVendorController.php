@@ -113,7 +113,7 @@ class UnverifiedVendorController extends BaseController
         if (! $storage->exists($vendor->store->certificate_file)) {
             return BaseHttpResponse::make()
                 ->setError()
-                ->setMessage(__('File not found!'));
+                ->setMessage(trans('plugins/marketplace::marketplace.notices.file_not_found'));
         }
 
         return response()->file($storage->path($vendor->store->certificate_file));
@@ -128,7 +128,7 @@ class UnverifiedVendorController extends BaseController
         if (! $storage->exists($vendor->store->government_id_file)) {
             return BaseHttpResponse::make()
                 ->setError()
-                ->setMessage(__('File not found!'));
+                ->setMessage(trans('plugins/marketplace::marketplace.notices.file_not_found'));
         }
 
         return response()->file($storage->path($vendor->store->government_id_file));

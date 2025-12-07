@@ -252,7 +252,7 @@ trait ProductActionsTrait
 
         return $response
             ->setError()
-            ->setMessage(trans('core/base::notices.delete_error_message'));
+            ->setMessage(trans('plugins/ecommerce::ecommerce.notices.delete_error_message'));
     }
 
     public function deleteVersions(

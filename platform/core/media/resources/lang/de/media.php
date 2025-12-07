@@ -43,6 +43,8 @@ return [
     'upload_progress' => 'Fortschritt hochladen',
     'alt_text' => 'ALT -Text',
     'folder_created' => 'Folder is created successfully!',
+    'folder_exists' => 'Ordner :folder existiert bereits!',
+    'directory_must_empty' => 'Das Verzeichnis muss leer sein, um gelöscht zu werden!',
     'gallery' => 'Mediengalerie',
     'trash_error' => 'Error when delete selected item(s)',
     'trash_success' => 'Verschiebte ausgewählte Elemente, um erfolgreich in den Müll zu versetzen!',
@@ -87,27 +89,22 @@ return [
         'visit_link' => 'Link öffnen',
         'no_item' => [
             'all_media' => [
-                'icon' => 'fas fa-cloud-upload-alt',
                 'title' => 'Löschen Sie hier Dateien und Ordner',
                 'message' => 'Oder verwenden Sie die Schaltfläche Upload oben oben',
             ],
             'trash' => [
-                'icon' => 'fas fa-trash-alt',
                 'title' => 'Derzeit ist nichts in Ihrem Müll',
                 'message' => 'Löschen Sie Dateien, um sie automatisch in den Müll zu verschieben. Löschen Sie Dateien aus dem Müll, um sie dauerhaft zu entfernen',
             ],
             'favorites' => [
-                'icon' => 'fas fa-star',
                 'title' => 'Sie haben Ihren Favoriten noch nichts hinzugefügt',
                 'message' => 'Fügen Sie Dateien zu Favoriten hinzu, um sie später leicht zu finden',
             ],
             'recent' => [
-                'icon' => 'far fa-clock',
                 'title' => 'Sie haben noch nichts geöffnet',
                 'message' => 'Alle aktuellen Dateien, die Sie geöffnet haben, werden hier angezeigt',
             ],
             'default' => [
-                'icon' => 'fas fa-sync',
                 'title' => 'Keine Gegenstände',
                 'message' => 'Dieses Verzeichnis hat keinen Artikel',
             ],

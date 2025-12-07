@@ -44,6 +44,8 @@ return [
     'upload_progress' => 'Actualización en proceso',
     'alt_text' => 'texto alternativo',
     'folder_created' => 'Carpeta creada',
+    'folder_exists' => '¡La carpeta :folder ya existe!',
+    'directory_must_empty' => '¡El directorio debe estar vacío para ser eliminado!',
     'gallery' => 'Galería de medios',
     'trash_error' => '¡Error al eliminar los elementos seleccionados!',
     'trash_success' => 'Los elementos seleccionados se movieron a la papelera!',
@@ -88,27 +90,22 @@ return [
         'visit_link' => 'Abrir link',
         'no_item' => [
             'all_media' => [
-                'icon' => 'Carga rápida en la nube',
                 'title' => 'Suelta archivos y carpetas aquí',
                 'message' => 'O use el botón de carga de arriba',
             ],
             'trash' => [
-                'icon' => 'fas fa-trash-alt',
                 'title' => 'No hay nada en la papelera.',
                 'message' => 'Elimine archivos para moverlos a la papelera automáticamente. Eliminar archivos de la papelera para eliminarlos de forma permanente',
             ],
             'favorites' => [
-                'icon' => 'fas fa-star',
                 'title' => 'Aún no has añadido nada a tus favoritos.',
                 'message' => 'Agregue archivos a favoritos para encontrarlos fácilmente',
             ],
             'recent' => [
-                'icon' => 'far fa-clock',
                 'title' => 'Aún no haz abierto nada',
                 'message' => 'Los archivos abiertos recientemente aparecerán aquí',
             ],
             'default' => [
-                'icon' => 'fas fa-sync',
                 'title' => 'Sin elementos',
                 'message' => 'Directorio Vacío',
             ],

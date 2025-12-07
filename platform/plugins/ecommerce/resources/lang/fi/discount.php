@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Tätä kuponkia ei voi soveltaa, koska korissasi on salamyyntituotteita (:product_name). Salamyyntihintoja ei voi yhdistää kuponkialennuksiin.',
     'coupon_applied_successfully' => 'Hienoa! Kuponkikoodi ":code" on sovellettu. Säästit rahaa tässä tilauksessa!',
     'coupon_removed_successfully' => 'Kuponkikoodi on poistettu tilauksestasi.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kuponkikoodit (:count)',
+    'left_quantity' => 'Jäljellä :left',
+    'apply' => 'Käytä',
+    'remove' => 'Poista',
+    'select_coupon' => 'Valitse kuponki',
+    'you_have_coupon_code' => 'Onko sinulla kuponkikoodi?',
+    'close' => 'Sulje',
+    'coupon_code_label' => 'Kuponkikoodi: :code',
+    'enter_coupon_code_placeholder' => 'Syötä kuponkikoodi...',
 ];

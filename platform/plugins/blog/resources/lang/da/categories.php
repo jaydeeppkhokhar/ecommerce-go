@@ -12,4 +12,7 @@ return [
     'parent' => 'Overordnet kategori',
     'order' => 'Rækkefølge',
     'is_default' => 'Er standard',
+    'intro' => [
+        'description' => 'Organiser dine blogindlæg i kategorier for bedre indholdsstyring.',
+    ],
 ];

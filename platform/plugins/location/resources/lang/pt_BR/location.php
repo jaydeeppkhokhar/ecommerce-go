@@ -73,6 +73,4 @@ return [
             'nationality' => 'A nacionalidade do local, se fornecida, não deverá exceder 120 caracteres.',
         ],
     ],
-    'create' => 'Adicionar localização',
-    'edit' => 'Editar localização',
 ];

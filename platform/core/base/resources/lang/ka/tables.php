@@ -58,4 +58,11 @@ return [
     'to' => '-',
     'csv' => 'CSV ფორმატში',
     'excel' => 'Excel ფორმატში',
+    'id' => 'ID',
+    'pdf' => 'PDF',
+    'confirm_delete_all_msg' => 'ნამდვილად გსურთ ყველა ჩანაწერის წაშლა?',
+    'phone' => 'ტელეფონი',
+    'shortcode' => 'მოკლე კოდი',
+    'checkbox' => 'მონიშვნის ველი',
+    'toggle_columns' => 'სვეტების გადართვა',
 ];

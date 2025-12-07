@@ -2,22 +2,21 @@
 
 return [
     'form' => [
-        'name' => 'Name',
-        'name_placeholder' => 'Tag\'s name (Maximum 120 characters)',
-        'description' => 'Description',
-        'description_placeholder' => 'Short description for tag (Maximum 400 characters)',
-        'categories' => 'Categories',
+        'name' => 'Naam',
+        'name_placeholder' => 'Naam van tag (maximaal 120 tekens)',
+        'description' => 'Beschrijving',
+        'description_placeholder' => 'Korte beschrijving voor tag (maximaal 400 tekens)',
+        'categories' => 'Categorieën',
 
     ],
     'notices' => [
-        'no_select' => 'Please select at least one tag to take this action!',
+        'no_select' => 'Selecteer minimaal één tag om door te gaan',
 
     ],
-    'create' => 'Create new tag',
-    'edit' => 'Edit tag',
-    'cannot_delete' => 'Tag could not be deleted',
-    'deleted' => 'Tag deleted',
+    'create' => 'Maak een nieuwe tag',
+    'cannot_delete' => 'Tag kon niet worden verwijderd',
+    'deleted' => 'Tag verwijderd',
     'menu' => 'Tags',
-    'edit_this_tag' => 'Edit this tag',
+    'edit_this_tag' => 'Deze tag bewerken',
     'menu_name' => 'Tags',
 ];

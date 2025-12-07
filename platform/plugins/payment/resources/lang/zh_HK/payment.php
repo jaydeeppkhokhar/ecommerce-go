@@ -126,4 +126,13 @@ return [
         'request' => '請求',
         'response' => '回應',
     ],
+    'payment_created' => '您已透過 :channel 建立了付款 #:charge_id :time : :amount',
+    'processing_please_wait' => '處理中。請稍候...',
+    'error' => '錯誤',
+    'checkout' => '結帳',
+    'show_full_json' => '顯示完整JSON',
+    'full_log_data' => '完整日誌資料',
+    'currency_not_supported' => ':name 不支援 :currency。:name 支援的貨幣清單：:currencies。',
+    'please_switch_currency' => '請切換到任何支援的貨幣',
+    'payment_with' => '使用 :paymentType 付款',
 ];

@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Samodejno ustvarjanje',
         'automatic_generation_desc' => 'Samodejno se posodobi, ko se vsebina spremeni',
         'automatic_update_note' => 'Zemljevid spletnega mesta se samodejno posodobi vsakič, ko ustvarite, uredite ali izbrišete vsebino na spletnem mestu.',
+        'submit_sitemap' => 'Pošlji zemljevid mesta v IndexNow',
+        'submitting_sitemap' => 'Pošiljanje...',
+        'sitemap_submitted_successfully' => 'Zemljevid mesta je bil uspešno poslan iskalnikom!',
+        'sitemap_submission_failed' => 'Zemljevida mesta ni bilo mogoče poslati v vse iskalnike.',
+        'sitemap_submission_partial' => 'Zemljevid mesta je bil poslan z nekaj napakami.',
+        'submit_sitemap_error' => 'Zemljevida mesta ni bilo mogoče poslati. Poskusite znova.',
+        'indexnow_disabled' => 'IndexNow ni omogočen. Najprej ga omogočite.',
+        'indexnow_no_api_key' => 'Ključ API ni bil najden. Najprej ustvarite ključ API.',
     ],
 ];

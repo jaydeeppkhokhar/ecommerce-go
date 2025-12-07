@@ -16,7 +16,7 @@ return [
     'download_database' => 'Baixar backup do banco de dados',
     'restore_tooltip' => 'Restaurar este backup',
     'demo_alert' => 'Olá visitante, se você vir que o site de demonstração foi destruído, por favor nos ajude <a href=\":link\">indo aqui</a> e restaurando este site de demonstração para a revisão mais recente! Muito obrigado!',
-    'menu_name' => 'Backups',
+    'menu_name' => 'Cópias de segurança',
     'size' => 'Tamanho',
     'no_backups' => 'Não há backup agora.',
     'proc_open_disabled_error' => 'A função PHP <code>proc_open()</code> está atualmente desativada, impedindo o sistema de criar um backup. Entre em contato com seu provedor de hospedagem para ativar esta função.',

@@ -122,6 +122,7 @@ use Illuminate\Support\Facades\Facade;
  * @method static bool isPaymentProofEnabled()
  * @method static bool isEnabledFilterProductsByCategories()
  * @method static bool isEnabledFilterProductsByPrice()
+ * @method static bool isHideCustomerInfoAtCheckout()
  * @method static bool hideProductPrice()
  * @method static array parseFilterParams(Request $request, string $paramName)
  * @method static string getAssetVersion()

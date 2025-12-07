@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Lisa lihtne slaidiesitlus',
     'select_slider' => 'Valige slaidiesitlus',
     'shortcode' => 'Lühikood',
+    'tablet_image' => 'Tahvelarvuti pilt',
+    'tablet_image_helper' => 'Seadmete puhul laiusega 768 kuni 1200 pikslit, kui see on tühi, kasutatakse pilti töölaualt.',
+    'mobile_image' => 'Mobiilne pilt',
+    'mobile_image_helper' => 'Seadmete puhul, mille laius on alla 768 piksli, kasutatakse tühjaks jäänud pilti tahvelarvutist.',
 ];

@@ -4,26 +4,26 @@
     <h3 class="alert-heading">{{ SeoHelper::getTitle() }}</h3>
 
     <div class="alert alert-warning mb-0 mt-3" role="alert">
-        <p class="mb-0">{{ __('Please wait for the administrator to review and approve!') }}</p>
+        <p class="mb-0">{{ trans('plugins/marketplace::marketplace.wait_for_approval') }}</p>
     </div>
 
     <div class="mt-4">
-        <h5 class="mb-3">{{ __('Store Information') }}</h5>
+        <h5 class="mb-3">{{ trans('plugins/marketplace::marketplace.vendor_information') }}</h5>
         <ul class="list-group">
-            <li class="list-group-item"><strong>{{ __('Store Name') }}:</strong> {{ $store->name }}</li>
-            <li class="list-group-item"><strong>{{ __('Owner') }}:</strong> {{ $store->customer->name }}</li>
-            <li class="list-group-item"><strong>{{ __('Phone') }}:</strong> {{ $store->phone }}</li>
+            <li class="list-group-item"><strong>{{ trans('plugins/marketplace::store.store_name') }}:</strong> {{ $store->name }}</li>
+            <li class="list-group-item"><strong>{{ trans('plugins/marketplace::store.forms.store_owner') }}:</strong> {{ $store->customer->name }}</li>
+            <li class="list-group-item"><strong>{{ trans('plugins/marketplace::store.forms.phone') }}:</strong> {{ $store->phone }}</li>
             @if (MarketplaceHelper::getSetting('requires_vendor_documentations_verification', true))
                 @if ($store->certificate_file && Storage::disk('local')->exists($store->certificate_file))
                     <li class="list-group-item">
-                        <strong>{{ __('Uploaded Certificate') }}: </strong>
-                        <a href="{{ route('marketplace.vendor.become-vendor.download-certificate') }}" target="_blank" class="text-primary">{{ __('View Certificate') }}</a>
+                        <strong>{{ trans('plugins/marketplace::marketplace.uploaded_certificate') }}: </strong>
+                        <a href="{{ route('marketplace.vendor.become-vendor.download-certificate') }}" target="_blank" class="text-primary">{{ trans('plugins/marketplace::marketplace.view_certificate') }}</a>
                     </li>
                 @endif
                 @if ($store->government_id_file && Storage::disk('local')->exists($store->government_id_file))
                     <li class="list-group-item">
-                        <strong>{{ __('Uploaded Government ID') }}: </strong>
-                        <a href="{{ route('marketplace.vendor.become-vendor.download-government-id') }}" target="_blank" class="text-primary">{{ __('View Government ID') }}</a>
+                        <strong>{{ trans('plugins/marketplace::marketplace.uploaded_government_id') }}: </strong>
+                        <a href="{{ route('marketplace.vendor.become-vendor.download-government-id') }}" target="_blank" class="text-primary">{{ trans('plugins/marketplace::marketplace.view_government_id') }}</a>
                     </li>
                 @endif
             @endif

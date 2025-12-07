@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Produktų sąrašas',
         'cart' => 'Krepšelis',
     ],
+    'purchased' => 'įsigijo',
+    'verified' => 'Patvirtinta',
+    'quick_view' => 'Greita peržiūra',
 ];

@@ -356,7 +356,7 @@ class Theme implements ThemeContract
     public function breadcrumb(): Breadcrumb
     {
         if (! $this->breadcrumb->getCrumbs()) {
-            $this->breadcrumb->add(__('Home'), BaseHelper::getHomepageUrl());
+            $this->breadcrumb->add(trans('packages/theme::theme.common.home'), BaseHelper::getHomepageUrl());
         }
 
         return $this->breadcrumb;

@@ -23,7 +23,6 @@ return [
         'activated' => 'Diaktifkan',
         'locked' => 'Dikunci',
     ],
-    'email_verified' => 'Email terverifikasi?',
     'verify_email' => [
         'confirm_heading' => 'Verifikasi konfirmasi email',
         'confirm_description' => 'Apakah Anda yakin ingin memverifikasi email pelanggan ini?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'klik di sini',
         'confirm_button' => 'Verifikasi',
     ],
-    'email_already_verified' => 'Email sudah terverifikasi.',
     'verification_email_sent' => 'Email verifikasi berhasil dikirim!',
     'resend_verification_email' => 'Kirim ulang email verifikasi',
     'resend_verification_email_confirmation' => 'Apakah Anda yakin ingin mengirim ulang email verifikasi ke pelanggan ini?',

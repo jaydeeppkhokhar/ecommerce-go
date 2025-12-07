@@ -28,6 +28,13 @@ return [
     'save_success' => 'Save widget successfully!',
     'delete_success' => 'Delete widget successfully!',
     'primary_sidebar_name' => 'Primary sidebar',
+    'form' => [
+        'enable_caching' => 'Enable caching',
+        'yes' => 'Yes',
+        'no' => 'No',
+        'cache_helper' => 'When enabled, this widget content will be cached to improve performance. Disable for dynamic content that changes frequently.',
+        'cache_warning' => 'Due to UI issues, cache for this widget is disabled via code. This widget will not be cached even if caching is enabled.',
+    ],
     'primary_sidebar_description' => 'Primary sidebar section',
     'drag_widget_to_sidebar' => 'Drag and drop widgets to this area.',
     'widget_areas' => 'Widget Areas',

@@ -23,6 +23,7 @@ return [
                 'store_url' => 'plugins/marketplace::marketplace.store_url',
                 'store' => 'plugins/marketplace::marketplace.email.store',
                 'order' => 'plugins/marketplace::marketplace.email.order',
+                'order_note' => 'plugins/ecommerce::ecommerce.order_note',
                 'shipment' => 'plugins/marketplace::marketplace.email.shipment',
                 'address' => 'plugins/marketplace::marketplace.email.address',
                 'products' => 'plugins/marketplace::marketplace.email.products',

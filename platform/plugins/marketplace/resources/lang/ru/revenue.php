@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Доходы',
     'edit' => 'Обновление баланса кошелька',
     'view_store' => 'Посмотреть магазин ":store"',
     'forms' => [
@@ -13,6 +14,7 @@ return [
     'types' => [
         'add-amount' => 'Добавить сумму',
         'subtract-amount' => 'Вычесть сумму',
+        'order-return' => 'Возврат заказа',
     ],
     'store_name' => 'Название магазина',
     'vendor_name' => 'Название поставщика',
@@ -22,4 +24,5 @@ return [
     'update_balance_title' => 'Добавление/вычитание суммы поставщика',
     'statements' => 'Заявления',
     'products' => 'Товары',
+    'items_earning_sales' => 'Продажи товаров с доходом: :amount',
 ];

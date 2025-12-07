@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Giới hạn số lượng hiển thị',
     'edit_this_gallery' => 'Chỉnh sửa thư viện ảnh này',
     'galleries_page' => 'Trang thư viện ảnh',
+    'by_name' => 'Bởi :name',
+    'title' => 'Tiêu đề',
+    'limit' => 'Giới hạn',
+    'limit_helper' => 'Số lượng phòng trưng bày để hiển thị. ',
 ];

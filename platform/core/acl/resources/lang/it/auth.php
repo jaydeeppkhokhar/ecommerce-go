@@ -66,6 +66,7 @@ return [
     'languages' => 'Lingue',
     'reset_password' => 'Reimposta password',
     'deactivated_message' => 'Il tuo account è stato disattivato. Contatta l\'amministratore.',
+    'password_changed_message' => 'La tua password è stata cambiata. Effettua nuovamente il login con la tua nuova password.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

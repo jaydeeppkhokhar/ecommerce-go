@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'name' => 'Cities',
-    'description' => 'Manage location cities',
-    'create' => 'New city',
-    'state' => 'State',
-    'select_state' => 'Select state...',
-    'select_city' => 'Select city...',
-    'country' => 'Country',
-    'select_country' => 'Select country...',
-    'city' => 'City',
-    'zip_code' => 'Zip code',
-    'zip_code_helper' => 'The basic format for a zip code is five digits. For example, in the United States, 00501 is an example of a unique ZIP Code for the Internal Revenue Service in Holtsville, New York.',
+    'name' => 'Steden',
+    'description' => 'Beheer locatie steden',
+    'create' => 'Nieuwe stad',
+    'state' => 'Staat',
+    'select_state' => 'Selecteer staat...',
+    'select_city' => 'Selecteer stad...',
+    'country' => 'Land',
+    'select_country' => 'Selecteer land...',
+    'city' => 'Stad',
+    'zip_code' => 'Postcode',
+    'zip_code_helper' => 'Het basisformaat voor een postcode is vijf cijfers. In de Verenigde Staten is 00501 bijvoorbeeld een unieke postcode voor de Internal Revenue Service in Holtsville, New York.',
 ];

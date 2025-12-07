@@ -2,11 +2,15 @@
 
 namespace Botble\Ecommerce\Models;
 
-use Botble\Base\Models\BaseModel;
+use Botble\Base\Models\Concerns\HasUuidsOrIntegerIds;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 
-class ProductVariationItem extends BaseModel
+class ProductVariationItem extends Pivot
 {
+    use HasUuidsOrIntegerIds;
+
     protected $table = 'ec_product_variation_items';
 
     protected $fillable = [
@@ -15,6 +19,8 @@ class ProductVariationItem extends BaseModel
     ];
 
     public $timestamps = false;
+
+    public $incrementing = true;
 
     public function productVariation(): BelongsTo
     {
@@ -26,7 +32,7 @@ class ProductVariationItem extends BaseModel
         return $this->belongsTo(ProductAttribute::class, 'attribute_id')->withDefault();
     }
 
-    public static function getVariationsInfo(array $versionIds)
+    public static function getVariationsInfo(array $versionIds): Collection
     {
         return self::query()
             ->join('ec_product_attributes', 'ec_product_attributes.id', '=', 'ec_product_variation_items.attribute_id')
@@ -54,7 +60,7 @@ class ProductVariationItem extends BaseModel
             ->get();
     }
 
-    public static function getProductAttributes(int|string $productId)
+    public static function getProductAttributes(int|string $productId): Collection
     {
         return self::query()
             ->join('ec_product_attributes', 'ec_product_attributes.id', '=', 'ec_product_variation_items.attribute_id')

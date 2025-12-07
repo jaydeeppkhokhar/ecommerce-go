@@ -22,7 +22,6 @@ return [
     'edit_this_post' => 'แก้ไขโพสต์นี้',
     'no_new_post_now' => 'ไม่มีโพสต์ใหม่ในขณะนี้!',
     'menu_name' => 'โพสต์',
-    'widget_posts_recent' => 'โพสต์ล่าสุด',
     'categories' => 'หมวดหมู่',
     'category' => 'หมวดหมู่',
     'author' => 'ผู้เขียน',

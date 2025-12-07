@@ -4,7 +4,7 @@
 
 @if($fields)
     <x-core::form.fieldset class="mb-3">
-        <h4>{{ $title ?? __('You will receive money through the information below') }}</h4>
+        <h4>{{ $title ?? trans('plugins/marketplace::withdrawal.receive_money_info') }}</h4>
 
         <x-core::datagrid>
             @foreach ($fields as $key => $field)
@@ -19,7 +19,7 @@
     </x-core::form.fieldset>
 
     @isset($link)
-        <p class="mb-3">{!! BaseHelper::clean(__('You can change it <a href=":link">here</a>', ['link' => $link])) !!}.</p>
+        <p class="mb-3">{!! BaseHelper::clean(trans('plugins/marketplace::withdrawal.change_info_here', ['link' => $link])) !!}.</p>
     @endisset
 @endif
 
@@ -27,26 +27,26 @@
 
 @if ($taxInfo && (Arr::get($taxInfo, 'business_name') || Arr::get($taxInfo, 'tax_id') || Arr::get($taxInfo, 'address')))
     <x-core::form.fieldset class="mb-3">
-        <h4>{{ __('Tax info') }}</h4>
+        <h4>{{ trans('plugins/marketplace::marketplace.tax_info') }}</h4>
 
         <x-core::datagrid>
             @if (Arr::get($taxInfo, 'business_name'))
                 <x-core::datagrid.item>
-                    <x-slot:title>{{ __('Business Name') }}</x-slot:title>
+                    <x-slot:title>{{ trans('plugins/marketplace::marketplace.business_name') }}</x-slot:title>
                     {{ Arr::get($taxInfo, 'business_name') }}
                 </x-core::datagrid.item>
             @endif
 
             @if ($taxId = Arr::get($taxInfo, 'tax_id'))
                 <x-core::datagrid.item>
-                    <x-slot:title>{{ __('Tax ID') }}</x-slot:title>
+                    <x-slot:title>{{ trans('plugins/marketplace::marketplace.tax_id') }}</x-slot:title>
                     {{ $taxId }}
                 </x-core::datagrid.item>
             @endif
 
             @if ($address = Arr::get($taxInfo, 'address'))
                 <x-core::datagrid.item>
-                    <x-slot:title>{{ __('Address') }}</x-slot:title>
+                    <x-slot:title>{{ trans('plugins/marketplace::marketplace.address') }}</x-slot:title>
                     {{ $address }}
                 </x-core::datagrid.item>
             @endif

@@ -1,15 +1,15 @@
 <?php
 
 return [
-    'name' => 'Cities',
-    'description' => 'Manage location cities',
-    'create' => 'New city',
-    'state' => 'State',
-    'select_state' => 'Select state...',
-    'select_city' => 'Select city...',
-    'country' => 'Country',
-    'select_country' => 'Select country...',
-    'city' => 'City',
-    'zip_code' => 'Zip code',
-    'zip_code_helper' => 'The basic format for a zip code is five digits. For example, in the United States, 00501 is an example of a unique ZIP Code for the Internal Revenue Service in Holtsville, New York.',
+    'name' => 'শহরসমূহ',
+    'description' => 'লোকেশন শহর পরিচালনা করুন',
+    'create' => 'নতুন শহর',
+    'state' => 'রাজ্য',
+    'select_state' => 'রাজ্য নির্বাচন করুন...',
+    'select_city' => 'শহর নির্বাচন করুন...',
+    'country' => 'দেশ',
+    'select_country' => 'দেশ নির্বাচন করুন...',
+    'city' => 'শহর',
+    'zip_code' => 'জিপ কোড',
+    'zip_code_helper' => 'একটি জিপ কোডের মূল ফরম্যাট হল পাঁচটি সংখ্যা। উদাহরণস্বরূপ, মার্কিন যুক্তরাষ্ট্রে, 00501 হল হোল্টসভিল, নিউ ইয়র্কের অভ্যন্তরীণ রাজস্ব সেবার জন্য একটি অনন্য জিপ কোডের উদাহরণ।',
 ];

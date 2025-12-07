@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alternativni tekst',
 
     'folder_created' => 'Mapa uspješno kreirana!',
+    'folder_exists' => 'Mapa :folder već postoji!',
+    'directory_must_empty' => 'Direktorij mora biti prazan da bi se obrisao!',
     'gallery' => 'Galerija medija',
 
     'trash_error' => 'Greška pri brisanju odabranih stavki',

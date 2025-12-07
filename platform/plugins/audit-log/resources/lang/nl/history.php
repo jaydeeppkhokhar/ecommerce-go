@@ -19,7 +19,7 @@ return [
     'post' => 'bericht',
     'page' => 'pagina',
     'category' => 'categorie',
-    'tag' => 'tag',
+    'tag' => 'label',
     'user' => 'gebruiker',
     'contact' => 'contact',
     'backup' => 'back-up',
@@ -45,4 +45,6 @@ return [
     'admin' => 'beheerder',
     'register_an_account' => 'een account',
     'activity_has_been_deleted' => 'Activiteit is verwijderd',
+    'no_results_found' => 'Geen resultaten gevonden',
+    'no_activities_here' => 'Het lijkt erop dat er hier geen activiteiten zijn.',
 ];

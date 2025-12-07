@@ -66,6 +66,7 @@ return [
     'languages' => '언어',
     'reset_password' => '비밀번호 재설정',
     'deactivated_message' => '계정이 비활성화되었습니다. 관리자에게 문의하세요.',
+    'password_changed_message' => '비밀번호가 변경되었습니다. 새 비밀번호로 다시 로그인하세요.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

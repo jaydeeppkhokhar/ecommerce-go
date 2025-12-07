@@ -1,15 +1,18 @@
 <?php
 
 return [
-    'create' => 'Create new category',
+    'create' => 'Créer une nouvelle catégorie',
     'menu' => 'Catégories',
-    'edit_this_category' => 'Edit this category',
+    'edit_this_category' => 'Modifier cette catégorie',
     'menu_name' => 'Catégories',
-    'none' => 'None',
-    'total_posts' => 'Total posts: :total',
-    'table_view_info' => 'For easier bulk management of categories, you can also',
-    'manage_as_table' => 'manage categories as a table',
-    'parent' => 'Parent Category',
-    'order' => 'Order',
-    'is_default' => 'Is Default',
+    'none' => 'Aucune',
+    'total_posts' => 'Total des articles : :total',
+    'table_view_info' => 'Pour une gestion en masse plus facile des catégories, vous pouvez également',
+    'manage_as_table' => 'gérer les catégories sous forme de tableau',
+    'parent' => 'Catégorie parente',
+    'order' => 'Ordre',
+    'is_default' => 'Par défaut',
+    'intro' => [
+        'description' => 'Organisez vos articles de blog en catégories pour une meilleure gestion du contenu.',
+    ],
 ];

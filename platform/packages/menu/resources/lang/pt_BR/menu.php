@@ -31,7 +31,7 @@ return [
     'items' => 'Unid',
     'locations' => 'Locais',
     'main_navigation' => 'Navegação Principal',
-    'edit' => 'Editar menu',
     'widget_custom_menu' => 'Menu personalizado',
     'widget_custom_menu_description' => 'Adicione um menu personalizado à sua área de widgets.',
+    'select_menu' => 'Selecionar menu',
 ];

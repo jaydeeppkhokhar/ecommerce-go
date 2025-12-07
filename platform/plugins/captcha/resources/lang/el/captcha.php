@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Φόρμα σύνδεσης διαχειριστή',
     'admin_forgot_password_form' => 'Φόρμα ξεχασμένου κωδικού διαχειριστή',
     'admin_reset_password_form' => 'Φόρμα επαναφοράς κωδικού διαχειριστή',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Μαθηματικά Captcha',
+    'math_question' => 'Λύστε την παρακάτω μαθηματική συνάρτηση: :label = ?',
+    'captcha_verification_failed' => 'Η επαλήθευση Captcha απέτυχε!',
+    'math_captcha_verification_failed' => 'Η επαλήθευση μαθηματικών Captcha απέτυχε!',
 ];

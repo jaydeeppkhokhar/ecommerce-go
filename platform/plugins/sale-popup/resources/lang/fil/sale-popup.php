@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Listahan ng produkto',
         'cart' => 'Cart',
     ],
+    'purchased' => 'bumili',
+    'verified' => 'Verified',
+    'quick_view' => 'Mabilis na pagtingin',
 ];

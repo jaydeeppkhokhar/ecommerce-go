@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Prihodi',
     'edit' => 'Ažuriraj stanje novčanika',
     'view_store' => 'Pogledaj trgovinu ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Dodaj/Oduzmi iznos prodavača',
     'statements' => 'Izvodi',
     'products' => 'Proizvodi',
+    'items_earning_sales' => 'Prodaja zarade stavki: :amount',
 ];

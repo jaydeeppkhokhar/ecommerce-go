@@ -92,14 +92,14 @@ class ContactRequest extends Request
     public function attributes(): array
     {
         $attributes = [
-            'name' => __('Name'),
-            'email' => __('Email'),
-            'phone' => __('Phone'),
-            'content' => __('Content'),
-            'subject' => __('Subject'),
-            'address' => __('Address'),
-            'agree_terms_and_policy' => __('Agree terms and policy'),
-            'contact_custom_fields' => __('Custom Fields'),
+            'name' => trans('plugins/contact::contact.form_name'),
+            'email' => trans('plugins/contact::contact.form_email'),
+            'phone' => trans('plugins/contact::contact.form_phone'),
+            'content' => trans('plugins/contact::contact.form_content'),
+            'subject' => trans('plugins/contact::contact.form_subject'),
+            'address' => trans('plugins/contact::contact.form_address'),
+            'agree_terms_and_policy' => trans('plugins/contact::contact.agree_terms_and_policy'),
+            'contact_custom_fields' => trans('plugins/contact::contact.custom_fields'),
         ];
 
         $customFields = $this->getCustomFields();
@@ -114,7 +114,7 @@ class ContactRequest extends Request
     public function messages(): array
     {
         return [
-            'agree_terms_and_policy.accepted' => __('You must agree to the terms and policy.'),
+            'agree_terms_and_policy.accepted' => trans('plugins/contact::contact.must_agree_terms'),
         ];
     }
 

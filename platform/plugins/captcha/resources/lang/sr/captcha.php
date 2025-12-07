@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Форма за пријаву администратора',
     'admin_forgot_password_form' => 'Форма заборављене лозинке администратора',
     'admin_reset_password_form' => 'Форма за ресетовање лозинке администратора',
+    'captcha' => 'Цаптцха',
+    'math_captcha' => 'Матх Цаптцха',
+    'math_question' => 'Решите следећу математичку функцију: ПЛАЦЕХОЛДЕР0 = ?',
+    'captcha_verification_failed' => 'Цаптцха верификација није успела!',
+    'math_captcha_verification_failed' => 'Матх Цаптцха верификација није успела!',
 ];

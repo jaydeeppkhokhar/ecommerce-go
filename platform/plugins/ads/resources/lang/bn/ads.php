@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'অবৈধ Google AdSense Client ID ফরম্যাট। এটি এই ফরম্যাটে হওয়া উচিত: ca-pub-XXXXXXXXXXXXXXXX (যেখানে X একটি সংখ্যা)।',
         ],
     ],
+    'banner' => 'ব্যানার',
+    'tablet_image' => 'ট্যাবলেট ছবি',
+    'tablet_image_helper' => '768px থেকে 1200px প্রস্থের ডিভাইসগুলির জন্য, খালি থাকলে ডেস্কটপ থেকে ছবি ব্যবহার করা হবে।',
+    'mobile_image' => 'মোবাইল ছবি',
+    'mobile_image_helper' => '768px এর কম প্রস্থের ডিভাইসগুলির জন্য, খালি থাকলে ট্যাবলেট থেকে ছবি ব্যবহার করা হবে।',
 ];

@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Dopustite kupcima učitavanje dokaza o plaćanju za svoje narudžbe. Ovo je korisno za ručne metode plaćanja.',
             'enable_guest_payment_proof' => 'Dopusti gostima učitavanje dokaza o plaćanju',
             'enable_guest_payment_proof_helper' => 'Kada je omogućeno, gosti kupci mogu učitati dokaz o plaćanju koristeći svoj token narudžbe bez prijave. Primit će poveznicu za učitavanje u svojoj e-pošti potvrde narudžbe.',
+            'payment_proof_payment_methods' => 'Načini plaćanja koji zahtijevaju dokaz o plaćanju',
+            'payment_proof_payment_methods_helper' => 'Odaberite koje načine plaćanja treba omogućiti kupcima da učitaju dokaz o plaćanju. Obično se koristi za ručne načine plaćanja poput plaćanja pouzećem i bankovnim prijenosom.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Prikaži traku napretka s "X prodano od Y" kako bi se stvorila hitnost i potakle brze kupnje tijekom brzih prodaja.',
     ],
     'payment_method_cod_minimum_amount' => 'Minimalan iznos narudžbe - :currency (Neobavezno)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Minimalan iznos narudžbe - :currency (Neobavezno)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Prikaži informacije o banci na stranici uspješne naplate?',
     'invoice_templates' => 'Predlošci računa',
 ];

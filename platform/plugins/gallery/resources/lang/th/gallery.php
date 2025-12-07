@@ -18,4 +18,8 @@ return [
     'limit_display' => 'จำกัดจำนวนที่แสดง',
     'edit_this_gallery' => 'แก้ไขแกลเลอรีนี้',
     'galleries_page' => 'หน้าแกลเลอรี',
+    'by_name' => 'โดย :name',
+    'title' => 'ชื่อ',
+    'limit' => 'ขีดจำกัด',
+    'limit_helper' => 'จำนวนแกลเลอรีที่จะแสดง ',
 ];

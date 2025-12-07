@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Legg til en enkel glidebryter',
     'select_slider' => 'Velg en glidebryter',
     'shortcode' => 'Kortkode',
+    'tablet_image' => 'Nettbrettbilde',
+    'tablet_image_helper' => 'For enheter med bredde fra 768px til 1200px, hvis tom, vil bildet fra skrivebordet brukes.',
+    'mobile_image' => 'Mobil bilde',
+    'mobile_image_helper' => 'For enheter med bredde mindre enn 768 piksler, hvis tomme, vil bildet fra nettbrettet brukes.',
 ];

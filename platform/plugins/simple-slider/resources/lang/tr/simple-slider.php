@@ -21,5 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Basit Slider Ekle',
     'select_slider' => 'Bir Slider Seç',
     'shortcode' => 'Kısa kod',
-    'edit' => 'Slider\'ı Düzenle',
+    'tablet_image' => 'Tablet Resmi',
+    'tablet_image_helper' => 'Genişliği 768 piksel ila 1200 piksel arasında olan cihazlar için boşsa masaüstündeki görüntüyü kullanır.',
+    'mobile_image' => 'Mobil Resim',
+    'mobile_image_helper' => 'Genişliği 768 pikselden az olan cihazlar için boşsa tabletteki görsel kullanılacaktır.',
 ];

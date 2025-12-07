@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'sessions' => 'Sessions',
+    'sessions' => 'Sessions (visites)',
     'visitors' => 'Visiteurs',
     'pageviews' => 'Pages vues',
     'bounce_rate' => 'Taux de rebond',
@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Erreur du plugin Analytics : Bibliothèques tierces manquantes. Veuillez exécuter "composer update" pour les installer.',
     'browser' => 'Navigateur',
     'url' => 'URL',
+    'credential_invalid' => 'Ces identifiants ne sont pas des identifiants Google Analytics valides.',
+    'file_not_valid_json' => 'Ce fichier n\'est pas un fichier JSON valide.',
+    'no_results_found' => 'Aucun résultat trouvé',
+    'upload_service_account_json' => 'Télécharger le fichier JSON du compte de service',
 ];

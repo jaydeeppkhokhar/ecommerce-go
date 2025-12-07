@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Begränsa antal visningar',
     'edit_this_gallery' => 'Redigera detta galleri',
     'galleries_page' => 'Gallerier sida',
+    'by_name' => 'Av :name',
+    'title' => 'Titel',
+    'limit' => 'Begränsa',
+    'limit_helper' => 'Antal gallerier att visa. ',
 ];

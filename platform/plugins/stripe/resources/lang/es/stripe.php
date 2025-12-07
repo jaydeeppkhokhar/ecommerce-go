@@ -14,4 +14,7 @@ return [
         'step_4_label' => 'Copiar el secreto de firma',
         'step_4_description' => 'Copie el valor "Secreto de firma" de la sección "Detalles del Webhook" y péguelo en el campo "Secreto del Webhook Stripe" en la sección "Stripe" de la pestaña "Pago" en la página "Configuración".',
     ],
+    'no_payment_charge' => '¡No se realizó ningún cargo de pago. Por favor, inténtelo de nuevo!',
+    'payment_failed' => '¡El pago falló!',
+    'payment_type' => 'Tipo de Pago',
 ];

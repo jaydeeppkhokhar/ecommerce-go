@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Сканирайте QR кода, за да проследите пратката си',
     ],
     'customer_confirmed_delivery_at' => 'Клиентът потвърди доставката на',
+    'no_shipping_methods_available' => 'Няма налични методи за доставка!',
 ];

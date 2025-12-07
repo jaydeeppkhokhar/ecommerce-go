@@ -39,4 +39,7 @@ return [
         'product_listing' => '商品一覧',
         'cart' => 'カート',
     ],
+    'purchased' => '購入しました',
+    'verified' => '確認済み',
+    'quick_view' => 'クイックビュー',
 ];

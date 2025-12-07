@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'მომხმარებლებს ნება მიეცით ატვირთონ გადახდის დადასტურება თავიანთი შეკვეთებისთვის. ეს სასარგებლოა ხელით გადახდის მეთოდებისთვის.',
             'enable_guest_payment_proof' => 'სტუმარი მომხმარებლებს ნება მიეცით ატვირთონ გადახდის დადასტურება',
             'enable_guest_payment_proof_helper' => 'როდესაც ჩართულია, სტუმარი მომხმარებლებს შეუძლიათ გადახდის დადასტურების ატვირთვა თავიანთი შეკვეთის ტოკენის გამოყენებით ავტორიზაციის გარეშე. ისინი მიიღებენ ატვირთვის ბმულს შეკვეთის დადასტურების ელფოსტაში.',
+            'payment_proof_payment_methods' => 'გადახდის მეთოდები, რომლებიც მოითხოვენ გადახდის დამადასტურებელს',
+            'payment_proof_payment_methods_helper' => 'აირჩიეთ რომელი გადახდის მეთოდები უნდა საშუალებას აძლევდეს მომხმარებლებს ატვირთონ გადახდის დამადასტურებელი. ჩვეულებრივ გამოიყენება ხელით გადახდის მეთოდებისთვის, როგორიცაა COD და საბანკო გადარიცხვა.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'აჩვენეთ პროგრესის ზოლი "X გაიყიდა Y-დან" სასწრაფოების შესაქმნელად და სწრაფი შესყიდვების წასახალისებლად ფლეშ გაყიდვების დროს.',
     ],
     'payment_method_cod_minimum_amount' => 'მინიმალური შეკვეთის თანხა - :currency (არასავალდებულო)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'მინიმალური შეკვეთის თანხა - :currency (არასავალდებულო)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'გამოჩნდეს ბანკის ინფორმაცია გადახდის წარმატების გვერდზე?',
     'invoice_templates' => 'ინვოისის შაბლონები',
 ];

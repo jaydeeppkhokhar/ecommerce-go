@@ -12,4 +12,7 @@ return [
     'parent' => 'Nadređena kategorija',
     'order' => 'Redoslijed',
     'is_default' => 'Je zadano',
+    'intro' => [
+        'description' => 'Organizirajte svoje blog objave u kategorije za bolje upravljanje sadržajem.',
+    ],
 ];

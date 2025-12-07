@@ -197,6 +197,7 @@ class ProductVariationTable extends TableAbstract
                 },
                 'configurableProduct.productCollections:id,name,slug',
                 'productAttributes:id,attribute_set_id,title,slug',
+                'variationItems.attribute:id,attribute_set_id,title,slug',
             ]);
 
         return $this->applyScopes($query);

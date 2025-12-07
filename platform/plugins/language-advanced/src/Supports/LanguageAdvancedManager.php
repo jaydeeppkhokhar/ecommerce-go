@@ -24,6 +24,43 @@ use Illuminate\Support\Str;
 
 class LanguageAdvancedManager
 {
+    protected const LOCALE_CACHE_KEY = '_language_advanced_locale';
+
+    protected const IS_DEFAULT_CACHE_KEY = '_language_advanced_is_default';
+
+    public static function getTranslationLocale(): ?string
+    {
+        $request = request();
+
+        if ($request->attributes->has(self::LOCALE_CACHE_KEY)) {
+            return $request->attributes->get(self::LOCALE_CACHE_KEY);
+        }
+
+        $locale = is_in_admin()
+            ? (Language::getCurrentAdminLocaleCode() ?: Language::getRefLang())
+            : Language::getCurrentLocaleCode();
+
+        $request->attributes->set(self::LOCALE_CACHE_KEY, $locale);
+
+        return $locale;
+    }
+
+    public static function isDefaultLocale(): bool
+    {
+        $request = request();
+
+        if ($request->attributes->has(self::IS_DEFAULT_CACHE_KEY)) {
+            return $request->attributes->get(self::IS_DEFAULT_CACHE_KEY);
+        }
+
+        $locale = self::getTranslationLocale();
+        $isDefault = $locale === null || $locale == Language::getDefaultLocaleCode();
+
+        $request->attributes->set(self::IS_DEFAULT_CACHE_KEY, $isDefault);
+
+        return $isDefault;
+    }
+
     public static function save(?Model $object, Request $request): bool
     {
         if (! self::isSupported($object)) {
@@ -33,7 +70,7 @@ class LanguageAdvancedManager
         $language = $request->input('language') ?: $request->header('X-LANGUAGE');
 
         if (! $language) {
-            $language = Language::getCurrentAdminLocaleCode();
+            $language = self::getTranslationLocale();
         }
 
         $condition = [
@@ -182,10 +219,6 @@ class LanguageAdvancedManager
 
     public static function initModelRelations(): void
     {
-        $locale = is_in_admin() ? Language::getCurrentAdminLocaleCode() : Language::getCurrentLocaleCode();
-
-        $isDefaultLocale = $locale == Language::getDefaultLocaleCode();
-
         foreach (self::getSupported() as $item => $columns) {
             if (! class_exists($item)) {
                 continue;
@@ -224,7 +257,7 @@ class LanguageAdvancedManager
                 MacroableModels::addMacro(
                     $item,
                     'get' . ucfirst(Str::camel($column)) . 'Attribute',
-                    function () use ($column, $locale, $isDefaultLocale) {
+                    function () use ($column) {
                         /**
                          * @var Model $model
                          */
@@ -232,8 +265,8 @@ class LanguageAdvancedManager
 
                         if (
                             ! $model->lang_code &&
-                            ! $isDefaultLocale &&
-                            $translation = $model->translations->where('lang_code', $locale)->value($column)
+                            ! LanguageAdvancedManager::isDefaultLocale() &&
+                            $translation = $model->translations->where('lang_code', LanguageAdvancedManager::getTranslationLocale())->value($column)
                         ) {
                             return $translation;
                         }

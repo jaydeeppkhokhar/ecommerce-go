@@ -22,7 +22,7 @@ class RedirectIfNotVendor
         if (MarketplaceHelper::getSetting('verify_vendor', true) &&
             ! Auth::guard($guard)->user()->vendor_verified_at) {
             if ($request->ajax() || $request->wantsJson()) {
-                return response(__('Vendor account is not verified.'), 403);
+                return response(trans('plugins/marketplace::marketplace.vendor_account_not_verified'), 403);
             }
 
             return redirect()->guest(route('marketplace.vendor.become-vendor'));

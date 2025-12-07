@@ -2,20 +2,15 @@
 
 namespace Botble\Sitemap\Providers;
 
-use Botble\Base\Events\CreatedContentEvent;
-use Botble\Base\Events\DeletedContentEvent;
-use Botble\Base\Events\UpdatedContentEvent;
 use Botble\Base\Facades\PanelSectionManager;
 use Botble\Base\PanelSections\PanelSectionItem;
-use Botble\Base\Services\ClearCacheService;
 use Botble\Base\Supports\ServiceProvider;
 use Botble\Base\Traits\LoadAndPublishDataTrait;
 use Botble\Setting\PanelSections\SettingCommonPanelSection;
 use Botble\Sitemap\Commands\IndexNowSubmissionCommand;
-use Botble\Sitemap\Events\SitemapUpdatedEvent;
-use Botble\Sitemap\Listeners\IndexNowSubmissionListener;
 use Botble\Sitemap\Services\IndexNowService;
 use Botble\Sitemap\Sitemap;
+use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Contracts\Cache\Repository;
 use Illuminate\Contracts\Routing\ResponseFactory;
 use Illuminate\Contracts\Support\DeferrableProvider;
@@ -56,22 +51,16 @@ class SitemapServiceProvider extends ServiceProvider implements DeferrableProvid
             ->loadRoutes()
             ->publishAssets();
 
-        $this->app['events']->listen([
-            CreatedContentEvent::class,
-            UpdatedContentEvent::class,
-            DeletedContentEvent::class,
-        ], function (): void {
-            ClearCacheService::make()->clearFrameworkCache();
-
-            event(new SitemapUpdatedEvent());
-        });
-
-        $this->app['events']->listen(SitemapUpdatedEvent::class, IndexNowSubmissionListener::class);
-
         if ($this->app->runningInConsole()) {
             $this->commands([
                 IndexNowSubmissionCommand::class,
             ]);
+
+            $this->app->afterResolving(Schedule::class, function (Schedule $schedule): void {
+                $schedule
+                    ->command('sitemap:indexnow')
+                    ->dailyAt('02:00');
+            });
         }
 
         PanelSectionManager::default()->beforeRendering(function (): void {

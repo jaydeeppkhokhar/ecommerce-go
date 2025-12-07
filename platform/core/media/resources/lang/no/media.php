@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alt-tekst',
 
     'folder_created' => 'Mappe opprettet!',
+    'folder_exists' => 'Mappen :folder eksisterer allerede!',
+    'directory_must_empty' => 'Katalogen må være tom for å slettes!',
     'gallery' => 'Mediegallleri',
 
     'trash_error' => 'Feil ved sletting av valgte elementer',

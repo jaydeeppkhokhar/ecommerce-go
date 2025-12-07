@@ -12,7 +12,6 @@ return [
             'city' => 'Місто',
         ],
     ],
-    'import_type' => 'Тип імпорту',
     'export' => [
         'total' => 'Всього локацій',
         'total_countries' => 'Всього країн',

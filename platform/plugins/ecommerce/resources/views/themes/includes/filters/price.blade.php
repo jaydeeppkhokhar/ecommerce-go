@@ -3,7 +3,7 @@
 @endphp
 
 <div class="bb-product-filter">
-    <h4 class="bb-product-filter-title border-0 mb-3">{{ __('Price') }}</h4>
+    <h4 class="bb-product-filter-title border-0 mb-3">{{ trans('plugins/ecommerce::products.price') }}</h4>
 
     <div class="bb-product-filter-content">
         <div class="bb-product-price-filter">

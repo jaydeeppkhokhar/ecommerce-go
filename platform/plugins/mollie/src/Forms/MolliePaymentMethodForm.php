@@ -19,7 +19,7 @@ class MolliePaymentMethodForm extends PaymentMethodForm
         $this
             ->paymentId(MOLLIE_PAYMENT_METHOD_NAME)
             ->paymentName('Mollie')
-            ->paymentDescription(__('Customer can buy product and pay directly using Visa, Credit card via :name', ['name' => 'Mollie']))
+            ->paymentDescription(trans('plugins/mollie::mollie.payment_description', ['name' => 'Mollie']))
             ->paymentLogo(url('vendor/core/plugins/mollie/images/mollie.png'))
             ->paymentFeeField(MOLLIE_PAYMENT_METHOD_NAME)
             ->paymentUrl('https://mollie.com')
@@ -28,17 +28,17 @@ class MolliePaymentMethodForm extends PaymentMethodForm
                 sprintf('payment_%s_api_key', MOLLIE_PAYMENT_METHOD_NAME),
                 TextField::class,
                 TextFieldOption::make()
-                    ->label(__('API Key'))
+                    ->label(trans('plugins/mollie::mollie.api_key'))
                     ->value(BaseHelper::hasDemoModeEnabled() ? '*******************************' : get_payment_setting('api_key', MOLLIE_PAYMENT_METHOD_NAME))
-                    ->helperText(__('Get your API key from your Mollie Dashboard'))
+                    ->helperText(trans('plugins/mollie::mollie.api_key_helper'))
             )
             ->add(
                 sprintf('payment_%s_webhook_secret', MOLLIE_PAYMENT_METHOD_NAME),
                 TextField::class,
                 TextFieldOption::make()
-                    ->label(__('Webhook Secret (Optional)'))
+                    ->label(trans('plugins/mollie::mollie.webhook_secret'))
                     ->value(BaseHelper::hasDemoModeEnabled() ? '*******************************' : get_payment_setting('webhook_secret', MOLLIE_PAYMENT_METHOD_NAME))
-                    ->helperText(__('Optional: Add a webhook secret for enhanced security. Configure this in your Mollie Dashboard under Developers > Webhooks'))
+                    ->helperText(trans('plugins/mollie::mollie.webhook_secret_helper'))
             )
             ->addAvailableCountriesField(MOLLIE_PAYMENT_METHOD_NAME);
     }

@@ -23,7 +23,6 @@ return [
         'activated' => 'Geactiveerd',
         'locked' => 'Vergrendeld',
     ],
-    'email_verified' => 'E-mail geverifieerd?',
     'verify_email' => [
         'confirm_heading' => 'E-mail bevestiging verifiëren',
         'confirm_description' => 'Weet u zeker dat u de e-mail van deze klant wilt verifiëren?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'klik hier',
         'confirm_button' => 'Verifiëren',
     ],
-    'email_already_verified' => 'E-mail is al geverifieerd.',
     'verification_email_sent' => 'Verificatie e-mail is succesvol verzonden!',
     'resend_verification_email' => 'Verificatie e-mail opnieuw verzenden',
     'resend_verification_email_confirmation' => 'Weet u zeker dat u de verificatie e-mail opnieuw wilt verzenden naar deze klant?',

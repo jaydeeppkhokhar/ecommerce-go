@@ -18,7 +18,6 @@ return [
     'self_open_link' => 'Открыть ссылку напрямую',
     'blank_open_link' => 'Открыть ссылку в новой вкладке',
     'create' => 'Создать меню',
-    'edit' => 'Меню редактирования',
     'menu_settings' => 'Настройки меню',
     'display_location' => 'Расположение дисплея',
     'title_placeholder' => 'Заголовок',
@@ -28,4 +27,5 @@ return [
     'menu_id' => 'Меню ID',
     'widget_custom_menu' => 'Пользовательское меню',
     'widget_custom_menu_description' => 'Добавьте пользовательское меню в область виджетов.',
+    'select_menu' => 'Выбрать меню',
 ];

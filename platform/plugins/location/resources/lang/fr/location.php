@@ -73,4 +73,5 @@ return [
             'nationality' => 'La nationalité du lieu, si elle est fournie, ne doit pas dépasser 120 caractères.',
         ],
     ],
+    'slug' => 'Slug',
 ];

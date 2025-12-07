@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Išvalyti senus užklausų žurnalus',
     'clear_old_data_helper' => 'Automatiškai ištrinti senus užklausų žurnalus, kurie yra senesni nei pasirinktas laikotarpis, kad duomenų bazė būtų švari ir optimizuota.',
     'cronjob_warning' => 'Norėdami naudoti šią funkciją, turite nustatyti cron užduotį vadovaudamiesi šia nuoroda: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Rezultatų nerasta',
+    'no_request_errors_message' => 'Atrodo, kad čia nėra užklausos klaidų.',
 ];

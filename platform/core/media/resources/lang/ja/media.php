@@ -43,6 +43,8 @@ return [
     'upload_progress' => 'アップロードの進行状況',
     'alt_text' => '代替テキスト',
     'folder_created' => 'フォルダーが正常に作成されました。',
+    'folder_exists' => 'フォルダ :folder は既に存在します！',
+    'directory_must_empty' => 'ディレクトリを削除するには空にする必要があります！',
     'gallery' => 'メディアギャラリー',
     'trash_error' => '選択したアイテムを削除するときにエラーが発生しました',
     'trash_success' => '選択したアイテムがゴミ箱に正常に移動されました。',

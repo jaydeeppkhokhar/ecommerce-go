@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Publicare resurse pachete',
         'clean_up' => 'Curățare fișiere actualizare sistem',
         'done' => 'Sistem actualizat cu succes',
-
+        'unknown' => 'Pas necunoscut',
         'messages' => [
             'download' => 'Se descarcă fișierele de actualizare...',
             'update_files' => 'Se actualizează fișierele sistem...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Se curăță fișierele de actualizare a sistemului...',
             'done' => 'Gata! Browserul dvs. va fi reîmprospătat în 30 de secunde.',
         ],
-
         'failed_messages' => [
             'download' => 'Nu s-au putut descărca fișierele de actualizare',
             'update_files' => 'Nu s-au putut actualiza fișierele sistem',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Nu s-au putut publica resursele pachetelor',
             'clean_up' => 'Nu s-au putut curăța fișierele de actualizare a sistemului',
         ],
-
         'success_messages' => [
             'download' => 'Fișierele de actualizare au fost descărcate cu succes.',
             'update_files' => 'Fișierele sistem au fost actualizate cu succes.',

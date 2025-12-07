@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Lubage klientidel laadida üles oma tellimuste makse tõend. See on kasulik käsitsi makseviiside puhul.',
             'enable_guest_payment_proof' => 'Luba külalisklientidel laadida üles makse tõend',
             'enable_guest_payment_proof_helper' => 'Kui see on lubatud, saavad külaliskliendid laadida üles makse tõendi oma tellimuse tokeni abil ilma sisselogimiseta. Nad saavad üleslaadimislingi oma tellimuse kinnituskirjas.',
+            'payment_proof_payment_methods' => 'Makseviisid, mis nõuavad maksetõendit',
+            'payment_proof_payment_methods_helper' => 'Valige, millised makseviisid peaksid võimaldama klientidel laadida üles maksetõendit. Tavaliselt kasutatakse käsitsi makseviisidega nagu postimaks ja pangaülekanne.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Näita edenemisjoonel "X müüdud Y-st", et luua kiireloomulisust ja julgustada kiireid oste välkmüügi ajal.',
     ],
     'payment_method_cod_minimum_amount' => 'Minimaalne tellimuse summa - :currency (Valikuline)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Minimaalne tellimuse summa - :currency (Valikuline)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Kuva panga info maksmisstseeni edukuse lehel?',
     'invoice_templates' => 'Arve mallid',
 ];

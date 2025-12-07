@@ -5,8 +5,12 @@ return [
     'create' => 'Novo pogosto vprašanje',
     'question' => 'Vprašanje',
     'answer' => 'Odgovor',
+    'question_placeholder' => 'Vnesite svoje vprašanje...',
+    'answer_placeholder' => 'Vnesite svoj odgovor...',
     'category' => 'Kategorija',
     'faq_schema_config' => 'Konfiguracija sheme pogostih vprašanj (:link)',
+    'faq_schema_config_description' => 'Ta konfiguracija registrira strukturirane podatke pogostih vprašanj samo za namene SEO. Ne bo prikazana v vsebini frontend teme. Shema je vdelana v izvorno kodo strani in jo je mogoče pregledati z uporabo "Prikaži vir" ali testirati z orodjem Google Rich Results Test.',
+    'schema_testing_tool' => 'Testirajte z Google Rich Results Test',
     'learn_more' => 'Več informacij',
     'settings' => [
         'title' => 'Pogosta vprašanja',

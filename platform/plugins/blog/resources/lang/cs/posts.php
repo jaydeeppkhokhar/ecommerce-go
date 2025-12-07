@@ -23,7 +23,6 @@ return [
     'edit_this_post' => 'Upravit tento příspěvek',
     'no_new_post_now' => 'Momentálně nejsou žádné nové příspěvky!',
     'menu_name' => 'Příspěvky',
-    'widget_posts_recent' => 'Nejnovější příspěvky',
     'categories' => 'Kategorie',
     'category' => 'Kategorie',
     'author' => 'Autor',

@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Zeskanuj kod QR, aby śledzić swoją przesyłkę',
     ],
     'customer_confirmed_delivery_at' => 'Klient potwierdził dostawę o',
+    'no_shipping_methods_available' => 'Brak dostępnych metod wysyłki!',
 ];

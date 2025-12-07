@@ -40,7 +40,7 @@ if (! function_exists('format_price')) {
             }
 
             if (! $currency->is_default && $currency->exchange_rate > 0) {
-                $price = $price * $currency->exchange_rate;
+                $price = (float) $price * $currency->exchange_rate;
             }
         }
 
@@ -179,6 +179,11 @@ if (! function_exists('get_all_currencies')) {
 if (! function_exists('get_application_currency')) {
     function get_application_currency(): ?Currency
     {
+        $forcedCurrency = cms_currency()->getForcedCurrency();
+        if ($forcedCurrency) {
+            return $forcedCurrency;
+        }
+
         $currency = cms_currency()->getApplicationCurrency();
 
         if (is_in_admin(true) || ! $currency) {

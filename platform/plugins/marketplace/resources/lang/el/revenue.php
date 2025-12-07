@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Έσοδα',
     'edit' => 'Ενημέρωση υπολοίπου πορτοφολιού',
     'view_store' => 'Προβολή καταστήματος ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Προσθαφαίρεση ποσού πωλητή',
     'statements' => 'Καταστάσεις',
     'products' => 'Προϊόντα',
+    'items_earning_sales' => 'Πωλήσεις εσόδων αντικειμένων: :amount',
 ];

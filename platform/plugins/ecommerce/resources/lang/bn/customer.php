@@ -23,7 +23,6 @@ return [
         'activated' => 'সক্রিয়',
         'locked' => 'লক',
     ],
-    'email_verified' => 'ইমেল যাচাই করা হয়েছে?',
     'verify_email' => [
         'confirm_heading' => 'ইমেল যাচাই নিশ্চিতকরণ',
         'confirm_description' => 'আপনি কি নিশ্চিত যে আপনি এই গ্রাহকের ইমেল যাচাই করতে চান?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'এখানে ক্লিক করুন',
         'confirm_button' => 'যাচাই করুন',
     ],
-    'email_already_verified' => 'ইমেল ইতিমধ্যে যাচাই করা হয়েছে।',
     'verification_email_sent' => 'যাচাইকরণ ইমেল সফলভাবে পাঠানো হয়েছে!',
     'resend_verification_email' => 'যাচাইকরণ ইমেল পুনরায় পাঠান',
     'resend_verification_email_confirmation' => 'আপনি কি নিশ্চিত যে আপনি এই গ্রাহকের কাছে যাচাইকরণ ইমেল পুনরায় পাঠাতে চান?',

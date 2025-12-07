@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Formulir login admin',
     'admin_forgot_password_form' => 'Formulir lupa kata sandi admin',
     'admin_reset_password_form' => 'Formulir reset kata sandi admin',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Captcha Matematika',
+    'math_question' => 'Silakan selesaikan fungsi matematika berikut: :label = ?',
+    'captcha_verification_failed' => 'Verifikasi Captcha Gagal!',
+    'math_captcha_verification_failed' => 'Verifikasi Captcha Matematika Gagal!',
 ];

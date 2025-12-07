@@ -10,4 +10,6 @@ return [
     'country' => 'País',
     'select_country' => 'Selecione o país...',
     'city' => 'Cidade',
+    'zip_code' => 'Código postal',
+    'zip_code_helper' => 'O formato básico de um código postal tem cinco dígitos. Por exemplo, nos Estados Unidos, 00501 é um código postal exclusivo do Internal Revenue Service em Holtsville, Nova Iorque.',
 ];

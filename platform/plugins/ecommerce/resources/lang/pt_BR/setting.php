@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Permitir que os clientes façam upload do comprovante de pagamento de seus pedidos. Isso é útil para métodos de pagamento manual.',
             'enable_guest_payment_proof' => 'Permitir que clientes convidados façam upload de comprovante de pagamento',
             'enable_guest_payment_proof_helper' => 'Quando habilitado, clientes convidados podem fazer upload de comprovante de pagamento usando seu token de pedido sem fazer login. Eles receberão o link de upload em seu e-mail de confirmação de pedido.',
+            'payment_proof_payment_methods' => 'Métodos de pagamento que requerem comprovante de pagamento',
+            'payment_proof_payment_methods_helper' => 'Selecione quais métodos de pagamento devem permitir que os clientes enviem o comprovante de pagamento. Normalmente usado para métodos de pagamento manuais como pagamento na entrega e transferência bancária.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Mostrar uma barra de progresso com "X vendidos de Y" para criar urgência e incentivar compras rápidas durante ofertas relâmpago.',
     ],
     'payment_method_cod_minimum_amount' => 'Valor mínimo do pedido - :currency (Opcional)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Valor mínimo do pedido - :currency (Opcional)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Exibir informações bancárias na página de sucesso do checkout?',
     'invoice_templates' => 'Modelos de fatura',
 ];

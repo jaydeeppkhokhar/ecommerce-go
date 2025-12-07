@@ -51,7 +51,7 @@ return [
     'attributes_list' => 'Danh sách thuộc tính',
     'is_default' => 'Là mặc định?',
     'title' => 'Tiêu đề',
-    'slug' => 'Slug',
+    'slug' => 'Đường dẫn tĩnh',
     'color' => 'Màu sắc',
     'image' => 'Hình ảnh',
     'remove' => 'Xóa',

@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Tạo tự động',
         'automatic_generation_desc' => 'Cập nhật tự động khi nội dung thay đổi',
         'automatic_update_note' => 'Sơ đồ trang cập nhật tự động mỗi khi bạn tạo, chỉnh sửa hoặc xóa nội dung trên trang web của bạn.',
+        'submit_sitemap' => 'Gửi sitemap đến IndexNow',
+        'submitting_sitemap' => 'Đang gửi...',
+        'sitemap_submitted_successfully' => 'Sitemap đã được gửi thành công tới các công cụ tìm kiếm!',
+        'sitemap_submission_failed' => 'Không thể gửi sitemap tới tất cả công cụ tìm kiếm.',
+        'sitemap_submission_partial' => 'Sitemap được gửi nhưng có một số lỗi.',
+        'submit_sitemap_error' => 'Gửi sitemap không thành công. Vui lòng thử lại.',
+        'indexnow_disabled' => 'IndexNow chưa được bật. Vui lòng bật trước.',
+        'indexnow_no_api_key' => 'Không tìm thấy khóa API. Vui lòng tạo khóa API trước.',
     ],
 ];

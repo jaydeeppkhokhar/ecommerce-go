@@ -47,7 +47,7 @@ class StripePaymentMethodForm extends PaymentMethodForm
                 'payment_' . STRIPE_PAYMENT_METHOD_NAME . '_payment_type',
                 SelectField::class,
                 SelectFieldOption::make()
-                    ->label(__('Payment Type'))
+                    ->label(trans('plugins/stripe::stripe.payment_type'))
                     ->choices([
                         'stripe_api_charge' => 'Stripe API Charge',
                         'stripe_checkout' => 'Stripe Checkout',

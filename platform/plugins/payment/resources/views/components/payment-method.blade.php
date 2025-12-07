@@ -57,13 +57,13 @@
             @endphp
 
             <div class="alert alert-warning mt-3">
-                {{ __(":name doesn't support :currency. List of currencies supported by :name: :currencies.", ['name' => $paymentName, 'currency' => get_application_currency()->title, 'currencies' => implode(', ', $supportedCurrencies)]) }}
+                {{ trans('plugins/payment::payment.currency_not_supported', ['name' => $paymentName, 'currency' => get_application_currency()->title, 'currencies' => implode(', ', $supportedCurrencies)]) }}
 
                 {{ $currencyNotSupportedMessage ?? '' }}
 
                 @if ($currencies->isNotEmpty())
                     <div>
-                        {{ __('Please switch currency to any supported currency') }}:&nbsp;&nbsp;
+                        {{ trans('plugins/payment::payment.please_switch_currency') }}:&nbsp;&nbsp;
                         @foreach ($currencies as $currency)
                             <a
                                 href="{{ route('public.change-currency', $currency->title) }}"

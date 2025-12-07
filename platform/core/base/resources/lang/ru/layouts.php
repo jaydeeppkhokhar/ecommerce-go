@@ -10,7 +10,7 @@ return [
     'setting_email' => 'Email',
     'system_information' => 'Системная информация',
     'theme' => 'Тема',
-    'copyright' => 'Copyright :year &copy; :company. Version: <span>:version</span>',
+    'copyright' => 'Авторские права :year © :company. Версия :version',
     'profile' => 'Профиль',
     'logout' => 'Выход из системы',
     'no_search_result' => 'Результатов не найдено, пожалуйста, попробуйте использовать другие ключевые слова.',

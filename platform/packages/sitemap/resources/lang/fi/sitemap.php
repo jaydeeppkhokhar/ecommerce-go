@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automaattinen luonti',
         'automatic_generation_desc' => 'Päivittyy automaattisesti, kun sisältö muuttuu',
         'automatic_update_note' => 'Sivukartta päivittyy automaattisesti aina, kun luot, muokkaat tai poistat sisältöä verkkosivustollasi.',
+        'submit_sitemap' => 'Lähetä sivukartta IndexNow-palveluun',
+        'submitting_sitemap' => 'Lähetetään...',
+        'sitemap_submitted_successfully' => 'Sivukartta lähetettiin onnistuneesti hakukoneille!',
+        'sitemap_submission_failed' => 'Sivukartan lähettäminen kaikille hakukoneille epäonnistui.',
+        'sitemap_submission_partial' => 'Sivukartta lähetettiin joillakin virheillä.',
+        'submit_sitemap_error' => 'Sivukartan lähetys epäonnistui. Yritä uudelleen.',
+        'indexnow_disabled' => 'IndexNow ei ole käytössä. Ota se ensin käyttöön.',
+        'indexnow_no_api_key' => 'API-avainta ei löytynyt. Luo ensin API-avain.',
     ],
 ];

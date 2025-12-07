@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktiveret',
         'locked' => 'Låst',
     ],
-    'email_verified' => 'E-mail verificeret?',
     'verify_email' => [
         'confirm_heading' => 'Bekræft e-mail verificering',
         'confirm_description' => 'Er du sikker på, at du vil verificere e-mailen for denne kunde?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'klik her',
         'confirm_button' => 'Verificer',
     ],
-    'email_already_verified' => 'E-mail er allerede verificeret.',
     'verification_email_sent' => 'Verificerings-e-mail er blevet sendt succesfuldt!',
     'resend_verification_email' => 'Send verificerings-e-mail igen',
     'resend_verification_email_confirmation' => 'Er du sikker på, at du vil sende verificerings-e-mailen igen til denne kunde?',

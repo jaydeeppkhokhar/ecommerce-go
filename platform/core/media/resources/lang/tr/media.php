@@ -43,6 +43,8 @@ return [
     'upload_progress' => 'Yükleme ilerlemesi',
     'alt_text' => 'Alternatif metin',
     'folder_created' => 'Klasör başarıyla oluşturuldu!',
+    'folder_exists' => 'Klasör :folder zaten mevcut!',
+    'directory_must_empty' => 'Dizin silinmek için boş olmalıdır!',
     'gallery' => 'Medya galerisi',
     'trash_error' => 'Seçili öğe(ler) silinirken hata oluştu',
     'trash_success' => 'Seçili öğe(ler) çöp kutusuna başarıyla taşındı!',
@@ -93,27 +95,22 @@ return [
         'visit_link' => 'Bağlantıyı aç',
         'no_item' => [
             'all_media' => [
-                'icon' => 'fas fa-cloud-upload-alt',
                 'title' => 'Dosyaları ve klasörleri buraya bırakın',
                 'message' => 'Veya yukarıdaki yükleme düğmesini kullanın',
             ],
             'trash' => [
-                'icon' => 'fas fa-trash-alt',
                 'title' => 'Şu anda çöp kutunuzda hiçbir şey yok',
                 'message' => 'Dosyaları otomatik olarak çöp kutusuna taşımak için silin. Dosyaları kalıcı olarak kaldırmak için çöp kutusundan silin',
             ],
             'favorites' => [
-                'icon' => 'fas fa-star',
                 'title' => 'Henüz favorilerinize hiçbir şey eklemediniz',
                 'message' => 'Daha sonra kolayca bulabilmek için dosyaları favorilere ekleyin',
             ],
             'recent' => [
-                'icon' => 'far fa-clock',
                 'title' => 'Henüz hiçbir şey açmadınız',
                 'message' => 'Açtığınız tüm son dosyalar burada görünecektir',
             ],
             'default' => [
-                'icon' => 'fas fa-sync',
                 'title' => 'Hiçbir öğe yok',
                 'message' => 'Bu dizinde hiçbir öğe yok',
             ],

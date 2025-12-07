@@ -12,4 +12,7 @@ return [
     'parent' => 'Szülő kategória',
     'order' => 'Sorrend',
     'is_default' => 'Alapértelmezett',
+    'intro' => [
+        'description' => 'Rendezze blogbejegyzéseit kategóriákba a jobb tartalomkezelés érdekében.',
+    ],
 ];

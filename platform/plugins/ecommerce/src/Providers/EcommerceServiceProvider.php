@@ -372,8 +372,6 @@ class EcommerceServiceProvider extends ServiceProvider
         $loader->alias('ProductCategoryHelper', ProductCategoryHelper::class);
         $loader->alias('CurrencyHelper', CurrencyFacade::class);
         $loader->alias('InvoiceHelper', InvoiceHelper::class);
-
-        $this->loadJsonTranslationsFrom($this->getPath() . '/resources/lang');
     }
 
     public function boot(): void

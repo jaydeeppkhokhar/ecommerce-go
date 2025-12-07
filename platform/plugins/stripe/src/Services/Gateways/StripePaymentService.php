@@ -169,6 +169,9 @@ class StripePaymentService extends StripePaymentAbstract
 
     public function afterMakePayment(string $chargeId, array $data): string
     {
+        $paymentStatus = PaymentStatusEnum::FAILED;
+        $actualChargedAmount = $data['amount'];
+
         try {
             do_action('payment_before_making_api_request', STRIPE_PAYMENT_METHOD_NAME, ['id' => $chargeId]);
 
@@ -178,15 +181,20 @@ class StripePaymentService extends StripePaymentAbstract
 
             if ($payment && ($payment->paid || $payment->status == 'succeeded')) {
                 $paymentStatus = PaymentStatusEnum::COMPLETED;
-            } else {
-                $paymentStatus = PaymentStatusEnum::FAILED;
+
+                $multiplier = StripeHelper::getStripeCurrencyMultiplier($this->currency);
+                $actualChargedAmount = $payment->amount;
+
+                if ($multiplier > 1) {
+                    $actualChargedAmount = $actualChargedAmount / $multiplier;
+                }
             }
         } catch (Exception) {
             $paymentStatus = PaymentStatusEnum::FAILED;
         }
 
         do_action(PAYMENT_ACTION_PAYMENT_PROCESSED, [
-            'amount' => $data['amount'],
+            'amount' => $actualChargedAmount,
             'currency' => $data['currency'],
             'charge_id' => $chargeId,
             'order_id' => (array) $data['order_id'],

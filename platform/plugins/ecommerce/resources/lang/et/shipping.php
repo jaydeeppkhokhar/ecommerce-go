@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Skannige QR-koodi, et jälgida oma saadetist',
     ],
     'customer_confirmed_delivery_at' => 'Klient kinnitas tarne',
+    'no_shipping_methods_available' => 'Tarnemeetodeid pole saadaval!',
 ];

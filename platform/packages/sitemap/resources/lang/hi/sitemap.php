@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'स्वचालित उत्पादन',
         'automatic_generation_desc' => 'सामग्री बदलने पर स्वचालित रूप से अपडेट होता है',
         'automatic_update_note' => 'जब भी आप अपनी वेबसाइट पर सामग्री बनाते, संपादित या हटाते हैं तो साइटमैप स्वचालित रूप से अपडेट होता है।',
+        'submit_sitemap' => 'IndexNow पर साइटमैप सबमिट करें',
+        'submitting_sitemap' => 'सबमिट किया जा रहा है...',
+        'sitemap_submitted_successfully' => 'साइटमैप सफलतापूर्वक सर्च इंजनों को भेजा गया!',
+        'sitemap_submission_failed' => 'सभी सर्च इंजनों को साइटमैप भेजने में विफल।',
+        'sitemap_submission_partial' => 'साइटमैप कुछ त्रुटियों के साथ भेजा गया.',
+        'submit_sitemap_error' => 'साइटमैप सबमिट करने में विफल. कृपया फिर से प्रयास करें.',
+        'indexnow_disabled' => 'IndexNow सक्षम नहीं है. कृपया पहले इसे सक्षम करें.',
+        'indexnow_no_api_key' => 'कोई API कुंजी नहीं मिली. कृपया पहले एक API कुंजी उत्पन्न करें.',
     ],
 ];

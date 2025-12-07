@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Adicione um controle deslizante simples',
     'select_slider' => 'Selecione um controle deslizante',
     'shortcode' => 'Código curto',
+    'tablet_image' => 'Imagem do tablet',
+    'tablet_image_helper' => 'Para dispositivos com largura de 768px a 1200px, se vazio, utilizará a imagem do desktop.',
+    'mobile_image' => 'Imagem móvel',
+    'mobile_image_helper' => 'Para dispositivos com largura menor que 768px, se vazio, utilizará a imagem do tablet.',
 ];

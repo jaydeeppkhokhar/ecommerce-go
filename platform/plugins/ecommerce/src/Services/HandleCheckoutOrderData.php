@@ -53,18 +53,23 @@ class HandleCheckoutOrderData
                 $couponDiscountAmount,
             ] = apply_filters(PROCESS_CHECKOUT_ORDER_DATA_ECOMMERCE, $products, $token, $sessionCheckoutData, $request);
 
-            foreach ($sessionCheckoutData['marketplace'] as $storeData) {
+            foreach (Arr::get($sessionCheckoutData, 'marketplace', []) as $storeData) {
                 if (! empty($storeData['created_order_id'])) {
                     $order = Order::query()
                         ->where('id', $storeData['created_order_id'])
                         ->first();
 
-                    if (
-                        $order
-                        && isset($storeData['shipping_amount'])
-                        && $order->shipping_amount != $storeData['shipping_amount']
-                    ) {
-                        $order->update(['shipping_amount' => $storeData['shipping_amount']]);
+                    if ($order && isset($storeData['shipping_amount'])) {
+                        $shippingAmount = $storeData['shipping_amount'];
+                        $newAmount = max($order->sub_total - $order->discount_amount + $order->tax_amount + $shippingAmount + ($order->payment_fee ?? 0), 0);
+
+                        if ($order->shipping_amount != $shippingAmount || $order->amount != $newAmount) {
+                            $order->update([
+                                'shipping_amount' => $shippingAmount,
+                                'shipping_option' => Arr::get($storeData, 'shipping_option'),
+                                'amount' => $newAmount,
+                            ]);
+                        }
                     }
                 }
             }
@@ -136,7 +141,11 @@ class HandleCheckoutOrderData
                             $defaultShippingOption
                         );
 
-                        if (isset($shipping[$defaultShippingMethod][$defaultShippingOptionFromSession])) {
+                        if (
+                            (is_string($defaultShippingOptionFromSession) || is_int($defaultShippingOptionFromSession))
+                            && is_string($defaultShippingMethod)
+                            && isset($shipping[$defaultShippingMethod][$defaultShippingOptionFromSession])
+                        ) {
                             $defaultShippingOption = $defaultShippingOptionFromSession;
                         }
                     }
@@ -157,8 +166,16 @@ class HandleCheckoutOrderData
                         ->where('id', $sessionCheckoutData['created_order_id'])
                         ->first();
 
-                    if ($order && $order->shipping_amount != $shippingAmount) {
-                        $order->update(['shipping_amount' => $shippingAmount]);
+                    if ($order) {
+                        $newAmount = max($order->sub_total - $order->discount_amount + $order->tax_amount + $shippingAmount + ($order->payment_fee ?? 0), 0);
+
+                        if ($order->shipping_amount != $shippingAmount || $order->amount != $newAmount) {
+                            $order->update([
+                                'shipping_amount' => $shippingAmount,
+                                'shipping_option' => $defaultShippingOption,
+                                'amount' => $newAmount,
+                            ]);
+                        }
                     }
                 }
 
@@ -192,14 +209,12 @@ class HandleCheckoutOrderData
         $orderAmount = max($rawTotal - $promotionDiscountAmount - $couponDiscountAmount, 0);
         $orderAmount += (float) $shippingAmount;
 
-        // Add payment fee if applicable
         $paymentFee = 0;
         if ($paymentMethod && is_plugin_active('payment')) {
             $paymentFee = PaymentFeeHelper::calculateFee($paymentMethod, $orderAmount);
             $orderAmount += $paymentFee;
         }
 
-        // Store payment fee in session
         Arr::set($sessionCheckoutData, 'payment_fee', $paymentFee);
 
         return new CheckoutOrderData(

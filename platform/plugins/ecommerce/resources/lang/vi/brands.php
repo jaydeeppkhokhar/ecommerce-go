@@ -12,10 +12,10 @@ return [
         'description_placeholder' => 'Mô tả ngắn gọn về thương hiệu (Tối đa 400 ký tự)',
         'website' => 'Trang web',
         'website_placeholder' => 'Ví dụ: https://example.com',
-        'logo' => 'Logo',
+        'logo' => 'Biểu trưng',
         'is_featured' => 'Nổi bật',
     ],
-    'logo' => 'Logo',
+    'logo' => 'Biểu trưng',
     'website' => 'Trang web',
     'notices' => [
         'no_select' => 'Vui lòng chọn ít nhất một bản ghi để thực hiện hành động này!',

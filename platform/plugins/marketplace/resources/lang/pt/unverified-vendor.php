@@ -18,12 +18,12 @@ return [
     'approve' => 'Aprovar',
     'reject' => 'Rejeitar',
     'approve_vendor_confirmation' => 'Aprovar confirmação do fornecedor',
-    'approve_vendor_confirmation_description' => 'Are you sure you really want to approve :vendor for selling on this site?',
+    'approve_vendor_confirmation_description' => 'Tem certeza de que realmente deseja aprovar :vendor para vender neste site?',
     'reject_vendor_confirmation' => 'Rejeitar confirmação do fornecedor',
-    'reject_vendor_confirmation_description' => 'Are you sure you really want to reject :vendor for selling on this site?',
+    'reject_vendor_confirmation_description' => 'Tem certeza de que realmente deseja rejeitar :vendor para vender neste site?',
     'new_vendor_notifications' => [
         'new_vendor' => 'Novo fornecedor',
         'view' => 'Visualizar',
-        'description' => ':customer has registered but not verified.',
+        'description' => ':customer foi registrado mas não verificado.',
     ],
 ];

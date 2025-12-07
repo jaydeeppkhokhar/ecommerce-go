@@ -35,8 +35,8 @@ return [
                 'select' => '-- اختر --',
                 'none' => 'لا شيء',
                 'provider' => [
-                    'api_layer' => 'API Layer',
-                    'open_exchange_rate' => 'Open Exchange Rates',
+                    'api_layer' => 'طبقة API (API Layer)',
+                    'open_exchange_rate' => 'أسعار الصرف المفتوحة (Open Exchange Rates)',
                 ],
                 'open_exchange_app_id' => 'معرف تطبيق Open Exchange Rates',
             ],
@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'السماح للعملاء برفع إثبات الدفع لطلباتهم. مفيد لطرق الدفع اليدوية.',
             'enable_guest_payment_proof' => 'السماح للعملاء الضيوف برفع إثبات الدفع',
             'enable_guest_payment_proof_helper' => 'عند التمكين، يمكن للعملاء الضيوف رفع إثبات الدفع باستخدام رمز طلبهم دون تسجيل الدخول. سيتلقون رابط الرفع في بريد تأكيد الطلب الإلكتروني.',
+            'payment_proof_payment_methods' => 'طرق الدفع التي تتطلب إثبات الدفع',
+            'payment_proof_payment_methods_helper' => 'حدد طرق الدفع التي يجب أن تسمح للعملاء بتحميل إثبات الدفع. يستخدم عادةً لطرق الدفع اليدوية مثل الدفع عند الاستلام والتحويل البنكي.',
         ],
     ],
     'checkout' => [
@@ -442,6 +444,8 @@ return [
             'facebook_pixel_debug_mode_helper' => 'تمكين وضع التصحيح لتسجيل أحداث Facebook Pixel في وحدة تحكم المتصفح واستكشاف مشاكل التتبع',
             'enable_google_tag_manager_tracking_events' => 'تمكين أحداث تتبع Google Tag Manager',
             'google_tag_manager_tracking_info' => 'عند التمكين، ستُتتبع أحداث التجارة الإلكترونية من خلال Google Tag Manager. تأكد من تكوين Google Tag Manager أعلاه.',
+            'google_ads_conversion_id' => 'معرف تحويل إعلانات Google',
+            'google_ads_conversion_id_helper' => 'أدخل معرف تحويل إعلانات Google (التنسيق: AW-123456789/AbC-D_efG-h1_ijk-lmN) لتتبع تحويلات الشراء في صفحة الشكر.',
         ],
         'validation' => [
             'facebook_pixel_id_format' => 'يجب أن يكون معرف Facebook Pixel 15-16 رقم (مثل 1234567890123456)',
@@ -485,7 +489,14 @@ return [
         'show_sale_count_left_description' => 'عرض شريط تقدم مع "X بيع من Y" لخلق إلحاح وتشجيع الشراء السريع أثناء التخفيضات السريعة.',
     ],
     'payment_method_cod_minimum_amount' => 'الحد الأدنى لمبلغ الطلب - :currency (اختياري)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'الحد الأدنى لمبلغ الطلب - :currency (اختياري)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'عرض معلومات البنك في صفحة نجاح الدفع؟',
     'invoice_templates' => 'قوالب الفواتير',
 ];

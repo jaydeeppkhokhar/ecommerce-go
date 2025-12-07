@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Löschen Sie alte Anfrageprotokolle',
     'clear_old_data_helper' => 'Löschen Sie automatisch alte Anforderungsprotokolle, die älter als der ausgewählte Zeitraum sind, um Ihre Datenbank sauber und optimiert zu halten.',
     'cronjob_warning' => 'Um diese Funktion zu verwenden, müssen Sie einen Cron -Job einrichten, indem Sie diesen Link folgen: <a href = ": link" target = "_ leer">: link </a>.',
+    'no_results_found' => 'Keine Ergebnisse gefunden',
+    'no_request_errors_message' => 'Es sieht so aus, als gäbe es hier keine Anfragefehler.',
 ];

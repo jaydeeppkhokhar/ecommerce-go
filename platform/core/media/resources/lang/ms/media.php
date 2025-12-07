@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Teks alt',
 
     'folder_created' => 'Folder berjaya dicipta!',
+    'folder_exists' => 'Folder :folder sudah wujud!',
+    'directory_must_empty' => 'Direktori mesti kosong untuk dipadamkan!',
     'gallery' => 'Galeri media',
 
     'trash_error' => 'Ralat semasa memadam item yang dipilih',

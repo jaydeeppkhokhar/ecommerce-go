@@ -3,7 +3,7 @@
     <div class="checkout__coupon-section d-none d-md-block">
         <div class="checkout__coupon-heading">
             <img width="32" height="32" src="{{ asset('vendor/core/plugins/ecommerce/images/coupon-code.gif') }}" alt="coupon code icon">
-            {{ __('Coupon codes (:count)', ['count' => $discounts->count()]) }}
+            {{ trans('plugins/ecommerce::discount.coupon_codes_count', ['count' => $discounts->count()]) }}
         </div>
 
         <div class="checkout__coupon-list">
@@ -22,7 +22,7 @@
 
                             @if($discount->quantity > 0)
                                 <span class="checkout__coupon-item-count">
-                                    ({{ __('Left :left', ['left' => $discount->left_quantity]) }})
+                                    ({{ trans('plugins/ecommerce::discount.left_quantity', ['left' => $discount->left_quantity]) }})
                                 </span>
                             @endif
                         </div>
@@ -33,11 +33,11 @@
                             <span>{{ $discount->code }}</span>
                             @if (!session()->has('applied_coupon_code') || session()->get('applied_coupon_code') !== $discount->code)
                                 <button type="button" data-bb-toggle="apply-coupon-code" data-discount-code="{{ $discount->code }}">
-                                    {{ __('Apply') }}
+                                    {{ trans('plugins/ecommerce::discount.apply') }}
                                 </button>
                             @else
                                 <button type="button" class="remove-coupon-code" data-url="{{ route('public.coupon.remove') }}">
-                                    {{ __('Remove') }}
+                                    {{ trans('plugins/ecommerce::discount.remove') }}
                                 </button>
                             @endif
                         </div>
@@ -57,7 +57,7 @@
         >
             <div class="d-flex align-items-center gap-2">
                 <img width="24" height="24" src="{{ asset('vendor/core/plugins/ecommerce/images/coupon-code.gif') }}" alt="coupon code icon">
-                <span class="text-dark fw-medium">{{ __('Select Coupon') }}</span>
+                <span class="text-dark fw-medium">{{ trans('plugins/ecommerce::discount.select_coupon') }}</span>
                 <span class="badge bg-primary">{{ $discounts->count() }}</span>
             </div>
             <x-core::icon name="ti ti-chevron-right" class="text-muted" />
@@ -71,7 +71,7 @@
     @if (session()->has('applied_coupon_code')) style="display: none;" @endif
 >
     <a class="btn-open-coupon-form" href="#">
-        {{ __('You have a coupon code?') }}
+        {{ trans('plugins/ecommerce::discount.you_have_coupon_code') }}
     </a>
 </div>
 <div
@@ -93,9 +93,9 @@
                 <div class="modal-header border-0 pb-0">
                     <h5 class="modal-title" id="mobile-coupon-modal-label">
                         <img width="24" height="24" src="{{ asset('vendor/core/plugins/ecommerce/images/coupon-code.gif') }}" alt="coupon code icon" class="me-2">
-                        {{ __('Select Coupon') }}
+                        {{ trans('plugins/ecommerce::discount.select_coupon') }}
                     </h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ __('Close') }}"></button>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="{{ trans('plugins/ecommerce::discount.close') }}"></button>
                 </div>
                 <div class="modal-body pt-2">
                     <div class="mobile-coupon-list">
@@ -131,12 +131,12 @@
                                                     {{ $discount->type_option == 'percentage' ? $discount->value . '%' : format_price($discount->value) }}
                                                 </h6>
                                             @else
-                                                <h6 class="mb-0 fw-bold">{{ __('Free Shipping') }}</h6>
+                                                <h6 class="mb-0 fw-bold">{{ trans('plugins/ecommerce::discount.free_shipping') }}</h6>
                                             @endif
 
                                             @if($discount->quantity > 0)
                                                 <small>
-                                                    ({{ __('Left :left', ['left' => $discount->left_quantity]) }})
+                                                    ({{ trans('plugins/ecommerce::discount.left_quantity', ['left' => $discount->left_quantity]) }})
                                                 </small>
                                             @endif
                                         </div>
@@ -151,11 +151,11 @@
                                             <span class="badge">{{ $discount->code }}</span>
                                             @if (!session()->has('applied_coupon_code') || session()->get('applied_coupon_code') !== $discount->code)
                                                 <button type="button" class="btn" data-bb-toggle="apply-coupon-code" data-discount-code="{{ $discount->code }}">
-                                                    {{ __('Apply') }}
+                                                    {{ trans('plugins/ecommerce::discount.apply') }}
                                                 </button>
                                             @else
                                                 <button type="button" class="btn remove-coupon-code" data-url="{{ route('public.coupon.remove') }}">
-                                                    {{ __('Remove') }}
+                                                    {{ trans('plugins/ecommerce::discount.remove') }}
                                                 </button>
                                             @endif
                                         </div>
@@ -167,7 +167,7 @@
                 </div>
                 <div class="modal-footer border-0 pt-0">
                     <button type="button" class="btn btn-outline-secondary w-100" data-bs-dismiss="modal">
-                        {{ __('Close') }}
+                        {{ trans('plugins/ecommerce::discount.close') }}
                     </button>
                 </div>
             </div>

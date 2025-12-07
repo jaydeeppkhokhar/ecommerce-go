@@ -12,7 +12,7 @@
             @if (EcommerceHelper::isReviewEnabled() && (!EcommerceHelper::hideRatingWhenNoReviews() || $store->reviews->count() > 0))
                 <div class="bb-shop-banner-rating">
                     @include(EcommerceHelper::viewPath('includes.rating-star'), ['avg' => $store->reviews()->avg('star'), 'size' => 80])
-                    <small>{{ __('(:count reviews)', ['count' => number_format($store->reviews->count())]) }}</small>
+                    <small>{{ trans('plugins/ecommerce::review.count_reviews', ['count' => number_format($store->reviews->count())]) }}</small>
                 </div>
             @endif
 

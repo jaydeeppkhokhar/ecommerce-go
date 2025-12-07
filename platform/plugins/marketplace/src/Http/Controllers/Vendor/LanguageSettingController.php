@@ -11,7 +11,7 @@ class LanguageSettingController extends BaseController
 {
     public function index()
     {
-        $this->pageTitle(__('Settings'));
+        $this->pageTitle(trans('plugins/marketplace::marketplace.settings.title'));
 
         /**
          * @var Customer $customer

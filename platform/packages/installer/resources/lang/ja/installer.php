@@ -3,9 +3,6 @@
 return [
     'title' => 'インストール',
     'next' => '次のステップ',
-    'back' => '前の',
-    'finish' => 'インストール',
-    'installation' => 'インストール',
     'forms' => [
         'errorTitle' => '次のエラーが発生しました:',
     ],
@@ -17,7 +14,7 @@ return [
     ],
     'requirements' => [
         'title' => 'サーバー要件',
-        'next' => '権限を確認する',
+        'php_version_required' => 'PHPバージョン:versionが必要です',
     ],
     'permissions' => [
         'next' => '環境の構成',
@@ -28,17 +25,11 @@ return [
             'form' => [
                 'name_required' => '環境名は必須です。',
                 'app_name_label' => 'サイトタイトル',
-                'app_name_placeholder' => 'サイトタイトル',
                 'app_url_label' => 'URL',
-                'app_url_placeholder' => 'URL',
                 'db_connection_label' => 'データベース接続',
                 'db_connection_label_mysql' => 'MySQL',
-                'db_connection_label_sqlite' => 'SQLite',
-                'db_connection_label_pgsql' => 'PostgreSQL',
                 'db_host_label' => 'データベースホスト',
-                'db_host_placeholder' => 'データベースホスト',
                 'db_port_label' => 'データベースポート',
-                'db_port_placeholder' => 'データベースポート',
                 'db_name_label' => 'データベース名',
                 'db_name_placeholder' => 'データベース名',
                 'db_username_label' => 'データベースのユーザー名',
@@ -79,13 +70,11 @@ return [
         'title' => 'ライセンスのアクティベーション',
         'skip' => '今のところスキップしてください',
     ],
-    'install' => 'インストール',
     'final' => [
         'pageTitle' => 'インストールが完了しました',
         'title' => '終わり',
         'message' => 'アプリケーションは正常にインストールされました。',
         'exit' => '管理者ダッシュボードに移動',
     ],
-    'install_success' => '無事にインストールされました！',
     'install_step_title' => 'Installation - Step :step: :title',
 ];

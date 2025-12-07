@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'ไม่สามารถใช้คูปองนี้ได้เนื่องจากตะกร้าของคุณมีสินค้า Flash Sale (:product_name) ราคา Flash Sale ไม่สามารถรวมกับส่วนลดคูปองได้',
     'coupon_applied_successfully' => 'ยอดเยี่ยม! รหัสคูปอง ":code" ได้ถูกใช้แล้ว คุณประหยัดเงินในคำสั่งซื้อนี้!',
     'coupon_removed_successfully' => 'รหัสคูปองได้ถูกลบออกจากคำสั่งซื้อของคุณแล้ว',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'รหัสคูปอง (:count)',
+    'left_quantity' => 'เหลือ :left',
+    'apply' => 'ใช้',
+    'remove' => 'ลบ',
+    'select_coupon' => 'เลือกคูปอง',
+    'you_have_coupon_code' => 'คุณมีรหัสคูปองหรือไม่?',
+    'close' => 'ปิด',
+    'coupon_code_label' => 'รหัสคูปอง: :code',
+    'enter_coupon_code_placeholder' => 'ป้อนรหัสคูปอง...',
 ];

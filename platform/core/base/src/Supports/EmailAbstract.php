@@ -22,15 +22,13 @@ class EmailAbstract extends Mailable
 
     public function __construct(?string $content, ?string $subject, array $data = [])
     {
-        $this->content = $content;
+        $this->content = $content ?? '';
         $this->subject = $subject;
         $this->data = $data;
     }
 
     public function build(): EmailAbstract
     {
-        $inlineCss = new CssToInlineStyles();
-
         $fromAddress = setting('email_from_address', config('mail.from.address'));
 
         $fromName = setting('email_from_name', config('mail.from.name'));
@@ -44,10 +42,17 @@ class EmailAbstract extends Mailable
             }
         }
 
+        $content = trim($this->content);
+
+        if ($content !== '') {
+            $inlineCss = new CssToInlineStyles();
+            $content = $inlineCss->convert($content, EmailHandler::getCssContent());
+        }
+
         $email = $this
             ->from($fromAddress, $fromName)
             ->subject($this->subject)
-            ->html($inlineCss->convert($this->content, EmailHandler::getCssContent()));
+            ->html($content);
 
         $attachments = Arr::get($this->data, 'attachments');
         if (! empty($attachments)) {

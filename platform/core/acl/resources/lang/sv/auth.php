@@ -66,6 +66,7 @@ return [
     'languages' => 'Språk',
     'reset_password' => 'Återställ lösenord',
     'deactivated_message' => 'Ditt konto har inaktiverats. Vänligen kontakta administratören.',
+    'password_changed_message' => 'Ditt lösenord har ändrats. Logga in igen med ditt nya lösenord.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

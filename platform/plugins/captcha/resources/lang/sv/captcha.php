@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Administratörsinloggningsformulär',
     'admin_forgot_password_form' => 'Administratör glömt lösenord-formulär',
     'admin_reset_password_form' => 'Administratör återställ lösenord-formulär',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Math Captcha',
+    'math_question' => 'Lös följande matematiska funktion: :label = ?',
+    'captcha_verification_failed' => 'Captcha-verifiering misslyckades!',
+    'math_captcha_verification_failed' => 'Math Captcha-verifiering misslyckades!',
 ];

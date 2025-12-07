@@ -31,10 +31,10 @@
     </div>
 
     <div class="bb-quick-search-view-all">
-        <a href="#" onclick="event.preventDefault(); this.closest('.bb-form-quick-search').submit();">{{ __('View all results') }}</a>
+        <a href="#" onclick="event.preventDefault(); this.closest('.bb-form-quick-search').submit();">{{ trans('plugins/ecommerce::ecommerce.view_all_results') }}</a>
     </div>
 @else
     <div class="bb-quick-search-empty">
-        {{ __('No results found!') }}
+        {{ trans('plugins/ecommerce::ecommerce.no_results_found') }}
     </div>
 @endif

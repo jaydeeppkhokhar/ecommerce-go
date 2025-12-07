@@ -10,7 +10,7 @@ return [
     'setting_email' => 'بريد إلكتروني',
     'system_information' => 'معلومات النظام',
     'theme' => 'سمة',
-    'copyright' => 'Copyright :year &copy; :company. Version: <span>:version</span>',
+    'copyright' => 'حقوق النشر :year © :company. الإصدار :version',
     'profile' => 'حساب تعريفي',
     'logout' => 'تسجيل خروج',
     'no_search_result' => 'لم يتم العثور على نتائج، يرجى المحاولة باستخدام كلمات رئيسية مختلفة.',
@@ -18,8 +18,7 @@ return [
     'search' => 'يبحث',
     'add_new' => 'اضف جديد',
     'n_a' => 'لا يوجد',
-    'page_loaded_in_time' => 'Page loaded in :time seconds',
+    'page_loaded_in_time' => 'تم تحميل الصفحة في :time ثانية',
     'view_website' => 'عرض الموقع',
     'tools' => 'أدوات',
-    'page_loaded_time' => 'Page loaded in',
 ];

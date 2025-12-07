@@ -17,6 +17,7 @@ return [
     'compatible_version' => '与您的版本兼容',
     'incompatible_version' => '与您的版本不兼容',
     'install_now' => '立即安装',
+    'buy_now' => '立即购买',
     'remove' => '移除',
     'detail' => '细节',
     'activate' => '激活',

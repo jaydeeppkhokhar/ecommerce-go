@@ -11,7 +11,7 @@
                 __('Bank transfer amount: <strong>:amount</strong>', ['amount' => format_price($orderAmount)]),
             ) !!}</p>
             <p class="bank-transfer-info__description">{!! BaseHelper::clean(
-                __('Bank transfer description: <strong>Payment for order :code</strong>', ['code' => str_replace('#', '', $orderCode)]),
+                __('Bank transfer description: <strong>Payment for order :code</strong>', ['code' => $orderCode]),
             ) !!}</p>
         </div>
     </div>

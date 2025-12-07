@@ -48,4 +48,9 @@ return [
     'admin_login_form' => '管理者ログインフォーム',
     'admin_forgot_password_form' => '管理者パスワード忘れフォーム',
     'admin_reset_password_form' => '管理者パスワードリセットフォーム',
+    'captcha' => 'キャプチャ',
+    'math_captcha' => '数学キャプチャ',
+    'math_question' => '次の数学関数を解いてください: :label = ?',
+    'captcha_verification_failed' => 'キャプチャの検証に失敗しました!',
+    'math_captcha_verification_failed' => '数学キャプチャの検証に失敗しました!',
 ];

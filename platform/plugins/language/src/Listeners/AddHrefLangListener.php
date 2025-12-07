@@ -49,7 +49,7 @@ class AddHrefLangListener
         }
     }
 
-    protected function generateHreflangUrls(?string $referenceType, ?int $referenceId): array
+    protected function generateHreflangUrls(?string $referenceType, int|string|null $referenceId): array
     {
         $hreflangUrls = [];
         $currentAppLocale = app()->getLocale();
@@ -86,7 +86,7 @@ class AddHrefLangListener
         return $hreflangUrls;
     }
 
-    protected function getTranslatedUrl(?string $referenceType, ?int $referenceId, string $langCode, string $localeCode): ?string
+    protected function getTranslatedUrl(?string $referenceType, int|string|null $referenceId, string $langCode, string $localeCode): ?string
     {
         if (! $referenceType || ! $referenceId) {
             return null;
@@ -106,7 +106,7 @@ class AddHrefLangListener
         return $this->getStandardTranslatedUrl($referenceType, $referenceId, $langCode, $localeCode, $defaultLocale);
     }
 
-    protected function getAdvancedTranslatedUrl(string $referenceType, int $referenceId, string $langCode, string $localeCode, string $defaultLocale): ?string
+    protected function getAdvancedTranslatedUrl(string $referenceType, int|string $referenceId, string $langCode, string $localeCode, string $defaultLocale): ?string
     {
         $slug = Slug::query()
             ->where('reference_id', $referenceId)
@@ -134,7 +134,7 @@ class AddHrefLangListener
         return null;
     }
 
-    protected function getStandardTranslatedUrl(string $referenceType, int $referenceId, string $langCode, string $localeCode, string $defaultLocale): ?string
+    protected function getStandardTranslatedUrl(string $referenceType, int|string $referenceId, string $langCode, string $localeCode, string $defaultLocale): ?string
     {
         $languageMeta = LanguageMeta::query()
             ->where('language_meta.lang_meta_code', $langCode)

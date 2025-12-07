@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'სკანირეთ QR კოდი თქვენი გზავნილის თვალყურის დევნისთვის',
     ],
     'customer_confirmed_delivery_at' => 'მომხმარებელმა დაადასტურა მიწოდება',
+    'no_shipping_methods_available' => 'მიწოდების მეთოდები მიუწვდომელია!',
 ];

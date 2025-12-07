@@ -5,7 +5,7 @@ return [
     'blog_page' => 'Blog -Seite',
     'select' => '-- Wählen --',
     'blog_page_id' => 'Blog -Seite',
-    'number_posts_per_page' => 'Number posts per page',
+    'number_posts_per_page' => 'Anzahl der Beiträge pro Seite',
     'write_some_tags' => 'Schreiben Sie einige Tags',
     'short_code_name' => 'Blog -Beiträge',
     'short_code_description' => 'Fügen Sie Blog -Beiträge hinzu',

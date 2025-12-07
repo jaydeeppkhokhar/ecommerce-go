@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Järjestä valikkokohteet uudelleen vetämällä ja pudottamalla niitä järjestyksen muuttamiseksi tai upottaaksesi ne alivalikoiksi.',
     'widget_custom_menu' => 'Mukautettu valikko',
     'widget_custom_menu_description' => 'Lisää mukautettu valikko widgetin alueellesi.',
+    'select_menu' => 'Valitse valikko',
 ];

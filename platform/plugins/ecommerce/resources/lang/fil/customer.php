@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktibo',
         'locked' => 'Naka-lock',
     ],
-    'email_verified' => 'Na-verify ang email?',
     'verify_email' => [
         'confirm_heading' => 'Pagkumpirma ng pag-verify ng email',
         'confirm_description' => 'Sigurado ka bang gusto mong i-verify ang email ng customer na ito?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'mag-click dito',
         'confirm_button' => 'I-verify',
     ],
-    'email_already_verified' => 'Na-verify na ang email.',
     'verification_email_sent' => 'Matagumpay na naipadala ang verification email!',
     'resend_verification_email' => 'Ipadala muli ang verification email',
     'resend_verification_email_confirmation' => 'Sigurado ka bang gusto mong ipadala muli ang verification email sa customer na ito?',

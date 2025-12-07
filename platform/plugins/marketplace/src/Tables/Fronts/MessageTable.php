@@ -9,12 +9,12 @@ use Botble\Table\Actions\Action;
 use Botble\Table\Actions\DeleteAction;
 use Botble\Table\Actions\ViewAction;
 use Botble\Table\BulkActions\DeleteBulkAction;
-use Botble\Table\Columns\Column;
-use Botble\Table\Columns\DateTimeColumn;
+use Botble\Table\Columns\CreatedAtColumn;
 use Botble\Table\Columns\EmailColumn;
 use Botble\Table\Columns\FormattedColumn;
 use Botble\Table\Columns\IdColumn;
-use Illuminate\Http\JsonResponse;
+use Botble\Table\Columns\NameColumn;
+use Illuminate\Database\Eloquent\Builder;
 
 class MessageTable extends TableAbstract
 {
@@ -26,10 +26,10 @@ class MessageTable extends TableAbstract
             ->model(Message::class)
             ->addColumns([
                 IdColumn::make(),
-                Column::make('name'),
+                NameColumn::make()->route('marketplace.vendor.messages.show'),
                 EmailColumn::make()->linkable(),
-                FormattedColumn::make('content')->limit(50),
-                DateTimeColumn::make('created_at'),
+                FormattedColumn::make('content')->limit(50)->label(trans('plugins/marketplace::store.forms.content')),
+                CreatedAtColumn::make(),
             ])
             ->addActions([
                 ViewAction::make()
@@ -38,12 +38,8 @@ class MessageTable extends TableAbstract
                     ->url(fn (Action $action) => route('marketplace.vendor.messages.destroy', $action->getItem())),
             ])
             ->addBulkAction(DeleteBulkAction::make())
-            ->onAjax(function (): JsonResponse {
-                return $this->toJson(
-                    $this
-                        ->table
-                        ->eloquent($this->query()->where('store_id', auth('customer')->user()->store?->id))
-                );
+            ->queryUsing(function (Builder $query) {
+                return $query->where('store_id', auth('customer')->user()->store?->id);
             });
     }
 }

@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Tip naknade za obradu (Opcionalno)',
     'fee_type_helper' => 'Odaberite kako treba izračunati naknadu za plaćanje: kao fiksni iznos ili procenat ukupne porudžbine. Ako odaberete fiksni iznos, biće zasnovan na podrazumevanoj valuti (:currency).',
+    'payment_created' => 'Kreirali ste uplatu #:charge_id preko :channel :time : :amount',
+    'processing_please_wait' => 'Obrada. Molimo sačekajte...',
+    'error' => 'Greška',
+    'checkout' => 'Kasa',
+    'show_full_json' => 'Prikaži potpuni JSON',
+    'full_log_data' => 'Potpuni podaci dnevnika',
+    'currency_not_supported' => ':name ne podržava :currency. Lista valuta koje podržava :name: :currencies.',
+    'please_switch_currency' => 'Molimo prebacite se na bilo koju podržanu valutu',
+    'payment_with' => 'Plaćanje sa :paymentType',
 ];

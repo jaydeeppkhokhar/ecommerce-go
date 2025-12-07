@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktif',
         'locked' => 'Kilitli',
     ],
-    'email_verified' => 'E-posta doğrulandı mı?',
     'verify_email' => [
         'confirm_heading' => 'E-posta doğrulama onayı',
         'confirm_description' => 'Bu müşterinin e-postasını doğrulamak istediğinizden emin misiniz?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'buraya tıklayın',
         'confirm_button' => 'Doğrula',
     ],
-    'email_already_verified' => 'E-posta zaten doğrulanmış.',
     'verification_email_sent' => 'Doğrulama e-postası başarıyla gönderildi!',
     'resend_verification_email' => 'Doğrulama e-postasını yeniden gönder',
     'resend_verification_email_confirmation' => 'Bu müşteriye doğrulama e-postasını yeniden göndermek istediğinizden emin misiniz?',

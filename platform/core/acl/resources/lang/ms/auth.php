@@ -66,6 +66,7 @@ return [
     'languages' => 'Bahasa',
     'reset_password' => 'Tetapkan Semula Kata Laluan',
     'deactivated_message' => 'Akaun anda telah dinyahaktifkan. Sila hubungi pentadbir.',
+    'password_changed_message' => 'Kata laluan anda telah ditukar. Sila log masuk semula dengan kata laluan baharu anda.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

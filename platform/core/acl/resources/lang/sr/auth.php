@@ -66,6 +66,7 @@ return [
     'languages' => 'Jezici',
     'reset_password' => 'Resetuj lozinku',
     'deactivated_message' => 'Vaš nalog je deaktiviran. Molimo kontaktirajte administratora.',
+    'password_changed_message' => 'Ваша лозинка је промењена. Молимо вас да се поново пријавите са новом лозинком.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

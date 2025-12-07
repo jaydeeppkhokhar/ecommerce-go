@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Neveljavna oblika ID stranke Google AdSense. Biti mora v formatu: ca-pub-XXXXXXXXXXXXXXXX (kjer je X števka).',
         ],
     ],
+    'banner' => 'Pasica',
+    'tablet_image' => 'Slika za tablico',
+    'tablet_image_helper' => 'Za naprave s širino od 768px do 1200px, če je prazno, bo uporabljena slika z namizja.',
+    'mobile_image' => 'Mobilna slika',
+    'mobile_image_helper' => 'Za naprave s širino manjšo od 768px, če je prazno, bo uporabljena slika s tablice.',
 ];

@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Tambah peluncur ringkas',
     'select_slider' => 'Pilih peluncur',
     'shortcode' => 'Kod pendek',
+    'tablet_image' => 'Imej tablet',
+    'tablet_image_helper' => 'Untuk peranti dengan lebar dari 768px hingga 1200px, jika kosong, akan menggunakan imej dari desktop.',
+    'mobile_image' => 'Imej mudah alih',
+    'mobile_image_helper' => 'Untuk peranti dengan lebar kurang daripada 768px, jika kosong, akan menggunakan imej dari tablet.',
 ];

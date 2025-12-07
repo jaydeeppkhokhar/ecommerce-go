@@ -33,7 +33,7 @@ class MessageTable extends TableAbstract
                 IdColumn::make(),
                 NameColumn::make()->route('marketplace.messages.show'),
                 EmailColumn::make()->linkable(),
-                FormattedColumn::make('content')->limit(50),
+                FormattedColumn::make('content')->limit(50)->label(trans('plugins/marketplace::store.forms.content')),
                 CreatedAtColumn::make(),
             ])
             ->addBulkActions([

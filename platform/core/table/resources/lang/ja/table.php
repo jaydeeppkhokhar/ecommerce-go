@@ -43,4 +43,5 @@ return [
     'copied' => 'コピーされました',
     'copy' => 'コピー',
     'clear' => 'クリア',
+    'something_went_wrong' => '何かが間違っていました。',
 ];

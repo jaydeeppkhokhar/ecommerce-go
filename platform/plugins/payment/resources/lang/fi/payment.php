@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Käsittelymaksun tyyppi (Valinnainen)',
     'fee_type_helper' => 'Valitse, miten maksumaksu lasketaan: kiinteänä summana tai prosentteina tilauksen kokonaissummasta. Jos valitset kiinteän summan, se perustuu oletusvaluuttaan (:currency).',
+    'payment_created' => 'Olet luonut maksun #:charge_id :channel kautta :time : :amount',
+    'processing_please_wait' => 'Käsitellään. Odota hetki...',
+    'error' => 'Virhe',
+    'checkout' => 'Kassa',
+    'show_full_json' => 'Näytä koko JSON',
+    'full_log_data' => 'Täydelliset lokitiedot',
+    'currency_not_supported' => ':name ei tue :currency-valuuttaa. Luettelo :name tuketuista valuutoista: :currencies.',
+    'please_switch_currency' => 'Vaihda johonkin tuetuista valuutoista',
+    'payment_with' => 'Maksu :paymentType-maksutavalla',
 ];

@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Administraatori sisselogimise vorm',
     'admin_forgot_password_form' => 'Administraatori unustatud parooli vorm',
     'admin_reset_password_form' => 'Administraatori parooli lähtestamise vorm',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matemaatika Captcha',
+    'math_question' => 'Palun lahendage järgmine matemaatiline funktsioon: :label = ?',
+    'captcha_verification_failed' => 'Captcha kinnitamine ebaõnnestus!',
+    'math_captcha_verification_failed' => 'Math Captcha kinnitamine ebaõnnestus!',
 ];

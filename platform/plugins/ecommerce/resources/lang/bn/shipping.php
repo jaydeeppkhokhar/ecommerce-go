@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'আপনার শিপমেন্ট ট্র্যাক করতে QR কোড স্ক্যান করুন',
     ],
     'customer_confirmed_delivery_at' => 'গ্রাহক ডেলিভারি নিশ্চিত করেছেন',
+    'no_shipping_methods_available' => 'কোন শিপিং পদ্ধতি উপলব্ধ নেই!',
 ];

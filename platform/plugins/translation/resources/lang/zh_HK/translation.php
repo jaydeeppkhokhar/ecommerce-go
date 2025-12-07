@@ -69,4 +69,7 @@ return [
             'trans' => '可以是空的，或者是一個最多 :max 字符的字符串（如果提供）。',
         ],
     ],
+    'download_locale' => '下載語言',
+    'import_available_locale_confirmation' => '從GitHub下載語言',
+    'import_available_locale_confirmation_content' => '您確定要下載此語言嗎？它將下載到 :lang_path，如果需要，您可以稍後刪除它。',
 ];

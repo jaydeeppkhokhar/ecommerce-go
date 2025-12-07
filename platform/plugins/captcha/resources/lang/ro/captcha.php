@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Formular de autentificare administrator',
     'admin_forgot_password_form' => 'Formular parolă uitată administrator',
     'admin_reset_password_form' => 'Formular resetare parolă administrator',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Math Captcha',
+    'math_question' => 'Vă rugăm să rezolvați următoarea funcție matematică: :label = ?',
+    'captcha_verification_failed' => 'Verificarea Captcha a eșuat!',
+    'math_captcha_verification_failed' => 'Verificarea Math Captcha a eșuat!',
 ];

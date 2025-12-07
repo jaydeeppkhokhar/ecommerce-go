@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'यह कूपन लागू नहीं किया जा सकता क्योंकि आपके कार्ट में फ्लैश सेल आइटम हैं (:product_name)। फ्लैश सेल कीमतों को कूपन डिस्काउंट के साथ जोड़ा नहीं जा सकता।',
     'coupon_applied_successfully' => 'बहुत बढ़िया! कूपन कोड ":code" लागू किया गया है। आपने इस ऑर्डर पर पैसे बचाए हैं!',
     'coupon_removed_successfully' => 'कूपन कोड आपके ऑर्डर से हटा दिया गया है।',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'कूपन कोड (:count)',
+    'left_quantity' => 'शेष :left',
+    'apply' => 'लागू करें',
+    'remove' => 'हटाएं',
+    'select_coupon' => 'कूपन चुनें',
+    'you_have_coupon_code' => 'क्या आपके पास कूपन कोड है?',
+    'close' => 'बंद करें',
+    'coupon_code_label' => 'कूपन कोड: :code',
+    'enter_coupon_code_placeholder' => 'कूपन कोड दर्ज करें...',
 ];

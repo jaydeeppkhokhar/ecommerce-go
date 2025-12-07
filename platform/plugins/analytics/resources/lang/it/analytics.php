@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Errore del plugin Analytics: Librerie di terze parti mancanti. Eseguire "composer update" per installarle.',
     'browser' => 'Browser',
     'url' => 'URL',
+    'credential_invalid' => 'Questa credenziale non è una credenziale Google Analytics valida.',
+    'file_not_valid_json' => 'Questo file non è un file JSON valido.',
+    'no_results_found' => 'Nessun risultato trovato',
+    'upload_service_account_json' => 'Carica file JSON account di servizio',
 ];

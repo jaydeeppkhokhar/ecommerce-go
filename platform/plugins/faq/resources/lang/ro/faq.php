@@ -5,8 +5,12 @@ return [
     'create' => 'Întrebare frecventă nouă',
     'question' => 'Întrebare',
     'answer' => 'Răspuns',
+    'question_placeholder' => 'Introduceți întrebarea dvs...',
+    'answer_placeholder' => 'Introduceți răspunsul dvs...',
     'category' => 'Categorie',
     'faq_schema_config' => 'Configurare schemă întrebări frecvente (:link)',
+    'faq_schema_config_description' => 'Această configurație înregistrează date structurate FAQ doar în scopuri SEO. Nu va fi afișată în conținutul temei frontend. Schema este încorporată în codul sursă al paginii și poate fi vizualizată folosind "Vizualizare sursă" sau testată cu instrumentul Google Rich Results Test.',
+    'schema_testing_tool' => 'Testați cu Google Rich Results Test',
     'learn_more' => 'Află mai multe',
     'settings' => [
         'title' => 'Întrebări frecvente',

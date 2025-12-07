@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Daftar produk',
         'cart' => 'Keranjang',
     ],
+    'purchased' => 'membeli',
+    'verified' => 'Terverifikasi',
+    'quick_view' => 'Tampilan cepat',
 ];

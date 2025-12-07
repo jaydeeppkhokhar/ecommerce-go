@@ -65,6 +65,8 @@ return [
     'sign_in_below' => 'Melden Sie sich unten an',
     'languages' => 'Sprachen',
     'reset_password' => 'Passwort zurücksetzen',
+    'deactivated_message' => 'Ihr Konto wurde deaktiviert. Bitte kontaktieren Sie den Administrator.',
+    'password_changed_message' => 'Ihr Passwort wurde geändert. Bitte melden Sie sich erneut mit Ihrem neuen Passwort an.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

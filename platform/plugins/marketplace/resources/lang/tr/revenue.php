@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Gelirler',
     'edit' => 'Cüzdan bakiyesini güncelle',
     'view_store' => 'Mağazayı görüntüle ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Satıcı miktarını ekle/çıkar',
     'statements' => 'İfadeler',
     'products' => 'Ürünler',
+    'items_earning_sales' => 'Ürün kazanç satışları: :amount',
 ];

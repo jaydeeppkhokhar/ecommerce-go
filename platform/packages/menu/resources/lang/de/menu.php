@@ -31,7 +31,7 @@ return [
     'items' => 'Artikel',
     'locations' => 'Standorte',
     'main_navigation' => 'Hauptnavigation',
-    'edit' => 'Edit menu',
     'widget_custom_menu' => 'Benutzerdefiniertes Menü',
     'widget_custom_menu_description' => 'Fügen Sie Ihrem Widget-Bereich ein benutzerdefiniertes Menü hinzu.',
+    'select_menu' => 'Menü auswählen',
 ];

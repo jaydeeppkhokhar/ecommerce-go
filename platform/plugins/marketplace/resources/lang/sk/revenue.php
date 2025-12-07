@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Príjmy',
     'edit' => 'Aktualizovať zostatok peňaženky',
     'view_store' => 'Zobraziť obchod ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Pridať/Odpočítať sumu predajcu',
     'statements' => 'Výpisy',
     'products' => 'Produkty',
+    'items_earning_sales' => 'Predajné príjmy položiek: :amount',
 ];

@@ -3,6 +3,7 @@
 namespace Botble\Ecommerce\Models;
 
 use Botble\Base\Models\BaseModel;
+use Illuminate\Support\Facades\Cache;
 
 class Currency extends BaseModel
 {
@@ -26,4 +27,15 @@ class Currency extends BaseModel
         'is_default' => 'boolean',
         'exchange_rate' => 'double',
     ];
+
+    protected static function booted(): void
+    {
+        static::saved(function (): void {
+            Cache::forget('currencies');
+        });
+
+        static::deleted(function (): void {
+            Cache::forget('currencies');
+        });
+    }
 }

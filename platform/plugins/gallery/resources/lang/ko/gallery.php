@@ -18,4 +18,8 @@ return [
     'limit_display' => '표시 개수 제한',
     'edit_this_gallery' => '이 갤러리 편집',
     'galleries_page' => '갤러리 페이지',
+    'by_name' => ':name 기준',
+    'title' => '제목',
+    'limit' => '한계',
+    'limit_helper' => '표시할 갤러리 수입니다. ',
 ];

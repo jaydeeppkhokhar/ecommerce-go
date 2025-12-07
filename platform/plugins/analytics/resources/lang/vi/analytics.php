@@ -14,10 +14,10 @@ return [
     'start_date_can_not_before_end_date' => 'Ngày bắt đầu :start_date không thể sau ngày kết thúc :end_date',
     'not_set_up' => 'Widget chưa được thiết lập',
     'settings' => [
-        'title' => 'Google Analytics',
+        'title' => 'Phân tích',
         'description' => 'Cấu hình thông tin đăng nhập cho Google Analytics',
         'analytics_property_id' => 'Property ID cho GA4',
-        'analytics_property_id_description' => 'Google Analytics Property ID (GA4)',
+        'analytics_property_id_description' => 'ID thuộc tính Google Analytics (GA4). Ví dụ: G-XXXXXXXXXX',
         'json_credential' => 'Thông tin xác thực tài khoản dịch vụ',
         'json_credential_description' => 'Thông tin xác thực tài khoản dịch vụ',
         'credential_is_not_valid' => 'Thông tin xác thực Analytics không hợp lệ. Tham khảo tài liệu tại đây: :url',
@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Lỗi plugin Analytics: Thiếu thư viện bên thứ ba. Vui lòng chạy "composer update" để cài đặt chúng.',
     'browser' => 'Trình duyệt',
     'url' => 'URL',
+    'credential_invalid' => 'Thông tin xác thực này không phải là thông tin xác thực Google Analytics hợp lệ.',
+    'file_not_valid_json' => 'Tệp này không phải là tệp JSON hợp lệ.',
+    'no_results_found' => 'Không tìm thấy kết quả',
+    'upload_service_account_json' => 'Tải lên tệp JSON tài khoản dịch vụ',
 ];

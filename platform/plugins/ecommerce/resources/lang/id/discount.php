@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Kupon ini tidak dapat diterapkan karena keranjang Anda berisi item flash sale (:product_name). Harga flash sale tidak dapat digabungkan dengan diskon kupon.',
     'coupon_applied_successfully' => 'Bagus! Kode kupon ":code" telah diterapkan. Anda menghemat uang pada pesanan ini!',
     'coupon_removed_successfully' => 'Kode kupon telah dihapus dari pesanan Anda.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kode kupon (:count)',
+    'left_quantity' => 'Tersisa :left',
+    'apply' => 'Terapkan',
+    'remove' => 'Hapus',
+    'select_coupon' => 'Pilih Kupon',
+    'you_have_coupon_code' => 'Punya kode kupon?',
+    'close' => 'Tutup',
+    'coupon_code_label' => 'Kode kupon: :code',
+    'enter_coupon_code_placeholder' => 'Masukkan kode kupon...',
 ];

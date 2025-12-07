@@ -135,8 +135,8 @@ class HookServiceProvider extends ServiceProvider
                                 'attributes' => [
                                     'name' => 'show_site_name',
                                     'list' => [
-                                        '0' => __('No'),
-                                        '1' => __('Yes'),
+                                        '0' => trans('packages/theme::theme.common.no'),
+                                        '1' => trans('packages/theme::theme.common.yes'),
                                     ],
                                     'value' => '0',
                                 ],
@@ -149,8 +149,8 @@ class HookServiceProvider extends ServiceProvider
                                 'attributes' => [
                                     'name' => 'site_title_separator',
                                     'list' => [
-                                        '-' => __('- (dash)'),
-                                        '|' => __('| (pipe)'),
+                                        '-' => trans('packages/theme::theme.common.dash'),
+                                        '|' => trans('packages/theme::theme.common.pipe'),
                                     ],
                                     'value' => '-',
                                 ],
@@ -242,8 +242,8 @@ class HookServiceProvider extends ServiceProvider
                                 ->priority(0)
                                 ->defaultValue(true)
                                 ->options([
-                                    true => __('Yes'),
-                                    false => __('No'),
+                                    true => trans('packages/theme::theme.common.yes'),
+                                    false => trans('packages/theme::theme.common.no'),
                                 ]),
                         ])
                 )
@@ -297,7 +297,7 @@ class HookServiceProvider extends ServiceProvider
                 );
         });
 
-        add_shortcode('media', __('Media - Video'), __('Support native video, YouTube, Vimeo, TikTok, X (Twitter)'), function (Shortcode $shortcode) {
+        add_shortcode('media', trans('packages/theme::theme.media_shortcode.title'), trans('packages/theme::theme.media_shortcode.description'), function (Shortcode $shortcode) {
             $url = $shortcode->url;
 
             if (! $url) {
@@ -396,48 +396,48 @@ class HookServiceProvider extends ServiceProvider
         shortcode()->setAdminConfig('media', function (array $attributes) {
             return ShortcodeForm::createFromArray($attributes)
                 ->add('url', TextField::class, [
-                    'label' => __('Media URL'),
+                    'label' => trans('packages/theme::theme.media_shortcode.url'),
                     'attr' => [
-                        'placeholder' => __('YouTube, Vimeo, TikTok, ...'),
+                        'placeholder' => trans('packages/theme::theme.media_shortcode.url_placeholder'),
                     ],
                 ])
                 ->add('width', NumberField::class, [
-                    'label' => __('Width'),
+                    'label' => trans('packages/theme::theme.media_shortcode.width'),
                     'default_value' => 420,
                 ])
                 ->add('height', NumberField::class, [
-                    'label' => __('Height'),
+                    'label' => trans('packages/theme::theme.media_shortcode.height'),
                     'default_value' => 315,
                 ])
                 ->add('centered', RadioField::class, [
-                    'label' => __('Center Video'),
+                    'label' => trans('packages/theme::theme.media_shortcode.center'),
                     'values' => [
-                        'no' => __('No'),
-                        'yes' => __('Yes'),
+                        'no' => trans('packages/theme::theme.common.no'),
+                        'yes' => trans('packages/theme::theme.common.yes'),
                     ],
                     'default_value' => 'no',
                 ])
                 ->add('margin_top', NumberField::class, [
-                    'label' => __('Margin Top (px)'),
+                    'label' => trans('packages/theme::theme.media_shortcode.margin_top'),
                     'default_value' => 0,
                 ])
                 ->add('margin_bottom', NumberField::class, [
-                    'label' => __('Margin Bottom (px)'),
+                    'label' => trans('packages/theme::theme.media_shortcode.margin_bottom'),
                     'default_value' => 20,
                 ])
                 ->add('margin_start', NumberField::class, [
-                    'label' => __('Margin Start (px)'),
+                    'label' => trans('packages/theme::theme.media_shortcode.margin_start'),
                     'default_value' => 0,
-                    'helper' => __('Left margin in LTR, right margin in RTL'),
+                    'helper' => trans('packages/theme::theme.media_shortcode.margin_start_helper'),
                 ])
                 ->add('margin_end', NumberField::class, [
-                    'label' => __('Margin End (px)'),
+                    'label' => trans('packages/theme::theme.media_shortcode.margin_end'),
                     'default_value' => 0,
-                    'helper' => __('Right margin in LTR, left margin in RTL'),
+                    'helper' => trans('packages/theme::theme.media_shortcode.margin_end_helper'),
                 ]);
         });
 
-        add_shortcode('audio', __('Media - Audio'), __('Support native audio'), function (Shortcode $shortcode) {
+        add_shortcode('audio', trans('packages/theme::theme.audio_shortcode.title'), trans('packages/theme::theme.audio_shortcode.description'), function (Shortcode $shortcode) {
             $url = $shortcode->url;
 
             if (! $url) {
@@ -460,9 +460,9 @@ class HookServiceProvider extends ServiceProvider
 
         shortcode()->setAdminConfig('audio', function (array $attributes) {
             return ShortcodeForm::createFromArray($attributes)
-                ->add('url', MediaFileField::class, MediaFileFieldOption::make()->label(__('Audio File')))
+                ->add('url', MediaFileField::class, MediaFileFieldOption::make()->label(trans('packages/theme::theme.audio_shortcode.url')))
                 ->add('type', SelectField::class, [
-                    'label' => __('Type'),
+                    'label' => trans('packages/theme::theme.audio_shortcode.type'),
                     'choices' => [
                         'audio/mpeg' => 'audio/mpeg',
                         'audio/ogg' => 'audio/ogg',
@@ -486,8 +486,8 @@ class HookServiceProvider extends ServiceProvider
             if (config('packages.theme.general.enable_custom_html_shortcode')) {
                 add_shortcode(
                     'custom-html',
-                    __('Custom HTML'),
-                    __('Add custom HTML content'),
+                    trans('packages/theme::theme.custom_html_shortcode.title'),
+                    trans('packages/theme::theme.custom_html_shortcode.description'),
                     function (Shortcode $shortcode) {
                         return html_entity_decode($shortcode->getContent());
                     }
@@ -504,8 +504,8 @@ class HookServiceProvider extends ServiceProvider
                             'content',
                             TextareaField::class,
                             TextareaFieldOption::make()
-                                ->label(__('Content'))
-                                ->placeholder(__('HTML code'))
+                                ->label(trans('packages/theme::theme.common.content'))
+                                ->placeholder(trans('packages/theme::theme.common.html_code'))
                                 ->rows(3)
                                 ->addAttribute('data-shortcode-attribute', 'content')
                                 ->value($content)
@@ -590,7 +590,7 @@ class HookServiceProvider extends ServiceProvider
                 $link = view('packages/theme::guideline-link', [
                     'html' => $html,
                     'editLink' => $editLink . '?shortcode=' . $compiler->getName(),
-                    'editLabel' => __('Edit this shortcode'),
+                    'editLabel' => trans('packages/theme::theme.shortcode_labels.edit_this_shortcode'),
                 ])->render();
 
                 return ThemeSupport::insertBlockAfterTopHtmlTags($link, $html);
@@ -666,12 +666,18 @@ class HookServiceProvider extends ServiceProvider
         AdminAppearanceSettingForm::extend(function (AdminAppearanceSettingForm $form): void {
             $form
                 ->addAfter(AdminAppearance::getSettingKey('show_menu_item_icon'), 'show_admin_bar', OnOffCheckboxField::class, [
-                    'label' => trans('core/setting::setting.admin_appearance.form.show_admin_bar'),
+                    'label' => trans('packages/theme::theme.admin_appearance.show_admin_bar'),
                     'value' => setting('show_admin_bar', true),
+                    'help_block' => [
+                        'text' => trans('packages/theme::theme.admin_appearance.show_admin_bar_helper'),
+                    ],
                 ])
                 ->addAfter('show_admin_bar', 'show_theme_guideline_link', OnOffCheckboxField::class, [
-                    'label' => trans('core/setting::setting.admin_appearance.form.show_guidelines'),
+                    'label' => trans('packages/theme::theme.admin_appearance.show_guidelines'),
                     'value' => setting('show_theme_guideline_link', false),
+                    'help_block' => [
+                        'text' => trans('packages/theme::theme.admin_appearance.show_guidelines_helper'),
+                    ],
                 ]);
         }, 110);
 

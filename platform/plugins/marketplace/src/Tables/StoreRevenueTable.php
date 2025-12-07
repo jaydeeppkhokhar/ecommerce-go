@@ -119,6 +119,9 @@ class StoreRevenueTable extends TableAbstract
                 'description',
             ])
             ->with(['order:id,code'])
+            ->whereHas('order', function (Builder $query): void {
+                $query->where('is_finished', true);
+            })
             ->when($this->customerId, function (Builder $query): void {
                 $query
                     ->where('customer_id', $this->customerId)

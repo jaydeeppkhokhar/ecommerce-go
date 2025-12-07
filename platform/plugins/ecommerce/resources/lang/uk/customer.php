@@ -23,7 +23,6 @@ return [
         'activated' => 'Активований',
         'locked' => 'Заблокований',
     ],
-    'email_verified' => 'Email підтверджено?',
     'verify_email' => [
         'confirm_heading' => 'Підтвердження email',
         'confirm_description' => 'Ви впевнені, що хочете підтвердити email цього клієнта?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'натисніть тут',
         'confirm_button' => 'Підтвердити',
     ],
-    'email_already_verified' => 'Email вже підтверджено.',
     'verification_email_sent' => 'Лист для підтвердження надіслано успішно!',
     'resend_verification_email' => 'Повторно надіслати лист для підтвердження',
     'resend_verification_email_confirmation' => 'Ви впевнені, що хочете повторно надіслати лист для підтвердження цьому клієнту?',

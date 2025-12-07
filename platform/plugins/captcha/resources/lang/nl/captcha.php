@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Beheerder inlogformulier',
     'admin_forgot_password_form' => 'Beheerder wachtwoord vergeten formulier',
     'admin_reset_password_form' => 'Beheerder wachtwoord reset formulier',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Wiskundige captcha',
+    'math_question' => 'Los de volgende wiskundige functie op: :label = ?',
+    'captcha_verification_failed' => 'Captcha-verificatie mislukt!',
+    'math_captcha_verification_failed' => 'Wiskundige Captcha-verificatie mislukt!',
 ];

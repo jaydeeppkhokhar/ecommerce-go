@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => '無効なGoogle AdSense クライアントID形式。形式は次のようにする必要があります：ca-pub-XXXXXXXXXXXXXXXX（XはIDです）。',
         ],
     ],
+    'banner' => 'バナー',
+    'tablet_image' => 'タブレット画像',
+    'tablet_image_helper' => '幅768pxから1200pxのデバイス用、空の場合はデスクトップの画像を使用します。',
+    'mobile_image' => 'モバイル画像',
+    'mobile_image_helper' => '幅768px未満のデバイス用、空の場合はタブレットの画像を使用します。',
 ];

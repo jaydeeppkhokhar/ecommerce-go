@@ -1,6 +1,6 @@
 @extends(EcommerceHelper::viewPath('customers.master'))
 
-@section('title', __('Overview'))
+@section('title', trans('plugins/ecommerce::customer-dashboard.overview'))
 
 @section('content')
     @php
@@ -17,7 +17,7 @@
                         {{ RvMedia::image($customer->avatar_url, $customer->name, attributes: ['class' => 'bb-customer-profile-avatar-img', 'data-bb-value' => 'customer-avatar']) }}
                         <div class="bb-customer-profile-avatar-overlay">
                             <input type="file" id="customer-avatar" name="avatar" data-bb-toggle="change-customer-avatar" data-url="{{ route('customer.avatar') }}" />
-                            <label for="customer-avatar" title="{{ __('Change avatar') }}">
+                            <label for="customer-avatar" title="{{ trans('plugins/ecommerce::customer-dashboard.change_avatar') }}">
                                 <x-core::icon name="ti ti-camera" />
                             </label>
                         </div>
@@ -26,10 +26,10 @@
                 <div class="col">
                     <div class="bb-customer-profile-info text-md-center text-start">
                         <h2 class="h4 mb-2">
-                            {!! BaseHelper::clean(__('Welcome back, <strong>:name</strong>!', ['name' => $customer->name])) !!}
+                            {!! BaseHelper::clean(trans('plugins/ecommerce::customer-dashboard.welcome_back', ['name' => $customer->name])) !!}
                         </h2>
                         <p class="text-muted mb-0">
-                            {{ __('Manage your account, view orders, and update your preferences from your personal dashboard.') }}
+                            {{ trans('plugins/ecommerce::customer-dashboard.manage_account_description') }}
                         </p>
                     </div>
                 </div>
@@ -45,10 +45,10 @@
                     <div class="bg-primary bg-opacity-20 rounded-circle p-3 d-inline-flex mb-3">
                         <x-core::icon name="ti ti-shopping-bag" class="text-white" size="lg" />
                     </div>
-                    <h5 class="card-title h6 mb-2">{{ __('View Orders') }}</h5>
-                    <p class="card-text text-muted small mb-3">{{ __('Track your recent orders and order history') }}</p>
+                    <h5 class="card-title h6 mb-2">{{ trans('plugins/ecommerce::customer-dashboard.view_orders') }}</h5>
+                    <p class="card-text text-muted small mb-3">{{ trans('plugins/ecommerce::customer-dashboard.track_orders_description') }}</p>
                     <a href="{{ route('customer.orders') }}" class="btn btn-primary btn-sm">
-                        {{ __('View Orders') }}
+                        {{ trans('plugins/ecommerce::customer-dashboard.view_orders') }}
                         <x-core::icon name="ti ti-arrow-right" class="ms-1" />
                     </a>
                 </div>
@@ -60,10 +60,10 @@
                     <div class="bg-success bg-opacity-20 rounded-circle p-3 d-inline-flex mb-3">
                         <x-core::icon name="ti ti-map-pin" class="text-white" size="lg" />
                     </div>
-                    <h5 class="card-title h6 mb-2">{{ __('Manage Addresses') }}</h5>
-                    <p class="card-text text-muted small mb-3">{{ __('Update your shipping and billing addresses') }}</p>
+                    <h5 class="card-title h6 mb-2">{{ trans('plugins/ecommerce::customer-dashboard.manage_addresses') }}</h5>
+                    <p class="card-text text-muted small mb-3">{{ trans('plugins/ecommerce::customer-dashboard.update_addresses_description') }}</p>
                     <a href="{{ route('customer.address') }}" class="btn btn-success btn-sm">
-                        {{ __('Manage Addresses') }}
+                        {{ trans('plugins/ecommerce::customer-dashboard.manage_addresses') }}
                         <x-core::icon name="ti ti-arrow-right" class="ms-1" />
                     </a>
                 </div>
@@ -75,10 +75,10 @@
                     <div class="bg-warning bg-opacity-20 rounded-circle p-3 d-inline-flex mb-3">
                         <x-core::icon name="ti ti-settings" class="text-white" size="lg" />
                     </div>
-                    <h5 class="card-title h6 mb-2">{{ __('Account Settings') }}</h5>
-                    <p class="card-text text-muted small mb-3">{{ __('Edit your profile and account details') }}</p>
+                    <h5 class="card-title h6 mb-2">{{ trans('plugins/ecommerce::customer-dashboard.account_settings') }}</h5>
+                    <p class="card-text text-muted small mb-3">{{ trans('plugins/ecommerce::customer-dashboard.edit_profile_description') }}</p>
                     <a href="{{ route('customer.edit-account') }}" class="btn btn-warning btn-sm">
-                        {{ __('Edit Account') }}
+                        {{ trans('plugins/ecommerce::customer-dashboard.edit_account') }}
                         <x-core::icon name="ti ti-arrow-right" class="ms-1" />
                     </a>
                 </div>
@@ -97,15 +97,15 @@
                         </span>
                     </div>
                     <div class="col-12 col-md text-center text-md-start">
-                        <h5 class="card-title h6 mb-1">{{ __('Ready to start shopping?') }}</h5>
+                        <h5 class="card-title h6 mb-1">{{ trans('plugins/ecommerce::customer-dashboard.ready_to_start_shopping') }}</h5>
                         <p class="card-text text-muted small mb-3 mb-md-0">
-                            {{ __("You haven't placed any orders yet. Browse our products and find something you love!") }}
+                            {{ trans('plugins/ecommerce::customer-dashboard.no_orders_browse_description') }}
                         </p>
                     </div>
                     <div class="col-12 col-md-auto">
                         <a href="{{ route('public.products') }}" class="btn btn-info w-100 w-md-auto">
                             <x-core::icon name="ti ti-shopping-bag" class="me-1" />
-                            {{ __('Browse Products') }}
+                            {{ trans('plugins/ecommerce::customer-dashboard.browse_products') }}
                         </a>
                     </div>
                 </div>

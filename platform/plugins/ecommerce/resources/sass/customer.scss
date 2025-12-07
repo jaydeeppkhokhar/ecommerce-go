@@ -116,93 +116,6 @@ $primaryColor: var(--primary-color);
         line-height: 1.3;
     }
 
-    .customer-order-detail {
-        background: #ffffff;
-        border-radius: 8px;
-        padding: 1.5rem;
-        border: 1px solid #e5e7eb;
-
-        p {
-            margin: 0;
-            line-height: 1.6;
-            color: #374151;
-        }
-
-        span {
-            min-width: 120px;
-            display: inline-block;
-            margin: 6px 0;
-
-            &.order-detail-value {
-                padding: 6px 12px;
-                line-height: 1.4;
-                border-bottom: 1px solid #e5e7eb;
-                margin-left: 16px;
-                color: #111827;
-                font-weight: 600;
-                display: inline-block;
-                background-color: #f9fafb;
-                border-radius: 4px;
-            }
-
-            h5 {
-                text-align: center;
-                margin: 2rem 0;
-                width: 100%;
-                font-weight: 600;
-                color: #111827;
-                font-size: 1.25rem;
-            }
-        }
-    }
-
-    .dashboard-address {
-        margin-bottom: 1.5rem;
-
-        .card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            transition: border-color 0.15s ease-in-out;
-
-            &:hover {
-                border-color: #d1d5db;
-            }
-
-            p {
-                font-size: 0.875rem;
-                line-height: 1.5;
-                color: #6b7280;
-            }
-        }
-    }
-
-    .badge {
-        color: #fff;
-        min-width: 0 !important;
-        font-weight: 500;
-        padding: 0.25rem 0.5rem;
-        border-radius: 6px;
-        font-size: 0.75rem;
-
-        &.bg-success {
-            background-color: #10b981 !important;
-        }
-
-        &.bg-warning {
-            background-color: #f59e0b !important;
-            color: #111827 !important;
-        }
-
-        &.bg-danger {
-            background-color: #ef4444 !important;
-        }
-
-        &.bg-info {
-            background-color: #3b82f6 !important;
-        }
-    }
-
     .show-admin-bar {
         .modal {
             top: 80px;
@@ -252,28 +165,6 @@ $primaryColor: var(--primary-color);
         }
     }
 
-    .btn-primary {
-        background-color: $primaryColor;
-        border-color: $primaryColor;
-        padding: 0.5rem 1rem;
-        font-weight: 600;
-        border-radius: 6px;
-        transition: all 0.15s ease-in-out;
-
-        &:hover {
-            background-color: rgba(var(12, 85, 170, 13, 110, 253), 0.9);
-            border-color: rgba(var(12, 85, 170, 13, 110, 253), 0.9);
-        }
-
-        &:active {
-            background-color: rgba(var(12, 85, 170, 13, 110, 253), 0.8);
-            border-color: rgba(var(12, 85, 170, 13, 110, 253), 0.8);
-        }
-
-        &:focus {
-            box-shadow: 0 0 0 0.2rem rgba(var(12, 85, 170, 13, 110, 253), 0.25);
-        }
-    }
 
     svg.icon {
         stroke-width: 1;
@@ -493,10 +384,6 @@ svg.icon {
 
 // Customer Cards Layout
 .bb-customer-card-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
     &.account-settings-cards {
         .bb-customer-card {
             background: #ffffff;
@@ -583,96 +470,67 @@ svg.icon {
         }
     }
 
-    // Order cards styling (clean)
+    // Order cards styling (minimal & clean)
     &.order-cards {
         .bb-customer-card {
-            background: #ffffff;
-            border: 1px solid #e5e7eb;
-            border-radius: 8px;
-            margin-bottom: 1rem;
-            transition: border-color 0.15s ease-in-out;
-            overflow: hidden;
-
-            &:hover {
-                border-color: #d1d5db;
-            }
-
             .bb-customer-card-header {
-                padding: 1rem 1.25rem;
-                border-bottom: 1px solid #e5e7eb;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                background: #f9fafb;
-
                 .bb-customer-card-title {
                     margin: 0;
                     font-weight: 600;
-                    font-size: 1rem;
-
-                    .label {
-                        color: #6b7280;
-                        font-weight: 500;
-                    }
-
-                    .value {
-                        color: #111827;
-                        font-weight: 600;
-                    }
+                    font-size: 0.9375rem;
+                    color: #111827;
+                    line-height: 1.4;
                 }
 
                 .bb-customer-card-status {
                     .badge {
-                        font-size: 0.75rem;
+                        font-size: 0.6875rem;
                         padding: 0.25rem 0.5rem;
-                        border-radius: 6px;
+                        border-radius: 3px;
                         font-weight: 500;
                     }
                 }
             }
 
             .bb-customer-card-body {
-                padding: 1.25rem;
-
                 .bb-customer-card-info {
                     .info-item {
                         display: flex;
-                        justify-content: space-between;
-                        align-items: center;
-                        margin-bottom: 0.5rem;
-                        padding: 0.25rem 0;
-
-                        &:last-child {
-                            margin-bottom: 0;
-                        }
+                        flex-direction: column;
+                        gap: 0.375rem;
 
                         .label {
                             color: #6b7280;
-                            font-weight: 500;
-                            font-size: 0.875rem;
+                            font-weight: 400;
+                            font-size: 0.75rem;
+                            text-transform: uppercase;
+                            letter-spacing: 0.025em;
                         }
 
                         .value {
                             color: #111827;
-                            text-align: right;
                             font-weight: 600;
-                            font-size: 0.875rem;
+                            font-size: 0.9375rem;
+                            line-height: 1.3;
                         }
                     }
                 }
             }
 
             .bb-customer-card-footer {
-                padding: 1rem 1.25rem;
-                border-top: 1px solid #e5e7eb;
-                background: #f9fafb;
-                text-align: right;
-
                 .btn {
-                    border-radius: 6px;
-                    font-weight: 600;
+                    border-radius: 4px;
+                    font-weight: 500;
                     padding: 0.5rem 1rem;
-                    font-size: 0.875rem;
+                    font-size: 0.8125rem;
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.375rem;
+
+                    .icon {
+                        width: 1rem;
+                        height: 1rem;
+                    }
                 }
             }
         }
@@ -725,15 +583,6 @@ svg.icon {
 // Product Review Cards Clean
 .bb-customer-card-list.product-reviews-cards {
     .bb-customer-card {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        transition: border-color 0.15s ease-in-out;
-        overflow: hidden;
-
-        &:hover {
-            border-color: #d1d5db;
-        }
 
         &.waiting-review-card {
             .bb-customer-card-header {
@@ -947,13 +796,19 @@ svg.icon {
                 .bb-customer-card {
                     .bb-customer-card-header {
                         padding: 1rem;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        gap: 0.5rem;
                     }
 
                     .bb-customer-card-body {
                         padding: 1rem;
+                    }
+
+                    .bb-customer-card-footer {
+                        padding: 1rem;
+
+                        .btn {
+                            width: 100%;
+                            justify-content: center;
+                        }
                     }
                 }
             }
@@ -969,152 +824,6 @@ svg.icon {
 
 .show-admin-bar .offcanvas.offcanvas-start {
     top: 40px;
-}
-
-// Order Return Cards Clean
-.bb-customer-card-list.order-return-cards {
-    .bb-customer-card.order-return-card {
-        background: #ffffff;
-        border: 1px solid #e5e7eb;
-        border-radius: 8px;
-        transition: all 0.15s ease-in-out;
-        overflow: hidden;
-
-        &:hover {
-            border-color: #d1d5db;
-            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-        }
-
-        .bb-customer-card-header {
-            background: #f8f9fa;
-            border-bottom: 1px solid #e5e7eb;
-            padding: 1.25rem;
-
-            .bb-customer-card-title {
-                color: #111827;
-                font-weight: 600;
-                margin-bottom: 0.25rem;
-            }
-
-            .bb-customer-card-status {
-                .badge {
-                    font-size: 0.75rem;
-                    padding: 0.375rem 0.75rem;
-                }
-            }
-        }
-
-        .bb-customer-card-body {
-            padding: 1.25rem;
-
-            .bb-customer-card-info {
-                .info-item {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 0.375rem;
-
-                    .label {
-                        display: flex;
-                        align-items: center;
-                        color: #6b7280;
-                        font-size: 0.875rem;
-                        font-weight: 500;
-
-                        .icon {
-                            width: 16px;
-                            height: 16px;
-                        }
-                    }
-
-                    .value {
-                        color: #111827;
-                        font-weight: 500;
-                        font-size: 0.875rem;
-
-                        a {
-                            color: $primaryColor;
-                            transition: all 0.15s ease-in-out;
-
-                            &:hover {
-                                opacity: 0.8;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .bb-customer-card-footer {
-            background: #f8f9fa;
-            border-top: 1px solid #e5e7eb;
-            padding: 1rem 1.25rem;
-
-            .btn {
-                font-size: 0.875rem;
-                padding: 0.5rem 1rem;
-                border-radius: 6px;
-                font-weight: 500;
-                transition: all 0.15s ease-in-out;
-
-                .icon {
-                    width: 16px;
-                    height: 16px;
-                }
-
-                &.btn-primary {
-                    background-color: $primaryColor;
-                    border-color: $primaryColor;
-
-                    &:hover {
-                        filter: brightness(0.9);
-                        transform: translateY(-1px);
-                    }
-                }
-            }
-        }
-    }
-}
-
-// Mobile Responsive for Order Return Cards
-@media (max-width: 767.98px) {
-    .bb-customer-card-list.order-return-cards {
-        .bb-customer-card.order-return-card {
-            .bb-customer-card-header {
-                padding: 1rem;
-
-                .d-flex {
-                    flex-direction: column;
-                    align-items: flex-start !important;
-                    gap: 0.75rem;
-                }
-            }
-
-            .bb-customer-card-body {
-                padding: 1rem;
-
-                .bb-customer-card-info {
-                    .row {
-                        .col-md-6 {
-                            margin-bottom: 1rem;
-
-                            &:last-child {
-                                margin-bottom: 0;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .bb-customer-card-footer {
-                padding: 1rem;
-
-                .btn {
-                    width: 100%;
-                    justify-content: center;
-                }
-            }
-        }
-    }
 }
 
 // Order Return Detail & Form Cards

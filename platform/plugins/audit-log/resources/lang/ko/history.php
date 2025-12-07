@@ -45,4 +45,6 @@ return [
     'admin' => '관리자',
     'register_an_account' => '계정',
     'activity_has_been_deleted' => '활동이 삭제되었습니다',
+    'no_results_found' => '결과를 찾을 수 없습니다',
+    'no_activities_here' => '여기에는 활동이 없는 것 같습니다.',
 ];

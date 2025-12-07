@@ -11,11 +11,6 @@ return [
     'short_code_description' => 'Adaugă postări blog',
     'number_posts_per_page_in_category' => 'Numărul de postări pe pagină într-o categorie',
     'number_posts_per_page_in_tag' => 'Numărul de postări pe pagină într-o etichetă',
-    'title' => 'Blog',
-    'description' => 'Vizualizează și actualizează setările blog-ului',
-    'enable_blog_post_schema' => 'Activează Schema pentru postările blog',
-    'enable_blog_post_schema_description' => 'Află mai multe: https://schema.org/Article',
-    'schema_type' => 'Tip de schemă',
     'blog_posts' => 'Postări blog',
     'blog_categories' => 'Categorii blog',
     'blog_tags' => 'Etichete blog',
@@ -25,6 +20,5 @@ return [
         'enable_blog_post_schema' => 'Activează Schema pentru postările blog',
         'enable_blog_post_schema_description' => 'Află mai multe: https://schema.org/Article',
         'schema_type' => 'Tip de schemă',
-
     ],
 ];

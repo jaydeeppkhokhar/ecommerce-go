@@ -14,4 +14,7 @@ return [
         'step_4_label' => 'İmzalama Gizli Kopyası',
         'step_4_description' => 'Webhook Ayrıntıları bölümünden İmzalama Gizli Değeri değerini kopyalayın ve Ayarlar sayfasındaki Ödeme sekmesinin Stripe bölümündeki Stripe Webhook Gizli Değeri alanına yapıştırın.',
     ],
+    'no_payment_charge' => 'Ödeme ücreti yok. Lütfen tekrar deneyin!',
+    'payment_failed' => 'Ödeme başarısız oldu!',
+    'payment_type' => 'Ödeme Türü',
 ];

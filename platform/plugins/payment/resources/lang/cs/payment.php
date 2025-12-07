@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Typ poplatku za zpracování (volitelné)',
     'fee_type_helper' => 'Vyberte, jak má být platební poplatek vypočítán: jako pevná částka nebo procento z celkové objednávky. Pokud zvolíte pevnou částku, bude vycházet z výchozí měny (:currency).',
+    'payment_created' => 'Vytvořili jste platbu #:charge_id přes :channel :time : :amount',
+    'processing_please_wait' => 'Zpracovává se. Prosím čekejte...',
+    'error' => 'Chyba',
+    'checkout' => 'Pokladna',
+    'show_full_json' => 'Zobrazit celý JSON',
+    'full_log_data' => 'Úplná data protokolu',
+    'currency_not_supported' => ':name nepodporuje :currency. Seznam měn podporovaných :name: :currencies.',
+    'please_switch_currency' => 'Prosím přepněte na některou podporovanou měnu',
+    'payment_with' => 'Platba s :paymentType',
 ];

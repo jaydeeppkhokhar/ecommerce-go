@@ -1,6 +1,6 @@
 @extends('plugins/ecommerce::orders.master')
 
-@section('title', __('Order successfully at :site_title', ['site_title' => Theme::getSiteTitle()]))
+@section('title', trans('plugins/ecommerce::order.order_successfully_at_site', ['site_title' => Theme::getSiteTitle()]))
 
 @push('header')
     @include('plugins/ecommerce::orders.partials.google-ads-conversion', ['orders' => $orders])
@@ -16,9 +16,9 @@
 
                 <div class="d-inline-block">
                     <h3 class="thank-you-sentence">
-                        {{ __('Your order is successfully placed') }}
+                        {{ trans('plugins/ecommerce::order.order_placed_successfully') }}
                     </h3>
-                    <p>{{ __('Thank you for purchasing our products!') }}</p>
+                    <p>{{ trans('plugins/ecommerce::order.thank_you_purchase') }}</p>
                 </div>
             </div>
 
@@ -30,7 +30,7 @@
             <a
                 class="btn payment-checkout-btn d-none d-md-inline-block mb-5"
                 href="{{ BaseHelper::getHomepageUrl() }}"
-            > {{ __('Continue shopping') }} </a>
+            > {{ trans('plugins/ecommerce::order.continue_shopping') }} </a>
         </div>
 
         <div class="col-lg-5 col-md-6 mt-3 mt-md-0 mb-3 mb-md-5">
@@ -51,29 +51,29 @@
 
                         @if ($order->sub_total != $order->amount)
                             @include('plugins/ecommerce::orders.thank-you.total-row', [
-                                'label' => __('Subtotal'),
+                                'label' => trans('plugins/ecommerce::order.sub_amount'),
                                 'value' => format_price($order->sub_total),
                             ])
                         @endif
 
                         @if (EcommerceHelper::isTaxEnabled() && (float) $order->tax_amount)
                             @include('plugins/ecommerce::orders.thank-you.total-row', [
-                                'label' => __('Tax'),
+                                'label' => trans('plugins/ecommerce::order.tax'),
                                 'value' => format_price($order->tax_amount),
                             ])
                         @endif
 
                         @if ((float) $order->discount_amount)
                             @include('plugins/ecommerce::orders.thank-you.total-row', [
-                                'label' => __('Discount'),
+                                'label' => trans('plugins/ecommerce::order.discount'),
                                 'value' => format_price($order->discount_amount) .
-                                    ($order->coupon_code ? ' <small>(' . __('Using coupon code') . ': <strong>' . $order->coupon_code . '</strong>)</small>' : ''),
+                                    ($order->coupon_code ? ' <small>(' . trans('plugins/ecommerce::order.using_coupon_code') . ': <strong>' . $order->coupon_code . '</strong>)</small>' : ''),
                             ])
                         @endif
 
                         @if ((float) $order->payment_fee)
                             @include('plugins/ecommerce::orders.thank-you.total-row', [
-                                'label' => __('plugins/payment::payment.payment_fee'),
+                                'label' => trans('plugins/payment::payment.payment_fee'),
                                 'value' => format_price($order->payment_fee),
                             ])
                         @endif
@@ -82,7 +82,7 @@
 
                         <div class="row">
                             <div class="col-6">
-                                <p>{{ __('Order Total') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.total_amount') }}:</p>
                             </div>
                             <div class="col-6 float-end">
                                 <p class="total-text raw-total-text"> {{ format_price($order->amount) }} </p>
@@ -105,7 +105,7 @@
                 <div class="bg-light p-2 p-md-3">
                     <div class="row total-price">
                         <div class="col-6">
-                            <p>{{ __('Sub amount') }}:</p>
+                            <p>{{ trans('plugins/ecommerce::order.sub_amount') }}:</p>
                         </div>
                         <div class="col-6">
                             <p class="text-end">{{ format_price($orders->sum('sub_total')) }}</p>
@@ -115,7 +115,7 @@
                     @if ($hasShipping && $totalShippingAmount > 0)
                         <div class="row total-price">
                             <div class="col-6">
-                                <p>{{ __('Shipping fee') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.shipping_fee') }}:</p>
                             </div>
                             <div class="col-6">
                                 <p class="text-end">{{ format_price($totalShippingAmount) }} </p>
@@ -126,7 +126,7 @@
                     @if ($orders->sum('discount_amount'))
                         <div class="row total-price">
                             <div class="col-6">
-                                <p>{{ __('Discount') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.discount') }}:</p>
                             </div>
                             <div class="col-6">
                                 <p class="text-end">{{ format_price($orders->sum('discount_amount')) }} </p>
@@ -137,7 +137,7 @@
                     @if (EcommerceHelper::isTaxEnabled())
                         <div class="row total-price">
                             <div class="col-6">
-                                <p>{{ __('Tax') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.tax') }}:</p>
                             </div>
                             <div class="col-6">
                                 <p class="text-end">{{ format_price($orders->sum('tax_amount')) }}</p>
@@ -148,7 +148,7 @@
                     @if ($orders->sum('payment_fee'))
                         <div class="row total-price">
                             <div class="col-6">
-                                <p>{{ __('Payment Fee') }}:</p>
+                                <p>{{ trans('plugins/ecommerce::order.payment_info') }}:</p>
                             </div>
                             <div class="col-6">
                                 <p class="text-end">{{ format_price($orders->sum('payment_fee')) }}</p>
@@ -158,7 +158,7 @@
 
                     <div class="row total-price">
                         <div class="col-6">
-                            <p>{{ __('Total amount') }}:</p>
+                            <p>{{ trans('plugins/ecommerce::order.total_amount') }}:</p>
                         </div>
                         <div class="col-6">
                             <p class="total-text raw-total-text text-end">
@@ -174,7 +174,7 @@
     {{-- Continue shopping button for mobile, positioned at the bottom --}}
     <div class="d-md-none mt-4 mb-4">
         <a class="btn payment-checkout-btn w-100 mb-5" href="{{ BaseHelper::getHomepageUrl() }}">
-            {{ __('Continue shopping') }}
+            {{ trans('plugins/ecommerce::order.continue_shopping') }}
         </a>
     </div>
 @stop

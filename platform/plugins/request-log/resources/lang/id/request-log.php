@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Hapus Log Permintaan Lama',
     'clear_old_data_helper' => 'Secara otomatis menghapus log permintaan lama yang lebih lama dari periode yang dipilih untuk menjaga database Anda tetap bersih dan dioptimalkan.',
     'cronjob_warning' => 'Untuk menggunakan fitur ini, Anda perlu mengatur pekerjaan cron dengan mengikuti tautan ini: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Tidak ada hasil yang ditemukan',
+    'no_request_errors_message' => 'Sepertinya tidak ada kesalahan permintaan di sini.',
 ];

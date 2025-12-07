@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Dieser Gutschein kann nicht angewendet werden, da Ihr Warenkorb Flash Sale-Artikel (:product_name) enthält. Flash Sale-Preise können nicht mit Gutscheinrabatten kombiniert werden.',
     'coupon_applied_successfully' => 'Großartig! Gutscheincode ":code" wurde angewendet. Sie haben bei dieser Bestellung Geld gespart!',
     'coupon_removed_successfully' => 'Der Gutscheincode wurde aus Ihrer Bestellung entfernt.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Gutscheincodes (:count)',
+    'left_quantity' => 'Noch :left verfügbar',
+    'apply' => 'Anwenden',
+    'remove' => 'Entfernen',
+    'select_coupon' => 'Gutschein auswählen',
+    'you_have_coupon_code' => 'Haben Sie einen Gutscheincode?',
+    'close' => 'Schließen',
+    'coupon_code_label' => 'Gutscheincode: :code',
+    'enter_coupon_code_placeholder' => 'Gutscheincode eingeben...',
 ];

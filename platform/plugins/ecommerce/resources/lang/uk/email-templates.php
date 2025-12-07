@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Замовлення успішне!',
     'customer_new_order_greeting' => 'Шановний :customer_name,',
     'customer_new_order_message' => 'Дякуємо за покупку наших товарів, ми зв\'яжемося з вами за телефоном <strong>:customer_phone</strong> для підтвердження замовлення!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Спосіб доставки',
     'customer_new_order_order_number' => 'Номер замовлення',
     'customer_new_order_payment_method' => 'Спосіб оплати',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Ви отримали нове замовлення від :site_title',
     'admin_new_order_greeting' => 'Привіт, Адміністратор,',
     'admin_new_order_message' => 'Нове замовлення успішно розміщено :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Спосіб доставки',
     'admin_new_order_payment_method' => 'Спосіб оплати',
     'admin_new_order_view_order' => 'Переглянути деталі замовлення',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Замовлення підтверджено!',
     'order_confirm_greeting' => 'Привіт :customer_name,',
     'order_confirm_message' => 'Ваше замовлення підтверджено. Дякуємо за покупку наших товарів!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Примітка',
     'order_confirm_shipping_method' => 'Спосіб доставки',
     'order_confirm_payment_method' => 'Спосіб оплати',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Ваше замовлення скасовано',
     'customer_cancel_order_greeting' => 'Шановний :customer_name,',
     'customer_cancel_order_message' => 'Ваше замовлення <strong>:order_id</strong> скасовано на ваш запит через причину :cancellation_reason і вашу оплату також скасовано.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Адреса',
     'customer_cancel_order_products' => 'Ось що ви замовили:',
     'customer_cancel_order_note' => 'Примітка',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Замовлення скасовано',
     'admin_cancel_order_greeting' => 'Привіт :customer_name,',
-    'admin_cancel_order_message' => 'Ваше замовлення #:order_id скасовано нашим персоналом.',
+    'admin_cancel_order_message' => 'Ваше замовлення :order_id скасовано нашим персоналом.',
     'admin_cancel_order_order_cancelled' => 'Замовлення скасовано!',
     'admin_cancel_order_reason' => 'Причина скасування: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Інформація про клієнта',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Деталі замовлення:',
     'admin_cancel_order_note' => 'Примітка',
     'admin_cancel_order_order_summary' => 'Зведення замовлення',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Замовлення #:order_id скасовано клієнтом',
+    'order_cancellation_to_admin_title' => 'Замовлення :order_id скасовано клієнтом',
     'order_cancellation_to_admin_greeting' => 'Привіт, Адміністратор,',
-    'order_cancellation_to_admin_message' => ':customer_name скасував замовлення <strong>#:order_id</strong>. Причина: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name скасував замовлення <strong>:order_id</strong>. Причина: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Інформація про клієнта',
     'order_cancellation_to_admin_name' => 'Ім\'я',
     'order_cancellation_to_admin_phone' => 'Телефон',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Примітка',
     'order_cancellation_to_admin_view_order' => 'Переглянути деталі замовлення',
     'order_cancellation_to_admin_order_summary' => 'Зведення замовлення',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Ваше замовлення в дорозі',
     'customer_delivery_order_greeting' => 'Привіт :customer_name,',
     'customer_delivery_order_message' => 'Ваше замовлення в дорозі. Дякуємо за покупку наших товарів!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Номер відстеження',
     'customer_delivery_order_tracking_link' => 'Посилання для відстеження',
     'customer_delivery_order_track_shipment' => 'Відстежити ваше відправлення',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Ваше замовлення доставлено',
     'customer_order_delivered_greeting' => 'Привіт :customer_name,',
     'customer_order_delivered_message' => 'Ваше замовлення доставлено. Дякуємо за покупку наших товарів!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Номер відстеження',
     'customer_order_delivered_tracking_link' => 'Посилання для відстеження',
     'customer_order_delivered_track_shipment' => 'Переглянути деталі відстеження',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Оплату підтверджено для замовлення #:order_id',
+    'order_confirm_payment_title' => 'Оплату підтверджено для замовлення :order_id',
     'order_confirm_payment_greeting' => 'Привіт :customer_name,',
     'order_confirm_payment_message' => 'Вашу оплату підтверджено. Дякуємо за покупку наших товарів!',
     'order_confirm_payment_order_number' => 'Номер замовлення',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Дякуємо за вашу оплату. Ваше замовлення буде оброблено найближчим часом.',
     'order_confirm_payment_order_summary' => 'Зведення замовлення',
     'order_confirm_payment_shipping_method' => 'Спосіб доставки',
-
-    // Order Recovery Email
     'order_recover_title' => 'У вас є незавершене замовлення',
     'order_recover_greeting' => 'Привіт :customer_name,',
     'order_recover_message' => 'Ми помітили, що у вас є незавершене замовлення. Чи хотіли б ви завершити покупку?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Завершити ваше замовлення',
     'order_recover_order_summary' => 'Зведення замовлення',
     'order_recover_note' => 'Примітка',
-
-    // Welcome Email
     'welcome_greeting' => 'Раді бачити вас тут, :customer_name!',
     'welcome_message' => 'Ласкаво просимо до :site_title!',
     'welcome_register_success' => 'Ви успішно зареєстрували обліковий запис на <strong>:site_title</strong>.',
     'welcome_explore' => 'Якщо вам потрібна допомога, не соромтеся відповісти на цей email!',
     'welcome_visit_shop' => 'Почати покупки!',
-
-    // Confirm Email
     'confirm_email_title' => 'Підтвердіть Email',
     'confirm_email_greeting' => 'Раді бачити вас тут, :customer_name!',
     'confirm_email_message' => 'Будь ласка, підтвердіть свою адресу email, натиснувши кнопку нижче.',
     'confirm_email_instruction' => 'Будь ласка, підтвердіть свою адресу email, щоб отримати доступ до цього веб-сайту. Натисніть на кнопку нижче, щоб підтвердити свій email.',
     'confirm_email_button' => 'Підтвердіть вашу адресу email',
     'confirm_email_trouble' => 'Якщо у вас виникли проблеми з натисканням кнопки "Підтвердіть вашу адресу email", скопіюйте та вставте URL нижче у ваш веб-браузер: <a href=":verify_link">:verify_link</a> і вставте його у ваш браузер.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Скиньте ваш пароль',
     'password_reminder_greeting' => 'Привіт :customer_name,',
     'password_reminder_message' => 'Ви запитали скидання вашого пароля.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Скинути пароль',
     'password_reminder_ignore' => 'Якщо ви не запитували скидання пароля, будь ласка, ігноруйте цей email.',
     'password_reminder_trouble_clicking' => 'Якщо у вас виникли проблеми з натисканням кнопки "Скинути пароль", скопіюйте та вставте URL нижче у ваш веб-браузер: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Запит на повернення отримано',
     'order_return_request_greeting' => 'Привіт :customer_name,',
-    'order_return_request_message' => 'Ми отримали ваш запит на повернення для замовлення #:order_id.',
+    'order_return_request_message' => 'Ми отримали ваш запит на повернення для замовлення :order_id.',
     'order_return_request_reason' => 'Причина повернення',
     'order_return_request_items' => 'Товари для повернення',
     'order_return_request_process' => 'Ми обробимо ваш запит і зв\'яжемося з вами найближчим часом.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Причина повернення',
     'order_return_request_order_summary' => 'Зведення замовлення',
     'order_return_request_note' => 'Примітка',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Оновлення статусу повернення замовлення',
     'order_return_status_updated_greeting' => 'Шановний :customer_name,',
     'order_return_status_updated_message' => 'Ми хотіли повідомити вас, що статус вашого запиту на повернення для замовлення :order_id оновлено.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Примітка модератора: " :description ".',
     'order_return_status_updated_questions' => 'Якщо у вас є питання або зауваження щодо цього оновлення, будь ласка, не соромтеся зв\'язатися з нашою службою підтримки.',
     'order_return_status_updated_view_details' => 'Переглянути деталі повернення',
-
-    // Review Products Email
     'review_products_title' => 'Відгук про вашу недавню покупку',
     'review_products_greeting' => 'Привіт :customer_name,',
-    'review_products_message' => 'Ваше замовлення #:order_id завершено. Ми хотіли б почути ваш відгук!',
+    'review_products_message' => 'Ваше замовлення :order_id завершено. Ми хотіли б почути ваш відгук!',
     'review_products_instruction' => 'Будь ласка, приділіть хвилину, щоб залишити відгук про товари, які ви придбали:',
     'review_products_button' => 'Залишити відгук про товари',
     'review_products_thank_you' => 'Дякуємо за вашу покупку!',
     'review_products_products' => 'Товари для відгуку',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Ваші цифрові товари готові',
     'download_digital_products_greeting' => 'Привіт :customer_name,',
     'download_digital_products_message' => 'Дякуємо за вашу покупку! Ваші цифрові товари готові до завантаження.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Завантажити всі файли',
     'download_digital_products_external_link_downloads' => 'Завантажити зовнішні файли',
     'download_digital_products_payment_method' => 'Спосіб оплати',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Ваші ліцензійні коди',
     'digital_product_license_codes_greeting' => 'Шановний :customer_name,',
     'digital_product_license_codes_message' => 'Дякуємо за вашу покупку! Ось ваші ліцензійні коди:',
     'digital_product_license_codes_thanks' => 'Дякуємо за покупку наших цифрових товарів.',
-    'digital_product_license_codes_below' => 'Нижче ваші ліцензійні коди для товарів, які ви придбали:',
     'digital_product_license_codes_product' => 'Товар',
     'digital_product_license_codes_license' => 'Ліцензійний код',
     'digital_product_license_codes_order_summary' => 'Ось що ви замовили:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Кожен ліцензійний код унікальний і може бути використаний тільки один раз',
     'digital_product_license_codes_note_3' => 'Не діліться вашими ліцензійними кодами з іншими',
     'digital_product_license_codes_note_4' => 'Якщо у вас виникли проблеми з вашими ліцензійними кодами, будь ласка, зв\'яжіться з нашою службою підтримки',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Файли товару оновлено',
     'product_file_updated_greeting' => 'Привіт, :customer_name!',
     'product_file_updated_message' => 'Файли для товару <a href=":product_link"><strong>:product_name</strong></a> оновлено.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Ви можете завантажити оновлені файли зі свого облікового запису.',
     'product_file_updated_order_number' => 'Номер замовлення',
     'product_file_updated_download' => 'Завантажити оновлені файли',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Платіж отримано',
     'invoice_payment_created_greeting' => 'Привіт :customer_name,',
     'invoice_payment_created_message' => 'Ми успішно отримали вашу оплату для :site_title. Дякуємо!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Ви можете переглянути ваш рахунок онлайн за адресою <a href=":invoice_link">:invoice_link</a> з кодом рахунку #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Ваш код рахунку #:invoice_code',
     'invoice_payment_created_view_online' => 'Переглянути рахунок онлайн',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Привіт :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Ми отримали ваш запит на видалення вашого облікового запису.',
     'customer_deletion_request_confirmation_warning' => 'Зверніть увагу, що цю дію неможливо скасувати. Всі ваші дані будуть назавжди видалені.',
     'customer_deletion_request_confirmation_button' => 'Підтвердити видалення',
     'customer_deletion_request_confirmation_cancel' => 'Якщо ви не запитували це, будь ласка, ігноруйте цей email.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Привіт :customer_name,',
     'customer_deletion_request_completed_message' => 'Ваш обліковий запис успішно видалено на ваш запит.',
     'customer_deletion_request_completed_thank_you' => 'Дякуємо, що були з нами.',
     'customer_deletion_request_completed_goodbye' => 'Сподіваємося побачити вас знову в майбутньому.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Привіт, Адміністратор,',
     'payment_proof_upload_notification_message' => 'Клієнт :customer_name (Email: <a href="mailto::customer_email">:customer_email</a>) завантажив підтвердження оплати для свого замовлення з ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'Ви можете переглянути деталі оплати <a href=":payment_link">тут</a> та деталі замовлення <a href=":order_link">тут</a>.',

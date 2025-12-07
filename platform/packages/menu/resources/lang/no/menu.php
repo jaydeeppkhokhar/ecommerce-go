@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Omorganiser menyelementer ved å dra og slippe dem for å endre rekkefølgen eller nøste dem som undermenyer.',
     'widget_custom_menu' => 'Tilpasset meny',
     'widget_custom_menu_description' => 'Legg til en tilpasset meny i widgetområdet ditt.',
+    'select_menu' => 'Velg meny',
 ];

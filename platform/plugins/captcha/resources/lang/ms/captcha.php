@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Borang log masuk pentadbir',
     'admin_forgot_password_form' => 'Borang lupa kata laluan pentadbir',
     'admin_reset_password_form' => 'Borang tetapkan semula kata laluan pentadbir',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matematik Captcha',
+    'math_question' => 'Sila selesaikan fungsi matematik berikut: placeholder0 =?',
+    'captcha_verification_failed' => 'Pengesahan Captcha gagal!',
+    'math_captcha_verification_failed' => 'Pengesahan matematik Captcha gagal!',
 ];

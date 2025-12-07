@@ -19,6 +19,9 @@ class VendorController extends BaseController
 
     public function view($id)
     {
+        /**
+         * @var Vendor $vendor
+         */
         $vendor = Vendor::query()
             ->with(['store', 'orders', 'addresses', 'wishlist', 'reviews', 'revenues', 'withdrawals'])
             ->findOrFail($id);
@@ -27,10 +30,21 @@ class VendorController extends BaseController
 
         Assets::addScriptsDirectly('vendor/core/plugins/ecommerce/js/customer.js');
 
-        $totalSpent = $vendor->completedOrders()->sum('amount');
-        $totalOrders = $vendor->orders()->count();
-        $completedOrders = $vendor->completedOrders()->count();
-        $totalProducts = $vendor->completedOrders()
+        $orderStats = $vendor
+            ->orders()
+            ->selectRaw('
+                COUNT(*) as total_orders,
+                SUM(CASE WHEN is_finished = 1 THEN 1 ELSE 0 END) as completed_orders,
+                SUM(CASE WHEN is_finished = 1 THEN amount ELSE 0 END) as total_spent
+            ')
+            ->first();
+
+        $totalSpent = $orderStats->total_spent ?? 0;
+        $totalOrders = $orderStats->total_orders ?? 0;
+        $completedOrders = $orderStats->completed_orders ?? 0;
+
+        $totalProducts = $vendor
+            ->completedOrders()
             ->withCount('products')
             ->get()
             ->sum('products_count');
@@ -70,7 +84,7 @@ class VendorController extends BaseController
         if (! $storage->exists($vendor->store->certificate_file)) {
             return BaseHttpResponse::make()
                 ->setError()
-                ->setMessage(__('File not found!'));
+                ->setMessage(trans('plugins/marketplace::marketplace.file_not_found'));
         }
 
         return response()->file($storage->path($vendor->store->certificate_file));
@@ -85,7 +99,7 @@ class VendorController extends BaseController
         if (! $storage->exists($vendor->store->government_id_file)) {
             return BaseHttpResponse::make()
                 ->setError()
-                ->setMessage(__('File not found!'));
+                ->setMessage(trans('plugins/marketplace::marketplace.file_not_found'));
         }
 
         return response()->file($storage->path($vendor->store->government_id_file));

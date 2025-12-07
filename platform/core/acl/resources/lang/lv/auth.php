@@ -66,6 +66,7 @@ return [
     'languages' => 'Valodas',
     'reset_password' => 'Atiestatīt paroli',
     'deactivated_message' => 'Jūsu konts ir deaktivizēts. Lūdzu, sazinieties ar administratoru.',
+    'password_changed_message' => 'Jūsu parole ir mainīta. Lūdzu, piesakieties vēlreiz ar savu jauno paroli.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

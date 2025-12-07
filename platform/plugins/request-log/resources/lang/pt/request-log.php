@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Limpar registros de solicitação antigos',
     'clear_old_data_helper' => 'Exclua automaticamente logs de solicitação antigos anteriores ao período selecionado para manter seu banco de dados limpo e otimizado.',
     'cronjob_warning' => 'Para usar esse recurso, você precisa configurar um cron job seguindo este link: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Nenhum resultado encontrado',
+    'no_request_errors_message' => 'Parece que não há erros de solicitação aqui.',
 ];

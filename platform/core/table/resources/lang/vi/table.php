@@ -38,8 +38,10 @@ return [
     'yes' => 'Có',
     'save_bulk_change_success' => 'Cập nhật dữ liệu cho các bản ghi thành công!',
     'please_select_record' => 'Vui lòng chọn ít nhất 1 bản ghi để thực hiện hành động này!',
-    'filtered' => '(đã được lọc từ _MAX_ bản ghi)',
+    'filtered' => '(đã được lọc từ _MAX_ bản ghi]',
     'search' => 'Tìm kiếm...',
     'copied' => 'Đã sao chép',
     'copy' => 'Sao chép',
+    'clear' => 'Xóa',
+    'something_went_wrong' => 'Đã xảy ra lỗi',
 ];

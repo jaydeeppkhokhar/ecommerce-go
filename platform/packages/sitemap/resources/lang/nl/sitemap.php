@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatische Generatie',
         'automatic_generation_desc' => 'Updates automatisch wanneer inhoud verandert',
         'automatic_update_note' => 'De sitemap wordt automatisch bijgewerkt wanneer u inhoud op uw website aanmaakt, bewerkt of verwijdert.',
+        'submit_sitemap' => 'Sitemap naar IndexNow verzenden',
+        'submitting_sitemap' => 'Bezig met verzenden...',
+        'sitemap_submitted_successfully' => 'Sitemap is succesvol naar zoekmachines verzonden!',
+        'sitemap_submission_failed' => 'Sitemap kon niet naar alle zoekmachines worden verzonden.',
+        'sitemap_submission_partial' => 'Sitemap is verzonden met enkele fouten.',
+        'submit_sitemap_error' => 'Verzenden van de sitemap is mislukt. Probeer het opnieuw.',
+        'indexnow_disabled' => 'IndexNow is niet ingeschakeld. Schakel het eerst in.',
+        'indexnow_no_api_key' => 'Geen API-sleutel gevonden. Genereer eerst een API-sleutel.',
     ],
 ];

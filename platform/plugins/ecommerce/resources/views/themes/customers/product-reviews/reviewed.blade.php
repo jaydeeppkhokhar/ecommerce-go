@@ -29,10 +29,10 @@
                         @endif
 
                         @if (is_plugin_active('marketplace') && $item->product->store?->id)
-                            <span class="d-block">{{ __('Sold by') }}: <a href="{{ $item->product->original_product->store->url }}" class="text-primary">{{ $item->product->store->name }}</a></span>
+                            <span class="d-block">{{ trans('plugins/ecommerce::customer-dashboard.sold_by') }}: <a href="{{ $item->product->original_product->store->url }}" class="text-primary">{{ $item->product->store->name }}</a></span>
                         @endif
 
-                        <span class="d-block text-muted">{{ __('Date') }}: {{ $item->created_at->translatedFormat('M d, Y h:m') }}</span>
+                        <span class="d-block text-muted">{{ trans('plugins/ecommerce::customer-dashboard.date') }}: {{ $item->created_at->translatedFormat('M d, Y h:m') }}</span>
                     </div>
 
                     <div class="bb-customer-card-description">
@@ -42,11 +42,11 @@
                     <div class="bb-customer-card-actions mt-2">
                         {!! Form::open([
                             'url' => route('public.reviews.destroy', $item->id),
-                            'onSubmit' => 'return confirm("' . __('Do you really want to delete the review?') . '")',
+                            'onSubmit' => 'return confirm("' . trans('plugins/ecommerce::customer-dashboard.do_you_really_want_to_delete_review') . '")',
                             'class' => 'd-inline'
                         ]) !!}
                             <input name="_method" type="hidden" value="DELETE">
-                            <button class="btn btn-outline-danger btn-sm">{{ __('Delete') }}</button>
+                            <button class="btn btn-outline-danger btn-sm">{{ trans('plugins/ecommerce::customer-dashboard.delete') }}</button>
                         {!! Form::close() !!}
                     </div>
                 </div>
@@ -59,7 +59,7 @@
 @else
     <div class="text-center p-4">
         <div role="alert" class="alert alert-info">
-            {{ __('No reviews!') }}
+            {{ trans('plugins/ecommerce::customer-dashboard.no_reviews') }}
         </div>
     </div>
 @endif

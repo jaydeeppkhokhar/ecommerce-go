@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Administrator login-formular',
     'admin_forgot_password_form' => 'Administrator glemt adgangskode-formular',
     'admin_reset_password_form' => 'Administrator nulstil adgangskode-formular',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Math Captcha',
+    'math_question' => 'Løs venligst følgende matematiske funktion: :label = ?',
+    'captcha_verification_failed' => 'Captcha-bekræftelse mislykkedes!',
+    'math_captcha_verification_failed' => 'Math Captcha-bekræftelse mislykkedes!',
 ];

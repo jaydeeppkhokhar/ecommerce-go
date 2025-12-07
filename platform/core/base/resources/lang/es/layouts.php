@@ -10,7 +10,7 @@ return [
     'setting_email' => 'Correo electrónico',
     'system_information' => 'Información del sistema',
     'theme' => 'Diseño',
-    'copyright' => 'Copyright :year &copy; :company. Version: <span>:version</span>',
+    'copyright' => 'Derechos de autor :year © :company. Versión :version',
     'profile' => 'Perfil',
     'logout' => 'Cerrar sesión',
     'no_search_result' => 'No se encontraron resultados, por favor prueba con palabras clave diferentes.',
@@ -21,5 +21,4 @@ return [
     'page_loaded_in_time' => 'Página cargada en :time segundos',
     'view_website' => 'Ver sitio web',
     'tools' => 'Herramientas',
-    'page_loaded_time' => 'Pagina cargada en',
 ];

@@ -9,7 +9,7 @@ return new class () extends Migration {
     public function up(): void
     {
         $duplicates = DB::table('ec_order_addresses as oa1')
-            ->join('ec_order_addresses as oa2', function ($join) {
+            ->join('ec_order_addresses as oa2', function ($join): void {
                 $join->on('oa1.order_id', '=', 'oa2.order_id')
                     ->on('oa1.type', '=', 'oa2.type')
                     ->whereRaw('oa1.id > oa2.id');
@@ -28,7 +28,7 @@ return new class () extends Migration {
         }
 
         try {
-            Schema::table('ec_order_addresses', function (Blueprint $table) {
+            Schema::table('ec_order_addresses', function (Blueprint $table): void {
                 $table->unique(['order_id', 'type'], 'ec_order_addresses_order_id_type_unique');
             });
         } catch (Exception) {
@@ -38,7 +38,7 @@ return new class () extends Migration {
     public function down(): void
     {
         try {
-            Schema::table('ec_order_addresses', function (Blueprint $table) {
+            Schema::table('ec_order_addresses', function (Blueprint $table): void {
                 $table->dropUnique('ec_order_addresses_order_id_type_unique');
             });
         } catch (Exception) {

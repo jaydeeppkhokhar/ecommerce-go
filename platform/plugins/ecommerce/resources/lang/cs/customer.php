@@ -23,7 +23,6 @@ return [
         'activated' => 'Aktivován',
         'locked' => 'Zablokován',
     ],
-    'email_verified' => 'E-mail ověřen?',
     'verify_email' => [
         'confirm_heading' => 'Ověření e-mailu',
         'confirm_description' => 'Jste si jisti, že chcete ověřit e-mail tohoto zákazníka?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'klikněte zde',
         'confirm_button' => 'Ověřit',
     ],
-    'email_already_verified' => 'E-mail je již ověřen.',
     'verification_email_sent' => 'Ověřovací e-mail byl úspěšně odeslán!',
     'resend_verification_email' => 'Znovu odeslat ověřovací e-mail',
     'resend_verification_email_confirmation' => 'Jste si jisti, že chcete znovu odeslat ověřovací e-mail tomuto zákazníkovi?',

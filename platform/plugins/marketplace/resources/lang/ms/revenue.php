@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Pendapatan',
     'edit' => 'Kemas kini baki dompet',
     'view_store' => 'Lihat kedai ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Tambah/Tolak jumlah vendor',
     'statements' => 'Penyata',
     'products' => 'Produk',
+    'items_earning_sales' => 'Jualan Pendapatan Item: :amount',
 ];

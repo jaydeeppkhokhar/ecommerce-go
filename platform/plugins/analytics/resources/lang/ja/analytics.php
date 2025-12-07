@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Analytics プラグイン エラー: サードパーティ ライブラリがありません。"composer update" を実行してインストールしてください。',
     'browser' => 'ブラウザ',
     'url' => 'URL',
+    'credential_invalid' => 'この認証情報は無効な Google Analytics 認証情報です。',
+    'file_not_valid_json' => 'このファイルは有効な JSON ファイルではありません。',
+    'no_results_found' => '結果が見つかりません',
+    'upload_service_account_json' => 'サービスアカウントJSONファイルをアップロード',
 ];

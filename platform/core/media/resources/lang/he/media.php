@@ -44,6 +44,8 @@ return [
     'alt_text' => 'טקסט חלופי',
 
     'folder_created' => 'תיקייה נוצרה בהצלחה!',
+    'folder_exists' => 'התיקייה :folder כבר קיימת!',
+    'directory_must_empty' => 'הספרייה חייבת להיות ריקה כדי למחוק אותה!',
     'gallery' => 'גלריית מדיה',
 
     'trash_error' => 'שגיאה במחיקת הפריטים הנבחרים',

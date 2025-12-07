@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alternativ text',
 
     'folder_created' => 'Mappen skapades framgångsrikt!',
+    'folder_exists' => 'Mappen :folder finns redan!',
+    'directory_must_empty' => 'Katalogen måste vara tom för att raderas!',
     'gallery' => 'Mediagalleri',
 
     'trash_error' => 'Fel vid borttagning av valda objekt',

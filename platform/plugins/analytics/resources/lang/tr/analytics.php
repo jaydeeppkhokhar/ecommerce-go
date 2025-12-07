@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Analytics eklentisi hatası: Üçüncü taraf kütüphaneleri eksik. Lütfen bunları yüklemek için "composer update" komutunu çalıştırın.',
     'browser' => 'Tarayıcı',
     'url' => 'URL',
+    'credential_invalid' => 'Bu kimlik bilgisi geçerli bir Google Analytics kimlik bilgisi değil.',
+    'file_not_valid_json' => 'Bu dosya geçerli bir JSON dosyası değil.',
+    'no_results_found' => 'Sonuç bulunamadı',
+    'upload_service_account_json' => 'Hizmet Hesabı JSON Dosyasını Yükle',
 ];

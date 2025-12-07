@@ -10,6 +10,6 @@ return [
     ],
     'products_are_from_different_vendors' => 'Không thể tạo đơn hàng! Sản phẩm đến từ các người bán khác nhau.',
     'return' => [
-        'description' => 'Trả lại từ đơn hàng #:order',
+        'description' => 'Hoàn hàng từ đơn hàng #:order',
     ],
 ];

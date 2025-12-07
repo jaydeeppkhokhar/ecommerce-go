@@ -60,17 +60,44 @@ class Order extends BaseModel
     protected static function booted(): void
     {
         self::deleted(function (Order $order): void {
-            // Restore stock quantities before deleting order products
+            $order->loadMissing([
+                'products',
+                'shipment',
+                'histories',
+                'address',
+                'invoice',
+                'payment',
+                'orderMetadata',
+            ]);
+
             $order->restockProductQuantities();
 
-            $order->shipment()->each(fn (Shipment $item) => $item->delete());
-            $order->histories()->delete();
-            $order->products()->delete();
-            $order->address()->delete();
-            $order->invoice()->each(fn (Invoice $item) => $item->delete());
+            if ($order->relationLoaded('shipment') && $order->shipment->id) {
+                $order->shipment->delete();
+            }
 
-            if (is_plugin_active('payment')) {
-                $order->payment()->delete();
+            if ($order->relationLoaded('histories')) {
+                $order->histories()->delete();
+            }
+
+            if ($order->relationLoaded('products')) {
+                $order->products()->delete();
+            }
+
+            if ($order->relationLoaded('address')) {
+                $order->address()->delete();
+            }
+
+            if ($order->relationLoaded('invoice') && $order->invoice->id) {
+                $order->invoice->delete();
+            }
+
+            if (is_plugin_active('payment') && $order->relationLoaded('payment') && $order->payment->id) {
+                $order->payment->delete();
+            }
+
+            if ($order->relationLoaded('orderMetadata')) {
+                $order->orderMetadata()->delete();
             }
         });
 
@@ -156,6 +183,40 @@ class Order extends BaseModel
     public function taxInformation(): HasOne
     {
         return $this->hasOne(OrderTaxInformation::class, 'order_id');
+    }
+
+    public function orderMetadata(): HasMany
+    {
+        return $this->hasMany(OrderMetadata::class, 'order_id');
+    }
+
+    public function scopeSearchByKeyword($query, ?string $keyword)
+    {
+        if (! $keyword) {
+            return $query;
+        }
+
+        $keyword = '%' . $keyword . '%';
+
+        return $query->where(function ($query) use ($keyword): void {
+            $query
+                ->whereHas('address', function ($subQuery) use ($keyword) {
+                    return $subQuery
+                        ->where('name', 'LIKE', $keyword)
+                        ->orWhere('email', 'LIKE', $keyword)
+                        ->orWhere('phone', 'LIKE', $keyword);
+                })
+                ->orWhereHas('user', function ($subQuery) use ($keyword) {
+                    return $subQuery
+                        ->where('name', 'LIKE', $keyword)
+                        ->orWhere('email', 'LIKE', $keyword)
+                        ->orWhere('phone', 'LIKE', $keyword);
+                })
+                ->orWhereHas('products.product', function ($subQuery) use ($keyword) {
+                    return $subQuery->where('sku', 'LIKE', $keyword);
+                })
+                ->orWhere('code', 'LIKE', $keyword);
+        });
     }
 
     public function canBeCanceled(): bool
@@ -339,6 +400,7 @@ class Order extends BaseModel
             ->whereDate('payments.created_at', '>=', $startDate)
             ->whereDate('payments.created_at', '<=', $endDate)
             ->where('payments.status', PaymentStatusEnum::COMPLETED)
+            ->where('ec_orders.is_finished', true)
             ->groupBy('date')
             ->select($select)
             ->get();
@@ -447,5 +509,67 @@ class Order extends BaseModel
         ];
 
         return apply_filters('ecommerce_order_webhook_data', $data, $this);
+    }
+
+    public function getOrderTrackingUrl(): string
+    {
+        $params = [
+            'order_id' => $this->code,
+        ];
+
+        if (EcommerceHelper::isOrderTrackingUsingPhone()) {
+            $params['phone'] = $this->user->phone ?: $this->address->phone;
+        } else {
+            $params['email'] = $this->user->email ?: $this->address->email;
+        }
+
+        return route('public.orders.tracking', $params);
+    }
+
+    public function isPaymentProofEnabled(): bool
+    {
+        if (! $this->payment || ! $this->payment->payment_channel) {
+            return false;
+        }
+
+        return EcommerceHelper::isPaymentProofEnabledForPaymentMethod($this->payment->payment_channel->getValue());
+    }
+
+    public function getOrderMetadata(string $key, $default = null)
+    {
+        $metadata = $this->orderMetadata()->where('meta_key', $key)->first();
+
+        return $metadata ? $metadata->meta_value : $default;
+    }
+
+    public function setOrderMetadata(string $key, $value): void
+    {
+        $this->orderMetadata()->updateOrCreate(
+            ['meta_key' => $key],
+            ['meta_value' => $value]
+        );
+    }
+
+    public function storeCustomerLocale(): void
+    {
+        $locale = app()->getLocale();
+
+        if ($locale) {
+            $this->setOrderMetadata('customer_locale', $locale);
+        }
+    }
+
+    public function storeCustomerCurrency(): void
+    {
+        $currency = get_application_currency();
+
+        if ($currency) {
+            $this->setOrderMetadata('customer_currency', $currency->title);
+        }
+    }
+
+    public function getCustomerCurrency(): ?string
+    {
+        return $this->getOrderMetadata('customer_currency');
     }
 }

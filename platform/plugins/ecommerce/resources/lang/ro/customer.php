@@ -23,7 +23,6 @@ return [
         'activated' => 'Activat',
         'locked' => 'Blocat',
     ],
-    'email_verified' => 'Email verificat?',
     'verify_email' => [
         'confirm_heading' => 'Confirmare verificare email',
         'confirm_description' => 'Sigur doriți să verificați emailul acestui client?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'click aici',
         'confirm_button' => 'Verifică',
     ],
-    'email_already_verified' => 'Emailul este deja verificat.',
     'verification_email_sent' => 'Emailul de verificare a fost trimis cu succes!',
     'resend_verification_email' => 'Retrimite emailul de verificare',
     'resend_verification_email_confirmation' => 'Sigur doriți să retrimiteți emailul de verificare către acest client?',

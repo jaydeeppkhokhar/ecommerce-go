@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automaatne loomine',
         'automatic_generation_desc' => 'Värskendub automaatselt, kui sisu muutub',
         'automatic_update_note' => 'Saidileht värskendub automaatselt iga kord, kui loote, muudate või kustutate oma veebisaidil sisu.',
+        'submit_sitemap' => 'Saada saidikaart IndexNow\'le',
+        'submitting_sitemap' => 'Saatmine...',
+        'sitemap_submitted_successfully' => 'Saidikaart saadeti edukalt otsingumootoritele!',
+        'sitemap_submission_failed' => 'Saidikaardi saatmine kõigile otsingumootoritele ebaõnnestus.',
+        'sitemap_submission_partial' => 'Saidikaart saadeti mõne veaga.',
+        'submit_sitemap_error' => 'Saidikaardi saatmine ebaõnnestus. Palun proovi uuesti.',
+        'indexnow_disabled' => 'IndexNow pole lubatud. Palun luba see esmalt.',
+        'indexnow_no_api_key' => 'API võtit ei leitud. Palun genereeri esmalt API võti.',
     ],
 ];

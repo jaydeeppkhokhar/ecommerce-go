@@ -65,6 +65,8 @@ return [
     'sign_in_below' => '以下からサインインしてください',
     'languages' => '言語',
     'reset_password' => 'パスワードのリセット',
+    'deactivated_message' => 'アカウントが無効化されました。管理者にお問い合わせください。',
+    'password_changed_message' => 'パスワードが変更されました。新しいパスワードで再度ログインしてください。',
     'settings' => [
         'email' => [
             'title' => 'ACL',

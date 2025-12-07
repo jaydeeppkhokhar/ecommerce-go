@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Scanați codul QR pentru a urmări expediția',
     ],
     'customer_confirmed_delivery_at' => 'Clientul a confirmat livrarea la',
+    'no_shipping_methods_available' => 'Nicio metodă de livrare disponibilă!',
 ];

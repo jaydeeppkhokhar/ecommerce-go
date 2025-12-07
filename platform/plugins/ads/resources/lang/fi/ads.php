@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Virheellinen Google AdSense Client ID -muoto. Sen pitäisi olla muodossa: ca-pub-XXXXXXXXXXXXXXXX (jossa X on numero).',
         ],
     ],
+    'banner' => 'Banneri',
+    'tablet_image' => 'Tablet-kuva',
+    'tablet_image_helper' => 'Laitteille, joiden leveys on 768px - 1200px. Jos tyhjä, käytetään työpöytäkuvaa.',
+    'mobile_image' => 'Mobiili-kuva',
+    'mobile_image_helper' => 'Laitteille, joiden leveys on alle 768px. Jos tyhjä, käytetään tablet-kuvaa.',
 ];

@@ -484,19 +484,35 @@ class HookServiceProvider extends ServiceProvider
 
             if (is_plugin_active('payment')) {
                 CODPaymentMethodForm::extend(function (CODPaymentMethodForm $form): void {
-                    $form->add(
-                        get_payment_setting_key('minimum_amount', PaymentMethodEnum::COD),
-                        NumberField::class,
-                        NumberFieldOption::make()
-                            ->label(
-                                trans(
-                                    'plugins/ecommerce::setting.payment_method_cod_minimum_amount',
-                                    ['currency' => get_application_currency()->title]
+                    $form
+                        ->add(
+                            get_payment_setting_key('minimum_amount', PaymentMethodEnum::COD),
+                            NumberField::class,
+                            NumberFieldOption::make()
+                                ->label(
+                                    trans(
+                                        'plugins/ecommerce::setting.payment_method_cod_minimum_amount',
+                                        ['currency' => get_application_currency()->title]
+                                    )
                                 )
-                            )
-                            ->value(get_payment_setting('minimum_amount', PaymentMethodEnum::COD, 0))
-                            ->toArray()
-                    );
+                                ->value(get_payment_setting('minimum_amount', PaymentMethodEnum::COD, 0))
+                                ->helperText(trans('plugins/ecommerce::setting.payment_method_cod_minimum_amount_helper'))
+                                ->toArray()
+                        )
+                        ->add(
+                            get_payment_setting_key('maximum_amount', PaymentMethodEnum::COD),
+                            NumberField::class,
+                            NumberFieldOption::make()
+                                ->label(
+                                    trans(
+                                        'plugins/ecommerce::setting.payment_method_cod_maximum_amount',
+                                        ['currency' => get_application_currency()->title]
+                                    )
+                                )
+                                ->value(get_payment_setting('maximum_amount', PaymentMethodEnum::COD, 0))
+                                ->helperText(trans('plugins/ecommerce::setting.payment_method_cod_maximum_amount_helper'))
+                                ->toArray()
+                        );
                 });
 
                 BankTransferPaymentMethodForm::extend(function (BankTransferPaymentMethodForm $form): void {
@@ -512,6 +528,21 @@ class HookServiceProvider extends ServiceProvider
                                     )
                                 )
                                 ->value(get_payment_setting('minimum_amount', PaymentMethodEnum::BANK_TRANSFER, 0))
+                                ->helperText(trans('plugins/ecommerce::setting.payment_method_minimum_amount_helper'))
+                                ->toArray()
+                        )
+                        ->add(
+                            get_payment_setting_key('maximum_amount', PaymentMethodEnum::BANK_TRANSFER),
+                            NumberField::class,
+                            NumberFieldOption::make()
+                                ->label(
+                                    trans(
+                                        'plugins/ecommerce::setting.payment_method_maximum_amount',
+                                        ['currency' => get_application_currency()->title]
+                                    )
+                                )
+                                ->value(get_payment_setting('maximum_amount', PaymentMethodEnum::BANK_TRANSFER, 0))
+                                ->helperText(trans('plugins/ecommerce::setting.payment_method_maximum_amount_helper'))
                                 ->toArray()
                         )
                         ->add(
@@ -525,6 +556,7 @@ class HookServiceProvider extends ServiceProvider
                                 ->value(
                                     setting('payment_bank_transfer_display_bank_info_at_the_checkout_success_page', false)
                                 )
+                                ->helperText(trans('plugins/ecommerce::setting.display_bank_info_at_the_checkout_success_page_helper'))
                                 ->toArray()
                         );
                 });
@@ -540,10 +572,20 @@ class HookServiceProvider extends ServiceProvider
                                 'numeric',
                                 'min:0',
                             ],
+                            get_payment_setting_key('maximum_amount', PaymentMethodEnum::COD) => [
+                                'nullable',
+                                'numeric',
+                                'min:0',
+                            ],
                         ],
                         PaymentMethodEnum::BANK_TRANSFER => [
                             ...$rules,
                             get_payment_setting_key('minimum_amount', PaymentMethodEnum::BANK_TRANSFER) => [
+                                'nullable',
+                                'numeric',
+                                'min:0',
+                            ],
+                            get_payment_setting_key('maximum_amount', PaymentMethodEnum::BANK_TRANSFER) => [
                                 'nullable',
                                 'numeric',
                                 'min:0',
@@ -890,6 +932,22 @@ class HookServiceProvider extends ServiceProvider
                         break;
                     }
 
+                    $maximumOrderAmount = (float) get_payment_setting('maximum_amount', PaymentMethodEnum::COD, 0);
+
+                    if ($maximumOrderAmount > 0 && Cart::instance('cart')->rawSubTotal() > $maximumOrderAmount) {
+                        $data['error'] = true;
+                        $data['message'] = trans(
+                            'plugins/ecommerce::setting.payment_method_maximum_amount_error',
+                            [
+                                'payment_method' => PaymentMethodEnum::COD()->label(),
+                                'amount' => format_price($maximumOrderAmount),
+                                'more' => format_price(Cart::instance('cart')->rawSubTotal() - $maximumOrderAmount),
+                            ]
+                        );
+
+                        break;
+                    }
+
                     $data['charge_id'] = $this->app->make(CodPaymentService::class)->execute($paymentData);
 
                     break;
@@ -905,6 +963,22 @@ class HookServiceProvider extends ServiceProvider
                             [
                                 'amount' => format_price($minimumOrderAmount),
                                 'more' => format_price($minimumOrderAmount - Cart::instance('cart')->rawSubTotal()),
+                            ]
+                        );
+
+                        break;
+                    }
+
+                    $maximumOrderAmount = (float) get_payment_setting('maximum_amount', PaymentMethodEnum::BANK_TRANSFER, 0);
+
+                    if ($maximumOrderAmount > 0 && Cart::instance('cart')->rawSubTotal() > $maximumOrderAmount) {
+                        $data['error'] = true;
+                        $data['message'] = trans(
+                            'plugins/ecommerce::setting.payment_method_maximum_amount_error',
+                            [
+                                'payment_method' => PaymentMethodEnum::BANK_TRANSFER()->label(),
+                                'amount' => format_price($maximumOrderAmount),
+                                'more' => format_price(Cart::instance('cart')->rawSubTotal() - $maximumOrderAmount),
                             ]
                         );
 
@@ -929,6 +1003,12 @@ class HookServiceProvider extends ServiceProvider
 
             if ($minimumOrderAmount > Cart::instance('cart')->rawSubTotal()) {
                 return view('plugins/ecommerce::orders.partials.minimum-order-amount-notice', compact('minimumOrderAmount', 'paymentName', 'paymentLabel'))->render();
+            }
+
+            $maximumOrderAmount = (float) get_payment_setting('maximum_amount', $paymentName, 0);
+
+            if ($maximumOrderAmount > 0 && Cart::instance('cart')->rawSubTotal() > $maximumOrderAmount) {
+                return view('plugins/ecommerce::orders.partials.maximum-order-amount-notice', compact('maximumOrderAmount', 'paymentName', 'paymentLabel'))->render();
             }
 
             return $html;
@@ -1145,7 +1225,7 @@ class HookServiceProvider extends ServiceProvider
             $message = '';
 
             if ($product->minimum_order_quantity > 0 && $quantityOfProduct < $product->minimum_order_quantity) {
-                $message = __('You need to add :quantity more items to place your order. ', [
+                $message = __('You need to add :quantity more items to place your order.', [
                     'product' => BaseHelper::clean($product->original_product->name),
                     'quantity' => $product->minimum_order_quantity - $quantityOfProduct,
                 ]);

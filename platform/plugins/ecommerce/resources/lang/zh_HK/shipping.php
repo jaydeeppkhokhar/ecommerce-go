@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => '掃描 QR 碼追蹤您的出貨',
     ],
     'customer_confirmed_delivery_at' => '顧客確認送達時間',
+    'no_shipping_methods_available' => '沒有可用的配送方式！',
 ];

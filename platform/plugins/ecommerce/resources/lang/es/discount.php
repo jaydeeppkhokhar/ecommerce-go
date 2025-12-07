@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Este cupón no se puede aplicar porque tu carrito contiene artículos de oferta flash (:product_name). Los precios de oferta flash no se pueden combinar con descuentos de cupón.',
     'coupon_applied_successfully' => '¡Excelente! El código de cupón ":code" ha sido aplicado. ¡Has ahorrado dinero en este pedido!',
     'coupon_removed_successfully' => 'El código de cupón ha sido removido de tu pedido.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Códigos de cupón (:count)',
+    'left_quantity' => 'Quedan :left',
+    'apply' => 'Aplicar',
+    'remove' => 'Eliminar',
+    'select_coupon' => 'Seleccionar cupón',
+    'you_have_coupon_code' => '¿Tienes un código de cupón?',
+    'close' => 'Cerrar',
+    'coupon_code_label' => 'Código de cupón: :code',
+    'enter_coupon_code_placeholder' => 'Introduce el código de cupón...',
 ];

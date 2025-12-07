@@ -109,5 +109,5 @@ $(() => {
         if (event.detail.name === 'simple-slider') {
             new SimpleSliderManagement().init()
         }
-    });
+    })
 })

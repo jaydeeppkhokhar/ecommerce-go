@@ -30,10 +30,12 @@ $(() => {
             '<': '&lt;',
             '>': '&gt;',
             '"': '&quot;',
-            "'": '&#039;'
+            "'": '&#039;',
         }
 
-        return text.replace(/[&<>"']/g, function(m) { return map[m] })
+        return text.replace(/[&<>"']/g, function (m) {
+            return map[m]
+        })
     }
 
     $('[data-bb-toggle="shortcode-item-radio"]').on('change', () => {
@@ -55,7 +57,10 @@ $(() => {
                 if (value && typeof value === 'string') {
                     value = value.replace(/"([^"]*)"/g, '“$1”')
                     value = value.replace(/"/g, '“')
-                    value = value.replace(/\r\n/g, '{{NEWLINE}}').replace(/\n/g, '{{NEWLINE}}').replace(/\r/g, '{{NEWLINE}}')
+                    value = value
+                        .replace(/\r\n/g, '{{NEWLINE}}')
+                        .replace(/\n/g, '{{NEWLINE}}')
+                        .replace(/\r/g, '{{NEWLINE}}')
                 }
 
                 if (element.data('shortcode-attribute') !== 'content') {

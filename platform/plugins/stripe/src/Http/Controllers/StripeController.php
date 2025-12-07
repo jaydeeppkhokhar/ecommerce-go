@@ -95,7 +95,7 @@ class StripeController extends BaseController
                     return $response
                         ->setError()
                         ->setNextUrl(PaymentHelper::getCancelURL())
-                        ->setMessage(__('No payment charge. Please try again!'));
+                        ->setMessage(trans('plugins/stripe::stripe.no_payment_charge'));
                 }
 
                 $chargeId = $charge->latest_charge;
@@ -114,19 +114,19 @@ class StripeController extends BaseController
 
                 return $response
                     ->setNextUrl(PaymentHelper::getRedirectURL() . '?charge_id=' . $chargeId)
-                    ->setMessage(__('Checkout successfully!'));
+                    ->setMessage(trans('plugins/payment::payment.checkout_success'));
             }
 
             return $response
                 ->setError()
                 ->setNextUrl(PaymentHelper::getCancelURL())
-                ->setMessage(__('Payment failed!'));
+                ->setMessage(trans('plugins/stripe::stripe.payment_failed'));
         } catch (Exception $exception) {
             return $response
                 ->setError()
                 ->setNextUrl(PaymentHelper::getCancelURL())
                 ->withInput()
-                ->setMessage($exception->getMessage() ?: __('Payment failed!'));
+                ->setMessage($exception->getMessage() ?: trans('plugins/stripe::stripe.payment_failed'));
         }
     }
 
@@ -136,6 +136,6 @@ class StripeController extends BaseController
             ->setError()
             ->setNextUrl(PaymentHelper::getCancelURL())
             ->withInput()
-            ->setMessage(__('Payment failed!'));
+            ->setMessage(trans('plugins/stripe::stripe.payment_failed'));
     }
 }

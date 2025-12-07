@@ -26,7 +26,7 @@ class PayPalPayoutController extends BaseController
         if ($withdrawal->payment_channel != PayoutPaymentMethodsEnum::PAYPAL) {
             return $response
                 ->setError()
-                ->setMessage(__('Payout method is not accepted!'));
+                ->setMessage(trans('plugins/paypal-payout::paypal-payout.payout_method_not_accepted'));
         }
 
         $totalAmount = round((float) $withdrawal->amount, 2);
@@ -36,7 +36,7 @@ class PayPalPayoutController extends BaseController
         if (! $payPalId) {
             return $response
                 ->setError()
-                ->setMessage(__('PayPal ID is not set!'));
+                ->setMessage(trans('plugins/paypal-payout::paypal-payout.paypal_id_not_set'));
         }
 
         try {
@@ -47,8 +47,8 @@ class PayPalPayoutController extends BaseController
                 '{
                 "sender_batch_header":
                 {
-                  "email_subject": "' . __('You have money!') . '",
-                  "email_message": "' . __('You received a payment. Thanks for selling on our site!') . '"
+                  "email_subject": "' . trans('plugins/paypal-payout::paypal-payout.you_have_money') . '",
+                  "email_message": "' . trans('plugins/paypal-payout::paypal-payout.received_payment_seller') . '"
                 },
                 "items": [
                 {
@@ -76,7 +76,7 @@ class PayPalPayoutController extends BaseController
             $withdrawal->transaction_id = $result->result->batch_header->payout_batch_id; // @phpstan-ignore-line
             $withdrawal->save();
 
-            return $response->setMessage(__('Processed PayPal payout successfully!'));
+            return $response->setMessage(trans('plugins/paypal-payout::paypal-payout.processed_successfully'));
         } catch (Throwable $exception) {
             return $response
                 ->setError()

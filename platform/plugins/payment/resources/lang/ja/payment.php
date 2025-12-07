@@ -126,4 +126,13 @@ return [
         'request' => 'リクエスト',
         'response' => '応答',
     ],
+    'payment_created' => ':channelを通じて支払い#:charge_idを作成しました :time : :amount',
+    'processing_please_wait' => '処理中です。お待ちください...',
+    'error' => 'エラー',
+    'checkout' => 'チェックアウト',
+    'show_full_json' => '完全なJSONを表示',
+    'full_log_data' => '完全なログデータ',
+    'currency_not_supported' => ':nameは:currencyをサポートしていません。:nameがサポートする通貨のリスト: :currencies。',
+    'please_switch_currency' => 'サポートされている通貨に切り替えてください',
+    'payment_with' => ':paymentTypeで支払う',
 ];

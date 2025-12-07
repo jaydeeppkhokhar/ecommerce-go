@@ -59,4 +59,22 @@ return [
     'webhooks' => '網絡鉤子？',
     'cache_response' => '緩存回應？',
     'not_available_in_cod_payment_method' => '如果選擇的付款方式是貨到付款，則不會顯示 Shippo 選項！',
+    'not_available_cod' => '貨到付款選項不可用。',
+    'log_files' => '日誌文件',
+    'status' => [
+        'shipping_label_created' => '運輸標籤已創建',
+        'in_transit' => '運輸中',
+        'delivered' => '已送達',
+        'returned_to_sender' => '退回發件人',
+        'exception' => '異常',
+    ],
+    'content_type' => [
+        'merchandise' => '商品',
+        'documents' => '文件',
+        'gift' => '禮物',
+        'returned_goods' => '退貨',
+        'humanitarian_donation' => '人道主義捐贈',
+        'other' => '其他',
+    ],
+    'address_incomplete' => '地址似乎不完整',
 ];

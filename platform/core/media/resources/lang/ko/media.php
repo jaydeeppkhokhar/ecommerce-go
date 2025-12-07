@@ -44,6 +44,8 @@ return [
     'alt_text' => '대체 텍스트',
 
     'folder_created' => '폴더가 성공적으로 생성되었습니다!',
+    'folder_exists' => '폴더 :folder이(가) 이미 존재합니다!',
+    'directory_must_empty' => '디렉토리를 삭제하려면 비어 있어야 합니다!',
     'gallery' => '미디어 갤러리',
 
     'trash_error' => '선택한 항목을 삭제하는 중 오류가 발생했습니다',

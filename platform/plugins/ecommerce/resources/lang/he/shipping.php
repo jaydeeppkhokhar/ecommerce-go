@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'סרוק קוד QR לעקוב אחרי המשלוח שלך',
     ],
     'customer_confirmed_delivery_at' => 'לקוח אישר מסירה ב',
+    'no_shipping_methods_available' => 'אין שיטות משלוח זמינות!',
 ];

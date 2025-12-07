@@ -6,9 +6,11 @@ use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Events\CreatedContentEvent;
 use Botble\Base\Facades\EmailHandler;
 use Botble\Base\Http\Controllers\BaseController;
+use Botble\Base\Http\Responses\BaseHttpResponse;
 use Botble\Base\Rules\MediaImageRule;
 use Botble\Ecommerce\Enums\ProductTypeEnum;
 use Botble\Ecommerce\Facades\EcommerceHelper;
+use Botble\Ecommerce\Http\Requests\AddAttributesToProductRequest;
 use Botble\Ecommerce\Http\Requests\DeleteProductVariationsRequest;
 use Botble\Ecommerce\Http\Requests\ProductRequest;
 use Botble\Ecommerce\Http\Requests\ProductVersionRequest;
@@ -20,6 +22,7 @@ use Botble\Ecommerce\Models\ProductAttribute;
 use Botble\Ecommerce\Models\ProductAttributeSet;
 use Botble\Ecommerce\Models\ProductVariation;
 use Botble\Ecommerce\Models\ProductVariationItem;
+use Botble\Ecommerce\Services\Products\CreateProductVariationsService;
 use Botble\Ecommerce\Services\Products\StoreAttributesOfProductService;
 use Botble\Ecommerce\Services\Products\StoreProductService;
 use Botble\Ecommerce\Services\StoreProductTagService;
@@ -39,11 +42,15 @@ class ProductController extends BaseController
         ProductActionsTrait::postUpdateVersion as basePostUpdateVersion;
         ProductActionsTrait::deleteVersionItem as baseDeleteVersionItem;
         ProductActionsTrait::deleteVersions as baseDeleteVersions;
+        ProductActionsTrait::postSaveAllVersions as basePostSaveAllVersions;
+        ProductActionsTrait::postAddAttributeToProduct as basePostAddAttributeToProduct;
+        ProductActionsTrait::postGenerateAllVersions as basePostGenerateAllVersions;
+        ProductActionsTrait::postStoreRelatedAttributes as basePostStoreRelatedAttributes;
     }
 
     public function index(ProductTable $table)
     {
-        $this->pageTitle(__('Products'));
+        $this->pageTitle(trans('plugins/ecommerce::products.name'));
 
         return $table->renderTable();
     }
@@ -300,17 +307,29 @@ class ProductController extends BaseController
         ProductVersionRequest $request,
         int|string $id
     ) {
+        $product = Product::query()
+            ->where('is_variation', 0)
+            ->where('store_id', auth('customer')->user()->store?->id)
+            ->findOrFail($id);
+
         $request->merge([
             'images' => array_filter((array) $request->input('images', [])),
         ]);
 
-        return $this->basePostAddVersion($request, $id, $this->httpResponse());
+        return $this->basePostAddVersion($request, $product->getKey(), $this->httpResponse());
     }
 
     public function postUpdateVersion(
         ProductVersionRequest $request,
         $id
     ) {
+        $variation = ProductVariation::query()->findOrFail($id);
+
+        abort_if(
+            $variation->configurableProduct?->store_id != auth('customer')->user()->store?->id,
+            404
+        );
+
         $request->merge([
             'images' => array_filter((array) $request->input('images', [])),
         ]);
@@ -328,17 +347,30 @@ class ProductController extends BaseController
             $variation = ProductVariation::query()->findOrFail($id);
             $product = Product::query()->findOrFail($variation->product_id);
             $productVariationsInfo = ProductVariationItem::getVariationsInfo([$id]);
+
+            abort_if(
+                $variation->configurableProduct?->store_id != auth('customer')->user()->store?->id,
+                404
+            );
         }
 
         $productId = $variation ? $variation->configurable_product_id : $request->input('product_id');
 
+        $originalProduct = $product;
+
         if ($productId) {
+            $originalProduct = Product::query()
+                ->where('id', $productId)
+                ->where('store_id', auth('customer')->user()->store?->id)
+                ->where('is_variation', 0)
+                ->first();
+
+            abort_if(! $originalProduct, 404);
+
             $productAttributeSets = ProductAttributeSet::getByProductId($productId);
         } else {
             $productAttributeSets = ProductAttributeSet::getAllWithSelected($productId);
         }
-
-        $originalProduct = $product;
 
         return $this
             ->httpResponse()
@@ -474,6 +506,72 @@ class ProductController extends BaseController
         return $this
             ->httpResponse()
             ->withUpdatedSuccessMessage();
+    }
+
+    public function postSaveAllVersions(
+        array $versionInRequest,
+        int|string $id,
+        BaseHttpResponse $response,
+        bool $isUpdateProduct = true
+    ): BaseHttpResponse {
+        $product = Product::query()
+            ->where('id', $id)
+            ->where('store_id', auth('customer')->user()->store?->id)
+            ->where('is_variation', 0)
+            ->first();
+
+        abort_if(! $product, 404);
+
+        return $this->basePostSaveAllVersions($versionInRequest, $product->getKey(), $response, $isUpdateProduct);
+    }
+
+    public function postAddAttributeToProduct(
+        int|string $id,
+        AddAttributesToProductRequest $request,
+        BaseHttpResponse $response,
+        StoreAttributesOfProductService $storeAttributesOfProductService
+    ): BaseHttpResponse {
+        $product = Product::query()
+            ->where('id', $id)
+            ->where('store_id', auth('customer')->user()->store?->id)
+            ->where('is_variation', 0)
+            ->first();
+
+        abort_if(! $product, 404);
+
+        return $this->basePostAddAttributeToProduct($id, $request, $response, $storeAttributesOfProductService);
+    }
+
+    public function postGenerateAllVersions(
+        Request $request,
+        CreateProductVariationsService $service,
+        int|string $id,
+        BaseHttpResponse $response
+    ): BaseHttpResponse {
+        $product = Product::query()
+            ->where('id', $id)
+            ->where('store_id', auth('customer')->user()->store?->id)
+            ->where('is_variation', 0)
+            ->firstOrFail();
+
+        return $this->basePostGenerateAllVersions($request, $service, $product->getKey(), $response);
+    }
+
+    public function postStoreRelatedAttributes(
+        Request $request,
+        StoreAttributesOfProductService $service,
+        int|string $id,
+        BaseHttpResponse $response
+    ): BaseHttpResponse {
+        $product = Product::query()
+            ->where('id', $id)
+            ->where('store_id', auth('customer')->user()->store?->id)
+            ->where('is_variation', 0)
+            ->first();
+
+        abort_if(! $product, 404);
+
+        return $this->basePostStoreRelatedAttributes($request, $service, $product->getKey(), $response);
     }
 
     protected function uploadVideoMedia(ProductRequest $request)

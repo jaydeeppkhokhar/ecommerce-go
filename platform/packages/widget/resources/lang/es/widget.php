@@ -30,7 +30,6 @@ return [
     'primary_sidebar_name' => 'Barra lateral principal',
     'primary_sidebar_description' => 'Sección de la barra lateral principal',
     'drag_widget_to_sidebar' => 'Arrastre y suelte widgets en esta área.',
-    'instruction' => 'Para activar un widget, arrástrelo a una barra lateral o haga clic en él. Para desactivar un widget y eliminar su configuración, arrástrelo hacia atrás.',
     'cache_suggestion' => [
         'title' => 'Sugerencia de rendimiento',
         'description' => 'Puede mejorar el rendimiento de su sitio habilitando el almacenamiento en caché de widgets.',
@@ -38,7 +37,6 @@ return [
         'enable_button' => 'Habilitar caché de widgets',
         'dismiss_button' => 'Descartar por una semana',
     ],
-
     'widget_site_copyright' => 'Derechos de autor del sitio',
     'widget_site_copyright_description' => 'Texto de derechos de autor en el pie de página inferior.',
     'widget_site_copyright_helper' => 'Vaya a :link para cambiar el texto de derechos de autor.',

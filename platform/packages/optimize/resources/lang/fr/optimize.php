@@ -3,13 +3,15 @@
 return [
     'settings' => [
         'description' => 'Réduisez la sortie HTML, inline CSS, supprimez les commentaires...',
+        'title' => 'Optimize',
+        'enable' => 'Enable optimize page speed?',
     ],
     'collapse_white_space' => 'Collapse white space',
     'collapse_white_space_description' => 'This filter reduces bytes transmitted in an HTML file by removing unnecessary whitespace.',
     'elide_attributes' => 'Elide attributes',
     'elide_attributes_description' => 'This filter reduces the transfer size of HTML files by removing attributes from tags when the specified value is equal to the default value for that attribute. This can save a modest number of bytes, and may make the document more compressible by canonicalizing the affected tags.',
     'inline_css' => 'CSS en ligne',
-    'inline_css_description' => 'This filter transforms the inline "style" attribute of tags into classes by moving the CSS to the header.',
+    'inline_css_description' => 'This filter transforms the inline \\\"style\\\" attribute of tags into classes by moving the CSS to the header.',
     'insert_dns_prefetch' => 'Insérer la prélecture DNS',
     'insert_dns_prefetch_description' => 'This filter injects tags in the HEAD to enable the browser to do DNS prefetching.',
     'remove_comments' => 'Remove comments',

@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Ten kupon nie może być zastosowany, ponieważ Twój koszyk zawiera przedmioty z wyprzedaży błyskawicznej (:product_name). Ceny wyprzedaży błyskawicznej nie mogą być kombinowane z rabatami kuponowymi.',
     'coupon_applied_successfully' => 'Świetnie! Kod kuponu ":code" został zastosowany. Zaoszczędziłeś pieniądze na tym zamówieniu!',
     'coupon_removed_successfully' => 'Kod kuponu został usunięty z Twojego zamówienia.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kody kuponów (:count)',
+    'left_quantity' => 'Pozostało :left',
+    'apply' => 'Zastosuj',
+    'remove' => 'Usuń',
+    'select_coupon' => 'Wybierz kupon',
+    'you_have_coupon_code' => 'Masz kod kuponu?',
+    'close' => 'Zamknij',
+    'coupon_code_label' => 'Kod kuponu: :code',
+    'enter_coupon_code_placeholder' => 'Wprowadź kod kuponu...',
 ];

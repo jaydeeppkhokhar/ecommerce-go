@@ -72,6 +72,10 @@ class OrderSeeder extends BaseSeeder
 
         $storeLocatorsCount = $storeLocators->count();
 
+        if ($customers->isEmpty() || $productsCount === 0) {
+            return;
+        }
+
         $total = 20;
         for ($i = 0; $i < $total; $i++) {
             $customer = $customers->random();
@@ -81,7 +85,8 @@ class OrderSeeder extends BaseSeeder
                 continue;
             }
 
-            $orderProducts = $productsCount > 1 ? $products->random(rand(2, 4)) : $products->first();
+            $randomCount = min(rand(2, 4), $productsCount);
+            $orderProducts = $productsCount > 1 ? $products->random($randomCount) : $products->first();
 
             $groupedProducts = $this->group($orderProducts);
 
@@ -353,7 +358,7 @@ class OrderSeeder extends BaseSeeder
                         $currentBalance = $customer->balance;
 
                         $amountByCurrency = $amount;
-                        $time = Carbon::now()->subMinutes(($order->id + 1) * 120 * rand(1, 10));
+                        $time = Carbon::now()->subMinutes(rand(120, 12000));
 
                         $data = [
                             'sub_amount' => $order->amount,

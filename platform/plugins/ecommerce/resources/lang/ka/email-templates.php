@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'შეკვეთა წარმატებულია!',
     'customer_new_order_greeting' => 'პატივსაცემო :customer_name,',
     'customer_new_order_message' => 'გმადლობთ ჩვენი პროდუქციის შეძენისთვის, ჩვენ დაგიკავშირდებით ტელეფონზე <strong>:customer_phone</strong> შეკვეთის დასადასტურებლად!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'მიწოდების მეთოდი',
     'customer_new_order_order_number' => 'შეკვეთის ნომერი',
     'customer_new_order_payment_method' => 'გადახდის მეთოდი',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'თქვენ მიიღეთ ახალი შეკვეთა :site_title-დან',
     'admin_new_order_greeting' => 'გამარჯობა ადმინ,',
     'admin_new_order_message' => 'ახალი შეკვეთა წარმატებით განახორციელა :customer_name-მა',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'მიწოდების მეთოდი',
     'admin_new_order_payment_method' => 'გადახდის მეთოდი',
     'admin_new_order_view_order' => 'შეკვეთის დეტალების ნახვა',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'შეკვეთა დადასტურებულია!',
     'order_confirm_greeting' => 'გამარჯობა :customer_name,',
     'order_confirm_message' => 'თქვენი შეკვეთა დადასტურდა. გმადლობთ ჩვენი პროდუქციის შეძენისთვის!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'შენიშვნა',
     'order_confirm_shipping_method' => 'მიწოდების მეთოდი',
     'order_confirm_payment_method' => 'გადახდის მეთოდი',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'თქვენი შეკვეთა გაუქმდა',
     'customer_cancel_order_greeting' => 'პატივსაცემო :customer_name,',
     'customer_cancel_order_message' => 'თქვენი შეკვეთა <strong>:order_id</strong> გაუქმდა თქვენი მოთხოვნის შესაბამისად მიზეზით :cancellation_reason და თქვენი გადახდაც გაუქმდა.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'მისამართი',
     'customer_cancel_order_products' => 'თქვენ შეუკვეთეთ:',
     'customer_cancel_order_note' => 'შენიშვნა',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'შეკვეთა გაუქმებულია',
     'admin_cancel_order_greeting' => 'გამარჯობა :customer_name,',
-    'admin_cancel_order_message' => 'თქვენი შეკვეთა #:order_id გაუქმდა ჩვენი თანამშრომლის მიერ.',
+    'admin_cancel_order_message' => 'თქვენი შეკვეთა :order_id გაუქმდა ჩვენი თანამშრომლის მიერ.',
     'admin_cancel_order_order_cancelled' => 'შეკვეთა გაუქმებულია!',
     'admin_cancel_order_reason' => 'გაუქმების მიზეზი: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'მომხმარებლის ინფორმაცია',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'შეკვეთის დეტალები:',
     'admin_cancel_order_note' => 'შენიშვნა',
     'admin_cancel_order_order_summary' => 'შეკვეთის შეჯამება',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'შეკვეთა #:order_id გაუქმდა მომხმარებლის მიერ',
+    'order_cancellation_to_admin_title' => 'შეკვეთა :order_id გაუქმდა მომხმარებლის მიერ',
     'order_cancellation_to_admin_greeting' => 'გამარჯობა ადმინ,',
-    'order_cancellation_to_admin_message' => ':customer_name-მა გააუქმა შეკვეთა <strong>#:order_id</strong>. მიზეზი: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name-მა გააუქმა შეკვეთა <strong>:order_id</strong>. მიზეზი: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'მომხმარებლის ინფორმაცია',
     'order_cancellation_to_admin_name' => 'სახელი',
     'order_cancellation_to_admin_phone' => 'ტელეფონი',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'შენიშვნა',
     'order_cancellation_to_admin_view_order' => 'შეკვეთის დეტალების ნახვა',
     'order_cancellation_to_admin_order_summary' => 'შეკვეთის შეჯამება',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'თქვენი შეკვეთა გზაშია',
     'customer_delivery_order_greeting' => 'გამარჯობა :customer_name,',
     'customer_delivery_order_message' => 'თქვენი შეკვეთა გზაშია. გმადლობთ ჩვენი პროდუქციის შეძენისთვის!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'თვალთვალის ID',
     'customer_delivery_order_tracking_link' => 'თვალთვალის ბმული',
     'customer_delivery_order_track_shipment' => 'თვალყური ადევნეთ თქვენს გზავნილს',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'თქვენი შეკვეთა მიწოდებულია',
     'customer_order_delivered_greeting' => 'გამარჯობა :customer_name,',
     'customer_order_delivered_message' => 'თქვენი შეკვეთა მიწოდებულია. გმადლობთ ჩვენი პროდუქციის შეძენისთვის!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'თვალთვალის ID',
     'customer_order_delivered_tracking_link' => 'თვალთვალის ბმული',
     'customer_order_delivered_track_shipment' => 'თვალთვალის დეტალების ნახვა',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'გადახდა დადასტურებულია შეკვეთისთვის #:order_id',
+    'order_confirm_payment_title' => 'გადახდა დადასტურებულია შეკვეთისთვის :order_id',
     'order_confirm_payment_greeting' => 'გამარჯობა :customer_name,',
     'order_confirm_payment_message' => 'თქვენი გადახდა დადასტურდა. გმადლობთ ჩვენი პროდუქციის შეძენისთვის!',
     'order_confirm_payment_order_number' => 'შეკვეთის ნომერი',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'გმადლობთ გადახდისთვის. თქვენი შეკვეთა მალე დამუშავდება.',
     'order_confirm_payment_order_summary' => 'შეკვეთის შეჯამება',
     'order_confirm_payment_shipping_method' => 'მიწოდების მეთოდი',
-
-    // Order Recovery Email
     'order_recover_title' => 'თქვენ გაქვთ დაუმთავრებელი შეკვეთა',
     'order_recover_greeting' => 'გამარჯობა :customer_name,',
     'order_recover_message' => 'შევნიშნეთ, რომ თქვენ გაქვთ დაუმთავრებელი შეკვეთა. გსურთ შეძენის დასრულება?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'დაასრულეთ თქვენი შეკვეთა',
     'order_recover_order_summary' => 'შეკვეთის შეჯამება',
     'order_recover_note' => 'შენიშვნა',
-
-    // Welcome Email
     'welcome_greeting' => 'მოხარულები ვართ, რომ აქ ხართ, :customer_name!',
     'welcome_message' => 'კეთილი იყოს თქვენი მობრძანება :site_title-ში!',
     'welcome_register_success' => 'თქვენ წარმატებით დაარეგისტრირეთ ანგარიში <strong>:site_title</strong>-ზე.',
     'welcome_explore' => 'თუ რაიმე დახმარება გჭირდებათ, თავისუფლად უპასუხეთ ამ წერილს!',
     'welcome_visit_shop' => 'დაიწყეთ ყიდვა!',
-
-    // Confirm Email
     'confirm_email_title' => 'ელფოსტის დადასტურება',
     'confirm_email_greeting' => 'მოხარულები ვართ, რომ აქ ხართ, :customer_name!',
     'confirm_email_message' => 'გთხოვთ დაადასტუროთ თქვენი ელფოსტის მისამართი ქვემოთ მოცემულ ღილაკზე დაჭერით.',
     'confirm_email_instruction' => 'გთხოვთ დაადასტუროთ თქვენი ელფოსტის მისამართი ამ ვებსაიტზე წვდომისთვის. დააჭირეთ ქვემოთ მოცემულ ღილაკს თქვენი ელფოსტის დასადასტურებლად.',
     'confirm_email_button' => 'დაადასტურეთ თქვენი ელფოსტის მისამართი',
     'confirm_email_trouble' => 'თუ პრობლემა გაქვთ "დაადასტურეთ თქვენი ელფოსტის მისამართი" ღილაკზე დაჭერით, დააკოპირეთ და ჩასვით ქვემოთ მოცემული URL თქვენს ბრაუზერში: <a href=":verify_link">:verify_link</a> და ჩასვით ბრაუზერში.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'პაროლის აღდგენა',
     'password_reminder_greeting' => 'გამარჯობა :customer_name,',
     'password_reminder_message' => 'თქვენ მოითხოვეთ პაროლის აღდგენა.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'პაროლის აღდგენა',
     'password_reminder_ignore' => 'თუ თქვენ არ მოითხოვეთ პაროლის აღდგენა, გთხოვთ იგნორირება გაუკეთოთ ამ წერილს.',
     'password_reminder_trouble_clicking' => 'თუ პრობლემა გაქვთ "პაროლის აღდგენა" ღილაკზე დაჭერით, დააკოპირეთ და ჩასვით ქვემოთ მოცემული URL თქვენს ბრაუზერში: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'დაბრუნების მოთხოვნა მიღებულია',
     'order_return_request_greeting' => 'გამარჯობა :customer_name,',
-    'order_return_request_message' => 'მივიღეთ თქვენი დაბრუნების მოთხოვნა შეკვეთისთვის #:order_id.',
+    'order_return_request_message' => 'მივიღეთ თქვენი დაბრუნების მოთხოვნა შეკვეთისთვის :order_id.',
     'order_return_request_reason' => 'დაბრუნების მიზეზი',
     'order_return_request_items' => 'დასაბრუნებელი პროდუქტები',
     'order_return_request_process' => 'ჩვენ დავამუშავებთ თქვენს მოთხოვნას და მალე დაგიკავშირდებით.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'დაბრუნების მიზეზი',
     'order_return_request_order_summary' => 'შეკვეთის შეჯამება',
     'order_return_request_note' => 'შენიშვნა',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'შეკვეთის დაბრუნების სტატუსის განახლება',
     'order_return_status_updated_greeting' => 'პატივსაცემო :customer_name,',
     'order_return_status_updated_message' => 'გვსურს გაცნობოთ, რომ თქვენი დაბრუნების მოთხოვნის სტატუსი შეკვეთისთვის :order_id განახლდა.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'მოდერატორის შენიშვნა: " :description ".',
     'order_return_status_updated_questions' => 'თუ რაიმე კითხვა ან შეკითხვა გაქვთ ამ განახლებასთან დაკავშირებით, გთხოვთ დაუკავშირდით ჩვენს მომხმარებელთა მხარდაჭერის გუნდს.',
     'order_return_status_updated_view_details' => 'დაბრუნების დეტალების ნახვა',
-
-    // Review Products Email
     'review_products_title' => 'შეაფასეთ თქვენი ბოლო შესყიდვა',
     'review_products_greeting' => 'გამარჯობა :customer_name,',
-    'review_products_message' => 'თქვენი შეკვეთა #:order_id დასრულდა. ჩვენ მოხარულები ვიქნებით თქვენი გამოხმაურების მოსასმენად!',
+    'review_products_message' => 'თქვენი შეკვეთა :order_id დასრულდა. ჩვენ მოხარულები ვიქნებით თქვენი გამოხმაურების მოსასმენად!',
     'review_products_instruction' => 'გთხოვთ დაუთმოთ დრო თქვენს მიერ შეძენილი პროდუქტების შესაფასებლად:',
     'review_products_button' => 'შეაფასეთ პროდუქტები',
     'review_products_thank_you' => 'გმადლობთ შესყიდვისთვის!',
     'review_products_products' => 'შესაფასებელი პროდუქტები',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'თქვენი ციფრული პროდუქტები მზადაა',
     'download_digital_products_greeting' => 'გამარჯობა :customer_name,',
     'download_digital_products_message' => 'გმადლობთ შესყიდვისთვის! თქვენი ციფრული პროდუქტები მზადაა ჩამოსატვირთად.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'ყველა ფაილის ჩამოტვირთვა',
     'download_digital_products_external_link_downloads' => 'გარე ფაილების ჩამოტვირთვა',
     'download_digital_products_payment_method' => 'გადახდის მეთოდი',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'თქვენი ლიცენზიის კოდები',
     'digital_product_license_codes_greeting' => 'პატივსაცემო :customer_name,',
     'digital_product_license_codes_message' => 'გმადლობთ შესყიდვისთვის! აქ არის თქვენი ლიცენზიის კოდები:',
     'digital_product_license_codes_thanks' => 'გმადლობთ ჩვენი ციფრული პროდუქტების შეძენისთვის.',
-    'digital_product_license_codes_below' => 'ქვემოთ მოცემულია თქვენი ლიცენზიის კოდები თქვენს მიერ შეძენილი პროდუქტებისთვის:',
     'digital_product_license_codes_product' => 'პროდუქტი',
     'digital_product_license_codes_license' => 'ლიცენზიის კოდი',
     'digital_product_license_codes_order_summary' => 'თქვენ შეუკვეთეთ:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'თითოეული ლიცენზიის კოდი უნიკალურია და შეიძლება გამოყენებულ იქნას მხოლოდ ერთხელ',
     'digital_product_license_codes_note_3' => 'არ გაუზიაროთ თქვენი ლიცენზიის კოდები სხვებს',
     'digital_product_license_codes_note_4' => 'თუ რაიმე პრობლემა გაქვთ თქვენი ლიცენზიის კოდებთან, გთხოვთ დაუკავშირდით ჩვენს მხარდაჭერის გუნდს',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'პროდუქტის ფაილები განახლდა',
     'product_file_updated_greeting' => 'გამარჯობა, :customer_name!',
     'product_file_updated_message' => 'პროდუქტის <a href=":product_link"><strong>:product_name</strong></a> ფაილები განახლდა.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'თქვენ შეგიძლიათ ჩამოტვირთოთ განახლებული ფაილები თქვენი ანგარიშიდან.',
     'product_file_updated_order_number' => 'შეკვეთის ნომერი',
     'product_file_updated_download' => 'ჩამოტვირთეთ განახლებული ფაილები',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'გადახდა მიღებულია',
     'invoice_payment_created_greeting' => 'გამარჯობა :customer_name,',
     'invoice_payment_created_message' => 'ჩვენ წარმატებით მივიღეთ თქვენი გადახდა :site_title-სთვის. გმადლობთ!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'თქვენ შეგიძლიათ ნახოთ თქვენი ინვოისი ონლაინ <a href=":invoice_link">:invoice_link</a> ინვოისის კოდით #:invoice_code',
     'invoice_payment_created_invoice_message' => 'თქვენი ინვოისის კოდია #:invoice_code',
     'invoice_payment_created_view_online' => 'ინვოისის ნახვა ონლაინ',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'გამარჯობა :customer_name,',
     'customer_deletion_request_confirmation_message' => 'მივიღეთ თქვენი მოთხოვნა თქვენი ანგარიშის წასაშლელად.',
     'customer_deletion_request_confirmation_warning' => 'გთხოვთ გაითვალისწინოთ, რომ ეს მოქმედება ვერ გაუქმდება. თქვენი ყველა მონაცემი სამუდამოდ წაიშლება.',
     'customer_deletion_request_confirmation_button' => 'წაშლის დადასტურება',
     'customer_deletion_request_confirmation_cancel' => 'თუ თქვენ არ მოითხოვეთ ეს, გთხოვთ იგნორირება გაუკეთოთ ამ წერილს.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'გამარჯობა :customer_name,',
     'customer_deletion_request_completed_message' => 'თქვენი ანგარიში წარმატებით წაიშალა თქვენი მოთხოვნის შესაბამისად.',
     'customer_deletion_request_completed_thank_you' => 'გმადლობთ, რომ იყავით ჩვენთან ერთად.',
     'customer_deletion_request_completed_goodbye' => 'იმედს ვიტოვებთ, რომ კვლავ გნახავთ მომავალში.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'გამარჯობა ადმინ,',
     'payment_proof_upload_notification_message' => 'მომხმარებელმა :customer_name (ელფოსტა: <a href="mailto::customer_email">:customer_email</a>) ატვირთა გადახდის დადასტურება თავისი შეკვეთისთვის ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'თქვენ შეგიძლიათ ნახოთ გადახდის დეტალები <a href=":payment_link">აქ</a> და შეკვეთის დეტალები <a href=":order_link">აქ</a>.',

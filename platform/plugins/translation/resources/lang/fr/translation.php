@@ -28,7 +28,7 @@ return [
     'locale_placeholder' => 'Ex : fr',
     'name' => 'Nom',
     'default_locale' => 'Paramètres régionaux par défaut ?',
-    'actions' => 'Actions',
+    'actions' => 'Opérations',
     'choose_language' => 'Choisir la langue',
     'add_new_language' => 'Ajouter une nouvelle langue',
     'select_language' => 'Sélectionner la langue',
@@ -69,4 +69,7 @@ return [
             'trans' => 'Peut être vide ou une chaîne de caractères avec une longueur maximale de :max caractères si fourni.',
         ],
     ],
+    'download_locale' => 'Télécharger la langue',
+    'import_available_locale_confirmation' => 'Télécharger la langue depuis GitHub',
+    'import_available_locale_confirmation_content' => 'Êtes-vous sûr de vouloir télécharger cette langue ? Elle sera téléchargée dans :lang_path, vous pourrez la supprimer plus tard si vous le souhaitez.',
 ];

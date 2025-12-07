@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Format ID Klien Google AdSense tidak valid. Harus dalam format: ca-pub-XXXXXXXXXXXXXXXX (di mana X adalah digit).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Gambar Tablet',
+    'tablet_image_helper' => 'Untuk perangkat dengan lebar dari 768px hingga 1200px, jika kosong, akan menggunakan gambar dari desktop.',
+    'mobile_image' => 'Gambar Mobile',
+    'mobile_image_helper' => 'Untuk perangkat dengan lebar kurang dari 768px, jika kosong, akan menggunakan gambar dari tablet.',
 ];

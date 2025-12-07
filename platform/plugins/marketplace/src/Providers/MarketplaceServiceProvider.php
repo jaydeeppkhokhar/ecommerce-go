@@ -194,14 +194,14 @@ class MarketplaceServiceProvider extends ServiceProvider
                 ->registerItem([
                     'id' => 'marketplace.vendor.dashboard',
                     'priority' => 1,
-                    'name' => __('Dashboard'),
+                    'name' => trans('plugins/marketplace::marketplace.dashboard'),
                     'url' => fn () => route('marketplace.vendor.dashboard'),
                     'icon' => 'ti ti-home',
                 ])
                 ->registerItem([
                     'id' => 'marketplace.vendor.products',
                     'priority' => 2,
-                    'name' => __('Products'),
+                    'name' => trans('plugins/ecommerce::products.name'),
                     'url' => fn () => route('marketplace.vendor.products.index'),
                     'icon' => 'ti ti-package',
                 ])
@@ -210,7 +210,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                         ->registerItem([
                             'id' => 'cms-plugins-product-specification',
                             'priority' => 900,
-                            'name' => __('Product Specification'),
+                            'name' => trans('plugins/ecommerce::product-specification.product_specification'),
                             'icon' => 'ti ti-table-options',
                             'permissions' => ['ecommerce.product-specification.index'],
                         ])
@@ -218,7 +218,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                             'id' => 'cms-plugins-product-specification-groups',
                             'parent_id' => 'cms-plugins-product-specification',
                             'priority' => 0,
-                            'name' => __('Specification Groups'),
+                            'name' => trans('plugins/ecommerce::product-specification.specification_groups.title'),
                             'url' => fn () => route('marketplace.vendor.specification-groups.index'),
                             'icon' => 'ti ti-folder',
                         ])
@@ -226,7 +226,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                             'id' => 'cms-plugins-product-specification-attributes',
                             'parent_id' => 'cms-plugins-product-specification',
                             'priority' => 10,
-                            'name' => __('Specification Attributes'),
+                            'name' => trans('plugins/ecommerce::product-specification.specification_attributes.title'),
                             'url' => fn () => route('marketplace.vendor.specification-attributes.index'),
                             'icon' => 'ti ti-list-details',
                         ])
@@ -234,7 +234,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                             'id' => 'cms-plugins-product-specification-tables',
                             'parent_id' => 'cms-plugins-product-specification',
                             'priority' => 20,
-                            'name' => __('Specification Tables'),
+                            'name' => trans('plugins/ecommerce::product-specification.specification_tables.title'),
                             'url' => fn () => route('marketplace.vendor.specification-tables.index'),
                             'icon' => 'ti ti-table',
                         ]);
@@ -242,35 +242,35 @@ class MarketplaceServiceProvider extends ServiceProvider
                 ->registerItem([
                     'id' => 'marketplace.vendor.orders',
                     'priority' => 3,
-                    'name' => __('Orders'),
+                    'name' => trans('plugins/ecommerce::order.menu'),
                     'url' => fn () => route('marketplace.vendor.orders.index'),
                     'icon' => 'ti ti-shopping-cart',
                 ])
                 ->registerItem([
                     'id' => 'marketplace.vendor.discounts',
                     'priority' => 4,
-                    'name' => __('Coupons'),
+                    'name' => trans('plugins/ecommerce::discount.name'),
                     'url' => fn () => route('marketplace.vendor.discounts.index'),
                     'icon' => 'ti ti-tag',
                 ])
                 ->registerItem([
                     'id' => 'marketplace.vendor.withdrawals',
                     'priority' => 5,
-                    'name' => __('Withdrawals'),
+                    'name' => trans('plugins/marketplace::withdrawal.name'),
                     'url' => fn () => route('marketplace.vendor.withdrawals.index'),
                     'icon' => 'ti ti-cash',
                 ])
                 ->registerItem([
                     'id' => 'marketplace.vendor.revenues',
                     'priority' => 6,
-                    'name' => __('Revenues'),
+                    'name' => trans('plugins/marketplace::revenue.name'),
                     'url' => fn () => route('marketplace.vendor.revenues.index'),
                     'icon' => 'ti ti-wallet',
                 ])
                 ->registerItem([
                     'id' => 'marketplace.vendor.settings',
                     'priority' => 999,
-                    'name' => __('Settings'),
+                    'name' => trans('plugins/marketplace::marketplace.settings.title'),
                     'url' => fn () => route('marketplace.vendor.settings'),
                     'icon' => 'ti ti-settings',
                 ])
@@ -278,7 +278,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                     return $dashboardMenu->registerItem([
                         'id' => 'marketplace.vendor.messages',
                         'priority' => 8,
-                        'name' => __('Messages'),
+                        'name' => trans('plugins/marketplace::message.name'),
                         'url' => fn () => route('marketplace.vendor.messages.index'),
                         'icon' => 'ti ti-messages',
                     ]);
@@ -287,7 +287,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                     return $dashboardMenu->registerItem([
                         'id' => 'marketplace.vendor.reviews',
                         'priority' => 5,
-                        'name' => __('Reviews'),
+                        'name' => trans('plugins/ecommerce::review.name'),
                         'url' => fn () => route('marketplace.vendor.reviews.index'),
                         'icon' => 'ti ti-star',
                     ]);
@@ -296,7 +296,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                     return $dashboardMenu->registerItem([
                         'id' => 'marketplace.vendor.order-returns',
                         'priority' => 3,
-                        'name' => __('Order Returns'),
+                        'name' => trans('plugins/ecommerce::order.order_returns'),
                         'url' => fn () => route('marketplace.vendor.order-returns.index'),
                         'icon' => 'ti ti-reload',
                     ]);
@@ -305,7 +305,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                     return $dashboardMenu->registerItem([
                         'id' => 'marketplace.vendor.shipments',
                         'priority' => 3,
-                        'name' => __('Shipments'),
+                        'name' => trans('plugins/ecommerce::shipping.shipments'),
                         'url' => fn () => route('marketplace.vendor.shipments.index'),
                         'icon' => 'ti ti-truck',
                     ]);
@@ -319,7 +319,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                         ->registerItem([
                             'id' => 'marketplace.vendor.dashboard',
                             'priority' => 990,
-                            'name' => __('Vendor Dashboard'),
+                            'name' => trans('plugins/marketplace::marketplace.vendor_dashboard'),
                             'url' => fn () => route('marketplace.vendor.dashboard'),
                             'icon' => 'ti ti-building-store',
                         ]);
@@ -333,7 +333,7 @@ class MarketplaceServiceProvider extends ServiceProvider
                                     ->registerItem([
                                         'id' => 'marketplace.vendor.become-vendor',
                                         'priority' => 991,
-                                        'name' => __('Become A Vendor'),
+                                        'name' => trans('plugins/marketplace::marketplace.become_vendor'),
                                         'url' => fn () => route('marketplace.vendor.become-vendor'),
                                         'icon' => 'ti ti-building-store',
                                     ]);

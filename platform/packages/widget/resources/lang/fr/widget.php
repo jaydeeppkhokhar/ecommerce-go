@@ -32,7 +32,6 @@ return [
     'drag_widget_to_sidebar' => 'Faites glisser et déposez les widgets dans cette zone.',
     'widget_areas' => 'Zones de widgets',
     'manage_widgets' => 'Gérer les widgets',
-
     'cache_suggestion' => [
         'title' => 'Suggestion de performance',
         'description' => 'Vous pouvez améliorer les performances de votre site en activant la mise en cache des widgets.',
@@ -40,9 +39,15 @@ return [
         'enable_button' => 'Activer la mise en cache des widgets',
         'dismiss_button' => 'Ignorer pendant une semaine',
     ],
-
     'widget_site_copyright' => 'Copyright du site',
     'widget_site_copyright_description' => 'Texte de copyright dans le pied de page inférieur.',
     'widget_site_copyright_helper' => 'Allez à :link pour modifier le texte de copyright.',
     'theme_options' => 'Options du thème',
+    'form' => [
+        'enable_caching' => 'Enable caching',
+        'yes' => 'Yes',
+        'no' => 'No',
+        'cache_helper' => 'When enabled, this widget content will be cached to improve performance. Disable for dynamic content that changes frequently.',
+        'cache_warning' => 'Due to UI issues, cache for this widget is disabled via code. This widget will not be cached even if caching is enabled.',
+    ],
 ];

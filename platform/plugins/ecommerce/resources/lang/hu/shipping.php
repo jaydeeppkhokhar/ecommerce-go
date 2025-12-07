@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Szkennelj QR kódot a szállítmány nyomon követéséhez',
     ],
     'customer_confirmed_delivery_at' => 'Vásárló megerősítette a kézbesítést',
+    'no_shipping_methods_available' => 'Nincsenek elérhető szállítási módok!',
 ];

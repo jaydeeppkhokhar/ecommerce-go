@@ -9,9 +9,8 @@ return [
     'setting_general' => 'Pangkalahatan',
     'setting_email' => 'Email',
     'system_information' => 'Impormasyon ng sistema',
-
     'theme' => 'Theme',
-    'copyright' => 'Copyright :year © :company. Bersyon :version',
+    'copyright' => 'Karapatang-ari :year © :company. Bersyon :version',
     'profile' => 'Profile',
     'logout' => 'Mag-logout',
     'no_search_result' => 'Walang nahanap na resulta, mangyaring subukan gamit ang ibang keywords.',

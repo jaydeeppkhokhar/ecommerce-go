@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Limitați numărul de afișări',
     'edit_this_gallery' => 'Editați această galerie',
     'galleries_page' => 'Pagina galeriilor',
+    'by_name' => 'De către :name',
+    'title' => 'Titlu',
+    'limit' => 'Limită',
+    'limit_helper' => 'Numărul de galerii de afișat. ',
 ];

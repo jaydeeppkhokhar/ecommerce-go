@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => '패키지 에셋 게시',
         'clean_up' => '시스템 업데이트 파일 정리',
         'done' => '시스템이 성공적으로 업데이트되었습니다',
-
+        'unknown' => '알 수 없는 단계',
         'messages' => [
             'download' => '업데이트 파일 다운로드 중...',
             'update_files' => '시스템 파일 업데이트 중...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => '시스템 업데이트 파일 정리 중...',
             'done' => '완료! 30초 후 브라우저가 새로고침됩니다.',
         ],
-
         'failed_messages' => [
             'download' => '업데이트 파일을 다운로드할 수 없습니다',
             'update_files' => '시스템 파일을 업데이트할 수 없습니다',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => '패키지 에셋을 게시할 수 없습니다',
             'clean_up' => '시스템 업데이트 파일을 정리할 수 없습니다',
         ],
-
         'success_messages' => [
             'download' => '업데이트 파일이 성공적으로 다운로드되었습니다.',
             'update_files' => '시스템 파일이 성공적으로 업데이트되었습니다.',

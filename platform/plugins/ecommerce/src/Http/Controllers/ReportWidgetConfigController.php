@@ -28,11 +28,10 @@ class ReportWidgetConfigController extends BaseController
 
         $widgets = $request->input('widgets', []);
 
-        // Store user preferences in settings
         $userId = Auth::id();
         $settingKey = "ecommerce_report_widgets_user_{$userId}";
 
-        setting()->set($settingKey, $widgets)->save();
+        setting()->set($settingKey, json_encode($widgets))->save();
 
         return $this
             ->httpResponse()
@@ -168,9 +167,12 @@ class ReportWidgetConfigController extends BaseController
         $userId = Auth::id();
         $settingKey = "ecommerce_report_widgets_user_{$userId}";
 
-        $preferences = setting($settingKey, []);
+        $preferences = setting($settingKey);
 
-        // If no preferences set, show all widgets by default
+        if (is_string($preferences)) {
+            $preferences = json_decode($preferences, true) ?: [];
+        }
+
         if (empty($preferences)) {
             $preferences = array_keys($this->getAvailableWidgets());
         }

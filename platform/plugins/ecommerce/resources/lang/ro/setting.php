@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Permiteți clienților să încarce dovada plății pentru comenzile lor. Aceasta este utilă pentru metodele de plată manuale.',
             'enable_guest_payment_proof' => 'Permiteți clienților vizitatori să încarce dovada plății',
             'enable_guest_payment_proof_helper' => 'Când este activat, clienții vizitatori pot încărca dovada plății folosind tokenul comenzii lor fără a se autentifica. Vor primi linkul de încărcare în emailul de confirmare a comenzii.',
+            'payment_proof_payment_methods' => 'Metode de plată care necesită dovada plății',
+            'payment_proof_payment_methods_helper' => 'Selectați ce metode de plată ar trebui să permită clienților să încarce dovada plății. De obicei folosit pentru metode de plată manuale precum plata la livrare și transferul bancar.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Afișați o bară de progres cu "X vândute din Y" pentru a crea urgență și a încuraja achiziții rapide în timpul vânzărilor flash.',
     ],
     'payment_method_cod_minimum_amount' => 'Suma minimă a comenzii - :currency (Opțional)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Suma minimă a comenzii - :currency (Opțional)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Afișați informațiile bancare pe pagina de succes finalizare?',
     'invoice_templates' => 'Șabloane facturi',
 ];

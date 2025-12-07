@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'สแกน QR code เพื่อติดตามการจัดส่งของคุณ',
     ],
     'customer_confirmed_delivery_at' => 'ลูกค้ายืนยันการส่งมอบเมื่อ',
+    'no_shipping_methods_available' => 'ไม่มีวิธีการจัดส่งที่พร้อมใช้งาน!',
 ];

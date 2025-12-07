@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Adminisztrátor bejelentkezési űrlap',
     'admin_forgot_password_form' => 'Adminisztrátor elfelejtett jelszó űrlap',
     'admin_reset_password_form' => 'Adminisztrátor jelszó-visszaállítási űrlap',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matek Captcha',
+    'math_question' => 'Kérjük, oldja meg a következő matematikai függvényt: :label = ?',
+    'captcha_verification_failed' => 'A Captcha ellenőrzése sikertelen!',
+    'math_captcha_verification_failed' => 'A matematikai captcha ellenőrzése nem sikerült!',
 ];

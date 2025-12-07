@@ -102,10 +102,6 @@ $(() => {
 
     initCommonJS()
 
-    document.addEventListener('shortcode.loaded', () => {
-        initCommonJS()
-    })
-
     const $menuStyle3 = $('.main-menu.menu-style-3 > nav > ul')
 
     if ($menuStyle3.length > 0) {
@@ -1565,9 +1561,10 @@ $(() => {
     }
 
     document.addEventListener('shortcode.loaded', () => {
+        initCommonJS()
+
         initSwiper()
 
-        // Also initialize Owl Carousel sliders
         if (window.Theme && window.Theme.initOwlCarousel) {
             window.Theme.initOwlCarousel()
         }

@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Tyhjennä vanhat pyyntölokit',
     'clear_old_data_helper' => 'Poista automaattisesti vanhat pyyntölokit, jotka ovat vanhempia kuin valittu ajanjakso, pitääksesi tietokannan siistinä ja optimoituna.',
     'cronjob_warning' => 'Käyttääksesi tätä ominaisuutta sinun on määritettävä cron-työ seuraamalla tätä linkkiä: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Tuloksia ei löytynyt',
+    'no_request_errors_message' => 'Näyttää siltä, ​​​​että tässä ei ole pyyntövirheitä.',
 ];

@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Sınır numarası ekranı',
     'edit_this_gallery' => 'Bu galeriyi düzenle',
     'galleries_page' => 'Galeriler sayfası',
+    'by_name' => ':name tarafından',
+    'title' => 'Başlık',
+    'limit' => 'Sınır',
+    'limit_helper' => 'Gösterilecek galeri sayısı. ',
 ];

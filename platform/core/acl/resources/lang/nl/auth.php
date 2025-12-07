@@ -60,6 +60,8 @@ return [
     'sign_in_below' => 'Sign In Below',
     'languages' => 'Languages',
     'reset_password' => 'Reset Password',
+    'deactivated_message' => 'Uw account is gedeactiveerd. Neem contact op met de beheerder.',
+    'password_changed_message' => 'Uw wachtwoord is gewijzigd. Log opnieuw in met uw nieuwe wachtwoord.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

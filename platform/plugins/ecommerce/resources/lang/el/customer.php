@@ -23,7 +23,6 @@ return [
         'activated' => 'Ενεργοποιημένος',
         'locked' => 'Κλειδωμένος',
     ],
-    'email_verified' => 'Επαληθευμένο email;',
     'verify_email' => [
         'confirm_heading' => 'Επιβεβαίωση επαλήθευσης email',
         'confirm_description' => 'Είστε βέβαιοι ότι θέλετε να επαληθεύσετε το email αυτού του πελάτη;',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'κάντε κλικ εδώ',
         'confirm_button' => 'Επαλήθευση',
     ],
-    'email_already_verified' => 'Το email έχει ήδη επαληθευτεί.',
     'verification_email_sent' => 'Το email επαλήθευσης στάλθηκε επιτυχώς!',
     'resend_verification_email' => 'Επαναποστολή email επαλήθευσης',
     'resend_verification_email_confirmation' => 'Είστε βέβαιοι ότι θέλετε να στείλετε ξανά το email επαλήθευσης σε αυτόν τον πελάτη;',

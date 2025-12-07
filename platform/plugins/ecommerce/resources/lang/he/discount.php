@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'לא ניתן להחיל קופון זה מכיוון שהעגלה שלך מכילה פריטי מבצע בזק (:product_name). מחירי מבצע בזק לא ניתנים לשילוב עם הנחות קופון.',
     'coupon_applied_successfully' => 'מצוין! קוד הקופון ":code" הוחל. חסכת כסף בהזמנה זו!',
     'coupon_removed_successfully' => 'קוד הקופון הוסר מההזמנה שלך.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'קודי קופון (:count)',
+    'left_quantity' => 'נותרו :left',
+    'apply' => 'החל',
+    'remove' => 'הסר',
+    'select_coupon' => 'בחר קופון',
+    'you_have_coupon_code' => 'יש לך קוד קופון?',
+    'close' => 'סגור',
+    'coupon_code_label' => 'קוד קופון: :code',
+    'enter_coupon_code_placeholder' => 'הזן קוד קופון...',
 ];

@@ -43,6 +43,8 @@ return [
     'upload_progress' => 'Upload em andamento',
     'alt_text' => 'Texto alternativo',
     'folder_created' => 'Pasta criada com sucesso!',
+    'folder_exists' => 'A pasta :folder já existe!',
+    'directory_must_empty' => 'O diretório deve estar vazio para ser excluído!',
     'gallery' => 'Galeria de midia',
     'trash_error' => 'Erro ao apagar item(s) selecionados',
     'trash_success' => 'Item(s) selecionados movidos para lixeira com sucesso!',
@@ -110,26 +112,21 @@ return [
         'no_item' => [
             'default' => [
                 'title' => 'Sem itens',
-                'icon' => 'fas fa-sync',
                 'message' => 'Este diretório esta vazio',
             ],
             'trash' => [
                 'title' => 'Sua lixeira está vazia',
-                'icon' => 'fas fa-trash-alt',
                 'message' => 'Apague arquivos para move-los a lixeira automáticamente. Apague os arquivos da lixeira para apaga-los definitivamente.',
             ],
             'all_media' => [
-                'icon' => 'fas fa-cloud-upload-alt',
                 'message' => 'Ou use o botão de upload acima',
                 'title' => 'Arraste arquivo ou foldes aqui',
             ],
             'favorites' => [
-                'icon' => 'fas fa-star',
                 'message' => 'Marque os arquivos como favoritos para acha-los mais fácil',
                 'title' => 'Voçê não adicionou nada aos favoritos ainda',
             ],
             'recent' => [
-                'icon' => 'far fa-clock',
                 'message' => 'Todos os arquivos recentes que abriu, irão aparecer aqui',
                 'title' => 'Voçê não abriu nada ainda',
             ],

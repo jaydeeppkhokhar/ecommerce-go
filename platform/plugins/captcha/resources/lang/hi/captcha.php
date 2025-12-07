@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'व्यवस्थापक लॉगिन फॉर्म',
     'admin_forgot_password_form' => 'व्यवस्थापक पासवर्ड भूल गए फॉर्म',
     'admin_reset_password_form' => 'व्यवस्थापक पासवर्ड रीसेट फॉर्म',
+    'captcha' => 'कॅप्चा',
+    'math_captcha' => 'गणित कैप्चा',
+    'math_question' => 'कृपया निम्नलिखित गणित फ़ंक्शन को हल करें: :label = ?',
+    'captcha_verification_failed' => 'कैप्चा सत्यापन विफल!',
+    'math_captcha_verification_failed' => 'गणित कैप्चा सत्यापन विफल!',
 ];

@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Αυτό το κουπόνι δεν μπορεί να εφαρμοστεί επειδή το καλάθι σας περιέχει προϊόντα σε προσφορά flash (:product_name). Οι τιμές προσφοράς flash δεν μπορούν να συνδυαστούν με εκπτώσεις κουπονιών.',
     'coupon_applied_successfully' => 'Υπέροχα! Ο κωδικός κουπονιού ":code" εφαρμόστηκε. Εξοικονομήσατε χρήματα σε αυτήν την παραγγελία!',
     'coupon_removed_successfully' => 'Ο κωδικός κουπονιού αφαιρέθηκε από την παραγγελία σας.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Κωδικοί κουπονιού (:count)',
+    'left_quantity' => 'Απομένουν :left',
+    'apply' => 'Εφαρμογή',
+    'remove' => 'Αφαίρεση',
+    'select_coupon' => 'Επιλογή κουπονιού',
+    'you_have_coupon_code' => 'Έχετε κωδικό κουπονιού;',
+    'close' => 'Κλείσιμο',
+    'coupon_code_label' => 'Κωδικός κουπονιού: :code',
+    'enter_coupon_code_placeholder' => 'Εισαγάγετε κωδικό κουπονιού...',
 ];

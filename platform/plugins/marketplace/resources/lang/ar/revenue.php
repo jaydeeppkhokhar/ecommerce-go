@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'الإيرادات',
     'edit' => 'تحديث رصيد المحفظة',
     'view_store' => 'عرض المتجر ":متجر"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'إضافة/طرح مبلغ البائع',
     'statements' => 'صياغات',
     'products' => 'منتجات',
+    'items_earning_sales' => 'مبيعات الأرباح من العناصر: :amount',
 ];

@@ -39,4 +39,7 @@ return [
         'product_listing' => '제품 목록',
         'cart' => '장바구니',
     ],
+    'purchased' => '구매함',
+    'verified' => '인증됨',
+    'quick_view' => '빠른 보기',
 ];

@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Typ opłaty za przetwarzanie (Opcjonalnie)',
     'fee_type_helper' => 'Wybierz, jak ma być obliczana opłata za płatność: jako stała kwota lub procent od całkowitego zamówienia. Jeśli wybierzesz stałą kwotę, będzie ona oparta na domyślnej walucie (:currency).',
+    'payment_created' => 'Utworzyłeś płatność #:charge_id przez :channel :time : :amount',
+    'processing_please_wait' => 'Przetwarzanie. Proszę czekać...',
+    'error' => 'Błąd',
+    'checkout' => 'Kasa',
+    'show_full_json' => 'Pokaż pełny JSON',
+    'full_log_data' => 'Pełne dane dziennika',
+    'currency_not_supported' => ':name nie obsługuje :currency. Lista walut obsługiwanych przez :name: :currencies.',
+    'please_switch_currency' => 'Przełącz na dowolną obsługiwaną walutę',
+    'payment_with' => 'Płatność z :paymentType',
 ];

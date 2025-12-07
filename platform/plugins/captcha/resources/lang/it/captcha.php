@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Modulo di accesso amministratore',
     'admin_forgot_password_form' => 'Modulo password dimenticata amministratore',
     'admin_reset_password_form' => 'Modulo reset password amministratore',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Captcha di matematica',
+    'math_question' => 'Risolvi la seguente funzione matematica: PLACEholder0 = ?',
+    'captcha_verification_failed' => 'Verifica Captcha fallita!',
+    'math_captcha_verification_failed' => 'Verifica captcha matematica non riuscita!',
 ];

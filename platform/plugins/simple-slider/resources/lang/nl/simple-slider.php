@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Voeg een eenvoudige schuifregelaar toe',
     'select_slider' => 'Selecteer een schuifregelaar',
     'shortcode' => 'Shortcode',
+    'tablet_image' => 'Tabletafbeelding',
+    'tablet_image_helper' => 'Voor apparaten met een breedte van 768px tot 1200px wordt, indien leeg, de afbeelding van het bureaublad gebruikt.',
+    'mobile_image' => 'Mobiel beeld',
+    'mobile_image_helper' => 'Voor apparaten met een breedte van minder dan 768px wordt, indien leeg, de afbeelding van de tablet gebruikt.',
 ];

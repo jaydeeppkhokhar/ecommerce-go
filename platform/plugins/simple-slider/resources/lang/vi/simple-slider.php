@@ -20,5 +20,9 @@ return [
     'simple_slider_shortcode_name' => 'Slider đơn giản',
     'simple_slider_shortcode_description' => 'Thêm một slider đơn giản',
     'select_slider' => 'Chọn một slider',
-    'shortcode' => 'Shortcode',
+    'shortcode' => 'Slider đơn giản',
+    'tablet_image' => 'Hình ảnh máy tính bảng',
+    'tablet_image_helper' => 'Đối với các thiết bị có chiều rộng từ 768px đến 1200px, nếu trống sẽ sử dụng hình ảnh từ desktop.',
+    'mobile_image' => 'Hình ảnh di động',
+    'mobile_image_helper' => 'Đối với các thiết bị có chiều rộng nhỏ hơn 768px, nếu trống sẽ sử dụng hình ảnh từ máy tính bảng.',
 ];

@@ -3,7 +3,10 @@
         <div class="d-flex align-items-start">
             <div class="me-3">
                 <div class="avatar avatar-lg bg-info-lt">
-                    <x-core::icon name="ti ti-sitemap" class="icon-lg" />
+                    <x-core::icon
+                        name="ti ti-sitemap"
+                        class="icon-lg"
+                    />
                 </div>
             </div>
             <div class="flex-fill">
@@ -14,13 +17,24 @@
                     <div class="col-md-6">
                         <div class="d-flex align-items-center p-2 bg-light rounded">
                             <div class="me-3">
-                                <x-core::icon name="ti ti-link" class="text-primary" />
+                                <x-core::icon
+                                    name="ti ti-link"
+                                    class="text-primary"
+                                />
                             </div>
                             <div class="flex-fill">
-                                <div class="fw-medium small">{{ trans('packages/sitemap::sitemap.settings.sitemap_url') }}</div>
+                                <div class="fw-medium small">
+                                    {{ trans('packages/sitemap::sitemap.settings.sitemap_url') }}</div>
                                 <div class="mt-1">
-                                    <a href="{{ url('sitemap.xml') }}" target="_blank" class="btn btn-sm btn-outline-primary">
-                                        <x-core::icon name="ti ti-external-link" class="me-1" />
+                                    <a
+                                        href="{{ url('sitemap.xml') }}"
+                                        target="_blank"
+                                        class="btn btn-sm btn-outline-primary"
+                                    >
+                                        <x-core::icon
+                                            name="ti ti-external-link"
+                                            class="me-1"
+                                        />
                                         {{ trans('packages/sitemap::sitemap.settings.view_sitemap') }}
                                     </a>
                                 </div>
@@ -30,11 +44,16 @@
                     <div class="col-md-6">
                         <div class="d-flex align-items-center p-2 bg-light rounded">
                             <div class="me-3">
-                                <x-core::icon name="ti ti-refresh" class="text-success" />
+                                <x-core::icon
+                                    name="ti ti-refresh"
+                                    class="text-success"
+                                />
                             </div>
                             <div class="flex-fill">
-                                <div class="fw-medium small">{{ trans('packages/sitemap::sitemap.settings.automatic_generation') }}</div>
-                                <small class="text-muted">{{ trans('packages/sitemap::sitemap.settings.automatic_generation_desc') }}</small>
+                                <div class="fw-medium small">
+                                    {{ trans('packages/sitemap::sitemap.settings.automatic_generation') }}</div>
+                                <small
+                                    class="text-muted">{{ trans('packages/sitemap::sitemap.settings.automatic_generation_desc') }}</small>
                             </div>
                         </div>
                     </div>
@@ -42,7 +61,10 @@
 
                 <div class="mt-3 p-2 bg-success-lt rounded">
                     <div class="d-flex align-items-center">
-                        <x-core::icon name="ti ti-info-circle" class="text-success me-2" />
+                        <x-core::icon
+                            name="ti ti-info-circle"
+                            class="text-success me-2"
+                        />
                         <small class="text-success fw-medium">
                             {{ trans('packages/sitemap::sitemap.settings.automatic_update_note') }}
                         </small>

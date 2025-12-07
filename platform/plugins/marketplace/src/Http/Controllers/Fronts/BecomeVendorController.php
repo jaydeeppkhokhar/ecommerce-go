@@ -46,10 +46,10 @@ class BecomeVendorController extends BaseController
     {
         $customer = auth('customer')->user();
 
-        SeoHelper::setTitle(__('Become Vendor'));
+        SeoHelper::setTitle(trans('plugins/marketplace::marketplace.become_vendor'));
 
         Theme::breadcrumb()
-            ->add(__('Become Vendor'), route('marketplace.vendor.become-vendor'));
+            ->add(trans('plugins/marketplace::marketplace.become_vendor'), route('marketplace.vendor.become-vendor'));
 
         if ($customer->is_vendor) {
             $store = $customer->store;
@@ -70,7 +70,7 @@ class BecomeVendorController extends BaseController
                         'missing_documentation_alert',
                         HtmlField::class,
                         HtmlFieldOption::make()
-                            ->content('<div class="alert alert-warning">' . __('Missing documentations! Please upload your certificate of incorporation and government ID to continue.') . '</div>')
+                            ->content('<div class="alert alert-warning">' . trans('plugins/marketplace::marketplace.missing_documentations') . '</div>')
                     )
                     ->setUrl(route('marketplace.vendor.become-vendor.update'))
                     ->setMethod('PUT');
@@ -105,7 +105,7 @@ class BecomeVendorController extends BaseController
             return $this
                 ->httpResponse()
                 ->setError()
-                ->setMessage(__('Shop URL is existing. Please choose another one!'));
+                ->setMessage(trans('plugins/marketplace::store.forms.shop_url_existing'));
         }
 
         event(new Registered($customer));
@@ -115,7 +115,7 @@ class BecomeVendorController extends BaseController
             ->setData([
                 'redirect_url' => route('marketplace.vendor.dashboard'),
             ])
-            ->setMessage(__('Registered successfully!'));
+            ->setMessage(trans('plugins/marketplace::marketplace.registered_successfully'));
     }
 
     public function update(BecomeVendorRequest $request)
@@ -161,7 +161,7 @@ class BecomeVendorController extends BaseController
             ->setData([
                 'redirect_url' => route('marketplace.vendor.become-vendor'),
             ])
-            ->setMessage(__('Updated registration info successfully!'));
+            ->setMessage(trans('plugins/marketplace::marketplace.updated_registration_info_successfully'));
     }
 
     public function downloadCertificate()
@@ -177,7 +177,7 @@ class BecomeVendorController extends BaseController
         if (! $storage->exists($certificate)) {
             return BaseHttpResponse::make()
                 ->setError()
-                ->setMessage(__('File not found!'));
+                ->setMessage(trans('plugins/marketplace::marketplace.notices.file_not_found'));
         }
 
         return response()->file($storage->path($certificate));
@@ -196,7 +196,7 @@ class BecomeVendorController extends BaseController
         if (! $storage->exists($governmentId)) {
             return BaseHttpResponse::make()
                 ->setError()
-                ->setMessage(__('File not found!'));
+                ->setMessage(trans('plugins/marketplace::marketplace.notices.file_not_found'));
         }
 
         return response()->file($storage->path($governmentId));

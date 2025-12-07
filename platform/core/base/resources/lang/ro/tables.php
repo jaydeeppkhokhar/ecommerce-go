@@ -63,6 +63,6 @@ return [
     'bulk_changes' => 'Modificări în bloc',
     'submit' => 'Trimite',
     'please_select_record' => 'Vă rugăm să selectați cel puțin o înregistrare pentru a efectua această acțiune!',
-    'checkbox' => 'Checkbox',
+    'checkbox' => 'Casetă de selectare',
     'toggle_columns' => 'Comutare coloane',
 ];

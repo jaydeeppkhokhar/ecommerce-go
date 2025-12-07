@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alternatívny text',
 
     'folder_created' => 'Priečinok bol úspešne vytvorený!',
+    'folder_exists' => 'Priečinok :folder už existuje!',
+    'directory_must_empty' => 'Adresár musí byť prázdny, aby sa dal odstrániť!',
     'gallery' => 'Galéria médií',
 
     'trash_error' => 'Chyba pri odstraňovaní vybraných položiek',

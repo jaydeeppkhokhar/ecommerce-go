@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Skenirajte QR kod da biste pratili vašu pošiljku',
     ],
     'customer_confirmed_delivery_at' => 'Kupac potvrdio dostavu',
+    'no_shipping_methods_available' => 'Нема доступних начина испоруке!',
 ];

@@ -9,4 +9,4 @@ Theme::registerRoutes(function (): void {
     Route::post('mollie/payment/webhook/{token}', [MollieController::class, 'webhook'])
         ->withoutMiddleware([VerifyCsrfToken::class])
         ->name('mollie.payment.webhook');
-}, []);
+}, ['core']);

@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Tilaus onnistui!',
     'customer_new_order_greeting' => 'Hyvä :customer_name,',
     'customer_new_order_message' => 'Kiitos tuotteidemme ostamisesta, otamme sinuun yhteyttä puhelinnumeroon <strong>:customer_phone</strong> tilauksen vahvistamiseksi!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Toimitusmenetelmä',
     'customer_new_order_order_number' => 'Tilausnumero',
     'customer_new_order_payment_method' => 'Maksutapa',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Olet vastaanottanut uuden tilauksen sivustolta :site_title',
     'admin_new_order_greeting' => 'Hei ylläpitäjä,',
     'admin_new_order_message' => 'Asiakkaan :customer_name tekemä uusi tilaus on tehty onnistuneesti',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Toimitusmenetelmä',
     'admin_new_order_payment_method' => 'Maksutapa',
     'admin_new_order_view_order' => 'Näytä tilauksen tiedot',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Tilaus vahvistettu!',
     'order_confirm_greeting' => 'Hei :customer_name,',
     'order_confirm_message' => 'Tilauksesi on vahvistettu. Kiitos tuotteidemme ostamisesta!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Huomautus',
     'order_confirm_shipping_method' => 'Toimitusmenetelmä',
     'order_confirm_payment_method' => 'Maksutapa',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Tilauksesi on peruutettu',
     'customer_cancel_order_greeting' => 'Hyvä :customer_name,',
     'customer_cancel_order_message' => 'Tilauksesi <strong>:order_id</strong> on peruutettu pyynnöstäsi syystä :cancellation_reason ja maksusi on myös peruutettu.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Osoite',
     'customer_cancel_order_products' => 'Tässä on tilauksesi:',
     'customer_cancel_order_note' => 'Huomautus',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Tilaus peruutettu',
     'admin_cancel_order_greeting' => 'Hei :customer_name,',
-    'admin_cancel_order_message' => 'Tilauksesi #:order_id on peruuttanut henkilökuntamme.',
+    'admin_cancel_order_message' => 'Tilauksesi :order_id on peruuttanut henkilökuntamme.',
     'admin_cancel_order_order_cancelled' => 'Tilaus on peruutettu!',
     'admin_cancel_order_reason' => 'Peruutuksen syy: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Asiakkaan tiedot',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Tilauksen tiedot:',
     'admin_cancel_order_note' => 'Huomautus',
     'admin_cancel_order_order_summary' => 'Tilausyhteenveto',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Asiakas peruutti tilauksen #:order_id',
+    'order_cancellation_to_admin_title' => 'Asiakas peruutti tilauksen :order_id',
     'order_cancellation_to_admin_greeting' => 'Hei ylläpitäjä,',
-    'order_cancellation_to_admin_message' => ':customer_name on peruuttanut tilauksen <strong>#:order_id</strong>. Syy: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name on peruuttanut tilauksen <strong>:order_id</strong>. Syy: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Asiakkaan tiedot',
     'order_cancellation_to_admin_name' => 'Nimi',
     'order_cancellation_to_admin_phone' => 'Puhelin',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Huomautus',
     'order_cancellation_to_admin_view_order' => 'Näytä tilauksen tiedot',
     'order_cancellation_to_admin_order_summary' => 'Tilausyhteenveto',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Tilauksesi on matkalla',
     'customer_delivery_order_greeting' => 'Hei :customer_name,',
     'customer_delivery_order_message' => 'Tilauksesi on matkalla. Kiitos tuotteidemme ostamisesta!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Seurantatunnus',
     'customer_delivery_order_tracking_link' => 'Seurantalinkki',
     'customer_delivery_order_track_shipment' => 'Seuraa lähetystäsi',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Tilauksesi on toimitettu',
     'customer_order_delivered_greeting' => 'Hei :customer_name,',
     'customer_order_delivered_message' => 'Tilauksesi on toimitettu. Kiitos tuotteidemme ostamisesta!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Seurantatunnus',
     'customer_order_delivered_tracking_link' => 'Seurantalinkki',
     'customer_order_delivered_track_shipment' => 'Näytä seurantatiedot',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Maksu vahvistettu tilaukselle #:order_id',
+    'order_confirm_payment_title' => 'Maksu vahvistettu tilaukselle :order_id',
     'order_confirm_payment_greeting' => 'Hei :customer_name,',
     'order_confirm_payment_message' => 'Maksusi on vahvistettu. Kiitos tuotteidemme ostamisesta!',
     'order_confirm_payment_order_number' => 'Tilausnumero',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Kiitos maksustasi. Tilauksesi käsitellään pian.',
     'order_confirm_payment_order_summary' => 'Tilausyhteenveto',
     'order_confirm_payment_shipping_method' => 'Toimitusmenetelmä',
-
-    // Order Recovery Email
     'order_recover_title' => 'Sinulla on keskeneräinen tilaus',
     'order_recover_greeting' => 'Hei :customer_name,',
     'order_recover_message' => 'Huomasimme, että sinulla on keskeneräinen tilaus. Haluaisitko suorittaa ostoksesi loppuun?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Viimeistele tilauksesi',
     'order_recover_order_summary' => 'Tilausyhteenveto',
     'order_recover_note' => 'Huomautus',
-
-    // Welcome Email
     'welcome_greeting' => 'Olemme iloisia, että olet täällä, :customer_name!',
     'welcome_message' => 'Tervetuloa sivustolle :site_title!',
     'welcome_register_success' => 'Olet rekisteröitynyt onnistuneesti sivustolle <strong>:site_title</strong>.',
     'welcome_explore' => 'Jos tarvitset apua, voit vastata tähän sähköpostiin!',
     'welcome_visit_shop' => 'Aloita ostokset!',
-
-    // Confirm Email
     'confirm_email_title' => 'Vahvista sähköposti',
     'confirm_email_greeting' => 'Olemme iloisia, että olet täällä, :customer_name!',
     'confirm_email_message' => 'Vahvista sähköpostiosoitteesi napsauttamalla alla olevaa painiketta.',
     'confirm_email_instruction' => 'Vahvista sähköpostiosoitteesi päästäksesi sivustolle. Napsauta alla olevaa painiketta vahvistaaksesi sähköpostisi.',
     'confirm_email_button' => 'Vahvista sähköpostiosoitteesi',
     'confirm_email_trouble' => 'Jos sinulla on ongelmia "Vahvista sähköpostiosoitteesi" -painikkeen napsauttamisessa, kopioi ja liitä seuraava URL-osoite verkkoselaimeen: <a href=":verify_link">:verify_link</a> ja liitä se selaimeesi.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Nollaa salasanasi',
     'password_reminder_greeting' => 'Hei :customer_name,',
     'password_reminder_message' => 'Olet pyytänyt salasanan nollausta.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Nollaa salasana',
     'password_reminder_ignore' => 'Jos et pyytänyt salasanan nollausta, älä välitä tästä sähköpostista.',
     'password_reminder_trouble_clicking' => 'Jos sinulla on ongelmia "Nollaa salasana" -painikkeen napsauttamisessa, kopioi ja liitä seuraava URL-osoite verkkoselaimeen: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Palautuspyyntö vastaanotettu',
     'order_return_request_greeting' => 'Hei :customer_name,',
-    'order_return_request_message' => 'Olemme vastaanottaneet palautuspyyntösi tilaukselle #:order_id.',
+    'order_return_request_message' => 'Olemme vastaanottaneet palautuspyyntösi tilaukselle :order_id.',
     'order_return_request_reason' => 'Palautuksen syy',
     'order_return_request_items' => 'Palautettavat tuotteet',
     'order_return_request_process' => 'Käsittelemme pyyntösi ja otamme sinuun yhteyttä pian.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Palautuksen syy',
     'order_return_request_order_summary' => 'Tilausyhteenveto',
     'order_return_request_note' => 'Huomautus',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Palautuksen tilan päivitys',
     'order_return_status_updated_greeting' => 'Hyvä :customer_name,',
     'order_return_status_updated_message' => 'Haluamme ilmoittaa, että tilauksen :order_id palautuspyynnön tila on päivitetty.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Moderaattorin huomautus: " :description ".',
     'order_return_status_updated_questions' => 'Jos sinulla on kysymyksiä tai huolenaiheita tästä päivityksestä, älä epäröi ottaa yhteyttä asiakaspalveluumme.',
     'order_return_status_updated_view_details' => 'Näytä palautuksen tiedot',
-
-    // Review Products Email
     'review_products_title' => 'Arvioi äskettäinen ostoksesi',
     'review_products_greeting' => 'Hei :customer_name,',
-    'review_products_message' => 'Tilauksesi #:order_id on valmistunut. Haluaisimme kuulla palautettasi!',
+    'review_products_message' => 'Tilauksesi :order_id on valmistunut. Haluaisimme kuulla palautettasi!',
     'review_products_instruction' => 'Käytä hetki arvioidaksesi ostamasi tuotteet:',
     'review_products_button' => 'Arvioi tuotteet',
     'review_products_thank_you' => 'Kiitos ostoksestasi!',
     'review_products_products' => 'Arvioitavat tuotteet',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Digitaaliset tuotteesi ovat valmiit',
     'download_digital_products_greeting' => 'Hei :customer_name,',
     'download_digital_products_message' => 'Kiitos ostoksestasi! Digitaaliset tuotteesi ovat valmiina latausta varten.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Lataa kaikki tiedostot',
     'download_digital_products_external_link_downloads' => 'Lataa ulkoiset tiedostot',
     'download_digital_products_payment_method' => 'Maksutapa',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Lisenssikoodisi',
     'digital_product_license_codes_greeting' => 'Hyvä :customer_name,',
     'digital_product_license_codes_message' => 'Kiitos ostoksestasi! Tässä ovat lisenssikoodisi:',
     'digital_product_license_codes_thanks' => 'Kiitos digitaalisten tuotteidemme ostamisesta.',
-    'digital_product_license_codes_below' => 'Alla ovat ostamasi tuotteiden lisenssikoodit:',
     'digital_product_license_codes_product' => 'Tuote',
     'digital_product_license_codes_license' => 'Lisenssikoodi',
     'digital_product_license_codes_order_summary' => 'Tässä on tilauksesi:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Jokainen lisenssikoodi on ainutlaatuinen ja voidaan käyttää vain kerran',
     'digital_product_license_codes_note_3' => 'Älä jaa lisenssikoodejasi muiden kanssa',
     'digital_product_license_codes_note_4' => 'Jos sinulla on ongelmia lisenssikoodiesi kanssa, ota yhteyttä tukitiimiimme',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Tuotetiedostot päivitetty',
     'product_file_updated_greeting' => 'Hei, :customer_name!',
     'product_file_updated_message' => 'Tuotteen <a href=":product_link"><strong>:product_name</strong></a> tiedostot on päivitetty.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Voit ladata päivitetyt tiedostot tililtäsi.',
     'product_file_updated_order_number' => 'Tilausnumero',
     'product_file_updated_download' => 'Lataa päivitetyt tiedostot',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Maksu vastaanotettu',
     'invoice_payment_created_greeting' => 'Hei :customer_name,',
     'invoice_payment_created_message' => 'Olemme onnistuneesti vastaanottaneet maksusi sivustolle :site_title. Kiitos!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Voit tarkastella laskuasi verkossa osoitteessa <a href=":invoice_link">:invoice_link</a> laskukoodilla #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Laskukoodisi on #:invoice_code',
     'invoice_payment_created_view_online' => 'Näytä lasku verkossa',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Hei :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Olemme vastaanottaneet pyyntösi poistaa tilisi.',
     'customer_deletion_request_confirmation_warning' => 'Huomaa, että tätä toimintoa ei voi peruuttaa. Kaikki tietosi poistetaan pysyvästi.',
     'customer_deletion_request_confirmation_button' => 'Vahvista poisto',
     'customer_deletion_request_confirmation_cancel' => 'Jos et pyytänyt tätä, älä välitä tästä sähköpostista.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Hei :customer_name,',
     'customer_deletion_request_completed_message' => 'Tilisi on poistettu onnistuneesti pyynnöstäsi.',
     'customer_deletion_request_completed_thank_you' => 'Kiitos, että olit kanssamme.',
     'customer_deletion_request_completed_goodbye' => 'Toivomme näkevämme sinut jälleen tulevaisuudessa.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Hei ylläpitäjä,',
     'payment_proof_upload_notification_message' => 'Asiakas :customer_name (Sähköposti: <a href="mailto::customer_email">:customer_email</a>) on ladannut maksutodistuksen tilaukselleen tunnisteella :order_id.',
     'payment_proof_upload_notification_view_details' => 'Voit tarkastella maksun tietoja <a href=":payment_link">täällä</a> ja tilauksen tietoja <a href=":order_link">täällä</a>.',

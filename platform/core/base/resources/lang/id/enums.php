@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Publikasikan aset paket',
         'clean_up' => 'Bersihkan file pembaruan sistem',
         'done' => 'Sistem berhasil diperbarui',
-
+        'unknown' => 'Langkah tidak diketahui',
         'messages' => [
             'download' => 'Mengunduh file pembaruan...',
             'update_files' => 'Memperbarui file sistem...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Membersihkan file pembaruan sistem...',
             'done' => 'Selesai! Browser Anda akan dimuat ulang dalam 30 detik.',
         ],
-
         'failed_messages' => [
             'download' => 'Tidak dapat mengunduh file pembaruan',
             'update_files' => 'Tidak dapat memperbarui file sistem',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Tidak dapat mempublikasikan aset paket',
             'clean_up' => 'Tidak dapat membersihkan file pembaruan sistem',
         ],
-
         'success_messages' => [
             'download' => 'File pembaruan berhasil diunduh.',
             'update_files' => 'File sistem berhasil diperbarui.',

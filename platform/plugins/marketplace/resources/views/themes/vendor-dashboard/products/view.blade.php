@@ -264,7 +264,7 @@
                                 <thead>
                                     <tr>
                                         <th>{{ trans('plugins/ecommerce::order.order') }}</th>
-                                        <th>{{ trans('plugins/ecommerce::order.customer') }}</th>
+                                        <th>{{ trans('plugins/ecommerce::order.customer_label') }}</th>
                                         <th>{{ trans('core/base::tables.status') }}</th>
                                         <th class="text-end">{{ trans('plugins/ecommerce::products.quantity') }}</th>
                                         <th class="text-end">{{ trans('plugins/ecommerce::products.price') }}</th>

@@ -63,6 +63,6 @@ return [
     'bulk_changes' => 'Skupne promjene',
     'submit' => 'Pošalji',
     'please_select_record' => 'Molimo odaberite barem jedan zapis da biste izvršili ovu radnju!',
-    'checkbox' => 'Checkbox',
+    'checkbox' => 'Potvrdni okvir',
     'toggle_columns' => 'Prebaci stupce',
 ];

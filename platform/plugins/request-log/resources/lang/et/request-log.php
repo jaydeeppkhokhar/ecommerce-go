@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Kustuta vanad päringute logid',
     'clear_old_data_helper' => 'Kustutage automaatselt vanad päringute logid, mis on valitud perioodist vanemad, et hoida andmebaas puhas ja optimeeritud.',
     'cronjob_warning' => 'Selle funktsiooni kasutamiseks peate seadistama cron-töö, järgides seda linki: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Tulemusi ei leitud',
+    'no_request_errors_message' => 'Näib, et siin pole ühtegi taotluse viga.',
 ];

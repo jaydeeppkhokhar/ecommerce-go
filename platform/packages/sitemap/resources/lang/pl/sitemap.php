@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Automatyczne generowanie',
         'automatic_generation_desc' => 'Aktualizuje się automatycznie przy zmianach treści',
         'automatic_update_note' => 'Mapa witryny aktualizuje się automatycznie za każdym razem, gdy tworzysz, edytujesz lub usuwasz treści w witrynie.',
+        'submit_sitemap' => 'Wyślij mapę witryny do IndexNow',
+        'submitting_sitemap' => 'Wysyłanie...',
+        'sitemap_submitted_successfully' => 'Mapa witryny została pomyślnie wysłana do wyszukiwarek!',
+        'sitemap_submission_failed' => 'Nie udało się wysłać mapy witryny do wszystkich wyszukiwarek.',
+        'sitemap_submission_partial' => 'Mapa witryny została wysłana z pewnymi błędami.',
+        'submit_sitemap_error' => 'Nie udało się wysłać mapy witryny. Spróbuj ponownie.',
+        'indexnow_disabled' => 'IndexNow nie jest włączony. Włącz go najpierw.',
+        'indexnow_no_api_key' => 'Nie znaleziono klucza API. Najpierw wygeneruj klucz API.',
     ],
 ];

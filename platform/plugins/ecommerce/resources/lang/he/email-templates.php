@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'ההזמנה הצליחה!',
     'customer_new_order_greeting' => ':customer_name היקר/ה,',
     'customer_new_order_message' => 'תודה שרכשת את המוצרים שלנו, ניצור איתך קשר באמצעות הטלפון <strong>:customer_phone</strong> לאישור ההזמנה!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'שיטת משלוח',
     'customer_new_order_order_number' => 'מספר הזמנה',
     'customer_new_order_payment_method' => 'אמצעי תשלום',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'קיבלת הזמנה חדשה מ :site_title',
     'admin_new_order_greeting' => 'שלום מנהל,',
     'admin_new_order_message' => 'הזמנה חדשה בוצעה בהצלחה על ידי :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'שיטת משלוח',
     'admin_new_order_payment_method' => 'אמצעי תשלום',
     'admin_new_order_view_order' => 'צפה בפרטי הזמנה',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'ההזמנה אושרה!',
     'order_confirm_greeting' => 'שלום :customer_name,',
     'order_confirm_message' => 'ההזמנה שלך אושרה. תודה שרכשת את המוצרים שלנו!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'הערה',
     'order_confirm_shipping_method' => 'שיטת משלוח',
     'order_confirm_payment_method' => 'אמצעי תשלום',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'ההזמנה שלך בוטלה',
     'customer_cancel_order_greeting' => ':customer_name היקר/ה,',
     'customer_cancel_order_message' => 'ההזמנה שלך <strong>:order_id</strong> בוטלה כפי שביקשת בגלל הסיבה :cancellation_reason והתשלום שלך בוטל גם כן.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'כתובת',
     'customer_cancel_order_products' => 'הנה מה שהזמנת:',
     'customer_cancel_order_note' => 'הערה',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'הזמנה בוטלה',
     'admin_cancel_order_greeting' => 'שלום :customer_name,',
-    'admin_cancel_order_message' => 'ההזמנה שלך #:order_id בוטלה על ידי הצוות שלנו.',
+    'admin_cancel_order_message' => 'ההזמנה שלך :order_id בוטלה על ידי הצוות שלנו.',
     'admin_cancel_order_order_cancelled' => 'ההזמנה בוטלה!',
     'admin_cancel_order_reason' => 'סיבת ביטול: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'מידע לקוח',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'פרטי הזמנה:',
     'admin_cancel_order_note' => 'הערה',
     'admin_cancel_order_order_summary' => 'סיכום הזמנה',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'הזמנה #:order_id בוטלה על ידי לקוח',
+    'order_cancellation_to_admin_title' => 'הזמנה :order_id בוטלה על ידי לקוח',
     'order_cancellation_to_admin_greeting' => 'שלום מנהל,',
-    'order_cancellation_to_admin_message' => ':customer_name ביטל/ה הזמנה <strong>#:order_id</strong>. סיבה: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name ביטל/ה הזמנה <strong>:order_id</strong>. סיבה: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'מידע לקוח',
     'order_cancellation_to_admin_name' => 'שם',
     'order_cancellation_to_admin_phone' => 'טלפון',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'הערה',
     'order_cancellation_to_admin_view_order' => 'צפה בפרטי הזמנה',
     'order_cancellation_to_admin_order_summary' => 'סיכום הזמנה',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'ההזמנה שלך בדרך',
     'customer_delivery_order_greeting' => 'שלום :customer_name,',
     'customer_delivery_order_message' => 'ההזמנה שלך בדרך. תודה שרכשת את המוצרים שלנו!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'מזהה מעקב',
     'customer_delivery_order_tracking_link' => 'קישור מעקב',
     'customer_delivery_order_track_shipment' => 'עקוב אחרי המשלוח שלך',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'ההזמנה שלך נמסרה',
     'customer_order_delivered_greeting' => 'שלום :customer_name,',
     'customer_order_delivered_message' => 'ההזמנה שלך נמסרה. תודה שרכשת את המוצרים שלנו!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'מזהה מעקב',
     'customer_order_delivered_tracking_link' => 'קישור מעקב',
     'customer_order_delivered_track_shipment' => 'צפה בפרטי מעקב',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'התשלום אושר עבור הזמנה #:order_id',
+    'order_confirm_payment_title' => 'התשלום אושר עבור הזמנה :order_id',
     'order_confirm_payment_greeting' => 'שלום :customer_name,',
     'order_confirm_payment_message' => 'התשלום שלך אושר. תודה שרכשת את המוצרים שלנו!',
     'order_confirm_payment_order_number' => 'מספר הזמנה',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'תודה על התשלום שלך. ההזמנה שלך תעובד בקרוב.',
     'order_confirm_payment_order_summary' => 'סיכום הזמנה',
     'order_confirm_payment_shipping_method' => 'שיטת משלוח',
-
-    // Order Recovery Email
     'order_recover_title' => 'יש לך הזמנה שלא הושלמה',
     'order_recover_greeting' => 'שלום :customer_name,',
     'order_recover_message' => 'שמנו לב שיש לך הזמנה שלא הושלמה. האם תרצה להשלים את הרכישה שלך?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'השלם את ההזמנה שלך',
     'order_recover_order_summary' => 'סיכום הזמנה',
     'order_recover_note' => 'הערה',
-
-    // Welcome Email
     'welcome_greeting' => 'אנחנו שמחים שהצטרפת, :customer_name!',
     'welcome_message' => 'ברוכים הבאים ל :site_title!',
     'welcome_register_success' => 'נרשמת בהצלחה לחשבון ב <strong>:site_title</strong>.',
     'welcome_explore' => 'אם תצטרך עזרה כלשהי, אל תהסס להגיב לאימייל זה!',
     'welcome_visit_shop' => 'התחל לקנות!',
-
-    // Confirm Email
     'confirm_email_title' => 'אמת אימייל',
     'confirm_email_greeting' => 'אנחנו שמחים שהצטרפת, :customer_name!',
     'confirm_email_message' => 'אנא אשר את כתובת האימייל שלך על ידי לחיצה על הכפתור למטה.',
     'confirm_email_instruction' => 'אנא אמת את כתובת האימייל שלך כדי לגשת לאתר זה. לחץ על הכפתור למטה כדי לאמת את האימייל שלך.',
     'confirm_email_button' => 'אשר את כתובת האימייל שלך',
     'confirm_email_trouble' => 'אם יש לך בעיות ללחוץ על הכפתור "אשר את כתובת האימייל שלך", העתק והדבק את כתובת ה-URL למטה לדפדפן האינטרנט שלך: <a href=":verify_link">:verify_link</a> והדבק אותו בדפדפן שלך.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'אפס את הסיסמה שלך',
     'password_reminder_greeting' => 'שלום :customer_name,',
     'password_reminder_message' => 'ביקשת לאפס את הסיסמה שלך.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'אפס סיסמה',
     'password_reminder_ignore' => 'אם לא ביקשת איפוס סיסמה, אנא התעלם מאימייל זה.',
     'password_reminder_trouble_clicking' => 'אם יש לך בעיות ללחוץ על הכפתור "אפס סיסמה", העתק והדבק את כתובת ה-URL למטה לדפדפן האינטרנט שלך: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'בקשת החזרה התקבלה',
     'order_return_request_greeting' => 'שלום :customer_name,',
-    'order_return_request_message' => 'קיבלנו את בקשת ההחזרה שלך עבור הזמנה #:order_id.',
+    'order_return_request_message' => 'קיבלנו את בקשת ההחזרה שלך עבור הזמנה :order_id.',
     'order_return_request_reason' => 'סיבת החזרה',
     'order_return_request_items' => 'פריטים להחזרה',
     'order_return_request_process' => 'נטפל בבקשה שלך וניצור איתך קשר בקרוב.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'סיבת החזרה',
     'order_return_request_order_summary' => 'סיכום הזמנה',
     'order_return_request_note' => 'הערה',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'עדכון סטטוס החזרת הזמנה',
     'order_return_status_updated_greeting' => ':customer_name היקר/ה,',
     'order_return_status_updated_message' => 'רצינו להודיע לך שהסטטוס של בקשת ההחזרה שלך עבור הזמנה :order_id עודכן.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'הערת מנחה: " :description ".',
     'order_return_status_updated_questions' => 'אם יש לך שאלות או דאגות לגבי עדכון זה, אל תהסס ליצור קשר עם צוות תמיכת הלקוחות שלנו.',
     'order_return_status_updated_view_details' => 'צפה בפרטי החזרה',
-
-    // Review Products Email
     'review_products_title' => 'סקור את הרכישה האחרונה שלך',
     'review_products_greeting' => 'שלום :customer_name,',
-    'review_products_message' => 'ההזמנה שלך #:order_id הושלמה. נשמח לשמוע את המשוב שלך!',
+    'review_products_message' => 'ההזמנה שלך :order_id הושלמה. נשמח לשמוע את המשוב שלך!',
     'review_products_instruction' => 'אנא הקדש רגע לסקור את המוצרים שרכשת:',
     'review_products_button' => 'סקור מוצרים',
     'review_products_thank_you' => 'תודה על הרכישה שלך!',
     'review_products_products' => 'מוצרים לסקירה',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'המוצרים הדיגיטליים שלך מוכנים',
     'download_digital_products_greeting' => 'שלום :customer_name,',
     'download_digital_products_message' => 'תודה על הרכישה שלך! המוצרים הדיגיטליים שלך מוכנים להורדה.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'הורד את כל הקבצים',
     'download_digital_products_external_link_downloads' => 'הורד קבצים חיצוניים',
     'download_digital_products_payment_method' => 'אמצעי תשלום',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'קודי הרישיון שלך',
     'digital_product_license_codes_greeting' => ':customer_name היקר/ה,',
     'digital_product_license_codes_message' => 'תודה על הרכישה שלך! הנה קודי הרישיון שלך:',
     'digital_product_license_codes_thanks' => 'תודה שרכשת את המוצרים הדיגיטליים שלנו.',
-    'digital_product_license_codes_below' => 'להלן קודי הרישיון שלך עבור המוצרים שרכשת:',
     'digital_product_license_codes_product' => 'מוצר',
     'digital_product_license_codes_license' => 'קוד רישיון',
     'digital_product_license_codes_order_summary' => 'הנה מה שהזמנת:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'כל קוד רישיון הוא ייחודי וניתן להשתמש בו פעם אחת בלבד',
     'digital_product_license_codes_note_3' => 'אל תשתף את קודי הרישיון שלך עם אחרים',
     'digital_product_license_codes_note_4' => 'אם יש לך בעיות עם קודי הרישיון שלך, אנא צור קשר עם צוות התמיכה שלנו',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'קבצי מוצר עודכנו',
     'product_file_updated_greeting' => 'שלום, :customer_name!',
     'product_file_updated_message' => 'הקבצים עבור המוצר <a href=":product_link"><strong>:product_name</strong></a> עודכנו.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'אתה יכול להוריד את הקבצים המעודכנים מהחשבון שלך.',
     'product_file_updated_order_number' => 'מספר הזמנה',
     'product_file_updated_download' => 'הורד קבצים מעודכנים',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'תשלום התקבל',
     'invoice_payment_created_greeting' => 'שלום :customer_name,',
     'invoice_payment_created_message' => 'קיבלנו בהצלחה את התשלום שלך עבור :site_title. תודה!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'אתה יכול לצפות בחשבונית שלך באינטרנט בכתובת <a href=":invoice_link">:invoice_link</a> עם קוד חשבונית #:invoice_code',
     'invoice_payment_created_invoice_message' => 'קוד החשבונית שלך הוא #:invoice_code',
     'invoice_payment_created_view_online' => 'צפה בחשבונית באינטרנט',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'שלום :customer_name,',
     'customer_deletion_request_confirmation_message' => 'קיבלנו את בקשתך למחוק את חשבונך.',
     'customer_deletion_request_confirmation_warning' => 'אנא שים לב שפעולה זו אינה ניתנת לביטול. כל הנתונים שלך יימחקו לצמיתות.',
     'customer_deletion_request_confirmation_button' => 'אשר מחיקה',
     'customer_deletion_request_confirmation_cancel' => 'אם לא ביקשת זאת, אנא התעלם מאימייל זה.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'שלום :customer_name,',
     'customer_deletion_request_completed_message' => 'חשבונך נמחק בהצלחה כפי שביקשת.',
     'customer_deletion_request_completed_thank_you' => 'תודה שהיית איתנו.',
     'customer_deletion_request_completed_goodbye' => 'אנו מקווים לראותך שוב בעתיד.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'שלום מנהל,',
     'payment_proof_upload_notification_message' => 'הלקוח :customer_name (אימייל: <a href="mailto::customer_email">:customer_email</a>) העלה הוכחת תשלום עבור ההזמנה עם מזהה :order_id.',
     'payment_proof_upload_notification_view_details' => 'אתה יכול לצפות בפרטי התשלום <a href=":payment_link">כאן</a> ובפרטי ההזמנה <a href=":order_link">כאן</a>.',

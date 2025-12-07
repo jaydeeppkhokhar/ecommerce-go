@@ -45,4 +45,12 @@ return [
     'widget_site_copyright_description' => 'Văn bản bản quyền ở chân trang dưới cùng.',
     'widget_site_copyright_helper' => 'Đi tới :link để thay đổi văn bản bản quyền.',
     'theme_options' => 'Tùy chọn giao diện',
+
+    'form' => [
+        'enable_caching' => 'Bật bộ nhớ cache',
+        'yes' => 'Có',
+        'no' => 'Không',
+        'cache_helper' => 'Bật bộ nhớ cache để cải thiện hiệu suất tải trang.',
+        'cache_warning' => 'Lưu ý: Nội dung widget sẽ được lưu vào bộ nhớ cache. Xóa cache nếu cần cập nhật nội dung.',
+    ],
 ];

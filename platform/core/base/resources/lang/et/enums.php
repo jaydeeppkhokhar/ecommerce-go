@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Avalda pakettide varad',
         'clean_up' => 'Puhasta süsteemi uuendusfailid',
         'done' => 'Süsteem edukalt uuendatud',
-
+        'unknown' => 'Tundmatu samm',
         'messages' => [
             'download' => 'Uuendusfailide allalaadimine...',
             'update_files' => 'Süsteemifailide uuendamine...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Süsteemi uuendusfailide puhastamine...',
             'done' => 'Valmis! Teie brauser värskendatakse 30 sekundi pärast.',
         ],
-
         'failed_messages' => [
             'download' => 'Uuendusfailide allalaadimine ebaõnnestus',
             'update_files' => 'Süsteemifailide uuendamine ebaõnnestus',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Pakettide varade avaldamine ebaõnnestus',
             'clean_up' => 'Süsteemi uuendusfailide puhastamine ebaõnnestus',
         ],
-
         'success_messages' => [
             'download' => 'Uuendusfailid edukalt alla laaditud.',
             'update_files' => 'Süsteemifailid edukalt uuendatud.',

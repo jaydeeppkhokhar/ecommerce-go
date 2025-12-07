@@ -6,9 +6,11 @@ use Botble\ACL\Http\Requests\CreateUserRequest;
 use Botble\ACL\Models\Role;
 use Botble\ACL\Models\User;
 use Botble\Base\Forms\FieldOptions\EmailFieldOption;
+use Botble\Base\Forms\FieldOptions\PhoneNumberFieldOption;
 use Botble\Base\Forms\FieldOptions\SelectFieldOption;
 use Botble\Base\Forms\FieldOptions\TextFieldOption;
 use Botble\Base\Forms\Fields\PasswordField;
+use Botble\Base\Forms\Fields\PhoneNumberField;
 use Botble\Base\Forms\Fields\SelectField;
 use Botble\Base\Forms\Fields\TextField;
 use Botble\Base\Forms\FormAbstract;
@@ -55,11 +57,12 @@ class UserForm extends FormAbstract
             ->add('email', TextField::class, EmailFieldOption::make()->required()->placeholder(trans('core/acl::users.email_placeholder')))
             ->add(
                 'phone',
-                TextField::class,
-                TextFieldOption::make()
+                PhoneNumberField::class,
+                PhoneNumberFieldOption::make()
                     ->label(trans('core/acl::users.phone'))
                     ->placeholder(trans('core/acl::users.phone_placeholder'))
                     ->maxLength(20)
+                    ->withCountryCodeSelection()
             )
             ->add(
                 'password',

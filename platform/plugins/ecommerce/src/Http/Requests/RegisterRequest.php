@@ -3,6 +3,7 @@
 namespace Botble\Ecommerce\Http\Requests;
 
 use Botble\Base\Facades\BaseHelper;
+use Botble\Base\Http\Requests\Concerns\HasPhoneFieldValidation;
 use Botble\Base\Rules\EmailRule;
 use Botble\Ecommerce\Facades\EcommerceHelper;
 use Botble\Ecommerce\Models\Customer;
@@ -11,6 +12,13 @@ use Illuminate\Validation\Rule;
 
 class RegisterRequest extends Request
 {
+    use HasPhoneFieldValidation;
+
+    protected function prepareForValidation(): void
+    {
+        $this->preparePhoneForValidation();
+    }
+
     public function rules(): array
     {
         $rules = [

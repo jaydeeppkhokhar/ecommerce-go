@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Acest cupon nu poate fi aplicat deoarece coșul dumneavoastră conține produse în vânzare flash (:product_name). Prețurile de vânzare flash nu pot fi combinate cu reduceri de cupon.',
     'coupon_applied_successfully' => 'Excelent! Codul de cupon ":code" a fost aplicat. Ați economisit bani la această comandă!',
     'coupon_removed_successfully' => 'Codul de cupon a fost eliminat din comanda dumneavoastră.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Coduri de cupon (:count)',
+    'left_quantity' => 'Rămase :left',
+    'apply' => 'Aplică',
+    'remove' => 'Elimină',
+    'select_coupon' => 'Selectează cupon',
+    'you_have_coupon_code' => 'Aveți un cod de cupon?',
+    'close' => 'Închide',
+    'coupon_code_label' => 'Cod de cupon: :code',
+    'enter_coupon_code_placeholder' => 'Introduceți codul de cupon...',
 ];

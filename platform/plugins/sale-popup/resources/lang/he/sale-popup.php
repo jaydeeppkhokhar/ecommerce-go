@@ -39,4 +39,7 @@ return [
         'product_listing' => 'רשימת מוצרים',
         'cart' => 'עגלה',
     ],
+    'purchased' => 'רכש',
+    'verified' => 'מאומת',
+    'quick_view' => 'תצוגה מהירה',
 ];

@@ -69,4 +69,7 @@ return [
             'trans' => 'Can be empty or a string with a maximum length of :max characters if provided.',
         ],
     ],
+    'download_locale' => '言語をダウンロード',
+    'import_available_locale_confirmation' => 'GitHubから言語をダウンロード',
+    'import_available_locale_confirmation_content' => 'この言語をダウンロードしてもよろしいですか？:lang_path にダウンロードされます。必要に応じて後で削除できます。',
 ];

@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Ingresos',
     'edit' => 'Actualizar saldo de billetera',
     'view_store' => 'Ver tienda ":tienda"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Sumar/Restar cantidad de proveedor',
     'statements' => 'Declaraciones',
     'products' => 'Productos',
+    'items_earning_sales' => 'Ventas de ganancias de artículos: :amount',
 ];

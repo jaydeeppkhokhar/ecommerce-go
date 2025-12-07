@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'シンプルなスライダーを追加する',
     'select_slider' => 'スライダーを選択してください',
     'shortcode' => 'ショートコード',
+    'tablet_image' => 'タブレット画像',
+    'tablet_image_helper' => '幅が 768 ピクセルから 1200 ピクセルのデバイスの場合、空の場合はデスクトップの画像が使用されます。',
+    'mobile_image' => 'モバイル画像',
+    'mobile_image_helper' => '幅が 768 ピクセル未満のデバイスの場合、空の場合はタブレットの画像が使用されます。',
 ];

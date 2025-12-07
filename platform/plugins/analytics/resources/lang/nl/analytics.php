@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Analytics-plugin-fout: Ontbrekende bibliotheken van derden. Voer "composer update" uit om ze te installeren.',
     'browser' => 'Browser',
     'url' => 'URL',
+    'credential_invalid' => 'Deze referentie is geen geldige Google Analytics-referentie.',
+    'file_not_valid_json' => 'Dit bestand is geen geldig JSON-bestand.',
+    'no_results_found' => 'Geen resultaten gevonden',
+    'upload_service_account_json' => 'Upload Service Account JSON-bestand',
 ];

@@ -54,8 +54,10 @@ trait ProductPrices
 
     public function getDiscountPrice(): float|int|null
     {
+        $productIds = array_unique([$this->getKey(), $this->original_product->id]);
+
         $promotion = DiscountFacade::getFacadeRoot()
-            ->promotionForProduct([$this->getKey(), $this->original_product->id]);
+            ->promotionForProduct($productIds);
 
         if (! $promotion) {
             return $this->price;

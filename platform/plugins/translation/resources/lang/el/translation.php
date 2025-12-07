@@ -69,4 +69,7 @@ return [
             'trans' => 'Μπορεί να είναι κενό ή συμβολοσειρά με μέγιστο μήκος :max χαρακτήρες εάν παρέχεται.',
         ],
     ],
+    'download_locale' => 'Λήψη γλώσσας',
+    'import_available_locale_confirmation' => 'Λήψη γλώσσας από το GitHub',
+    'import_available_locale_confirmation_content' => 'Είστε βέβαιοι ότι θέλετε να κατεβάσετε αυτή τη γλώσσα; Θα κατέβει στο :lang_path, μπορείτε να τη διαγράψετε αργότερα αν θέλετε.',
 ];

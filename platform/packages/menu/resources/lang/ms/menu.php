@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Susun semula item menu dengan menyeret dan melepaskannya untuk menukar susunan atau menyusunnya sebagai submenu.',
     'widget_custom_menu' => 'Menu Tersuai',
     'widget_custom_menu_description' => 'Tambahkan menu tersuai ke kawasan widget anda.',
+    'select_menu' => 'Pilih menu',
 ];

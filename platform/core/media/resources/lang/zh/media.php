@@ -43,6 +43,8 @@ return [
     'upload_progress' => '上传进度',
     'alt_text' => '替代文本',
     'folder_created' => '文件夹创建成功！',
+    'folder_exists' => '文件夹 :folder 已存在！',
+    'directory_must_empty' => '目录必须为空才能删除！',
     'gallery' => '媒体库',
     'trash_error' => '删除选定项时出错',
     'trash_success' => '成功将选定的项目移至垃圾箱！',

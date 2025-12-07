@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Scan QR-kode for at spore din forsendelse',
     ],
     'customer_confirmed_delivery_at' => 'Kunde bekræftede levering den',
+    'no_shipping_methods_available' => 'Ingen forsendelsesmetoder tilgængelige!',
 ];

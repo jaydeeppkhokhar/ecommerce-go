@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Ogiltigt Google AdSense klient-ID-format. Det ska vara i formatet: ca-pub-XXXXXXXXXXXXXXXX (där X är en siffra).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Surfplattebild',
+    'tablet_image_helper' => 'För enheter med bredd från 768px till 1200px, om tom, kommer bilden från skrivbordet att användas.',
+    'mobile_image' => 'Mobilbild',
+    'mobile_image_helper' => 'För enheter med bredd mindre än 768px, om tom, kommer bilden från surfplattan att användas.',
 ];

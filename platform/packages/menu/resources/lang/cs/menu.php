@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Přeuspořádejte položky nabídky přetažením, abyste změnili jejich pořadí nebo je vnořili jako podnabídky.',
     'widget_custom_menu' => 'Vlastní nabídka',
     'widget_custom_menu_description' => 'Přidejte vlastní nabídku do oblasti widgetů.',
+    'select_menu' => 'Vybrat menu',
 ];

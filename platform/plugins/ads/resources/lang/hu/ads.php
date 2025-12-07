@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Érvénytelen Google AdSense Client ID formátum. A következő formátumban kell lennie: ca-pub-XXXXXXXXXXXXXXXX (ahol X egy számjegy).',
         ],
     ],
+    'banner' => 'Banner',
+    'tablet_image' => 'Tablet kép',
+    'tablet_image_helper' => '768px és 1200px közötti szélességű eszközökhöz, ha üres, az asztali kép lesz használva.',
+    'mobile_image' => 'Mobil kép',
+    'mobile_image_helper' => '768px-nél kisebb szélességű eszközökhöz, ha üres, a tablet kép lesz használva.',
 ];

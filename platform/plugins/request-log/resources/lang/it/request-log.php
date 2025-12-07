@@ -13,4 +13,6 @@ return [
     'clear_old_data' => 'Cancella vecchi Log delle Richieste',
     'clear_old_data_helper' => 'Elimina automaticamente i vecchi log delle richieste più vecchi del periodo selezionato per mantenere il database pulito e ottimizzato.',
     'cronjob_warning' => 'Per utilizzare questa funzionalità, è necessario configurare un cron job seguendo questo link: <a href=":link" target="_blank">:link</a>.',
+    'no_results_found' => 'Nessun risultato trovato',
+    'no_request_errors_message' => 'Sembra che non ci siano errori di richiesta qui.',
 ];

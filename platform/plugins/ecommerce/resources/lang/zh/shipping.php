@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => '扫描QR码跟踪您的货运',
     ],
     'customer_confirmed_delivery_at' => '客户确认配送时间',
+    'no_shipping_methods_available' => '没有可用的配送方式！',
 ];

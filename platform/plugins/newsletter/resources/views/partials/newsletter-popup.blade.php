@@ -8,4 +8,3 @@
     data-url="{{ route('public.ajax.newsletter-popup') }}"
 >
 </div>
-

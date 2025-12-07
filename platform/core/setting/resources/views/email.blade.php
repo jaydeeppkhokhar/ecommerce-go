@@ -7,12 +7,11 @@
 
     @if (config('queue.default') !== 'sync')
         <div class="mt-3">
-            <x-core-setting::section
-                :card="false"
-            >
+            <x-core-setting::section :card="false">
                 <x-core::alert type="warning">
                     <h4 class="alert-heading">{{ trans('core/setting::setting.email.queue_warning_title') }}</h4>
-                    <p>{{ trans('core/setting::setting.email.queue_warning_description', ['default' => config('queue.default')]) }}</p>
+                    <p>{{ trans('core/setting::setting.email.queue_warning_description', ['default' => config('queue.default')]) }}
+                    </p>
                     <p class="mb-0">{!! trans('core/setting::setting.email.queue_warning_action') !!}</p>
                 </x-core::alert>
             </x-core-setting::section>
@@ -20,9 +19,7 @@
     @endif
 
     <div class="mt-3">
-        <x-core-setting::section
-            :card="false"
-        >
+        <x-core-setting::section :card="false">
             <x-core::alert type="info">
                 <h4 class="alert-heading">{{ trans('core/setting::setting.email.setup_tips_title') }}</h4>
                 <ul class="mb-0">
@@ -92,7 +89,7 @@
                         data-bs-dismiss="modal"
                         class="w-100"
                     >
-                        {{ __('Close') }}
+                        {{ trans('core/setting::setting.close') }}
                     </x-core::button>
                 </div>
                 <div class="col">

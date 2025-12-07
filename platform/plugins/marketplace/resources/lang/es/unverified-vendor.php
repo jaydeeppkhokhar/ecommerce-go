@@ -13,11 +13,10 @@ return [
     ],
     'approve' => 'Aprobar',
     'approve_vendor_confirmation' => 'Aprobar la confirmación del proveedor',
-    'approve_vendor_confirmation_description' => 'Are you sure you really want to approve :vendor for selling on this site?',
-    'vendor_approval_notification' => 'Do you want to approve this vendor for selling on this site? :approve_link',
+    'approve_vendor_confirmation_description' => '¿Está seguro de que realmente desea aprobar a :vendor para vender en este sitio?',
     'new_vendor_notifications' => [
         'new_vendor' => 'Nuevo vendedor',
         'view' => 'Vista',
-        'description' => ':customer has registered but not verified.',
+        'description' => ':customer se ha registrado pero no está verificado.',
     ],
 ];

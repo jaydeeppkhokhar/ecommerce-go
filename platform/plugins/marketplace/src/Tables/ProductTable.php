@@ -67,6 +67,9 @@ class ProductTable extends TableAbstract
             })
             ->editColumn('order', function ($item) {
                 return (string) $item->order;
+            })
+            ->filter(function ($query) {
+                return $query->searchByKeyword(request()->input('search.value'));
             });
 
         return $this->toJson($data);

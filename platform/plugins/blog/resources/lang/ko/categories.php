@@ -12,4 +12,7 @@ return [
     'parent' => '상위 카테고리',
     'order' => '순서',
     'is_default' => '기본값',
+    'intro' => [
+        'description' => '더 나은 콘텐츠 관리를 위해 블로그 게시물을 카테고리로 정리하세요.',
+    ],
 ];

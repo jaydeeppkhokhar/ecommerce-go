@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Analytics 插件錯誤：缺少第三方庫。請運行 "composer update" 以安裝它們。',
     'browser' => '瀏覽器',
     'url' => '網址',
+    'credential_invalid' => 'This credential is invalid Google Analytics credentials.',
+    'file_not_valid_json' => 'This file is not a valid JSON file.',
+    'no_results_found' => 'No results found',
+    'upload_service_account_json' => 'Upload Service Account JSON File',
 ];

@@ -5,8 +5,12 @@ return [
     'create' => 'Bagong FAQ',
     'question' => 'Tanong',
     'answer' => 'Sagot',
+    'question_placeholder' => 'Ilagay ang iyong tanong...',
+    'answer_placeholder' => 'Ilagay ang iyong sagot...',
     'category' => 'Kategorya',
     'faq_schema_config' => 'Pagsasaayos ng FAQ schema (:link)',
+    'faq_schema_config_description' => 'Ang pagsasaayos na ito ay nagrehistro lamang ng structured data ng FAQ para sa layunin ng SEO. Hindi ito ipapakita sa nilalaman ng frontend theme. Ang schema ay naka-embed sa source code ng pahina at maaaring tingnan gamit ang "View Source" o subukan gamit ang Google Rich Results Test tool.',
+    'schema_testing_tool' => 'Subukan gamit ang Google Rich Results Test',
     'learn_more' => 'Matuto pa',
     'settings' => [
         'title' => 'Mga Madalas Itanong',

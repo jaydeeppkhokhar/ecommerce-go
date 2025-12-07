@@ -255,6 +255,24 @@ class BaseHelper
     {
         $rule = config('core.base.general.phone_validation_rule');
 
+        $min = setting('phone_number_min_length', 8);
+        $max = setting('phone_number_max_length', 15);
+
+        $hasMin = preg_match('/min:\d+/', $rule);
+        $hasMax = preg_match('/max:\d+/', $rule);
+
+        if ($hasMin) {
+            $rule = preg_replace('/min:\d+/', "min:$min", $rule);
+        } else {
+            $rule = "min:$min|" . $rule;
+        }
+
+        if ($hasMax) {
+            $rule = preg_replace('/max:\d+/', "max:$max", $rule);
+        } else {
+            $rule = "max:$max|" . $rule;
+        }
+
         if ($asArray) {
             return explode('|', $rule);
         }

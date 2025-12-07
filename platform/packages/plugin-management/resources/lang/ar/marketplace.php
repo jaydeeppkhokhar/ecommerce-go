@@ -17,6 +17,7 @@ return [
     'compatible_version' => 'متوافق مع الإصدار الخاص بك',
     'incompatible_version' => 'غير متوافق مع الإصدار الخاص بك',
     'install_now' => 'تثبيت الآن',
+    'buy_now' => 'اشتري الآن',
     'remove' => 'يزيل',
     'detail' => 'تفاصيل',
     'activate' => 'تفعيل',
@@ -36,5 +37,5 @@ return [
     'unzip_success' => 'تم استخراج الملف',
     'install_success' => 'تم تثبيت البرنامج المساعد بنجاح!',
     'update_success' => 'تم تحديث البرنامج المساعد بنجاح!',
-    'minimum_core_version_error' => 'Cannot install this plugin. Minimum core version is :version.',
+    'minimum_core_version_error' => 'لا يمكن تثبيت هذا البرنامج المساعد. الحد الأدنى من الإصدار الأساسي هو :version.',
 ];

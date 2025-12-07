@@ -28,7 +28,7 @@ return [
     'menu_id' => 'ID de menú',
     'badge_text' => 'Texto de la insignia',
     'badge_color' => 'Color de la insignia',
-    'edit' => 'Editar menú',
     'widget_custom_menu' => 'Menú personalizado',
     'widget_custom_menu_description' => 'Agregue un menú personalizado a su área de widgets.',
+    'select_menu' => 'Seleccionar menú',
 ];

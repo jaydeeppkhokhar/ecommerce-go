@@ -69,4 +69,7 @@ return [
             'trans' => 'Può essere vuoto o una stringa con una lunghezza massima di :max caratteri se fornito.',
         ],
     ],
+    'download_locale' => 'Scarica lingua',
+    'import_available_locale_confirmation' => 'Scarica lingua da GitHub',
+    'import_available_locale_confirmation_content' => 'Sei sicuro di voler scaricare questa lingua? Verrà scaricata in :lang_path, puoi eliminarla in seguito se lo desideri.',
 ];

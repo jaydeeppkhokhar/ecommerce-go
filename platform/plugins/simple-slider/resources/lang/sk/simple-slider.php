@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Pridať jednoduchý posúvač',
     'select_slider' => 'Vyberte posúvač',
     'shortcode' => 'Skrátený kód',
+    'tablet_image' => 'Obrázok tabletu',
+    'tablet_image_helper' => 'Pre zariadenia so šírkou od 768px do 1200px, ak je prázdne, použije sa obrázok z pracovnej plochy.',
+    'mobile_image' => 'Mobilný obrázok',
+    'mobile_image_helper' => 'Pre zariadenia so šírkou menšou ako 768 pixelov, ak je prázdne, použije sa obrázok z tabletu.',
 ];

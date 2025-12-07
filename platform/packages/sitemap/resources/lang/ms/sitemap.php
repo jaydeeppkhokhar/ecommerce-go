@@ -75,5 +75,13 @@ return [
         'automatic_generation' => 'Penjanaan Automatik',
         'automatic_generation_desc' => 'Dikemas kini secara automatik apabila kandungan berubah',
         'automatic_update_note' => 'Peta laman dikemas kini secara automatik setiap kali anda mencipta, mengedit atau memadam kandungan di laman web anda.',
+        'submit_sitemap' => 'Hantar peta laman ke IndexNow',
+        'submitting_sitemap' => 'Sedang dihantar...',
+        'sitemap_submitted_successfully' => 'Peta laman berjaya dihantar ke enjin carian!',
+        'sitemap_submission_failed' => 'Gagal menghantar peta laman ke semua enjin carian.',
+        'sitemap_submission_partial' => 'Peta laman dihantar dengan beberapa ralat.',
+        'submit_sitemap_error' => 'Gagal menghantar peta laman. Sila cuba lagi.',
+        'indexnow_disabled' => 'IndexNow belum didayakan. Sila dayakan terlebih dahulu.',
+        'indexnow_no_api_key' => 'Kunci API tidak ditemui. Sila jana kunci API terlebih dahulu.',
     ],
 ];

@@ -69,14 +69,9 @@ return [
         'dear_admin' => '亲爱的管理员，',
         'hello' => '您好，',
         'happy_selling' => '销售愉快！',
-        'thank_you_understanding' => '感谢您的理解。',
         'email_sent_by_team' => '此邮件由 {{ site_title }} 团队发送。',
-
-        // Contact Store
         'contact_store_sent_from' => '此邮件由 :customer_name (:customer_email) 通过您在 :site_title 的个人资料联系表单发送。',
         'contact_store_reply_instruction' => '您可以直接回复此邮件来回复 :customer_name (:customer_email)。',
-
-        // Vendor Account Status
         'vendor_account_blocked_message' => '您在 {{ site_title }} 的卖家账户自 :block_date 起已被<strong>封禁</strong>。',
         'vendor_account_blocked_reason' => '封禁原因：:block_reason',
         'vendor_account_blocked_contact_support' => '如果您认为这是错误或有任何疑问，请联系我们的支持团队。',
@@ -87,8 +82,6 @@ return [
         'vendor_account_approved_message' => '您的账户已获批在我们的网站 <a href=":site_url">:site_url</a> 上销售。',
         'vendor_account_rejected_title' => '卖家账户被拒绝',
         'vendor_account_rejected_message' => '很遗憾地通知您，您的账户未获批在我们的网站 <a href=":site_url">:site_url</a> 上销售。',
-
-        // Store New Order
         'store_new_order_title' => '订单成功！',
         'store_new_order_message' => '您在 :site_title 上收到了新订单！',
         'customer_information' => '客户信息',
@@ -101,14 +94,10 @@ return [
         'order_date' => '订单日期',
         'shipping_method' => '配送方式',
         'payment_method' => '支付方式',
-
-        // Product Approval
         'product_approved_title' => '商品已批准',
         'product_approved_message' => '您的商品已获批在我们的网站 <a href=":site_url">:site_url</a> 上销售。',
         'pending_product_approval_title' => '待审核商品',
         'pending_product_approval_message' => '由 :store_name 创建的新商品 <a href=":product_url">:product_name</a> 正在等待审批。',
-
-        // Verify Vendor
         'verify_vendor_title' => '验证卖家',
         'verify_vendor_message' => '您在 :site_title 上有一个新卖家需要验证！',
         'vendor_information' => '卖家信息',
@@ -116,17 +105,11 @@ return [
         'field_store_name' => '店铺名称',
         'field_store_phone' => '店铺电话号码',
         'visit_store_button' => '访问店铺',
-
-        // Withdrawal
         'withdrawal_approved_title' => '提现已批准',
         'withdrawal_approved_message' => '您的提现请求已被批准，我们将很快将 <strong>:withdrawal_amount</strong> 发送到您的银行信息。',
-
-        // Order Cancellation
         'order_cancellation_title' => '客户已取消订单 :order_id',
         'order_cancellation_message' => '客户 :customer_name 因 :cancellation_reason 取消了订单 <strong>:order_id</strong>。',
         'order_items_header' => '您的订购内容：',
-
-        // Welcome Vendor
         'welcome_vendor_title' => '欢迎卖家',
         'welcome_vendor_greeting' => '我们很高兴欢迎您来到 :store_name！',
         'welcome_vendor_registration_complete' => '您的卖家注册已成功完成，您现在是我们充满活力的卖家社区的一员。',
@@ -136,8 +119,6 @@ return [
         'welcome_vendor_support' => '如果您有任何疑问或需要帮助，我们的支持团队随时为您提供帮助。请随时联系！',
         'login_vendor_account_button' => '登录您的卖家账户',
         'welcome_vendor_closing' => '我们很兴奋看到您的店铺在 :site_title 上蓬勃发展！',
-
-        // Store Verification
         'store_verified_title' => '店铺验证已批准',
         'store_verified_message' => '恭喜！您的店铺已在 <strong>:site_title</strong> 上成功验证。此验证徽章将有助于与您的客户建立信任。',
         'dear_store_owner' => '亲爱的 :store_name 店主，',
@@ -148,8 +129,6 @@ return [
         'higher_visibility_benefit' => '在搜索结果中获得更高的可见性',
         'visit_your_store' => '访问您的店铺',
         'congratulations_verified' => '恭喜您获得验证！',
-
-        // Store Unverification
         'store_unverified_title' => '店铺验证状态已更改',
         'store_unverified_message' => '很遗憾地通知您，您在 <strong>:site_title</strong> 上的店铺验证状态已更改。',
         'unverification_details' => '状态更改详情',
@@ -235,7 +214,6 @@ return [
     'store_url' => '店铺URL',
     'product_name' => '商品名称',
     'product_url' => '商品URL',
-    'withdrawal_amount' => '提现金额',
     'helpers' => [
         'store_status' => '如果您将状态更改为除":status"以外的状态，此店铺账户也将更改为":customer"',
     ],
@@ -291,7 +269,6 @@ return [
     'documents' => '文档',
     'store_products' => '店铺商品',
     'store_orders' => '店铺订单',
-    'total_revenue' => '总收入',
     'total_earnings' => '总收入',
     'withdrawals' => '提现',
     'pending_withdrawals' => '待处理提现',
@@ -300,4 +277,42 @@ return [
     'products_count' => '商品',
     'store_status' => '店铺状态',
     'verified' => '已验证',
+    'dashboard' => '仪表板',
+    'products' => '商品',
+    'orders' => '订单',
+    'coupons' => '优惠券',
+    'revenues' => '收入',
+    'messages' => '消息',
+    'reviews' => '评论',
+    'vendor_dashboard' => '卖家仪表板',
+    'become_a_vendor' => '成为卖家',
+    'product_specification' => '商品规格',
+    'register_as' => '注册为',
+    'register' => '注册',
+    'i_am_customer' => '我是客户',
+    'i_am_vendor' => '我是卖家',
+    'i_agree_to_terms' => '我同意:link',
+    'i_agree_to_terms_simple' => '我同意条款和条件',
+    'terms_and_privacy_policy' => '条款和隐私政策',
+    'language' => '语言',
+    'save_settings' => '保存设置',
+    'payout_info' => '付款信息',
+    'payment_method' => '付款方式',
+    'bank_name' => '银行名称',
+    'earnings' => '收入',
+    'quick_actions' => '快速操作',
+    'store_performance' => '店铺表现',
+    'conversion_rate' => '转化率',
+    'congratulations_vendor' => '恭喜！您的卖家注册成功！',
+    'wait_for_approval' => '等待批准',
+    'recent_orders' => '最近订单',
+    'customer_reviews' => '客户评论',
+    'top_selling_products' => '畅销商品',
+    'inventory_status' => '库存状态',
+    'in_stock' => '有货',
+    'low_stock' => '库存不足',
+    'out_of_stock' => '缺货',
+    'add_new_product' => '添加新商品',
+    'total_revenue' => '总收入',
+    'withdrawal_amount' => '提现金额',
 ];

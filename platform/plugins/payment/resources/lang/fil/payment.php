@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Uri ng bayad sa pagproseso (Opsyonal)',
     'fee_type_helper' => 'Piliin kung paano kakalkulahin ang bayad sa pagbabayad: bilang nakatakdang halaga o porsyento ng kabuuang order. Kung pipiliin mo ang nakatakdang halaga, ito ay batay sa default na pera (:currency).',
+    'payment_created' => 'Gumawa ka ng pagbabayad #:charge_id sa pamamagitan ng :channel :time : :amount',
+    'processing_please_wait' => 'Pinoproseso. Mangyaring maghintay...',
+    'error' => 'Error',
+    'checkout' => 'Checkout',
+    'show_full_json' => 'Ipakita ang Buong JSON',
+    'full_log_data' => 'Kumpletong Data ng Log',
+    'currency_not_supported' => 'Hindi sinusuportahan ng :name ang :currency. Listahan ng mga pera na sinusuportahan ng :name: :currencies.',
+    'please_switch_currency' => 'Mangyaring lumipat sa anumang sinusuportahang pera',
+    'payment_with' => 'Pagbabayad gamit ang :paymentType',
 ];

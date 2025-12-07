@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => '収益',
     'edit' => 'ウォレット残高を更新する',
     'view_store' => 'ストア「:ストア」を表示',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => '仕入先の金額の加算/減算',
     'statements' => 'ステートメント',
     'products' => '製品',
+    'items_earning_sales' => 'アイテム収益販売: :amount',
 ];

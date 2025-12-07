@@ -112,7 +112,7 @@ class VendorWithdrawalForm extends FormAbstract
             if ($model->images) {
                 $this->addMetaBoxes([
                     'images' => [
-                        'title' => __('Withdrawal images'),
+                        'title' => trans('plugins/marketplace::withdrawal.withdrawal_images'),
                         'content' => view('plugins/marketplace::withdrawals.forms.images', compact('model'))->render(),
                         'priority' => 4,
                     ],
@@ -121,9 +121,9 @@ class VendorWithdrawalForm extends FormAbstract
 
             if ($this->getModel()->vendor_can_edit) {
                 $this->add('cancel', 'onOff', [
-                    'label' => __('Do you want to cancel?'),
+                    'label' => trans('plugins/marketplace::withdrawal.do_you_want_to_cancel'),
                     'help_block' => [
-                        'text' => __('After cancel amount and fee will be refunded back in your balance'),
+                        'text' => trans('plugins/marketplace::withdrawal.after_cancel_refund_notice'),
                     ],
                 ]);
             } else {

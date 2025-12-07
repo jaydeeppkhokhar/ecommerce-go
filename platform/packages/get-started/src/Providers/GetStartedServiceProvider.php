@@ -7,10 +7,9 @@ use Botble\Base\Facades\BaseHelper;
 use Botble\Base\Supports\ServiceProvider;
 use Botble\Base\Traits\LoadAndPublishDataTrait;
 use Botble\Dashboard\Events\RenderingDashboardWidgets;
-use Illuminate\Contracts\Support\DeferrableProvider;
 use Illuminate\Support\Facades\Auth;
 
-class GetStartedServiceProvider extends ServiceProvider implements DeferrableProvider
+class GetStartedServiceProvider extends ServiceProvider
 {
     use LoadAndPublishDataTrait;
 

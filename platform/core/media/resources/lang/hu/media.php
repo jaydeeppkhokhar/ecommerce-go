@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alternatív szöveg',
 
     'folder_created' => 'Mappa sikeresen létrehozva!',
+    'folder_exists' => 'A :folder mappa már létezik!',
+    'directory_must_empty' => 'A könyvtárnak üresnek kell lennie a törléshez!',
     'gallery' => 'Média galéria',
 
     'trash_error' => 'Hiba a kijelölt elemek törlésekor',

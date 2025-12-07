@@ -23,7 +23,6 @@ return [
     'edit_this_post' => 'Muokkaa tätä artikkelia',
     'no_new_post_now' => 'Ei uusia artikkeleita tällä hetkellä!',
     'menu_name' => 'Artikkelit',
-    'widget_posts_recent' => 'Viimeisimmät artikkelit',
     'categories' => 'Kategoriat',
     'category' => 'Kategoria',
     'author' => 'Kirjoittaja',

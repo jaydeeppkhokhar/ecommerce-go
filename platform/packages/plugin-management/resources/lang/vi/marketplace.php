@@ -17,6 +17,7 @@ return [
     'compatible_version' => 'Tương thích với phiên bản của bạn',
     'incompatible_version' => 'Không tương thích với phiên bản của bạn',
     'install_now' => 'Cài đặt ngay',
+    'buy_now' => 'Mua ngay',
     'remove' => 'Xóa',
     'detail' => 'Chi tiết',
     'activate' => 'Kích hoạt',

@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => '加一個簡單的滑桿',
     'select_slider' => '選擇一個滑桿',
     'shortcode' => '短碼',
+    'tablet_image' => '平板電腦圖像',
+    'tablet_image_helper' => '對於寬度從 768px 到 1200px 的設備，如果為空，將使用桌面上的圖像。',
+    'mobile_image' => '手機圖片',
+    'mobile_image_helper' => '對於寬度小於 768px 的設備，如果為空，將使用平板電腦中的圖像。',
 ];

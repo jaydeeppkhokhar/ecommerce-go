@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Payagan ang mga customer na mag-upload ng patunay ng bayad para sa kanilang mga order. Ito ay kapaki-pakinabang para sa mga manu-manong paraan ng pagbabayad.',
             'enable_guest_payment_proof' => 'Payagan ang mga guest na customer na mag-upload ng patunay ng bayad',
             'enable_guest_payment_proof_helper' => 'Kapag naka-enable, ang mga guest na customer ay maaaring mag-upload ng patunay ng bayad gamit ang kanilang order token nang walang pag-login. Makakatanggap sila ng link ng pag-upload sa kanilang confirmation email ng order.',
+            'payment_proof_payment_methods' => 'Mga paraan ng pagbabayad na nangangailangan ng patunay ng pagbabayad',
+            'payment_proof_payment_methods_helper' => 'Piliin kung aling mga paraan ng pagbabayad ang dapat payagan ang mga customer na mag-upload ng patunay ng pagbabayad. Karaniwang ginagamit para sa manu-manong mga paraan ng pagbabayad tulad ng COD at bank transfer.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Ipakita ang progress bar na may "X nabili sa Y" upang lumikha ng kadalian at hikayatin ang mabilis na mga pagbili sa panahon ng mga flash sale.',
     ],
     'payment_method_cod_minimum_amount' => 'Minimum na halaga ng order - :currency (Opsyonal)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Minimum na halaga ng order - :currency (Opsyonal)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Ipakita ang impormasyon ng bangko sa success page ng checkout?',
     'invoice_templates' => 'Mga template ng invoice',
 ];

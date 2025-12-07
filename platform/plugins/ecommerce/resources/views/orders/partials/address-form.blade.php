@@ -103,7 +103,7 @@
             @if (!in_array('email', EcommerceHelper::getHiddenFieldsAtCheckout()))
                 <div @class([
                     'col-12',
-                    'col-lg-8' => !in_array(
+                    'col-lg-7' => !in_array(
                         'phone',
                         EcommerceHelper::getHiddenFieldsAtCheckout()),
                 ])>
@@ -127,18 +127,27 @@
             @if (!in_array('phone', EcommerceHelper::getHiddenFieldsAtCheckout()))
                 <div @class([
                     'col-12',
-                    'col-lg-4' => !in_array(
+                    'col-lg-5' => !in_array(
                         'email',
                         EcommerceHelper::getHiddenFieldsAtCheckout()),
                 ])>
                     <div class="form-group mb-3 @error('address.phone') has-error @enderror">
-                        <div class="form-input-wrapper">
+                        <div class="phone-input-wrapper">
                             <input
-                                class="form-control"
+                                class="form-control js-phone-number-mask"
                                 id="address_phone"
-                                name="address[phone]"
+                                name="address[phone_display]"
                                 autocomplete="phone"
                                 type="tel"
+                                data-country-code-selection="true"
+                                value="{{ old('address.phone', Arr::get($sessionCheckoutData, 'phone')) ?: (auth('customer')->check() ? auth('customer')->user()->phone : null) }}"
+                            >
+                            <input
+                                type="hidden"
+                                name="address[phone]"
+                                id="address_phone-full"
+                                class="js-phone-number-full"
+                                data-phone-field="address[phone_display]"
                                 value="{{ old('address.phone', Arr::get($sessionCheckoutData, 'phone')) ?: (auth('customer')->check() ? auth('customer')->user()->phone : null) }}"
                             >
                             <label for="address_phone">{{ __('Phone') }}</label>
@@ -379,3 +388,7 @@
 
     {!! apply_filters('ecommerce_checkout_address_form_after', null, $sessionCheckoutData) !!}
 </div>
+
+@once
+    @include('core/base::forms.fields.phone-number-script')
+@endonce

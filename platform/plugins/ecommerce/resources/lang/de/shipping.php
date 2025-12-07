@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'QR-Code scannen, um Ihre Sendung zu verfolgen',
     ],
     'customer_confirmed_delivery_at' => 'Kunde bestätigte Zustellung am',
+    'no_shipping_methods_available' => 'Keine Versandmethoden verfügbar!',
 ];

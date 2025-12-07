@@ -47,6 +47,17 @@ class ProductRequest extends Request
 
     public function rules(): array
     {
+        $productId = $this->route('product.id');
+
+        if (! $productId) {
+            $routeProduct = $this->route('product');
+            $productId = $routeProduct instanceof Product ? $routeProduct->getKey() : $routeProduct;
+        }
+
+        if (! $productId) {
+            $productId = $this->route('id');
+        }
+
         $rules = [
             'name' => ['required', 'string', 'max:250'],
             'description' => ['nullable', 'string', 'max:300000'],
@@ -87,7 +98,7 @@ class ProductRequest extends Request
                 'string',
                 'max:150',
                 Rule::unique((new Product())->getTable())
-                    ->ignore($this->route('product.id')),
+                    ->ignore($productId),
             ],
             'sku' => [
                 'nullable',

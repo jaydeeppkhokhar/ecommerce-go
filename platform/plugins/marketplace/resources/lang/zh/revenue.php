@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => '收入',
     'edit' => '更新钱包余额',
     'view_store' => '查看店铺 ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => '增加/减少卖家金额',
     'statements' => '账单',
     'products' => '商品',
+    'items_earning_sales' => '商品收益销售: :amount',
 ];

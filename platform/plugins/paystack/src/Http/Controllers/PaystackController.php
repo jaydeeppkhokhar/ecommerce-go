@@ -41,6 +41,6 @@ class PaystackController extends BaseController
 
         return $response
             ->setNextUrl(PaymentHelper::getRedirectURL())
-            ->setMessage(__('Checkout successfully!'));
+            ->setMessage(trans('plugins/payment::payment.checkout_success'));
     }
 }

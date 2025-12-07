@@ -69,4 +69,7 @@ return [
             'trans' => 'Lehet üres vagy egy karakterlánc, amelynek maximális hossza :max karakter, ha meg van adva.',
         ],
     ],
+    'download_locale' => 'Nyelv letöltése',
+    'import_available_locale_confirmation' => 'Nyelv letöltése a GitHubról',
+    'import_available_locale_confirmation_content' => 'Biztosan le szeretné tölteni ezt a nyelvet? Letöltésre kerül ide: :lang_path, később törölheti, ha szeretné.',
 ];

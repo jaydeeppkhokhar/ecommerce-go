@@ -68,24 +68,7 @@ class OrderTable extends TableAbstract
 
         $data = $data
             ->filter(function ($query) {
-                if ($keyword = $this->request->input('search.value')) {
-                    return $query
-                        ->whereHas('address', function ($subQuery) use ($keyword) {
-                            return $subQuery
-                                ->where('name', 'LIKE', '%' . $keyword . '%')
-                                ->orWhere('email', 'LIKE', '%' . $keyword . '%')
-                                ->orWhere('phone', 'LIKE', '%' . $keyword . '%');
-                        })
-                        ->orWhereHas('user', function ($subQuery) use ($keyword) {
-                            return $subQuery
-                                ->where('name', 'LIKE', '%' . $keyword . '%')
-                                ->orWhere('email', 'LIKE', '%' . $keyword . '%')
-                                ->orWhere('phone', 'LIKE', '%' . $keyword . '%');
-                        })
-                        ->orWhere('code', 'LIKE', '%' . $keyword . '%');
-                }
-
-                return $query;
+                return $query->searchByKeyword($this->request->input('search.value'));
             });
 
         return $this->toJson($data);

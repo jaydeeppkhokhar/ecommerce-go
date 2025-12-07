@@ -30,7 +30,6 @@ return [
     'primary_sidebar_name' => 'Primäre Seitenleiste',
     'primary_sidebar_description' => 'Primärer Seitenleiste',
     'drag_widget_to_sidebar' => 'Ziehen Sie Widgets in diesen Bereich.',
-    'instruction' => 'To activate a widget drag it to a sidebar or click on it. To deactivate a widget and delete its settings, drag it back.',
     'cache_suggestion' => [
         'title' => 'Leistungsvorschlag',
         'description' => 'Sie können die Leistung Ihrer Website verbessern, indem Sie das Widget-Caching aktivieren.',
@@ -38,7 +37,6 @@ return [
         'enable_button' => 'Widget-Caching aktivieren',
         'dismiss_button' => 'Für eine Woche verwerfen',
     ],
-
     'widget_site_copyright' => 'Website-Urheberrecht',
     'widget_site_copyright_description' => 'Urheberrechtstext in der unteren Fußzeile.',
     'widget_site_copyright_helper' => 'Gehen Sie zu :link, um den Urheberrechtstext zu ändern.',

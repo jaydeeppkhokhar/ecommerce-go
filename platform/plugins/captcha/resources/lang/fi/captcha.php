@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Järjestelmänvalvojan kirjautumislomake',
     'admin_forgot_password_form' => 'Järjestelmänvalvojan unohtunut salasana -lomake',
     'admin_reset_password_form' => 'Järjestelmänvalvojan salasanan palautuslomake',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matemaattinen Captcha',
+    'math_question' => 'Ratkaise seuraava matemaattinen funktio: :label = ?',
+    'captcha_verification_failed' => 'Captcha-vahvistus epäonnistui!',
+    'math_captcha_verification_failed' => 'Matemaattinen captcha-vahvistus epäonnistui!',
 ];

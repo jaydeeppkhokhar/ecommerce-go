@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Bestilling vellykket!',
     'customer_new_order_greeting' => 'Kjære :customer_name,',
     'customer_new_order_message' => 'Takk for at du kjøpte produktene våre, vi vil kontakte deg via telefon <strong>:customer_phone</strong> for å bekrefte bestillingen!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Fraktmetode',
     'customer_new_order_order_number' => 'Bestillingsnummer',
     'customer_new_order_payment_method' => 'Betalingsmetode',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Du har mottatt en ny bestilling fra :site_title',
     'admin_new_order_greeting' => 'Hei Admin,',
     'admin_new_order_message' => 'En ny bestilling ble vellykket lagt inn av :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Fraktmetode',
     'admin_new_order_payment_method' => 'Betalingsmetode',
     'admin_new_order_view_order' => 'Vis bestillingsdetaljer',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Bestilling bekreftet!',
     'order_confirm_greeting' => 'Hei :customer_name,',
     'order_confirm_message' => 'Bestillingen din er bekreftet. Takk for at du kjøpte produktene våre!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Notat',
     'order_confirm_shipping_method' => 'Fraktmetode',
     'order_confirm_payment_method' => 'Betalingsmetode',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Bestillingen din er kansellert',
     'customer_cancel_order_greeting' => 'Kjære :customer_name,',
     'customer_cancel_order_message' => 'Bestillingen din <strong>:order_id</strong> er kansellert som du ba om på grunn av :cancellation_reason og betalingen din ble også kansellert.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Adresse',
     'customer_cancel_order_products' => 'Dette har du bestilt:',
     'customer_cancel_order_note' => 'Notat',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Bestilling kansellert',
     'admin_cancel_order_greeting' => 'Hei :customer_name,',
-    'admin_cancel_order_message' => 'Bestillingen din #:order_id er kansellert av våre ansatte.',
+    'admin_cancel_order_message' => 'Bestillingen din :order_id er kansellert av våre ansatte.',
     'admin_cancel_order_order_cancelled' => 'Bestilling er kansellert!',
     'admin_cancel_order_reason' => 'Årsak til kansellering: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Kundeinformasjon',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Bestillingsdetaljer:',
     'admin_cancel_order_note' => 'Notat',
     'admin_cancel_order_order_summary' => 'Bestillingsoversikt',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Bestilling #:order_id kansellert av kunde',
+    'order_cancellation_to_admin_title' => 'Bestilling :order_id kansellert av kunde',
     'order_cancellation_to_admin_greeting' => 'Hei Admin,',
-    'order_cancellation_to_admin_message' => ':customer_name har kansellert bestilling <strong>#:order_id</strong>. Årsak: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name har kansellert bestilling <strong>:order_id</strong>. Årsak: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Kundeinformasjon',
     'order_cancellation_to_admin_name' => 'Navn',
     'order_cancellation_to_admin_phone' => 'Telefon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Notat',
     'order_cancellation_to_admin_view_order' => 'Vis bestillingsdetaljer',
     'order_cancellation_to_admin_order_summary' => 'Bestillingsoversikt',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Bestillingen din er på vei',
     'customer_delivery_order_greeting' => 'Hei :customer_name,',
     'customer_delivery_order_message' => 'Bestillingen din er på vei. Takk for at du kjøpte produktene våre!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Sporingsnummer',
     'customer_delivery_order_tracking_link' => 'Sporingslenke',
     'customer_delivery_order_track_shipment' => 'Spor forsendelsen din',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Bestillingen din er levert',
     'customer_order_delivered_greeting' => 'Hei :customer_name,',
     'customer_order_delivered_message' => 'Bestillingen din er levert. Takk for at du kjøpte produktene våre!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Sporingsnummer',
     'customer_order_delivered_tracking_link' => 'Sporingslenke',
     'customer_order_delivered_track_shipment' => 'Vis sporingsdetaljer',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Betaling bekreftet for bestilling #:order_id',
+    'order_confirm_payment_title' => 'Betaling bekreftet for bestilling :order_id',
     'order_confirm_payment_greeting' => 'Hei :customer_name,',
     'order_confirm_payment_message' => 'Betalingen din er bekreftet. Takk for at du kjøpte produktene våre!',
     'order_confirm_payment_order_number' => 'Bestillingsnummer',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Takk for betalingen. Bestillingen din vil bli behandlet snart.',
     'order_confirm_payment_order_summary' => 'Bestillingsoversikt',
     'order_confirm_payment_shipping_method' => 'Fraktmetode',
-
-    // Order Recovery Email
     'order_recover_title' => 'Du har en ufullstendig bestilling',
     'order_recover_greeting' => 'Hei :customer_name,',
     'order_recover_message' => 'Vi la merke til at du har en ufullstendig bestilling. Vil du fullføre kjøpet?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Fullfør bestillingen',
     'order_recover_order_summary' => 'Bestillingsoversikt',
     'order_recover_note' => 'Notat',
-
-    // Welcome Email
     'welcome_greeting' => 'Vi er glade for å ha deg her, :customer_name!',
     'welcome_message' => 'Velkommen til :site_title!',
     'welcome_register_success' => 'Du har vellykket registrert en konto hos <strong>:site_title</strong>.',
     'welcome_explore' => 'Hvis du trenger hjelp, er det bare å svare på denne e-posten!',
     'welcome_visit_shop' => 'Start å handle!',
-
-    // Confirm Email
     'confirm_email_title' => 'Verifiser e-post',
     'confirm_email_greeting' => 'Vi er glade for å ha deg her, :customer_name!',
     'confirm_email_message' => 'Vennligst bekreft e-postadressen din ved å klikke på knappen nedenfor.',
     'confirm_email_instruction' => 'Vennligst verifiser e-postadressen din for å få tilgang til dette nettstedet. Klikk på knappen nedenfor for å verifisere e-posten din.',
     'confirm_email_button' => 'Bekreft e-postadressen din',
     'confirm_email_trouble' => 'Hvis du har problemer med å klikke på "Bekreft e-postadressen din"-knappen, kopier og lim inn URL-en nedenfor i nettleseren din: <a href=":verify_link">:verify_link</a> og lim den inn i nettleseren.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Tilbakestill passordet ditt',
     'password_reminder_greeting' => 'Hei :customer_name,',
     'password_reminder_message' => 'Du har bedt om å tilbakestille passordet ditt.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Tilbakestill passord',
     'password_reminder_ignore' => 'Hvis du ikke ba om tilbakestilling av passord, vennligst ignorer denne e-posten.',
     'password_reminder_trouble_clicking' => 'Hvis du har problemer med å klikke på "Tilbakestill passord"-knappen, kopier og lim inn URL-en nedenfor i nettleseren din: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Returforespørsel mottatt',
     'order_return_request_greeting' => 'Hei :customer_name,',
-    'order_return_request_message' => 'Vi har mottatt returforespørselen din for bestilling #:order_id.',
+    'order_return_request_message' => 'Vi har mottatt returforespørselen din for bestilling :order_id.',
     'order_return_request_reason' => 'Årsak til retur',
     'order_return_request_items' => 'Varer som skal returneres',
     'order_return_request_process' => 'Vi vil behandle forespørselen din og kontakte deg snart.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Returårsak',
     'order_return_request_order_summary' => 'Bestillingsoversikt',
     'order_return_request_note' => 'Notat',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Oppdatering av returstatus',
     'order_return_status_updated_greeting' => 'Kjære :customer_name,',
     'order_return_status_updated_message' => 'Vi vil informere deg om at statusen for returforespørselen din for bestilling :order_id er oppdatert.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Moderators notat: " :description ".',
     'order_return_status_updated_questions' => 'Hvis du har spørsmål om denne oppdateringen, ikke nøl med å kontakte kundeservice.',
     'order_return_status_updated_view_details' => 'Vis returdetaljer',
-
-    // Review Products Email
     'review_products_title' => 'Anmeld ditt nylige kjøp',
     'review_products_greeting' => 'Hei :customer_name,',
-    'review_products_message' => 'Bestillingen din #:order_id er fullført. Vi vil gjerne høre tilbakemeldingen din!',
+    'review_products_message' => 'Bestillingen din :order_id er fullført. Vi vil gjerne høre tilbakemeldingen din!',
     'review_products_instruction' => 'Ta deg tid til å anmelde produktene du kjøpte:',
     'review_products_button' => 'Anmeld produkter',
     'review_products_thank_you' => 'Takk for kjøpet!',
     'review_products_products' => 'Produkter å anmelde',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Dine digitale produkter er klare',
     'download_digital_products_greeting' => 'Hei :customer_name,',
     'download_digital_products_message' => 'Takk for kjøpet! Dine digitale produkter er klare for nedlasting.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Last ned alle filer',
     'download_digital_products_external_link_downloads' => 'Last ned eksterne filer',
     'download_digital_products_payment_method' => 'Betalingsmetode',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Dine lisenskoder',
     'digital_product_license_codes_greeting' => 'Kjære :customer_name,',
     'digital_product_license_codes_message' => 'Takk for kjøpet! Her er lisenskodene dine:',
     'digital_product_license_codes_thanks' => 'Takk for at du kjøpte våre digitale produkter.',
-    'digital_product_license_codes_below' => 'Nedenfor er lisenskodene dine for produktene du har kjøpt:',
     'digital_product_license_codes_product' => 'Produkt',
     'digital_product_license_codes_license' => 'Lisenskode',
     'digital_product_license_codes_order_summary' => 'Dette har du bestilt:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Hver lisenskode er unik og kan kun brukes én gang',
     'digital_product_license_codes_note_3' => 'Ikke del lisenskodene dine med andre',
     'digital_product_license_codes_note_4' => 'Hvis du har problemer med lisenskodene, vennligst kontakt kundeservice',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Produktfiler oppdatert',
     'product_file_updated_greeting' => 'Hei, :customer_name!',
     'product_file_updated_message' => 'Filene for produktet <a href=":product_link"><strong>:product_name</strong></a> er oppdatert.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Du kan laste ned de oppdaterte filene fra kontoen din.',
     'product_file_updated_order_number' => 'Bestillingsnummer',
     'product_file_updated_download' => 'Last ned oppdaterte filer',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Betaling mottatt',
     'invoice_payment_created_greeting' => 'Hei :customer_name,',
     'invoice_payment_created_message' => 'Vi har vellykket mottatt betalingen din for :site_title. Takk!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Du kan se fakturaen din på nett på <a href=":invoice_link">:invoice_link</a> med fakturakode #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Fakturakoden din er #:invoice_code',
     'invoice_payment_created_view_online' => 'Vis faktura på nett',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Hei :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Vi har mottatt forespørselen din om å slette kontoen din.',
     'customer_deletion_request_confirmation_warning' => 'Vær oppmerksom på at denne handlingen ikke kan angres. All dataen din vil bli permanent slettet.',
     'customer_deletion_request_confirmation_button' => 'Bekreft sletting',
     'customer_deletion_request_confirmation_cancel' => 'Hvis du ikke ba om dette, vennligst ignorer denne e-posten.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Hei :customer_name,',
     'customer_deletion_request_completed_message' => 'Kontoen din er vellykket slettet som forespurt.',
     'customer_deletion_request_completed_thank_you' => 'Takk for at du var med oss.',
     'customer_deletion_request_completed_goodbye' => 'Vi håper å se deg igjen i fremtiden.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Hei Admin,',
     'payment_proof_upload_notification_message' => 'Kunden :customer_name (E-post: <a href="mailto::customer_email">:customer_email</a>) har lastet opp betalingsbevis for bestilling med ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'Du kan se betalingsdetaljene <a href=":payment_link">her</a> og bestillingsdetaljene <a href=":order_link">her</a>.',

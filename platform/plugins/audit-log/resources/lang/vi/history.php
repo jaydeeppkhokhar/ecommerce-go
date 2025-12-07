@@ -45,4 +45,6 @@ return [
     'admin' => 'quản trị viên',
     'register_an_account' => 'tài khoản',
     'activity_has_been_deleted' => 'Hoạt động đã bị xóa',
+    'no_results_found' => 'Không tìm thấy kết quả',
+    'no_activities_here' => 'Có vẻ như không có hoạt động nào ở đây.',
 ];

@@ -3,10 +3,11 @@
 @section('title', SeoHelper::getTitle())
 
 @section('content')
-    @if($products->isNotEmpty() || $reviews->isNotEmpty())
-        @include(EcommerceHelper::viewPath('customers.product-reviews.icons'))
+    <div class="bb-customer-content-wrapper">
+        @if($products->isNotEmpty() || $reviews->isNotEmpty())
+            @include(EcommerceHelper::viewPath('customers.product-reviews.icons'))
 
-        <div class="bb-customer-card-list product-reviews-cards">
+            <div class="bb-customer-card-list product-reviews-cards">
             {{-- Waiting for Review Card --}}
             @if ($products->isNotEmpty())
                 <div class="bb-customer-card waiting-review-card">
@@ -17,8 +18,8 @@
                                     <x-core::icon name="ti ti-clock" class="text-warning" />
                                 </div>
                                 <div>
-                                    <h3 class="bb-customer-card-title h5 mb-0">{{ __('Waiting for your review') }}</h3>
-                                    <p class="text-muted small mb-0">{{ __('Share your experience with these products') }}</p>
+                                    <h3 class="bb-customer-card-title h5 mb-0">{{ trans('plugins/ecommerce::customer-dashboard.waiting_for_review') }}</h3>
+                                    <p class="text-muted small mb-0">{{ trans('plugins/ecommerce::customer-dashboard.share_experience_description') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -45,7 +46,7 @@
                                                     <div class="bb-customer-card-meta">
                                                         <span class="text-muted small">
                                                             <x-core::icon name="ti ti-calendar" class="me-1" />
-                                                            {{ __('Order completed') }}:
+                                                            {{ trans('plugins/ecommerce::customer-dashboard.order_completed') }}:
                                                             <time>{{ Carbon\Carbon::parse($product->order_completed_at)->translatedFormat('M d, Y') }}</time>
                                                         </span>
                                                     </div>
@@ -53,7 +54,7 @@
 
                                                 <div class="bb-customer-card-actions mt-2">
                                                     <div class="d-flex align-items-center gap-2">
-                                                        <span class="text-muted small">{{ __('Rate this product:') }}</span>
+                                                        <span class="text-muted small">{{ trans('plugins/ecommerce::customer-dashboard.rate_this_product') }}</span>
                                                         <div class="d-flex ecommerce-product-star ecommerce-product-item" data-id="{{ $product->id }}">
                                                             @for ($i = 5; $i >= 1; $i--)
                                                                 <label class="order-{{ $i }} cursor-pointer">
@@ -86,8 +87,8 @@
                                     <x-core::icon name="ti ti-star-filled" class="text-success" />
                                 </div>
                                 <div>
-                                    <h3 class="bb-customer-card-title h5 mb-0">{{ __('Your Reviews') }}</h3>
-                                    <p class="text-muted small mb-0">{{ __('Products you have reviewed') }}</p>
+                                    <h3 class="bb-customer-card-title h5 mb-0">{{ trans('plugins/ecommerce::customer-dashboard.your_reviews') }}</h3>
+                                    <p class="text-muted small mb-0">{{ trans('plugins/ecommerce::customer-dashboard.products_you_reviewed') }}</p>
                                 </div>
                             </div>
                         </div>
@@ -107,8 +108,8 @@
                                 <x-core::icon name="ti ti-clock" class="text-secondary" />
                             </div>
                             <div>
-                                <h3 class="bb-customer-card-title h5 mb-0">{{ __('Waiting for your review') }}</h3>
-                                <p class="text-muted small mb-0">{{ __('No products pending review') }}</p>
+                                <h3 class="bb-customer-card-title h5 mb-0">{{ trans('plugins/ecommerce::customer-dashboard.waiting_for_review') }}</h3>
+                                <p class="text-muted small mb-0">{{ trans('plugins/ecommerce::customer-dashboard.no_products_pending_review') }}</p>
                             </div>
                         </div>
                     </div>
@@ -117,27 +118,28 @@
                             <div class="bg-info bg-opacity-10 rounded-circle p-3 d-inline-flex mb-3">
                                 <x-core::icon name="ti ti-shopping-bag" class="text-info" />
                             </div>
-                            <h5 class="h6 mb-2">{{ __('All caught up!') }}</h5>
+                            <h5 class="h6 mb-2">{{ trans('plugins/ecommerce::customer-dashboard.all_caught_up') }}</h5>
                             <p class="text-muted small mb-3">
-                                {{ __("You don't have any products waiting for review. Keep shopping to discover new products!") }}
+                                {{ trans('plugins/ecommerce::customer-dashboard.no_products_waiting_review_description') }}
                             </p>
                             <a href="{{ route('public.products') }}" class="btn btn-outline-primary btn-sm">
                                 <x-core::icon name="ti ti-shopping-bag" class="me-1" />
-                                {{ __('Browse Products') }}
+                                {{ trans('plugins/ecommerce::customer-dashboard.browse_products') }}
                             </a>
                         </div>
                     </div>
                 </div>
             @endif
-        </div>
+            </div>
 
-        @include(EcommerceHelper::viewPath('customers.product-reviews.modal'))
-    @else
-        @include(EcommerceHelper::viewPath('customers.partials.empty-state'), [
-            'title' => __('No reviews yet!'),
-            'subtitle' => __('Start shopping and share your experience by reviewing products you\'ve purchased.'),
-            'actionUrl' => route('public.products'),
-            'actionLabel' => __('Start Shopping'),
-        ])
-    @endif
+            @include(EcommerceHelper::viewPath('customers.product-reviews.modal'))
+        @else
+            @include(EcommerceHelper::viewPath('customers.partials.empty-state'), [
+                'title' => trans('plugins/ecommerce::customer-dashboard.no_reviews_yet'),
+                'subtitle' => trans('plugins/ecommerce::customer-dashboard.start_shopping_and_review_description'),
+                'actionUrl' => route('public.products'),
+                'actionLabel' => trans('plugins/ecommerce::customer-dashboard.start_shopping'),
+            ])
+        @endif
+    </div>
 @endsection

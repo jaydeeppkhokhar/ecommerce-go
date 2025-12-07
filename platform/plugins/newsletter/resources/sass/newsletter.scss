@@ -61,7 +61,7 @@
                     }
                 }
 
-                input[type=email] {
+                input[type='email'] {
                     height: 50px;
                     padding: 0 16px;
                 }
@@ -73,7 +73,7 @@
                 }
 
                 button {
-                    --bs-btn-padding-y: 0.70rem;
+                    --bs-btn-padding-y: 0.7rem;
                     display: block;
                     width: 100%;
                     border-radius: var(--bs-border-radius) !important;

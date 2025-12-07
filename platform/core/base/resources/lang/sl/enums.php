@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Objavi vire paketov',
         'clean_up' => 'Počisti datoteke posodobitve sistema',
         'done' => 'Sistem uspešno posodobljen',
-
+        'unknown' => 'Neznan korak',
         'messages' => [
             'download' => 'Prenašanje datotek posodobitve...',
             'update_files' => 'Posodabljanje sistemskih datotek...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Čiščenje datotek posodobitve sistema...',
             'done' => 'Končano! Vaš brskalnik bo osvežen čez 30 sekund.',
         ],
-
         'failed_messages' => [
             'download' => 'Ni bilo mogoče prenesti datotek posodobitve',
             'update_files' => 'Ni bilo mogoče posodobiti sistemskih datotek',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Ni bilo mogoče objaviti virov paketov',
             'clean_up' => 'Ni bilo mogoče počistiti datotek posodobitve sistema',
         ],
-
         'success_messages' => [
             'download' => 'Datoteke posodobitve uspešno prenesene.',
             'update_files' => 'Sistemske datoteke uspešno posodobljene.',

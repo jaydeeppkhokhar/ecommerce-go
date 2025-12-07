@@ -19,7 +19,10 @@
             <li>
                 <strong>{{ trans('packages/theme::theme.settings.website_tracking.gtm.verify_tag_assistant') }}</strong>
                 {{ trans('packages/theme::theme.settings.website_tracking.gtm.install_tag_assistant_prefix') }}
-                <a href="https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk" target="_blank">{{ trans('packages/theme::theme.settings.website_tracking.gtm.google_tag_assistant') }}</a>
+                <a
+                    href="https://chrome.google.com/webstore/detail/tag-assistant-legacy-by-g/kejbdjndbnbjgmefkgdddjlbokphdefk"
+                    target="_blank"
+                >{{ trans('packages/theme::theme.settings.website_tracking.gtm.google_tag_assistant') }}</a>
                 {{ trans('packages/theme::theme.settings.website_tracking.gtm.install_tag_assistant_suffix') }}
             </li>
             <li>

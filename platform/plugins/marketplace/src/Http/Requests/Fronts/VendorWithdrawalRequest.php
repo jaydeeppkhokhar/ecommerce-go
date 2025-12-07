@@ -41,8 +41,8 @@ class VendorWithdrawalRequest extends Request
     public function messages(): array
     {
         return [
-            'amount.max' => __('The balance is not enough for withdrawal'),
-            'amount.min' => __('The minimum withdrawal amount is :amount', [
+            'amount.max' => trans('plugins/marketplace::withdrawal.balance_not_enough'),
+            'amount.min' => trans('plugins/marketplace::withdrawal.minimum_withdrawal_amount', [
                 'amount' => format_price(MarketplaceHelper::getMinimumWithdrawalAmount()),
             ]),
         ];

@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Pievienot vienkāršu slīdni',
     'select_slider' => 'Izvēlieties slīdni',
     'shortcode' => 'Īskods',
+    'tablet_image' => 'Planšetdatora attēls',
+    'tablet_image_helper' => 'Ierīcēm ar platumu no 768 pikseļiem līdz 1200 pikseļiem, ja tas ir tukšs, tiks izmantots darbvirsmas attēls.',
+    'mobile_image' => 'Mobilais attēls',
+    'mobile_image_helper' => 'Ierīcēm, kuru platums ir mazāks par 768 pikseļiem, tiks izmantots planšetdatora attēls.',
 ];

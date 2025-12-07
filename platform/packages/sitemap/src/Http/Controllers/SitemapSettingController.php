@@ -123,4 +123,56 @@ class SitemapSettingController extends SettingController
             ], 500);
         }
     }
+
+    public function submitSitemap(IndexNowService $indexNowService): JsonResponse
+    {
+        try {
+            if (! $indexNowService->isEnabled()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => trans('packages/sitemap::sitemap.settings.indexnow_disabled'),
+                ], 400);
+            }
+
+            if (! $indexNowService->getApiKey()) {
+                return response()->json([
+                    'success' => false,
+                    'message' => trans('packages/sitemap::sitemap.settings.indexnow_no_api_key'),
+                ], 400);
+            }
+
+            $results = $indexNowService->submitSitemap();
+
+            $hasSuccess = false;
+            $hasError = false;
+
+            foreach ($results as $result) {
+                if ($result['status'] === 'success') {
+                    $hasSuccess = true;
+                } else {
+                    $hasError = true;
+                }
+            }
+
+            $message = trans('packages/sitemap::sitemap.settings.sitemap_submitted_successfully');
+
+            if ($hasError && ! $hasSuccess) {
+                $message = trans('packages/sitemap::sitemap.settings.sitemap_submission_failed');
+            } elseif ($hasError && $hasSuccess) {
+                $message = trans('packages/sitemap::sitemap.settings.sitemap_submission_partial');
+            }
+
+            return response()->json([
+                'success' => $hasSuccess,
+                'message' => $message,
+                'results' => $results,
+            ]);
+        } catch (Exception $e) {
+            return response()->json([
+                'success' => false,
+                'message' => trans('packages/sitemap::sitemap.settings.submit_sitemap_error'),
+                'error' => $e->getMessage(),
+            ], 500);
+        }
+    }
 }

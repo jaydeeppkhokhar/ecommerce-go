@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Narudžba uspješna!',
     'customer_new_order_greeting' => 'Poštovani :customer_name,',
     'customer_new_order_message' => 'Hvala vam na kupnji naših proizvoda, kontaktirat ćemo vas putem telefona <strong>:customer_phone</strong> kako bismo potvrdili narudžbu!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Način dostave',
     'customer_new_order_order_number' => 'Broj narudžbe',
     'customer_new_order_payment_method' => 'Način plaćanja',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Primili ste novu narudžbu od :site_title',
     'admin_new_order_greeting' => 'Poštovani administratore,',
     'admin_new_order_message' => 'Nova narudžba uspješno je zaprimljena od :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Način dostave',
     'admin_new_order_payment_method' => 'Način plaćanja',
     'admin_new_order_view_order' => 'Pregledaj detalje narudžbe',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Narudžba potvrđena!',
     'order_confirm_greeting' => 'Poštovani :customer_name,',
     'order_confirm_message' => 'Vaša narudžba je potvrđena. Hvala vam na kupnji naših proizvoda!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Napomena',
     'order_confirm_shipping_method' => 'Način dostave',
     'order_confirm_payment_method' => 'Način plaćanja',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Vaša narudžba je otkazana',
     'customer_cancel_order_greeting' => 'Poštovani :customer_name,',
     'customer_cancel_order_message' => 'Vaša narudžba <strong>:order_id</strong> je otkazana prema vašem zahtjevu zbog razloga :cancellation_reason i vaše plaćanje je također otkazano.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Adresa',
     'customer_cancel_order_products' => 'Evo što ste naručili:',
     'customer_cancel_order_note' => 'Napomena',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Narudžba otkazana',
     'admin_cancel_order_greeting' => 'Poštovani :customer_name,',
-    'admin_cancel_order_message' => 'Vašu narudžbu #:order_id otkazalo je naše osoblje.',
+    'admin_cancel_order_message' => 'Vašu narudžbu :order_id otkazalo je naše osoblje.',
     'admin_cancel_order_order_cancelled' => 'Narudžba je otkazana!',
     'admin_cancel_order_reason' => 'Razlog otkazivanja: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Informacije o kupcu',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Detalji narudžbe:',
     'admin_cancel_order_note' => 'Napomena',
     'admin_cancel_order_order_summary' => 'Sažetak narudžbe',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Narudžbu #:order_id otkazao je kupac',
+    'order_cancellation_to_admin_title' => 'Narudžbu :order_id otkazao je kupac',
     'order_cancellation_to_admin_greeting' => 'Poštovani administratore,',
-    'order_cancellation_to_admin_message' => ':customer_name je otkazao narudžbu <strong>#:order_id</strong>. Razlog: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name je otkazao narudžbu <strong>:order_id</strong>. Razlog: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Informacije o kupcu',
     'order_cancellation_to_admin_name' => 'Ime',
     'order_cancellation_to_admin_phone' => 'Telefon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Napomena',
     'order_cancellation_to_admin_view_order' => 'Pregledaj detalje narudžbe',
     'order_cancellation_to_admin_order_summary' => 'Sažetak narudžbe',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Vaša narudžba je na putu',
     'customer_delivery_order_greeting' => 'Poštovani :customer_name,',
     'customer_delivery_order_message' => 'Vaša narudžba je na putu. Hvala vam na kupnji naših proizvoda!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'ID praćenja',
     'customer_delivery_order_tracking_link' => 'Link za praćenje',
     'customer_delivery_order_track_shipment' => 'Pratite svoju pošiljku',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Vaša narudžba je dostavljena',
     'customer_order_delivered_greeting' => 'Poštovani :customer_name,',
     'customer_order_delivered_message' => 'Vaša narudžba je dostavljena. Hvala vam na kupnji naših proizvoda!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'ID praćenja',
     'customer_order_delivered_tracking_link' => 'Link za praćenje',
     'customer_order_delivered_track_shipment' => 'Pregledaj detalje praćenja',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Plaćanje potvrđeno za narudžbu #:order_id',
+    'order_confirm_payment_title' => 'Plaćanje potvrđeno za narudžbu :order_id',
     'order_confirm_payment_greeting' => 'Poštovani :customer_name,',
     'order_confirm_payment_message' => 'Vaše plaćanje je potvrđeno. Hvala vam na kupnji naših proizvoda!',
     'order_confirm_payment_order_number' => 'Broj narudžbe',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Hvala vam na plaćanju. Vaša narudžba će uskoro biti obrađena.',
     'order_confirm_payment_order_summary' => 'Sažetak narudžbe',
     'order_confirm_payment_shipping_method' => 'Način dostave',
-
-    // Order Recovery Email
     'order_recover_title' => 'Imate nedovršenu narudžbu',
     'order_recover_greeting' => 'Poštovani :customer_name,',
     'order_recover_message' => 'Primijetili smo da imate nedovršenu narudžbu. Želite li dovršiti kupnju?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Dovršite svoju narudžbu',
     'order_recover_order_summary' => 'Sažetak narudžbe',
     'order_recover_note' => 'Napomena',
-
-    // Welcome Email
     'welcome_greeting' => 'Drago nam je što ste ovdje, :customer_name!',
     'welcome_message' => 'Dobrodošli na :site_title!',
     'welcome_register_success' => 'Uspješno ste registrirali račun na <strong>:site_title</strong>.',
     'welcome_explore' => 'Ako vam je potrebna pomoć, slobodno odgovorite na ovaj email!',
     'welcome_visit_shop' => 'Započnite kupovinu!',
-
-    // Confirm Email
     'confirm_email_title' => 'Potvrdite e-poštu',
     'confirm_email_greeting' => 'Drago nam je što ste ovdje, :customer_name!',
     'confirm_email_message' => 'Molimo potvrdite svoju adresu e-pošte klikom na gumb ispod.',
     'confirm_email_instruction' => 'Molimo potvrdite svoju adresu e-pošte kako biste pristupili ovoj web stranici. Kliknite na gumb ispod za potvrdu e-pošte.',
     'confirm_email_button' => 'Potvrdite svoju adresu e-pošte',
     'confirm_email_trouble' => 'Ako imate problema s klikom na gumb "Potvrdite svoju adresu e-pošte", kopirajte i zalijepite URL ispod u svoj web preglednik: <a href=":verify_link">:verify_link</a>',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Resetirajte svoju lozinku',
     'password_reminder_greeting' => 'Poštovani :customer_name,',
     'password_reminder_message' => 'Zatražili ste resetiranje svoje lozinke.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Resetiraj lozinku',
     'password_reminder_ignore' => 'Ako niste zatražili resetiranje lozinke, molimo zanemarite ovaj email.',
     'password_reminder_trouble_clicking' => 'Ako imate problema s klikom na gumb "Resetiraj lozinku", kopirajte i zalijepite URL ispod u svoj web preglednik: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Zahtjev za povrat primljen',
     'order_return_request_greeting' => 'Poštovani :customer_name,',
-    'order_return_request_message' => 'Primili smo vaš zahtjev za povrat narudžbe #:order_id.',
+    'order_return_request_message' => 'Primili smo vaš zahtjev za povrat narudžbe :order_id.',
     'order_return_request_reason' => 'Razlog za povrat',
     'order_return_request_items' => 'Artikli koji se vraćaju',
     'order_return_request_process' => 'Obradit ćemo vaš zahtjev i uskoro vas kontaktirati.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Razlog povrata',
     'order_return_request_order_summary' => 'Sažetak narudžbe',
     'order_return_request_note' => 'Napomena',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Ažuriranje statusa povrata narudžbe',
     'order_return_status_updated_greeting' => 'Poštovani :customer_name,',
     'order_return_status_updated_message' => 'Želimo vas obavijestiti da je status vašeg zahtjeva za povrat narudžbe :order_id ažuriran.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Napomena moderatora: " :description ".',
     'order_return_status_updated_questions' => 'Ako imate bilo kakvih pitanja ili nedoumica vezanih uz ovo ažuriranje, ne ustručavajte se kontaktirati našu službu za korisnike.',
     'order_return_status_updated_view_details' => 'Pregledaj detalje povrata',
-
-    // Review Products Email
     'review_products_title' => 'Ocijenite svoju nedavnu kupnju',
     'review_products_greeting' => 'Poštovani :customer_name,',
-    'review_products_message' => 'Vaša narudžba #:order_id je dovršena. Bili bismo vam zahvalni na vašem mišljenju!',
+    'review_products_message' => 'Vaša narudžba :order_id je dovršena. Bili bismo vam zahvalni na vašem mišljenju!',
     'review_products_instruction' => 'Molimo odvojite trenutak za ocjenjivanje proizvoda koje ste kupili:',
     'review_products_button' => 'Ocijenite proizvode',
     'review_products_thank_you' => 'Hvala vam na kupnji!',
     'review_products_products' => 'Proizvodi za ocjenjivanje',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Vaši digitalni proizvodi su spremni',
     'download_digital_products_greeting' => 'Poštovani :customer_name,',
     'download_digital_products_message' => 'Hvala vam na kupnji! Vaši digitalni proizvodi su spremni za preuzimanje.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Preuzmi sve datoteke',
     'download_digital_products_external_link_downloads' => 'Preuzmi eksterne datoteke',
     'download_digital_products_payment_method' => 'Način plaćanja',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Vaši licencni kodovi',
     'digital_product_license_codes_greeting' => 'Poštovani :customer_name,',
     'digital_product_license_codes_message' => 'Hvala vam na kupnji! Evo vaših licencnih kodova:',
     'digital_product_license_codes_thanks' => 'Hvala vam na kupnji naših digitalnih proizvoda.',
-    'digital_product_license_codes_below' => 'Ispod su vaši licencni kodovi za proizvode koje ste kupili:',
     'digital_product_license_codes_product' => 'Proizvod',
     'digital_product_license_codes_license' => 'Licencni kod',
     'digital_product_license_codes_order_summary' => 'Evo što ste naručili:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Svaki licencni kod je jedinstven i može se koristiti samo jednom',
     'digital_product_license_codes_note_3' => 'Ne dijelite svoje licencne kodove s drugima',
     'digital_product_license_codes_note_4' => 'Ako imate problema sa svojim licencnim kodovima, molimo kontaktirajte našu podršku',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Datoteke proizvoda ažurirane',
     'product_file_updated_greeting' => 'Pozdrav, :customer_name!',
     'product_file_updated_message' => 'Datoteke za proizvod <a href=":product_link"><strong>:product_name</strong></a> su ažurirane.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Možete preuzeti ažurirane datoteke sa svog računa.',
     'product_file_updated_order_number' => 'Broj narudžbe',
     'product_file_updated_download' => 'Preuzmi ažurirane datoteke',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Plaćanje primljeno',
     'invoice_payment_created_greeting' => 'Poštovani :customer_name,',
     'invoice_payment_created_message' => 'Uspješno smo primili vaše plaćanje za :site_title. Hvala vam!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Možete pregledati svoj račun online na <a href=":invoice_link">:invoice_link</a> s kodom računa #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Vaš kod računa je #:invoice_code',
     'invoice_payment_created_view_online' => 'Pregledaj račun online',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Poštovani :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Primili smo vaš zahtjev za brisanje računa.',
     'customer_deletion_request_confirmation_warning' => 'Molimo imajte na umu da se ova radnja ne može poništiti. Svi vaši podaci bit će trajno obrisani.',
     'customer_deletion_request_confirmation_button' => 'Potvrdi brisanje',
     'customer_deletion_request_confirmation_cancel' => 'Ako niste zatražili ovo, molimo zanemarite ovaj email.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Poštovani :customer_name,',
     'customer_deletion_request_completed_message' => 'Vaš račun je uspješno obrisan prema zahtjevu.',
     'customer_deletion_request_completed_thank_you' => 'Hvala vam što ste bili s nama.',
     'customer_deletion_request_completed_goodbye' => 'Nadamo se da ćemo vas vidjeti ponovno u budućnosti.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Poštovani administratore,',
     'payment_proof_upload_notification_message' => 'Kupac :customer_name (E-pošta: <a href="mailto::customer_email">:customer_email</a>) je poslao dokaz plaćanja za narudžbu s ID-om :order_id.',
     'payment_proof_upload_notification_view_details' => 'Možete pregledati detalje plaćanja <a href=":payment_link">ovdje</a> i detalje narudžbe <a href=":order_link">ovdje</a>.',

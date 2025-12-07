@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Pesanan berhasil!',
     'customer_new_order_greeting' => 'Dear :customer_name,',
     'customer_new_order_message' => 'Terima kasih telah membeli produk kami, kami akan menghubungi Anda melalui telepon <strong>:customer_phone</strong> untuk konfirmasi pesanan!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Metode Pengiriman',
     'customer_new_order_order_number' => 'Nomor pesanan',
     'customer_new_order_payment_method' => 'Metode Pembayaran',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Anda menerima pesanan baru dari :site_title',
     'admin_new_order_greeting' => 'Halo Admin,',
     'admin_new_order_message' => 'Pesanan baru telah berhasil ditempatkan oleh :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Metode pengiriman',
     'admin_new_order_payment_method' => 'Metode pembayaran',
     'admin_new_order_view_order' => 'Lihat detail pesanan',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Pesanan dikonfirmasi!',
     'order_confirm_greeting' => 'Halo :customer_name,',
     'order_confirm_message' => 'Pesanan Anda telah dikonfirmasi. Terima kasih telah membeli produk kami!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Catatan',
     'order_confirm_shipping_method' => 'Metode pengiriman',
     'order_confirm_payment_method' => 'Metode pembayaran',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Pesanan Anda telah dibatalkan',
     'customer_cancel_order_greeting' => 'Dear :customer_name,',
     'customer_cancel_order_message' => 'Pesanan Anda <strong>:order_id</strong> telah dibatalkan sesuai permintaan Anda karena alasan :cancellation_reason dan pembayaran Anda juga dibatalkan.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Alamat',
     'customer_cancel_order_products' => 'Berikut yang Anda pesan:',
     'customer_cancel_order_note' => 'Catatan',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Pesanan dibatalkan',
     'admin_cancel_order_greeting' => 'Halo :customer_name,',
-    'admin_cancel_order_message' => 'Pesanan Anda #:order_id telah dibatalkan oleh staf kami.',
+    'admin_cancel_order_message' => 'Pesanan Anda :order_id telah dibatalkan oleh staf kami.',
     'admin_cancel_order_order_cancelled' => 'Pesanan telah dibatalkan!',
     'admin_cancel_order_reason' => 'Alasan pembatalan: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Informasi pelanggan',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Detail pesanan:',
     'admin_cancel_order_note' => 'Catatan',
     'admin_cancel_order_order_summary' => 'Ringkasan Pesanan',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Pesanan #:order_id dibatalkan oleh pelanggan',
+    'order_cancellation_to_admin_title' => 'Pesanan :order_id dibatalkan oleh pelanggan',
     'order_cancellation_to_admin_greeting' => 'Halo Admin,',
-    'order_cancellation_to_admin_message' => ':customer_name telah membatalkan pesanan <strong>#:order_id</strong>. Alasan: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name telah membatalkan pesanan <strong>:order_id</strong>. Alasan: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Informasi pelanggan',
     'order_cancellation_to_admin_name' => 'Nama',
     'order_cancellation_to_admin_phone' => 'Telepon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Catatan',
     'order_cancellation_to_admin_view_order' => 'Lihat detail pesanan',
     'order_cancellation_to_admin_order_summary' => 'Ringkasan Pesanan',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Pesanan Anda sedang dalam perjalanan',
     'customer_delivery_order_greeting' => 'Halo :customer_name,',
     'customer_delivery_order_message' => 'Pesanan Anda sedang dalam perjalanan. Terima kasih telah membeli produk kami!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'ID Pelacakan',
     'customer_delivery_order_tracking_link' => 'Link Pelacakan',
     'customer_delivery_order_track_shipment' => 'Lacak Pengiriman Anda',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Pesanan Anda telah terkirim',
     'customer_order_delivered_greeting' => 'Halo :customer_name,',
     'customer_order_delivered_message' => 'Pesanan Anda telah terkirim. Terima kasih telah membeli produk kami!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'ID Pelacakan',
     'customer_order_delivered_tracking_link' => 'Link Pelacakan',
     'customer_order_delivered_track_shipment' => 'Lihat Detail Pelacakan',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Pembayaran dikonfirmasi untuk pesanan #:order_id',
+    'order_confirm_payment_title' => 'Pembayaran dikonfirmasi untuk pesanan :order_id',
     'order_confirm_payment_greeting' => 'Halo :customer_name,',
     'order_confirm_payment_message' => 'Pembayaran Anda telah dikonfirmasi. Terima kasih telah membeli produk kami!',
     'order_confirm_payment_order_number' => 'Nomor pesanan',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Terima kasih atas pembayaran Anda. Pesanan Anda akan segera diproses.',
     'order_confirm_payment_order_summary' => 'Ringkasan Pesanan',
     'order_confirm_payment_shipping_method' => 'Metode pengiriman',
-
-    // Order Recovery Email
     'order_recover_title' => 'Anda memiliki pesanan yang belum selesai',
     'order_recover_greeting' => 'Halo :customer_name,',
     'order_recover_message' => 'Kami melihat Anda memiliki pesanan yang belum selesai. Apakah Anda ingin menyelesaikan pembelian Anda?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Selesaikan Pesanan Anda',
     'order_recover_order_summary' => 'Ringkasan Pesanan',
     'order_recover_note' => 'Catatan',
-
-    // Welcome Email
     'welcome_greeting' => 'Kami senang memiliki Anda di sini, :customer_name!',
     'welcome_message' => 'Selamat datang di :site_title!',
     'welcome_register_success' => 'Anda telah berhasil mendaftarkan akun di <strong>:site_title</strong>.',
     'welcome_explore' => 'Jika Anda memerlukan bantuan, jangan ragu untuk membalas email ini!',
     'welcome_visit_shop' => 'Mulai berbelanja!',
-
-    // Confirm Email
     'confirm_email_title' => 'Verifikasi Email',
     'confirm_email_greeting' => 'Kami senang memiliki Anda di sini, :customer_name!',
     'confirm_email_message' => 'Silakan konfirmasi alamat email Anda dengan mengklik tombol di bawah ini.',
     'confirm_email_instruction' => 'Silakan verifikasi alamat email Anda untuk mengakses website ini. Klik tombol di bawah untuk memverifikasi email Anda.',
     'confirm_email_button' => 'Konfirmasi alamat email Anda',
     'confirm_email_trouble' => 'Jika Anda mengalami masalah mengklik tombol "Konfirmasi alamat email Anda", salin dan tempel URL di bawah ini ke browser web Anda: <a href=":verify_link">:verify_link</a>',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Reset kata sandi Anda',
     'password_reminder_greeting' => 'Halo :customer_name,',
     'password_reminder_message' => 'Anda telah meminta untuk mereset kata sandi Anda.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Reset Kata Sandi',
     'password_reminder_ignore' => 'Jika Anda tidak meminta reset kata sandi, silakan abaikan email ini.',
     'password_reminder_trouble_clicking' => 'Jika Anda mengalami masalah mengklik tombol "Reset Kata Sandi", salin dan tempel URL di bawah ini ke browser web Anda: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Permintaan pengembalian diterima',
     'order_return_request_greeting' => 'Halo :customer_name,',
-    'order_return_request_message' => 'Kami telah menerima permintaan pengembalian Anda untuk pesanan #:order_id.',
+    'order_return_request_message' => 'Kami telah menerima permintaan pengembalian Anda untuk pesanan :order_id.',
     'order_return_request_reason' => 'Alasan pengembalian',
     'order_return_request_items' => 'Item yang akan dikembalikan',
     'order_return_request_process' => 'Kami akan memproses permintaan Anda dan menghubungi Anda segera.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Alasan Pengembalian',
     'order_return_request_order_summary' => 'Ringkasan Pesanan',
     'order_return_request_note' => 'Catatan',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Update status pengembalian pesanan',
     'order_return_status_updated_greeting' => 'Dear :customer_name,',
     'order_return_status_updated_message' => 'Kami ingin memberitahu Anda bahwa status permintaan pengembalian untuk pesanan :order_id telah diperbarui.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Catatan moderator: " :description ".',
     'order_return_status_updated_questions' => 'Jika Anda memiliki pertanyaan atau kekhawatiran mengenai pembaruan ini, jangan ragu untuk menghubungi tim dukungan pelanggan kami.',
     'order_return_status_updated_view_details' => 'Lihat detail pengembalian',
-
-    // Review Products Email
     'review_products_title' => 'Ulas pembelian terbaru Anda',
     'review_products_greeting' => 'Halo :customer_name,',
-    'review_products_message' => 'Pesanan Anda #:order_id telah selesai. Kami ingin mendengar umpan balik Anda!',
+    'review_products_message' => 'Pesanan Anda :order_id telah selesai. Kami ingin mendengar umpan balik Anda!',
     'review_products_instruction' => 'Silakan luangkan waktu sejenak untuk mengulas produk yang Anda beli:',
     'review_products_button' => 'Ulas Produk',
     'review_products_thank_you' => 'Terima kasih atas pembelian Anda!',
     'review_products_products' => 'Produk untuk Diulas',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Produk digital Anda sudah siap',
     'download_digital_products_greeting' => 'Halo :customer_name,',
     'download_digital_products_message' => 'Terima kasih atas pembelian Anda! Produk digital Anda sudah siap untuk diunduh.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Unduh Semua File',
     'download_digital_products_external_link_downloads' => 'Unduh File Eksternal',
     'download_digital_products_payment_method' => 'Metode Pembayaran',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Kode Lisensi Anda',
     'digital_product_license_codes_greeting' => 'Dear :customer_name,',
     'digital_product_license_codes_message' => 'Terima kasih atas pembelian Anda! Berikut adalah kode lisensi Anda:',
     'digital_product_license_codes_thanks' => 'Terima kasih telah membeli produk digital kami.',
-    'digital_product_license_codes_below' => 'Di bawah ini adalah kode lisensi Anda untuk produk yang telah Anda beli:',
     'digital_product_license_codes_product' => 'Produk',
     'digital_product_license_codes_license' => 'Kode Lisensi',
     'digital_product_license_codes_order_summary' => 'Berikut yang Anda pesan:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Setiap kode lisensi unik dan hanya dapat digunakan sekali',
     'digital_product_license_codes_note_3' => 'Jangan bagikan kode lisensi Anda dengan orang lain',
     'digital_product_license_codes_note_4' => 'Jika Anda mengalami masalah dengan kode lisensi, silakan hubungi tim dukungan kami',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'File Produk Diperbarui',
     'product_file_updated_greeting' => 'Halo, :customer_name!',
     'product_file_updated_message' => 'File untuk produk <a href=":product_link"><strong>:product_name</strong></a> telah diperbarui.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Anda dapat mengunduh file yang diperbarui dari akun Anda.',
     'product_file_updated_order_number' => 'Nomor pesanan',
     'product_file_updated_download' => 'Unduh File yang Diperbarui',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Pembayaran diterima',
     'invoice_payment_created_greeting' => 'Halo :customer_name,',
     'invoice_payment_created_message' => 'Kami telah berhasil menerima pembayaran Anda untuk :site_title. Terima kasih!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Anda dapat melihat invoice Anda secara online di <a href=":invoice_link">:invoice_link</a> dengan kode invoice #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Kode invoice Anda adalah #:invoice_code',
     'invoice_payment_created_view_online' => 'Lihat Invoice Online',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Halo :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Kami telah menerima permintaan Anda untuk menghapus akun Anda.',
     'customer_deletion_request_confirmation_warning' => 'Harap dicatat bahwa tindakan ini tidak dapat dibatalkan. Semua data Anda akan dihapus secara permanen.',
     'customer_deletion_request_confirmation_button' => 'Konfirmasi Penghapusan',
     'customer_deletion_request_confirmation_cancel' => 'Jika Anda tidak meminta ini, silakan abaikan email ini.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Halo :customer_name,',
     'customer_deletion_request_completed_message' => 'Akun Anda telah berhasil dihapus sesuai permintaan.',
     'customer_deletion_request_completed_thank_you' => 'Terima kasih telah bersama kami.',
     'customer_deletion_request_completed_goodbye' => 'Kami berharap dapat bertemu Anda lagi di masa depan.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Halo Admin,',
     'payment_proof_upload_notification_message' => 'Pelanggan :customer_name (Email: <a href="mailto::customer_email">:customer_email</a>) telah mengunggah bukti pembayaran untuk pesanan mereka dengan ID :order_id.',
     'payment_proof_upload_notification_view_details' => 'Anda dapat melihat detail pembayaran <a href=":payment_link">di sini</a> dan detail pesanan <a href=":order_link">di sini</a>.',

@@ -23,7 +23,6 @@ return [
         'activated' => 'เปิดใช้งาน',
         'locked' => 'ล็อค',
     ],
-    'email_verified' => 'ยืนยันอีเมลแล้ว?',
     'verify_email' => [
         'confirm_heading' => 'ยืนยันการยืนยันอีเมล',
         'confirm_description' => 'คุณแน่ใจหรือไม่ที่จะยืนยันอีเมลของลูกค้าคนนี้?',
@@ -31,7 +30,6 @@ return [
         'approve_here' => 'คลิกที่นี่',
         'confirm_button' => 'ยืนยัน',
     ],
-    'email_already_verified' => 'อีเมลได้รับการยืนยันแล้ว',
     'verification_email_sent' => 'ส่งอีเมลยืนยันสำเร็จ!',
     'resend_verification_email' => 'ส่งอีเมลยืนยันอีกครั้ง',
     'resend_verification_email_confirmation' => 'คุณแน่ใจหรือไม่ที่จะส่งอีเมลยืนยันให้ลูกค้าคนนี้อีกครั้ง?',

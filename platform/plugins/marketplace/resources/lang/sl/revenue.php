@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Prihodki',
     'edit' => 'Posodobi stanje denarnice',
     'view_store' => 'Poglej trgovino ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Dodaj/Odštej znesek prodajalca',
     'statements' => 'Izpiski',
     'products' => 'Izdelki',
+    'items_earning_sales' => 'Prodaja zaslužka predmetov: :amount',
 ];

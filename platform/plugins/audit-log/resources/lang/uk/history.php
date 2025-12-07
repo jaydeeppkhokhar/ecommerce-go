@@ -45,4 +45,6 @@ return [
     'admin' => 'адміністратор',
     'register_an_account' => 'обліковий запис',
     'activity_has_been_deleted' => 'Активність видалено',
+    'no_results_found' => 'Результатів не знайдено',
+    'no_activities_here' => 'Схоже, тут немає жодної активності.',
 ];

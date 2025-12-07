@@ -18,7 +18,7 @@
                     @if ($hasMoreThanOneLanguage)
                         <x-core::tab.item
                             id="tab_preferences"
-                            :label="__('Preferences')"
+                            :label="trans('plugins/marketplace::store.preferences')"
                         />
                     @endif
                 @endif

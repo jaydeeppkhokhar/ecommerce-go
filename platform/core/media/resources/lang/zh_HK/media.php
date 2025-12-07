@@ -43,6 +43,8 @@ return [
     'upload_progress' => '上傳進度',
     'alt_text' => '替代文字',
     'folder_created' => '文件夾成功創建！',
+    'folder_exists' => '資料夾 :folder 已存在！',
+    'directory_must_empty' => '目錄必須為空才能刪除！',
     'gallery' => '媒體畫廊',
     'trash_error' => '刪除所選項目時出錯',
     'trash_success' => '成功將選定的項目移至垃圾桶！',

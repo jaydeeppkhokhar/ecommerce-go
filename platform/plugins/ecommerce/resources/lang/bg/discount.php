@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Този купон не може да се приложи, защото вашата количка съдържа артикули от мигновена разпродажба (:product_name). Цените от мигновена разпродажба не могат да се комбинират с купони за отстъпки.',
     'coupon_applied_successfully' => 'Чудесно! Кодът за купон ":code" е приложен. Спестихте пари от тази поръчка!',
     'coupon_removed_successfully' => 'Кодът за купон е премахнат от вашата поръчка.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Кодове за купони (:count)',
+    'left_quantity' => 'Остават :left',
+    'apply' => 'Приложи',
+    'remove' => 'Премахни',
+    'select_coupon' => 'Избери купон',
+    'you_have_coupon_code' => 'Имате код за купон?',
+    'close' => 'Затвори',
+    'coupon_code_label' => 'Код за купон: :code',
+    'enter_coupon_code_placeholder' => 'Въведете код за купон...',
 ];

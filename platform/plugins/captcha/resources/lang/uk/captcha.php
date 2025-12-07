@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Форма входу адміністратора',
     'admin_forgot_password_form' => 'Форма відновлення пароля адміністратора',
     'admin_reset_password_form' => 'Форма скидання пароля адміністратора',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Математична Captcha',
+    'math_question' => 'Розв’яжіть таку математичну функцію: :label = ?',
+    'captcha_verification_failed' => 'Помилка перевірки Captcha!',
+    'math_captcha_verification_failed' => 'Помилка математичної перевірки Captcha!',
 ];

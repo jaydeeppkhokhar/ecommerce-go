@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Terbitkan aset pakej',
         'clean_up' => 'Bersihkan fail kemas kini sistem',
         'done' => 'Sistem berjaya dikemas kini',
-
+        'unknown' => 'Langkah tidak diketahui',
         'messages' => [
             'download' => 'Memuat turun fail kemas kini...',
             'update_files' => 'Mengemas kini fail sistem...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Membersihkan fail kemas kini sistem...',
             'done' => 'Selesai! Pelayar anda akan dimuat semula dalam 30 saat.',
         ],
-
         'failed_messages' => [
             'download' => 'Tidak dapat memuat turun fail kemas kini',
             'update_files' => 'Tidak dapat mengemas kini fail sistem',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Tidak dapat menerbitkan aset pakej',
             'clean_up' => 'Tidak dapat membersihkan fail kemas kini sistem',
         ],
-
         'success_messages' => [
             'download' => 'Fail kemas kini berjaya dimuat turun.',
             'update_files' => 'Fail sistem berjaya dikemas kini.',

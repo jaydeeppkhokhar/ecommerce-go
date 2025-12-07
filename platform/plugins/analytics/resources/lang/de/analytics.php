@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'Analytics-Plugin-Fehler: Fehlende Drittanbieter-Bibliotheken. Bitte führen Sie "composer update" aus, um sie zu installieren.',
     'browser' => 'Browser',
     'url' => 'URL',
+    'credential_invalid' => 'Diese Anmeldeinformationen sind ungültige Google Analytics-Anmeldeinformationen.',
+    'file_not_valid_json' => 'Diese Datei ist keine gültige JSON-Datei.',
+    'no_results_found' => 'Keine Ergebnisse gefunden',
+    'upload_service_account_json' => 'Dienstkonto-JSON-Datei hochladen',
 ];

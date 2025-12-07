@@ -9,9 +9,8 @@ return [
     'setting_general' => 'Allmänt',
     'setting_email' => 'E-post',
     'system_information' => 'Systeminformation',
-
     'theme' => 'Tema',
-    'copyright' => 'Copyright :year © :company. Version :version',
+    'copyright' => 'Upphovsrätt :year © :company. Version :version',
     'profile' => 'Profil',
     'logout' => 'Logga ut',
     'no_search_result' => 'Inga resultat hittades, försök med andra sökord.',

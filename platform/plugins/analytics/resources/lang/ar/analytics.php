@@ -14,7 +14,7 @@ return [
     'start_date_can_not_before_end_date' => 'لا يمكن أن يكون تاريخ البدء :start_date بعد تاريخ الانتهاء :end_date',
     'not_set_up' => 'لم يتم إعداد الأداة',
     'settings' => [
-        'title' => 'Google Analytics',
+        'title' => 'إحصاءات Google',
         'description' => 'تكوين بيانات الاعتماد لـ Google Analytics',
         'analytics_property_id' => 'معرف الموقع لـ GA4',
         'analytics_property_id_description' => 'معرف موقع Google Analytics (GA4)',
@@ -32,5 +32,9 @@ return [
     'widget_analytics_general' => 'تحليلات الموقع',
     'missing_library_warning' => 'خطأ في المكون الإضافي Analytics: مكتبات الجهات الخارجية مفقودة. يرجى تشغيل "composer update" لتثبيتها.',
     'browser' => 'المتصفح',
-    'url' => 'URL',
+    'url' => 'الرابط',
+    'credential_invalid' => 'بيانات الاعتماد هذه غير صالحة لبيانات اعتماد Google Analytics.',
+    'file_not_valid_json' => 'هذا الملف ليس ملف JSON صالحًا.',
+    'no_results_found' => 'لم يتم العثور على نتائج',
+    'upload_service_account_json' => 'تحميل ملف JSON لحساب الخدمة',
 ];

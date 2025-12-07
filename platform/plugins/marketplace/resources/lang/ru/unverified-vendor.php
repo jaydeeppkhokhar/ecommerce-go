@@ -14,5 +14,4 @@ return [
     'approve' => 'Одобрить',
     'approve_vendor_confirmation' => 'Одобрить подтверждение поставщика',
     'approve_vendor_confirmation_description' => 'Вы уверены, что действительно хотите одобрить :vendor для продажи на этом сайте?',
-    'vendor_approval_notification' => 'Хотите ли вы одобрить этого продавца для продажи на этом сайте? Одобрить здесь :approve_link',
 ];

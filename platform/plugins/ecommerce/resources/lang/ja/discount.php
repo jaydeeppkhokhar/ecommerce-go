@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'カートにフラッシュセール商品（:product_name）が含まれているため、このクーポンは適用できません。フラッシュセール価格はクーポン割引と組み合わせることはできません。',
     'coupon_applied_successfully' => '素晴らしい！クーポンコード":code"が適用されました。この注文でお金を節約できました！',
     'coupon_removed_successfully' => 'クーポンコードが注文から削除されました。',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'クーポンコード (:count)',
+    'left_quantity' => '残り :left',
+    'apply' => '適用',
+    'remove' => '削除',
+    'select_coupon' => 'クーポンを選択',
+    'you_have_coupon_code' => 'クーポンコードをお持ちですか？',
+    'close' => '閉じる',
+    'coupon_code_label' => 'クーポンコード: :code',
+    'enter_coupon_code_placeholder' => 'クーポンコードを入力...',
 ];

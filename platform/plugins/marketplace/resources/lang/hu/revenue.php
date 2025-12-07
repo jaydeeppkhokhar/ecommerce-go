@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Bevételek',
     'edit' => 'Pénztárca egyenleg frissítése',
     'view_store' => '":store" üzlet megtekintése',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Eladó összegének hozzáadása/levonása',
     'statements' => 'Kimutatások',
     'products' => 'Termékek',
+    'items_earning_sales' => 'Tételek értékesítési bevétele: :amount',
 ];

@@ -3,9 +3,6 @@
 return [
     'title' => 'Встановлення',
     'next' => 'Наступний крок',
-    'back' => 'Попередній',
-    'finish' => 'Встановити',
-    'installation' => 'Встановлення',
     'forms' => [
         'errorTitle' => 'Виникли наступні помилки:',
     ],
@@ -17,7 +14,6 @@ return [
     ],
     'requirements' => [
         'title' => 'Вимоги до сервера',
-        'next' => 'Перевірити дозволи',
     ],
     'permissions' => [
         'next' => 'Налаштувати оточення',
@@ -28,17 +24,11 @@ return [
             'form' => [
                 'name_required' => 'Потрібна назва оточення.',
                 'app_name_label' => 'Заголовок сайту',
-                'app_name_placeholder' => 'Заголовок сайту',
                 'app_url_label' => 'URL',
-                'app_url_placeholder' => 'URL',
                 'db_connection_label' => 'Підключення до бази даних',
                 'db_connection_label_mysql' => 'MySQL',
-                'db_connection_label_sqlite' => 'SQLite',
-                'db_connection_label_pgsql' => 'PostgreSQL',
                 'db_host_label' => 'Хост бази даних',
-                'db_host_placeholder' => 'Хост бази даних',
                 'db_port_label' => 'Порт бази даних',
-                'db_port_placeholder' => 'Порт бази даних',
                 'db_name_label' => 'Назва бази даних',
                 'db_name_placeholder' => 'Назва бази даних',
                 'db_username_label' => 'Ім\'я користувача бази даних',
@@ -79,13 +69,11 @@ return [
         'title' => 'Активувати ліцензію',
         'skip' => 'Пропустити зараз',
     ],
-    'install' => 'Встановити',
     'final' => [
         'pageTitle' => 'Встановлення завершено',
         'title' => 'Готово',
         'message' => 'Застосунок успішно встановлено.',
         'exit' => 'Перейти до панелі адміністратора',
     ],
-    'install_success' => 'Успішно встановлено!',
     'install_step_title' => 'Встановлення - Крок :step: :title',
 ];

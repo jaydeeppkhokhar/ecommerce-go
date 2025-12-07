@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'Yönetici giriş formu',
     'admin_forgot_password_form' => 'Yönetici şifremi unuttum formu',
     'admin_reset_password_form' => 'Yönetici şifre sıfırlama formu',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Matematik Captcha\'sı',
+    'math_question' => 'Lütfen aşağıdaki matematik fonksiyonunu çözün: :label = ?',
+    'captcha_verification_failed' => 'Captcha Doğrulaması Başarısız!',
+    'math_captcha_verification_failed' => 'Matematik Captcha Doğrulaması Başarısız!',
 ];

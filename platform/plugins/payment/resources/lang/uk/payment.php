@@ -126,4 +126,13 @@ return [
         'request' => 'запит',
         'response' => 'Відповідь',
     ],
+    'payment_created' => 'Ви створили платіж #:charge_id через :channel :time : :amount',
+    'processing_please_wait' => 'Обробка. Будь ласка, зачекайте...',
+    'error' => 'Помилка',
+    'checkout' => 'Оформлення замовлення',
+    'show_full_json' => 'Показати повний JSON',
+    'full_log_data' => 'Повні дані журналу',
+    'currency_not_supported' => ':name не підтримує :currency. Список валют, які підтримує :name: :currencies.',
+    'please_switch_currency' => 'Будь ласка, переключіться на будь-яку підтримувану валюту',
+    'payment_with' => 'Оплата за допомогою :paymentType',
 ];

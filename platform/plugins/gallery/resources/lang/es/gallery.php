@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Visualización del número límite',
     'edit_this_gallery' => 'Editar esta galería',
     'galleries_page' => 'Página de galerías',
+    'by_name' => 'Por LUGAR0',
+    'title' => 'Título',
+    'limit' => 'Límite',
+    'limit_helper' => 'Número de galerías a mostrar. ',
 ];

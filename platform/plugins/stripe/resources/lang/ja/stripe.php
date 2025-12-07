@@ -14,4 +14,7 @@ return [
         'step_4_label' => '署名シークレットをコピーする',
         'step_4_description' => '「Webhook の詳細」セクションから「Signing Secret」の値をコピーし、「設定」ページの「Payment」タブの「Stripe」セクションにある「Stripe Webhook Secret」フィールドに貼り付けます。',
     ],
+    'no_payment_charge' => '支払い料金がかかりません。もう一度お試しください！',
+    'payment_failed' => '支払いに失敗しました！',
+    'payment_type' => '支払いタイプ',
 ];

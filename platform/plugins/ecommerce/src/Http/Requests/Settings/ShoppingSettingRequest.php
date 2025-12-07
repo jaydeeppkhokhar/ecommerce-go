@@ -3,6 +3,7 @@
 namespace Botble\Ecommerce\Http\Requests\Settings;
 
 use Botble\Base\Rules\OnOffRule;
+use Botble\Payment\Enums\PaymentMethodEnum;
 use Botble\Support\Http\Requests\Request;
 use Illuminate\Validation\Rule;
 
@@ -20,6 +21,8 @@ class ShoppingSettingRequest extends Request
             'order_tracking_enabled' => $onOffRule,
             'order_tracking_method' => ['nullable', 'string', 'in:email,phone'],
             'payment_proof_enabled' => $onOffRule,
+            'payment_proof_payment_methods' => ['nullable', 'array'],
+            'payment_proof_payment_methods.*' => ['required', 'string', Rule::in(PaymentMethodEnum::values())],
             'guest_payment_proof_enabled' => $onOffRule,
             'enable_quick_buy_button' => $onOffRule,
             'order_auto_confirmed' => $onOffRule,

@@ -25,7 +25,7 @@ class PublicStoreController extends BaseController
 {
     public function getStores(Request $request)
     {
-        $title = __('Stores');
+        $title = trans('plugins/marketplace::store.stores');
         Theme::breadcrumb()
             ->add($title, route('public.stores'));
 
@@ -107,7 +107,7 @@ class PublicStoreController extends BaseController
         SeoHelper::setSeoOpenGraph($meta);
 
         Theme::breadcrumb()
-            ->add(__('Stores'), route('public.stores'))
+            ->add(trans('plugins/marketplace::store.stores'), route('public.stores'))
             ->add($store->name, $store->url);
 
         $with = EcommerceHelper::withProductEagerLoadingRelations();
@@ -123,8 +123,8 @@ class PublicStoreController extends BaseController
 
         if ($request->ajax()) {
             $total = $products->total();
-            $message = $total > 1 ? __(':total Products found', compact('total')) : __(
-                ':total Product found',
+            $message = $total > 1 ? trans('plugins/ecommerce::products.total_products_found', compact('total')) : trans(
+                'plugins/ecommerce::products.total_product_found',
                 compact('total')
             );
 
@@ -173,9 +173,9 @@ class PublicStoreController extends BaseController
         if ($existing && $existing->reference_id != $request->input('reference_id')) {
             return $this->httpResponse()
                 ->setError()
-                ->setMessage(__('Not Available'));
+                ->setMessage(trans('plugins/marketplace::store.forms.not_available'));
         }
 
-        return $this->httpResponse()->setMessage(__('Available'));
+        return $this->httpResponse()->setMessage(trans('plugins/marketplace::store.forms.available'));
     }
 }

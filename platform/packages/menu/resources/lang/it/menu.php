@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Riorganizza le voci del menu trascinandole e rilasciandole per modificare il loro ordine o annidarle come sottomenu.',
     'widget_custom_menu' => 'Menu personalizzato',
     'widget_custom_menu_description' => 'Aggiungi un menu personalizzato alla tua area widget.',
+    'select_menu' => 'Seleziona menu',
 ];

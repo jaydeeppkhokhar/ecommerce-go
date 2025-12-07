@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Обмежити кількість відображень',
     'edit_this_gallery' => 'Редагувати цю галерею',
     'galleries_page' => 'Сторінка галерей',
+    'by_name' => 'Від :name',
+    'title' => 'Назва',
+    'limit' => 'Ліміт',
+    'limit_helper' => 'Кількість галерей для показу. ',
 ];

@@ -21,7 +21,7 @@ return [
     'city' => 'Thành phố',
     'address' => 'Địa chỉ',
     'phone' => 'Điện thoại',
-    'email' => 'Email',
+    'email' => 'E-mail',
     'zip_code' => 'Mã bưu điện',
     'methods' => [
         'default' => 'Mặc định',
@@ -78,7 +78,7 @@ return [
     'cod_status' => 'Trạng thái COD',
     'shipping_status' => 'Trạng thái vận chuyển',
     'customer_information' => 'Thông tin khách hàng',
-    'sku' => 'SKU',
+    'sku' => 'Mã SKU',
     'change_status_confirm_title' => 'Xác nhận <span class="shipment-status-label"></span> ?',
     'change_status_confirm_description' => 'Bạn có chắc chắn muốn xác nhận <span class="shipment-status-label"></span> cho lô hàng này không?',
     'accept' => 'Chấp nhận',
@@ -100,6 +100,7 @@ return [
     'shipping_canceled_by' => 'Vận chuyển bị hủy bởi %user_name%',
     'update_shipping_status_success' => 'Cập nhật trạng thái vận chuyển thành công!',
     'update_cod_status_success' => 'Cập nhật trạng thái COD của vận chuyển thành công!',
+    'saved_shipping_settings_success' => 'Đã lưu cài đặt vận chuyển thành công!',
     'updated_cod_status_by' => 'Đã cập nhật trạng thái COD thành :status. Cập nhật bởi: %user_name%',
     'all' => 'Tất cả',
     'all_countries' => 'Tất cả quốc gia',
@@ -126,6 +127,9 @@ return [
     'add_note' => 'Thêm ghi chú...',
     'view_order' => 'Xem đơn hàng :order_id',
     'rule' => [
+        'types' => [
+            'unavailable' => 'Không có sẵn',
+        ],
         'enum_types' => [
             'based_on_weight' => 'Dựa trên tổng trọng lượng đơn hàng (:unit)',
             'based_on_price' => 'Dựa trên tổng số tiền đơn hàng',
@@ -193,4 +197,5 @@ return [
         'scan_qr_code' => 'Quét mã QR để theo dõi lô hàng của bạn',
     ],
     'customer_confirmed_delivery_at' => 'Khách hàng xác nhận giao hàng tại',
+    'no_shipping_methods_available' => 'Không có phương thức vận chuyển nào khả dụng!',
 ];

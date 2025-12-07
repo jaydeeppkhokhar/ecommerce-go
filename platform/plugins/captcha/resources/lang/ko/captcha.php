@@ -48,4 +48,9 @@ return [
     'admin_login_form' => '관리자 로그인 양식',
     'admin_forgot_password_form' => '관리자 비밀번호 찾기 양식',
     'admin_reset_password_form' => '관리자 비밀번호 재설정 양식',
+    'captcha' => '보안 문자',
+    'math_captcha' => '수학 보안 문자',
+    'math_question' => '다음 수학 함수를 풀어보세요: :label = ?',
+    'captcha_verification_failed' => '보안 문자 확인에 실패했습니다!',
+    'math_captcha_verification_failed' => '수학 보안 문자 확인에 실패했습니다!',
 ];

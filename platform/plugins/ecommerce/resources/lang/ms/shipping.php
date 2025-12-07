@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Imbas kod QR untuk jejaki penghantaran anda',
     ],
     'customer_confirmed_delivery_at' => 'Pelanggan mengesahkan penghantaran pada',
+    'no_shipping_methods_available' => 'Tiada kaedah penghantaran tersedia!',
 ];

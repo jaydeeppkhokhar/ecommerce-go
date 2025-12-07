@@ -65,6 +65,8 @@ return [
     'sign_in_below' => '請在下面登入',
     'languages' => '語言',
     'reset_password' => '重設密碼',
+    'deactivated_message' => '您的帳戶已被停用。請聯絡管理員。',
+    'password_changed_message' => '您的密碼已更改。請使用新密碼重新登入。',
     'settings' => [
         'email' => [
             'title' => 'ACL',

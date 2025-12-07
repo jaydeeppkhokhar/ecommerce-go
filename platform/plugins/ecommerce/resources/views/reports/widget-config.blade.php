@@ -149,7 +149,7 @@
                         Botble.showSuccess(response.message || '{{ trans("plugins/ecommerce::reports.widget_configuration_saved") }}');
                     },
                     error: function(xhr) {
-                        Botble.showError(xhr.responseJSON?.message || '{{ trans("core/base::forms.save_error") }}');
+                        Botble.showError(xhr.responseJSON?.message || '{{ trans("plugins/ecommerce::ecommerce.forms.save_error") }}');
                     },
                     complete: function() {
                         $button.prop('disabled', false).html(originalText);

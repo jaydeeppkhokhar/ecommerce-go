@@ -5,8 +5,12 @@ return [
     'create' => 'FAQ baru',
     'question' => 'Pertanyaan',
     'answer' => 'Jawaban',
+    'question_placeholder' => 'Masukkan pertanyaan Anda...',
+    'answer_placeholder' => 'Masukkan jawaban Anda...',
     'category' => 'Kategori',
     'faq_schema_config' => 'Konfigurasi skema FAQ (:link)',
+    'faq_schema_config_description' => 'Konfigurasi ini hanya mendaftarkan data terstruktur FAQ untuk tujuan SEO. Ini tidak akan ditampilkan dalam konten tema front-end. Skema tertanam dalam kode sumber halaman dan dapat dilihat menggunakan "Lihat Sumber" atau diuji dengan alat Google Rich Results Test.',
+    'schema_testing_tool' => 'Uji dengan Google Rich Results Test',
     'learn_more' => 'Pelajari lebih lanjut',
     'settings' => [
         'title' => 'FAQ',

@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Alternativní text',
 
     'folder_created' => 'Složka byla úspěšně vytvořena!',
+    'folder_exists' => 'Složka :folder již existuje!',
+    'directory_must_empty' => 'Adresář musí být prázdný, aby mohl být smazán!',
     'gallery' => 'Galerie médií',
 
     'trash_error' => 'Chyba při mazání vybraných položek',

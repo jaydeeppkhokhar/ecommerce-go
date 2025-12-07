@@ -33,4 +33,8 @@ return [
     'missing_library_warning' => 'ข้อผิดพลาดปลั๊กอิน Analytics: ไลบรารีของบุคคลที่สามหายไป โปรดเรียกใช้ "composer update" เพื่อติดตั้ง',
     'browser' => 'เบราว์เซอร์',
     'url' => 'URL',
+    'credential_invalid' => 'This credential is invalid Google Analytics credentials.',
+    'file_not_valid_json' => 'This file is not a valid JSON file.',
+    'no_results_found' => 'No results found',
+    'upload_service_account_json' => 'Upload Service Account JSON File',
 ];

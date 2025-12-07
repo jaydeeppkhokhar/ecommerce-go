@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Objavi resurse paketa',
         'clean_up' => 'Očisti datoteke ažuriranja sustava',
         'done' => 'Sustav uspješno ažuriran',
-
+        'unknown' => 'Nepoznati korak',
         'messages' => [
             'download' => 'Preuzimanje datoteka ažuriranja...',
             'update_files' => 'Ažuriranje datoteka sustava...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Čišćenje datoteka ažuriranja sustava...',
             'done' => 'Gotovo! Vaš preglednik će se osvježiti za 30 sekundi.',
         ],
-
         'failed_messages' => [
             'download' => 'Nije moguće preuzeti datoteke ažuriranja',
             'update_files' => 'Nije moguće ažurirati datoteke sustava',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Nije moguće objaviti resurse paketa',
             'clean_up' => 'Nije moguće očistiti datoteke ažuriranja sustava',
         ],
-
         'success_messages' => [
             'download' => 'Datoteke ažuriranja uspješno preuzete.',
             'update_files' => 'Datoteke sustava uspješno ažurirane.',

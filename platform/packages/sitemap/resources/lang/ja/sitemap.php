@@ -75,5 +75,13 @@ return [
         'automatic_generation' => '自動生成',
         'automatic_generation_desc' => 'コンテンツが変更されると自動的に更新されます',
         'automatic_update_note' => 'ウェブサイトでコンテンツを作成、編集、または削除するたびに、サイトマップが自動的に更新されます。',
+        'submit_sitemap' => 'サイトマップをIndexNowに送信',
+        'submitting_sitemap' => '送信中...',
+        'sitemap_submitted_successfully' => 'サイトマップが検索エンジンに正常に送信されました！',
+        'sitemap_submission_failed' => 'すべての検索エンジンへのサイトマップ送信に失敗しました。',
+        'sitemap_submission_partial' => 'サイトマップはいくつかのエラーとともに送信されました。',
+        'submit_sitemap_error' => 'サイトマップの送信に失敗しました。もう一度お試しください。',
+        'indexnow_disabled' => 'IndexNow が有効になっていません。先に有効化してください。',
+        'indexnow_no_api_key' => 'APIキーが見つかりません。まずは APIキーを生成してください。',
     ],
 ];

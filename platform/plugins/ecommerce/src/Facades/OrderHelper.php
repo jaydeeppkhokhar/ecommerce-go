@@ -7,10 +7,12 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * @method static \Illuminate\Support\Collection|\Illuminate\Database\Eloquent\Model|array|bool processOrder(array|string|null $orderIds, string|null $chargeId = null)
+ * @method static array validateAndReserveStock(array $cartItems)
  * @method static bool decreaseProductQuantity(\Botble\Ecommerce\Models\Order $order)
  * @method static \Botble\Base\Supports\EmailHandler setEmailVariables(\Botble\Ecommerce\Models\Order $order)
  * @method static array getEmailVariables(\Botble\Ecommerce\Models\Order $order)
  * @method static bool sendOrderConfirmationEmail(\Botble\Ecommerce\Models\Order $order, bool $saveHistory = false, bool $force = false)
+ * @method static bool sendOrderEmail(\Botble\Ecommerce\Models\Order $order, string $template, string|array|null $email = null, array $additionalVariables = [], array $args = [], bool $debug = false)
  * @method static void sendEmailForDigitalProducts(\Botble\Ecommerce\Models\Order $order)
  * @method static \Botble\Ecommerce\Models\Order setOrderCompleted(string|int $orderId, \Illuminate\Http\Request $request, string|int $userId = 0)
  * @method static array|string|null getShippingMethod(string $method, array|string|null $option = null)

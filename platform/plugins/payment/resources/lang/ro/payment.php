@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Tip taxă de procesare (Opțional)',
     'fee_type_helper' => 'Alegeți cum ar trebui calculată taxa de plată: ca sumă fixă sau procent din totalul comenzii. Dacă alegeți o sumă fixă, va fi bazată pe moneda implicită (:currency).',
+    'payment_created' => 'Ați creat o plată #:charge_id prin :channel :time : :amount',
+    'processing_please_wait' => 'Se procesează. Vă rugăm așteptați...',
+    'error' => 'Eroare',
+    'checkout' => 'Finalizare comandă',
+    'show_full_json' => 'Afișează JSON complet',
+    'full_log_data' => 'Date complete din jurnal',
+    'currency_not_supported' => ':name nu acceptă :currency. Lista valutelor acceptate de :name: :currencies.',
+    'please_switch_currency' => 'Vă rugăm să treceți la orice monedă acceptată',
+    'payment_with' => 'Plată cu :paymentType',
 ];

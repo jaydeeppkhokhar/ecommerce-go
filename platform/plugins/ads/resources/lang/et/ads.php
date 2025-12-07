@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Kehtetu Google AdSense kliendi ID vorming. See peaks olema vormingus: ca-pub-XXXXXXXXXXXXXXXX (kus X on number).',
         ],
     ],
+    'banner' => 'Bänner',
+    'tablet_image' => 'Tahvelarvuti pilt',
+    'tablet_image_helper' => 'Seadmete jaoks laiusega 768px kuni 1200px, kui tühi, kasutatakse töölaua pilti.',
+    'mobile_image' => 'Mobiilne pilt',
+    'mobile_image_helper' => 'Seadmete jaoks laiusega vähem kui 768px, kui tühi, kasutatakse tahvelarvuti pilti.',
 ];

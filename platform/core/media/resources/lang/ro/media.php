@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Text alternativ',
 
     'folder_created' => 'Folderul a fost creat cu succes!',
+    'folder_exists' => 'Folderul :folder există deja!',
+    'directory_must_empty' => 'Directorul trebuie să fie gol pentru a fi șters!',
     'gallery' => 'Galerie media',
 
     'trash_error' => 'Eroare la ștergerea elementelor selectate',

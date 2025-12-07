@@ -11,6 +11,7 @@ return [
         'placeholder' => [
             'username' => 's\'il vous plaît entrez votre nom d\'utilisateur',
             'email' => 'Veuillez saisir votre e-mail',
+            'password' => 'Enter your password',
         ],
         'success' => 'Connectez-vous avec succès !',
         'fail' => 'Nom d\'utilisateur ou mot de passe incorrect.',
@@ -42,6 +43,10 @@ return [
             'fail' => 'Impossible d\'envoyer un e-mail pendant cette période. Veuillez réessayer plus tard.',
         ],
         'new-password' => 'Nouveau mot de passe',
+        'placeholder' => [
+            'new_password' => 'Enter your new password',
+            'new_password_confirmation' => 'Confirm your new password',
+        ],
     ],
     'email' => [
         'reminder' => [
@@ -60,10 +65,24 @@ return [
     'sign_in_below' => 'S\'inscrire ci-dessous',
     'languages' => 'Languages',
     'reset_password' => 'réinitialiser le mot de passe',
+    'deactivated_message' => 'Votre compte a été désactivé. Veuillez contacter l\'administrateur.',
+    'password_changed_message' => 'Votre mot de passe a été modifié. Veuillez vous reconnecter avec votre nouveau mot de passe.',
     'settings' => [
         'email' => [
             'title' => 'ACL',
             'description' => 'ACL email configuration',
+            'templates' => [
+                'password_reminder' => [
+                    'title' => 'Reset password',
+                    'description' => 'Send email to user when requesting reset password',
+                    'subject' => 'Reset Password',
+                    'reset_link' => 'Reset password link',
+                    'email_title' => 'Reset Password Instruction',
+                    'email_message' => 'You are receiving this email because we received a password reset request for your account.',
+                    'button_text' => 'Reset password',
+                    'trouble_text' => 'If you\'re having trouble clicking the \\\"Reset Password\\\" button, copy and paste the URL below into your web browser: <a href=\\\":reset_link\\\">:reset_link</a> and paste it into your browser. If you didn\'t request a password reset, please ignore this message or contact us if you have any questions.',
+                ],
+            ],
         ],
     ],
 ];

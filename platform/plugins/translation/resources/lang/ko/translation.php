@@ -69,4 +69,7 @@ return [
             'trans' => '제공된 경우 비어 있거나 최대 길이가 :max자인 문자열일 수 있습니다.',
         ],
     ],
+    'download_locale' => '언어 다운로드',
+    'import_available_locale_confirmation' => 'GitHub에서 언어 다운로드',
+    'import_available_locale_confirmation_content' => '이 언어를 다운로드하시겠습니까? :lang_path에 다운로드되며, 원하시면 나중에 삭제할 수 있습니다.',
 ];

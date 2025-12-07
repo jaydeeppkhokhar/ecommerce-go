@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Dodaj prosty suwak',
     'select_slider' => 'Wybierz suwak',
     'shortcode' => 'Krótki kod',
+    'tablet_image' => 'Obraz tabletu',
+    'tablet_image_helper' => 'Dla urządzeń o szerokości od 768px do 1200px, jeśli jest pusta, zostanie użyty obraz z pulpitu.',
+    'mobile_image' => 'Obraz mobilny',
+    'mobile_image_helper' => 'W przypadku urządzeń o szerokości mniejszej niż 768px, jeśli jest puste, zostanie użyty obraz z tabletu.',
 ];

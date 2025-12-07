@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Comandă realizată cu succes!',
     'customer_new_order_greeting' => 'Stimate :customer_name,',
     'customer_new_order_message' => 'Vă mulțumim pentru achiziționarea produselor noastre, vă vom contacta la numărul de telefon <strong>:customer_phone</strong> pentru a confirma comanda!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Metodă de Livrare',
     'customer_new_order_order_number' => 'Număr comandă',
     'customer_new_order_payment_method' => 'Metodă de Plată',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Ați primit o comandă nouă de la :site_title',
     'admin_new_order_greeting' => 'Salut Admin,',
     'admin_new_order_message' => 'O comandă nouă a fost plasată cu succes de :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Metodă de livrare',
     'admin_new_order_payment_method' => 'Metodă de plată',
     'admin_new_order_view_order' => 'Vizualizați detaliile comenzii',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Comandă confirmată!',
     'order_confirm_greeting' => 'Salut :customer_name,',
     'order_confirm_message' => 'Comanda dumneavoastră a fost confirmată. Vă mulțumim pentru achiziționarea produselor noastre!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Notă',
     'order_confirm_shipping_method' => 'Metodă de livrare',
     'order_confirm_payment_method' => 'Metodă de plată',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Comanda dumneavoastră a fost anulată',
     'customer_cancel_order_greeting' => 'Stimate :customer_name,',
     'customer_cancel_order_message' => 'Comanda dumneavoastră <strong>:order_id</strong> a fost anulată conform solicitării din motivul :cancellation_reason și plata dumneavoastră a fost de asemenea anulată.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Adresă',
     'customer_cancel_order_products' => 'Iată ce ați comandat:',
     'customer_cancel_order_note' => 'Notă',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Comandă anulată',
     'admin_cancel_order_greeting' => 'Salut :customer_name,',
-    'admin_cancel_order_message' => 'Comanda dumneavoastră #:order_id a fost anulată de personalul nostru.',
+    'admin_cancel_order_message' => 'Comanda dumneavoastră :order_id a fost anulată de personalul nostru.',
     'admin_cancel_order_order_cancelled' => 'Comanda a fost anulată!',
     'admin_cancel_order_reason' => 'Motivul anulării: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Informații client',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Detalii comandă:',
     'admin_cancel_order_note' => 'Notă',
     'admin_cancel_order_order_summary' => 'Rezumat Comandă',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => 'Comanda #:order_id anulată de client',
+    'order_cancellation_to_admin_title' => 'Comanda :order_id anulată de client',
     'order_cancellation_to_admin_greeting' => 'Salut Admin,',
-    'order_cancellation_to_admin_message' => ':customer_name a anulat comanda <strong>#:order_id</strong>. Motiv: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name a anulat comanda <strong>:order_id</strong>. Motiv: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Informații client',
     'order_cancellation_to_admin_name' => 'Nume',
     'order_cancellation_to_admin_phone' => 'Telefon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Notă',
     'order_cancellation_to_admin_view_order' => 'Vizualizați detaliile comenzii',
     'order_cancellation_to_admin_order_summary' => 'Rezumat Comandă',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Comanda dumneavoastră este în tranzit',
     'customer_delivery_order_greeting' => 'Salut :customer_name,',
     'customer_delivery_order_message' => 'Comanda dumneavoastră este în tranzit. Vă mulțumim pentru achiziționarea produselor noastre!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'ID Urmărire',
     'customer_delivery_order_tracking_link' => 'Link Urmărire',
     'customer_delivery_order_track_shipment' => 'Urmăriți Expediția',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Comanda dumneavoastră a fost livrată',
     'customer_order_delivered_greeting' => 'Salut :customer_name,',
     'customer_order_delivered_message' => 'Comanda dumneavoastră a fost livrată. Vă mulțumim pentru achiziționarea produselor noastre!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'ID Urmărire',
     'customer_order_delivered_tracking_link' => 'Link Urmărire',
     'customer_order_delivered_track_shipment' => 'Vizualizați Detaliile Urmăririi',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Plată confirmată pentru comanda #:order_id',
+    'order_confirm_payment_title' => 'Plată confirmată pentru comanda :order_id',
     'order_confirm_payment_greeting' => 'Salut :customer_name,',
     'order_confirm_payment_message' => 'Plata dumneavoastră a fost confirmată. Vă mulțumim pentru achiziționarea produselor noastre!',
     'order_confirm_payment_order_number' => 'Număr comandă',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Vă mulțumim pentru plată. Comanda dumneavoastră va fi procesată în curând.',
     'order_confirm_payment_order_summary' => 'Rezumat Comandă',
     'order_confirm_payment_shipping_method' => 'Metodă de livrare',
-
-    // Order Recovery Email
     'order_recover_title' => 'Aveți o comandă incompletă',
     'order_recover_greeting' => 'Salut :customer_name,',
     'order_recover_message' => 'Am observat că aveți o comandă incompletă. Doriți să finalizați achiziția?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Finalizați Comanda',
     'order_recover_order_summary' => 'Rezumat Comandă',
     'order_recover_note' => 'Notă',
-
-    // Welcome Email
     'welcome_greeting' => 'Ne bucurăm să vă avem aici, :customer_name!',
     'welcome_message' => 'Bine ați venit la :site_title!',
     'welcome_register_success' => 'V-ați înregistrat cu succes un cont la <strong>:site_title</strong>.',
     'welcome_explore' => 'Dacă aveți nevoie de ajutor, nu ezitați să răspundeți la acest email!',
     'welcome_visit_shop' => 'Începeți să cumpărați!',
-
-    // Confirm Email
     'confirm_email_title' => 'Verificați Emailul',
     'confirm_email_greeting' => 'Ne bucurăm să vă avem aici, :customer_name!',
     'confirm_email_message' => 'Vă rugăm confirmați adresa de email făcând click pe butonul de mai jos.',
     'confirm_email_instruction' => 'Vă rugăm verificați adresa de email pentru a accesa acest site. Faceți click pe butonul de mai jos pentru a vă verifica emailul.',
     'confirm_email_button' => 'Confirmați adresa de email',
     'confirm_email_trouble' => 'Dacă aveți probleme cu butonul "Confirmați adresa de email", copiați și lipiți URL-ul de mai jos în browser-ul dumneavoastră: <a href=":verify_link">:verify_link</a>.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Resetați parola',
     'password_reminder_greeting' => 'Salut :customer_name,',
     'password_reminder_message' => 'Ați solicitat resetarea parolei.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Resetați Parola',
     'password_reminder_ignore' => 'Dacă nu ați solicitat resetarea parolei, vă rugăm ignorați acest email.',
     'password_reminder_trouble_clicking' => 'Dacă aveți probleme cu butonul "Resetați Parola", copiați și lipiți URL-ul de mai jos în browser-ul dumneavoastră: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Solicitare returnare primită',
     'order_return_request_greeting' => 'Salut :customer_name,',
-    'order_return_request_message' => 'Am primit solicitarea dumneavoastră de returnare pentru comanda #:order_id.',
+    'order_return_request_message' => 'Am primit solicitarea dumneavoastră de returnare pentru comanda :order_id.',
     'order_return_request_reason' => 'Motivul returnării',
     'order_return_request_items' => 'Produse de returnat',
     'order_return_request_process' => 'Vom procesa solicitarea dumneavoastră și vă vom contacta în curând.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Motiv Returnare',
     'order_return_request_order_summary' => 'Rezumat Comandă',
     'order_return_request_note' => 'Notă',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Actualizare status returnare comandă',
     'order_return_status_updated_greeting' => 'Stimate :customer_name,',
     'order_return_status_updated_message' => 'Dorim să vă informăm că statusul solicitării de returnare pentru comanda :order_id a fost actualizat.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Notă moderator: " :description ".',
     'order_return_status_updated_questions' => 'Dacă aveți întrebări sau nelămuriri referitoare la această actualizare, nu ezitați să contactați echipa noastră de suport.',
     'order_return_status_updated_view_details' => 'Vizualizați detaliile returnării',
-
-    // Review Products Email
     'review_products_title' => 'Recenzați achiziția dvs. recentă',
     'review_products_greeting' => 'Salut :customer_name,',
-    'review_products_message' => 'Comanda dumneavoastră #:order_id a fost finalizată. Ne-ar plăcea să auzim părerile dumneavoastră!',
+    'review_products_message' => 'Comanda dumneavoastră :order_id a fost finalizată. Ne-ar plăcea să auzim părerile dumneavoastră!',
     'review_products_instruction' => 'Vă rugăm acordați un moment pentru a recenza produsele achiziț ionate:',
     'review_products_button' => 'Recenzați Produsele',
     'review_products_thank_you' => 'Vă mulțumim pentru achiziție!',
     'review_products_products' => 'Produse de Recenzat',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Produsele dumneavoastră digitale sunt gata',
     'download_digital_products_greeting' => 'Salut :customer_name,',
     'download_digital_products_message' => 'Vă mulțumim pentru achiziție! Produsele dumneavoastră digitale sunt gata pentru descărcare.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Descarcă Toate Fișierele',
     'download_digital_products_external_link_downloads' => 'Descarcă Fișiere Externe',
     'download_digital_products_payment_method' => 'Metodă de Plată',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Codurile Dumneavoastră de Licență',
     'digital_product_license_codes_greeting' => 'Stimate :customer_name,',
     'digital_product_license_codes_message' => 'Vă mulțumim pentru achiziție! Iată codurile dumneavoastră de licență:',
     'digital_product_license_codes_thanks' => 'Vă mulțumim pentru achiziționarea produselor noastre digitale.',
-    'digital_product_license_codes_below' => 'Mai jos sunt codurile de licență pentru produsele pe care le-ați achiziționat:',
     'digital_product_license_codes_product' => 'Produs',
     'digital_product_license_codes_license' => 'Cod de Licență',
     'digital_product_license_codes_order_summary' => 'Iată ce ați comandat:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Fiecare cod de licență este unic și poate fi folosit o singură dată',
     'digital_product_license_codes_note_3' => 'Nu distribuiți codurile de licență cu alte persoane',
     'digital_product_license_codes_note_4' => 'Dacă aveți probleme cu codurile de licență, vă rugăm contactați echipa noastră de suport',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Fișiere Produs Actualizate',
     'product_file_updated_greeting' => 'Salut, :customer_name!',
     'product_file_updated_message' => 'Fișierele pentru produsul <a href=":product_link"><strong>:product_name</strong></a> au fost actualizate.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'Puteți descărca fișierele actualizate din contul dumneavoastră.',
     'product_file_updated_order_number' => 'Număr comandă',
     'product_file_updated_download' => 'Descărcați Fișierele Actualizate',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Plată primită',
     'invoice_payment_created_greeting' => 'Salut :customer_name,',
     'invoice_payment_created_message' => 'Am primit cu succes plata dumneavoastră pentru :site_title. Vă mulțumim!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Puteți vizualiza factura online la <a href=":invoice_link">:invoice_link</a> cu codul facturii #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Codul facturii dumneavoastră este #:invoice_code',
     'invoice_payment_created_view_online' => 'Vizualizați Factura Online',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Salut :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Am primit solicitarea dumneavoastră de ștergere a contului.',
     'customer_deletion_request_confirmation_warning' => 'Vă rugăm rețineți că această acțiune nu poate fi anulată. Toate datele dumneavoastră vor fi șterse permanent.',
     'customer_deletion_request_confirmation_button' => 'Confirmați Ștergerea',
     'customer_deletion_request_confirmation_cancel' => 'Dacă nu ați solicitat aceasta, vă rugăm ignorați acest email.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Salut :customer_name,',
     'customer_deletion_request_completed_message' => 'Contul dumneavoastră a fost șters cu succes conform solicitării.',
     'customer_deletion_request_completed_thank_you' => 'Vă mulțumim că ați fost alături de noi.',
     'customer_deletion_request_completed_goodbye' => 'Sperăm să vă revedem în viitor.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Salut Admin,',
     'payment_proof_upload_notification_message' => 'Clientul :customer_name (Email: <a href="mailto::customer_email">:customer_email</a>) a încărcat o dovadă de plată pentru comanda cu ID-ul :order_id.',
     'payment_proof_upload_notification_view_details' => 'Puteți vizualiza detaliile plății <a href=":payment_link">aici</a> și detaliile comenzii <a href=":order_link">aici</a>.',

@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'I-scan ang QR code upang subaybayan ang iyong shipment',
     ],
     'customer_confirmed_delivery_at' => 'Kinumpirma ng customer ang paghahatid noong',
+    'no_shipping_methods_available' => 'Walang available na paraan ng pagpapadala!',
 ];

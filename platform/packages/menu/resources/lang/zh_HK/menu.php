@@ -33,4 +33,5 @@ return [
     'main_navigation' => '主導航',
     'widget_custom_menu' => '自訂選單',
     'widget_custom_menu_description' => '將自訂選單新增至您的小工具區域。',
+    'select_menu' => '選擇選單',
 ];

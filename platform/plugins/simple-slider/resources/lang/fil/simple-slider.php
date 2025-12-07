@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Magdagdag ng simpleng slider',
     'select_slider' => 'Pumili ng slider',
     'shortcode' => 'Shortcode',
+    'tablet_image' => 'Imahe ng tablet',
+    'tablet_image_helper' => 'Para sa mga aparato na may lapad mula 768px hanggang 1200px, kung walang laman, gagamitin ang imahe mula sa desktop.',
+    'mobile_image' => 'Mobile na imahe',
+    'mobile_image_helper' => 'Para sa mga aparato na may lapad na mas mababa sa 768px, kung walang laman, gagamitin ang imahe mula sa tablet.',
 ];

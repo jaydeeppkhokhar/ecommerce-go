@@ -34,4 +34,5 @@ return [
     'drag_drop_info' => 'Ordna om menyobjekt genom att dra och släppa dem för att ändra ordning eller nästla dem som undermenyer.',
     'widget_custom_menu' => 'Anpassad meny',
     'widget_custom_menu_description' => 'Lägg till en anpassad meny i ditt widgetområde.',
+    'select_menu' => 'Välj meny',
 ];

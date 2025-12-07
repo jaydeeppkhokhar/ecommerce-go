@@ -66,6 +66,7 @@ return [
     'languages' => 'Bahasa',
     'reset_password' => 'Atur Ulang Kata Sandi',
     'deactivated_message' => 'Akun Anda telah dinonaktifkan. Silakan hubungi administrator.',
+    'password_changed_message' => 'Kata sandi Anda telah diubah. Silakan login kembali dengan kata sandi baru Anda.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

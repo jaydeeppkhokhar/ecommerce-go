@@ -9,7 +9,7 @@ return [
         'header' => 'E-posta şablonu başlığı',
         'footer' => 'E-posta şablonu alt bilgisi',
         'site_title' => 'Site başlığı',
-        'site_url' => 'Site URL',
+        'site_url' => 'Site adresi',
         'site_logo' => 'Site logosu',
         'site_email' => 'Site yöneticisi e-postası',
         'site_copyright' => 'Site telif hakkı',

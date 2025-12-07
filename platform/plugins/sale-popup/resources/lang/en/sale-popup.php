@@ -39,4 +39,7 @@ return [
         'product_listing' => 'Product listing',
         'cart' => 'Cart',
     ],
+    'purchased' => 'purchased',
+    'verified' => 'Verified',
+    'quick_view' => 'Quick view',
 ];

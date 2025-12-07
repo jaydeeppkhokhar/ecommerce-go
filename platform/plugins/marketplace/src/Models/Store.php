@@ -78,6 +78,8 @@ class Store extends BaseModel
             if (File::isDirectory($folder) && Str::endsWith($store->upload_folder, '/' . ($store->slug ?: $store->id))) {
                 File::deleteDirectory($folder);
             }
+
+            cache()->forget('marketplace_stores_for_filter');
         });
 
         static::updating(function (Store $store): void {
@@ -96,6 +98,10 @@ class Store extends BaseModel
                         ->update(['status' => $status]);
                 }
             }
+        });
+
+        static::saved(function (): void {
+            cache()->forget('marketplace_stores_for_filter');
         });
     }
 

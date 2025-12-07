@@ -7,7 +7,10 @@
             <li>
                 <strong>{{ trans('packages/theme::theme.settings.website_tracking.ga.create_property') }}</strong>
                 {{ trans('packages/theme::theme.settings.website_tracking.ga.go_to') }}
-                <a href="https://analytics.google.com" target="_blank">{{ trans('packages/theme::theme.settings.website_tracking.ga.google_analytics') }}</a>
+                <a
+                    href="https://analytics.google.com"
+                    target="_blank"
+                >{{ trans('packages/theme::theme.settings.website_tracking.ga.google_analytics') }}</a>
                 {{ trans('packages/theme::theme.settings.website_tracking.ga.create_new_property') }}
             </li>
             <li>

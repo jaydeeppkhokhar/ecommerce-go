@@ -21,5 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Agregar deslizador',
     'select_slider' => 'Selecciona el deslizador',
     'shortcode' => 'Código corto',
-    'edit' => 'Editar',
+    'tablet_image' => 'Imagen de la tableta',
+    'tablet_image_helper' => 'Para dispositivos con un ancho de 768 px a 1200 px, si está vacío, se utilizará la imagen del escritorio.',
+    'mobile_image' => 'Imagen móvil',
+    'mobile_image_helper' => 'Para dispositivos con un ancho inferior a 768 px, si está vacío, se utilizará la imagen de la tableta.',
 ];

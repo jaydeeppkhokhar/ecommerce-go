@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'name' => 'Tulot',
     'edit' => 'Päivitä lompakkosaldo',
     'view_store' => 'Näytä kauppa ":store"',
     'forms' => [
@@ -23,4 +24,5 @@ return [
     'update_balance_title' => 'Lisää/Vähennä myyjän summaa',
     'statements' => 'Tiliotteet',
     'products' => 'Tuotteet',
+    'items_earning_sales' => 'Tuotteiden myyntitulot: :amount',
 ];

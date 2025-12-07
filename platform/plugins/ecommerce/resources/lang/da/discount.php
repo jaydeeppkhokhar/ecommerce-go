@@ -103,4 +103,15 @@ return [
     'cannot_use_same_time_with_flash_sale' => 'Denne kupon kan ikke anvendes fordi din kurv indeholder flash sale varer (:product_name). Flash sale priser kan ikke kombineres med kuponrabatter.',
     'coupon_applied_successfully' => 'Fedt! Kuponkoden ":code" er blevet anvendt. Du sparede penge på denne ordre!',
     'coupon_removed_successfully' => 'Kuponkoden er blevet fjernet fra din ordre.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Kuponkoder (:count)',
+    'left_quantity' => 'Tilbage :left',
+    'apply' => 'Anvend',
+    'remove' => 'Fjern',
+    'select_coupon' => 'Vælg kupon',
+    'you_have_coupon_code' => 'Har du en kuponkode?',
+    'close' => 'Luk',
+    'coupon_code_label' => 'Kuponkode: :code',
+    'enter_coupon_code_placeholder' => 'Indtast kuponkode...',
 ];

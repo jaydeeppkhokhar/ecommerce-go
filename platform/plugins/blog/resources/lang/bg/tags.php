@@ -2,21 +2,21 @@
 
 return [
     'form' => [
-        'name' => 'Name',
-        'name_placeholder' => 'Tag\'s name (maximum 120 characters)',
-        'description' => 'Description',
-        'description_placeholder' => 'Short description for tag (maximum 400 characters)',
-        'categories' => 'Categories',
+        'name' => 'Име',
+        'name_placeholder' => 'Име на етикета (максимум 120 символа)',
+        'description' => 'Описание',
+        'description_placeholder' => 'Кратко описание за етикета (максимум 400 символа)',
+        'categories' => 'Категории',
 
     ],
     'notices' => [
-        'no_select' => 'Please select at least one tag to proceed',
+        'no_select' => 'Моля, изберете поне един етикет, за да продължите',
 
     ],
-    'create' => 'Create a new tag',
-    'cannot_delete' => 'Tag could not be deleted',
-    'deleted' => 'Tag deleted',
-    'menu' => 'Tags',
-    'edit_this_tag' => 'Edit this tag',
-    'menu_name' => 'Tags',
+    'create' => 'Създаване на нов етикет',
+    'cannot_delete' => 'Етикетът не може да бъде изтрит',
+    'deleted' => 'Етикетът е изтрит',
+    'menu' => 'Етикети',
+    'edit_this_tag' => 'Редактиране на този етикет',
+    'menu_name' => 'Етикети',
 ];

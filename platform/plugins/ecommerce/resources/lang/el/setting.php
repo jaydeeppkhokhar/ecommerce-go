@@ -186,6 +186,8 @@ return [
             'enable_payment_proof_helper' => 'Να επιτρέπεται στους πελάτες να ανεβάζουν αποδεικτικά πληρωμής για τις παραγγελίες τους. Αυτό είναι χρήσιμο για χειροκίνητες μεθόδους πληρωμής.',
             'enable_guest_payment_proof' => 'Να επιτρέπεται σε επισκέπτες πελάτες να ανεβάζουν αποδεικτικό πληρωμής',
             'enable_guest_payment_proof_helper' => 'Όταν είναι ενεργοποιημένο, οι επισκέπτες πελάτες μπορούν να ανεβάσουν αποδεικτικό πληρωμής χρησιμοποιώντας το διακριτικό παραγγελίας τους χωρίς σύνδεση. Θα λάβουν τον σύνδεσμο ανεβάσματος στο email επιβεβαίωσης παραγγελίας τους.',
+            'payment_proof_payment_methods' => 'Μέθοδοι πληρωμής που απαιτούν απόδειξη πληρωμής',
+            'payment_proof_payment_methods_helper' => 'Επιλέξτε ποιες μέθοδοι πληρωμής θα επιτρέπουν στους πελάτες να ανεβάζουν απόδειξη πληρωμής. Χρησιμοποιείται συνήθως για χειροκίνητες μεθόδους πληρωμής όπως αντικαταβολή και τραπεζική μεταφορά.',
         ],
     ],
     'checkout' => [
@@ -465,7 +467,14 @@ return [
         'show_sale_count_left_description' => 'Εμφάνιση μιας γραμμής προόδου με "X πουλήθηκαν από Y" για δημιουργία επείγοντος και ενθάρρυνση γρήγορων αγορών κατά τη διάρκεια flash προσφορών.',
     ],
     'payment_method_cod_minimum_amount' => 'Ελάχιστο ποσό παραγγελίας - :currency (Προαιρετικό)',
+    'payment_method_cod_minimum_amount_helper' => 'Set the minimum order amount required to use COD payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_cod_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_cod_maximum_amount_helper' => 'Set the maximum order amount allowed for COD payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
     'payment_method_minimum_amount' => 'Ελάχιστο ποσό παραγγελίας - :currency (Προαιρετικό)',
+    'payment_method_minimum_amount_helper' => 'Set the minimum order amount required to use this payment method. Leave it as 0 or empty if you don\'t want to set a minimum.',
+    'payment_method_maximum_amount' => 'Maximum order amount - :currency (Optional)',
+    'payment_method_maximum_amount_helper' => 'Set the maximum order amount allowed for this payment method. Leave it as 0 or empty if you don\'t want to set a maximum.',
+    'payment_method_maximum_amount_error' => 'Maximum order amount to use :payment_method payment method is :amount, you need to remove :more to place an order!',
     'display_bank_info_at_the_checkout_success_page' => 'Εμφάνιση τραπεζικών πληροφοριών στη σελίδα επιτυχίας ολοκλήρωσης αγοράς;',
     'invoice_templates' => 'Πρότυπα τιμολογίου',
 ];

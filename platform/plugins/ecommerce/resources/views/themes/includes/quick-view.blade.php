@@ -62,7 +62,7 @@
                             {!! EcommerceHelper::jsAttributes('add-to-cart-in-form', $product) !!}
                         >
                             <x-core::icon name="ti ti-shopping-cart"/>
-                            {{ __('Add To Cart') }}
+                            {{ trans('plugins/ecommerce::ecommerce.add_to_cart') }}
                         </button>
                     </div>
 
@@ -77,7 +77,7 @@
                                     data-remove-url="{{ route('public.compare.remove', $product) }}"
                                 >
                                     <x-core::icon name="ti ti-refresh"/>
-                                    {{ __('Compare') }}
+                                    {{ trans('plugins/ecommerce::ecommerce.compare') }}
                                 </button>
                             @endif
                             @if (EcommerceHelper::isWishlistEnabled())
@@ -87,7 +87,7 @@
                                     data-url="{{ route('public.wishlist.add', $product) }}"
                                 >
                                     <x-core::icon name="ti ti-heart"/>
-                                    {{ __('Add Wishlist') }}
+                                    {{ trans('plugins/ecommerce::ecommerce.add_wishlist') }}
                                 </button>
                             @endif
                         </div>
@@ -95,7 +95,7 @@
                 </form>
                 <div class="bb-product-meta">
                     @if ($product->sku)
-                        <span>{{ __('SKU') }} : <span
+                        <span>{{ trans('plugins/ecommerce::products.sku') }} : <span
                                 class="sku"
                                 id="product-sku"
                                 itemprop="sku"
@@ -103,11 +103,11 @@
                     @endif
                     <span>
                     <span
-                        id="is-out-of-stock">{{ !$product->isOutOfStock() ? __('In stock') : __('Out of stock') }}</span>
+                        id="is-out-of-stock">{{ !$product->isOutOfStock() ? trans('plugins/ecommerce::ecommerce.in_stock' : trans('plugins/ecommerce::ecommerce.out_of_stock' }}</span>
                 </span>
 
                     @if (!$product->categories->isEmpty())
-                        <span>{{ __('Categories') }} :
+                        <span>{{ trans('plugins/ecommerce::products.categories') }} :
                         @foreach ($product->categories as $category)
                                 <a href="{{ $category->url }}"> {{ $category->name }}
                                     @if (!$loop->last), @endif

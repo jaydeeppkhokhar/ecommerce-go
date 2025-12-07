@@ -193,4 +193,5 @@ return [
         'scan_qr_code' => 'Skanna QR-kod för att spåra din försändelse',
     ],
     'customer_confirmed_delivery_at' => 'Kunden bekräftade leverans',
+    'no_shipping_methods_available' => 'Inga leveransmetoder tillgängliga!',
 ];

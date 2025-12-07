@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'update_position_success' => 'Update widget position successfully!',
+    'update_position_success' => 'Position du widget mise à jour avec succès !',
     'hide_success' => 'Mise à jour du widget réussie !',
     'confirm_hide' => 'Êtes-vous sûr ?',
     'hide_message' => 'Voulez-vous vraiment cacher ce widget ? Il disparaîtra sur le tableau de bord !',
@@ -13,7 +13,7 @@ return [
     'save_setting_success' => 'Sauvegarder les paramètres du widget avec succès !',
     'widget_not_exists' => 'Widget n\'existe pas!',
     'manage_widgets' => 'Gérer les widgets',
-    'fullscreen' => 'Full screen',
+    'fullscreen' => 'Plein écran',
     'title' => 'Tableau de bord',
     'predefined_ranges' => [
         'today' => 'Aujourd\'hui',

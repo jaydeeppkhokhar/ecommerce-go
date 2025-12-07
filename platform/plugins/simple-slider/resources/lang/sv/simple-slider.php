@@ -21,4 +21,8 @@ return [
     'simple_slider_shortcode_description' => 'Lägg till en enkel slider',
     'select_slider' => 'Välj en slider',
     'shortcode' => 'Kortkod',
+    'tablet_image' => 'Tablettbild',
+    'tablet_image_helper' => 'För enheter med bredd från 768px till 1200px, om de är tomma, kommer bilden från skrivbordet att användas.',
+    'mobile_image' => 'Mobilbild',
+    'mobile_image_helper' => 'För enheter med en bredd på mindre än 768px, om den är tom, kommer bilden från surfplattan att användas.',
 ];

@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Тип на такса за обработка (по избор)',
     'fee_type_helper' => 'Изберете как таксата за плащане трябва да бъде изчислена: като фиксирана сума или процент от общата поръчка. Ако изберете фиксирана сума, тя ще бъде базирана на валутата по подразбиране (:currency).',
+    'payment_created' => 'Създадохте плащане #:charge_id чрез :channel :time : :amount',
+    'processing_please_wait' => 'Обработва се. Моля, изчакайте...',
+    'error' => 'Грешка',
+    'checkout' => 'Плащане',
+    'show_full_json' => 'Покажи пълен JSON',
+    'full_log_data' => 'Пълни данни от дневника',
+    'currency_not_supported' => ':name не поддържа :currency. Списък на валутите, поддържани от :name: :currencies.',
+    'please_switch_currency' => 'Моля, превключете към поддържана валута',
+    'payment_with' => 'Плащане с :paymentType',
 ];

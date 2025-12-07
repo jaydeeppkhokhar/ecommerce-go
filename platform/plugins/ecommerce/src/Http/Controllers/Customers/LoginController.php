@@ -13,6 +13,7 @@ use Botble\Ecommerce\Http\Requests\LoginRequest;
 use Botble\SeoHelper\Facades\SeoHelper;
 use Botble\Theme\Facades\Theme;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cookie;
 use Illuminate\Validation\ValidationException;
 
 class LoginController extends BaseController
@@ -75,6 +76,19 @@ class LoginController extends BaseController
         $this->incrementLoginAttempts($request);
 
         $this->sendFailedLoginResponse();
+    }
+
+    protected function sendLoginResponse(Request $request)
+    {
+        $request->session()->regenerate();
+
+        $this->clearLoginAttempts($request);
+
+        $email = $request->input($this->username());
+        Cookie::queue('customer_remember_email', $email, 525600);
+
+        return $this->authenticated($request, $this->guard()->user())
+            ?: redirect()->intended($this->redirectPath());
     }
 
     public function logout(Request $request)

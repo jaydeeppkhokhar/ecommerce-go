@@ -48,4 +48,9 @@ return [
     'admin_login_form' => 'טופס התחברות מנהל',
     'admin_forgot_password_form' => 'טופס שכחתי סיסמה של מנהל',
     'admin_reset_password_form' => 'טופס איפוס סיסמה של מנהל',
+    'captcha' => 'Captcha',
+    'math_captcha' => 'Captcha מתמטיקה',
+    'math_question' => 'אנא פתרו את הפונקציה המתמטית הבאה: :label = ?',
+    'captcha_verification_failed' => 'אימות Captcha נכשל!',
+    'math_captcha_verification_failed' => 'אימות Captcha במתמטיקה נכשל!',
 ];

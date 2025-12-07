@@ -65,6 +65,8 @@ return [
     'sign_in_below' => 'Entre abaixo',
     'languages' => 'Idiomas',
     'reset_password' => 'Nova senha',
+    'deactivated_message' => 'Sua conta foi desativada. Entre em contato com o administrador.',
+    'password_changed_message' => 'Sua senha foi alterada. Por favor, faça login novamente com sua nova senha.',
     'settings' => [
         'email' => [
             'title' => 'ACL',

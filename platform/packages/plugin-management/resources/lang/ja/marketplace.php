@@ -17,6 +17,7 @@ return [
     'compatible_version' => 'お使いのバージョンと互換性があります',
     'incompatible_version' => 'お使いのバージョンと互換性がありません',
     'install_now' => '今すぐインストール',
+    'buy_now' => '今すぐ購入',
     'remove' => '取り除く',
     'detail' => '詳細',
     'activate' => '活性化',
@@ -36,5 +37,5 @@ return [
     'unzip_success' => '解凍されたダウンロードファイル',
     'install_success' => 'プラグインが正常にインストールされました！',
     'update_success' => 'プラグインが正常に更新されました。',
-    'minimum_core_version_error' => 'Cannot install this plugin. Minimum core version is :version.',
+    'minimum_core_version_error' => 'このプラグインをインストールできません。最小コアバージョンは :version です。',
 ];

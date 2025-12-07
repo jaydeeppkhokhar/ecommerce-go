@@ -1,7 +1,6 @@
 <?php
 
 return [
-    // Customer New Order Email
     'customer_new_order_title' => 'Rendelés sikeres!',
     'customer_new_order_greeting' => 'Kedves :customer_name,',
     'customer_new_order_message' => 'Köszönjük, hogy megvásárolta termékeinket, telefonon (<strong>:customer_phone</strong>) fogjuk Önt felvenni a kapcsolatot a rendelés megerősítéséhez!',
@@ -15,8 +14,6 @@ return [
     'customer_new_order_shipping_method' => 'Szállítási mód',
     'customer_new_order_order_number' => 'Rendelésszám',
     'customer_new_order_payment_method' => 'Fizetési mód',
-
-    // Admin New Order Email
     'admin_new_order_title' => 'Új rendelést kapott :site_title oldalról',
     'admin_new_order_greeting' => 'Kedves Adminisztrátor,',
     'admin_new_order_message' => 'Új rendelést helyezett el sikeresen :customer_name',
@@ -36,8 +33,6 @@ return [
     'admin_new_order_shipping_method' => 'Szállítási mód',
     'admin_new_order_payment_method' => 'Fizetési mód',
     'admin_new_order_view_order' => 'Rendelés részleteinek megtekintése',
-
-    // Order Confirmation Email
     'order_confirm_title' => 'Rendelés megerősítve!',
     'order_confirm_greeting' => 'Kedves :customer_name,',
     'order_confirm_message' => 'Rendelését megerősítettük. Köszönjük, hogy megvásárolta termékeinket!',
@@ -52,8 +47,6 @@ return [
     'order_confirm_note' => 'Megjegyzés',
     'order_confirm_shipping_method' => 'Szállítási mód',
     'order_confirm_payment_method' => 'Fizetési mód',
-
-    // Order Cancel (Customer) Email
     'customer_cancel_order_title' => 'Rendelését törölték',
     'customer_cancel_order_greeting' => 'Kedves :customer_name,',
     'customer_cancel_order_message' => 'A(z) <strong>:order_id</strong> rendelését törölték kérésének megfelelően, indok: :cancellation_reason és a fizetését is törölték.',
@@ -67,11 +60,9 @@ return [
     'customer_cancel_order_address' => 'Cím',
     'customer_cancel_order_products' => 'Íme, amit rendelt:',
     'customer_cancel_order_note' => 'Megjegyzés',
-
-    // Order Cancel (Admin) Email
     'admin_cancel_order_title' => 'Rendelés törölve',
     'admin_cancel_order_greeting' => 'Kedves :customer_name,',
-    'admin_cancel_order_message' => 'A(z) #:order_id rendelését munkatársunk törölte.',
+    'admin_cancel_order_message' => 'A(z) :order_id rendelését munkatársunk törölte.',
     'admin_cancel_order_order_cancelled' => 'Rendelés törölve!',
     'admin_cancel_order_reason' => 'Törlés oka: :cancellation_reason',
     'admin_cancel_order_customer_info' => 'Vásárló információk',
@@ -82,11 +73,9 @@ return [
     'admin_cancel_order_products' => 'Rendelés részletei:',
     'admin_cancel_order_note' => 'Megjegyzés',
     'admin_cancel_order_order_summary' => 'Rendelés összefoglalója',
-
-    // Order Cancellation to Admin Email
-    'order_cancellation_to_admin_title' => '#:order_id rendelést törölte a vásárló',
+    'order_cancellation_to_admin_title' => ':order_id rendelést törölte a vásárló',
     'order_cancellation_to_admin_greeting' => 'Kedves Adminisztrátor,',
-    'order_cancellation_to_admin_message' => ':customer_name törölte a(z) <strong>#:order_id</strong> rendelést. Indok: <strong>:cancellation_reason</strong>',
+    'order_cancellation_to_admin_message' => ':customer_name törölte a(z) <strong>:order_id</strong> rendelést. Indok: <strong>:cancellation_reason</strong>',
     'order_cancellation_to_admin_customer_info' => 'Vásárló információk',
     'order_cancellation_to_admin_name' => 'Név',
     'order_cancellation_to_admin_phone' => 'Telefon',
@@ -96,8 +85,6 @@ return [
     'order_cancellation_to_admin_note' => 'Megjegyzés',
     'order_cancellation_to_admin_view_order' => 'Rendelés részleteinek megtekintése',
     'order_cancellation_to_admin_order_summary' => 'Rendelés összefoglalója',
-
-    // Order Delivery Email
     'customer_delivery_order_title' => 'Rendelése úton van',
     'customer_delivery_order_greeting' => 'Kedves :customer_name,',
     'customer_delivery_order_message' => 'Rendelése úton van. Köszönjük, hogy megvásárolta termékeinket!',
@@ -117,8 +104,6 @@ return [
     'customer_delivery_order_tracking_id' => 'Követési azonosító',
     'customer_delivery_order_tracking_link' => 'Követési link',
     'customer_delivery_order_track_shipment' => 'Szállítmány követése',
-
-    // Order Delivered Email
     'customer_order_delivered_title' => 'Rendelését kézbesítették',
     'customer_order_delivered_greeting' => 'Kedves :customer_name,',
     'customer_order_delivered_message' => 'Rendelését kézbesítették. Köszönjük, hogy megvásárolta termékeinket!',
@@ -137,9 +122,7 @@ return [
     'customer_order_delivered_tracking_id' => 'Követési azonosító',
     'customer_order_delivered_tracking_link' => 'Követési link',
     'customer_order_delivered_track_shipment' => 'Követési részletek megtekintése',
-
-    // Payment Confirmation Email
-    'order_confirm_payment_title' => 'Fizetés megerősítve #:order_id rendeléshez',
+    'order_confirm_payment_title' => 'Fizetés megerősítve :order_id rendeléshez',
     'order_confirm_payment_greeting' => 'Kedves :customer_name,',
     'order_confirm_payment_message' => 'Fizetését megerősítettük. Köszönjük, hogy megvásárolta termékeinket!',
     'order_confirm_payment_order_number' => 'Rendelésszám',
@@ -154,8 +137,6 @@ return [
     'order_confirm_payment_thanks' => 'Köszönjük a fizetését. Rendelését hamarosan feldolgozzuk.',
     'order_confirm_payment_order_summary' => 'Rendelés összefoglalója',
     'order_confirm_payment_shipping_method' => 'Szállítási mód',
-
-    // Order Recovery Email
     'order_recover_title' => 'Befejezetlen rendelése van',
     'order_recover_greeting' => 'Kedves :customer_name,',
     'order_recover_message' => 'Észrevettük, hogy befejezetlen rendelése van. Szeretné befejezni a vásárlást?',
@@ -165,23 +146,17 @@ return [
     'order_recover_button' => 'Rendelés befejezése',
     'order_recover_order_summary' => 'Rendelés összefoglalója',
     'order_recover_note' => 'Megjegyzés',
-
-    // Welcome Email
     'welcome_greeting' => 'Örülünk, hogy itt van, :customer_name!',
     'welcome_message' => 'Üdvözöljük a :site_title oldalon!',
     'welcome_register_success' => 'Sikeresen regisztrált egy fiókot a <strong>:site_title</strong> oldalon.',
     'welcome_explore' => 'Ha bármilyen segítségre van szüksége, nyugodtan válaszoljon erre az e-mailre!',
     'welcome_visit_shop' => 'Kezdje el a vásárlást!',
-
-    // Confirm Email
     'confirm_email_title' => 'E-mail ellenőrzése',
     'confirm_email_greeting' => 'Örülünk, hogy itt van, :customer_name!',
     'confirm_email_message' => 'Kérjük, erősítse meg e-mail címét az alábbi gombra kattintva.',
     'confirm_email_instruction' => 'Kérjük, ellenőrizze e-mail címét a weboldal eléréséhez. Kattintson az alábbi gombra az e-mail ellenőrzéséhez.',
     'confirm_email_button' => 'E-mail cím megerősítése',
     'confirm_email_trouble' => 'Ha probléma van az "E-mail cím megerősítése" gombra való kattintással, másolja ki és illessze be az alábbi URL-t a böngészőjébe: <a href=":verify_link">:verify_link</a> és illessze be a böngészőjébe.',
-
-    // Password Reminder Email
     'password_reminder_title' => 'Jelszó visszaállítása',
     'password_reminder_greeting' => 'Kedves :customer_name,',
     'password_reminder_message' => 'Jelszó visszaállítást kért.',
@@ -189,11 +164,9 @@ return [
     'password_reminder_button' => 'Jelszó visszaállítása',
     'password_reminder_ignore' => 'Ha nem Ön kérte a jelszó visszaállítást, hagyja figyelmen kívül ezt az e-mailt.',
     'password_reminder_trouble_clicking' => 'Ha probléma van a "Jelszó visszaállítása" gombra való kattintással, másolja ki és illessze be az alábbi URL-t a böngészőjébe: <a href=":reset_link">:reset_link</a>',
-
-    // Order Return Request Email
     'order_return_request_title' => 'Visszáru kérelem beérkezett',
     'order_return_request_greeting' => 'Kedves :customer_name,',
-    'order_return_request_message' => 'Beérkeztettük visszáru kérelmét a #:order_id rendeléshez.',
+    'order_return_request_message' => 'Beérkeztettük visszáru kérelmét a :order_id rendeléshez.',
     'order_return_request_reason' => 'Visszáru oka',
     'order_return_request_items' => 'Visszáru termékek',
     'order_return_request_process' => 'Feldolgozzuk kérelmét és hamarosan felvesszük Önnel a kapcsolatot.',
@@ -205,8 +178,6 @@ return [
     'order_return_request_return_reason' => 'Visszáru oka',
     'order_return_request_order_summary' => 'Rendelés összefoglalója',
     'order_return_request_note' => 'Megjegyzés',
-
-    // Order Return Status Updated Email
     'order_return_status_updated_title' => 'Rendelés visszáru állapot frissítése',
     'order_return_status_updated_greeting' => 'Kedves :customer_name,',
     'order_return_status_updated_message' => 'Szeretnénk tájékoztatni, hogy a :order_id rendelés visszáru kérelmének állapota frissült.',
@@ -214,17 +185,13 @@ return [
     'order_return_status_updated_description' => 'Moderátor megjegyzése: " :description ".',
     'order_return_status_updated_questions' => 'Ha bármilyen kérdése vagy aggálya van ezzel a frissítéssel kapcsolatban, kérjük, bátran lépjen kapcsolatba ügyfélszolgálatunkkal.',
     'order_return_status_updated_view_details' => 'Visszáru részleteinek megtekintése',
-
-    // Review Products Email
     'review_products_title' => 'Értékelje legutóbbi vásárlását',
     'review_products_greeting' => 'Kedves :customer_name,',
-    'review_products_message' => 'A #:order_id rendelése teljesítve lett. Szeretnénk hallani véleményét!',
+    'review_products_message' => 'A :order_id rendelése teljesítve lett. Szeretnénk hallani véleményét!',
     'review_products_instruction' => 'Kérjük, szánjon egy percet a vásárolt termékek értékelésére:',
     'review_products_button' => 'Termékek értékelése',
     'review_products_thank_you' => 'Köszönjük vásárlását!',
     'review_products_products' => 'Értékelendő termékek',
-
-    // Digital Products Download Email
     'download_digital_products_title' => 'Digitális termékei készen állnak',
     'download_digital_products_greeting' => 'Kedves :customer_name,',
     'download_digital_products_message' => 'Köszönjük vásárlását! Digitális termékei készen állnak a letöltésre.',
@@ -236,13 +203,10 @@ return [
     'download_digital_products_all_files' => 'Összes fájl letöltése',
     'download_digital_products_external_link_downloads' => 'Külső fájlok letöltése',
     'download_digital_products_payment_method' => 'Fizetési mód',
-
-    // Digital Product License Codes Email
     'digital_product_license_codes_title' => 'Az Ön licenckódjai',
     'digital_product_license_codes_greeting' => 'Kedves :customer_name,',
     'digital_product_license_codes_message' => 'Köszönjük vásárlását! Íme a licenckódjai:',
     'digital_product_license_codes_thanks' => 'Köszönjük, hogy megvásárolta digitális termékeinket.',
-    'digital_product_license_codes_below' => 'Az alábbiakban találhatók a megvásárolt termékek licenckódjai:',
     'digital_product_license_codes_product' => 'Termék',
     'digital_product_license_codes_license' => 'Licenckód',
     'digital_product_license_codes_order_summary' => 'Íme, amit rendelt:',
@@ -255,8 +219,6 @@ return [
     'digital_product_license_codes_note_2' => 'Minden licenckód egyedi és csak egyszer használható fel',
     'digital_product_license_codes_note_3' => 'Ne ossza meg licenckódjait másokkal',
     'digital_product_license_codes_note_4' => 'Ha bármilyen probléma van a licenckódjaival, kérjük, lépjen kapcsolatba támogatási csapatunkkal',
-
-    // Product File Updated Email
     'product_file_updated_title' => 'Termékfájlok frissítve',
     'product_file_updated_greeting' => 'Üdv, :customer_name!',
     'product_file_updated_message' => 'A <a href=":product_link"><strong>:product_name</strong></a> termék fájljai frissítve lettek.',
@@ -268,8 +230,6 @@ return [
     'product_file_updated_instruction' => 'A frissített fájlokat fiókjából töltheti le.',
     'product_file_updated_order_number' => 'Rendelésszám',
     'product_file_updated_download' => 'Frissített fájlok letöltése',
-
-    // Invoice Payment Created Email
     'invoice_payment_created_title' => 'Fizetés beérkezett',
     'invoice_payment_created_greeting' => 'Kedves :customer_name,',
     'invoice_payment_created_message' => 'Sikeresen beérkeztettük fizetését a :site_title számára. Köszönjük!',
@@ -281,21 +241,15 @@ return [
     'invoice_payment_created_invoice_link_message' => 'Számláját online megtekintheti a <a href=":invoice_link">:invoice_link</a> címen, számlakód: #:invoice_code',
     'invoice_payment_created_invoice_message' => 'Az Ön számlakódja #:invoice_code',
     'invoice_payment_created_view_online' => 'Számla online megtekintése',
-
-    // Customer Deletion Request Confirmation Email
     'customer_deletion_request_confirmation_greeting' => 'Kedves :customer_name,',
     'customer_deletion_request_confirmation_message' => 'Beérkeztettük kérelmét a fiók törléséhez.',
     'customer_deletion_request_confirmation_warning' => 'Kérjük, vegye figyelembe, hogy ez a művelet nem vonható vissza. Minden adata véglegesen törlésre kerül.',
     'customer_deletion_request_confirmation_button' => 'Törlés megerősítése',
     'customer_deletion_request_confirmation_cancel' => 'Ha nem Ön kérte ezt, hagyja figyelmen kívül ezt az e-mailt.',
-
-    // Customer Deletion Request Completed Email
     'customer_deletion_request_completed_greeting' => 'Kedves :customer_name,',
     'customer_deletion_request_completed_message' => 'Fiókja sikeresen törölve lett kérésének megfelelően.',
     'customer_deletion_request_completed_thank_you' => 'Köszönjük, hogy velünk volt.',
     'customer_deletion_request_completed_goodbye' => 'Reméljük, hogy újra találkozunk a jövőben.',
-
-    // Payment Proof Upload Notification Email
     'payment_proof_upload_notification_greeting' => 'Kedves Adminisztrátor,',
     'payment_proof_upload_notification_message' => ':customer_name vásárló (E-mail: <a href="mailto::customer_email">:customer_email</a>) feltöltött egy fizetési igazolást a :order_id azonosítójú rendeléshez.',
     'payment_proof_upload_notification_view_details' => 'A fizetési részleteket <a href=":payment_link">itt</a>, a rendelés részleteit pedig <a href=":order_link">itt</a> tekintheti meg.',

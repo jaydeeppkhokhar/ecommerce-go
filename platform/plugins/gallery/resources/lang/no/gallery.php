@@ -18,4 +18,8 @@ return [
     'limit_display' => 'Begrens antall visninger',
     'edit_this_gallery' => 'Rediger dette galleriet',
     'galleries_page' => 'Galleriside',
+    'by_name' => 'Av PLASSHOLDER0',
+    'title' => 'Tittel',
+    'limit' => 'Begrense',
+    'limit_helper' => 'Antall gallerier å vise. ',
 ];

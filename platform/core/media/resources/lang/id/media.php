@@ -44,6 +44,8 @@ return [
     'alt_text' => 'Teks alt',
 
     'folder_created' => 'Folder berhasil dibuat!',
+    'folder_exists' => 'Folder :folder sudah ada!',
+    'directory_must_empty' => 'Direktori harus kosong untuk dihapus!',
     'gallery' => 'Galeri media',
 
     'trash_error' => 'Kesalahan saat menghapus item yang dipilih',

@@ -46,4 +46,9 @@ return [
             'invalid_client_id_format' => 'Định dạng ID khách hàng Google AdSense không hợp lệ. Nó phải ở định dạng: ca-pub-XXXXXXXXXXXXXXXX (trong đó X là một chữ số).',
         ],
     ],
+    'banner' => 'Biểu ngữ',
+    'tablet_image' => 'Hình ảnh Tablet',
+    'tablet_image_helper' => 'Dành cho thiết bị có chiều rộng từ 768px đến 1200px, nếu để trống, sẽ sử dụng hình ảnh từ desktop.',
+    'mobile_image' => 'Hình ảnh Mobile',
+    'mobile_image_helper' => 'Dành cho thiết bị có chiều rộng nhỏ hơn 768px, nếu để trống, sẽ sử dụng hình ảnh từ tablet.',
 ];

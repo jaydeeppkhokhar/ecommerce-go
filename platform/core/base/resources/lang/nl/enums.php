@@ -14,7 +14,7 @@ return [
         'publish_packages_assets' => 'Package assets publiceren',
         'clean_up' => 'Update bestanden opschonen',
         'done' => 'Systeem succesvol bijgewerkt',
-
+        'unknown' => 'Onbekende stap',
         'messages' => [
             'download' => 'Update bestanden downloaden...',
             'update_files' => 'Systeembestanden bijwerken...',
@@ -24,7 +24,6 @@ return [
             'clean_up' => 'Update bestanden opschonen...',
             'done' => 'Klaar! Uw browser wordt over 30 seconden vernieuwd.',
         ],
-
         'failed_messages' => [
             'download' => 'Kon update bestanden niet downloaden',
             'update_files' => 'Kon systeembestanden niet bijwerken',
@@ -33,7 +32,6 @@ return [
             'publish_packages_assets' => 'Kon package assets niet publiceren',
             'clean_up' => 'Kon update bestanden niet opschonen',
         ],
-
         'success_messages' => [
             'download' => 'Update bestanden succesvol gedownload.',
             'update_files' => 'Systeembestanden succesvol bijgewerkt.',

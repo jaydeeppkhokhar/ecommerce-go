@@ -52,13 +52,13 @@
                         />
                     </div>
                     <div class="ps-block__right">
-                        <p>{{ __('Hello') }}, {{ $customer->name }}</p>
-                        <small>{{ __('Joined on :date', ['date' => $customer->created_at->translatedFormat('M d, Y')]) }}</small>
+                        <p>{{ trans('plugins/marketplace::marketplace.hello') }}, {{ $customer->name }}</p>
+                        <small>{{ trans('plugins/marketplace::marketplace.joined_on_date', ['date' => $customer->created_at->translatedFormat('M d, Y')]) }}</small>
 
                         @if ($customer?->store)
                             <a href="{{ $customer->store->url }}" target="_blank" class="d-block mt-3">
                                 <x-core::icon name="ti ti-building-store" />
-                                {{ __('View your store') }}
+                                {{ trans('plugins/marketplace::marketplace.view_your_store') }}
                             </a>
                         @endif
                     </div>
@@ -69,7 +69,7 @@
                     </div>
                 </div>
                 <div class="ps-block--earning-count">
-                    <small>{{ __('Balance') }}</small>
+                    <small>{{ trans('plugins/marketplace::marketplace.balance') }}</small>
                     <h3 class="mt-1">{{ format_price($customer->balance) }}</h3>
                 </div>
             </div>
@@ -107,7 +107,7 @@
 
                 <div class="d-none d-md-inline-block">
                     <a href="{{ BaseHelper::getHomepageUrl() }}" target="_blank" class="text-uppercase d-block">
-                        <span>{{ __('Go to homepage') }}</span>
+                        <span>{{ trans('plugins/marketplace::marketplace.go_to_homepage') }}</span>
                         <x-core::icon name="ti ti-arrow-right" />
                     </a>
                 </div>

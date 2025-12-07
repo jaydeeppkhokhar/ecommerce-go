@@ -69,4 +69,7 @@ return [
             'trans' => 'Can be empty or a string with a maximum length of :max characters if provided.',
         ],
     ],
+    'download_locale' => 'Завантажити мову',
+    'import_available_locale_confirmation' => 'Завантажити мову з GitHub',
+    'import_available_locale_confirmation_content' => 'Ви впевнені, що хочете завантажити цю мову? Вона буде завантажена до :lang_path, ви можете видалити її пізніше, якщо захочете.',
 ];

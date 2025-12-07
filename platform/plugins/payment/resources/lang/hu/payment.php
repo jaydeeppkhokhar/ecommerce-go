@@ -142,4 +142,13 @@ return [
     ],
     'fee_type' => 'Feldolgozási díj típusa (Opcionális)',
     'fee_type_helper' => 'Válaszd ki, hogyan számítódjon a fizetési díj: fix összegként vagy a rendelés összegének százalékában. Ha fix összeget választasz, az alapértelmezett pénznemen alapul (:currency).',
+    'payment_created' => 'Létrehoztál egy fizetést #:charge_id a :channel :time : :amount csatornán keresztül',
+    'processing_please_wait' => 'Feldolgozás. Kérem várjon...',
+    'error' => 'Hiba',
+    'checkout' => 'Pénztár',
+    'show_full_json' => 'Teljes JSON megjelenítése',
+    'full_log_data' => 'Teljes naplóadatok',
+    'currency_not_supported' => 'A(z) :name nem támogatja a(z) :currency valutát. A :name által támogatott valut ák listája: :currencies.',
+    'please_switch_currency' => 'Kérjük, váltson egy támogatott valutára',
+    'payment_with' => 'Fizetés a következővel: :paymentType',
 ];

@@ -10,7 +10,7 @@
     >
         <x-slot name="currencyNotSupportedMessage">
             <p class="mt-1 mb-0">
-                {{ __('Learn more') }}:
+                {{ trans('plugins/razorpay::razorpay.learn_more') }}:
                 {{ Html::link('https://razorpay.com/docs/payments/payments/international-payments/#supported-currencies', attributes: ['target' => '_blank', 'rel' => 'nofollow']) }}.
             </p>
         </x-slot>
@@ -142,7 +142,7 @@
                     let agreeTermsAndPolicy = $('#agree_terms_and_policy');
 
                     if (agreeTermsAndPolicy.length && ! agreeTermsAndPolicy.is(':checked')) {
-                        alert('{{ __('Please agree to the terms and conditions before proceeding.') }}');
+                        alert('{{ trans('plugins/razorpay::razorpay.agree_terms') }}');
                         return;
                     }
 

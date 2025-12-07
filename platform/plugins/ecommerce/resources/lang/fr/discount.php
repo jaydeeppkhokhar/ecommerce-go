@@ -31,8 +31,8 @@ return [
             'same-price' => 'Même prix',
         ],
         'types' => [
-            'coupon' => 'Coupon',
-            'promotion' => 'Promotion',
+            'coupon' => 'Bon de réduction',
+            'promotion' => 'Campagne promotionnelle',
         ],
         'targets' => [
             'all-orders' => 'Toutes les commandes',
@@ -51,7 +51,7 @@ return [
     'customers_will_enter_this_coupon_code_when_they_checkout' => 'Les clients saisiront ce code de coupon lors du paiement',
     'select_type_of_discount' => 'Sélectionner le type de remise',
     'coupon_code' => 'Code de coupon',
-    'promotion' => 'Promotion',
+    'promotion' => 'Campagne promotionnelle',
     'can_be_used_with_promotion' => 'Peut être utilisé avec une promotion ?',
     'can_be_used_with_flash_sale' => 'Peut être utilisé avec une vente flash ?',
     'can_be_used_with_flash_sale_help' => 'Permet aux clients d\'appliquer le coupon aux articles déjà en vente flash, permettant des remises combinées.',
@@ -98,9 +98,20 @@ return [
     'apply_via_url_description' => 'Ce paramètre appliquera le code de coupon lorsque les clients accèdent à l\'URL avec le paramètre "?coupon=code".',
     'display_at_checkout' => 'Afficher le code de coupon sur la page de paiement ?',
     'display_at_checkout_description' => 'La liste des codes de coupon sera affichée sur la page de paiement et les clients pourront choisir de les appliquer.',
-    'description' => 'Description',
-    'description_placeholder' => 'Brève description du programme de remise',
+    'description' => 'Description détaillée',
+    'description_placeholder' => 'Brève présentation du programme de remise',
     'cannot_use_same_time_with_flash_sale' => 'Ce coupon ne peut pas être appliqué car votre panier contient des articles en vente flash (:product_name). Les prix de vente flash ne peuvent pas être combinés avec les remises de coupon.',
     'coupon_applied_successfully' => 'Parfait ! Le code de coupon ":code" a été appliqué. Vous avez économisé de l\'argent sur cette commande !',
     'coupon_removed_successfully' => 'Le code de coupon a été retiré de votre commande.',
+
+    // Frontend coupon display
+    'coupon_codes_count' => 'Codes de coupon (:count)',
+    'left_quantity' => 'Reste :left',
+    'apply' => 'Appliquer',
+    'remove' => 'Retirer',
+    'select_coupon' => 'Sélectionner un coupon',
+    'you_have_coupon_code' => 'Vous avez un code de coupon ?',
+    'close' => 'Fermer',
+    'coupon_code_label' => 'Code de coupon : :code',
+    'enter_coupon_code_placeholder' => 'Saisir le code de coupon...',
 ];

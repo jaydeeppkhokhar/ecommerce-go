@@ -318,63 +318,65 @@ abstract class PayPalPaymentAbstract
         try {
             $detail = $this->getPaymentDetails($paymentId);
 
-            // @phpstan-ignore-next-line
-            $purchaseUnits = $detail->result->purchase_units;
-            $purchaseUnit = Arr::get($purchaseUnits, 0);
-
-            $refunds = null;
-            $payments = $purchaseUnit->payments;
-            if ($payments && ! empty($payments->refunds)) {
-                $refunds = $payments->refunds;
-            }
-
-            if ($detail && ! $refunds) {
+            if ($detail) {
                 // @phpstan-ignore-next-line
-                $purchase = Arr::first($detail->result->purchase_units);
-                $capture = Arr::first($purchase->payments->captures);
+                $purchaseUnits = $detail->result->purchase_units;
+                $purchaseUnit = Arr::get($purchaseUnits, 0);
 
-                if (! $capture) {
-                    return [
-                        'error' => true,
-                        'message' => trans('plugins/payment::payment.cannot_found_capture_id'),
-                    ];
+                $refunds = null;
+                $payments = $purchaseUnit->payments;
+                if ($payments && ! empty($payments->refunds)) {
+                    $refunds = $payments->refunds;
                 }
 
-                $captureId = $capture->id;
-
-                if ($captureId && $capture->status != 'DECLINED') {
-                    $payment = Payment::query()->where('charge_id', $paymentId)->firstOrFail();
-                    $paymentCurrency = $purchase->amount->currency_code;
-
-                    if ($payment->currency !== $paymentCurrency) {
-
-                        $currency = cms_currency()->currencies()->where('title', $paymentCurrency)->first();
-
-                        if ($currency) {
-                            $totalAmount = $totalAmount * $currency->exchange_rate;
-                            $this->paymentCurrency = $paymentCurrency;
-                        }
-                    }
-
-                    $refundRequest = new CapturesRefundRequest($captureId);
-                    $refundRequest->body = $this->buildRefundRequestBody($totalAmount);
-                    $refundRequest->prefer('return=representation');
-                    $response = $this->client->execute($refundRequest);
-
+                if ($refunds) {
                     // @phpstan-ignore-next-line
-                    if ($response && $response->statusCode == 201 && $response->result->status == 'COMPLETED') {
+                    $purchase = Arr::first($detail->result->purchase_units);
+                    $capture = Arr::first($purchase->payments->captures);
+
+                    if (! $capture) {
                         return [
-                            'error' => false, // @phpstan-ignore-next-line
-                            'status' => $response->result->status,
-                            'data' => (array) $response->result,
+                            'error' => true,
+                            'message' => trans('plugins/payment::payment.cannot_found_capture_id'),
                         ];
                     }
 
-                    return [
-                        'error' => true,
-                        'status' => $response->statusCode,
-                        'message' => trans('plugins/payment::payment.status_is_not_completed'),
-                    ];
+                    $captureId = $capture->id;
+
+                    if ($captureId && $capture->status != 'DECLINED') {
+                        $payment = Payment::query()->where('charge_id', $paymentId)->firstOrFail();
+                        $paymentCurrency = $purchase->amount->currency_code;
+
+                        if ($payment->currency !== $paymentCurrency) {
+
+                            $currency = cms_currency()->currencies()->where('title', $paymentCurrency)->first();
+
+                            if ($currency) {
+                                $totalAmount = $totalAmount * $currency->exchange_rate;
+                                $this->paymentCurrency = $paymentCurrency;
+                            }
+                        }
+
+                        $refundRequest = new CapturesRefundRequest($captureId);
+                        $refundRequest->body = $this->buildRefundRequestBody($totalAmount);
+                        $refundRequest->prefer('return=representation');
+                        $response = $this->client->execute($refundRequest);
+
+                        // @phpstan-ignore-next-line
+                        if ($response && $response->statusCode == 201 && $response->result->status == 'COMPLETED') {
+                            return [
+                                'error' => false, // @phpstan-ignore-next-line
+                                'status' => $response->result->status,
+                                'data' => (array) $response->result,
+                            ];
+                        }
+
+                        return [
+                            'error' => true,
+                            'status' => $response->statusCode,
+                            'message' => trans('plugins/payment::payment.status_is_not_completed'),
+                        ];
+                    }
                 }
             }
 

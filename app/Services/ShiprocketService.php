@@ -1,6 +1,6 @@
 <?php
 
-namespace Botble\Shiprocket\Services;
+namespace App\Services;
 
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;

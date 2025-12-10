@@ -2,6 +2,7 @@
 
 namespace Botble\Ecommerce\Supports;
 
+use App\Services\ShiprocketService;
 use Botble\ACL\Models\User;
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Facades\AdminHelper;
@@ -50,7 +51,6 @@ use Botble\Payment\Enums\PaymentStatusEnum;
 use Botble\Payment\Facades\PaymentMethods;
 use Botble\Payment\Models\Payment;
 use Botble\Payment\Supports\PaymentFeeHelper;
-use Botble\Shiprocket\Services\ShiprocketService;
 use Carbon\Carbon;
 use Exception;
 use Illuminate\Database\Eloquent\Collection as EloquentCollection;
@@ -404,7 +404,7 @@ class OrderHelper
 
                 if ($bankInfoDescription) {
                     $paymentMethod .= '<div>' . trans('plugins/ecommerce::order.payment_info') . ': <strong>' . $bankInfoDescription .
-                    '</strong</div>';
+                        '</strong</div>';
                 }
             }
         }
@@ -499,11 +499,11 @@ class OrderHelper
             if (
                 ! $force &&
                 OrderHistory::query()
-                    ->where([
-                        'action' => OrderHistoryActionEnum::SEND_ORDER_CONFIRMATION_EMAIL,
-                        'order_id' => $order->getKey(),
-                    ])
-                    ->exists()
+                ->where([
+                    'action' => OrderHistoryActionEnum::SEND_ORDER_CONFIRMATION_EMAIL,
+                    'order_id' => $order->getKey(),
+                ])
+                ->exists()
             ) {
                 return false;
             }

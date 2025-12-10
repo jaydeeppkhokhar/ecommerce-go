@@ -1498,7 +1498,7 @@ class OrderHelper
             "order_id" => (string) $order->code,
             "order_date" => now()->format('Y-m-d'),
 
-            "pickup_location" => "home",
+            "pickup_location" => "warehouse",
 
             // Billing
             "billing_customer_name" => $order->address->name,

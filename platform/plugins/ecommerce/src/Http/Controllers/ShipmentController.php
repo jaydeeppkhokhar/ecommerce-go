@@ -16,6 +16,7 @@ use Botble\Ecommerce\Models\OrderHistory;
 use Botble\Ecommerce\Models\Shipment;
 use Botble\Ecommerce\Models\ShipmentHistory;
 use Botble\Ecommerce\Tables\ShipmentTable;
+use Botble\Shiprocket\Services\ShiprocketService;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -88,6 +89,20 @@ class ShipmentController extends BaseController
                     'order_id' => $shipment->order_id,
                     'user_id' => Auth::id(),
                 ]);
+
+            case ShippingStatusEnum::ARRANGE_SHIPMENT || ShippingStatusEnum::READY_TO_BE_SHIPPED_OUT:
+                $shiprocket = app(ShiprocketService::class);
+                $shiprocketOrder = $shiprocket->generateAWB($shipment->shipment_id);
+
+                if ($shiprocketOrder && isset($shiprocketOrder['awb_assign_status']) && $shiprocketOrder['awb_assign_status'] == 1) {
+                    $shipmentCompanyName = $shiprocketOrder['response']['courier_name'] ?? null;
+                    $awbCode = $shiprocketOrder['response']['awb_code'] ?? null;
+
+                    $shipment->shipping_company_name = $shipmentCompanyName;
+                    $shipment->tracking_id = $awbCode;
+
+                    $shipment->save();
+                }
 
                 break;
         }

@@ -1,0 +1,11 @@
+{
+    "id": "botble/shiprocket",
+    "name": "Shiprocket",
+    "namespace": "Botble\\Shiprocket\\",
+    "provider": "Botble\\Shiprocket\\Providers\\ShiprocketServiceProvider",
+    "author": "Botble Technologies",
+    "url": "https://botble.com",
+    "version": "1.0.0",
+    "description": "Shiprocket integration plugin",
+    "minimum_core_version": "7.3.0"
+}

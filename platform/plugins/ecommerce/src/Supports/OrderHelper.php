@@ -2,7 +2,6 @@
 
 namespace Botble\Ecommerce\Supports;
 
-use App\Services\ShiprocketService;
 use Botble\ACL\Models\User;
 use Botble\Base\Enums\BaseStatusEnum;
 use Botble\Base\Facades\AdminHelper;
@@ -1480,63 +1479,6 @@ class OrderHelper
             'order_id' => $order->getKey(),
             'user_id' => Auth::id() ?: 0,
         ]);
-
-        $shiprocket = app(ShiprocketService::class);
-
-        $shipmentProducts = [];
-        foreach ($order->products as $orderProduct) {
-
-            $shipmentProducts[] = [
-                'name'   => $orderProduct->product_name,
-                'sku'    => $orderProduct->options['sku'] ?? 'N/A',
-                'units'  => $orderProduct->qty,
-                'selling_price' => $orderProduct->price,
-            ];
-        }
-
-        $payload = [
-            "order_id" => (string) $order->code,
-            "order_date" => now()->format('Y-m-d'),
-
-            "pickup_location" => "warehouse",
-
-            // Billing
-            "billing_customer_name" => $order->address->name,
-            "billing_last_name" => "",
-            "billing_address" => $order->address->address,
-            "billing_city" => $order->address->city,
-            "billing_pincode" => $order->address->zip_code,
-            "billing_state" => $order->address->state,
-            "billing_country" => $order->address->country,
-            "billing_email" => $order->address->email,
-            "billing_phone" => $order->address->phone,
-
-            // Shipping (REQUIRED even if same)
-            "shipping_is_billing" => true,
-
-            // Order Items
-            "order_items" => $shipmentProducts,
-
-            // Payment
-            "payment_method" => $order->payment->payment_channel == PaymentMethodEnum::BANK_TRANSFER ? 'Prepaid' : 'COD',
-
-            // Charges
-            "sub_total" => (float) $order->amount,
-
-            // Package
-            "length" => 10,
-            "breadth" => 10,
-            "height" => 5,
-            "weight" => 0.5
-        ];
-
-        $shiprocketOrder = $shiprocket->createOrder($payload);
-
-        if ($shiprocketOrder && isset($shiprocketOrder['status_code']) && $shiprocketOrder['status_code'] == 1) {
-            $order->shipment()->update([
-                'shipment_id' => $shiprocketOrder['shipment_id'] ?? $order->shipment->shipment_id,
-            ]);
-        }
 
         $this->sendOrderEmail($order, 'order_confirm');
     }

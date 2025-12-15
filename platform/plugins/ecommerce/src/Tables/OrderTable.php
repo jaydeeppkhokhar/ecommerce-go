@@ -17,6 +17,7 @@ use Botble\Payment\Enums\PaymentStatusEnum;
 use Botble\Table\Abstracts\TableAbstract;
 use Botble\Table\Actions\DeleteAction;
 use Botble\Table\Actions\EditAction;
+use Botble\Table\BulkActions\ConfirmOrderBulkAction;
 use Botble\Table\BulkActions\DeleteBulkAction;
 use Botble\Table\Columns\Column;
 use Botble\Table\Columns\CreatedAtColumn;
@@ -173,6 +174,7 @@ class OrderTable extends TableAbstract
     {
         return [
             DeleteBulkAction::make()->permission('orders.destroy'),
+            ConfirmOrderBulkAction::make()->permission('orders.destroy'),
         ];
     }
 
